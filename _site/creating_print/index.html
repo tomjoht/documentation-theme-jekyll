@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='//fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" href="/jekylltutorial/stylesheets/syntax.css"  type='text/css'>
+     <link rel="stylesheet" href="/jekylltutorial/stylesheets/font-awesome.min.css">
+     <link rel="stylesheet" href="/jekylltutorial/stylesheets/bootstrap.min.css">
+     <link rel="stylesheet" href="/jekylltutorial/stylesheets/modern-business.css">
+    <link rel="stylesheet" href="/jekylltutorial/stylesheets/lavish-bootstrap.css"  type='text/css'>
+              <!-- to easily brand your theme, use http://www.lavishbootstrap.com/ -->
+    <link rel="stylesheet" href="/jekylltutorial/stylesheets/customstyles.css"  type='text/css'>
+
+    <link rel="canonical" href="http://tomjohnson1492.github.io/jekylltutorial/creating_print/">
+    <link rel="stylesheet" href="/jekylltutorial/stylesheets/jquery.navgoco.css"  type='text/css'>
+    <link rel="stylesheet" href="/jekylltutorial/stylesheets/customstyles.css"  type='text/css'>
+    <script src="/jekylltutorial/js/jquery.min.js"></script>
+    <script src="/jekylltutorial/js/jquery.cookie.min.js"></script>
+    <script src="/jekylltutorial/js/jquery.navgoco.min.js"></script>
+    <script src="/jekylltutorial/js/lunr.min.js"></script>
+    <script src="/jekylltutorial/js/bootstrap.min.js"></script>
+    <script src="/jekylltutorial/js/toc.js"></script>
+    <script src=""></script>
+    
+
+
+
+    <title>Creating a printed guide | Jekyll-tutorial</title>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </head>
+
+<body>
+
+
+   
+
+ <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/jekylltutorial/">Jekyll-tutorial</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+
+    
+    
+    
+      <li><a href="/jekylltutorial/demo_environment/">Demo Environment</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/support/">Support</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/news/">News</a></li>
+    
+    
+
+
+      <li class="dropdown">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <b class="caret"></b></a>
+     <ul class="dropdown-menu">
+    
+    
+    
+    
+      <li><a href="/jekylltutorial">Stuff 1</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/stuffurl1/"></a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial">Stuff 2</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/stuffurl2/"></a></li>
+    
+    
+    </ul>
+
+<!-- you can also just hard-code a section here, for example if you want to include external resources:
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a href="portfolio-1-col.html">1 Column Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-2-col.html">2 Column Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-3-col.html">3 Column Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-4-col.html">4 Column Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="portfolio-item.html">Single Portfolio Item</a>
+                            </li>
+                        </ul>
+                    </li>
+
+-->
+
+ <!--  here's where the search will go when it works...
+          <li>
+
+        <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button id="quicksearch-query" type="submit" class="btn btn-default">Submit</button>
+      </form>
+      </li>
+-->
+
+                    </li>
+                </ul>
+
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+
+        <!-- /.container -->
+    </nav>
+
+
+
+
+
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading/Breadcrumbs -->
+        <div class="row">
+            <div class="col-lg-12">
+            <!-- this part seems redundant in the theme and just takes up space...-->
+               <!-- <h1 class="page-header">Creating a printed guide
+                    <small></small>
+                </h1> -->
+                &nbsp;
+                <ol class="breadcrumb">
+                    <li><!--<a href="/jekylltutorial/">Home</a> -->Home</li>
+                    
+                    <li></li>
+                    <li Creating a printed guide</li>
+                    
+                </ol>
+            </div>
+        </div>
+        <!-- /.row -->
+
+
+
+
+
+
+ <!-- Content Row -->
+
+        <div class="row">
+            <!-- Sidebar Column -->
+            <div class="col-md-3">
+
+<script>
+$(document).ready(function() {
+    // Initialize navgoco with default options
+    $("#demo1").navgoco({
+        caretHtml: '',
+        accordion: true,
+        openClass: 'active', // open
+        save: true,
+        cookie: {
+            name: 'navgoco',
+            expires: false,
+            path: '/'
+        },
+        slide: {
+            duration: 400,
+            easing: 'swing'
+        }
+    });
+
+    $("#collapseAll").click(function(e) {
+        e.preventDefault();
+        $("#demo1").navgoco('toggle', false);
+    });
+
+    $("#expandAll").click(function(e) {
+        e.preventDefault();
+        $("#demo1").navgoco('toggle', true);
+    });
+});
+
+</script>
+  
+<!-- note that the data file for your project needs to be specified in the code below. Instead of site.data.jekyll, use the data file corresponding to your project (create one if it doesn't already exist). -->
+
+
+<ul id="demo1" class="nav">
+
+Resources 
+
+<li><a href="#">Getting started</a>
+<ul>
+    
+    
+    
+      <li><a href="/jekylltutorial/alerts/">Alerts</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/build_arguments/">Build arguments</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/collections/">Collections</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/conditional_logic/">Conditional logic</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/cshelp/">Context-sensitive help</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/demo/">Demo</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/dummytext/">Dummy Text</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/faq/">FAQ</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/first_steps/">First Steps</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/gemfiles/">Gem files</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/icons/">Icons</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/images/">Images</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/integrate_lunr_search/">Integrate Lunr Search</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/labels/">Labels</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/lavish/">Lavish</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/links/">Links</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/markdown_readability/">Markdown readability</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/page_level_variables/">Page-level variables</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/plugins/">Plugins</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/sample/">Sample</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/scroll/">Scroll</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/setting_up/">Setting up</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/snippets/">Snippets</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/syntax_highlighting/">Syntax highlighting</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/tables/">Tables</a></li>
+    
+    
+    
+    
+      <li><a href="/jekylltutorial/tags/">Tags</a></li>
+    
+    
+</ul>
+</li>
+
+<p class="external">
+    <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+</p>
+        </div> <!-- end sidebar column -->
+
+
+
+
+
+
+
+
+            <!-- Content Column -->
+            <div class="col-md-9">
+
+                <div class="post-header">
+  <h1 class="post-title-main">Creating a printed guide</h1>
+</div>
+<div class="post-content">
+
+
+<div class="post-summary"></div>
+
+
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 70);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+<p>Although you can serve Jekyll sites locally, you have to run them on a server. You can&#39;t just deliver a set of static HTML files for anyone to view in a browser. The problem is that the paths to the stylesheets and other resources don&#39;t have a consistent to them. See this <a href="http://stackoverflow.com/questions/18068423/jekyll-serve-locally-without-building">StackOverflow question</a> and especially this one: <a href="http://stackoverflow.com/questions/26778329/running-jekyll-generated-files-without-jekyll-local-server">StackOverflow</a>.</p>
+
+<p>Here&#39;s the approach I&#39;m taking. </p>
+
+<ol>
+<li>Create a special configuration file designed for the print output. Call it configuration_acme_print.yml.</li>
+<li><p>Change the default page layout to print in this configuration file. Here&#39;s what that looks like: </p></li>
+<li><p>Clone the default.html layout, change it to print.html.</p></li>
+<li><p>Create a markdown page that consists of nothing but the includes that you want for the print output. It will look something like this. Make sure it&#39;s a markdown file because you&#39;re inserting pages that include markdown, so you need them to be processed as such. just be careful with spacing in this file so your liquid tags aren&#39;t processed incorrectly.</p></li>
+</ol>
+<div class="highlight"><pre><code class="language-liquid" data-lang="liquid">---
+title: Printed manual
+permalink: /print/
+layout: none
+---
+
+<span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>p<span class="w"> </span>in<span class="w"> </span>site.pages<span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">p</span><span class="p">.</span><span class="nv">permalink</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;/troubleshooting_hmac/&quot;</span><span class="w"> </span><span class="p">%}</span>
+&lt;h1&gt;<span class="p">{{</span><span class="nv">p</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span>&lt;/h1&gt;
+<span class="p">{{</span><span class="nv">p</span><span class="p">.</span><span class="nv">content</span><span class="p">}}</span>
+<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+
+<span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>p<span class="w"> </span>in<span class="w"> </span>site.pages<span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">p</span><span class="p">.</span><span class="nv">permalink</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;/release_notes/&quot;</span><span class="w"> </span><span class="p">%}</span>
+&lt;h1&gt;<span class="p">{{</span><span class="nv">p</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span>&lt;/h1&gt;
+<span class="p">{{</span><span class="nv">p</span><span class="p">.</span><span class="nv">content</span><span class="p">}}</span>
+<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+
+<span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>p<span class="w"> </span>in<span class="w"> </span>site.pages<span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">p</span><span class="p">.</span><span class="nv">permalink</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;/overview/&quot;</span><span class="w"> </span><span class="p">%}</span>
+&lt;h1&gt;<span class="p">{{</span><span class="nv">p</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span>&lt;/h1&gt;
+<span class="p">{{</span><span class="nv">p</span><span class="p">.</span><span class="nv">content</span><span class="p">}}</span>
+<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
+<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
+</code></pre></div>
+<p>make sure your layout is &quot;none.&quot; you will get a build warning:  Build Warning: Layout &#39;none&#39; requested in content/adtruth/printcompilation.md does not exist. But i think this is the only way to do it -- otherwise the page will be pushed through the default layout for the content -- the print layout as well as the existing layout specified here, such as page. then you&#39;d end up with two instances of the content.</p>
+
+<p>there will be a lot of loops on this page, so it&#39;s better to use switch case. </p>
+
+<p>the include will only pull the guts out of the page, ie the page content. it will not pull the page.layout wrapper that surrounds the page content. in normal publishing, the content for a page is pushed into page.html, and page.html has a tag that says <h1>Creating a printed guide</h1> that will print the title and such. but since the include only gets the page, it won&#39;t show the title because the include doesn&#39;t include the page&#39;s wrapper (page.html).</p>
+
+<p>this also means that the frontmatter will also be included in the page. ugghhhh. </p>
+
+<p>first, you have to add the h1 headings here manually. we need a special class for these h1 headings too, because we&#39;ll need to create something called an adjacent sibling combinator selector. this page explains it: <a href="http://css-tricks.com/child-and-sibling-selectors/">http://css-tricks.com/child-and-sibling-selectors/</a>. &quot;An adjacent sibling combinator selector allows you to select an element that is directly after another specific element.&quot;</p>
+
+<p>so add this to your custom stylesheet:</p>
+
+<p>h1.print + hr {
+  display:none;
+}</p>
+
+<p>h1.print + hr + p {
+  display:none;
+}</p>
+
+<p>h1.print + hr + p + hr{
+  display:none;
+}</p>
+
+<p>now give the h1 elements a special class (called print).</p>
+
+<p>but i decided to just manually add the h1&#39;s here. also give them a unique class.</p>
+
+<p>so we have to do some magic tricks here. </p>
+
+<p>here&#39;s a good stack overflow post: <a href="http://stackoverflow.com/questions/2606606/jekyll-documentation-to-pdf-with-toc">http://stackoverflow.com/questions/2606606/jekyll-documentation-to-pdf-with-toc</a></p>
+
+<p>uh oh, when you have a tag or layout in the front matter, this is how it gets output in the html:</p>
+
+<p>h2#tags:-implementation</p>
+
+<p>i&#39;m not sure how to strip this out...</p>
+
+<p>Then simply print it. By default, you won&#39;t have a TOC, page numbers, cross references, or other details. Here is where need to hand it off to a more powerful tool comes in. I recommend using Prince XML, since you can use CSS to define the look and feel of the printed output. </p>
+
+<p>Prince CSS allows you to style XHTML documents using CSS. </p>
+
+<p>Install prince: <a href="http://www.princexml.com/doc/installing/">http://www.princexml.com/doc/installing/</a></p>
+
+<p>In your command line, cd to the directory that has your XHTML output to it (e.g., acme.html).</p>
+
+<p>Type:</p>
+
+<p>prince acme.html</p>
+
+<p>Prince will render acme.pdf. </p>
+
+<p>Now create a CSS stylesheet in the same directory --e.g., acmestyle.css</p>
+
+<p>Then enter:</p>
+
+<p>prince -s acmestyle.css acme.html</p>
+
+<p>You&#39;ll see that prince applies the CSS styling to the acme.pdf output. </p>
+
+<p>By using CSS instead of XSLT to create the PDF styling, you can single source between the styles you&#39;re already using for your CSS output online and your PDF styles.</p>
+
+<p>Here&#39;s a powerpoint with more details: <a href="http://www.oxygenxml.com/events/2014/Slides_DITA_OT_Day_2014/DITA_Open_Toolkit_PDF_generation_with_CSS.pdf">http://www.oxygenxml.com/events/2014/Slides_DITA_OT_Day_2014/DITA_Open_Toolkit_PDF_generation_with_CSS.pdf</a></p>
+
+<p>Here&#39;s a sample: <a href="http://buildr.apache.org/contributing.html">http://buildr.apache.org/contributing.html</a>. Buildr uses prince xml to get a pdf version of their docs. includes a numbered toc.</p>
+
+</div>
+
+
+<!-- related pages -->
+<hr />
+<h5>Related Pages</h5>
+
+
+
+
+
+<ul>
+
+
+
+
+<li><a href="/jekylltutorial/changelog/">Change log</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="/jekylltutorial/building_themes/">Building a Jekyll theme</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="/jekylltutorial/cshelp/">Context-sensitive help via Jekyll</a></li>
+
+
+
+
+
+
+
+
+
+
+<li><a href="/jekylltutorial"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="/jekylltutorial/">Homepage</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+</ul>
+ <!-- page comments -->
+
+
+
+
+You need to set up disqus code for your project. See _includes/disqus.html. The project in your config file should map to one of the values in the disqus.html file.
+
+
+
+
+
+
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p> </p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+
+
+ 
+</body>
+
+</html>
+
