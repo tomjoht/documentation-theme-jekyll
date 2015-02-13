@@ -1,6 +1,6 @@
 ---
 title: How to integrate the lunr search
-permalink: /lunr_search/
+permalink: /integrate_lunr_search/
 tags: publishing
 ---
 

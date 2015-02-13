@@ -1,6 +1,6 @@
 ---
 title: First steps
-permalink: /first_steps/
+permalink: /firststeps/
 tags: layout
 layout: page
 ---

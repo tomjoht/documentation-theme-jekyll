@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Scrollspy demo
-permalink: /scrollspy/
+title: Dummytext
+permalink: /dummytext/
 tags: analytics
 ---
 

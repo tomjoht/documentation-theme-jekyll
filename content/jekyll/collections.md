@@ -1,6 +1,6 @@
 ---
-title: Test page 123
-permalink: /test123/
+title: Collections
+permalink: /collections/
 layout: page
 tags: gettingStarted
 category: monsters

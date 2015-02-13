@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Getting started
-permalink: /getting_started/
+permalink: /fork_this_template/
 tags: gettingStarted
 ---
 

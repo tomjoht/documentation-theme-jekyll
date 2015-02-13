@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Conditional filtering
-permalink: /conditional_filtering/
+title: Conditional logic
+permalink: /conditional_logic/
 tags: conditional_filtering
 ---
 

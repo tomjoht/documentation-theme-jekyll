@@ -1,6 +1,6 @@
 ---
 title: Styling your site
-permalink: /styling_your_site/
+permalink: /lavish/
 tags: publishing
 ---
 

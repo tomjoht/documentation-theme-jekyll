@@ -1,6 +1,6 @@
 ---
 title: Creating a printed guide
-permalink: /creating_print/
+permalink: /creating_print_output/
 ---
 
 
