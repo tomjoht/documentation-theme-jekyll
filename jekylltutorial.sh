@@ -1,0 +1,1 @@
+jekyll serve --destination ../jekyllbuilds/site_jekylltutorial

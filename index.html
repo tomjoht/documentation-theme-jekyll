@@ -1,0 +1,27 @@
+---
+layout: page
+title: Homepage
+type: homepage
+permalink: "/"
+---
+
+
+{% if site.project == "jekylltutorial" %}
+
+{% include index_jekylltutorial.html %}
+
+{% elsif site.project == "basicproject" %}
+
+{% include index_basicproject.html %}
+
+{% else %}
+
+You need to customize the index.html file with the right index file for this project. Your project value in the config file needs to map to an index file as specified in the _includes/index.html file.
+
+{% endif %}
+
+    
+
+
+
+

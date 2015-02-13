@@ -1,0 +1,15 @@
+{% if site.project == "jekylltutorial" %}
+
+{% include sidebar_jekylltutorial.html %}
+
+{% elsif site.project == "basicproject" %}
+
+{% include sidebar_basicproject.html %}
+
+{% else %}
+
+You need to customize the sidebar.html file with the right sidebar for this project. Your project value in the config file 
+needs to map to a sidebar as specified in the _includes/sidebar.html file.
+
+{% endif %}
+

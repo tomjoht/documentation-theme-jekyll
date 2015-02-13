@@ -1,0 +1,15 @@
+{% if site.project == "jekylltutorial" %}
+
+{% include topnav_jekylltutorial.html %}
+
+{% elsif site.project == "basicproject" %}
+
+{% include topnav_basicproject.html %}
+
+{% else %}
+
+You need to customize the topnav.html file with the right topnav for this project. Your project value in the config file 
+needs to map to a topnav file as specified in the _includes/topnav.html file.
+
+{% endif %}
+

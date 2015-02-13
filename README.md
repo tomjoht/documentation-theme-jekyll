@@ -1,2 +1,2 @@
-# jekyll-doc
-A Jekyll-based theme designed for documentation and help systems.
+# jekyll-based-doc-theme
+Jekyll theme designed to be used for documentation sites

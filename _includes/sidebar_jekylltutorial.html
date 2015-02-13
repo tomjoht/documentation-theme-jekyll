@@ -1,0 +1,62 @@
+ <!-- Content Row -->
+
+        <div class="row">
+            <!-- Sidebar Column -->
+            <div class="col-md-3">
+
+<script>
+$(document).ready(function() {
+    // Initialize navgoco with default options
+    $("#demo1").navgoco({
+        caretHtml: '',
+        accordion: true,
+        openClass: 'active', // open
+        save: true,
+        cookie: {
+            name: 'navgoco',
+            expires: false,
+            path: '/'
+        },
+        slide: {
+            duration: 400,
+            easing: 'swing'
+        }
+    });
+
+    $("#collapseAll").click(function(e) {
+        e.preventDefault();
+        $("#demo1").navgoco('toggle', false);
+    });
+
+    $("#expandAll").click(function(e) {
+        e.preventDefault();
+        $("#demo1").navgoco('toggle', true);
+    });
+});
+
+</script>
+  
+<!-- note that the data file for your project needs to be specified in the code below. Instead of site.data.jekyll, use the data file corresponding to your project (create one if it doesn't already exist). -->
+
+
+<ul id="demo1" class="nav">
+{{ site.data.jekyll.name }}
+{{ site.data.jekyll.topnav.dropdown_title }} 
+
+<li><a href="#">{{site.data.jekyll.scenarios.title}}</a>
+<ul>
+    {% for item in site.data.jekyll.scenarios.items %}
+    {% assign class = nil %}
+    {% if page.url contains item.url %}
+      <li class="active"><a href="{{item.url | prepend: site.baseurl}}" class="active">{{item.title}}</a></li>
+    {% else %}
+      <li><a href="{{item.url | prepend: site.baseurl}}">{{item.title}}</a></li>
+    {% endif %}
+    {% endfor %}
+</ul>
+</li>
+
+<p class="external">
+    <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+</p>
+        </div> <!-- end sidebar column -->

@@ -1,0 +1,13 @@
+
+{% for node in pages_list | sort = "weight" %}
+  {% if group == null or group == node.group %}
+    {% if page.url == node.url %}
+      <li class="active"><a href="{{node.url | prepend: site.baseurl}}" class="active">{{node.title}}</a></li>
+    {% else %}
+      <li><a href="{{node.url | prepend: site.baseurl}}">{{node.title}}</a></li>
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% assign pages_list = nil %}
+{% assign group = nil %}

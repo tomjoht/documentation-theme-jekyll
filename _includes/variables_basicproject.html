@@ -1,0 +1,20 @@
+{% comment %}
+
+sample patterns: 
+
+{% assign sec = "south eastern conference" %}
+
+{% capture zebra %}<a href={{ '/overview' | prepend: site.baseurl }}>Zebra</a>{% endcapture %}
+{% endcomment %}
+
+
+{% capture identifiers %}
+{% for post in site.posts %}
+{% if post.permalink == "/identifiers/" %}
+<li><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> ({{ post.date | date: "%b %-d, %Y" }})</li>
+<div class="summary">{{post.summary}}</div>
+{% endif %}
+{% endfor %}
+{% endcapture %}
+
+

@@ -1,0 +1,148 @@
+
+{% include variables.html %}
+
+
+
+
+    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["gettingStarted"]'>
+
+               <div class="panel panel-danger">
+               <div class="panel-heading">Getting started</div>
+               <div class="panel-body">
+                  If you're getting started with Jekyll, see the links in this section. It will take you from the beginning level to comfortable. 
+                  <ul>
+                {% assign counter = '0' %}
+                {% for page in site.pages %}
+                {% for tag in page.tags %}
+                {% if tag == "getting_started" and counter < '5' %}
+                {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
+                  <li><a href="{{ page.permalink | prepend: site.baseurl }}">{{page.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %} 
+                  </ul>
+               </div>
+            </div>
+    
+    </div>
+   
+
+    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["news"]'>
+             
+             <div class="panel panel-info">
+               <div class="panel-heading">Latest news</div>
+               <div class="panel-body">Here's the latest news about this theme. Lots more detail here... [These are posts from the original theme I forked this template from (Shiori).]
+               <ul>
+                  {% for post in site.posts %}
+                  {% for tag in post.tags %}
+                  {% if tag == "news" %}
+                  <li><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> ({{ post.date | date: "%b %-d, %Y" }})</li>
+                  <div class="summary">{{post.summary}}</div>
+                  {% endif %}
+                  {% endfor %}
+                  {% endfor %}
+               </ul>
+            </div>
+         </div>
+
+    </div>
+
+    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["conditional_filtering"]'>
+
+             <div class="panel panel-warning">
+               <div class="panel-heading">Conditional filtering</div>
+               <div class="panel-body">
+                  You can conditionally filter content, reuse content stored in other places, set up variables, and use other advanced logic from the Liquid markup. 
+                  <ul>
+                {% assign counter = '0' %}
+                {% for page in site.pages %}
+                {% for tag in page.tags %}
+                {% if tag == "getting_started" and counter < '5' %}
+                {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
+                  <li><a href="{{ page.permalink | prepend: site.baseurl }}">{{page.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %} 
+                  </ul>
+               </div>
+            </div>
+
+    </div>
+
+
+
+    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["layout"]'>
+
+                <div class="panel panel-danger">
+               <div class="panel-heading">Layout test</div>
+               <div class="panel-body">
+                  These topics get into layout techniques and strategies. 
+                  <ul>
+                    <ul>
+  {% assign counter = '0' %}
+                {% for page in site.pages %}
+                {% for tag in page.tags %}
+                {% if tag == "getting_started" and counter < '5' %}
+                {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
+                  <li><a href="{{ page.permalink | prepend: site.baseurl }}">{{page.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %} 
+                    
+                  </ul>
+               </div>
+            </div>
+
+    </div>
+
+    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["formatting"]'>
+         
+      <div class="panel panel-default">
+               <div class="panel-heading">Formatting test</div>
+               <div class="panel-body">These topics cover basic formatting as you're creating content on a page.
+               <ul>
+              {% assign counter = '0' %}
+                {% for page in site.pages %}
+                {% for tag in page.tags %}
+                {% if tag == "getting_started" and counter < '5' %}
+                {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
+                  <li><a href="{{ page.permalink | prepend: site.baseurl }}">{{page.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %} 
+               </ul>
+            </div>
+         </div>
+
+    </div>
+
+       <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["reuse"]'>
+         
+<div class="panel panel-primary">
+               <div class="panel-heading">Loop limit test</div>
+               <div class="panel-body">
+                {% assign counter = '0' %}
+                {% for page in site.pages %}
+                {% for tag in page.tags %}
+                {% if tag == "getting_started" and counter < '5' %}
+                {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
+                  <li><a href="{{ page.permalink | prepend: site.baseurl }}">{{page.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %} 
+               </div>
+            </div>
+
+    </div>
+
+     
+
+
+<h2>Another section</h2>
+Some content ...
+<div class="row">
+   <div class="col-md-4"><img src="//placehold.it/300x300" class="img-responsive"></div>
+   <div class="col-md-4"><img src="//placehold.it/300x300" class="img-responsive"></div>
+   <div class="col-md-4"><img src="//placehold.it/300x300" class="img-responsive"></div>
+</div>
+Some more content...

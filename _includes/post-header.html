@@ -1,0 +1,8 @@
+<p class="text-muted">{{ page.date | date_to_string }}</p>
+<div class="well well-sm">
+  <div class="tagMetadata">
+{% for tag in page.tags %}
+ tags: {{tag}}
+{% endfor %}
+</div>
+</div>

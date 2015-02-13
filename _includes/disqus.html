@@ -1,0 +1,15 @@
+{% if page.comments %}
+{% if site.project == "jekyll" %}
+
+{% include disqus_jekyll.html %}
+
+{% elsif site.project == "basicproject" %}
+
+{% include disqus_basicproject.html %}
+
+{% else %}
+
+You need to set up disqus code for your project. See _includes/disqus.html. The project in your config file should map to one of the values in the disqus.html file.
+
+{% endif %}
+{% endif %}
