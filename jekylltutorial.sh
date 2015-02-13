@@ -1,1 +1,1 @@
-jekyll serve --destination ../jekyllbuilds/site_jekylltutorial
+jekyll serve --destination ../jekyllbuilds/site_jekylldoc
