@@ -4,10 +4,10 @@
     <title>Jekyll-tutorial</title>
     <description>A theme based on Jekyll designed for technical writers creating help systems. Feel free to clone, fork, and otherwise use. It&#39;s all open source and free to implement.  Please consider contributing back any innovations you make so that others can benefit.
 </description>
-    <link>http://tomjohnson1492.github.io/jekylldoc/</link>
-    <atom:link href="http://tomjohnson1492.github.io/jekylldoc/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 13 Feb 2015 15:19:59 -0800</pubDate>
-    <lastBuildDate>Fri, 13 Feb 2015 15:19:59 -0800</lastBuildDate>
+    <link>http://tomjohnson1492.github.io/jekyll-doc/</link>
+    <atom:link href="http://tomjohnson1492.github.io/jekyll-doc/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 13 Feb 2015 15:28:07 -0800</pubDate>
+    <lastBuildDate>Fri, 13 Feb 2015 15:28:07 -0800</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
   </channel>

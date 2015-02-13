@@ -40,12 +40,12 @@ $(document).ready(function() {
 
 
 <ul id="demo1" class="nav">
-{{ site.data.jekyll.name }}
-{{ site.data.jekyll.topnav.dropdown_title }} 
+{{ site.data.jekyll-doc.name }}
+{{ site.data.jekyll-doc.topnav.dropdown_title }} 
 
-<li><a href="#">{{site.data.jekyll.scenarios.title}}</a>
+<li><a href="#">{{site.data.jekyll-doc.scenarios.title}}</a>
 <ul>
-    {% for item in site.data.jekyll.scenarios.items %}
+    {% for item in site.data.jekyll-doc.scenarios.items %}
     {% assign class = nil %}
     {% if page.url contains item.url %}
       <li class="active"><a href="{{item.url | prepend: site.baseurl}}" class="active">{{item.title}}</a></li>

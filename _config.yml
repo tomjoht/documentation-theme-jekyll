@@ -5,7 +5,7 @@ email: tomjohnson1492@gmail.com
 description: > # the ">" means to ignore newlines until "baseurl:"
   A theme based on Jekyll designed for technical writers creating help systems. Feel free to clone, fork, and otherwise use. It's all open source and free to implement. 
   Please consider contributing back any innovations you make so that others can benefit.
-baseurl: "/jekylldoc" # the subpath of your site, e.g. /blog
+baseurl: "/jekyll-doc" # the subpath of your site, e.g. /blog
 url: "http://tomjohnson1492.github.io" # the base hostname & protocol for your site
 twitter_username: tomjohnson
 github_username:  tomjohnson1492
@@ -18,8 +18,7 @@ port: 4000 # specified here in case you have multiple sites and want to view the
 # common in the Jekyll world.
 
 
-project: jekylldoc
-audience: web
+project: jekyll-doc
 
 ## build settings
 
