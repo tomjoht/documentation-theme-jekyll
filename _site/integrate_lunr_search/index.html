@@ -16,7 +16,7 @@
               <!-- to easily brand your theme, use http://www.lavishbootstrap.com/ -->
     <link rel="stylesheet" href="/jekyll-doc/stylesheets/customstyles.css"  type='text/css'>
 
-    <link rel="canonical" href="http://tomjohnson1492.github.io/jekyll-doc/creating_print/">
+    <link rel="canonical" href="http://tomjohnson1492.github.io/jekyll-doc/integrate_lunr_search/">
     <link rel="stylesheet" href="/jekyll-doc/stylesheets/jquery.navgoco.css"  type='text/css'>
     <link rel="stylesheet" href="/jekyll-doc/stylesheets/customstyles.css"  type='text/css'>
     <script src="/jekyll-doc/js/jquery.min.js"></script>
@@ -30,7 +30,7 @@
 
 
 
-    <title>Creating a printed guide | Jekyll-tutorial</title>
+    <title>How to integrate the lunr search | Jekyll-doc</title>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -97,7 +97,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/jekyll-doc/">Jekyll-tutorial</a>
+                <a class="navbar-brand" href="/jekyll-doc/">Jekyll-doc</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -206,15 +206,15 @@
         <div class="row">
             <div class="col-lg-12">
             <!-- this part seems redundant in the theme and just takes up space...-->
-               <!-- <h1 class="page-header">Creating a printed guide
+               <!-- <h1 class="page-header">How to integrate the lunr search
                     <small></small>
                 </h1> -->
                 &nbsp;
                 <ol class="breadcrumb">
                     <li><!--<a href="/jekyll-doc/">Home</a> -->Home</li>
                     
-                    <li></li>
-                    <li Creating a printed guide</li>
+                    <li>publishing</li>
+                    <li How to integrate the lunr search</li>
                     
                 </ol>
             </div>
@@ -316,7 +316,7 @@ Resources
     
     
     
-      <li><a href="/jekyll-doc/first_steps/">First Steps</a></li>
+      <li><a href="/jekyll-doc/firststeps/">First Steps</a></li>
     
     
     
@@ -336,7 +336,7 @@ Resources
     
     
     
-      <li><a href="/jekyll-doc/integrate_lunr_search/">Integrate Lunr Search</a></li>
+      <li class="active"><a href="/jekyll-doc/integrate_lunr_search/" class="active">Integrate Lunr Search</a></li>
     
     
     
@@ -423,7 +423,7 @@ Resources
             <div class="col-md-9">
 
                 <div class="post-header">
-  <h1 class="post-title-main">Creating a printed guide</h1>
+  <h1 class="post-title-main">How to integrate the lunr search</h1>
 </div>
 <div class="post-content">
 
@@ -442,7 +442,7 @@ $('#toc').on('click', 'a', function() {
   var target = $(this.getAttribute('href'))
     , scroll_target = target.offset().top
 
-  $(window).scrollTop(scroll_target - 70);
+  $(window).scrollTop(scroll_target - 30);
   return false
 })
   
@@ -451,108 +451,12 @@ $('#toc').on('click', 'a', function() {
 
 <div id="toc"></div>
 
-<p>Although you can serve Jekyll sites locally, you have to run them on a server. You can&#39;t just deliver a set of static HTML files for anyone to view in a browser. The problem is that the paths to the stylesheets and other resources don&#39;t have a consistent to them. See this <a href="http://stackoverflow.com/questions/18068423/jekyll-serve-locally-without-building">StackOverflow question</a> and especially this one: <a href="http://stackoverflow.com/questions/26778329/running-jekyll-generated-files-without-jekyll-local-server">StackOverflow</a>.</p>
-
-<p>Here&#39;s the approach I&#39;m taking. </p>
-
 <ol>
-<li>Create a special configuration file designed for the print output. Call it configuration_acme_print.yml.</li>
-<li><p>Change the default page layout to print in this configuration file. Here&#39;s what that looks like: </p></li>
-<li><p>Clone the default.html layout, change it to print.html.</p></li>
-<li><p>Create a markdown page that consists of nothing but the includes that you want for the print output. It will look something like this. Make sure it&#39;s a markdown file because you&#39;re inserting pages that include markdown, so you need them to be processed as such. just be careful with spacing in this file so your liquid tags aren&#39;t processed incorrectly.</p></li>
+<li>clone the lunr search repo: <a href="https://github.com/slashdotdash/jekyll-lunr-js-search">https://github.com/slashdotdash/jekyll-lunr-js-search</a></li>
+<li>inside lib, copy the jekyll-lunr-js-search.rb and jekyll_lunr_js_search folder and insert them into your _plugins directory. if you don&#39;t have a _plugins directory, create one.</li>
+<li>inside build, copy the search.min.js and lunr.min.js files and insert them in a folder called js in your root directoy. (again, if you don&#39;t have a folder called js, create one.)</li>
+<li>copy this sample search.html file here: <a href="https://gist.github.com/flohei/91d987a1827023bef8ca">https://gist.github.com/flohei/91d987a1827023bef8ca</a>. move it to your root directory. </li>
 </ol>
-<div class="highlight"><pre><code class="language-liquid" data-lang="liquid">---
-title: Printed manual
-permalink: /print/
-layout: none
----
-
-<span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>p<span class="w"> </span>in<span class="w"> </span>site.pages<span class="w"> </span><span class="p">%}</span>
-<span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">p</span><span class="p">.</span><span class="nv">permalink</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;/troubleshooting_hmac/&quot;</span><span class="w"> </span><span class="p">%}</span>
-&lt;h1&gt;<span class="p">{{</span><span class="nv">p</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span>&lt;/h1&gt;
-<span class="p">{{</span><span class="nv">p</span><span class="p">.</span><span class="nv">content</span><span class="p">}}</span>
-<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
-<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
-
-<span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>p<span class="w"> </span>in<span class="w"> </span>site.pages<span class="w"> </span><span class="p">%}</span>
-<span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">p</span><span class="p">.</span><span class="nv">permalink</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;/release_notes/&quot;</span><span class="w"> </span><span class="p">%}</span>
-&lt;h1&gt;<span class="p">{{</span><span class="nv">p</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span>&lt;/h1&gt;
-<span class="p">{{</span><span class="nv">p</span><span class="p">.</span><span class="nv">content</span><span class="p">}}</span>
-<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
-<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
-
-<span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>p<span class="w"> </span>in<span class="w"> </span>site.pages<span class="w"> </span><span class="p">%}</span>
-<span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">p</span><span class="p">.</span><span class="nv">permalink</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;/overview/&quot;</span><span class="w"> </span><span class="p">%}</span>
-&lt;h1&gt;<span class="p">{{</span><span class="nv">p</span><span class="p">.</span><span class="nv">title</span><span class="p">}}</span>&lt;/h1&gt;
-<span class="p">{{</span><span class="nv">p</span><span class="p">.</span><span class="nv">content</span><span class="p">}}</span>
-<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
-<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
-</code></pre></div>
-<p>make sure your layout is &quot;none.&quot; you will get a build warning:  Build Warning: Layout &#39;none&#39; requested in content/adtruth/printcompilation.md does not exist. But i think this is the only way to do it -- otherwise the page will be pushed through the default layout for the content -- the print layout as well as the existing layout specified here, such as page. then you&#39;d end up with two instances of the content.</p>
-
-<p>there will be a lot of loops on this page, so it&#39;s better to use switch case. </p>
-
-<p>the include will only pull the guts out of the page, ie the page content. it will not pull the page.layout wrapper that surrounds the page content. in normal publishing, the content for a page is pushed into page.html, and page.html has a tag that says <h1>Creating a printed guide</h1> that will print the title and such. but since the include only gets the page, it won&#39;t show the title because the include doesn&#39;t include the page&#39;s wrapper (page.html).</p>
-
-<p>this also means that the frontmatter will also be included in the page. ugghhhh. </p>
-
-<p>first, you have to add the h1 headings here manually. we need a special class for these h1 headings too, because we&#39;ll need to create something called an adjacent sibling combinator selector. this page explains it: <a href="http://css-tricks.com/child-and-sibling-selectors/">http://css-tricks.com/child-and-sibling-selectors/</a>. &quot;An adjacent sibling combinator selector allows you to select an element that is directly after another specific element.&quot;</p>
-
-<p>so add this to your custom stylesheet:</p>
-
-<p>h1.print + hr {
-  display:none;
-}</p>
-
-<p>h1.print + hr + p {
-  display:none;
-}</p>
-
-<p>h1.print + hr + p + hr{
-  display:none;
-}</p>
-
-<p>now give the h1 elements a special class (called print).</p>
-
-<p>but i decided to just manually add the h1&#39;s here. also give them a unique class.</p>
-
-<p>so we have to do some magic tricks here. </p>
-
-<p>here&#39;s a good stack overflow post: <a href="http://stackoverflow.com/questions/2606606/jekyll-documentation-to-pdf-with-toc">http://stackoverflow.com/questions/2606606/jekyll-documentation-to-pdf-with-toc</a></p>
-
-<p>uh oh, when you have a tag or layout in the front matter, this is how it gets output in the html:</p>
-
-<p>h2#tags:-implementation</p>
-
-<p>i&#39;m not sure how to strip this out...</p>
-
-<p>Then simply print it. By default, you won&#39;t have a TOC, page numbers, cross references, or other details. Here is where need to hand it off to a more powerful tool comes in. I recommend using Prince XML, since you can use CSS to define the look and feel of the printed output. </p>
-
-<p>Prince CSS allows you to style XHTML documents using CSS. </p>
-
-<p>Install prince: <a href="http://www.princexml.com/doc/installing/">http://www.princexml.com/doc/installing/</a></p>
-
-<p>In your command line, cd to the directory that has your XHTML output to it (e.g., acme.html).</p>
-
-<p>Type:</p>
-
-<p>prince acme.html</p>
-
-<p>Prince will render acme.pdf. </p>
-
-<p>Now create a CSS stylesheet in the same directory --e.g., acmestyle.css</p>
-
-<p>Then enter:</p>
-
-<p>prince -s acmestyle.css acme.html</p>
-
-<p>You&#39;ll see that prince applies the CSS styling to the acme.pdf output. </p>
-
-<p>By using CSS instead of XSLT to create the PDF styling, you can single source between the styles you&#39;re already using for your CSS output online and your PDF styles.</p>
-
-<p>Here&#39;s a powerpoint with more details: <a href="http://www.oxygenxml.com/events/2014/Slides_DITA_OT_Day_2014/DITA_Open_Toolkit_PDF_generation_with_CSS.pdf">http://www.oxygenxml.com/events/2014/Slides_DITA_OT_Day_2014/DITA_Open_Toolkit_PDF_generation_with_CSS.pdf</a></p>
-
-<p>Here&#39;s a sample: <a href="http://buildr.apache.org/contributing.html">http://buildr.apache.org/contributing.html</a>. Buildr uses prince xml to get a pdf version of their docs. includes a numbered toc.</p>
 
 </div>
 
@@ -570,46 +474,6 @@ layout: none
 
 
 
-<li><a href="/jekyll-doc/changelog/">Change log</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-<li><a href="/jekyll-doc/building_themes/">Building a Jekyll theme</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li><a href="/jekyll-doc/cshelp/">Context-sensitive help via Jekyll</a></li>
-
-
-
-
-
-
-
-
-
-
-<li><a href="/jekyll-doc"></a></li>
 
 
 
@@ -628,13 +492,41 @@ layout: none
 
 
 
-<li><a href="/jekyll-doc/">Homepage</a></li>
 
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="/jekyll-doc/lavish/">Styling your site</a></li>
 
 
 

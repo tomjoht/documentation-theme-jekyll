@@ -16,7 +16,7 @@
               <!-- to easily brand your theme, use http://www.lavishbootstrap.com/ -->
     <link rel="stylesheet" href="/jekyll-doc/stylesheets/customstyles.css"  type='text/css'>
 
-    <link rel="canonical" href="http://tomjohnson1492.github.io/jekyll-doc/building_themes/">
+    <link rel="canonical" href="http://tomjohnson1492.github.io/jekyll-doc/lavish/">
     <link rel="stylesheet" href="/jekyll-doc/stylesheets/jquery.navgoco.css"  type='text/css'>
     <link rel="stylesheet" href="/jekyll-doc/stylesheets/customstyles.css"  type='text/css'>
     <script src="/jekyll-doc/js/jquery.min.js"></script>
@@ -30,7 +30,7 @@
 
 
 
-    <title>Building a Jekyll theme | Jekyll-tutorial</title>
+    <title>Styling your site | Jekyll-doc</title>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -97,7 +97,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/jekyll-doc/">Jekyll-tutorial</a>
+                <a class="navbar-brand" href="/jekyll-doc/">Jekyll-doc</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -206,15 +206,15 @@
         <div class="row">
             <div class="col-lg-12">
             <!-- this part seems redundant in the theme and just takes up space...-->
-               <!-- <h1 class="page-header">Building a Jekyll theme
+               <!-- <h1 class="page-header">Styling your site
                     <small></small>
                 </h1> -->
                 &nbsp;
                 <ol class="breadcrumb">
                     <li><!--<a href="/jekyll-doc/">Home</a> -->Home</li>
                     
-                    <li></li>
-                    <li Building a Jekyll theme</li>
+                    <li>publishing</li>
+                    <li Styling your site</li>
                     
                 </ol>
             </div>
@@ -316,7 +316,7 @@ Resources
     
     
     
-      <li><a href="/jekyll-doc/first_steps/">First Steps</a></li>
+      <li><a href="/jekyll-doc/firststeps/">First Steps</a></li>
     
     
     
@@ -346,7 +346,7 @@ Resources
     
     
     
-      <li><a href="/jekyll-doc/lavish/">Lavish</a></li>
+      <li class="active"><a href="/jekyll-doc/lavish/" class="active">Lavish</a></li>
     
     
     
@@ -423,7 +423,7 @@ Resources
             <div class="col-md-9">
 
                 <div class="post-header">
-  <h1 class="post-title-main">Building a Jekyll theme</h1>
+  <h1 class="post-title-main">Styling your site</h1>
 </div>
 <div class="post-content">
 
@@ -442,7 +442,7 @@ $('#toc').on('click', 'a', function() {
   var target = $(this.getAttribute('href'))
     , scroll_target = target.offset().top
 
-  $(window).scrollTop(scroll_target - 70);
+  $(window).scrollTop(scroll_target - 30);
   return false
 })
   
@@ -451,18 +451,10 @@ $('#toc').on('click', 'a', function() {
 
 <div id="toc"></div>
 
-<p>If you want to build a Jekyll theme to match your company site, basically take the HTML from your company site, clean it up so there is no content on the page, change that content to a placeholder tag called , and then save it in your _layouts folder as default.html. </p>
+<p>Use this lavish site to customize the look and feel of your theme. it&#39;s much easier than actually modifying the stylesheet!</p>
 
-<p>In your configuration file, define that page post types use this layout by default:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">defaults:
-  -
-    scope:
-      path: &quot;&quot;
-      type: &quot;pages&quot;
-    values:
-      layout: &quot;print&quot;
-      comments: true
-</code></pre></div>
+<p><a href="http://www.lavishbootstrap.com/">http://www.lavishbootstrap.com/</a></p>
+
 </div>
 
 
@@ -479,7 +471,6 @@ $('#toc').on('click', 'a', function() {
 
 
 
-<li><a href="/jekyll-doc/changelog/">Change log</a></li>
 
 
 
@@ -502,23 +493,6 @@ $('#toc').on('click', 'a', function() {
 
 
 
-<li><a href="/jekyll-doc/creating_print/">Creating a printed guide</a></li>
-
-
-
-
-<li><a href="/jekyll-doc/cshelp/">Context-sensitive help via Jekyll</a></li>
-
-
-
-
-
-
-
-
-
-
-<li><a href="/jekyll-doc"></a></li>
 
 
 
@@ -537,9 +511,15 @@ $('#toc').on('click', 'a', function() {
 
 
 
-<li><a href="/jekyll-doc/">Homepage</a></li>
 
 
+
+
+
+
+
+
+<li><a href="/jekyll-doc/integrate_lunr_search/">How to integrate the lunr search</a></li>
 
 
 

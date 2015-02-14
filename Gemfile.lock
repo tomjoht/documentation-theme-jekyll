@@ -47,6 +47,7 @@ GEM
     html-pipeline (1.9.0)
       activesupport (>= 2)
       nokogiri (~> 1.4)
+    htmlentities (4.3.3)
     i18n (0.7.0)
     jekyll (2.4.0)
       classifier-reborn (~> 2.0)
@@ -77,6 +78,9 @@ GEM
     jekyll-sitemap (0.6.3)
     jekyll-watch (1.2.1)
       listen (~> 2.7)
+    jekyll_pages_api (0.1.0)
+      htmlentities (~> 4.3)
+      jekyll (~> 2.0)
     jemoji (0.4.0)
       gemoji (~> 2.0)
       html-pipeline (~> 1.9)
@@ -124,3 +128,4 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll_pages_api

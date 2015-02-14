@@ -16,7 +16,7 @@
               <!-- to easily brand your theme, use http://www.lavishbootstrap.com/ -->
     <link rel="stylesheet" href="/jekyll-doc/stylesheets/customstyles.css"  type='text/css'>
 
-    <link rel="canonical" href="http://tomjohnson1492.github.io/jekyll-doc/lunr_search/">
+    <link rel="canonical" href="http://tomjohnson1492.github.io/jekyll-doc/conditional_logic/">
     <link rel="stylesheet" href="/jekyll-doc/stylesheets/jquery.navgoco.css"  type='text/css'>
     <link rel="stylesheet" href="/jekyll-doc/stylesheets/customstyles.css"  type='text/css'>
     <script src="/jekyll-doc/js/jquery.min.js"></script>
@@ -30,7 +30,7 @@
 
 
 
-    <title>How to integrate the lunr search | Jekyll-tutorial</title>
+    <title>Conditional logic | Jekyll-doc</title>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -97,7 +97,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/jekyll-doc/">Jekyll-tutorial</a>
+                <a class="navbar-brand" href="/jekyll-doc/">Jekyll-doc</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -206,15 +206,15 @@
         <div class="row">
             <div class="col-lg-12">
             <!-- this part seems redundant in the theme and just takes up space...-->
-               <!-- <h1 class="page-header">How to integrate the lunr search
+               <!-- <h1 class="page-header">Conditional logic
                     <small></small>
                 </h1> -->
                 &nbsp;
                 <ol class="breadcrumb">
                     <li><!--<a href="/jekyll-doc/">Home</a> -->Home</li>
                     
-                    <li>publishing</li>
-                    <li How to integrate the lunr search</li>
+                    <li>conditional_filtering</li>
+                    <li Conditional logic</li>
                     
                 </ol>
             </div>
@@ -291,7 +291,7 @@ Resources
     
     
     
-      <li><a href="/jekyll-doc/conditional_logic/">Conditional logic</a></li>
+      <li class="active"><a href="/jekyll-doc/conditional_logic/" class="active">Conditional logic</a></li>
     
     
     
@@ -316,7 +316,7 @@ Resources
     
     
     
-      <li><a href="/jekyll-doc/first_steps/">First Steps</a></li>
+      <li><a href="/jekyll-doc/firststeps/">First Steps</a></li>
     
     
     
@@ -423,7 +423,7 @@ Resources
             <div class="col-md-9">
 
                 <div class="post-header">
-  <h1 class="post-title-main">How to integrate the lunr search</h1>
+  <h1 class="post-title-main">Conditional logic</h1>
 </div>
 <div class="post-content">
 
@@ -442,7 +442,7 @@ $('#toc').on('click', 'a', function() {
   var target = $(this.getAttribute('href'))
     , scroll_target = target.offset().top
 
-  $(window).scrollTop(scroll_target - 70);
+  $(window).scrollTop(scroll_target - 30);
   return false
 })
   
@@ -451,12 +451,102 @@ $('#toc').on('click', 'a', function() {
 
 <div id="toc"></div>
 
-<ol>
-<li>clone the lunr search repo: <a href="https://github.com/slashdotdash/jekyll-lunr-js-search">https://github.com/slashdotdash/jekyll-lunr-js-search</a></li>
-<li>inside lib, copy the jekyll-lunr-js-search.rb and jekyll_lunr_js_search folder and insert them into your _plugins directory. if you don&#39;t have a _plugins directory, create one.</li>
-<li>inside build, copy the search.min.js and lunr.min.js files and insert them in a folder called js in your root directoy. (again, if you don&#39;t have a folder called js, create one.)</li>
-<li>copy this sample search.html file here: <a href="https://gist.github.com/flohei/91d987a1827023bef8ca">https://gist.github.com/flohei/91d987a1827023bef8ca</a>. move it to your root directory. </li>
-</ol>
+<p>If you&#39;re a technical writer creating different outputs for different audiences, you can do all of this using a combination of Jekyll&#39;s Liquid markup and values in your configuration file.</p>
+
+<p>Note: Definitely check out <a href="http://docs.shopify.com/themes/liquid-documentation/basics">Liquid&#39;s documentation</a> for more details about how to use operators and other liquid markup. The notes here are a small, somewhat superficial sample from the site.</p>
+
+<h2 id="where-to-store-filtering-values">Where to store filtering values</h2>
+
+<p>You can filter content based on values that you have set in your config file or in a file in your _data folder. If you set the attribute in your config file, you need to restart the Jekyll server to see the changes. If you set the value in a file in your _data folder, you don&#39;t need to restart the server when you make changes. </p>
+
+<p>However, if you&#39;re doing conditional filtering, you probably have a different site title (and other elements) as well. Since you can&#39;t use Liquid markup (to do conditional filtering) in your config file, then most likely you&#39;ll want separate config files for the different outputs anyway. In that case, storing attributes in your config file might make more sense. </p>
+
+<h2 id="conditional-logic-based-on-config-file-value">Conditional logic based on config file value</h2>
+
+<p>Here&#39;s an example of conditional logic based on a value in your config file. In my config_web.yml file, I have the following:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">audience: web
+</code></pre></div>
+<p>On a page in my site (it can be html or markdown), I have the following:</p>
+
+<p>This uses simple <code>if-elsif</code> logic to determine what is shown. You access the configuration value through the site namespace, by using <code>site.audience</code>.</p>
+
+<p>Here&#39;s an example of <code>if-else</code> logic inside a list:</p>
+<div class="highlight"><pre><code class="language-liquid" data-lang="liquid">To bake a casserole:
+
+1. Gather the ingredients.
+<span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">audience</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;omnivore&quot;</span><span class="w"> </span><span class="p">%}</span>
+2. Add in a pound of meat.
+<span class="p">{%</span><span class="w"> </span><span class="kr">elsif</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">audience</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;vegetarian&quot;</span><span class="w"> </span><span class="p">%}</span>
+3. Add in an extra can of beans.
+<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
+3. Bake in oven for 45 min.
+</code></pre></div>
+<p>You can also add an <code>else</code> statement to handle all other conditions not handled by the <code>if</code> statements. </p>
+
+<h2 id="or-operator">Or operator</h2>
+
+<p>You can use more advanced Liquid markup for conditional logic, such as an <code>or</code> command. See <a href="http://docs.shopify.com/themes/liquid-documentation/basics/operators">Shopify&#39;s Liquid documentation</a> for more details. </p>
+
+<p>For example, here&#39;s an example using <code>or</code>:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">{% if page.tags contains &quot;homepage&quot; or page.tags == &quot;featured&quot; %}
+    // run this.
+{% endif %}
+</code></pre></div>
+<h2 id="conditional-logic-based-on-data-file-value">Conditional logic based on data file value</h2>
+
+<p>You can also store values in your _data folder. The way you access the value is a little different. First, create a folder called <code>_data</code>. Next, create a YML file (you might call it options.yml) and put in similarly formatted content as in your config.yml file, such as: </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">audience: web
+</code></pre></div>
+<p>To access values in the options.yml file in your _data folder, you use the <code>site.data.options</code> namespace, where data is the name of the folder and options is the name of the file.</p>
+
+<p>Here&#39;s an example of conditional logic based on a value in a .yml file inside _data:</p>
+<div class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="kr">if</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">options</span><span class="p">.</span><span class="nv">audience</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;web&quot;</span><span class="w"> </span><span class="p">%}</span>
+The web audience should see this...
+<span class="p">{%</span><span class="w"> </span><span class="kr">elsif</span><span class="w"> </span><span class="nv">site</span><span class="p">.</span><span class="nv">data</span><span class="p">.</span><span class="nv">options</span><span class="p">.</span><span class="nv">audience</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s2">&quot;acme&quot;</span><span class="w"> </span><span class="p">%}</span>
+The acme audience should see this ...
+<span class="p">{%</span><span class="w"> </span><span class="kr">endif</span><span class="w"> </span><span class="p">%}</span>
+</code></pre></div>
+<h2 id="conditional-logic-based-on-page-namespace">Conditional logic based on page namespace</h2>
+
+<p>You can also create conditional logic based on the page namespace. For example, create a page with front matter as follows:</p>
+<div class="highlight"><pre><code class="language-liquid" data-lang="liquid">---
+layout: page
+type: homepage
+---
+</code></pre></div>
+<p>Now in any other file, you can create conditional logic based on the page namespace. For example, in your default.html file in your _layouts folder, you might have the following:</p>
+
+<h2 id="setting-up-conditional-logic">Setting up conditional logic</h2>
+
+<p>Probably the best approach to conditional filtering when you have multiple outputs for different audiences is to use different configuration files. </p>
+
+<p>Instead of using <em>config.yml, create configuration files such as config_gizmo.yml and config</em>acme.yml. (You can delete _config.yml).</p>
+
+<p>Note that you can&#39;t use Liquid markup inside a YML file. </p>
+
+<h2 id="excluding-files-of-directories-from-an-output">Excluding files of directories from an output</h2>
+
+<p>By default pages get included in the output, even if they&#39;re not specifically listed in any navigation. To filter out the pages you don&#39;t want, you use the <code>exclude</code> property in your configuration file, like this:</p>
+<div class="highlight"><pre><code class="language-liquid" data-lang="liquid"> exclude:
+  - content/gizmo
+  - content/tutorials
+  - readme.md
+</code></pre></div>
+<p>This will make it so any pages in the content/gizmo or content/tutorials directories are not included. Additionally, the readm.md file will be excluded. </p>
+
+<p>Now when you create content only for one specific audience, you exclude the inapplicable directories. For your acme audience, you might want to exclude all content in your web directory. And vice versa. </p>
+
+<h2 id="page-references">Page references</h2>
+
+<p>Interestingly, even though you may group content into subfolders, when you reference a page, you reference it by the permalink regardless of the subfolder it happens to be in. So even if you have content/tutorial_link, you link to it with tutorial_link instead of content/tutorial_link because that&#39;s what the permalink of the topic says.</p>
+
+<h2 id="conditional-navigation">Conditional navigation</h2>
+
+<p>You can apply <code>if-else</code> statements to the layout files as well. Suppose you want to have different navigation for two different projects (a likely scenario). You can use the same if-else logic in your default.html file.</p>
+
+<p>First extract the varying navigation element from your default.html file into something like topnav.html. Then use conditional logic to build it: </p>
+
+<p>Now you can define the navigation you want for each project without adding a ton of if-else statements in your code. On the other hand, if you just have a few slight differences between the outputs, you probably won&#39;t want to create completely separate files.</p>
 
 </div>
 
@@ -526,7 +616,6 @@ $('#toc').on('click', 'a', function() {
 
 
 
-<li><a href="/jekyll-doc/styling_your_site/">Styling your site</a></li>
 
 
 
@@ -557,8 +646,7 @@ $('#toc').on('click', 'a', function() {
 
 
 
-
-
+<span class="noOtherPages"><p>No other pages.</p></span>
        
 </ul>
  <!-- page comments -->

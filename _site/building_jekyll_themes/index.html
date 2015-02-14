@@ -16,7 +16,7 @@
               <!-- to easily brand your theme, use http://www.lavishbootstrap.com/ -->
     <link rel="stylesheet" href="/jekyll-doc/stylesheets/customstyles.css"  type='text/css'>
 
-    <link rel="canonical" href="http://tomjohnson1492.github.io/jekyll-doc/content/jekyll/news.html">
+    <link rel="canonical" href="http://tomjohnson1492.github.io/jekyll-doc/building_jekyll_themes/">
     <link rel="stylesheet" href="/jekyll-doc/stylesheets/jquery.navgoco.css"  type='text/css'>
     <link rel="stylesheet" href="/jekyll-doc/stylesheets/customstyles.css"  type='text/css'>
     <script src="/jekyll-doc/js/jquery.min.js"></script>
@@ -30,7 +30,7 @@
 
 
 
-    <title>Jekyll-tutorial</title>
+    <title>Building a Jekyll theme | Jekyll-doc</title>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -97,7 +97,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/jekyll-doc/">Jekyll-tutorial</a>
+                <a class="navbar-brand" href="/jekyll-doc/">Jekyll-doc</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -206,7 +206,7 @@
         <div class="row">
             <div class="col-lg-12">
             <!-- this part seems redundant in the theme and just takes up space...-->
-               <!-- <h1 class="page-header">
+               <!-- <h1 class="page-header">Building a Jekyll theme
                     <small></small>
                 </h1> -->
                 &nbsp;
@@ -214,7 +214,7 @@
                     <li><!--<a href="/jekyll-doc/">Home</a> -->Home</li>
                     
                     <li></li>
-                    <li </li>
+                    <li Building a Jekyll theme</li>
                     
                 </ol>
             </div>
@@ -316,7 +316,7 @@ Resources
     
     
     
-      <li><a href="/jekyll-doc/first_steps/">First Steps</a></li>
+      <li><a href="/jekyll-doc/firststeps/">First Steps</a></li>
     
     
     
@@ -422,17 +422,186 @@ Resources
             <!-- Content Column -->
             <div class="col-md-9">
 
-                <div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="/jekyll-doc/feed.xml">via RSS</a></p>
-
+                <div class="post-header">
+  <h1 class="post-title-main">Building a Jekyll theme</h1>
 </div>
+<div class="post-content">
+
+
+<div class="post-summary"></div>
+
+
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 30);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+<p>If you want to build a Jekyll theme to match your company site, basically take the HTML from your company site, clean it up so there is no content on the page, change that content to a placeholder tag called , and then save it in your _layouts folder as default.html. </p>
+
+<p>In your configuration file, define that page post types use this layout by default:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">defaults:
+  -
+    scope:
+      path: &quot;&quot;
+      type: &quot;pages&quot;
+    values:
+      layout: &quot;print&quot;
+      comments: true
+</code></pre></div>
+</div>
+
+
+<!-- related pages -->
+<hr />
+<h5>Related Pages</h5>
+
+
+
+
+
+<ul>
+
+
+
+
+<li><a href="/jekyll-doc/changelog/">Change log</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="/jekyll-doc/creating_print_output/">Creating a printed guide</a></li>
+
+
+
+
+<li><a href="/jekyll-doc/cshelp/">Context-sensitive help via Jekyll</a></li>
+
+
+
+
+
+
+
+
+
+
+<li><a href="/jekyll-doc"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="/jekyll-doc/">Homepage</a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+</ul>
+ <!-- page comments -->
+
+
+
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'idrbwjekyll'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    
+
+
+
+
+
 
             </div>
         </div>

@@ -16,7 +16,7 @@
               <!-- to easily brand your theme, use http://www.lavishbootstrap.com/ -->
     <link rel="stylesheet" href="/jekyll-doc/stylesheets/customstyles.css"  type='text/css'>
 
-    <link rel="canonical" href="http://tomjohnson1492.github.io/jekyll-doc/styling_your_site/">
+    <link rel="canonical" href="http://tomjohnson1492.github.io/jekyll-doc/news/">
     <link rel="stylesheet" href="/jekyll-doc/stylesheets/jquery.navgoco.css"  type='text/css'>
     <link rel="stylesheet" href="/jekyll-doc/stylesheets/customstyles.css"  type='text/css'>
     <script src="/jekyll-doc/js/jquery.min.js"></script>
@@ -30,7 +30,7 @@
 
 
 
-    <title>Styling your site | Jekyll-tutorial</title>
+    <title>Jekyll-doc</title>
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -97,7 +97,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/jekyll-doc/">Jekyll-tutorial</a>
+                <a class="navbar-brand" href="/jekyll-doc/">Jekyll-doc</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -116,7 +116,7 @@
     
     
     
-      <li><a href="/jekyll-doc/news/">News</a></li>
+      <li class="active"><a href="/jekyll-doc/news/" class="active">News</a></li>
     
     
 
@@ -206,15 +206,15 @@
         <div class="row">
             <div class="col-lg-12">
             <!-- this part seems redundant in the theme and just takes up space...-->
-               <!-- <h1 class="page-header">Styling your site
+               <!-- <h1 class="page-header">
                     <small></small>
                 </h1> -->
                 &nbsp;
                 <ol class="breadcrumb">
                     <li><!--<a href="/jekyll-doc/">Home</a> -->Home</li>
                     
-                    <li>publishing</li>
-                    <li Styling your site</li>
+                    <li></li>
+                    <li </li>
                     
                 </ol>
             </div>
@@ -316,7 +316,7 @@ Resources
     
     
     
-      <li><a href="/jekyll-doc/first_steps/">First Steps</a></li>
+      <li><a href="/jekyll-doc/firststeps/">First Steps</a></li>
     
     
     
@@ -422,166 +422,17 @@ Resources
             <!-- Content Column -->
             <div class="col-md-9">
 
-                <div class="post-header">
-  <h1 class="post-title-main">Styling your site</h1>
-</div>
-<div class="post-content">
+                <div class="home">
 
+  <h1 class="page-heading">Posts</h1>
 
-<div class="post-summary"></div>
-
-
-<script>
-$( document ).ready(function() {
-  // Handler for .ready() called.
-
-$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
-
-
-$('#toc').on('click', 'a', function() {
-  var target = $(this.getAttribute('href'))
-    , scroll_target = target.offset().top
-
-  $(window).scrollTop(scroll_target - 70);
-  return false
-})
-  
-});
-</script>
-
-<div id="toc"></div>
-
-<p>Use this lavish site to customize the look and feel of your theme. it&#39;s much easier than actually modifying the stylesheet!</p>
-
-<p><a href="http://www.lavishbootstrap.com/">http://www.lavishbootstrap.com/</a></p>
-
-</div>
-
-
-<!-- related pages -->
-<hr />
-<h5>Related Pages</h5>
-
-
-
-
-
-<ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li><a href="/jekyll-doc/lunr_search/">How to integrate the lunr search</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       
-</ul>
- <!-- page comments -->
-
-
-
-
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-        var disqus_shortname = 'idrbwjekyll'; // required: replace example with your forum shortname
-
-        /* * * DON'T EDIT BELOW THIS LINE * * */
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <ul class="post-list">
     
+  </ul>
 
+  <p class="rss-subscribe">subscribe <a href="/jekyll-doc/feed.xml">via RSS</a></p>
 
-
-
-
+</div>
 
             </div>
         </div>
