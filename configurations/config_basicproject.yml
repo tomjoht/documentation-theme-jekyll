@@ -20,6 +20,8 @@ port: 4001 # specified here in case you have multiple sites and want to view the
 project: basicproject
 audience: web
 
+google-analytics-tracking-code: 
+
 ## build settings
 
 markdown: redcarpet

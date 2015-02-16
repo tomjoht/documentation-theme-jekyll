@@ -1,15 +1,69 @@
-{% if site.project == "jekyll-doc" %}
+ <!-- Content Row -->
 
-{% include sidebar_jekyll-doc.html %}
+        <div class="row">
+            <!-- Sidebar Column -->
+            <div class="col-md-3">
 
-{% elsif site.project == "basicproject" %}
+<script>
+$(document).ready(function() {
+    // Initialize navgoco with default options
+    $("#demo1").navgoco({
+        caretHtml: '',
+        accordion: {{site.data.nav.sidebar_accordion}},
+        openClass: 'active', // open
+        save: true,
+        cookie: {
+            name: 'navgoco',
+            expires: false,
+            path: '/'
+        },
+        slide: {
+            duration: 400,
+            easing: 'swing'
+        }
+    });
 
-{% include sidebar_basicproject.html %}
+    $("#collapseAll").click(function(e) {
+        e.preventDefault();
+        $("#demo1").navgoco('toggle', false);
+    });
 
-{% else %}
+    $("#expandAll").click(function(e) {
+        e.preventDefault();
+        $("#demo1").navgoco('toggle', true);
+    });
+});
 
-You need to customize the sidebar.html file with the right sidebar for this project. Your project value in the config file 
-needs to map to a sidebar as specified in the _includes/sidebar.html file.
+</script>
+  
+<!-- note that the data file for your project needs to be specified in the code below. Instead of site.data.jekyll, use the data file corresponding to your project (create one if it doesn't already exist). -->
 
+
+<ul id="demo1" class="nav">
+
+
+
+{% for entry in site.data.nav.entries %}
+  
+  {% for subcategory in entry.subcategories %}
+    <li><a href="#">{{ subcategory.title }}</a>
+    <ul>
+    {% for item in subcategory.items %}
+      {% if page.url contains item.url %}
+      <li class="active"><a href="{{item.url | prepend: site.baseurl}}" class="active">{{item.title}}</a></li>
+    {% else %}
+      <li><a href="{{item.url | prepend: site.baseurl}}">{{item.title}}</a></li>
+    {% endif %}
+    {% endfor %}
+    </ul>
+    </li>
+  {% endfor %}
+{% endfor %}
+
+{% if site.data.nav.sidebar_accordion == false %}
+<p class="external">
+    <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+</p>
 {% endif %}
 
+        </div> <!-- end sidebar column -->

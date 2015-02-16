@@ -19,6 +19,7 @@ port: 4000 # specified here in case you have multiple sites and want to view the
 
 
 project: jekyll-doc
+google-analytics-tracking-code: 
 
 ## build settings
 
@@ -31,6 +32,7 @@ highlighter: pygments
 exclude: # put all files or directories that you want to exclude from your project here.
   - "Gemfile"
   - "Gemfile.lock"
+  - _drafts
 
 # these are defaults that get applied to each page or post. you don't have to set these settings in the frontmatter if you put them here. But frontmatter settings will override the configs here.
 permalink: :title
@@ -42,6 +44,7 @@ defaults:
     values:
       layout: "page"
       comments: true
+      search: include
   -
     scope:
       path: ""
@@ -49,9 +52,14 @@ defaults:
     values:
       layout: "post"
       comments: true
+      search: include
 
 sass:
     sass_dir: _sass
+
+# top nav items
+
+data_source: navigation/jekyll-doc
 
 # if you had a collection (your own post types separate from pages or posts), you could add them like this here. then you create a folder called _bikes to put the content.
 #collections:

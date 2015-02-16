@@ -19,24 +19,43 @@
     <link rel="canonical" href="http://tomjohnson1492.github.io/jekyll-doc/add_blog/">
     <link rel="stylesheet" href="/jekyll-doc/stylesheets/jquery.navgoco.css"  type='text/css'>
     <link rel="stylesheet" href="/jekyll-doc/stylesheets/customstyles.css"  type='text/css'>
+    <link rel="canonical" href="http://tomjohnson1492.github.io/jekyll-doc/add_blog/">
+  <link rel="alternate" type="application/rss+xml" title="Jekyll-doc" href="http://tomjohnson1492.github.io/jekyll-doc/feed.xml" />
     <script src="/jekyll-doc/js/jquery.min.js"></script>
     <script src="/jekyll-doc/js/jquery.cookie.min.js"></script>
     <script src="/jekyll-doc/js/jquery.navgoco.min.js"></script>
-    <script src="/jekyll-doc/js/lunr.min.js"></script>
     <script src="/jekyll-doc/js/bootstrap.min.js"></script>
     <script src="/jekyll-doc/js/toc.js"></script>
     <script src=""></script>
-    
-
-
-
-    <title>Adding a blog section | Jekyll-doc</title>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+       <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+    
+    <title>Adding a blog section | Jekyll-doc</title>
+     <meta name="description" content="A theme based on Jekyll designed for technical writers creating help systems. Feel free to clone, fork, and otherwise use. It's all open source and free to implement.  Please consider contributing back any innovations you make so that others can benefit.
+">
+ 
+<!-- add all your links here -->
+
+
+
+<!-- callouts, alerts, notes -->
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -84,9 +103,7 @@
 <body>
 
 
-   
-
- <!-- Navigation -->
+    <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -97,56 +114,75 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/jekyll-doc/">Jekyll-doc</a>
+                 <a class="fa fa-home fa-lg navbar-brand" href="/jekyll-doc/">&nbsp; Jekyll-doc</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
 
+<!-- entries without drop-downs appear here -->
+  
+  
+
+      
     
+      <li><a href="/jekyll-doc/cshelp/">Context-sensitive help</a></li>
     
+          
     
-      <li><a href="/jekyll-doc/demo_environment/">Demo Environment</a></li>
+
+      
     
+      <li><a href="/jekyll-doc/alerts/">Alerts</a></li>
     
+          
     
+
+      
     
-      <li><a href="/jekyll-doc/support/">Support</a></li>
+      <li><a href="/jekyll-doc/collections/">Collections</a></li>
     
-    
-    
-    
-      <li><a href="/jekyll-doc/news/">News</a></li>
-    
+          
     
 
 
-      <li class="dropdown">
-      <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resources <b class="caret"></b></a>
-     <ul class="dropdown-menu">
+<!-- entries with drop-downs appear here -->
+
+  
+  
+    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Getting started<b class="caret"></b></a>
+         <ul class="dropdown-menu">
+         
+         
+         
+       <li><a href="/jekyll-doc/alerts/">Alerts</a></li>
+       
     
-    
-    
-    
-      <li><a href="/jekyll-doc">Stuff 1</a></li>
-    
-    
-    
-    
-      <li><a href="/jekyll-doc/stuffurl1/"></a></li>
-    
-    
-    
-    
-      <li><a href="/jekyll-doc">Stuff 2</a></li>
-    
-    
-    
-    
-      <li><a href="/jekyll-doc/stuffurl2/"></a></li>
-    
+         
+         
+       <li><a href="/jekyll-doc/build_arguments/">Build arguments</a></li>
+       
     
     </ul>
+    </li>
+  
+    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Hello World<b class="caret"></b></a>
+         <ul class="dropdown-menu">
+         
+         
+         
+       <li><a href="/jekyll-doc/build_arguments/">Build arguments</a></li>
+       
+    
+         
+         
+       <li><a href="/jekyll-doc/collections/">Collections</a></li>
+       
+    
+    </ul>
+    </li>
+  
+ 
 
 <!-- you can also just hard-code a section here, for example if you want to include external resources:
                     <li class="dropdown">
@@ -170,19 +206,7 @@
                         </ul>
                     </li>
 
--->
 
- <!--  here's where the search will go when it works...
-          <li>
-
-        <form class="navbar-form navbar-right" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
-        </div>
-        <button id="quicksearch-query" type="submit" class="btn btn-default">Submit</button>
-      </form>
-      </li>
--->
 
                     </li>
                 </ul>
@@ -195,23 +219,19 @@
     </nav>
 
 
-
-
-
-
     <!-- Page Content -->
     <div class="container">
+    <div class="col-lg-12">&nbsp;</div>
 
-        <!-- Page Heading/Breadcrumbs -->
+        <!-- Page Heading/Breadcrumbs -- site not hierarchical enough to support this feature well enough.
         <div class="row">
             <div class="col-lg-12">
-            <!-- this part seems redundant in the theme and just takes up space...-->
-               <!-- <h1 class="page-header">Adding a blog section
+               <h1 class="page-header">Adding a blog section
                     <small></small>
-                </h1> -->
+                </h1> 
                 &nbsp;
                 <ol class="breadcrumb">
-                    <li><!--<a href="/jekyll-doc/">Home</a> -->Home</li>
+                    <li><a href="/jekyll-doc/">Home</a> Home</li>
                     
                     <li>layout</li>
                     <li Adding a blog section</li>
@@ -219,9 +239,7 @@
                 </ol>
             </div>
         </div>
-        <!-- /.row -->
-
-
+        -->
 
 
 
@@ -269,152 +287,150 @@ $(document).ready(function() {
 
 <ul id="demo1" class="nav">
 
-Resources 
 
-<li><a href="#">Getting started</a>
-<ul>
+
+
+  
+  
+    <li><a href="#">Getting started</a>
+    <ul>
     
-    
-    
+      
       <li><a href="/jekyll-doc/alerts/">Alerts</a></li>
     
     
-    
-    
+      
       <li><a href="/jekyll-doc/build_arguments/">Build arguments</a></li>
     
     
+    </ul>
+    </li>
+  
+    <li><a href="#">Publishing</a>
+    <ul>
     
-    
+      
       <li><a href="/jekyll-doc/collections/">Collections</a></li>
     
     
+      
+      <li><a href="/jekyll-doc/conditional_logic">Conditional logic</a></li>
     
     
-      <li><a href="/jekyll-doc/conditional_logic/">Conditional logic</a></li>
-    
-    
-    
-    
+      
       <li><a href="/jekyll-doc/cshelp/">Context-sensitive help</a></li>
     
     
+    </ul>
+    </li>
+  
+    <li><a href="#">Themes</a>
+    <ul>
     
-    
+      
       <li><a href="/jekyll-doc/demo/">Demo</a></li>
     
     
-    
-    
-      <li><a href="/jekyll-doc/dummytext/">Dummy Text</a></li>
-    
-    
-    
-    
+      
       <li><a href="/jekyll-doc/faq/">FAQ</a></li>
     
     
+      
+      <li><a href="/jekyll-doc/dummytext/">Dummy Text</a></li>
     
     
+    </ul>
+    </li>
+  
+    <li><a href="#">Setting up sites</a>
+    <ul>
+    
+      
       <li><a href="/jekyll-doc/firststeps/">First Steps</a></li>
     
     
-    
-    
+      
       <li><a href="/jekyll-doc/gemfiles/">Gem files</a></li>
     
     
-    
-    
+      
       <li><a href="/jekyll-doc/icons/">Icons</a></li>
     
     
-    
-    
+      
       <li><a href="/jekyll-doc/images/">Images</a></li>
     
     
+    </ul>
+    </li>
+  
+    <li><a href="#">Findability</a>
+    <ul>
     
-    
+      
       <li><a href="/jekyll-doc/integrate_lunr_search/">Integrate Lunr Search</a></li>
     
     
-    
-    
+      
       <li><a href="/jekyll-doc/labels/">Labels</a></li>
     
     
-    
-    
+      
       <li><a href="/jekyll-doc/lavish/">Lavish</a></li>
     
     
-    
-    
+      
       <li><a href="/jekyll-doc/links/">Links</a></li>
     
     
-    
-    
+      
       <li><a href="/jekyll-doc/markdown_readability/">Markdown readability</a></li>
     
     
-    
-    
+      
       <li><a href="/jekyll-doc/page_level_variables/">Page-level variables</a></li>
     
     
-    
-    
+      
       <li><a href="/jekyll-doc/plugins/">Plugins</a></li>
     
     
-    
-    
+      
       <li><a href="/jekyll-doc/sample/">Sample</a></li>
     
     
-    
-    
+      
       <li><a href="/jekyll-doc/scroll/">Scroll</a></li>
     
     
-    
-    
+      
       <li><a href="/jekyll-doc/setting_up/">Setting up</a></li>
     
     
-    
-    
+      
       <li><a href="/jekyll-doc/snippets/">Snippets</a></li>
     
     
-    
-    
+      
       <li><a href="/jekyll-doc/syntax_highlighting/">Syntax highlighting</a></li>
     
     
-    
-    
+      
       <li><a href="/jekyll-doc/tables/">Tables</a></li>
     
     
-    
-    
+      
       <li><a href="/jekyll-doc/tags/">Tags</a></li>
     
     
-</ul>
-</li>
+    </ul>
+    </li>
+  
 
-<p class="external">
-    <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
-</p>
+
+
+
         </div> <!-- end sidebar column -->
-
-
-
-
 
 
 
@@ -422,6 +438,28 @@ Resources
             <!-- Content Column -->
             <div class="col-md-9">
 
+<!-- start search -->
+   <div id="search-demo-container">
+      <input type="text" id="search-input" placeholder="search...">
+      <ul id="results-container"></ul>
+    </div>
+
+    
+    <script src="/jekyll-doc/js/jekyll-search.js" type="text/javascript"></script>
+    
+    
+    <script type="text/javascript">
+      SimpleJekyllSearch.init({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        dataSource: '/jekyll-doc/search.json',        
+        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+        noResultsText: 'No results found',
+        limit: 10,
+        fuzzy: true,
+      })
+    </script>
+    <!-- end search -->
                 <div class="post-header">
   <h1 class="post-title-main">Adding a blog section</h1>
 </div>
@@ -442,7 +480,7 @@ $('#toc').on('click', 'a', function() {
   var target = $(this.getAttribute('href'))
     , scroll_target = target.offset().top
 
-  $(window).scrollTop(scroll_target - 30);
+  $(window).scrollTop(scroll_target - 10);
   return false
 })
   
@@ -454,26 +492,9 @@ $('#toc').on('click', 'a', function() {
 <p>To add blog entries, you add files to your _posts directory. The titles must be in yyyy-mm-dd-postname.md format. This is because Jekyll sorts them by date based on the file name. </p>
 
 <p>Here&#39;s the code for adding a blog. Basically you get the latest posts. </p>
-<div class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>post<span class="w"> </span>in<span class="w"> </span>site.posts<span class="w"> </span><span class="p">%}</span>
-<span class="p">{{</span><span class="w"> </span><span class="nv">post</span><span class="p">.</span><span class="nv">date</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="nf">date</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;%b %-d, %Y&quot;</span><span class="w"> </span><span class="p">}}</span>
-<span class="p">{{</span><span class="w"> </span><span class="nv">post</span><span class="p">.</span><span class="nv">title</span><span class="w"> </span><span class="p">}}</span>
-<span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
-</code></pre></div>
-<p>Here&#39;s the same content with some styling around it:</p>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">&quot;page-heading&quot;</span><span class="nt">&gt;</span>Posts<span class="nt">&lt;/h1&gt;</span>
-<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;post-list&quot;</span><span class="nt">&gt;</span>
-    {% for post in site.posts %}
-      <span class="nt">&lt;li&gt;</span>
-        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">&quot;post-meta&quot;</span><span class="nt">&gt;</span>{{ post.date | date: &quot;%b %-d, %Y&quot; }}<span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;h2&gt;</span>
-          <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">&quot;post-link&quot;</span> <span class="na">href=</span><span class="s">&quot;{{ post.url | prepend: site.baseurl }}&quot;</span><span class="nt">&gt;</span>{{ post.title }}<span class="nt">&lt;/a&gt;</span>
-        <span class="nt">&lt;/h2&gt;</span>
-      <span class="nt">&lt;/li&gt;</span>
-    {% endfor %}
-  <span class="nt">&lt;/ul&gt;</span>
 
-<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">&quot;rss-subscribe&quot;</span><span class="nt">&gt;</span>subscribe <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;{{ &quot;</span><span class="err">/</span><span class="na">feed</span><span class="err">.</span><span class="na">xml</span><span class="err">&quot;</span> <span class="err">|</span> <span class="na">prepend:</span> <span class="na">site</span><span class="err">.</span><span class="na">baseurl</span> <span class="err">}}&quot;</span><span class="nt">&gt;</span>via RSS<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
-</code></pre></div>
+<p>Here&#39;s the same content with some styling around it:</p>
+
 <h2 id="result">Result</h2>
 
 <p>Here&#39;s the result:</p>
@@ -482,6 +503,30 @@ $('#toc').on('click', 'a', function() {
 
 <ul class="post-list">
     
+      <li><a class="post-link" href="/jekyll-doc/updates-for-theme">Theme updates (Feb 5, 2015)</a></li>
+    
+      <li><a class="post-link" href="/jekyll-doc/welcome-to-jekyll">Welcome to Jekyll! (Feb 5, 2015)</a></li>
+    
+      <li><a class="post-link" href="/jekyll-doc/obnoxious/">Some really obnoxiously long post title could be possible so just make sure it doesn't break all the things for real, yo, okay? (Jan 12, 2014)</a></li>
+    
+      <li><a class="post-link" href="/jekyll-doc/bacon-ipsum-long">Bacon Ipsum (Long) (Dec 24, 2013)</a></li>
+    
+      <li><a class="post-link" href="/jekyll-doc/bacon-ipsum-tiny">Bacon Ipsum (Tiny) (Dec 18, 2013)</a></li>
+    
+      <li><a class="post-link" href="/jekyll-doc/bacon-ipsum-short">Bacon Ipsum (Short) (Dec 18, 2013)</a></li>
+    
+      <li><a class="post-link" href="/jekyll-doc/the-adventure-of-the-veiled-lodger">The Adventure of the Veiled Lodger (Jul 24, 2012)</a></li>
+    
+      <li><a class="post-link" href="/jekyll-doc/the-adventure-of-the-dying-detective">The Adventure of the Dying Detective (Jun 9, 2012)</a></li>
+    
+      <li><a class="post-link" href="/jekyll-doc/the-adventure-of-the-cardboard-box">The Adventure of the Cardboard Box (Nov 11, 2011)</a></li>
+    
+      <li><a class="post-link" href="/jekyll-doc/obama-inaugural-address">Obama Inaugural Address (Jan 20, 2009)</a></li>
+    
+      <li><a class="post-link" href="/jekyll-doc/america-and-the-spirit-of-volunteerism-george-w-bush">America and the Spirit of Volunteerism (Sep 8, 2008)</a></li>
+    
+      <li><a class="post-link" href="/jekyll-doc/address-to-the-nation-george-w-bush">Address to the Nation (Sep 20, 2001)</a></li>
+    
 </ul>
 
 <p class="rss-subscribe">subscribe <a href="/jekyll-doc/feed.xml">via RSS</a></p>
@@ -489,25 +534,28 @@ $('#toc').on('click', 'a', function() {
 <h2 id="adding-limits">Adding limits</h2>
 
 <p>You can also add a limit to the <code>for</code> loop. You must also specify the tags namespace that you&#39;re running the loop in:</p>
-<div class="highlight"><pre><code class="language-liquid" data-lang="liquid"><span class="p">{%</span><span class="w"> </span><span class="nt">for</span><span class="w"> </span>post<span class="w"> </span>in<span class="w"> </span>site.tags.news<span class="w"> </span><span class="na">limit</span><span class="o">:</span><span class="mi">2</span><span class="w">  </span><span class="p">%}</span>
-    //do something
-  <span class="p">{%</span><span class="w"> </span><span class="nt">endfor</span><span class="w"> </span><span class="p">%}</span>
 
+<p>If you were to just write <code>site.posts</code>, then it would limit the iterations to just 2 for overall posts.</p>
 
-If you were to just write `site.posts`, then it would limit the iterations to just 2 for overall posts.
-</code></pre></div>
 </div>
+
+
 
 
 <!-- related pages -->
 <hr />
+
+
 <h5>Related Pages</h5>
 
 
 
 
-
 <ul>
+
+
+
+
 
 
 
@@ -593,6 +641,16 @@ If you were to just write `site.posts`, then it would limit the iterations to ju
 
 
 
+
+
+
+
+
+
+
+
+
+
 <li><a href="/jekyll-doc/tags/">Tags</a></li>
 
 
@@ -602,9 +660,6 @@ If you were to just write `site.posts`, then it would limit the iterations to ju
 
        
 </ul>
- <!-- page comments -->
-
-
 
 
     <div id="disqus_thread"></div>
@@ -624,9 +679,6 @@ If you were to just write `site.posts`, then it would limit the iterations to ju
 
 
 
-
-
-
             </div>
         </div>
         <!-- /.row -->
@@ -637,7 +689,15 @@ If you were to just write `site.posts`, then it would limit the iterations to ju
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p> </p>
+                    <!-- Feel free to remove this div. Uses purplecoat: http://ellekasai.github.io/purplecoat.js -->
+
+ 
+
+Site last generated: Feb 16, 2015.
+Built with <a href="http://jekyllrb.com/">Jekyll</a> using the <a href="http://tomjohnson1492.github.io/jekyll-doc/">Jekyll-doc theme</a>.
+
+
+
                 </div>
             </div>
         </footer>
@@ -649,6 +709,22 @@ If you were to just write `site.posts`, then it would limit the iterations to ju
 
  
 </body>
+
+<script>
+  var _gaq = _gaq || [];
+  var pluginUrl = 
+ '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', '']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
 
 </html>
 

@@ -1,12 +1,30 @@
-{% if site.project == "jekyll-doc" %}
+{% include links.html %}
+{% include callouts.html %}
 
-{% include variables_jekyll-doc.html %}
 
-{% elsif site.project == "basicproject" %}
 
-{% include variables_basicproject.html %}
 
-{% endif %}
+{% capture hello %}
+Hello sir, how is your day???
+
+{% endcapture %}
+
+
+{% assign version = "5.2" %}
+
+{% assign mondaywarning = "This is not to be used on a Monday" %}
+
+{% capture overview %}<a href={{ '/overview' | prepend: site.baseurl }}>Overview</a>{% endcapture %}
+
+{% assign sec = "south eastern conference" %}
+
+
+{% capture zebra %}<a href={{ '/overview' | prepend: site.baseurl }}>Zebra</a>{% endcapture %}
+
+
+
+
+
 
 
 

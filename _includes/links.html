@@ -1,0 +1,10 @@
+<!-- add all your links here -->
+
+{% capture sample_workflow %}
+{% for page in site.pages %}
+  {% if page.permalink == '/sample_workflow/' %}
+<a href="{{ "/sample_workflow" | prepend: site.baseurl }}">{{page.title}}</a>
+{% break %}
+  {% endif %}
+{% endfor %}
+{% endcapture %}

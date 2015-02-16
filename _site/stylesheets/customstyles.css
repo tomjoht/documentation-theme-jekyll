@@ -177,9 +177,81 @@ p.external a {
 #definition-box-container div a.active {
   font-weight: bold;
 }
-.previousPost {
+p.post-meta {font-size: 80%; color: #777;}
 
+.entry-date{font-size:14px;font-size:0.875rem;line-height:1.71429;margin-bottom:0;text-transform:uppercase;}
+
+
+#search-demo-container {
+        width: 20em;
+        padding: 1em;
+        margin: 1em auto;
+        float: right;
+
+      }
+#search-input {
+        display: inline-block;
+        padding: .5em;
+       width:20em;
+        font-size: 0.8em;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        float: right;
+         margin-bottom:10px;
+       }
+
+#search-demo-container ul#results-container {
+list-style: none;
+font-size: 12px;
+position: absolute;
+z-index: 10;
+background-color: #fff;
+margin-top: 50px;
+padding-right:20px;
+padding-bottom:40px;
+top: 17px;
+left: 445px;
+border-radius:10px;
 }
-.nextPost {
 
+
+
+
+.filter-options {
+margin-bottom: 20px;
+}
+.filter-options button {
+margin: 3px;
+}
+
+div#toc ul li {
+margin: 3px 18px;
+font-size: 90%;
+}
+div#toc ul {
+background-color: #f0f0f0;
+padding: 10px;
+border-radius: 5px;
+list-style: square;
+max-width: 300px;
+padding-top:10px;
+}
+
+div#toc >ul::before {
+  content: "Contents";
+  font-weight:bold;
+}
+
+li.dropdownActive a {
+  font-weight: bold;
+}
+
+
+.post-content a.fa-rss {
+color: orange;
+}
+
+.post-content .rssfeedLink {
+color: #248EC2;
 }

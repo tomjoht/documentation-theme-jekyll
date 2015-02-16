@@ -9,54 +9,18 @@ comments: true
 <div class="post-content">
 
 
-<div class="post-summary">{{page.summary}}</div>
+<div class="post-summary">{{page.excerpt}}</div>
 
 
-<script>
-$( document ).ready(function() {
-  // Handler for .ready() called.
-
-$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
-
-
-$('#toc').on('click', 'a', function() {
-  var target = $(this.getAttribute('href'))
-    , scroll_target = target.offset().top
-
-  $(window).scrollTop(scroll_target - 30);
-  return false
-})
-  
-});
-</script>
-
-<div id="toc"></div>
+{% include toc.html %}
 
 {{ content }}
 </div>
 
-{% unless page.type == "homepage" or page.related_pages == "none" %}
-<!-- related pages -->
-<hr />
-<h5>Related Pages</h5>
 
 
-{% assign currentTag = page.tags %}
-{% assign currentTitle = page.title %}
-
-<ul>
-{% assign counter = '0' %}
-{% for page in site.pages %}
-{% if page.tags == currentTag and page.title != currentTitle and counter < '5' %}
-{% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
-<li><a href="{{ page.permalink | prepend: site.baseurl }}">{{page.title}}</a></li>
-{% endif %}
-{% endfor %}
-{% if counter == '0' %}<span class="noOtherPages"><p>No other pages.</p></span>
-{% endif %}       
-</ul>
- <!-- page comments -->
+{% include related_pages.html %}
 
 {% include disqus.html %}
 
-{% endunless %}
+

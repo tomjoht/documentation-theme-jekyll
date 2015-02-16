@@ -3,17 +3,27 @@ layout: default
 comments: true
 ---
 
-<div class="post-header">
-  <h1 class="post-title-main">{{ page.title }}</h1>
-  {% include post-header.html %}
-</div>
-<div class="post-content">
+
+  <h1>{{ page.title }}</h1>
+ <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }} {% if page.author %} • by {{ page.author }} {% endif %} {% if page.tags %} • {{ page.tags | array_to_sentence_string }}{% endif %} {% if page.meta %} • {{ page.meta }}{% endif %}</p>
+
+ <div class="post-summary">{{page.excerpt}}</div>
+
+
+{% include toc.html %}
+  
   {{ content }}
+
+{% include related_posts.html %}
+    
+
+<div class="well well-sm">
+
+<div class="nextPost">Next post: <a href="{{ page.next.url | prepend:site.baseurl }}">{{ page.next.title }}</a>.
 </div>
-<div class="post-footer">
-  {% include post-footer.html %}
 </div>
-{% if site.data.theme.show_post_navs %}
+
+</div>
   {% if page.previous or page.next %}
     <div class="post-navs row">
       {% if page.previous %}
@@ -42,7 +52,7 @@ comments: true
       {% endif %}
     </div>
   {% endif %}
-{% endif %}
+
 
 {% include disqus.html %}
 

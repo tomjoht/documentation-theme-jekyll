@@ -1,15 +1,14 @@
-{% if page.comments %}
-{% if site.project == "jekyll-doc" %}
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = '{{site.data.nav.disqus_shortname}}'; // required: replace example with your forum shortname
 
-{% include disqus_jekyll-doc.html %}
-
-{% elsif site.project == "basicproject" %}
-
-{% include disqus_basicproject.html %}
-
-{% else %}
-
-You need to set up disqus code for your project. See _includes/disqus.html. The project in your config file should map to one of the values in the disqus.html file.
-
-{% endif %}
-{% endif %}
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    

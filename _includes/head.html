@@ -1,12 +1,35 @@
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
-  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+    <link href='//fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" href="{{ "/stylesheets/syntax.css" | prepend:site.baseurl }}"  type='text/css'>
+     <link rel="stylesheet" href="{{ "/stylesheets/font-awesome.min.css" | prepend:site.baseurl }}">
+     <link rel="stylesheet" href="{{ "/stylesheets/bootstrap.min.css" | prepend:site.baseurl }}">
+     <link rel="stylesheet" href="{{ "/stylesheets/modern-business.css" | prepend:site.baseurl }}">
+    <link rel="stylesheet" href="{{ "/stylesheets/lavish-bootstrap.css" | prepend:site.baseurl }}"  type='text/css'>
+              <!-- to easily brand your theme, use http://www.lavishbootstrap.com/ -->
+    <link rel="stylesheet" href="{{ "/stylesheets/customstyles.css" | prepend:site.baseurl }}"  type='text/css'>
 
-  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+    <link rel="stylesheet" href="{{ "/stylesheets/jquery.navgoco.css" | prepend:site.baseurl }}"  type='text/css'>
+    <link rel="stylesheet" href="{{ "/stylesheets/customstyles.css" | prepend:site.baseurl }}"  type='text/css'>
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
-</head>
+    <script src="{{ "/js/jquery.min.js" | prepend:site.baseurl }}"></script>
+    <script src="{{ "/js/jquery.cookie.min.js" | prepend:site.baseurl }}"></script>
+    <script src="{{ "/js/jquery.navgoco.min.js" | prepend:site.baseurl }}"></script>
+    <script src="{{ "/js/bootstrap.min.js" | prepend:site.baseurl }}"></script>
+    <script src="{{ "/js/toc.js" | prepend:site.baseurl }}"></script>
+    <script src="{{ include scripts.html }}"></script>
+       <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+ 
