@@ -204,17 +204,17 @@ p.post-meta {font-size: 80%; color: #777;}
 #search-demo-container ul#results-container {
 list-style: none;
 font-size: 12px;
-position: absolute;
-z-index: 10;
+position: relative;
+z-index: -1;
 background-color: #fff;
 margin-top: 50px;
 padding-right:20px;
 padding-bottom:40px;
-top: 17px;
+/*top: 17px;
 left: 445px;
+*/
 border-radius:10px;
 }
-
 
 
 
