@@ -366,6 +366,7 @@ background-color: #FAFAFA;
 
 .nav li a {
   background-color: #EDEDED;
+  padding-right:10px;
 }
 
 
@@ -378,4 +379,14 @@ padding-left:10px;
 
 .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
   border-radius:5px;
+}
+
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+border-radius: 5px;
+}
+
+@media (max-width: 767px) {
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+color: #444;
+}
 }

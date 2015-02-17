@@ -1,12 +1,12 @@
 <!-- add all your links here -->
 
-<!-- Here's a sample link. This stores the link as "sample_workflow" and correlates it to the permalink. To embed it, just use {{sample_workflow}}. If you ever need to change the page title or link, you can do so from here.-->
+<!-- Here's a sample link. This stores the link as "conditional_logic" and correlates it to the permalink. To embed it, just use {{conditional_logic}}. If you ever need to change the page title or link, you can do so from here. Note that markdown is sensitive to line breaks, so don't break lines between capture tags.-->
 
-{% capture sample_workflow %}
-{% for page in site.pages %}
-  {% if page.permalink == '/sample_workflow/' %}
-<a href="{{ "/sample_workflow" | prepend: site.baseurl }}">{{page.title}}</a>
-{% break %}
-  {% endif %}
-{% endfor %}
+{% capture conditional_logic %}
+{% for page in site.pages %}{% if page.permalink == '/conditional_logic/' %}<a href="{{ "/conditional_logic" | prepend: site.baseurl }}">{{page.title}}</a>{% break %}{% endif %}{% endfor %}
 {% endcapture %}
+
+{% capture thank_you %}
+{% for page in site.pages %}{% if page.permalink == '/thank_you/' %}<a href="{{ "/thank_you" | prepend: site.baseurl }}">{{page.title}}</a>{% break %}{% endif %}{% endfor %}
+{% endcapture %}
+

@@ -1,10 +1,9 @@
 ---
-layout: page
-title: Homepage
 permalink: "/"
 related_pages: none
+layout: default
 ---
-
+<h1>{{site.data.options.homepage_title}}</h1>
 {% for page in site.pages %}
 {% for type in page.type %}
 {% if type == site.data.options.homepage %}
@@ -12,6 +11,9 @@ related_pages: none
 {% endif %}
 {% endfor %}
 {% endfor %} 
+{% include related_pages.html %}
+
+{% include disqus.html %}
 
     
 
