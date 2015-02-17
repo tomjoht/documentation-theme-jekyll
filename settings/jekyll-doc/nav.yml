@@ -12,6 +12,10 @@ topnav:
       url: /contact/
     - title: Supported features
       url: /supported_features/
+    - title: News
+      url: /news/
+    - title: New York Times
+      external_url: http://nytimes.com
 
 # Topnav dropdowns
 topnav_dropdowns:
@@ -23,12 +27,18 @@ topnav_dropdowns:
           url: /hello_world_tutorial/
         - title: Sample
           url: /sample/
+        - title: I'd Rather Be Writing
+          external_url: http://idratherbewriting.com
 
 
 # Sidebar
 entries:
 - title: Sidebar
   subcategories:
+    - title: Getting started
+      items:
+        - title: Creating a new project
+          url: /creating_projects/
     - title: Creating content
       items:
         - title: Writing content
@@ -41,6 +51,8 @@ entries:
           url: /collections/
         - title: Context-sensitive help
           url: /cshelp/
+        - title: Google
+          external_url: http://google.com
     - title: Formatting content
       items:
         - title: Icons

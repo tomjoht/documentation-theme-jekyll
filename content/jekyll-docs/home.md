@@ -14,14 +14,14 @@ This is a Jekyll theme intended for documentation projects. What makes this them
 
 ## Intended audience
 
-Although this theme could be used for any website, I'm assuming that my main audience involves technical writers. Very few technical writers are even aware of Jekyll as a platform, let alone how to use it for tech comm scenarios. The instructions for this theme, therefore, are extensive because they discuss a lot of Jekyll basics as well. Plus, as a technical writer, I like to document everything extensively.
-
-I'm not going to assume that you're already familiar with Jekyll, or that you're a UX guru, or that you know how to do backflips in Liquid. I'll try to hold your hand as much as possible.
+Although this theme could be used for any website, I'm assuming that my main audience involves technical writers. Very few technical writers are even aware of Jekyll as a platform, let alone how to use it for tech comm scenarios. The instructions for this theme, therefore, are extensive because they discuss a lot of Jekyll basics as well. I'm not going to assume that you're already familiar with Jekyll, or that you're a UX guru, or that you know how to do backflips in Liquid. I'll try to hold your hand as much as possible.
 
 
 ## Any questions?
 
-I hope I got some of the big questions out of the way. As far as I can tell, Jekyll supports most of the features a technical writer needs to author and publish content. Most importantly, using Jekyll allows you to take full advantage of a modern development platform. Feel free to ask me a question if there's something I haven't addressed here. Remember, I'm approaching this Jekyll documentation and theme from a tech writer's point of view.
+As far as I can tell, Jekyll supports most of the features a technical writer needs to author and publish content. See {{supported_features}} for an extensive list. Most importantly, using Jekyll allows you to take full advantage of a modern web development platform. 
+
+Feel free to ask me a question if there's something I haven't addressed here. Remember, I'm approaching this Jekyll documentation and theme from a tech writer's point of view.
 
 Tom Johnson <br /><a href="mailto:">tomjohnson1492@gmail.com</a>
 

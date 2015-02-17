@@ -6,7 +6,11 @@
 {% for page in site.pages %}{% if page.permalink == '/conditional_logic/' %}<a href="{{ "/conditional_logic" | prepend: site.baseurl }}">{{page.title}}</a>{% break %}{% endif %}{% endfor %}
 {% endcapture %}
 
-{% capture thank_you %}
-{% for page in site.pages %}{% if page.permalink == '/thank_you/' %}<a href="{{ "/thank_you" | prepend: site.baseurl }}">{{page.title}}</a>{% break %}{% endif %}{% endfor %}
+{% capture supported_features %}
+{% for page in site.pages %}{% if page.permalink == '/supported_features' %}<a href="{{ "/supported_features" | prepend: site.baseurl }}">{{page.title}}</a>{% break %}{% endif %}{% endfor %}
+{% endcapture %}
+
+{% capture creating_toc %}
+{% for page in site.pages %}{% if page.permalink == '/creating_toc' %}<a href="{{ "/creating_toc" | prepend: site.baseurl }}">{{page.title}}</a>{% break %}{% endif %}{% endfor %}
 {% endcapture %}
 

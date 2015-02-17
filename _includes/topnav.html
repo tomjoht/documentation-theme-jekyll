@@ -19,13 +19,18 @@
   {% for entry in site.data.nav.topnav %}
   {% for subcategory in entry.subcategories %}
 
+  {% if subcategory.external_url %}
+  <li><a href="{{subcategory.external_url}}" target="_blank">{{subcategory.title}}</a></li>
+  {% else %}
+
       {% assign class = nil %}
     {% if page.url contains subcategory.url %}
       <li class="active"><a href="{{item.url | prepend: site.baseurl}}" class="active">{{subcategory.title}}</a></li>
     {% else %}
       <li><a href="{{subcategory.url | prepend: site.baseurl}}">{{subcategory.title}}</a></li>
     {% endif %}
-          
+    {% endif %}
+     
     {% endfor %}
 {% endfor %}
 
@@ -36,51 +41,28 @@
     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ subcategory.title }}<b class="caret"></b></a>
          <ul class="dropdown-menu">
          {% for subitem in subcategory.items %}
+
+           {% if subitem.external_url %}
+  <li><a href="{{subitem.external_url}}" target="_blank">{{subitem.title}}</a></li>
+  {% else %}
          {% assign class = nil %}
          {% if page.url contains subitem.url %}
       <li class="dropdownActive"><a href="{{subitem.url | prepend: site.baseurl}}">{{subitem.title}}</a></li>
       {% else %}
        <li><a href="{{subitem.url | prepend: site.baseurl}}">{{subitem.title}}</a></li>
        {% endif %}
+       {% endif %}
     {% endfor %}
     </ul>
     </li>
   {% endfor %}
  {% endfor %}
+
+ <!-- search form appears here -->
 <li>
  {% include search.html %}
  </li>
 
-
-<!-- you can also just hard-code a section here, for example if you want to include external resources:
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li>
-                                <a href="portfolio-1-col.html">1 Column Portfolio</a>
-                            </li>
-                            <li>
-                                <a href="portfolio-2-col.html">2 Column Portfolio</a>
-                            </li>
-                            <li>
-                                <a href="portfolio-3-col.html">3 Column Portfolio</a>
-                            </li>
-                            <li>
-                                <a href="portfolio-4-col.html">4 Column Portfolio</a>
-                            </li>
-                            <li>
-                                <a href="portfolio-item.html">Single Portfolio Item</a>
-                            </li>
-                        </ul>
-                    </li>
-
-
-
-                    </li>
-                </ul>
-
-            </div>
-            <!-- /.navbar-collapse -->
         </div>
 
         <!-- /.container -->
