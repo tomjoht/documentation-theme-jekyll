@@ -230,17 +230,19 @@ margin: 3px 18px;
 font-size: 90%;
 }
 div#toc ul {
-background-color: #f0f0f0;
+background-color: whitesmoke;
 padding: 10px;
 border-radius: 5px;
 list-style: square;
 max-width: 300px;
 padding-top:10px;
+color: gray;
 }
 
 div#toc >ul::before {
   content: "Contents";
   font-weight:bold;
+  color: black;
 }
 
 li.dropdownActive a {
@@ -252,6 +254,26 @@ li.dropdownActive a {
 color: orange;
 }
 
+.nav ul li a {
+background-color: white;
+}
+
+.nav li a {
+background-color: whitesmoke;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+background-color: transparent;
+}
+
 .post-content .rssfeedLink {
 color: #248EC2;
+}
+
+ul#mysidebar {
+  margin-top:40px;
+}
+
+footer {
+font-size: smaller;
 }

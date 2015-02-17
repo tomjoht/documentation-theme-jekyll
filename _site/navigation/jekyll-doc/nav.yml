@@ -6,6 +6,7 @@ disqus_shortname: idrbwjekyll
 # for basicproject, the shortname is basicproject
 google_analytics: notsure
 sidebar_accordion: true
+css_stylesheet: customstyles.css
 
 ## Topnav single links
 topnav:

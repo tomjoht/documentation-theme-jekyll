@@ -11,10 +11,9 @@
     <link rel="stylesheet" href="{{ "/stylesheets/lavish-bootstrap.css" | prepend:site.baseurl }}"  type='text/css'>
               <!-- to easily brand your theme, use http://www.lavishbootstrap.com/ -->
     <link rel="stylesheet" href="{{ "/stylesheets/customstyles.css" | prepend:site.baseurl }}"  type='text/css'>
-
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="stylesheet" href="{{ "/stylesheets/jquery.navgoco.css" | prepend:site.baseurl }}"  type='text/css'>
-    <link rel="stylesheet" href="{{ "/stylesheets/customstyles.css" | prepend:site.baseurl }}"  type='text/css'>
+    <link rel="stylesheet" href="{{ "/stylesheets/{{site.data.nav.css_stylesheet}}" | prepend:site.baseurl }}"  type='text/css'>
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
     <script src="{{ "/js/jquery.min.js" | prepend:site.baseurl }}"></script>

@@ -15,10 +15,9 @@
     <link rel="stylesheet" href="/jekyll-doc/stylesheets/lavish-bootstrap.css"  type='text/css'>
               <!-- to easily brand your theme, use http://www.lavishbootstrap.com/ -->
     <link rel="stylesheet" href="/jekyll-doc/stylesheets/customstyles.css"  type='text/css'>
-
     <link rel="canonical" href="http://tomjohnson1492.github.io/jekyll-doc/setting_up/">
     <link rel="stylesheet" href="/jekyll-doc/stylesheets/jquery.navgoco.css"  type='text/css'>
-    <link rel="stylesheet" href="/jekyll-doc/stylesheets/customstyles.css"  type='text/css'>
+    <link rel="stylesheet" href="" | prepend:site.baseurl }}"  type='text/css'>
     <link rel="canonical" href="http://tomjohnson1492.github.io/jekyll-doc/setting_up/">
   <link rel="alternate" type="application/rss+xml" title="Jekyll-doc" href="http://tomjohnson1492.github.io/jekyll-doc/feed.xml" />
     <script src="/jekyll-doc/js/jquery.min.js"></script>
@@ -40,14 +39,11 @@
  
 <!-- add all your links here -->
 
-
-
-<!-- callouts, alerts, notes -->
-
+<!-- Here's a sample link. This stores the link as "sample_workflow" and correlates it to the permalink. To embed it, just use . If you ever need to change the page title or link, you can do so from here.-->
 
 
 
-
+<!-- callouts -->
 
 
 
@@ -59,6 +55,11 @@
 
 
 
+
+
+
+
+<!-- alerts -->
 
 
 
@@ -245,7 +246,6 @@
 
 
  <!-- Content Row -->
-
         <div class="row">
             <!-- Sidebar Column -->
             <div class="col-md-3">
@@ -253,7 +253,7 @@
 <script>
 $(document).ready(function() {
     // Initialize navgoco with default options
-    $("#demo1").navgoco({
+    $("#mysidebar").navgoco({
         caretHtml: '',
         accordion: true,
         openClass: 'active', // open
@@ -271,12 +271,12 @@ $(document).ready(function() {
 
     $("#collapseAll").click(function(e) {
         e.preventDefault();
-        $("#demo1").navgoco('toggle', false);
+        $("#mysidebar").navgoco('toggle', false);
     });
 
     $("#expandAll").click(function(e) {
         e.preventDefault();
-        $("#demo1").navgoco('toggle', true);
+        $("#mysidebar").navgoco('toggle', true);
     });
 });
 
@@ -284,10 +284,7 @@ $(document).ready(function() {
   
 <!-- note that the data file for your project needs to be specified in the code below. Instead of site.data.jekyll, use the data file corresponding to your project (create one if it doesn't already exist). -->
 
-
-<ul id="demo1" class="nav">
-
-
+<ul id="mysidebar" class="nav">
 
 
   
@@ -426,7 +423,6 @@ $(document).ready(function() {
     </ul>
     </li>
   
-
 
 
 
@@ -832,9 +828,7 @@ tags: configuration
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <!-- Feel free to remove this div. Uses purplecoat: http://ellekasai.github.io/purplecoat.js -->
-
- 
+                     
 
 Site last generated: Feb 16, 2015.
 Built with <a href="http://jekyllrb.com/">Jekyll</a> using the <a href="http://tomjohnson1492.github.io/jekyll-doc/">Jekyll-doc theme</a>.

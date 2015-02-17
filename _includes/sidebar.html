@@ -1,5 +1,4 @@
  <!-- Content Row -->
-
         <div class="row">
             <!-- Sidebar Column -->
             <div class="col-md-3">
@@ -7,7 +6,7 @@
 <script>
 $(document).ready(function() {
     // Initialize navgoco with default options
-    $("#demo1").navgoco({
+    $("#mysidebar").navgoco({
         caretHtml: '',
         accordion: {{site.data.nav.sidebar_accordion}},
         openClass: 'active', // open
@@ -25,12 +24,12 @@ $(document).ready(function() {
 
     $("#collapseAll").click(function(e) {
         e.preventDefault();
-        $("#demo1").navgoco('toggle', false);
+        $("#mysidebar").navgoco('toggle', false);
     });
 
     $("#expandAll").click(function(e) {
         e.preventDefault();
-        $("#demo1").navgoco('toggle', true);
+        $("#mysidebar").navgoco('toggle', true);
     });
 });
 
@@ -38,10 +37,7 @@ $(document).ready(function() {
   
 <!-- note that the data file for your project needs to be specified in the code below. Instead of site.data.jekyll, use the data file corresponding to your project (create one if it doesn't already exist). -->
 
-
-<ul id="demo1" class="nav">
-
-
+<ul id="mysidebar" class="nav">
 
 {% for entry in site.data.nav.entries %}
   
@@ -65,5 +61,4 @@ $(document).ready(function() {
     <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
 </p>
 {% endif %}
-
         </div> <!-- end sidebar column -->
