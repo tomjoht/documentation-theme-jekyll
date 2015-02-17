@@ -184,6 +184,31 @@
     </li>
   
  
+<li>
+ <!-- start search -->
+   <div id="search-demo-container">
+      <input type="text" id="search-input" placeholder="search...">
+      <ul id="results-container"></ul>
+    </div>
+
+    
+    <script src="/jekyll-doc/js/jekyll-search.js" type="text/javascript"></script>
+    
+    
+    <script type="text/javascript">
+      SimpleJekyllSearch.init({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        dataSource: '/jekyll-doc/search.json',        
+        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+        noResultsText: 'No results found',
+        limit: 10,
+        fuzzy: true,
+      })
+    </script>
+    <!-- end search -->
+ </li>
+
 
 <!-- you can also just hard-code a section here, for example if you want to include external resources:
                     <li class="dropdown">
@@ -434,28 +459,6 @@ $(document).ready(function() {
             <!-- Content Column -->
             <div class="col-md-9">
 
-<!-- start search -->
-   <div id="search-demo-container">
-      <input type="text" id="search-input" placeholder="search...">
-      <ul id="results-container"></ul>
-    </div>
-
-    
-    <script src="/jekyll-doc/js/jekyll-search.js" type="text/javascript"></script>
-    
-    
-    <script type="text/javascript">
-      SimpleJekyllSearch.init({
-        searchInput: document.getElementById('search-input'),
-        resultsContainer: document.getElementById('results-container'),
-        dataSource: '/jekyll-doc/search.json',        
-        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
-        noResultsText: 'No results found',
-        limit: 10,
-        fuzzy: true,
-      })
-    </script>
-    <!-- end search -->
                 <div class="post-header">
   <h1 class="post-title-main">How to integrate the lunr search</h1>
 </div>
@@ -496,122 +499,6 @@ $('#toc').on('click', 'a', function() {
 
 
 
-
-<!-- related pages -->
-<hr />
-
-
-<h5>Related Pages</h5>
-
-
-
-
-<ul>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li><a href="/jekyll-doc/lavish/">Styling your site</a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       
-</ul>
 
 
     <div id="disqus_thread"></div>

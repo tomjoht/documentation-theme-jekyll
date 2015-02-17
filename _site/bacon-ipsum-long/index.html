@@ -183,6 +183,31 @@
     </li>
   
  
+<li>
+ <!-- start search -->
+   <div id="search-demo-container">
+      <input type="text" id="search-input" placeholder="search...">
+      <ul id="results-container"></ul>
+    </div>
+
+    
+    <script src="/jekyll-doc/js/jekyll-search.js" type="text/javascript"></script>
+    
+    
+    <script type="text/javascript">
+      SimpleJekyllSearch.init({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        dataSource: '/jekyll-doc/search.json',        
+        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
+        noResultsText: 'No results found',
+        limit: 10,
+        fuzzy: true,
+      })
+    </script>
+    <!-- end search -->
+ </li>
+
 
 <!-- you can also just hard-code a section here, for example if you want to include external resources:
                     <li class="dropdown">
@@ -433,28 +458,6 @@ $(document).ready(function() {
             <!-- Content Column -->
             <div class="col-md-9">
 
-<!-- start search -->
-   <div id="search-demo-container">
-      <input type="text" id="search-input" placeholder="search...">
-      <ul id="results-container"></ul>
-    </div>
-
-    
-    <script src="/jekyll-doc/js/jekyll-search.js" type="text/javascript"></script>
-    
-    
-    <script type="text/javascript">
-      SimpleJekyllSearch.init({
-        searchInput: document.getElementById('search-input'),
-        resultsContainer: document.getElementById('results-container'),
-        dataSource: '/jekyll-doc/search.json',        
-        searchResultTemplate: '<li><a href="{url}" title="{desc}">{title}</a></li>',
-        noResultsText: 'No results found',
-        limit: 10,
-        fuzzy: true,
-      })
-    </script>
-    <!-- end search -->
                   <h1>Bacon Ipsum (Long)</h1>
  <p class="post-meta">Dec 24, 2013   •  </p>
 
