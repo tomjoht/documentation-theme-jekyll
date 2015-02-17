@@ -181,13 +181,14 @@ p.post-meta {font-size: 80%; color: #777;}
 
 .entry-date{font-size:14px;font-size:0.875rem;line-height:1.71429;margin-bottom:0;text-transform:uppercase;}
 
+/* search area */
 #search-demo-container ul#results-container {
 list-style: none;
 font-size: 12px;
 background-color: white;
 position: absolute;
-top: 30px;
-left: 2px;
+top: 40px; /* if you change anything about the nav, you'll prob. need to reset the top and left values here.*/
+left: 20px;
 z-index: -1;
 width:223px;
 border-left: 1px solid #dedede;
@@ -216,8 +217,9 @@ ul#results-container a: hover {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   float: right;
+  margin-top:10px;
   }
-
+/* end search */
 
 .filter-options {
 margin-bottom: 20px;
@@ -255,26 +257,125 @@ li.dropdownActive a {
 color: orange;
 }
 
-.nav ul li a {
-background-color: white;
-}
-
-.nav li a {
-background-color: whitesmoke;
-}
 
 .navbar-inverse .navbar-nav > li > a {
 background-color: transparent;
+margin-top:10px;
 }
 
 .post-content .rssfeedLink {
 color: #248EC2;
 }
 
-ul#mysidebar {
-  margin-top:40px;
-}
-
 footer {
 font-size: smaller;
+}
+
+/* FAQ page */
+#accordion .panel-heading {
+font-size: 12px;
+}
+
+a.accordion-toggle, a.accordion-collapsed {
+font-size: 14px;
+text-decoration: none;
+}
+
+/* navgoco sidebar styles (customized) */
+.nav, .nav ul, .nav li {
+    list-style: none;
+}
+
+.nav ul {
+    padding: 0;
+    /*margin: 0 0 0 18px;*/
+    margin:0px;
+}
+
+.nav {
+    /* padding: 4px;*/
+    padding:0px;
+    margin: 0px;
+}
+
+.nav > li {
+    margin: 1px 0;
+}
+
+.nav > li li {
+    margin: 2px 0;
+}
+
+.nav a {
+    color: #333;
+    display: block;
+    outline: none;
+    /*-webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;*/
+    text-decoration: none;
+}
+
+.nav li > a > span {
+    float: right;
+    font-size: 19px;
+    font-weight: bolder;
+}
+
+.nav li > a:hover > span {
+    color: #fff;
+}
+
+.nav li > a > span:after {
+    content: '\25be';
+}
+.nav li.open > a > span:after {
+    content: '\25b4';
+}
+
+.nav a:hover, .nav li.active > a {
+    background-color: #8D8D8D;
+    color: #f5f5f5;
+}
+
+.nav > li.active > a  {
+    background-color: #4D90FE;
+}
+
+.nav li a {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 2px 10px;
+}
+
+.nav > li > a {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 4px 10px;
+}
+
+ul#mysidebar {
+  margin-top:40px;
+  
+  border-radius:0px;
+}
+
+.nav ul li a {
+background-color: #FAFAFA;
+}
+
+.nav li a {
+  background-color: #EDEDED;
+}
+
+
+.nav ul li a {
+border-top:1px solid whitesmoke;
+padding-left:10px;
+}
+/* end sidebar */
+
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+  border-radius:5px;
 }

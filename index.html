@@ -5,10 +5,9 @@ permalink: "/"
 related_pages: none
 ---
 
-
 {% for page in site.pages %}
 {% for type in page.type %}
-{% if type == "homepage" %}
+{% if type == site.data.options.homepage %}
 {{page.content}}
 {% endif %}
 {% endfor %}

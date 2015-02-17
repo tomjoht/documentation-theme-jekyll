@@ -2,18 +2,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href='//fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
-    <link href='//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <!-- <link href='//fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'> -->
      <link rel="stylesheet" href="{{ "/stylesheets/syntax.css" | prepend:site.baseurl }}"  type='text/css'>
      <link rel="stylesheet" href="{{ "/stylesheets/font-awesome.min.css" | prepend:site.baseurl }}">
      <link rel="stylesheet" href="{{ "/stylesheets/bootstrap.min.css" | prepend:site.baseurl }}">
      <link rel="stylesheet" href="{{ "/stylesheets/modern-business.css" | prepend:site.baseurl }}">
     <link rel="stylesheet" href="{{ "/stylesheets/lavish-bootstrap.css" | prepend:site.baseurl }}"  type='text/css'>
-              <!-- to easily brand your theme, use http://www.lavishbootstrap.com/ -->
-    <link rel="stylesheet" href="{{ "/stylesheets/customstyles.css" | prepend:site.baseurl }}"  type='text/css'>
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-    <link rel="stylesheet" href="{{ "/stylesheets/jquery.navgoco.css" | prepend:site.baseurl }}"  type='text/css'>
-    <link rel="stylesheet" href="{{ "/stylesheets/{{site.data.nav.css_stylesheet}}" | prepend:site.baseurl }}"  type='text/css'>
+    <link rel="stylesheet" href="{{ "/stylesheets/" | prepend:site.baseurl | append: site.data.options.css_stylesheet }}"  type='text/css'>
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
     <script src="{{ "/js/jquery.min.js" | prepend:site.baseurl }}"></script>

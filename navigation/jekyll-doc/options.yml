@@ -1,0 +1,7 @@
+# These settings set various options...
+
+disqus_shortname: idrbwjekyll
+# for basicproject, the shortname is basicproject
+google_analytics: UA-408430-5
+css_stylesheet: customstyles.css
+homepage: jekyll-doc-homepage # set the type in the front matter to this value
