@@ -1,10 +1,10 @@
 # Site settings
 title: Basic Project
-tagline: a basic project to show how you might output to multiple sites
+tagline: a basic project showing how multiple sites can be served from the same theme
 email: tomjohnson1492@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
-  This is just a basic project that shows how you might be outputting to multiple sites from the same Jekyll source.
-baseurl: "/basicproject # the subpath of your site, e.g. /blog/
+description: > # the ">" means to ignore newlines until "baseurl:"
+  Here is the description of this theme ...
+baseurl: "/basicproject" # the subpath of your site, e.g. /blog
 url: "http://tomjohnson1492.github.io" # the base hostname & protocol for your site
 twitter_username: tomjohnson
 github_username:  tomjohnson1492
@@ -18,9 +18,7 @@ port: 4001 # specified here in case you have multiple sites and want to view the
 
 
 project: basicproject
-audience: web
-
-google-analytics-tracking-code: 
+google-analytics-tracking-code: P-12345 # customize this with a real tracking code value
 
 ## build settings
 
@@ -33,6 +31,9 @@ highlighter: pygments
 exclude: # put all files or directories that you want to exclude from your project here.
   - "Gemfile"
   - "Gemfile.lock"
+  - _drafts
+  - content/jekyll-doc
+  - content/drafts
 
 # these are defaults that get applied to each page or post. you don't have to set these settings in the frontmatter if you put them here. But frontmatter settings will override the configs here.
 permalink: :title
@@ -44,6 +45,7 @@ defaults:
     values:
       layout: "page"
       comments: true
+      search: include
   -
     scope:
       path: ""
@@ -51,9 +53,14 @@ defaults:
     values:
       layout: "post"
       comments: true
+      search: include
 
 sass:
     sass_dir: _sass
+
+# top nav items
+
+data_source: settings/basicproject
 
 # if you had a collection (your own post types separate from pages or posts), you could add them like this here. then you create a folder called _bikes to put the content.
 #collections:
