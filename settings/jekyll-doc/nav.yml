@@ -2,7 +2,7 @@
 
 sidebar_accordion: true
 
-## Topnav single links
+# Topnav single links
 topnav:
 - title: Topnav
   subcategories:
@@ -10,8 +10,6 @@ topnav:
       url: /about/
     - title: Contact
       url: /contact/
-    - title: Supported features
-      url: /supported_features/
     - title: News
       url: /latest_posts/
     - title: My Github Repo
@@ -29,6 +27,14 @@ topnav_dropdowns:
           url: /sample/
         - title: I'd Rather Be Writing
           external_url: http://idratherbewriting.com
+    - title: More drop-downs
+      items: 
+        - title: Alerts
+          url: /alerts/
+        - title: Labels
+          url: /labels/
+        - title: Tables
+          url: /tables/
 
 
 # Sidebar

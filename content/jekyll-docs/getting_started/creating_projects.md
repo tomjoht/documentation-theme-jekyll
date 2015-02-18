@@ -1,5 +1,5 @@
 ---
-title: Getting started
+title: Creating new projects
 permalink: /creating_projects/
 ---
 

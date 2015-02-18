@@ -3,9 +3,25 @@ title: Alerts
 permalink: /alerts/
 tags: formatting
 search: include
+excerpt: Alerts are little warnings, info, or other messages that you have called out in special formatting.
 ---
 
 {% include variables.html %}
+
+{{alertsuccess}} <b>Hey</b>: This is just a test.{{end}}
+
+{{calloutprimary}}<b>Another test:</b> this is a very special note for you.....{{end}}
+
+## this is a heading
+
+<!--
+ ____                        _        _____ _       _      _
+/ ___|  __ _ _ __ ___  _ __ | | ___  |  ___(_) __ _| | ___| |_
+\___ \ / _` | '_ ` _ \| '_ \| |/ _ \ | |_  | |/ _` | |/ _ \ __|
+ ___) | (_| | | | | | | |_) | |  __/ |  _| | | (_| | |  __/ |_
+|____/ \__,_|_| |_| |_| .__/|_|\___| |_|   |_|\__, |_|\___|\__|
+                      |_|
+-->
 
 {{alertsuccess}}
 <b>Success</b>: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  
