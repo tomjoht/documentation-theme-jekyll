@@ -39,6 +39,8 @@ entries:
       items:
         - title: Creating a new project
           url: /creating_projects/
+        - title: Prerequisites
+          url: /prerequisites/
     - title: Creating content
       items:
         - title: Writing content
