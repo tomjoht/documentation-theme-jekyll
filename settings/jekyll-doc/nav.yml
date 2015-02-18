@@ -14,8 +14,8 @@ topnav:
       url: /supported_features/
     - title: News
       url: /news/
-    - title: New York Times
-      external_url: http://nytimes.com
+    - title: Theme Github Repo
+      external_url: https://github.com/tomjohnson1492/jekyll-doc
 
 # Topnav dropdowns
 topnav_dropdowns:
@@ -58,7 +58,7 @@ entries:
         - title: Icons
           url: /icons/
         - title: Tables
-          url: tables
+          url: /tables/
         - title: Markdown readability
           url: /markdown_readability/
         - title: Links
@@ -92,7 +92,7 @@ entries:
     - title: Blog posts
       items: 
         - title: Writing blog posts
-        - url: /blog/
+          url: /add_blog/
     - title: Special effects
       items: 
         - title: Shuffle

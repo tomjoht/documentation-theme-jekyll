@@ -1,5 +1,4 @@
 ---
-layout: page
 title: Adding a blog section
 permalink: /add_blog/
 tags: layout
@@ -10,22 +9,19 @@ To add blog entries, you add files to your _posts directory. The titles must be 
 Here's the code for adding a blog. Basically you get the latest posts. 
 
 
-{% comment %}
-
+{% raw %}
 ```liquid
 {% for post in site.posts %}
 {{ post.date | date: "%b %-d, %Y" }}
 {{ post.title }}
 {% endfor %}
 ```
-
-{% endcomment %}
+{% endraw %}
 
 
 Here's the same content with some styling around it:
 
-{% comment %}
-
+{% raw %}
 ```html
 <h1 class="page-heading">Posts</h1>
 <ul class="post-list">
@@ -41,9 +37,7 @@ Here's the same content with some styling around it:
 
 <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 ```
-
-{% endcomment %}
-
+{% endraw %}
 
 
 ## Result
@@ -63,14 +57,14 @@ Here's the result:
 
 You can also add a limit to the `for` loop. You must also specify the tags namespace that you're running the loop in:
 
-{% comment %}
+{% raw %}
 
 ```liquid
 {% for post in site.tags.news limit:2  %}
     //do something
   {% endfor %}
 ```
-{% endcomment %}
+{% endraw %}
 
 If you were to just write `site.posts`, then it would limit the iterations to just 2 for overall posts.
 

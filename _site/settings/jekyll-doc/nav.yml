@@ -58,7 +58,7 @@ entries:
         - title: Icons
           url: /icons/
         - title: Tables
-          url: tables
+          url: /tables/
         - title: Markdown readability
           url: /markdown_readability/
         - title: Links
