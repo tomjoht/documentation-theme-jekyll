@@ -2,8 +2,10 @@
 title: Topnav
 permalink: /creating_topnav/
 ---
+{% include variables.html %}
 
-You create the links in the top navigation bar in the same way that you create them for the sidebar (see {{creating_toc}}). 
+
+You create the links in the top navigation bar in the same way that you create them for the sidebar (see {{creating_toc}}) {{conditional_logic}}. 
 
 The top navigation contains two link sections: the single-level links (called Topnav), and the drop-down links (called Topnav dropdowns). The YML group doesn't try to combine both of these levels in the same grouping.
 

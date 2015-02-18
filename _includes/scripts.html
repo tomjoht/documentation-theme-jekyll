@@ -3,6 +3,17 @@
 <script>
 
 
+$('.sub_menu').hide();
+$('.clickable').toggle(function (){
+    $(this).next('ul').slideToggle();
+    $(this).css('background-position', '0px -12px');
+}, function (){
+        $(this).next('ul').slideToggle();
+        $(this).css('background-position', '0px 5px');
+});
+
+$('ul.sub_menu').has('a.active').css('display', 'block');
+
 $('#myButton').tooltip();
 
 </script>

@@ -1,8 +1,8 @@
 # These settings set various options...
 
-disqus_shortname: idrbwjekyll
+disqus_shortname: idrbwjekyll # if you leave this blank, then disqus is not run. if you want to run it, add your code here, such as idrbwjekyll
 # for basicproject, the shortname is basicproject
-google_analytics: none #example: UA-908430-5
-css_stylesheet: customstyles.css
+google_analytics:  #example: UA-908430-5. if you leave this field blank, google analytics is not run.
+css_stylesheet: customstyles.css # save your custom stylesheet in the stylesheets folder.
 homepage: jekyll-doc-homepage # set the type in the frontmatter of a page to this value
 homepage_title: Jekyll-doc home # due to the way I set up the templates, you have to specify your homepage here instead of the homepage's frontmatter.
