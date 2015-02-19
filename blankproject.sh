@@ -1,0 +1,1 @@
+jekyll serve --config projects/blankproject/configurations/config_blankproject.yml --destination _site/blankproject

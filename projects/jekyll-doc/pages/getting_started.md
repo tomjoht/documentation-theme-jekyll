@@ -20,26 +20,21 @@ To publish a new project with the jekyll-doc theme, do the following:
 1. Inside the projects folder, change the name "blankproject" to your project's name -- e.g., acme. Note: If you don't change this folder name, the next time your run `git pull`, its contents (with same file names) will be overwritten. 
 
 ## Customize the configuration
-1. In the configurations folder, rename config_blankproject.yml to config_acme.yml.
-2. Open config_acme.yml and customize all the values. The file contains notes for each part you need to customize.
+1. In the projects/acme/configurations folder, rename config_blankproject.yml to config_acme.yml.
+2. Open config_acme.yml and customize all the values. The file contains notes for each part you need to customize. Basically everywhere you see "blankproject", change it to your project's name. 
 
 ## Customize the pages
-1. Open the pages folder inside acme. Here is where you add your pages. Leave the reuse and drafts folders there. You add links, callouts, and notes in those folders, so you can easily include them into your pages.
+1. Open the pages folder inside acme. Here is where you add your pages. Leave the reuse and drafts folders there. You add links, callouts, and notes in those reuse folders, so you can easily include them into your pages.
 
 ## Customize data
 
-1. In the data folder, nav.yml contains the navigation for the sidebar and topnav. The current values are for the jekyll-doc theme, so you can see an example. Change these values with your own page titles and URLs.
-2. In data/options.yml, open this file and customize the values.
+1. In the data folder, nav.yml contains the navigation for the sidebar and topnav. The current values are for the jekyll-doc theme, so you can see some example formatting. Change these values with your own page titles and URLs. Spacing matters in YML syntax.
+2. In data/options.yml, open this file and customize the values. Options contains various settings for Disqus, Google Analytics, and more.
 
-## Duplicate and customize configurations
+## Customize the build script
 
-1. Inside the configurations folder, rename config_blankproject.yml to config_acme.yml.
-2. Open config_acme.yml and customize with your own values. See notes in the file for each field.
-
-## Duplicate and customize the build script
-
-1. In the root directory, duplicate jekyll-doc.sh and rename it to acme.sh.
-2. Open acme.sh and customize it as per the notes in the file. 
+1. In the root directory, rename blankproject.sh to acme.sh.
+2. Open acme.sh (in a text editor) and change all instances of `blankproject` to `acme`.
 
 ## Build your site
 
