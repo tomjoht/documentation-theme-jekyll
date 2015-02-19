@@ -6,7 +6,7 @@ type: scroll
 layout: page
 ---
 
-{% include variables.html %}
+{% include_relative reuse/variables.html %}
 
  <script src="{{ "/js/jquery.scrollTo.min.js" | prepend:site.baseurl }}"></script> 
     <!-- local scroll must come after scrollTo, because localScroll is based on scrollTo, which is based on jQuery -->

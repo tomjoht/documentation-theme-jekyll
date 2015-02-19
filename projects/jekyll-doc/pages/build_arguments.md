@@ -3,7 +3,7 @@ title: Build arguments
 permalink: /build_arguments/
 tags: conditional_logic
 ---
-
+{% include_relative reuse/variables.html %}
 ## Build arguments
 
 The normal way to build the Jekyll site is through the build command:

@@ -5,7 +5,7 @@ permalink: /links/
 tags: formatting
 ---
 
-{% include variables.html %}  
+{% include_relative reuse/variables.html %}
 
 ## Links to external sites
 

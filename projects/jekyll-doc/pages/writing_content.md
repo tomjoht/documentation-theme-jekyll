@@ -2,7 +2,7 @@
 title: Writing content
 permalink: /writing_content/
 ---
-{% include variables.html %}
+{% include_relative reuse/variables.html %}
 There are 2 page types in Jekyll: posts and pages. Posts are intended for blog-like entries where dates matter. Pages are intended as standalone entities. 
 
 If you want to create your own content type, you create a "collection." Collections are a way to extend Jekyll to support additional content types beyond posts and pages. For example, if you wanted to create an API doc content type, with its own special formatting and layout, you might create a collection just for this type of content.
