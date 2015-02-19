@@ -5,8 +5,8 @@ layout: default
 ---
 <h1>{{site.homepage_title}}</h1>
 {% for page in site.pages %}
-{% for type in page.type %}
-{% if type == "homepage" %}
+{% for title in page.titles %}
+{% if page.title == site.homepage_title %}
 {{page.content}}
 {% endif %}
 {% endfor %}
