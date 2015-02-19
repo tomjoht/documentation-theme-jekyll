@@ -1,13 +1,13 @@
 # Site settings
-title: Jekyll-doc # your project's title
+title: Blankproject # your project's title
 contact_email: tomjohnson1492@gmail.com # a contact email for the project
 description: > # a description of your project. the ">" means to ignore newlines until "baseurl:"  
   A theme based on Jekyll designed for technical writers creating help systems. Feel free to clone, fork, and otherwise use. It's all open source and free to implement. 
   Please consider contributing back any innovations you make so that others can benefit.
-baseurl: "/jekyll-doc" # the subpath of your site. If you're publishing to the root directory, just type "". Usually set this as your project name.
-url: "http://tomjohnson1492.github.io" # the base hostname & protocol for your site
+baseurl: "/blankproject" # the subpath of your site. If you're publishing to the root directory, just type "". Usually set this as your project name.
+url: "http://yourwebsite.com" # the base hostname & protocol for your site
 host: 127.0.0.1 # specified here because 0.0.0 gets defaulted to search in Chrome. this is how you will preview the site.
-port: 4000 # specified here in case you have multiple sites and want to view them simultaneously (you'll need different ports)
+port: 4001 # specified here in case you have multiple sites and want to view them simultaneously (you'll need different ports)
 
 
 ## single sourcing toggles: here you set some variables that will be used as toggles for single sourcing projects. If you just have one site, you can probably ignore these two fields. 
@@ -17,11 +17,11 @@ port: 4000 # specified here in case you have multiple sites and want to view the
 # hi my name is tom.
 
 
-project: jekyll-doc # add your project name here
-data_source: projects/jekyll-doc/data
-plugins: projects/jekyll-doc/plugins
-layouts: projects/jekyll-doc/layouts
-destination: projects/jekyll-doc/site_builds
+project: blankproject # add your project name here
+data_source: projects/blankproject/data
+plugins: projects/blankproject/plugins
+layouts: projects/blankproject/layouts
+destination: projects/blankproject/site_builds
 
 ## build settings -- leave as us
 
@@ -35,7 +35,8 @@ exclude: # put all files or directories that you want to exclude from your proje
   - "Gemfile"
   - "Gemfile.lock"
   - _drafts
-  - projects/jekyll-doc/site_builds
+  - projects/jekyll-doc
+  - _site
 
 
 # these are defaults that get applied to each page or post. you don't have to set these settings in the frontmatter if you put them here. But frontmatter settings will override the configs here.
