@@ -1,1 +1,0 @@
-jekyll serve --config configurations/config_basicproject.yml --destination _site/site_basicproject

@@ -8,13 +8,14 @@
 
     <!-- <link href='//fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
     <link href='//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'> -->
-     <link rel="stylesheet" href="/jekyll-doc/stylesheets/syntax.css"  type='text/css'>
-     <link rel="stylesheet" href="/jekyll-doc/stylesheets/font-awesome.min.css">
-     <link rel="stylesheet" href="/jekyll-doc/stylesheets/bootstrap.min.css">
-     <link rel="stylesheet" href="/jekyll-doc/stylesheets/modern-business.css">
-    <link rel="stylesheet" href="/jekyll-doc/stylesheets/lavish-bootstrap.css"  type='text/css'>
+     <link rel="stylesheet" href="/jekyll-doc/css/syntax.css"  type='text/css'>
+     <link rel="stylesheet" href="/jekyll-doc/css/font-awesome.min.css">
+     <link rel="stylesheet" href="/jekyll-doc/css/bootstrap.min.css">
+     <link rel="stylesheet" href="/jekyll-doc/css/modern-business.css">
+    <link rel="stylesheet" href="/jekyll-doc/css/lavish-bootstrap.css"  type='text/css'>
     <link rel="canonical" href="http://tomjohnson1492.github.io/jekyll-doc/creating_projects/">
-    <link rel="stylesheet" href="/jekyll-doc/stylesheets/customstyles.css"  type='text/css'>
+    <link rel="stylesheet" href="/jekyll-doc/css/customstyles.css"  type='text/css'>
+     <link rel="stylesheet" href="/jekyll-doc/projects/jekyll-doc/styles/projectstyles.css"  type='text/css'>
     <link rel="canonical" href="http://tomjohnson1492.github.io/jekyll-doc/creating_projects/">
   <link rel="alternate" type="application/rss+xml" title="Jekyll-doc" href="http://tomjohnson1492.github.io/jekyll-doc/feed.xml" />
     <script src="/jekyll-doc/js/jquery.min.js"></script>
@@ -22,7 +23,8 @@
     <script src="/jekyll-doc/js/jquery.navgoco.min.js"></script>
     <script src="/jekyll-doc/js/bootstrap.min.js"></script>
     <script src="/jekyll-doc/js/toc.js"></script>
-    <script src=""></script>
+    <script src="/jekyll-doc/js/customscripts.js"></script>
+    <script src="/jekyll-doc/projects/jekyll-doc/scripts/projectscripts.js"></script>
        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -542,81 +544,53 @@ $('#toc').on('click', 'a', function() {
 </script>
 
 <div id="toc"></div>
-<!-- add all your links here -->
+<div class="bs-callout bs-callout-warning"><b>Note:</b> All of the content on this site is under construction. I am mostly working on theme development instead of documentation, so much of the content is acting as filler right now. </div>
 
-<!-- Here's a sample link. This stores the link as "conditional_logic" and correlates it to the permalink. To embed it, just use . If you ever need to change the page title or link, you can do so from here. Note that markdown is sensitive to line breaks, so don't break lines between capture tags.-->
-
-
-
-
-
-
-
-
-
-<!-- callouts -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- alerts -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="bs-callout bs-callout-warning">
-<b>Note:</b> All of the content on this site is under construction. I am mostly working on theme development instead of documentation, so much of the content is acting as filler right now. 
-</div>
-
-
-<p>Although you can get started with this theme by simply gutting the existing jekyll-docs theme and replacing it with your own content and values, that&#39;s not how I intended this theme to be used. I&#39;m assuming that you may have multiple projects that you&#39;ll be publishing, and that you want to use the theme as a template for each project. As such, you can simply leave the jekyll-docs content as is. The following steps explain how to create a new project for the theme.</p>
+<p>Although you can get started with this theme by simply gutting the existing jekyll-docs theme and replacing it with your own content and values, that&#39;s not how I intended this theme to be used. I&#39;m assuming that you may have multiple projects that you&#39;ll be publishing, and that you want to use the theme as a template for each project. As such, you can simply leave the jekyll-doc content as is. The following steps explain how to create a new project for the theme.</p>
 
 <p>Let&#39;s say you&#39;re creating a new project called &quot;ACME.&quot; To publish a new project with the theme, do the following:</p>
 
+<h2 id="clone-the-jekyll-doc-repository">Clone the jekyll-doc repository</h2>
+
 <ol>
-<li>Clone the Jekyll-doc files from the github repository: <a href="https://github.com/tomjohnson1492/jekyll-doc">https://github.com/tomjohnson1492/jekyll-doc</a>.</li>
-<li>Inside the configuration folder, duplicate the config_basicproject.yml file and rename it with your project (e.g., config_acme.yml). </li>
-<li>Open the configuration file you just created and customize the values for your new project. (The file contains notes for each field.) </li>
-<li>In the configuration file, customize the <code>data_source</code> value with a folder name corresponding to your project (e.g., settings/acme). (This step is critical.)</li>
-<li>Inside the settings folder, duplicate the jekyll-docs folder (and its nav.yml and options.yml contents), and then change the name to your project&#39;s name (for example, settings/acme).</li>
-<li>Create a folder inside &quot;content&quot; that matches your project&#39;s title. For example, if your project&#39;s name is ACME, create a folder inside content called &quot;acme&quot;.</li>
-<li>Add some pages inside the folder you created in the previous step (content/acme). The pages can be Markdown or HTML. Each page must have frontmatter. See the jekyll-doc pages inside content/jekyll-doc for examples.</li>
-<li>Inside the settings/acme folder, open the nav.yml and options.yml and customize the values with the pages for your theme. Since you probably won&#39;t have pages set up you, you can just make a mental note of these files for later customization.</li>
-<li>In the theme&#39;s root directory, duplicate the config_basicproject.sh file and change it to your project name (e.g., config_acme.sh). Open the config_acme.sh file and customize it so the configuration file and output destination are customized for your project.</li>
-<li>To build your project, open Terminal, <code>cd</code> to your path, and type <code>. config_acme.sh</code>.</li>
+<li><code>mkdir acme</code></li>
+<li><code>cd acme</code></li>
+<li>git clone <code>https://github.com/tomjohnson1492/jekyll-doc.git .</code></li>
 </ol>
+
+<h2 id="duplicate-and-customize-configurations">Duplicate and customize configurations</h2>
+
+<ol>
+<li>Inside the configurations folder, duplicate the config_jekyll-doc.yml file and rename it to config_acme.yml.</li>
+<li>Open config_acme.yml and customize with your own values. See notes in the file for each field.</li>
+</ol>
+
+<h2 id="duplicate-and-customize-settings">Duplicate and customize settings</h2>
+
+<ol>
+<li>In the settings folder, duplicate jekyll-doc and rename it to acme.</li>
+<li>In settings/acme, open nav.yml and options.yml and customize the files with your own values. See notes in the file for each field.</li>
+</ol>
+
+<h2 id="duplicate-and-customize-content">Duplicate and customize content</h2>
+
+<ol>
+<li>In the content folder, duplicate jekyll-doc and rename it to your project.</li>
+</ol>
+
+<h2 id="duplicate-and-customize-the-build-script">Duplicate and customize the build script</h2>
+
+<ol>
+<li>In the root directory, duplicate jekyll-doc.sh and rename it to jekyll-acme.sh.</li>
+<li>Open jekyll-acme.sh and customize it as per the notes in the file. </li>
+</ol>
+
+<h2 id="build-your-site">Build your site</h2>
+
+<p><code>cd</code> to your project folder.
+Type <code>. acme.sh</code>.</p>
+
+<p>You can run <code>git pull</code> to get updates to the theme. The updates will not overwrite your other project files. For example, the updates from the theme won&#39;t overwrite anything in content/acme. However, if you change content in content/jekyll-doc, the updates will overwrite that folder. </p>
 
 
 </div>
@@ -655,7 +629,7 @@ $('#toc').on('click', 'a', function() {
                 <div class="col-lg-12">
                      
 
-Site last generated: Feb 18, 2015.
+Site last generated: Feb 19, 2015.
 Built with <a href="http://jekyllrb.com/">Jekyll</a> using the <a href="http://tomjohnson1492.github.io/jekyll-doc/">Jekyll-doc theme</a>.
 
 
