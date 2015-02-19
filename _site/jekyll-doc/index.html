@@ -162,9 +162,8 @@
   
  
 
- <!-- search form appears here -->
 <li>
- <!-- start search -->
+<!-- start search -->
    <div id="search-demo-container">
       <input type="text" id="search-input" placeholder="search...">
       <ul id="results-container"></ul>
@@ -229,7 +228,7 @@ $(document).ready(function() {
     // Initialize navgoco with default options
     $("#mysidebar").navgoco({
         caretHtml: '',
-        accordion: false,
+        accordion: true,
         openClass: 'active', // open
         save: true,
         cookie: {
@@ -268,7 +267,7 @@ $(document).ready(function() {
     
     
       
-      <li><a href="/jekyll-doc/creating_projects/">Creating a new project</a></li>
+      <li><a href="/jekyll-doc/getting_started/">Getting started with a new project</a></li>
     
      
     
@@ -504,11 +503,7 @@ $(document).ready(function() {
 
 
 
-<p class="external">
-    <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
-</p>
-
-       </div>
+</div>
 
 
 
@@ -584,26 +579,6 @@ $(document).ready(function() {
 
 <p>This is a Jekyll theme intended for documentation projects. What makes this theme unique is the approach in using Jekyll for single sourcing, that is, producing multiple outputs from the same theme. For example, you might have 3 different help systems that you&#39;re generating from the same Jekyll files. More than anything, this Jekyll theme shows you how to use Jekyll for documentation projects from the perspective of a technical writer. </p>
 
-<script>
-$( document ).ready(function() {
-  // Handler for .ready() called.
-
-$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
-
-
-$('#toc').on('click', 'a', function() {
-  var target = $(this.getAttribute('href'))
-    , scroll_target = target.offset().top
-
-  $(window).scrollTop(scroll_target - 10);
-  return false
-})
-  
-});
-</script>
-
-<div id="toc"></div>
-
 <div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i>
  I'm using this theme for my own technical writing projects, replacing my previous OxygenXML DITA workflow, so this is an evolving project. I'm still in the pilot phase of the experiment.
 </div>
@@ -612,13 +587,32 @@ $('#toc').on('click', 'a', function() {
 
 <p>Although this theme could be used for any website, I&#39;m assuming that my main audience involves technical writers. Very few technical writers are even aware of Jekyll as a platform, let alone how to use it for tech comm scenarios. The instructions for this theme, therefore, are extensive because they discuss a lot of Jekyll basics as well. I&#39;m not going to assume that you&#39;re already familiar with Jekyll, or that you&#39;re a UX guru, or that you know how to do backflips in Liquid. I&#39;ll try to hold your hand as much as possible.</p>
 
-<h2 id="any-questions?">Any questions?</h2>
+<h2 id="supported-tech-comm-features-with-jekyll">Supported tech comm features with Jekyll</h2>
 
 <p>As far as I can tell, Jekyll supports most of the features a technical writer needs to author and publish content. See 
 <a href="/jekyll-doc/supported_features">Supported features</a>
  for an extensive list. Most importantly, using Jekyll allows you to take full advantage of a modern web development platform. </p>
 
-<p>Feel free to ask me a question if there&#39;s something I haven&#39;t addressed here. Remember, I&#39;m approaching this Jekyll documentation and theme from a tech writer&#39;s point of view.</p>
+<h2 id="theme-features">Theme features</h2>
+
+<p>This theme specifically provides the following:</p>
+
+<ul>
+<li>Bootstrap framework</li>
+<li>Integrated search</li>
+<li>Navigation sidebar</li>
+<li>Separation of data from theme (the sidebar and top nav get their info from data files)</li>
+</ul>
+
+<h2 id="getting-started">Getting started</h2>
+
+<p>To get started, see 
+<a href="/jekyll-doc/getting_started">Getting started</a>
+. It explains how to create a new project.</p>
+
+<h2 id="questions">Questions</h2>
+
+<p>Feel free to ask me a question if there&#39;s something I haven&#39;t addressed here. </p>
 
 <p>Tom Johnson <br /><a href="mailto:"><a href="mailto:tomjohnson1492@gmail.com">tomjohnson1492@gmail.com</a></a></p>
 
@@ -689,7 +683,6 @@ $('#toc').on('click', 'a', function() {
 
 
  
-
 
 
 

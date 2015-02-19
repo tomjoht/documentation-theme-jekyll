@@ -3,8 +3,7 @@ layout: default
 comments: true
 ---
 
-
-  <h1>{{ page.title }}</h1>
+<h1>{{ page.title }}</h1>
  <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }} {% if page.author %} • by {{ page.author }} {% endif %} {% if page.tags %} • {{ page.tags | array_to_sentence_string }}{% endif %} {% if page.meta %} • {{ page.meta }}{% endif %}</p>
 
  <div class="post-summary">{{page.excerpt}}</div>
@@ -12,7 +11,8 @@ comments: true
 
 {% include toc.html %}
 
-  {{ content }}
+
+{{ content }}
 
 
 {% include related_posts.html %}
@@ -56,5 +56,3 @@ comments: true
 
 
 {% include disqus.html %}
-
-

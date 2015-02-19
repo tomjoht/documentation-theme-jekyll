@@ -161,9 +161,8 @@
   
  
 
- <!-- search form appears here -->
 <li>
- <!-- start search -->
+<!-- start search -->
    <div id="search-demo-container">
       <input type="text" id="search-input" placeholder="search...">
       <ul id="results-container"></ul>
@@ -228,7 +227,7 @@ $(document).ready(function() {
     // Initialize navgoco with default options
     $("#mysidebar").navgoco({
         caretHtml: '',
-        accordion: false,
+        accordion: true,
         openClass: 'active', // open
         save: true,
         cookie: {
@@ -267,7 +266,7 @@ $(document).ready(function() {
     
     
       
-      <li><a href="/jekyll-doc/creating_projects/">Creating a new project</a></li>
+      <li><a href="/jekyll-doc/getting_started/">Getting started with a new project</a></li>
     
      
     
@@ -503,11 +502,7 @@ $(document).ready(function() {
 
 
 
-<p class="external">
-    <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
-</p>
-
-       </div>
+</div>
 
 
 
@@ -515,7 +510,7 @@ $(document).ready(function() {
             <!-- Content Column -->
             <div class="col-md-9">
 
-                  <h1>Theme updates</h1>
+                <h1>Theme updates</h1>
  <p class="post-meta">Feb 5, 2015  • by Tom Johnson   • jekyll and news </p>
 
  <div class="post-summary">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</div>
@@ -527,7 +522,7 @@ $( document ).ready(function() {
 
 $('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
 
-
+/* this offset helps account for the space taken up by the floating toolbar. */
 $('#toc').on('click', 'a', function() {
   var target = $(this.getAttribute('href'))
     , scroll_target = target.offset().top
@@ -541,7 +536,8 @@ $('#toc').on('click', 'a', function() {
 
 <div id="toc"></div>
 
-  <p>here&#39;s another post...</p>
+
+<p>here&#39;s another post...</p>
 
 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&#39;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 
@@ -597,8 +593,6 @@ $('#toc').on('click', 'a', function() {
         })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
 
 
             </div>

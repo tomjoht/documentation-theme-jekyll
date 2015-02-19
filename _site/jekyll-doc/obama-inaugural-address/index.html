@@ -161,9 +161,8 @@
   
  
 
- <!-- search form appears here -->
 <li>
- <!-- start search -->
+<!-- start search -->
    <div id="search-demo-container">
       <input type="text" id="search-input" placeholder="search...">
       <ul id="results-container"></ul>
@@ -229,7 +228,7 @@ $(document).ready(function() {
     // Initialize navgoco with default options
     $("#mysidebar").navgoco({
         caretHtml: '',
-        accordion: false,
+        accordion: true,
         openClass: 'active', // open
         save: true,
         cookie: {
@@ -268,7 +267,7 @@ $(document).ready(function() {
     
     
       
-      <li><a href="/jekyll-doc/creating_projects/">Creating a new project</a></li>
+      <li><a href="/jekyll-doc/getting_started/">Getting started with a new project</a></li>
     
      
     
@@ -504,11 +503,7 @@ $(document).ready(function() {
 
 
 
-<p class="external">
-    <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
-</p>
-
-       </div>
+</div>
 
 
 
@@ -516,7 +511,7 @@ $(document).ready(function() {
             <!-- Content Column -->
             <div class="col-md-9">
 
-                  <h1>Obama Inaugural Address</h1>
+                <h1>Obama Inaugural Address</h1>
  <p class="post-meta">Jan 20, 2009  • by Barack Obama   • speeches </p>
 
  <div class="post-summary"><p>My fellow citizens: I stand here today humbled by the task before us, grateful for the trust you have bestowed, mindful of the sacrifices borne by our ancestors. I thank President Bush for his service to our nation, as well as the generosity and cooperation he has shown throughout this transition.</p>
@@ -529,7 +524,7 @@ $( document ).ready(function() {
 
 $('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
 
-
+/* this offset helps account for the space taken up by the floating toolbar. */
 $('#toc').on('click', 'a', function() {
   var target = $(this.getAttribute('href'))
     , scroll_target = target.offset().top
@@ -543,7 +538,8 @@ $('#toc').on('click', 'a', function() {
 
 <div id="toc"></div>
 
-  <p>My fellow citizens: I stand here today humbled by the task before us, grateful for the trust you have bestowed, mindful of the sacrifices borne by our ancestors. I thank President Bush for his service to our nation, as well as the generosity and cooperation he has shown throughout this transition.</p>
+
+<p>My fellow citizens: I stand here today humbled by the task before us, grateful for the trust you have bestowed, mindful of the sacrifices borne by our ancestors. I thank President Bush for his service to our nation, as well as the generosity and cooperation he has shown throughout this transition.</p>
 
 <p>Forty-four Americans have now taken the presidential oath. The words have been spoken during rising tides of prosperity and the still waters of peace. Yet, every so often the oath is taken amidst gathering clouds and raging storms. At these moments, America has carried on not simply because of the skill or vision of those in high office, but because We the People have remained faithful to the ideals of our forbearers, and true to our founding documents.</p>
 
@@ -669,8 +665,6 @@ Nor is the question before us whether the market is a force for good or ill. Its
         })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
 
 
             </div>

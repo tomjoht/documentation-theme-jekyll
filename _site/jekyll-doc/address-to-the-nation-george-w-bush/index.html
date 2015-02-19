@@ -161,9 +161,8 @@
   
  
 
- <!-- search form appears here -->
 <li>
- <!-- start search -->
+<!-- start search -->
    <div id="search-demo-container">
       <input type="text" id="search-input" placeholder="search...">
       <ul id="results-container"></ul>
@@ -229,7 +228,7 @@ $(document).ready(function() {
     // Initialize navgoco with default options
     $("#mysidebar").navgoco({
         caretHtml: '',
-        accordion: false,
+        accordion: true,
         openClass: 'active', // open
         save: true,
         cookie: {
@@ -268,7 +267,7 @@ $(document).ready(function() {
     
     
       
-      <li><a href="/jekyll-doc/creating_projects/">Creating a new project</a></li>
+      <li><a href="/jekyll-doc/getting_started/">Getting started with a new project</a></li>
     
      
     
@@ -504,11 +503,7 @@ $(document).ready(function() {
 
 
 
-<p class="external">
-    <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
-</p>
-
-       </div>
+</div>
 
 
 
@@ -516,7 +511,7 @@ $(document).ready(function() {
             <!-- Content Column -->
             <div class="col-md-9">
 
-                  <h1>Address to the Nation</h1>
+                <h1>Address to the Nation</h1>
  <p class="post-meta">Sep 20, 2001  • by George Bush   • speeches </p>
 
  <div class="post-summary"><p>Mr. Speaker, Mr. President Pro Tempore, members of Congress, and fellow Americans:</p>
@@ -529,7 +524,7 @@ $( document ).ready(function() {
 
 $('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
 
-
+/* this offset helps account for the space taken up by the floating toolbar. */
 $('#toc').on('click', 'a', function() {
   var target = $(this.getAttribute('href'))
     , scroll_target = target.offset().top
@@ -543,7 +538,8 @@ $('#toc').on('click', 'a', function() {
 
 <div id="toc"></div>
 
-  <p>Mr. Speaker, Mr. President Pro Tempore, members of Congress, and fellow Americans:</p>
+
+<p>Mr. Speaker, Mr. President Pro Tempore, members of Congress, and fellow Americans:</p>
 
 <p>In the normal course of events, Presidents come to this chamber to report on the state of the Union. Tonight, no such report is needed. It has already been delivered by the American people.</p>
 
@@ -597,8 +593,6 @@ $('#toc').on('click', 'a', function() {
         })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
 
 
             </div>

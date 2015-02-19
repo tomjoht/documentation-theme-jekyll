@@ -161,11 +161,7 @@ Now use your tags:
 ```
 {% endraw %}
 
-Here's the result: 
 
-{% include variables.html %}
-
-{{warning}}Make sure you lock the safe before you close the shop.{{endwarning}}
 
 
 After coming up with some standard colors and icons, package up all of this code into your variables file and just worry about the liquid tags.

@@ -161,9 +161,8 @@
   
  
 
- <!-- search form appears here -->
 <li>
- <!-- start search -->
+<!-- start search -->
    <div id="search-demo-container">
       <input type="text" id="search-input" placeholder="search...">
       <ul id="results-container"></ul>
@@ -229,7 +228,7 @@ $(document).ready(function() {
     // Initialize navgoco with default options
     $("#mysidebar").navgoco({
         caretHtml: '',
-        accordion: false,
+        accordion: true,
         openClass: 'active', // open
         save: true,
         cookie: {
@@ -268,7 +267,7 @@ $(document).ready(function() {
     
     
       
-      <li><a href="/jekyll-doc/creating_projects/">Creating a new project</a></li>
+      <li><a href="/jekyll-doc/getting_started/">Getting started with a new project</a></li>
     
      
     
@@ -504,11 +503,7 @@ $(document).ready(function() {
 
 
 
-<p class="external">
-    <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
-</p>
-
-       </div>
+</div>
 
 
 
@@ -516,7 +511,7 @@ $(document).ready(function() {
             <!-- Content Column -->
             <div class="col-md-9">
 
-                  <h1>Some really obnoxiously long post title could be possible so just make sure it doesn't break all the things for real, yo, okay?</h1>
+                <h1>Some really obnoxiously long post title could be possible so just make sure it doesn't break all the things for real, yo, okay?</h1>
  <p class="post-meta">Jan 12, 2014   •  </p>
 
  <div class="post-summary"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales ac orci vitae vulputate. Maecenas in tortor non metus euismod sollicitudin. Etiam tincidunt pretium diam gravida elementum. Phasellus eu lacus ut massa sagittis suscipit eget eu dui. Donec metus enim, sodales convallis mauris varius, vestibulum sollicitudin lorem. Mauris venenatis nulla ut eros blandit gravida. Nulla gravida, tortor nec dapibus suscipit, eros enim consequat odio, at tempus massa sapien vel felis. Mauris iaculis massa mi.</p>
@@ -529,7 +524,7 @@ $( document ).ready(function() {
 
 $('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
 
-
+/* this offset helps account for the space taken up by the floating toolbar. */
 $('#toc').on('click', 'a', function() {
   var target = $(this.getAttribute('href'))
     , scroll_target = target.offset().top
@@ -543,7 +538,8 @@ $('#toc').on('click', 'a', function() {
 
 <div id="toc"></div>
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales ac orci vitae vulputate. Maecenas in tortor non metus euismod sollicitudin. Etiam tincidunt pretium diam gravida elementum. Phasellus eu lacus ut massa sagittis suscipit eget eu dui. Donec metus enim, sodales convallis mauris varius, vestibulum sollicitudin lorem. Mauris venenatis nulla ut eros blandit gravida. Nulla gravida, tortor nec dapibus suscipit, eros enim consequat odio, at tempus massa sapien vel felis. Mauris iaculis massa mi.</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales ac orci vitae vulputate. Maecenas in tortor non metus euismod sollicitudin. Etiam tincidunt pretium diam gravida elementum. Phasellus eu lacus ut massa sagittis suscipit eget eu dui. Donec metus enim, sodales convallis mauris varius, vestibulum sollicitudin lorem. Mauris venenatis nulla ut eros blandit gravida. Nulla gravida, tortor nec dapibus suscipit, eros enim consequat odio, at tempus massa sapien vel felis. Mauris iaculis massa mi.</p>
 
 <p>Integer mollis tortor ac adipiscing facilisis. Donec egestas vel ligula vitae vestibulum. Fusce laoreet ligula nec luctus vestibulum. Sed et odio metus. Aliquam interdum vel elit et lacinia. Sed porta consectetur ligula, non bibendum nulla varius sit amet. Nullam a feugiat massa. Fusce quis augue at enim aliquam sodales a nec nulla. Morbi fringilla nulla et dui laoreet ornare. Praesent id turpis urna. Quisque mattis in tellus in cursus. Proin pellentesque mollis nisi quis faucibus. Fusce in laoreet neque. Nunc in risus non turpis tristique vulputate in bibendum tellus.</p>
 
@@ -605,8 +601,6 @@ $('#toc').on('click', 'a', function() {
         })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
 
 
             </div>

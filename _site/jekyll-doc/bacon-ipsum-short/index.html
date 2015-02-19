@@ -161,9 +161,8 @@
   
  
 
- <!-- search form appears here -->
 <li>
- <!-- start search -->
+<!-- start search -->
    <div id="search-demo-container">
       <input type="text" id="search-input" placeholder="search...">
       <ul id="results-container"></ul>
@@ -229,7 +228,7 @@ $(document).ready(function() {
     // Initialize navgoco with default options
     $("#mysidebar").navgoco({
         caretHtml: '',
-        accordion: false,
+        accordion: true,
         openClass: 'active', // open
         save: true,
         cookie: {
@@ -268,7 +267,7 @@ $(document).ready(function() {
     
     
       
-      <li><a href="/jekyll-doc/creating_projects/">Creating a new project</a></li>
+      <li><a href="/jekyll-doc/getting_started/">Getting started with a new project</a></li>
     
      
     
@@ -504,11 +503,7 @@ $(document).ready(function() {
 
 
 
-<p class="external">
-    <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
-</p>
-
-       </div>
+</div>
 
 
 
@@ -516,7 +511,7 @@ $(document).ready(function() {
             <!-- Content Column -->
             <div class="col-md-9">
 
-                  <h1>Bacon Ipsum (Short)</h1>
+                <h1>Bacon Ipsum (Short)</h1>
  <p class="post-meta">Dec 18, 2013   •  </p>
 
  <div class="post-summary"><p>Bacon ipsum dolor sit amet flank sunt jerky dolore beef. Ut aute ham hock hamburger pork loin dolor esse ground round tenderloin consequat chicken veniam enim. Dolore kielbasa kevin andouille flank id consectetur chicken voluptate tenderloin. Jerky beef ribs tri-tip, kielbasa tail corned beef non. Sausage id ex kielbasa meatloaf sed drumstick ad kevin landjaeger ut. Consequat venison frankfurter, culpa swine aliquip turkey tempor beef. Prosciutto shank boudin leberkas pastrami.</p>
@@ -529,7 +524,7 @@ $( document ).ready(function() {
 
 $('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
 
-
+/* this offset helps account for the space taken up by the floating toolbar. */
 $('#toc').on('click', 'a', function() {
   var target = $(this.getAttribute('href'))
     , scroll_target = target.offset().top
@@ -543,7 +538,8 @@ $('#toc').on('click', 'a', function() {
 
 <div id="toc"></div>
 
-  <p>Bacon ipsum dolor sit amet flank sunt jerky dolore beef. Ut aute ham hock hamburger pork loin dolor esse ground round tenderloin consequat chicken veniam enim. Dolore kielbasa kevin andouille flank id consectetur chicken voluptate tenderloin. Jerky beef ribs tri-tip, kielbasa tail corned beef non. Sausage id ex kielbasa meatloaf sed drumstick ad kevin landjaeger ut. Consequat venison frankfurter, culpa swine aliquip turkey tempor beef. Prosciutto shank boudin leberkas pastrami.</p>
+
+<p>Bacon ipsum dolor sit amet flank sunt jerky dolore beef. Ut aute ham hock hamburger pork loin dolor esse ground round tenderloin consequat chicken veniam enim. Dolore kielbasa kevin andouille flank id consectetur chicken voluptate tenderloin. Jerky beef ribs tri-tip, kielbasa tail corned beef non. Sausage id ex kielbasa meatloaf sed drumstick ad kevin landjaeger ut. Consequat venison frankfurter, culpa swine aliquip turkey tempor beef. Prosciutto shank boudin leberkas pastrami.</p>
 
 <p>Pancetta aliqua boudin, spare ribs pork salami ut consectetur ham exercitation jowl voluptate officia et irure. Tongue ground round pork belly deserunt. Sint chuck proident short ribs incididunt, nisi beef ribs pariatur drumstick rump brisket. Sausage beef ribs proident, brisket non ea turducken meatloaf bacon pariatur bresaola excepteur velit flank sed. Ea ad corned beef andouille velit excepteur voluptate flank pancetta, mollit et short loin tenderloin cillum. Jerky tri-tip magna, adipisicing boudin tongue ut sed laboris fugiat pork chop salami pancetta.</p>
 
@@ -603,8 +599,6 @@ $('#toc').on('click', 'a', function() {
         })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
 
 
             </div>

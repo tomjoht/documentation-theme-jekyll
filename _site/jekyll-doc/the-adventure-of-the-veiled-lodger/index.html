@@ -161,9 +161,8 @@
   
  
 
- <!-- search form appears here -->
 <li>
- <!-- start search -->
+<!-- start search -->
    <div id="search-demo-container">
       <input type="text" id="search-input" placeholder="search...">
       <ul id="results-container"></ul>
@@ -229,7 +228,7 @@ $(document).ready(function() {
     // Initialize navgoco with default options
     $("#mysidebar").navgoco({
         caretHtml: '',
-        accordion: false,
+        accordion: true,
         openClass: 'active', // open
         save: true,
         cookie: {
@@ -268,7 +267,7 @@ $(document).ready(function() {
     
     
       
-      <li><a href="/jekyll-doc/creating_projects/">Creating a new project</a></li>
+      <li><a href="/jekyll-doc/getting_started/">Getting started with a new project</a></li>
     
      
     
@@ -504,11 +503,7 @@ $(document).ready(function() {
 
 
 
-<p class="external">
-    <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
-</p>
-
-       </div>
+</div>
 
 
 
@@ -516,7 +511,7 @@ $(document).ready(function() {
             <!-- Content Column -->
             <div class="col-md-9">
 
-                  <h1>The Adventure of the Veiled Lodger</h1>
+                <h1>The Adventure of the Veiled Lodger</h1>
  <p class="post-meta">Jul 24, 2012  • by Arthur Conan Doyle   • literature </p>
 
  <div class="post-summary"><p>When one considers that Mr. Sherlock Holmes was in active practice for twenty-three years, and that during seventeen of these I was allowed to cooperate with him and to keep notes of his doings, it will be clear that I have a mass of material at my command. The problem has always been not to find but to choose. There is the long row of year-books which fill a shelf, and there are the dispatch-cases filled with documents, a perfect quarry for the student not only of crime but of the social and official scandals of the late Victorian era. Concerning these latter, I may say that the writers of agonized letters, who beg that the honour of their families or the reputation of famous forebears may not be touched, have nothing to fear. The discretion and high sense of professional honour which have always distinguished my friend are still at work in the choice of these memoirs, and no confidence will be abused. I deprecate, however, in the strongest way the attempts which have been made lately to get at and to destroy these papers. The source of these outrages is known, and if they are repeated I have Mr. Holmes&#39;s authority for saying that the whole story concerning the politician, the lighthouse, and the trained cormorant will be given to the public. There is at least one reader who will understand.</p>
@@ -529,7 +524,7 @@ $( document ).ready(function() {
 
 $('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
 
-
+/* this offset helps account for the space taken up by the floating toolbar. */
 $('#toc').on('click', 'a', function() {
   var target = $(this.getAttribute('href'))
     , scroll_target = target.offset().top
@@ -543,7 +538,8 @@ $('#toc').on('click', 'a', function() {
 
 <div id="toc"></div>
 
-  <p>When one considers that Mr. Sherlock Holmes was in active practice for twenty-three years, and that during seventeen of these I was allowed to cooperate with him and to keep notes of his doings, it will be clear that I have a mass of material at my command. The problem has always been not to find but to choose. There is the long row of year-books which fill a shelf, and there are the dispatch-cases filled with documents, a perfect quarry for the student not only of crime but of the social and official scandals of the late Victorian era. Concerning these latter, I may say that the writers of agonized letters, who beg that the honour of their families or the reputation of famous forebears may not be touched, have nothing to fear. The discretion and high sense of professional honour which have always distinguished my friend are still at work in the choice of these memoirs, and no confidence will be abused. I deprecate, however, in the strongest way the attempts which have been made lately to get at and to destroy these papers. The source of these outrages is known, and if they are repeated I have Mr. Holmes&#39;s authority for saying that the whole story concerning the politician, the lighthouse, and the trained cormorant will be given to the public. There is at least one reader who will understand.</p>
+
+<p>When one considers that Mr. Sherlock Holmes was in active practice for twenty-three years, and that during seventeen of these I was allowed to cooperate with him and to keep notes of his doings, it will be clear that I have a mass of material at my command. The problem has always been not to find but to choose. There is the long row of year-books which fill a shelf, and there are the dispatch-cases filled with documents, a perfect quarry for the student not only of crime but of the social and official scandals of the late Victorian era. Concerning these latter, I may say that the writers of agonized letters, who beg that the honour of their families or the reputation of famous forebears may not be touched, have nothing to fear. The discretion and high sense of professional honour which have always distinguished my friend are still at work in the choice of these memoirs, and no confidence will be abused. I deprecate, however, in the strongest way the attempts which have been made lately to get at and to destroy these papers. The source of these outrages is known, and if they are repeated I have Mr. Holmes&#39;s authority for saying that the whole story concerning the politician, the lighthouse, and the trained cormorant will be given to the public. There is at least one reader who will understand.</p>
 
 <p>It is not reasonable to suppose that every one of these cases gave Holmes the opportunity of showing those curious gifts of instinct and observation which I have endeavoured to set forth in these memoirs. Sometimes he had with much effort to pick the fruit, sometimes it fell easily into his lap. But the most terrible human tragedies were often involved in those cases which brought him the fewest personal opportunities, and it is one of these which I now desire to record. In telling it, I have made a slight change of name and place, but otherwise the facts are as stated.</p>
 
@@ -791,8 +787,6 @@ $('#toc').on('click', 'a', function() {
         })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
 
 
             </div>

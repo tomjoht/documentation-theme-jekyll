@@ -11,3 +11,8 @@
 {% capture creating_toc %}
 {% for page in site.pages %}{% if page.permalink == '/creating_toc/' %}<a href="{{ "/creating_toc" | prepend: site.baseurl }}">{{page.title}}</a>{% break %}{% endif %}{% endfor %}
 {% endcapture %}
+
+
+{% capture getting_started %}
+{% for page in site.pages %}{% if page.permalink == '/getting_started/' %}<a href="{{ "/getting_started" | prepend: site.baseurl }}">{{page.title}}</a>{% break %}{% endif %}{% endfor %}
+{% endcapture %}

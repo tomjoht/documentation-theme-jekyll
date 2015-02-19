@@ -161,9 +161,8 @@
   
  
 
- <!-- search form appears here -->
 <li>
- <!-- start search -->
+<!-- start search -->
    <div id="search-demo-container">
       <input type="text" id="search-input" placeholder="search...">
       <ul id="results-container"></ul>
@@ -229,7 +228,7 @@ $(document).ready(function() {
     // Initialize navgoco with default options
     $("#mysidebar").navgoco({
         caretHtml: '',
-        accordion: false,
+        accordion: true,
         openClass: 'active', // open
         save: true,
         cookie: {
@@ -268,7 +267,7 @@ $(document).ready(function() {
     
     
       
-      <li><a href="/jekyll-doc/creating_projects/">Creating a new project</a></li>
+      <li><a href="/jekyll-doc/getting_started/">Getting started with a new project</a></li>
     
      
     
@@ -504,11 +503,7 @@ $(document).ready(function() {
 
 
 
-<p class="external">
-    <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
-</p>
-
-       </div>
+</div>
 
 
 
@@ -516,7 +511,7 @@ $(document).ready(function() {
             <!-- Content Column -->
             <div class="col-md-9">
 
-                  <h1>The Adventure of the Dying Detective</h1>
+                <h1>The Adventure of the Dying Detective</h1>
  <p class="post-meta">Jun 9, 2012  • by Arthur Conan Doyle   • literature </p>
 
  <div class="post-summary"><p>Mrs. Hudson, the landlady of Sherlock Holmes, was a long-suffering woman. Not only was her first-floor flat invaded at all hours by throngs of singular and often undesirable characters but her remarkable lodger showed an eccentricity and irregularity in his life which must have sorely tried her patience. His incredible untidiness, his addiction to music at strange hours, his occasional revolver practice within doors, his weird and often malodorous scientific experiments, and the atmosphere of violence and danger which hung around him made him the very worst tenant in London. On the other hand, his payments were princely. I have no doubt that the house might have been purchased at the price which Holmes paid for his rooms during the years that I was with him.</p>
@@ -529,7 +524,7 @@ $( document ).ready(function() {
 
 $('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
 
-
+/* this offset helps account for the space taken up by the floating toolbar. */
 $('#toc').on('click', 'a', function() {
   var target = $(this.getAttribute('href'))
     , scroll_target = target.offset().top
@@ -543,7 +538,8 @@ $('#toc').on('click', 'a', function() {
 
 <div id="toc"></div>
 
-  <p>Mrs. Hudson, the landlady of Sherlock Holmes, was a long-suffering woman. Not only was her first-floor flat invaded at all hours by throngs of singular and often undesirable characters but her remarkable lodger showed an eccentricity and irregularity in his life which must have sorely tried her patience. His incredible untidiness, his addiction to music at strange hours, his occasional revolver practice within doors, his weird and often malodorous scientific experiments, and the atmosphere of violence and danger which hung around him made him the very worst tenant in London. On the other hand, his payments were princely. I have no doubt that the house might have been purchased at the price which Holmes paid for his rooms during the years that I was with him.</p>
+
+<p>Mrs. Hudson, the landlady of Sherlock Holmes, was a long-suffering woman. Not only was her first-floor flat invaded at all hours by throngs of singular and often undesirable characters but her remarkable lodger showed an eccentricity and irregularity in his life which must have sorely tried her patience. His incredible untidiness, his addiction to music at strange hours, his occasional revolver practice within doors, his weird and often malodorous scientific experiments, and the atmosphere of violence and danger which hung around him made him the very worst tenant in London. On the other hand, his payments were princely. I have no doubt that the house might have been purchased at the price which Holmes paid for his rooms during the years that I was with him.</p>
 
 <p>The landlady stood in the deepest awe of him and never dared to interfere with him, however outrageous his proceedings might seem. She was fond of him, too, for he had a remarkable gentleness and courtesy in his dealings with women. He disliked and distrusted the sex, but he was always a chivalrous opponent. Knowing how genuine was her regard for him, I listened earnestly to her story when she came to my rooms in the second year of my married life and told me of the sad condition to which my poor friend was reduced.</p>
 
@@ -973,8 +969,6 @@ $('#toc').on('click', 'a', function() {
         })();
     </script>
     <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-
-
 
 
             </div>

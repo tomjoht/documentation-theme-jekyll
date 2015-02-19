@@ -18,7 +18,7 @@ port: 4000 # specified here in case you have multiple sites and want to view the
 
 
 project: jekyll-doc # add your project name here
-data_source: projects/jekyll-doc/settings
+data_source: projects/jekyll-doc/data
 plugins: projects/jekyll-doc/plugins
 layouts: projects/jekyll-doc/layouts
 destination: projects/jekyll-doc/site_builds
