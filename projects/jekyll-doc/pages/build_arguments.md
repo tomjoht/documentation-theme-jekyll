@@ -1,7 +1,7 @@
 ---
 title: Build arguments
 permalink: /build_arguments/
-tags: conditional_logic
+tags: getting_started
 ---
 {% include_relative reuse/variables.html %}
 ## Build arguments

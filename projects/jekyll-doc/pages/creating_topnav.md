@@ -1,6 +1,7 @@
 ---
 title: Topnav
 permalink: /creating_topnav/
+tags: getting_started
 ---
 {% include_relative reuse/variables.html %}
 

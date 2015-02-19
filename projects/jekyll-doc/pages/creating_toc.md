@@ -1,6 +1,7 @@
 ---
 title: Creating a table of contents
 permalink: /creating_toc/
+tags: getting_started
 ---
 
 {% include_relative reuse/variables.html %}

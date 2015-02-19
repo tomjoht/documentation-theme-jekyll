@@ -1,7 +1,7 @@
 ---
 title: Alerts
 permalink: /alerts/
-tags: formatting
+tags: getting_started
 search: include
 excerpt: Alerts are little warnings, info, or other messages that you have called out in special formatting.
 ---

@@ -219,6 +219,17 @@
   
     
     {
+      "title"    : "Getting Started index",
+      "category" : "",
+      "url"      : "/jekyll-doc/getting_started_index/",
+      "date"     : "",
+      "body": "Here are all pages tagged with getting_started:AlertsBuild argumentsCreating a table of contents ",
+      "excerpt": "Here are all pages tagged with getting_started:AlertsBuild argumentsCreating a table of contents "
+    } ,
+      
+  
+    
+    {
       "title"    : "Github repo",
       "category" : "",
       "url"      : "/jekyll-doc/github_repo/",
@@ -291,6 +302,17 @@
       "date"     : "",
       "body": "clone the lunr search repo: https://github.com/slashdotdash/jekyll-lunr-js-searchinside lib, copy the jekyll-lunr-js-search.rb and jekyll_lunr_js_search folder and insert them into your _plugins directory. if you don&#39;t have a _plugins directory, create one.inside build, copy the search.min.js and lunr.min.js files and insert them in a folder called js in your root directoy. (again, if you don&#39;t have a folder called js, create one.)copy this sample search.html file here: https://gist.github.com/flohei/91d987a1827023bef8ca. move it to your root directory. ",
       "excerpt": "clone the lunr search repo: https://github.com/slashdotdash/jekyll-lunr-js-searchinside lib, copy the jekyll-lunr-js-search.rb and jekyll_l…"
+    } ,
+      
+  
+    
+    {
+      "title"    : "Knowledge-base homepage",
+      "category" : "",
+      "url"      : "/jekyll-doc/kb_layout/",
+      "date"     : "",
+      "body": "Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia cor magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,  sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut!                              &nbsp;                                      ",
+      "excerpt": "Rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem …"
     } ,
       
   

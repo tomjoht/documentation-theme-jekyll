@@ -107,12 +107,12 @@ entries:
           url: /shuffle/
         - title: Scroll
           url: /scroll/
-        - title: Search
-          url: /search/
         - title: gemfiles
           url: /gemfiles/
         - title: Creating print output
           url: /creating_print_output/
+        - title: KB layout
+          url: /kb_layout/
     - title: How to publish
       items:
         - title: Github repo
