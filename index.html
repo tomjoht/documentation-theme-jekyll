@@ -5,8 +5,8 @@ layout: default
 ---
 <h1>{{site.homepage_title}}</h1>
 {% for page in site.pages %}
-{% for title in page.titles %}
-{% if page.title == site.homepage_title %}
+{% for tags in page.tags %}
+{% if page.tag == site.homepage_tag %}
 {{page.content}}
 {% endif %}
 {% endfor %}

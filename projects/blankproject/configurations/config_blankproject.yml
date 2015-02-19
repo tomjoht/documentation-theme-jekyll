@@ -22,7 +22,8 @@ data_source: projects/blankproject/data
 plugins: projects/blankproject/plugins
 layouts: projects/blankproject/layouts
 destination: projects/blankproject/site_builds
-homepage_title: Blank Project
+homepage_title: Blank Project theme
+homepage_tag: blankproject-homepage
 
 ## build settings -- leave as us
 
