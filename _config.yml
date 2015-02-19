@@ -19,6 +19,9 @@ port: 4000 # specified here in case you have multiple sites and want to view the
 
 project: jekyll-doc # add your project name here
 data_source: projects/jekyll-doc/settings
+plugins: projects/jekyll-doc/plugins
+layouts: projects/jekyll-doc/layouts
+destination: projects/jekyll-doc/site_builds
 
 ## build settings -- leave as us
 
@@ -32,6 +35,7 @@ exclude: # put all files or directories that you want to exclude from your proje
   - "Gemfile"
   - "Gemfile.lock"
   - _drafts
+  - projects/jekyll-doc/site_builds
 
 
 # these are defaults that get applied to each page or post. you don't have to set these settings in the frontmatter if you put them here. But frontmatter settings will override the configs here.

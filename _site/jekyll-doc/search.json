@@ -41,6 +41,17 @@
   
     
     {
+      "title"    : "",
+      "category" : "",
+      "url"      : "/jekyll-doc/projects/jekyll-doc/layouts/archive.html",
+      "date"     : "",
+      "body": "   ",
+      "excerpt": "   "
+    } ,
+      
+  
+    
+    {
       "title"    : "Build arguments",
       "category" : "",
       "url"      : "/jekyll-doc/build_arguments/",
@@ -342,6 +353,28 @@
   
     
     {
+      "title"    : "",
+      "category" : "",
+      "url"      : "/jekyll-doc/projects/jekyll-doc/layouts/none.html",
+      "date"     : "",
+      "body": "",
+      "excerpt": ""
+    } ,
+      
+  
+    
+    {
+      "title"    : "",
+      "category" : "",
+      "url"      : "/jekyll-doc/projects/jekyll-doc/layouts/page.html",
+      "date"     : "",
+      "body": "  Note: All of the content on this site is under construction. I am mostly working on theme development instead of documentation, so much of the content is acting as filler right now.             Please enable JavaScript to view the comments powered by Disqus.",
+      "excerpt": "  Note: All of the content on this site is under construction. I am mostly working on theme development instead of documentation, so much o…"
+    } ,
+      
+  
+    
+    {
       "title"    : "Page-level variables",
       "category" : "",
       "url"      : "/jekyll-doc/page_level_variables/",
@@ -359,6 +392,17 @@
       "date"     : "",
       "body": "Demorender_time page rendered at: note this is my formatted note more stuffnote this is my formatted note ",
       "excerpt": "Demorender_time page rendered at: note this is my formatted note more stuffnote this is my formatted note "
+    } ,
+      
+  
+    
+    {
+      "title"    : "",
+      "category" : "",
+      "url"      : "/jekyll-doc/projects/jekyll-doc/layouts/post.html",
+      "date"     : "",
+      "body": "             Next post: .              Please enable JavaScript to view the comments powered by Disqus.",
+      "excerpt": "             Next post: .              Please enable JavaScript to view the comments powered by Disqus."
     } ,
       
   
