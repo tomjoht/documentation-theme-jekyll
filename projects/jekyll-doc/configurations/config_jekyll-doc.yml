@@ -23,7 +23,7 @@ plugins: projects/jekyll-doc/plugins
 layouts: projects/jekyll-doc/layouts
 destination: projects/jekyll-doc/site_builds
 homepage_title: Jekyll-doc theme
-homepage_tag: jekyll-doc-homepage
+homepage_id: jekyll-doc-homepage
 
 ## build settings -- leave as us
 
