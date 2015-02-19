@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link href='//fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'> -->
+     <link rel="stylesheet" href="/jekyll-doc/stylesheets/syntax.css"  type='text/css'>
+     <link rel="stylesheet" href="/jekyll-doc/stylesheets/font-awesome.min.css">
+     <link rel="stylesheet" href="/jekyll-doc/stylesheets/bootstrap.min.css">
+     <link rel="stylesheet" href="/jekyll-doc/stylesheets/modern-business.css">
+    <link rel="stylesheet" href="/jekyll-doc/stylesheets/lavish-bootstrap.css"  type='text/css'>
+    <link rel="canonical" href="http://tomjohnson1492.github.io/jekyll-doc/scroll/">
+    <link rel="stylesheet" href="/jekyll-doc/stylesheets/customstyles.css"  type='text/css'>
+    <link rel="canonical" href="http://tomjohnson1492.github.io/jekyll-doc/scroll/">
+  <link rel="alternate" type="application/rss+xml" title="Jekyll-doc" href="http://tomjohnson1492.github.io/jekyll-doc/feed.xml" />
+    <script src="/jekyll-doc/js/jquery.min.js"></script>
+    <script src="/jekyll-doc/js/jquery.cookie.min.js"></script>
+    <script src="/jekyll-doc/js/jquery.navgoco.min.js"></script>
+    <script src="/jekyll-doc/js/bootstrap.min.js"></script>
+    <script src="/jekyll-doc/js/toc.js"></script>
+    <script src=""></script>
+       <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <title>Scroll demo | Jekyll-doc</title>
+     <meta name="description" content="A theme based on Jekyll designed for technical writers creating help systems. Feel free to clone, fork, and otherwise use. It's all open source and free to implement.  Please consider contributing back any innovations you make so that others can benefit.
+">
+ 
+  </head>
+
+<body>
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                 <a class="fa fa-home fa-lg navbar-brand" href="/jekyll-doc/">&nbsp; Jekyll-doc</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+
+<!-- entries without drop-downs appear here -->
+  
+  
+
+  
+
+      
+    
+      <li><a href="/jekyll-doc/about/">About</a></li>
+    
+    
+     
+    
+
+  
+
+      
+    
+      <li><a href="/jekyll-doc/contact/">Contact</a></li>
+    
+    
+     
+    
+
+  
+
+      
+    
+      <li><a href="/jekyll-doc/latest_posts/">News</a></li>
+    
+    
+     
+    
+
+  
+  <li><a href="https://github.com/tomjohnson1492/jekyll-doc" target="_blank">My Github Repo</a></li>
+  
+     
+    
+
+
+<!-- entries with drop-downs appear here -->
+
+  
+  
+    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Getting started<b class="caret"></b></a>
+         <ul class="dropdown-menu">
+         
+
+           
+         
+         
+       <li><a href="/jekyll-doc/hello_world_tutorial/">Hello World tutorial</a></li>
+       
+       
+    
+
+           
+         
+         
+       <li><a href="/jekyll-doc/sample/">Sample</a></li>
+       
+       
+    
+
+           
+  <li><a href="http://idratherbewriting.com" target="_blank">I'd Rather Be Writing</a></li>
+  
+    
+    </ul>
+    </li>
+  
+    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">More drop-downs<b class="caret"></b></a>
+         <ul class="dropdown-menu">
+         
+
+           
+         
+         
+       <li><a href="/jekyll-doc/alerts/">Alerts</a></li>
+       
+       
+    
+
+           
+         
+         
+       <li><a href="/jekyll-doc/labels/">Labels</a></li>
+       
+       
+    
+
+           
+         
+         
+       <li><a href="/jekyll-doc/tables/">Tables</a></li>
+       
+       
+    
+    </ul>
+    </li>
+  
+ 
+
+ <!-- search form appears here -->
+<li>
+ <!-- start search -->
+   <div id="search-demo-container">
+      <input type="text" id="search-input" placeholder="search...">
+      <ul id="results-container"></ul>
+    </div>
+
+    
+    <script src="/jekyll-doc/js/jekyll-search.js" type="text/javascript"></script>
+    
+    
+    <script type="text/javascript">
+      SimpleJekyllSearch.init({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        dataSource: '/jekyll-doc/search.json',        
+        searchResultTemplate: '<li><a href="{url}" title="">{title}</a></li>',
+        noResultsText: 'No results found',
+        limit: 10,
+        fuzzy: true,
+      })
+    </script>
+    <!-- end search -->
+ </li>
+
+        </div>
+
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Page Content -->
+    <div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+
+        <!-- Page Heading/Breadcrumbs -- site not hierarchical enough to support this feature well enough.
+        <div class="row">
+            <div class="col-lg-12">
+               <h1 class="page-header">Scroll demo
+                    <small></small>
+                </h1> 
+                &nbsp;
+                <ol class="breadcrumb">
+                    <li><a href="/jekyll-doc/">Home</a> Home</li>
+                    
+                    <li></li>
+                    <li Scroll demo</li>
+                    
+                </ol>
+            </div>
+        </div>
+        -->
+
+
+
+
+ <!-- Content Row -->
+        <div class="row">
+            <!-- Sidebar Column -->
+            <div class="col-md-3">
+
+<script>
+$(document).ready(function() {
+    // Initialize navgoco with default options
+    $("#mysidebar").navgoco({
+        caretHtml: '',
+        accordion: false,
+        openClass: 'active', // open
+        save: true,
+        cookie: {
+            name: 'navgoco',
+            expires: false,
+            path: '/'
+        },
+        slide: {
+            duration: 400,
+            easing: 'swing'
+        }
+    });
+
+    $("#collapseAll").click(function(e) {
+        e.preventDefault();
+        $("#mysidebar").navgoco('toggle', false);
+    });
+
+    $("#expandAll").click(function(e) {
+        e.preventDefault();
+        $("#mysidebar").navgoco('toggle', true);
+    });
+});
+
+</script>
+  
+<!-- note that the data file for your project needs to be specified in the code below. Instead of site.data.jekyll, use the data file corresponding to your project (create one if it doesn't already exist). -->
+
+<ul id="mysidebar" class="nav">
+
+
+  
+  
+    <li><a href="#">Getting started</a>
+    <ul>
+    
+    
+      
+      <li><a href="/jekyll-doc/creating_projects/">Creating a new project</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/prerequisites/">Prerequisites</a></li>
+    
+     
+    
+    </ul>
+    </li>
+  
+    <li><a href="#">Creating content</a>
+    <ul>
+    
+    
+      
+      <li><a href="/jekyll-doc/writing_content/">Writing content</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/creating_toc/">Creating a table of contents</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/creating_topnav/">Creating the top navigation bar</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/collections/">Collections</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/cshelp/">Context-sensitive help</a></li>
+    
+     
+    
+    
+  <li><a href="http://google.com" target="_blank">Google</a></li>
+  
+    
+    </ul>
+    </li>
+  
+    <li><a href="#">Formatting content</a>
+    <ul>
+    
+    
+      
+      <li><a href="/jekyll-doc/icons/">Icons</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/tables/">Tables</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/markdown_readability/">Markdown readability</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/links/">Links</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/syntax_highlighting/">Syntax highlighting</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/images/">Images</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/labels/">Labels</a></li>
+    
+     
+    
+    </ul>
+    </li>
+  
+    <li><a href="#">Publishing</a>
+    <ul>
+    
+    
+      
+      <li><a href="/jekyll-doc/collections/">Collections</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/conditional_logic">Conditional logic</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/cshelp/">Context-sensitive help</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/tags/">Tags</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/snippets/">Snippets</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/lavish/">Lavish</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/page_level_variables/">Page level variables</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/build_arguments/">Build arguments</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/building_jekyll_themes/">Building Jekyll themes</a></li>
+    
+     
+    
+    </ul>
+    </li>
+  
+    <li><a href="#">Blog posts</a>
+    <ul>
+    
+    
+      
+      <li><a href="/jekyll-doc/add_blog/">Writing blog posts</a></li>
+    
+     
+    
+    </ul>
+    </li>
+  
+    <li><a href="#">Special effects</a>
+    <ul>
+    
+    
+      
+      <li><a href="/jekyll-doc/shuffle/">Shuffle</a></li>
+    
+     
+    
+    
+      
+      <li class="active"><a href="/jekyll-doc/scroll/" class="active">Scroll</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/search/">Search</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/gemfiles/">gemfiles</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/creating_print_output/">Creating print output</a></li>
+    
+     
+    
+    </ul>
+    </li>
+  
+    <li><a href="#">How to publish</a>
+    <ul>
+    
+    
+      
+      <li><a href="/jekyll-doc/github_repo/">Github repo</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/fork_this_template/">Fork this template</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/dummytext/">Dummy text</a></li>
+    
+     
+    
+    </ul>
+    </li>
+  
+
+
+
+<p class="external">
+    <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+</p>
+
+       </div>
+
+
+
+
+            <!-- Content Column -->
+            <div class="col-md-9">
+
+                <div class="post-header">
+  <h1 class="post-title-main">Scroll demo</h1>
+</div>
+<div class="post-content">
+
+
+<div class="post-summary"></div>
+
+
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+<!-- add all your links here -->
+
+<!-- Here's a sample link. This stores the link as "conditional_logic" and correlates it to the permalink. To embed it, just use . If you ever need to change the page title or link, you can do so from here. Note that markdown is sensitive to line breaks, so don't break lines between capture tags.-->
+
+
+
+
+
+
+
+
+
+<!-- callouts -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- alerts -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bs-callout bs-callout-warning">
+<b>Note:</b> All of the content on this site is under construction. I am mostly working on theme development instead of documentation, so much of the content is acting as filler right now. 
+</div>
+
+
+<!-- add all your links here -->
+
+<!-- Here's a sample link. This stores the link as "conditional_logic" and correlates it to the permalink. To embed it, just use . If you ever need to change the page title or link, you can do so from here. Note that markdown is sensitive to line breaks, so don't break lines between capture tags.-->
+
+
+
+
+
+
+
+
+
+<!-- callouts -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- alerts -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <script src="/jekyll-doc/js/jquery.scrollTo.min.js"></script> 
+    <!-- local scroll must come after scrollTo, because localScroll is based on scrollTo, which is based on jQuery -->
+<script src="/jekyll-doc/js/jquery.localScroll.min.js"></script>
+
+<script>
+
+$( document ).ready(function() {
+
+$('#small-box-links').localScroll({
+           target:'#definition-box-container',
+           showSpeed: 1000,
+           hash: true,
+           easing: 'swing',
+           onAfter:function(){
+          $("#definition-box-container div a").addClass("active");
+          $("#definition-box-container div a").removeClass("active");
+          $("#definition-box-container div").removeClass("active");
+           $(window.location.hash).addClass("active");
+  }
+});
+
+
+});
+</script>
+
+<!-- documentation for localScroll function: http://flesler.blogspot.com/2007/10/jquerylocalscroll-10.html -->
+    <style type="text/css">
+ 
+   #definition-box-container {
+        border: 0px solid #dedede;
+        border-radius: 4px;
+        max-height: 500px;
+        overflow: scroll;
+        padding-left:5px;
+        border-radius:5px;
+    }
+
+    #json-box-container {
+
+      border: 1px solid #dedede;
+      border-radius: 4px;
+      max-height:500px;
+      overflow: scroll;
+    }
+
+    #small-box-links {
+      float: left;
+    }
+
+    #definition-box-container .active {
+     background-color: #FFFBCC;
+    }
+    
+    div#definition-box-container div {
+      padding: 10px;
+}
+
+    @media (min-height: 700px)  {
+       #json-box-container {
+           max-height:500px;
+         }
+           #definition-box-container  {
+          max-height: 500px;
+  }
+    }
+
+     @media (min-height: 800px)  {
+       #json-box-container {
+           max-height:600px;
+    }
+        #definition-box-container  {
+          max-height: 600px;
+  }
+  }
+
+    @media (min-height: 900px)  {
+       #json-box-container {
+           max-height:700px;
+    }
+        #definition-box-container  {
+          max-height: 700px;
+  }
+  }
+
+     @media (min-height: 1000px)  {
+       #json-box-container {
+           max-height:800px;
+    }
+        #definition-box-container  {
+          max-height: 800px;
+  }
+  }
+
+    @media (min-height: 1100px)  {
+       #json-box-container {
+           max-height:900px;
+    }
+        #definition-box-container  {
+          max-height: 900px;
+  }
+  }
+
+
+    </style>
+
+
+<div class="container">
+<div class="row">
+ 
+<div id="small-box-links">
+
+<div class="col-md-6">
+<div id="json-box-container">
+<pre>
+{
+  <a href="#apples">"apples"</a>: "red fruit at the store",
+  <a href="#bananas">"bananas"</a>: "yellow bananas in a bunch",
+  <a href="#carrots">"carrots"</a>: "orange vegetables that grow in the ground",
+  <a href="#dingbats">"dingbats"</a>: "a type of character symbol on a computer",
+  <a href="#eggs">"eggs"</a>: "chickens lay them, and people eat them",
+  <a href="#falafel">"falafel"</a>: "a Mediterranean sandwich consisting of lots of different stuff i don't know much about",
+  <a href="#giraffe">"giraffe"</a>: "tall animal, has purple tongue",
+  <a href="#hippo">"hippo"</a>: "surprisingly dangerous amphibian",
+  <a href="#igloo">"igloo"</a>: "an ice shelter made by eskimos",
+  <a href="#jeep">"jeep</a>: "the only car that starts with a j",
+  <a href="#kilt">"kilt"</a>: "something worn by scottish people, not a dress",
+  <a href="#lamp">"lamp"</a>: "you use it to read by your bedside at night"
+  <a href="#manifold">"manifold"</a>: "an intake mechanism on a car, like a valve, i think",
+  <a href="#octopus">"octopus"</a>: "eight tentacles, shoots ink, lives in dark caves, very mysterious",
+  <a href="#paranoia">"paranoia"</a>: "the constant feeling that others are out to get you, conspiring against your success",
+  <a href="#qui">"qui"</a>: "a life force that runs through your body",
+  <a href="#radical">"radical"</a>: "someone who opposes the status quo in major ways",
+  <a href="#silly">"silly": "how I feel writing this dummy copy",
+  <a href="#taffy">"taffy"</a>: "the sweets children like the most and dentists hate the worst",
+  <a href="#umbrella">"umbrella"</a>: "an invention that has not had any advancements in 200 years",
+  <a href="#vampire">"vampire"</a>: "a paranormal figure that is surprisingly in vogue despite its basic nature",
+  <a href="#washington">"washington"</a>: "the place where tom was born",
+  <a href="#xylophone">"xylophone"</a>: "some kind of pinging instrument used to sound chime-like notes",
+  <a href="#yahoo">"yahoo"</a>: "an expression of exuberance, said under breath when something works right",
+  <a href="#zeta">"zeta"</a>: "the way british people pronounce z",
+  <a href="#alpha">"alpha"</a>: "the original letter of the alphabet, which has since come to mean the first. however, i think the original symbol of alpha is actually an ox. it is somewhat of a mystery to linquists as to the exact origin of the letter alpha, but it basically represents the dawn of the alphabet, which proved to be a huge step forward for human thought and expression.",
+  <a href="#beta">"beta"</a>: "the period of time when something is finished but undergoing testing by a group of people.",
+  <a href="#cappa">"cappa"</a>: "how italians refer to their baseball caps",
+  <a href="#dunno">"dunno"</a>: "informal expression for 'don't know'"
+  }
+      
+</pre>
+
+</div><!-- end json-box-container-->
+</div> <!-- end col-md-4-->
+
+<div class="col-md-3">
+
+<div id="definition-box-container">
+   
+
+    <div id="apples"><h5>apples</h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer magna massa, euismod sed rutrum at, ullamcorper quis tellus. Vestibulum erat purus, aliquet sit amet pellentesque eget, tempus at ante. Nulla justo nisi, elementum nec nisi eget, consectetur varius tortor. </div>
+
+    <div id="bananas"><h5>bananas</h5>Curabitur quis nibh sed eros viverra tempus et quis lorem. Nulla convallis sit amet risus vitae rutrum. Nulla at faucibus lectus. Pellentesque tortor nisl, interdum ac quam non, egestas congue massa. Vestibulum non porttitor lacus. Nam tincidunt arcu lectus. Donec eget ornare neque, hendrerit ornare lectus. In ac pretium odio.</div>
+
+    <div id="carrots"><h5>carrots</h5>Vivamus pulvinar vestibulum pharetra. Vivamus vitae diam iaculis, posuere mi sed, dignissim massa. Nunc vitae aliquet urna. Proin sed pulvinar ex. Maecenas nisl lorem, rutrum sit amet hendrerit sed, posuere at odio. Sed consectetur semper tristique. Vivamus finibus varius felis at convallis. Fusce in dictum nunc.</div>
+
+    <div id="dingbats"><h5>dingbats</h5>Curabitur feugiat lorem eget elit ullamcorper tincidunt. In euismod diam aliquet tortor fermentum tempor. Fusce quam felis, commodo viverra orci vitae, scelerisque aliquet risus. </div>
+
+    <div id="eggs"><h5>eggs</h5>Duis est nunc, fringilla eu ligula et, varius dignissim dui. Vivamus in tellus vitae ipsum vehicula fermentum at congue tellus. Suspendisse fermentum, magna vitae aliquet sodales, tellus nisi rutrum arcu, vitae auctor dolor quam ac tellus. Cras posuere augue erat, in sagittis quam lacinia id.</div>
+
+    <div id="falafel"><h5>falafel</h5>Praesent auctor a enim non lacinia. Integer sodales aliquet mi vel dapibus. Donec consequat justo eget nisi lacinia, eu sodales ligula molestie. Sed sapien nulla, rhoncus at elementum a, </div>
+
+    <div id="giraffe"><h5>giraffe</h5>Nullam venenatis at lectus sed pharetra. Sed hendrerit ligula lectus, non pellentesque diam faucibus sit amet. Aliquam dictum hendrerit pellentesque. Cras eu nisl sagittis, faucibus velit sit amet, sagittis odio. Donec vulputate ex vitae purus</div>
+
+    <div id="hippo"><h5>hippo</h5>Cras nec pretium nulla. Suspendisse tempus tortor vel venenatis pulvinar. Integer varius tempor enim fringilla tincidunt. Phasellus magna turpis, auctor vitae elit eget, fringilla pellentesque est. Phasellus ut porta risus. Curabitur iaculis sapien sed venenatis auctor. Integer eu orci at lectus eleifend auctor id rutrum urna.</div>
+
+    <div id="igloo"><h5><igloo/h5>Fusce rhoncus elit sed quam laoreet placerat. Praesent lacinia metus quis felis mollis, ac facilisis risus consequat. Phasellus laoreet feugiat lacus. Etiam a neque est. </div>
+
+    <div id="jeep"><h5>jeep</h5>Nulla vitae metus rutrum, condimentum orci nec, maximus est. Aenean sit amet ante nec elit dignissim faucibus eget quis quam. </div>
+
+    <div id="kilt"><h5>kilt</h5>Morbi maximus, erat vel rhoncus sagittis, dolor purus dignissim ante, sit amet pharetra ex justo vitae ipsum. Nulla consequat interdum neque</div>
+
+    <div id="lamp"><h5>lamp</h5>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquam dapibus blandit. Donec porta, enim hendrerit venenatis vulputate, orci diam lacinia nibh, faucibus rutrum dolor dui ut quam.</div>
+
+    <div id="manifold"><h5>manifold</h5> Donec finibus massa vel nisi ullamcorper, vitae ornare enim euismod. Aliquam auctor quam erat. Duis interdum rutrum orci, ac interdum urna pharetra eget.</div>
+
+    <div id="octopus"><h5><octopus/h5>Nulla id egestas enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse potenti. Curabitur eu lobortis ligula.</div>
+
+    <div id="paranoia"><h5>paranoia</h5>Aenean hendrerit mauris ipsum, non laoreet ipsum luctus vel. Curabitur tristique auctor elit ut pulvinar. Quisque arcu arcu, condimentum aliquam sodales nec, dignissim nec justo. Nunc tristique sem felis, pharetra euismod lorem volutpat sed. Ut porttitor metus sit amet elit rhoncus semper.</div>
+
+    <div id="qui"><h5>qui</h5>Quisque rhoncus cursus felis vel elementum. Vestibulum dignissim molestie tortor nec facilisis. Praesent a nibh condimentum, porta nulla egestas, auctor eros</div>
+
+    <div id="radical"><h5>radical</h5>Etiam hendrerit interdum tellus, at aliquet sapien egestas in. Aenean eu urna nisl. Cras vitae risus pharetra, elementum mauris nec, auctor lectus. Fusce pellentesque venenatis dictum. Proin at augue at mauris finibus semper ultricies sed eros.</div>
+
+    <div id="silly"><h5><silly/h5>Praesent pulvinar consequat posuere. Morbi egestas rhoncus felis, id fermentum metus lobortis in. Vestibulum nibh orci, euismod eget vestibulum nec, vehicula vitae tortor. Aenean ullamcorper enim nunc, eu auctor ligula auctor eget.</div>
+    
+    <div id="taffy"><h5>taffy</h5>Etiam et arcu vel lacus aliquet lobortis in in massa. Nunc non mollis elit. Aenean accumsan orci quis risus aliquam, non gravida nulla molestie. Mauris pharetra libero et magna aliquam aliquam. Integer quis luctus dolor. </div>
+
+    <div id="umbrella"><h5>umbrella</h5>Fusce molestie finibus malesuada. Nullam ac egestas quam, id venenatis ligula. Pellentesque pulvinar elit et vestibulum fringilla. Cras volutpat sed quam ornare scelerisque. Vivamus volutpat ante pretium scelerisque tempus. Etiam venenatis tempor nisl dignissim sollicitudin. Curabitur ac risus vitae dolor pretium posuere vel vitae diam. Donec in odio arcu.</div>
+
+    <div id="vampire"><h5>vampire</h5>Vestibulum pretium condimentum commodo. Integer placerat leo non ipsum ultrices, ac convallis elit varius. Vestibulum ultricies, justo eu rutrum molestie, quam arcu euismod sapien, vel gravida ipsum nulla eget erat. </div>
+
+    <div id="washington"><h5>washington</h5>Nunc ac quam eu risus dictum sodales. Nam ac risus iaculis, aliquet sem eu, mollis mauris. Curabitur pretium facilisis orci ut lacinia. Sed fermentum leo a odio blandit rutrum. Phasellus at nibh vel odio interdum vulputate ac eget urna. Nam eu arcu dapibus, sodales ligula nec, volutpat ipsum. Suspendisse auctor tellus vitae libero euismod venenatis. </div>
+
+    <div id="xylophone"><h5>xylophone</h5>Sed molestie lobortis ante sit amet hendrerit. Sed pharetra nisi sed interdum pulvinar. Nunc efficitur erat non aliquam mattis. Sed id nisl mattis lacus vehicula volutpat vitae vel massa. Curabitur interdum velit odio, vitae sollicitudin nunc rutrum non. </div>
+
+    <div id="yahoo"><h5>yahoo</h5>Nunc commodo consectetur scelerisque. Proin fermentum ligula ac quam finibus tincidunt. Aenean venenatis nisi et semper semper. Nunc sodales velit ipsum, ac pellentesque augue placerat eu.</div>
+
+    <div id="zeta"><h5><zeta</h5>Nullam ac suscipit odio. Curabitur viverra arcu ut egestas sollicitudin. Fusce sodales varius lectus ut tristique. Etiam eget nunc ornare, aliquet tortor eget, consequat mauris. Integer sit amet fermentum augue. </div>
+
+    <div id="alpha"><h5>alpha</h5>Praesent nec neque ac tellus sodales eleifend nec vel ipsum. Cras et semper risus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer mattis leo nisl, a tincidunt lectus tristique eget. Donec finibus lobortis viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Vivamus egestas pulvinar odio non vehicula. Morbi malesuada leo eget nisl sagittis aliquet.</div>
+
+    <div id="beta"><h5><beta</h5>Mauris a libero vel enim pharetra interdum non a quam. Sed tincidunt ut elit sed dignissim. Suspendisse vitae tellus dapibus, fermentum lacus ac, fermentum lacus. Nam ante odio, fringilla ac elementum a, mollis sed tellus. </div>
+
+    <div id="cappa"><h5>cappa</h5>Nam molestie semper nulla et molestie. Ut facilisis, ipsum sed convallis posuere, mi mauris bibendum erat, nec egestas ipsum est nec dolor. </div>
+
+    <div id="dunno"><h5>dunno</h5>Etiam et metus congue, commodo libero et, accumsan sem. Aliquam erat volutpat. Quisque tincidunt, tortor non blandit ullamcorper, orci mauris dignissim augue, eget vehicula nulla justo sed dolor. Nunc ac urna quis nisi maximus pharetra in a mauris. Proin metus mi, venenatis vitae tristique sed, fermentum at purus. Aliquam erat volutpat. Maecenas efficitur sodales nibh, ac hendrerit felis facilisis et. Interdum et malesuada fames ac ante ipsum primis in faucibus.</div>
+
+
+</div> <!-- end definition-box-container -->
+</div> <!-- end col-md-5--> 
+</div> <!-- end small-box-links -->
+</div> <!-- end row -->
+</div> <!-- end container -->
+ 
+
+
+
+
+
+</div>
+
+
+
+
+
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'idrbwjekyll'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                     
+
+Site last generated: Feb 18, 2015.
+Built with <a href="http://jekyllrb.com/">Jekyll</a> using the <a href="http://tomjohnson1492.github.io/jekyll-doc/">Jekyll-doc theme</a>.
+
+
+
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+
+
+ 
+</body>
+
+
+
+
+</html>
+

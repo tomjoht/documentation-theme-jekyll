@@ -35,3 +35,4 @@ I put files into a subdirectory called "web". It's important to use subfolders f
 ## Configuration 
 
 Customize the values in the configuration section.
+

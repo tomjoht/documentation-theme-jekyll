@@ -1,8 +1,0 @@
-# These settings set various options...
-
-disqus_shortname: idrbwjekyll
-# for basicproject, the shortname is basicproject
-google_analytics: none #example: UA-908430-5
-css_stylesheet: customstyles.css
-homepage: jekyll-doc-homepage # set the type in the frontmatter of a page to this value
-homepage_title: Jekyll-doc home # due to the way I set up the templates, you have to specify your homepage here instead of the homepage's frontmatter.

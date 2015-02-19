@@ -1,1 +1,0 @@
-jekyll serve --config _config.yml --destination ../jekyllbuilds/site_jekyll-doc

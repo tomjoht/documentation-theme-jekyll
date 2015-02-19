@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link href='//fonts.googleapis.com/css?family=Montserrat:700,400' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic' rel='stylesheet' type='text/css'> -->
+     <link rel="stylesheet" href="/jekyll-doc/stylesheets/syntax.css"  type='text/css'>
+     <link rel="stylesheet" href="/jekyll-doc/stylesheets/font-awesome.min.css">
+     <link rel="stylesheet" href="/jekyll-doc/stylesheets/bootstrap.min.css">
+     <link rel="stylesheet" href="/jekyll-doc/stylesheets/modern-business.css">
+    <link rel="stylesheet" href="/jekyll-doc/stylesheets/lavish-bootstrap.css"  type='text/css'>
+    <link rel="canonical" href="http://tomjohnson1492.github.io/jekyll-doc/creating_topnav/">
+    <link rel="stylesheet" href="/jekyll-doc/stylesheets/customstyles.css"  type='text/css'>
+    <link rel="canonical" href="http://tomjohnson1492.github.io/jekyll-doc/creating_topnav/">
+  <link rel="alternate" type="application/rss+xml" title="Jekyll-doc" href="http://tomjohnson1492.github.io/jekyll-doc/feed.xml" />
+    <script src="/jekyll-doc/js/jquery.min.js"></script>
+    <script src="/jekyll-doc/js/jquery.cookie.min.js"></script>
+    <script src="/jekyll-doc/js/jquery.navgoco.min.js"></script>
+    <script src="/jekyll-doc/js/bootstrap.min.js"></script>
+    <script src="/jekyll-doc/js/toc.js"></script>
+    <script src=""></script>
+       <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <title>Topnav | Jekyll-doc</title>
+     <meta name="description" content="A theme based on Jekyll designed for technical writers creating help systems. Feel free to clone, fork, and otherwise use. It's all open source and free to implement.  Please consider contributing back any innovations you make so that others can benefit.
+">
+ 
+  </head>
+
+<body>
+
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                 <a class="fa fa-home fa-lg navbar-brand" href="/jekyll-doc/">&nbsp; Jekyll-doc</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+
+<!-- entries without drop-downs appear here -->
+  
+  
+
+  
+
+      
+    
+      <li><a href="/jekyll-doc/about/">About</a></li>
+    
+    
+     
+    
+
+  
+
+      
+    
+      <li><a href="/jekyll-doc/contact/">Contact</a></li>
+    
+    
+     
+    
+
+  
+
+      
+    
+      <li><a href="/jekyll-doc/latest_posts/">News</a></li>
+    
+    
+     
+    
+
+  
+  <li><a href="https://github.com/tomjohnson1492/jekyll-doc" target="_blank">My Github Repo</a></li>
+  
+     
+    
+
+
+<!-- entries with drop-downs appear here -->
+
+  
+  
+    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Getting started<b class="caret"></b></a>
+         <ul class="dropdown-menu">
+         
+
+           
+         
+         
+       <li><a href="/jekyll-doc/hello_world_tutorial/">Hello World tutorial</a></li>
+       
+       
+    
+
+           
+         
+         
+       <li><a href="/jekyll-doc/sample/">Sample</a></li>
+       
+       
+    
+
+           
+  <li><a href="http://idratherbewriting.com" target="_blank">I'd Rather Be Writing</a></li>
+  
+    
+    </ul>
+    </li>
+  
+    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">More drop-downs<b class="caret"></b></a>
+         <ul class="dropdown-menu">
+         
+
+           
+         
+         
+       <li><a href="/jekyll-doc/alerts/">Alerts</a></li>
+       
+       
+    
+
+           
+         
+         
+       <li><a href="/jekyll-doc/labels/">Labels</a></li>
+       
+       
+    
+
+           
+         
+         
+       <li><a href="/jekyll-doc/tables/">Tables</a></li>
+       
+       
+    
+    </ul>
+    </li>
+  
+ 
+
+ <!-- search form appears here -->
+<li>
+ <!-- start search -->
+   <div id="search-demo-container">
+      <input type="text" id="search-input" placeholder="search...">
+      <ul id="results-container"></ul>
+    </div>
+
+    
+    <script src="/jekyll-doc/js/jekyll-search.js" type="text/javascript"></script>
+    
+    
+    <script type="text/javascript">
+      SimpleJekyllSearch.init({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        dataSource: '/jekyll-doc/search.json',        
+        searchResultTemplate: '<li><a href="{url}" title="">{title}</a></li>',
+        noResultsText: 'No results found',
+        limit: 10,
+        fuzzy: true,
+      })
+    </script>
+    <!-- end search -->
+ </li>
+
+        </div>
+
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Page Content -->
+    <div class="container">
+    <div class="col-lg-12">&nbsp;</div>
+
+        <!-- Page Heading/Breadcrumbs -- site not hierarchical enough to support this feature well enough.
+        <div class="row">
+            <div class="col-lg-12">
+               <h1 class="page-header">Topnav
+                    <small></small>
+                </h1> 
+                &nbsp;
+                <ol class="breadcrumb">
+                    <li><a href="/jekyll-doc/">Home</a> Home</li>
+                    
+                    <li></li>
+                    <li Topnav</li>
+                    
+                </ol>
+            </div>
+        </div>
+        -->
+
+
+
+
+ <!-- Content Row -->
+        <div class="row">
+            <!-- Sidebar Column -->
+            <div class="col-md-3">
+
+<script>
+$(document).ready(function() {
+    // Initialize navgoco with default options
+    $("#mysidebar").navgoco({
+        caretHtml: '',
+        accordion: false,
+        openClass: 'active', // open
+        save: true,
+        cookie: {
+            name: 'navgoco',
+            expires: false,
+            path: '/'
+        },
+        slide: {
+            duration: 400,
+            easing: 'swing'
+        }
+    });
+
+    $("#collapseAll").click(function(e) {
+        e.preventDefault();
+        $("#mysidebar").navgoco('toggle', false);
+    });
+
+    $("#expandAll").click(function(e) {
+        e.preventDefault();
+        $("#mysidebar").navgoco('toggle', true);
+    });
+});
+
+</script>
+  
+<!-- note that the data file for your project needs to be specified in the code below. Instead of site.data.jekyll, use the data file corresponding to your project (create one if it doesn't already exist). -->
+
+<ul id="mysidebar" class="nav">
+
+
+  
+  
+    <li><a href="#">Getting started</a>
+    <ul>
+    
+    
+      
+      <li><a href="/jekyll-doc/creating_projects/">Creating a new project</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/prerequisites/">Prerequisites</a></li>
+    
+     
+    
+    </ul>
+    </li>
+  
+    <li><a href="#">Creating content</a>
+    <ul>
+    
+    
+      
+      <li><a href="/jekyll-doc/writing_content/">Writing content</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/creating_toc/">Creating a table of contents</a></li>
+    
+     
+    
+    
+      
+      <li class="active"><a href="/jekyll-doc/creating_topnav/" class="active">Creating the top navigation bar</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/collections/">Collections</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/cshelp/">Context-sensitive help</a></li>
+    
+     
+    
+    
+  <li><a href="http://google.com" target="_blank">Google</a></li>
+  
+    
+    </ul>
+    </li>
+  
+    <li><a href="#">Formatting content</a>
+    <ul>
+    
+    
+      
+      <li><a href="/jekyll-doc/icons/">Icons</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/tables/">Tables</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/markdown_readability/">Markdown readability</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/links/">Links</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/syntax_highlighting/">Syntax highlighting</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/images/">Images</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/labels/">Labels</a></li>
+    
+     
+    
+    </ul>
+    </li>
+  
+    <li><a href="#">Publishing</a>
+    <ul>
+    
+    
+      
+      <li><a href="/jekyll-doc/collections/">Collections</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/conditional_logic">Conditional logic</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/cshelp/">Context-sensitive help</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/tags/">Tags</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/snippets/">Snippets</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/lavish/">Lavish</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/page_level_variables/">Page level variables</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/build_arguments/">Build arguments</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/building_jekyll_themes/">Building Jekyll themes</a></li>
+    
+     
+    
+    </ul>
+    </li>
+  
+    <li><a href="#">Blog posts</a>
+    <ul>
+    
+    
+      
+      <li><a href="/jekyll-doc/add_blog/">Writing blog posts</a></li>
+    
+     
+    
+    </ul>
+    </li>
+  
+    <li><a href="#">Special effects</a>
+    <ul>
+    
+    
+      
+      <li><a href="/jekyll-doc/shuffle/">Shuffle</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/scroll/">Scroll</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/search/">Search</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/gemfiles/">gemfiles</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/creating_print_output/">Creating print output</a></li>
+    
+     
+    
+    </ul>
+    </li>
+  
+    <li><a href="#">How to publish</a>
+    <ul>
+    
+    
+      
+      <li><a href="/jekyll-doc/github_repo/">Github repo</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/fork_this_template/">Fork this template</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/dummytext/">Dummy text</a></li>
+    
+     
+    
+    </ul>
+    </li>
+  
+
+
+
+<p class="external">
+    <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+</p>
+
+       </div>
+
+
+
+
+            <!-- Content Column -->
+            <div class="col-md-9">
+
+                <div class="post-header">
+  <h1 class="post-title-main">Topnav</h1>
+</div>
+<div class="post-content">
+
+
+<div class="post-summary"></div>
+
+
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+<!-- add all your links here -->
+
+<!-- Here's a sample link. This stores the link as "conditional_logic" and correlates it to the permalink. To embed it, just use . If you ever need to change the page title or link, you can do so from here. Note that markdown is sensitive to line breaks, so don't break lines between capture tags.-->
+
+
+
+
+
+
+
+
+
+<!-- callouts -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- alerts -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bs-callout bs-callout-warning">
+<b>Note:</b> All of the content on this site is under construction. I am mostly working on theme development instead of documentation, so much of the content is acting as filler right now. 
+</div>
+
+
+<!-- add all your links here -->
+
+<!-- Here's a sample link. This stores the link as "conditional_logic" and correlates it to the permalink. To embed it, just use . If you ever need to change the page title or link, you can do so from here. Note that markdown is sensitive to line breaks, so don't break lines between capture tags.-->
+
+<!-- callouts -->
+
+<!-- alerts -->
+
+<p>You create the links in the top navigation bar in the same way that you create them for the sidebar (see 
+<a href="/jekyll-doc/creating_toc">Creating a table of contents</a>
+) 
+<a href="/jekyll-doc/conditional_logic">Conditional logic</a>
+. </p>
+
+<p>The top navigation contains two link sections: the single-level links (called Topnav), and the drop-down links (called Topnav dropdowns). The YML group doesn&#39;t try to combine both of these levels in the same grouping.</p>
+
+<p>The top navigation bar is intended for general information links, such as about, contact, demo, blog, and so on. </p>
+
+<p>If you want to add an external url, you must use <code>external_url</code> instead of just <code>url</code> in the YML file. This will trigger the link logic in the theme to apply a different syntax to the link target. </p>
+
+
+</div>
+
+
+
+
+
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'idrbwjekyll'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                     
+
+Site last generated: Feb 18, 2015.
+Built with <a href="http://jekyllrb.com/">Jekyll</a> using the <a href="http://tomjohnson1492.github.io/jekyll-doc/">Jekyll-doc theme</a>.
+
+
+
+                </div>
+            </div>
+        </footer>
+
+    </div>
+    <!-- /.container -->
+
+
+
+ 
+</body>
+
+
+
+
+</html>
+
