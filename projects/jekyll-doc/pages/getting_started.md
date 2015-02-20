@@ -34,8 +34,8 @@ To publish a new project with the jekyll-doc theme, do the following:
 
 ## Customize the build script
 
-1. In the root directory, rename blankproject.sh to acme.sh.
-2. Open acme.sh (in a text editor) and change all instances of `blankproject` to `acme`.
+1. In the root directory, copy the blankproject.sh and paste it (duplicating it). Change the duplicated filename to acme.sh.
+2. Open acme.sh (in a text editor) and change all instances of `blankproject` to `acme`. (There are 3 instances to change.)
 
 ## Build your site
 

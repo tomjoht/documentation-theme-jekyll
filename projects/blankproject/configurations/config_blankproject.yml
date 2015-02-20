@@ -21,7 +21,7 @@ layouts: projects/blankproject/layouts
 includes_directory: blankproject # the includes directory is the only directory not contained within projects (due to technical limitations)
 
 destination: projects/blankproject/site_builds
-homepage_title: blankproject theme
+homepage_title: blankproject project
 homepage_id: blankproject-homepage
 footer_id: blankproject-footer
 
