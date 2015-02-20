@@ -32,6 +32,10 @@ To publish a new project with the jekyll-doc theme, do the following:
 1. In the data folder, sidebar.yml contains the sidebar navigation for the sidebar and topnav.yml contains the navigation for the top navigation bar. The current values are for the jekyll-doc theme, so you can see some example formatting. Change these values with your own page titles and URLs. Spacing matters in YML syntax.
 2. In data/options.yml, you can use this file to set other options for running conditional logic in your content. There's an example shown there.
 
+## Copy and customize the project includes
+
+Due to technical limitations, the includes directory isn't contained within the projects folder. It lives in `_includes`. Inside _includes, copy and paste the blankproject folder (duplicating it). Then rename the duplicate file to acme.
+
 ## Customize the build script
 
 1. In the root directory, copy the blankproject.sh and paste it (duplicating it). Change the duplicated filename to acme.sh.
