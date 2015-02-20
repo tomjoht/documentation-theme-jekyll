@@ -14,16 +14,25 @@ port: 4000 # specified here in case you have multiple sites and want to view the
 # But the theme is designed to generate multiple outputs from the same theme -- this is the paradigm of single sourcing that is common to the tech writer's world but which isn't so
 # common in the Jekyll world.
 
-# hi my name is tom.
-
 
 project: jekyll-doc # add your project name here
 data_source: projects/jekyll-doc/data
 plugins: projects/jekyll-doc/plugins
 layouts: projects/jekyll-doc/layouts
+includes_directory: jekyll-doc
+
 destination: projects/jekyll-doc/site_builds
 homepage_title: Jekyll-doc theme
 homepage_id: jekyll-doc-homepage
+footer_id: jekyll-doc-footer
+
+disqus_shortname: idrbwjekyll # if you leave this blank, then disqus is not run. if you want to run it, add your code here, such as idrbwjekyll
+# for basicproject, the shortname is basicproject
+google_analytics:  #example: UA-908430-5. if you leave this field blank, google analytics is not run.
+css_stylesheet: jekyll-doc/styles/projectstyles.css # define the path after projects
+js_source: jekyll-doc/scripts/projectscripts.js
+
+
 
 ## build settings -- leave as us
 
@@ -62,4 +71,7 @@ defaults:
 
 sass:
     sass_dir: _sass
+
+search_placeholder_text: search...
+search_no_results_text: No results found.
 

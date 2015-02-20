@@ -40,7 +40,6 @@
 
 <body>
 
-
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -178,14 +177,16 @@
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
         dataSource: '/jekyll-doc/search.json',        
-        searchResultTemplate: '<li><a href="{url}" title="">{title}</a></li>',
-        noResultsText: 'No results found',
+        searchResultTemplate: '<li><a href="{url}" title="Dummytext">{title}</a></li>',
+        noResultsText: 'No results found.',
         limit: 10,
         fuzzy: true,
       })
     </script>
     <!-- end search -->
  </li>
+
+
 
         </div>
 
@@ -541,31 +542,7 @@ $('#toc').on('click', 'a', function() {
 <div id="toc"></div>
 <div class="bs-callout bs-callout-warning"><b>Note:</b> All of the content on this site is under construction. I am mostly working on theme development instead of documentation, so much of the content is acting as filler right now. </div>
 
-<!-- you need this include statement on every page where you possibly want to use any content in your reuse folder.-->
-
-<!-- callouts. You can add your own here. This is bootstrap and fontawesome formatting. -->
-
-<!-- alerts -->
-
-<!-- create note snippets like this. Everything between the capture tags will be captured.
-
-
-
-then just insert the note snippet using 
-Lock the door before you leave the building.
-
-
--->
-
-<!-- create links like this:
-
-
-
-then just put 
-<a href="/jekyll-doc/conditional_logic">Conditional logic</a>
- where you want to insert the link. 
-
--->
+<p>Scroll down and see how the jump TOC highlights based on the section you&#39;re viewing. This helps you understand where you&#39;re at in a long page. </p>
 
 <h2 id="lorem-ipsum-dolor-sit-amet">Lorem ipsum dolor sit amet</h2>
 
@@ -686,10 +663,152 @@ then just put
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                     
+                    
 
-Site last generated: Feb 19, 2015.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{site.copyright}} 
+
+Site last generated: {{ site.time | date: "%b %-d, %Y"  }}.
 Built with <a href="http://jekyllrb.com/">Jekyll</a> using the <a href="http://tomjohnson1492.github.io/jekyll-doc/">Jekyll-doc theme</a>.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 

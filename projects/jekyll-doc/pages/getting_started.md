@@ -24,16 +24,13 @@ To publish a new project with the jekyll-doc theme, do the following:
 2. Open config_acme.yml and customize all the values. The file contains notes for each part you need to customize. Basically everywhere you see "blankproject", change it to your project's name. 
 
 ## Customize the pages
-1. Open the pages folder inside acme. Here is where you add your pages. Leave the reuse and drafts folders there. You add links, callouts, and notes in those reuse folders, so you can easily include them into your pages.
+1. Open the pages folder inside acme. Here is where you add your pages. Leave the reuse and drafts folders there. You add links, callouts, and notes by referencing the content in the reuse folders.
+2. Open the footer.md and home.md pages. Change the id from `blankproject-homepage` and `blankproject-footer` to `acme-homepage` and `acme-footer`.
 
 ## Customize data
 
-1. In the data folder, nav.yml contains the navigation for the sidebar and topnav. The current values are for the jekyll-doc theme, so you can see some example formatting. Change these values with your own page titles and URLs. Spacing matters in YML syntax.
-2. In data/options.yml, open this file and customize the values. Options contains various settings for Disqus, Google Analytics, and more.
-
-## Set the homepage ID
-
-1. In the configuration file, you set a homepage ID value. In projects/acme/pages, open home.md and change the ID to the homepage_id value you set in the configuration file.
+1. In the data folder, sidebar.yml contains the sidebar navigation for the sidebar and topnav.yml contains the navigation for the top navigation bar. The current values are for the jekyll-doc theme, so you can see some example formatting. Change these values with your own page titles and URLs. Spacing matters in YML syntax.
+2. In data/options.yml, you can use this file to set other options for running conditional logic in your content. There's an example shown there.
 
 ## Customize the build script
 
@@ -45,4 +42,4 @@ To publish a new project with the jekyll-doc theme, do the following:
 `cd` to your project folder.
 Type `. acme.sh`.
 
-{{calloutprimary}} You can run `git pull` to get updates to the theme. The updates will not overwrite your other project files that you have added. For example, the updates from the theme won't overwrite anything in content/acme. However, if you change content in content/jekyll-doc, the updates will overwrite that folder. In short, if your cloned repo has files A,B,C, D, E, F, and the repo has only files A, B, C, then only A, B, C, will be overwritten when you pull new updates. I won't add any new subfolders under projects other than jekyll-doc.{{end}}
+{{calloutprimary}} You can run `git pull` to get updates to the theme. The updates will not overwrite your other project files that you have *added* (not customized). For example, the updates from the theme won't overwrite anything in content/acme. However, if you change content in content/blankproject, the updates will overwrite that folder. In short, if your cloned repo has files A,B,C, D, E, F, and the repo has only files A, B, C, then only A, B, C, will be overwritten when you pull new updates. However, if you change A to B, and you run `git pull`, then there will be a conflict. This is why you must duplicate the blankproject folder instead of merely changing its filename. I won't add any new subfolders under projects other than jekyll-doc and blankproject.{{end}}

@@ -40,7 +40,6 @@
 
 <body>
 
-
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -178,14 +177,16 @@
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
         dataSource: '/jekyll-doc/search.json',        
-        searchResultTemplate: '<li><a href="{url}" title="">{title}</a></li>',
-        noResultsText: 'No results found',
+        searchResultTemplate: '<li><a href="{url}" title="Demo Page now i just changed it">{title}</a></li>',
+        noResultsText: 'No results found.',
         limit: 10,
         fuzzy: true,
       })
     </script>
     <!-- end search -->
  </li>
+
+
 
         </div>
 
@@ -697,8 +698,7 @@ $('#toc').on('click', 'a', function() {
 
 <p>Here&#39;s my footer file included here: </p>
 
-<p>Site last generated: Feb 19, 2015.
-Built with <a href="http://jekyllrb.com/">Jekyll</a> using the <a href="http://tomjohnson1492.github.io/jekyll-doc/">Jekyll-doc theme</a>.</p>
+<p>include footer.html </p>
 
 <p>This example demonstrates fenced code blocks with a class name:  </p>
 <div class="highlight"><pre><code class="language-java" data-lang="java"><span class="cm">/*</span>
@@ -789,10 +789,152 @@ Built with <a href="http://jekyllrb.com/">Jekyll</a> using the <a href="http://t
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                     
+                    
 
-Site last generated: Feb 19, 2015.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{site.copyright}} 
+
+Site last generated: {{ site.time | date: "%b %-d, %Y"  }}.
 Built with <a href="http://jekyllrb.com/">Jekyll</a> using the <a href="http://tomjohnson1492.github.io/jekyll-doc/">Jekyll-doc theme</a>.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 

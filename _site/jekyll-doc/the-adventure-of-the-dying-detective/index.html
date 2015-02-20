@@ -39,7 +39,6 @@
 
 <body>
 
-
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -177,15 +176,16 @@
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
         dataSource: '/jekyll-doc/search.json',        
-        searchResultTemplate: '<li><a href="{url}" title="<p>Mrs. Hudson, the landlady of Sherlock Holmes, was a long-suffering woman. Not only was her first-floor flat invaded at all hours by throngs of singular and often undesirable characters but her remarkable lodger showed an eccentricity and irregularity in his life which must have sorely tried her patience. His incredible untidiness, his addiction to music at strange hours, his occasional revolver practice within doors, his weird and often malodorous scientific experiments, and the atmosphere of violence and danger which hung around him made him the very worst tenant in London. On the other hand, his payments were princely. I have no doubt that the house might have been purchased at the price which Holmes paid for his rooms during the years that I was with him.</p>
-">{title}</a></li>',
-        noResultsText: 'No results found',
+        searchResultTemplate: '<li><a href="{url}" title="The Adventure of the Dying Detective">{title}</a></li>',
+        noResultsText: 'No results found.',
         limit: 10,
         fuzzy: true,
       })
     </script>
     <!-- end search -->
  </li>
+
+
 
         </div>
 
@@ -981,10 +981,152 @@ $('#toc').on('click', 'a', function() {
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                     
+                    
 
-Site last generated: Feb 19, 2015.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{site.copyright}} 
+
+Site last generated: {{ site.time | date: "%b %-d, %Y"  }}.
 Built with <a href="http://jekyllrb.com/">Jekyll</a> using the <a href="http://tomjohnson1492.github.io/jekyll-doc/">Jekyll-doc theme</a>.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 

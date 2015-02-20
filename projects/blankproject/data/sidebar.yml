@@ -1,41 +1,6 @@
-# This is your TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
 
 sidebar_accordion: true
-
-# Topnav single links
-topnav:
-- title: Topnav
-  subcategories:
-    - title: About
-      url: /about/
-    - title: Contact
-      url: /contact/
-    - title: News
-      url: /latest_posts/
-    - title: My Github Repo
-      external_url: https://github.com/tomjohnson1492/jekyll-doc
-
-# Topnav dropdowns
-topnav_dropdowns:
-- title: Topnav dropdowns
-  subcategories:
-    - title: Getting started
-      items:
-        - title: Hello World tutorial
-          url: /hello_world_tutorial/
-        - title: Sample
-          url: /sample/
-        - title: I'd Rather Be Writing
-          external_url: http://idratherbewriting.com
-    - title: More drop-downs
-      items: 
-        - title: Alerts
-          url: /alerts/
-        - title: Labels
-          url: /labels/
-        - title: Tables
-          url: /tables/
-
 
 # Sidebar
 entries:

@@ -9,13 +9,13 @@ comments: true
  <div class="post-summary">{{page.excerpt}}</div>
 
 
-{% include toc.html %}
+{% include {{site.includes_directory}}/toc.html %}
 
 
 {{ content }}
 
 
-{% include related_posts.html %}
+{% include {{site.includes_directory}}/related_posts.html %}
     
 
 <div class="well well-sm">
@@ -55,4 +55,4 @@ comments: true
   {% endif %}
 
 
-{% include disqus.html %}
+{% include {{site.includes_directory}}/disqus.html %}

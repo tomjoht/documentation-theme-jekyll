@@ -1,10 +1,11 @@
 ---
+layout: page
 title: Dummytext
 permalink: /dummytext/
 tags: analytics
 ---
-<!-- you need this include statement on every page where you possibly want to use any content in your reuse folder.-->
-{% include_relative reuse/variables.html %}
+
+Scroll down and see how the jump TOC highlights based on the section you're viewing. This helps you understand where you're at in a long page. 
 
 ## Lorem ipsum dolor sit amet
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque, elit ut scelerisque aliquet, erat ex malesuada ante, vel bibendum mauris felis nec elit. Mauris at convallis enim, ac venenatis mi. Integer bibendum velit magna, sit amet blandit elit mattis a. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam commodo justo odio. Morbi ultricies lacus in metus mattis, a luctus felis semper. In accumsan a diam vitae consequat. Aliquam sit amet vehicula nisi. Vestibulum turpis massa, congue ut luctus eget, ultricies a ante. Mauris pharetra tortor dictum ipsum tempor, eu fringilla nulla tempus.

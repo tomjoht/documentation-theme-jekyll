@@ -12,7 +12,7 @@ comments: true
 <div class="post-summary">{{page.excerpt}}</div>
 
 
-{% include toc.html %}
+{% include {{site.includes_directory}}/toc.html %}
 <div class="bs-callout bs-callout-warning"><b>Note:</b> All of the content on this site is under construction. I am mostly working on theme development instead of documentation, so much of the content is acting as filler right now. </div>
 
 {{ content }}
@@ -20,8 +20,8 @@ comments: true
 </div>
 
 
-{% include related_pages.html %}
+{% include {{site.includes_directory}}/related_pages.html %}
 
-{% include disqus.html %}
+{% include {{site.includes_directory}}/disqus.html %}
 
 

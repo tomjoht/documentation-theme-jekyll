@@ -1,0 +1,22 @@
+{% unless page.type != "homepage" or page.related_pages != "none" %}
+<!-- related pages -->
+<hr />
+
+
+<h5>Related Pages</h5>
+
+{% assign currentTag = page.tags %}
+{% assign currentTitle = page.title %}
+
+<ul>
+{% assign counter = '0' %}
+{% for page in site.pages %}
+{% if page.tags == currentTag and page.title != currentTitle and counter < '5' %}
+{% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
+<li><a href="{{ page.permalink | prepend: site.baseurl }}">{{page.title}}</a></li>
+{% endif %}
+{% endfor %}
+{% if counter == '0' %}<span class="noOtherPages"><p>No other pages.</p></span>
+{% endif %}       
+</ul>
+{% endunless %}

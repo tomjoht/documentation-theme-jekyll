@@ -8,7 +8,7 @@ $(document).ready(function() {
     // Initialize navgoco with default options
     $("#mysidebar").navgoco({
         caretHtml: '',
-        accordion: {{site.data.nav.sidebar_accordion}},
+        accordion: {{site.data.sidebar.sidebar_accordion}},
         openClass: 'active', // open
         save: true,
         cookie: {
@@ -39,7 +39,7 @@ $(document).ready(function() {
 
 <ul id="mysidebar" class="nav">
 
-{% for entry in site.data.nav.entries %}
+{% for entry in site.data.sidebar.entries %}
   
   {% for subcategory in entry.subcategories %}
     <li><a href="#">{{ subcategory.title }}</a>
@@ -60,7 +60,7 @@ $(document).ready(function() {
   {% endfor %}
 {% endfor %}
 
-{% if site.data.nav.sidebar_accordion == false %}
+{% if site.data.sidebar.sidebar_accordion == false %}
 <p class="external">
     <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
 </p>

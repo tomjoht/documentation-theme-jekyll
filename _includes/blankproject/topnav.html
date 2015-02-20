@@ -16,7 +16,7 @@
                 <ul class="nav navbar-nav navbar-right">
 
 <!-- entries without drop-downs appear here -->
-  {% for entry in site.data.nav.topnav %}
+  {% for entry in site.data.topnav.topnav %}
   {% for subcategory in entry.subcategories %}
 
   {% if subcategory.external_url %}
@@ -35,7 +35,7 @@
 {% endfor %}
 
 <!-- entries with drop-downs appear here -->
-{% for entry in site.data.nav.topnav_dropdowns %}
+{% for entry in site.data.topnav.topnav_dropdowns %}
   
   {% for subcategory in entry.subcategories %}
     <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ subcategory.title }}<b class="caret"></b></a>
@@ -61,7 +61,7 @@
 <li>
 <!-- start search -->
    <div id="search-demo-container">
-      <input type="text" id="search-input" placeholder="search...">
+      <input type="text" id="search-input" placeholder="{{site.search_placeholder_text}}">
       <ul id="results-container"></ul>
     </div>
 
@@ -74,14 +74,16 @@
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
         dataSource: '{{ site.baseurl }}/search.json',        
-        searchResultTemplate: '<li><a href="{url}" title="{{page.excerpt}}">{title}</a></li>',
-        noResultsText: 'No results found',
+        searchResultTemplate: '<li><a href="{url}" title="{{page.title}}">{title}</a></li>',
+        noResultsText: '{{site.search_no_results_text}}',
         limit: 10,
         fuzzy: true,
       })
     </script>
     <!-- end search -->
  </li>
+
+
 
         </div>
 

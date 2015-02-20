@@ -1,0 +1,9 @@
+{% for page in site.pages %}
+{% for id in page.id %}
+{% if page.id == site.footer_id %}
+{{page.content}}
+{% endif %}
+{% endfor %}
+{% endfor %} 
+
+

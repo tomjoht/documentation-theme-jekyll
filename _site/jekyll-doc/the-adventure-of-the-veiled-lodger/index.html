@@ -39,7 +39,6 @@
 
 <body>
 
-
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <div class="container">
@@ -177,15 +176,16 @@
         searchInput: document.getElementById('search-input'),
         resultsContainer: document.getElementById('results-container'),
         dataSource: '/jekyll-doc/search.json',        
-        searchResultTemplate: '<li><a href="{url}" title="<p>When one considers that Mr. Sherlock Holmes was in active practice for twenty-three years, and that during seventeen of these I was allowed to cooperate with him and to keep notes of his doings, it will be clear that I have a mass of material at my command. The problem has always been not to find but to choose. There is the long row of year-books which fill a shelf, and there are the dispatch-cases filled with documents, a perfect quarry for the student not only of crime but of the social and official scandals of the late Victorian era. Concerning these latter, I may say that the writers of agonized letters, who beg that the honour of their families or the reputation of famous forebears may not be touched, have nothing to fear. The discretion and high sense of professional honour which have always distinguished my friend are still at work in the choice of these memoirs, and no confidence will be abused. I deprecate, however, in the strongest way the attempts which have been made lately to get at and to destroy these papers. The source of these outrages is known, and if they are repeated I have Mr. Holmes&#39;s authority for saying that the whole story concerning the politician, the lighthouse, and the trained cormorant will be given to the public. There is at least one reader who will understand.</p>
-">{title}</a></li>',
-        noResultsText: 'No results found',
+        searchResultTemplate: '<li><a href="{url}" title="The Adventure of the Veiled Lodger">{title}</a></li>',
+        noResultsText: 'No results found.',
         limit: 10,
         fuzzy: true,
       })
     </script>
     <!-- end search -->
  </li>
+
+
 
         </div>
 
@@ -799,10 +799,152 @@ $('#toc').on('click', 'a', function() {
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                     
+                    
 
-Site last generated: Feb 19, 2015.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{site.copyright}} 
+
+Site last generated: {{ site.time | date: "%b %-d, %Y"  }}.
 Built with <a href="http://jekyllrb.com/">Jekyll</a> using the <a href="http://tomjohnson1492.github.io/jekyll-doc/">Jekyll-doc theme</a>.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 

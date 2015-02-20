@@ -147,7 +147,7 @@ Note that here I'm using contains rather than ==. If using ==, you must use all 
 
 Here's my footer file included here: 
 
-{% include footer.html %}
+include footer.html 
 
 
 
