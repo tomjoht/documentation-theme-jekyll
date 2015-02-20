@@ -15,9 +15,9 @@ To publish a new project with the jekyll-doc theme, do the following:
 2. `cd acme`
 3. git clone `https://github.com/tomjohnson1492/jekyll-doc.git .`
 
-## Customize the blankproject folder inside projects
+## Copy the blankproject folder inside projects
 
-1. Inside the projects folder, change the name "blankproject" to your project's name -- e.g., acme. Note: If you don't change this folder name, the next time your run `git pull`, its contents (with same file names) will be overwritten. 
+1. Inside the projects folder, copy the "blankproject" folder and paste it (duplicating it). Don't just rename it or it messes up future `git pull` requests. Once you copy the blankproject folder, change the name to your project's name -- in this case, I'll assume "acme" is your project name.
 
 ## Customize the configuration
 1. In the projects/acme/configurations folder, rename config_blankproject.yml to config_acme.yml.
@@ -30,6 +30,10 @@ To publish a new project with the jekyll-doc theme, do the following:
 
 1. In the data folder, nav.yml contains the navigation for the sidebar and topnav. The current values are for the jekyll-doc theme, so you can see some example formatting. Change these values with your own page titles and URLs. Spacing matters in YML syntax.
 2. In data/options.yml, open this file and customize the values. Options contains various settings for Disqus, Google Analytics, and more.
+
+## Set the homepage ID
+
+1. In the configuration file, you set a homepage ID value. In projects/acme/pages, open home.md and change the ID to the homepage_id value you set in the configuration file.
 
 ## Customize the build script
 

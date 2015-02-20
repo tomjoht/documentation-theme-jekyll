@@ -47,11 +47,13 @@ entries:
           url: /getting_started/
         - title: Prerequisites
           url: /prerequisites/
-          subitems: 
-            - title: subarea
-              itemsx:
-               - title: gemfiles
-               - url: /gemfiles/
+    thirdlevel:
+      - title: Third level    
+        subitems: 
+          - title: gemfiles
+            url: /gemfiles/
+          - title: Alerts
+            url: /alerts/
     - title: Creating content
       items:
         - title: Writing content

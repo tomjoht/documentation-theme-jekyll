@@ -1,5 +1,5 @@
 ---
-tag: blankproject-homepage
+id: blankproject-homepage
 layout: default
 ---
 {% include_relative reuse/variables.html %}
