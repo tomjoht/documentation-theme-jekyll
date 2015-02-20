@@ -2,7 +2,7 @@
 title: Getting started
 permalink: /getting_started/
 ---
-
+{% include_relative reuse/variables %}
 Although you can get started with this theme by simply gutting the existing jekyll-docs theme and replacing it with your own content and values, that's not how I intended this theme to be used. I'm assuming that you may have multiple projects that you'll be publishing, and that you want to use the theme as a template for each project. As such, you can simply leave the jekyll-doc content as is. The following steps explain how to create a new project for the theme.
 
 {{alertprimary}} In these instructions, to simplify things, I'm assuming your project's name is "ACME." Customize these instructions to swap in your real project name.{{end}}
