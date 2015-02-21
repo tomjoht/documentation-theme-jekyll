@@ -1,5 +1,3 @@
-# This is duplicated from projects/jekyll-doc/configurations because Github Pages uses the _config.yml file to auto-build.
-
 # Site settings
 title: Jekyll-doc # your project's title
 contact_email: tomjohnson1492@gmail.com # a contact email for the project
@@ -18,15 +16,9 @@ port: 4000 # specified here in case you have multiple sites and want to view the
 
 
 project: jekyll-doc # add your project name here
-data_source: projects/jekyll-doc/data
-plugins: projects/jekyll-doc/plugins
-layouts: projects/jekyll-doc/layouts
-includes_directory: jekyll-doc
-
-destination: projects/jekyll-doc/site_builds
-homepage_title: Jekyll-doc theme
-homepage_id: jekyll-doc-homepage
-footer_id: jekyll-doc-footer
+destination: _site/jekyll-doc
+homepage_id: homepage
+footer_id: footer
 
 disqus_shortname: idrbwjekyll # if you leave this blank, then disqus is not run. if you want to run it, add your code here, such as idrbwjekyll
 # for basicproject, the shortname is basicproject

@@ -1,5 +1,5 @@
 ---
-id: jekyll-doc-homepage
+id: homepage
 layout: default
 ---
 {% include_relative reuse/variables.html %}

@@ -7,6 +7,13 @@ tags: formatting
 
 {% include_relative reuse/variables.html %}
 
+I think this is right...
+
+
+[My helpful screenshot]({{ site.baseurl }}/assets/screenshot.jpg)
+
+<a href="{{ site.baseurl }}/assets/screenshot.jpg"> My Helpful screenshot</a>
+
 ## Links to external sites
 
 To make a link to an external site, use Markdown syntax like this: 
