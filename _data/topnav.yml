@@ -29,3 +29,5 @@ topnav_dropdowns:
           url: /dummytext/
         - title: Dummy text
           url: /dummytext/
+        - title: 404 page
+          url: /somenonexistenturl/

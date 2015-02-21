@@ -77,7 +77,7 @@ Markdown link pointing to an internal site:
 HTML link pointing to an internal site:
 
 ```
-<a href="{{ "/tutorial_syntax_highlighting" | prepend: site.baseurl }}">Syntax Highlighting</a>
+<a title="my sample image" href="{{ "/tutorial_syntax_highlighting" | prepend: site.baseurl }}">Syntax Highlighting</a>
 ```
 
 You can also store a link in a reuse file so it's easy to reuse the link. This method allows you to reuse the link; it also gets the page's title.
@@ -194,6 +194,14 @@ Because you may be creating multiple outputs from the same source files, I separ
 ## Search
 
 The search is configured through the search.json file. If you want to exclude a page from search add `search: exclude` in the frontmatter. 
+
+## Related pages and posts
+
+By default, pages contain related pages or related posts beneath them. To disable this, add `related_pages: none` or `related_posts: none` in the frontmatter of the page.
+
+## Markdown tutorials
+
+The Markdown supported here includes fenced code blocks, tables, and all the standard Markdown. The processor is Red Carpet. For a Markdown tutorial, see the classic Markdown info [from John Gruber](http://daringfireball.net/projects/markdown/basics). For the table format, you can see an example with the {{supported_features}} topic.
 
 ## Questions
 
