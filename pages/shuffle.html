@@ -2,7 +2,7 @@
 title: Shuffle
 permalink: /shuffle/
 ---
-
+{% include_relative reuse/variables.html %}
 <script src="{{ "/js/jquery.shuffle.min.js" | prepend:site.baseurl }}"></script>
 <script src="{{ "/js/jquery.ba-throttle-debounce.min.js" | prepend:site.baseurl }}"></script>
 
@@ -15,10 +15,6 @@ permalink: /shuffle/
       <button class="btn btn-default" data-group="news">News</button>
        <button class="btn btn-default" data-group="other">Other</button>
     </div>      
-
-
-{% include_relative reuse/variables.html %}
-
 
 <div id="grid" class="row">
 

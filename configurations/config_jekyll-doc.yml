@@ -1,3 +1,5 @@
+# duplicated from _config.yml. You only need to use this strategy if you have multiple configuration files.
+
 # Site settings
 title: Jekyll-doc # your project's title. This appears on the homepage.
 contact_email: tomjohnson1492@gmail.com # a contact email for the project

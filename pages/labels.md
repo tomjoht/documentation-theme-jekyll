@@ -4,8 +4,8 @@ title: Labels
 permalink: /labels/
 tags: formatting
 ---
-
-These labels might come in handy for labeling things, such as POST, DELETE, UPDATE methods for endpoints.
+{% include_relative reuse/variables.html %}
+These labels might come in handy for labeling things, such as POST, DELETE, UPDATE methods for endpoints. You can use any classes from Bootstrap in your content.
 
 ```html
 <span class="label label-default">Default</span>

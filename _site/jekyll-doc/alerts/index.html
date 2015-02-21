@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/jekyll-doc/css/lavish-bootstrap.css"  type='text/css'>
     <link rel="canonical" href="http://tomjohnson1492.github.io/jekyll-doc/alerts/">
     <link rel="stylesheet" href="/jekyll-doc/css/customstyles.css"  type='text/css'>
-     <link rel="stylesheet" href="/jekyll-doc/projects/jekyll-doc/styles/projectstyles.css"  type='text/css'>
+     <link rel="stylesheet" href="/jekyll-doc/css/projectstyles.css"  type='text/css'>
     <link rel="canonical" href="http://tomjohnson1492.github.io/jekyll-doc/alerts/">
   <link rel="alternate" type="application/rss+xml" title="Jekyll-doc" href="http://tomjohnson1492.github.io/jekyll-doc/feed.xml" />
     <script src="/jekyll-doc/js/jquery.min.js"></script>
@@ -24,7 +24,7 @@
     <script src="/jekyll-doc/js/bootstrap.min.js"></script>
     <script src="/jekyll-doc/js/toc.js"></script>
     <script src="/jekyll-doc/js/customscripts.js"></script>
-    <script src="/jekyll-doc/projects/jekyll-doc/scripts/projectscripts.js"></script>
+    <script src="/jekyll-doc/js/projectscripts.js"></script>
        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -74,19 +74,15 @@
 
       
     
-      <li><a href="/jekyll-doc/contact/">Contact</a></li>
+      <li><a href="/jekyll-doc/latest_posts/">News</a></li>
     
     
      
     
 
   
-
-      
-    
-      <li><a href="/jekyll-doc/latest_posts/">News</a></li>
-    
-    
+  <li><a href="http://jekyllrb.com" target="_blank">Jekyllrb</a></li>
+  
      
     
 
@@ -108,7 +104,7 @@
            
          
          
-       <li><a href="/jekyll-doc/hello_world_tutorial/">Hello World tutorial</a></li>
+       <li><a href="/jekyll-doc/getting_started/">Get started</a></li>
        
        
     
@@ -116,14 +112,9 @@
            
          
          
-       <li><a href="/jekyll-doc/sample/">Sample</a></li>
+       <li><a href="/jekyll-doc/support/">Support</a></li>
        
        
-    
-
-           
-  <li><a href="http://idratherbewriting.com" target="_blank">I'd Rather Be Writing</a></li>
-  
     
     </ul>
     </li>
@@ -135,15 +126,7 @@
            
          
          
-      <li class="dropdownActive"><a href="/jekyll-doc/alerts/">Alerts</a></li>
-      
-       
-    
-
-           
-         
-         
-       <li><a href="/jekyll-doc/labels/">Labels</a></li>
+       <li><a href="/jekyll-doc/dummytext/">Dummy text</a></li>
        
        
     
@@ -151,7 +134,15 @@
            
          
          
-       <li><a href="/jekyll-doc/tables/">Tables</a></li>
+       <li><a href="/jekyll-doc/dummytext/">Dummy text</a></li>
+       
+       
+    
+
+           
+         
+         
+       <li><a href="/jekyll-doc/dummytext/">Dummy text</a></li>
        
        
     
@@ -250,89 +241,43 @@ $(document).ready(function() {
     
     
       
-      <li><a href="/jekyll-doc/getting_started/">Getting started with a new project</a></li>
+      <li><a href="/jekyll-doc/getting_started/">Getting started with the theme</a></li>
     
      
     
     
       
-      <li><a href="/jekyll-doc/prerequisites/">Prerequisites</a></li>
+      <li><a href="/jekyll-doc/content_reuse/">Content reuse</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/general_info/">General info</a></li>
+    
+     
+    
+    
+      
+      <li><a href="/jekyll-doc/supported_features/">Supported features</a></li>
     
      
     
     </ul>
     </li>
   
-    <li><a href="#">Creating content</a>
+    <li><a href="#">Formatting</a>
     <ul>
     
     
       
-      <li><a href="/jekyll-doc/writing_content/">Writing content</a></li>
+      <li class="active"><a href="/jekyll-doc/alerts/" class="active">Callouts and alerts</a></li>
     
      
-    
-    
-      
-      <li><a href="/jekyll-doc/creating_toc/">Creating a table of contents</a></li>
-    
-     
-    
-    
-      
-      <li><a href="/jekyll-doc/creating_topnav/">Creating the top navigation bar</a></li>
-    
-     
-    
-    
-      
-      <li><a href="/jekyll-doc/collections/">Collections</a></li>
-    
-     
-    
-    
-      
-      <li><a href="/jekyll-doc/cshelp/">Context-sensitive help</a></li>
-    
-     
-    
-    
-  <li><a href="http://google.com" target="_blank">Google</a></li>
-  
-    
-    </ul>
-    </li>
-  
-    <li><a href="#">Formatting content</a>
-    <ul>
     
     
       
       <li><a href="/jekyll-doc/icons/">Icons</a></li>
-    
-     
-    
-    
-      
-      <li><a href="/jekyll-doc/tables/">Tables</a></li>
-    
-     
-    
-    
-      
-      <li><a href="/jekyll-doc/markdown_readability/">Markdown readability</a></li>
-    
-     
-    
-    
-      
-      <li><a href="/jekyll-doc/links/">Links</a></li>
-    
-     
-    
-    
-      
-      <li><a href="/jekyll-doc/syntax_highlighting/">Syntax highlighting</a></li>
     
      
     
@@ -344,86 +289,48 @@ $(document).ready(function() {
     
     
       
+      <li><a href="/jekyll-doc/markdown_readability/">Markdown readability</a></li>
+    
+     
+    
+    
+      
       <li><a href="/jekyll-doc/labels/">Labels</a></li>
     
      
     
+    
+  <li><a href="http://idratherbewriting.com" target="_blank">I'd Rather Be Writing</a></li>
+  
+    
     </ul>
     </li>
   
-    <li><a href="#">Publishing</a>
+    <li><a href="#">Blog content</a>
     <ul>
     
     
       
-      <li><a href="/jekyll-doc/collections/">Collections</a></li>
+      <li><a href="/jekyll-doc/latest_posts/">Latest posts</a></li>
     
      
     
     
       
-      <li><a href="/jekyll-doc/conditional_logic">Conditional logic</a></li>
+      <li><a href="/jekyll-doc/tagindex/">Tag archive</a></li>
     
      
     
     
       
-      <li><a href="/jekyll-doc/cshelp/">Context-sensitive help</a></li>
-    
-     
-    
-    
-      
-      <li><a href="/jekyll-doc/tags/">Tags</a></li>
-    
-     
-    
-    
-      
-      <li><a href="/jekyll-doc/snippets/">Snippets</a></li>
-    
-     
-    
-    
-      
-      <li><a href="/jekyll-doc/lavish/">Lavish</a></li>
-    
-     
-    
-    
-      
-      <li><a href="/jekyll-doc/page_level_variables/">Page level variables</a></li>
-    
-     
-    
-    
-      
-      <li><a href="/jekyll-doc/build_arguments/">Build arguments</a></li>
-    
-     
-    
-    
-      
-      <li><a href="/jekyll-doc/building_jekyll_themes/">Building Jekyll themes</a></li>
+      <li><a href="/jekyll-doc/archive/">Date-based archive</a></li>
     
      
     
     </ul>
     </li>
   
-    <li><a href="#">Blog posts</a>
-    <ul>
-    
-    
-      
-      <li><a href="/jekyll-doc/add_blog/">Writing blog posts</a></li>
-    
-     
-    
-    </ul>
-    </li>
-  
-    <li><a href="#">Special effects</a>
+    <li><a href="#">Special layouts</a>
     <ul>
     
     
@@ -440,13 +347,7 @@ $(document).ready(function() {
     
     
       
-      <li><a href="/jekyll-doc/gemfiles/">gemfiles</a></li>
-    
-     
-    
-    
-      
-      <li><a href="/jekyll-doc/creating_print_output/">Creating print output</a></li>
+      <li><a href="/jekyll-doc/faq/">FAQ</a></li>
     
      
     
@@ -459,24 +360,18 @@ $(document).ready(function() {
     </ul>
     </li>
   
-    <li><a href="#">How to publish</a>
+    <li><a href="#">Conditional filtering</a>
     <ul>
     
     
       
-      <li><a href="/jekyll-doc/github_repo/">Github repo</a></li>
+      <li><a href="/jekyll-doc/conditional_logic/">Conditional logic</a></li>
     
      
     
     
       
-      <li><a href="/jekyll-doc/fork_this_template/">Fork this template</a></li>
-    
-     
-    
-    
-      
-      <li><a href="/jekyll-doc/dummytext/">Dummy text</a></li>
+      <li><a href="/jekyll-doc/build_arguments/">Build arguments</a></li>
     
      
     
@@ -524,149 +419,61 @@ $('#toc').on('click', 'a', function() {
 <div id="toc"></div>
 <div class="bs-callout bs-callout-warning"><b>Note:</b> All of the content on this site is under construction. I am mostly working on theme development instead of documentation, so much of the content is acting as filler right now. </div>
 
-<p class="test">are you red?</p>
-
-<p><button id="scriptTest">test scripts</button></p>
-
 <!-- alerts -->
 
-<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i>
- <b>Hey</b>: This is just a test.
-</div>
-
-<div class="bs-callout bs-callout-primary">
-<b>Another test:</b> this is a very special note for you.....
-</div>
-
-<h2 id="this-is-a-heading">this is a heading</h2>
-
-<!--
- ____                        _        _____ _       _      _
-/ ___|  __ _ _ __ ___  _ __ | | ___  |  ___(_) __ _| | ___| |_
-\___ \ / _` | '_ ` _ \| '_ \| |/ _ \ | |_  | |/ _` | |/ _ \ __|
- ___) | (_| | | | | | | |_) | |  __/ |  _| | | (_| | |  __/ |_
-|____/ \__,_|_| |_| |_| .__/|_|\___| |_|   |_|\__, |_|\___|\__|
-                      |_|
--->
-
-<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i>
-
-<b>Success</b>: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  
-
-</div>
-
-<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i>
-
-<b>Info</b>: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-
-</div>
-
-<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i>
-
-<b>Warning</b>: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-
-</div>
-
-<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> 
-
-<b>Danger</b>: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
-
-</div>
-
-<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i>
- This is a special alertlklklklkl messsage.jkjkjk 
-</div>
-
-<h2 id="notes">Notes</h2>
-
-<p>For notes, warnings, important, info, etc., use these styles:</p>
-
-<div class="bs-callout bs-callout-danger"><h4>Another test</h4>this is a test v2 </div>
+<p>This page demonstrates the various kinds of alerts and callouts you can use.</p>
 
 <div class="bs-callout bs-callout-danger">
 
-<h4>This is a warning</h4>whatever you do, do not trip while getting off a skyscraper's viewpoint platform.
+<b>calloutdanger</b>: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  
 
 </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;bs-callout bs-callout-default&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h4&gt;</span>Default Callout<span class="nt">&lt;/h4&gt;</span>
-  This is a default callout.
-<span class="nt">&lt;/div&gt;</span>
-
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;bs-callout bs-callout-primary&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h4&gt;</span>Primary Callout<span class="nt">&lt;/h4&gt;</span>
-  This is a primary callout.
-<span class="nt">&lt;/div&gt;</span>
-
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;bs-callout bs-callout-success&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h4&gt;</span>Success Callout<span class="nt">&lt;/h4&gt;</span>
-  This is a success callout.
-<span class="nt">&lt;/div&gt;</span>
-
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;bs-callout bs-callout-info&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h4&gt;</span>Info Callout<span class="nt">&lt;/h4&gt;</span>
-  This is an info callout.
-<span class="nt">&lt;/div&gt;</span>
-
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;bs-callout bs-callout-warning&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h4&gt;</span>Warning Callout<span class="nt">&lt;/h4&gt;</span>
-  This is a warning callout.
-<span class="nt">&lt;/div&gt;</span>
-
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;bs-callout bs-callout-danger&quot;</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;h4&gt;</span>Danger Callout<span class="nt">&lt;/h4&gt;</span>
-  This is a danger callout.
-<span class="nt">&lt;/div&gt;</span>
-</code></pre></div>
-<p>Here&#39;s the result:</p>
 
 <div class="bs-callout bs-callout-default">
-  <h4>Default Callout</h4>
-  This is a default callout.
+
+<b>calloutdefault</b>: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  
+
 </div>
 
 <div class="bs-callout bs-callout-primary">
-  <h4>Primary Callout</h4>
-  This is a primary callout.
+
+<b>calloutprimary</b>: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  
+
 </div>
 
 <div class="bs-callout bs-callout-success">
-  <h4>Success Callout</h4>
-  This is a success callout.
+
+<b>calloutsuccess</b>: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  
+
 </div>
 
 <div class="bs-callout bs-callout-info">
-  <h4>Info Callout</h4>
-  This is an info callout.
+
+<b>calloutinfo</b>: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  
+
 </div>
 
 <div class="bs-callout bs-callout-warning">
-  <h4>Warning Callout</h4>
-  This is a warning callout.
+
+<b>calloutwarning</b>: Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.  
+
 </div>
 
-<div class="bs-callout bs-callout-danger">
-  <h4>Danger Callout</h4>
-  This is a danger callout.
+<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i>
+<b>alertsuccess</b>: Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
 </div>
 
-<h2 id="alerts">Alerts</h2>
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i>
+<b>alertsuccess</b>: Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+</div>
 
-<p>You can also use these alerts from Bootstrap:</p>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-success&quot;</span> <span class="na">role=</span><span class="s">&quot;alert&quot;</span><span class="nt">&gt;</span>This is a special alert messsage.<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-info&quot;</span> <span class="na">role=</span><span class="s">&quot;alert&quot;</span><span class="nt">&gt;</span>This is a special info message.<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-warning&quot;</span> <span class="na">role=</span><span class="s">&quot;alert&quot;</span><span class="nt">&gt;</span>This is a special warning message.<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;alert alert-danger&quot;</span> <span class="na">role=</span><span class="s">&quot;alert&quot;</span><span class="nt">&gt;</span>This is a special Danger message.<span class="nt">&lt;/div&gt;</span>
-</code></pre></div>
-<p>Here&#39;s what they look like: </p>
+<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i>
+<b>alertsuccess</b>: Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+</div>
 
-<div class="alert alert-success" role="alert">This is a special alert messsage.</div>
-
-<div class="alert alert-info" role="alert">This is a special info message.</div>
-
-<div class="alert alert-warning" role="alert">This is a special warning message.</div>
-
-<div class="alert alert-danger" role="alert">This is a special Danger message.</div>
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> 
+<b>alertsuccess</b>: Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+</div>
 
 
 </div>
@@ -728,50 +535,13 @@ $('#toc').on('click', 'a', function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+{% include_relative reuse/variables.html %}
 {{site.copyright}} 
 
 Site last generated: {{ site.time | date: "%b %-d, %Y"  }}.
 Built with <a href="http://jekyllrb.com/">Jekyll</a> using the <a href="http://tomjohnson1492.github.io/jekyll-doc/">Jekyll-doc theme</a>.
 
 {% comment %}feel free to remove the "Built with ... " {% endcomment %}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

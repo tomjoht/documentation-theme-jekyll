@@ -8,8 +8,8 @@
 {% endcapture %}
 
 
-{% capture creating_toc %}
-{% for page in site.pages %}{% if page.permalink == '/creating_toc/' %}<a href="{{ "/creating_toc" | prepend: site.baseurl }}">{{page.title}}</a>{% break %}{% endif %}{% endfor %}
+{% capture alerts %}
+{% for page in site.pages %}{% if page.permalink == '/alerts/' %}<a href="{{ "/alerts" | prepend: site.baseurl }}">{{page.title}}</a>{% break %}{% endif %}{% endfor %}
 {% endcapture %}
 
 

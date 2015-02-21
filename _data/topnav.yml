@@ -4,10 +4,10 @@ topnav:
   subcategories:
     - title: About
       url: /about/
-    - title: Contact
-      url: /contact/
     - title: News
       url: /latest_posts/
+    - title: Jekyllrb
+      external_url: http://jekyllrb.com
     - title: My Github Repo
       external_url: https://github.com/tomjohnson1492/jekyll-doc
 
@@ -17,17 +17,15 @@ topnav_dropdowns:
   subcategories:
     - title: Getting started
       items:
-        - title: Hello World tutorial
-          url: /hello_world_tutorial/
-        - title: Sample
-          url: /sample/
-        - title: I'd Rather Be Writing
-          external_url: http://idratherbewriting.com
+        - title: Get started
+          url: /getting_started/
+        - title: Support
+          url: /support/
     - title: More drop-downs
       items: 
-        - title: Alerts
-          url: /alerts/
-        - title: Labels
-          url: /labels/
-        - title: Tables
-          url: /tables/
+        - title: Dummy text
+          url: /dummytext/
+        - title: Dummy text
+          url: /dummytext/
+        - title: Dummy text
+          url: /dummytext/

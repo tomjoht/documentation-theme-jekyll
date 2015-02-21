@@ -2,9 +2,9 @@
 layout: page
 title: Conditional logic
 permalink: /conditional_logic/
-tags: conditional_filtering
+tags: conditional_logic
 ---
-
+{% include_relative reuse/variables.html %}
 If you're a technical writer creating different outputs for different audiences, you can do all of this using a combination of Jekyll's Liquid markup and values in your configuration file.
 
 {{alertinfo}} Definitely check out [Liquid's documentation](http://docs.shopify.com/themes/liquid-documentation/basics) for more details about how to use operators and other liquid markup. The notes here are a small, somewhat superficial sample from the site.{{end}}
@@ -79,8 +79,6 @@ You can use more advanced Liquid markup for conditional logic, such as an `or` c
 
 For example, here's an example using `or`:
 
-
-
 {% raw %}
 ```
 {% if page.tags contains "homepage" or page.tags == "featured" %}
@@ -115,7 +113,6 @@ The acme audience should see this ...
 
 You can also specify a `data_source` for your data location in your configuration file. Then you aren't limited to simply using `_data` to store your data. For example, with the Jekyll-doc theme, I am storing data values in settings/jekyll-docs. There are two files in there: one called options.yml and another called nav.yml. You access the data source through `site.data.nav` or `site.data.options` depending on the file name you want to access.
 
-
 ## Conditional logic based on page namespace
 
 You can also create conditional logic based on the page namespace. For example, create a page with front matter as follows:
@@ -139,56 +136,3 @@ Now in any other file, you can create conditional logic based on the page namesp
 {% endif %}
 ```
 {% endraw %}
-
-
-## Setting up conditional logic
-
-Probably the best approach to conditional filtering when you have multiple outputs for different audiences is to use different configuration files, each which specify their own data sources. 
-
-Instead of using _config.yml, create configuration files such as config_gizmo.yml and config_acme.yml. (You can delete _config.yml).
-
-Note that you can't use Liquid markup inside a YML file. 
-
-
-## Excluding files of directories from an output
-
-
- By default pages get included in the output, even if they're not specifically listed in any navigation. To filter out the pages you don't want, you use the `exclude` property in your configuration file, like this:
-
-```liquid
- exclude:
-  - content/gizmo
-  - content/tutorials
-  - readme.md
-```
-
-This will make it so any pages in the content/gizmo or content/tutorials directories are not included. Additionally, the readme.md file will be excluded. 
-
-Now when you create content only for one specific audience, you exclude the inapplicable directories. For your acme audience, you might want to exclude all content in your web directory. And vice versa. 
-
-## Page references
-
-Even though you may group content into subfolders, when you reference a page, you reference it by the permalink regardless of the subfolder it happens to be in. So even if you have content/tutorial_link, you link to it with `tutorial_link` instead of `content/tutorial_link` because that's the topic's permalink. Jekyll iterates through all pages in the page namespace to locate one that contains the matching permalink. Folder structures aren't that important for pages.
-
-## Conditional navigation
-
-You can apply `if-else` statements to the layout files as well. Suppose you want to have different navigation for two different projects (a likely scenario). You can use the same if-else logic in your default.html file.
-
-First extract the varying navigation element from your default.html file into something like topnav.html. Then use conditional logic to build it: 
-
-{% comment %}
-{% raw %}
-```liquid
-{% if site.audience == "acme" %}
-{% include topnav_acme.html %}
-{% elsif site.audience == "gizmo" %}
-{% include topnav_gizmo.html %}
-{% endif %}
-```
-{% endraw %}
-{% endcomment %}
-
-
-Now you can define the navigation you want for each project without adding a ton of if-else statements in your code. However, you want to try to separate your content as much as possible from the theme layout so that everything can be controlled through data toggles rather than direct edits to the theme files.
-
-

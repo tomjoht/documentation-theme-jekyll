@@ -1,7 +1,7 @@
 ---
 id: footer
 ---
-
+{% include_relative reuse/variables.html %}
 {{site.copyright}} 
 
 Site last generated: {{ site.time | date: "%b %-d, %Y"  }}.

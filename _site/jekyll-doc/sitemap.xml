@@ -186,7 +186,7 @@
     <url>
       <loc>http://tomjohnson1492.github.io/404.html</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -201,7 +201,7 @@
     <url>
       <loc>http://tomjohnson1492.github.io/changelog/</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -216,22 +216,7 @@
     <url>
       <loc>http://tomjohnson1492.github.io/about/</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://tomjohnson1492.github.io/add_blog/</loc>
-      
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -246,7 +231,7 @@
     <url>
       <loc>http://tomjohnson1492.github.io/alerts/</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -261,7 +246,7 @@
     <url>
       <loc>http://tomjohnson1492.github.io/archive/</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -276,37 +261,7 @@
     <url>
       <loc>http://tomjohnson1492.github.io/build_arguments/</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://tomjohnson1492.github.io/building_jekyll_themes/</loc>
-      
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://tomjohnson1492.github.io/collections/</loc>
-      
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -321,7 +276,7 @@
     <url>
       <loc>http://tomjohnson1492.github.io/conditional_logic/</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -334,84 +289,9 @@
   
     
     <url>
-      <loc>http://tomjohnson1492.github.io/contact/</loc>
+      <loc>http://tomjohnson1492.github.io/content_reuse/</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://tomjohnson1492.github.io/creating_print_output/</loc>
-      
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://tomjohnson1492.github.io/creating_toc/</loc>
-      
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://tomjohnson1492.github.io/creating_topnav/</loc>
-      
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://tomjohnson1492.github.io/cshelp/</loc>
-      
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://tomjohnson1492.github.io/demo/</loc>
-      
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -426,7 +306,7 @@
     <url>
       <loc>http://tomjohnson1492.github.io/dummytext/</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -441,7 +321,7 @@
     <url>
       <loc>http://tomjohnson1492.github.io/faq/</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -456,7 +336,7 @@
     <url>
       <loc>http://tomjohnson1492.github.io/feed.xml</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -471,7 +351,7 @@
     <url>
       <loc>http://tomjohnson1492.github.io/pages/footer.html</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -484,24 +364,9 @@
   
     
     <url>
-      <loc>http://tomjohnson1492.github.io/fork_this_template/</loc>
+      <loc>http://tomjohnson1492.github.io/general_info/</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://tomjohnson1492.github.io/gemfiles/</loc>
-      
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -516,7 +381,7 @@
     <url>
       <loc>http://tomjohnson1492.github.io/getting_started/</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -531,7 +396,7 @@
     <url>
       <loc>http://tomjohnson1492.github.io/getting_started_index/</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -546,7 +411,7 @@
     <url>
       <loc>http://tomjohnson1492.github.io/pages/homepage.html</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -561,7 +426,7 @@
     <url>
       <loc>http://tomjohnson1492.github.io/icons/</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -576,7 +441,7 @@
     <url>
       <loc>http://tomjohnson1492.github.io/images/</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -591,7 +456,7 @@
     <url>
       <loc>http://tomjohnson1492.github.io/</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -606,22 +471,7 @@
     <url>
       <loc>http://tomjohnson1492.github.io/kb_layout/</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://tomjohnson1492.github.io/killing_server/</loc>
-      
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -636,7 +486,7 @@
     <url>
       <loc>http://tomjohnson1492.github.io/labels/</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -651,22 +501,7 @@
     <url>
       <loc>http://tomjohnson1492.github.io/latest_posts/</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://tomjohnson1492.github.io/links/</loc>
-      
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -681,7 +516,7 @@
     <url>
       <loc>http://tomjohnson1492.github.io/markdown_readability/</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -694,39 +529,9 @@
   
     
     <url>
-      <loc>http://tomjohnson1492.github.io/page_level_variables/</loc>
+      <loc>http://tomjohnson1492.github.io/project_css_and_js/</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://tomjohnson1492.github.io/sample/</loc>
-      
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://tomjohnson1492.github.io/scroll/</loc>
-      
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -741,7 +546,7 @@
     <url>
       <loc>http://tomjohnson1492.github.io/search/</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -756,22 +561,7 @@
     <url>
       <loc>http://tomjohnson1492.github.io/search.json</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://tomjohnson1492.github.io/setting_up/</loc>
-      
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -786,7 +576,7 @@
     <url>
       <loc>http://tomjohnson1492.github.io/shuffle/</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -797,58 +587,13 @@
     </url>
     
   
-    
-  
-    
-    <url>
-      <loc>http://tomjohnson1492.github.io/snippets/</loc>
-      
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
     
   
     
     <url>
       <loc>http://tomjohnson1492.github.io/supported_features/</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://tomjohnson1492.github.io/syntax_highlighting/</loc>
-      
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://tomjohnson1492.github.io/tables/</loc>
-      
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>
@@ -863,37 +608,7 @@
     <url>
       <loc>http://tomjohnson1492.github.io/tag</loc>
       
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://tomjohnson1492.github.io/tags/</loc>
-      
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
-      
-      
-        <changefreq>monthly</changefreq>
-      
-      
-        <priority>0.3</priority>
-      
-    </url>
-    
-  
-    
-    <url>
-      <loc>http://tomjohnson1492.github.io/writing_content/</loc>
-      
-        <lastmod>2015-02-21T00:41:27-08:00</lastmod>
+        <lastmod>2015-02-21T09:58:19-08:00</lastmod>
       
       
         <changefreq>monthly</changefreq>

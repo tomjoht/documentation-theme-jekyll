@@ -4,8 +4,6 @@ layout: default
 ---
 {% include_relative reuse/variables.html %}
 
-{{calloutwarning}}<h4>Note:</h4> The content on this site is a work in progress. I'm actively writing the documentation and plan to finish before Feb 21. Please keep this in mind if you're reading the content on this site. Much of it is in extreme draft or rough note form. {{end}}
-
 This is a Jekyll theme intended for documentation projects. What makes this theme unique is the approach in using Jekyll for single sourcing, that is, producing multiple outputs from the same theme. For example, you might have 3 different help systems that you're generating from the same Jekyll files. More than anything, this Jekyll theme shows you how to use Jekyll for documentation projects from the perspective of a technical writer. 
 
 {{alertinfo}} I'm using this theme for my own technical writing projects, replacing my previous OxygenXML DITA workflow, so this is an evolving project. I'm still in the pilot phase of the experiment.{{end}}
@@ -25,8 +23,8 @@ This theme specifically provides the following:
 
 * Bootstrap framework
 * Integrated search
-* Navigation sidebar
-* Separation of data from theme (the sidebar and top nav get their info from data files)
+* Navigation sidebar ad top navigation
+* Font Awesome
 
 ## Getting started
 

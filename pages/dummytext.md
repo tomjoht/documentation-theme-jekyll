@@ -4,7 +4,7 @@ title: Dummytext
 permalink: /dummytext/
 tags: analytics
 ---
-
+{% include_relative reuse/variables.html %}
 Scroll down and see how the jump TOC highlights based on the section you're viewing. This helps you understand where you're at in a long page. 
 
 ## Lorem ipsum dolor sit amet
