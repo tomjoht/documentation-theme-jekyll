@@ -191,6 +191,9 @@ See the faq.html page for an example of the FAQ format. This code is from Bootst
 
 Because you may be creating multiple outputs from the same source files, I separate out the homepage and footer. For your homepage, put `id: homepage` in the frontmatter a page (make sure only one page in the project has it -- exclude any others). The footer is pulled in through the `id: footer` in the frontmatter.
 
+## Search
+
+The search is configured through the search.json file. If you want to exclude a page from search add `search: exclude` in the frontmatter. 
 
 ## Questions
 

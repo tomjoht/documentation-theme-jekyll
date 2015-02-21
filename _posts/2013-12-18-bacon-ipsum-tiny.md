@@ -1,5 +1,4 @@
 ---
-layout: default
 title: "Bacon Ipsum (Tiny)"
 categories: loremipsum
 search: include

@@ -389,7 +389,93 @@ $(document).ready(function() {
             <!-- Content Column -->
             <div class="col-md-9">
 
-                <p>Bacon ipsum dolor sit amet flank sunt jerky dolore beef. Ut aute ham hock hamburger pork loin dolor esse ground round tenderloin consequat chicken veniam enim. Dolore kielbasa kevin andouille flank id consectetur chicken voluptate tenderloin.</p>
+                <h1>Bacon Ipsum (Tiny)</h1>
+ <p class="post-meta">Dec 18, 2013   •  </p>
+
+ <div class="post-summary"><p>Bacon ipsum dolor sit amet flank sunt jerky dolore beef. Ut aute ham hock hamburger pork loin dolor esse ground round tenderloin consequat chicken veniam enim. Dolore kielbasa kevin andouille flank id consectetur chicken voluptate tenderloin.</p>
+</div>
+
+
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+
+<p>Bacon ipsum dolor sit amet flank sunt jerky dolore beef. Ut aute ham hock hamburger pork loin dolor esse ground round tenderloin consequat chicken veniam enim. Dolore kielbasa kevin andouille flank id consectetur chicken voluptate tenderloin.</p>
+
+
+
+
+    
+
+<div class="well well-sm">
+
+<div class="nextPost">Next post: <a href="/jekyll-doc/bacon-ipsum-long">Bacon Ipsum (Long)</a>.
+</div>
+
+
+</div>
+  
+    <div class="post-navs row">
+      
+        <div class="col-md-6 post-nav">
+          <h3 class="section-header">
+            Older
+            <span class="text-muted"> &middot; </span>
+            <a href="/jekyll-doc/blogarchive">View Archive (12)</a>
+          </h3>
+          <h2 class="post-title-link"><a href="/jekyll-doc/bacon-ipsum-short">Bacon Ipsum (Short)</a></h2>
+          <p>Bacon ipsum dolor sit amet flank sunt jerky dolore beef. Ut aute ham hock hamburger pork loin dolor esse ground round tenderloin consequat chicken veniam enim. Dolore kielbasa kevin andouille flank id consectetur chicken voluptate tenderloin. Jerky beef ribs tri-tip, kielbasa tail corned beef non. Sausage id ex kielbasa meatloaf sed drumstick ad kevin landjaeger ut. Consequat venison frankfurter, culpa swine aliquip turkey tempor beef. Prosciutto shank boudin leberkas pastrami.</p>
+
+        </div>
+      
+      
+        <div class="col-md-6 post-nav">
+          <h3 class="section-header">
+            Newer
+            
+          </h3>
+          <h2 class="post-title-link"><a href="/jekyll-doc/bacon-ipsum-long">Bacon Ipsum (Long)</a></h2>
+          <p>Bacon ipsum dolor sit amet flank sunt jerky dolore beef. Ut aute ham hock hamburger pork loin dolor esse ground round tenderloin consequat chicken veniam enim. Dolore kielbasa kevin andouille flank id consectetur chicken voluptate tenderloin. Jerky beef ribs tri-tip, kielbasa tail corned beef non. Sausage id ex kielbasa meatloaf sed drumstick ad kevin landjaeger ut. Consequat venison frankfurter, culpa swine aliquip turkey tempor beef. Prosciutto shank boudin leberkas pastrami.</p>
+
+        </div>
+      
+    </div>
+  
+
+
+
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'idrbwjekyll'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
 
             </div>
         </div>
@@ -433,6 +519,8 @@ Site last generated: {{ site.time | date: "%b %-d, %Y"  }}.
 Built with <a href="http://jekyllrb.com/">Jekyll</a> using the <a href="http://tomjohnson1492.github.io/jekyll-doc/">Jekyll-doc theme</a>.
 
 {% comment %}feel free to remove the "Built with ... " {% endcomment %}
+
+
 
 
 
