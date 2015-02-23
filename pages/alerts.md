@@ -36,9 +36,9 @@ This page demonstrates the various kinds of alerts and callouts you can use.
 
 {{alertsuccess}}<b>alertsuccess</b>: Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. {{end}}
 
-{{alertinfo}}<b>alertsuccess</b>: Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. {{end}}
+{{alertinfo}}<b>alertinfo</b>: Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. {{end}}
 
-{{alertwarning}}<b>alertsuccess</b>: Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. {{end}}
+{{alertwarning}}<b>alertwarning</b>: Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. {{end}}
 
-{{alertdanger}}<b>alertsuccess</b>: Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. {{end}}
+{{alertdanger}}<b>alertdanger</b>: Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. {{end}}
 
