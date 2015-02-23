@@ -38,6 +38,7 @@ exclude: # put all files or directories that you want to exclude from your proje
   - "Gemfile.lock"
   - _drafts
   - projects/jekyll-doc/site_builds
+  - bower_components
 
 
 # these are defaults that get applied to each page or post. you don't have to set these settings in the frontmatter if you put them here. But frontmatter settings will override the configs here.

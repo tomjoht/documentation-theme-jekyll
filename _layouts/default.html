@@ -3,6 +3,13 @@
 <html>
   <head>
  {% include head.html %}
+
+ {% if page.video == true %}
+<link href="{{ "/js/video-js/video-js.min.css" | prepend:site.baseurl }}"  rel="stylesheet" type="text/css"></link>
+<script src="{{ "/js/video-js/video.js" | prepend:site.baseurl }}"></script> 
+<script> videojs.options.flash.swf = "{{site.baseurl}}/js/video-js/video-js.swf";</script>
+{% endif %}
+
   </head>
 
 <body>
