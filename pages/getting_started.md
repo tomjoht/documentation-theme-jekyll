@@ -9,12 +9,12 @@ permalink: /getting_started/
 * [Git](http://git-scm.com/download/mac). Type `which git` to see if you already have it installed.
 * Jekyllrb. To install: `gem install jekyll`
 * Ruby. This should already be installed. Type `which ruby` to confirm. 
-* [Rubygems](https://rubygems.org/pages/download). This is a package manager for Ruby plugins (gems).
+* [Rubygems](https://rubygems.org/pages/download). Optional but recommended. This is a package manager for Ruby plugins (gems).
 * text editor (e.g., [Sublime Text](http://www.sublimetext.com/))
-* [iTerm](http://iterm.sourceforge.net/) - recommended instead of Terminal. 
+* [iTerm](http://iterm.sourceforge.net/) - optional but recommended instead of Terminal. 
 * Mac computer (recommended). If you have a PC, you need to see [Jekyll on Windows](http://jekyllrb.com/docs/windows/)
 
-{{calloutdanger}} These instructions are designed for users on Macs. Jekyllrb works on Windows but is not officially supported on that platform. See [Jekyll on Windows](http://jekyllrb.com/docs/windows/) for more details. {{end}}
+{{calloutdanger}} These instructions are designed for users on Macs. Jekyllrb works on Windows but is not officially supported on that platform. See <a href="Jekyll on Windows">http://jekyllrb.com/docs/windows/</a> for more details. {{end}}
 
 ## Get set up
 
@@ -28,13 +28,13 @@ If you have just one project, do the following:
 5. Inside _data, open sidebar.yml and topnav.yml to customize the navigation.
 6. Build your site with `jekyll serve`. 
 
-If you have multiple projects (meaning you will be generating multiple outputs from the same site files) do the following:
+If you have multiple projects (meaning you will be generating multiple outputs from the same site files), my strategy is to put all the various configurations inside a configurations folder. Then create different shell scripts to refer to the specific configuration files. This is easier than adding the config source and destination source each time you want to build your site.
 
 1. `mkdir acme`
 2. `cd acme`.
 3. git clone `https://github.com/tomjohnson1492/jekyll-doc.git .`
 4. Inside configurations, rename config_jekyll-doc.yml to config_acme.yml.
-5. Open config_acme.yml and customize all the values inside.
+5. Open config_acme.yml and customize all the values inside. (At the very least, replace "jekyll-doc" with your project's name.)
 6. In the root directory, rename and customize jekyll-doc.sh to point to the config_acme.yml file inside the configurations folder.
 7. Repeat steps 4-7 for as many projects as you have -- essentially create separate configuration files for each unique site you want to create.
 
@@ -92,7 +92,7 @@ First, inside pages/reuse/links.html, add the following:
 ```
 {% endraw %}
     
-Then use `{{ syntax_highlighting }}` where you want to insert the link.
+Then use {% raw %}`{{ syntax_highlighting }}`{% endraw %} where you want to insert the link.
 
 If you ever change the permalink, you can just update your links file to change the permalink, and all references pointing to the keyword you're using will be updated. 
 
@@ -131,12 +131,10 @@ HTML image:
 
 For syntax highlighting, use fenced code blocks optionally followed by the language syntax you want:
 
-```
 ```ruby
     def foo
       puts 'foo'
     end
-```
 ```
 
 Fenced code blocks require a blank line before and after.
