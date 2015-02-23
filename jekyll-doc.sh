@@ -1,1 +1,1 @@
-jekyll serve --config projects/jekyll-doc/configurations/config_jekyll-doc.yml --destination _site/jekyll-doc
+jekyll serve --config configurations/config_jekyll-doc.yml --destination _site/jekyll-doc
