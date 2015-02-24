@@ -9,12 +9,12 @@ sitemap:
     {% unless post.published == false %}
     <url>
       <loc>{{ site.url }}{{ post.url }}</loc>
-      {% if post.sitemap.lastmod %}
-        <lastmod>{{ post.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
+      {% if post.sitemap.last_updated %}
+        <last_updated>{{ post.sitemap.last_updated | date: "%Y-%m-%d" }}</last_updated>
       {% elsif post.date %}
-        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+        <last_updated>{{ post.date | date_to_xmlschema }}</last_updated>
       {% else %}
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <last_updated>{{ site.time | date_to_xmlschema }}</last_updated>
       {% endif %}
       {% if post.sitemap.changefreq %}
         <changefreq>{{ post.sitemap.changefreq }}</changefreq>
@@ -33,12 +33,12 @@ sitemap:
     {% unless page.sitemap.exclude == "yes" %}
     <url>
       <loc>{{ site.url }}{{ page.url | remove: "index.html" }}</loc>
-      {% if page.sitemap.lastmod %}
-        <lastmod>{{ page.sitemap.lastmod | date: "%Y-%m-%d" }}</lastmod>
+      {% if page.sitemap.last_updated %}
+        <last_updated>{{ page.sitemap.last_updated | date: "%Y-%m-%d" }}</last_updated>
       {% elsif page.date %}
-        <lastmod>{{ page.date | date_to_xmlschema }}</lastmod>
+        <last_updated>{{ page.date | date_to_xmlschema }}</last_updated>
       {% else %}
-        <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+        <last_updated>{{ site.time | date_to_xmlschema }}</last_updated>
       {% endif %}
       {% if page.sitemap.changefreq %}
         <changefreq>{{ page.sitemap.changefreq }}</changefreq>

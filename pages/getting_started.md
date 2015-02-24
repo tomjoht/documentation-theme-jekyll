@@ -59,6 +59,8 @@ Pages can be either Markdown or HTML format. If you use Markdown, you can also i
 
 Store pages inside the pages folder. 
 
+If you want to use a colon in your title, you must use the HTML character code for the colon `&#58;` instead of `:`. (Don't ask me why.)
+
 ## Create a link
 
 There are several ways to create links. 

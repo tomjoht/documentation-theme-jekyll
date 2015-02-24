@@ -384,6 +384,18 @@ padding-left:10px;
 border-radius: 5px;
 }
 
+.footer {
+text-align: right;
+}
+
+.footerMeta {
+background-color: whitesmoke;
+padding: 10px;
+max-width: 250px;
+border-radius: 5px;
+margin-top: 50px;
+}
+
 span.projectTitle {
     font-family: Helvetica;
     font-weight: bold;
