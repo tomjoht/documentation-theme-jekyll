@@ -8,7 +8,7 @@ topnav:
       url: /latest_posts/
     - title: Jekyllrb
       external_url: http://jekyllrb.com
-    - title: My Github Repo
+    - title: Github Repo
       external_url: https://github.com/tomjohnson1492/jekyll-doc
 
 # Topnav dropdowns
