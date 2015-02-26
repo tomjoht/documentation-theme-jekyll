@@ -13,7 +13,7 @@ port: 4000 # specified here in case you have multiple sites and want to view the
 
 
 project: jekyll-doc # add your project name here
-destination: _site/jekyll-doc #this is where the builds are stored
+destination: _site/documentation-theme-jekyll #this is where the builds are stored
 homepage_id: homepage # the theme will include the page with id: homepage in the frontmatter on the index.html page.
 footer_id: footer # the theme will include the page with id: footer in the frontmatter.
 
@@ -37,7 +37,7 @@ exclude: # put all files or directories that you want to exclude from your proje
   - "Gemfile"
   - "Gemfile.lock"
   - _drafts
-  - projects/jekyll-doc/site_builds
+  - _site/documentation-theme-jekyll
   - bower_components
 
 
