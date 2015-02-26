@@ -1,17 +1,19 @@
+# duplicated from _config.yml. You only need to use this strategy if you have multiple configuration files.
+
 # Site settings
-title: Jekyll-doc # your project's title. This appears on the homepage.
+title: Documentation theme for Jekyll # your project's title. This appears on the homepage.
 contact_email: tomjohnson1492@gmail.com # a contact email for the project
 description: > # a description of your project. the ">" means to ignore newlines until "baseurl:"  
   A theme based on Jekyll designed for technical writers creating help systems. Feel free to clone, fork, and otherwise use. It's all open source and free to implement. 
   Please consider contributing back any innovations you make so that others can benefit.
-baseurl: "/jekyll-doc" # the subpath of your site. If you're publishing to the root directory, just type "". Usually set this as your project name.
+baseurl: "/documentation-theme-jekyll" # the subpath of your site. If you're publishing to the root directory, just type "". Usually set this as your project name.
 url: "http://tomjohnson1492.github.io" # the base hostname & protocol for your site
 host: 127.0.0.1 # specified here because 0.0.0 gets defaulted to search in Chrome. this is how you will preview the site.
 port: 4000 # specified here in case you have multiple sites and want to view them simultaneously (you'll need different ports)
 
 
-project: jekyll-doc # add your project name here
-destination: _site/jekyll-doc #this is where the builds are stored
+project: documentation-theme-jekyll # add your project name here
+destination: _site/documentation-theme-jekyll #this is where the builds are stored
 homepage_id: homepage # the theme will include the page with id: homepage in the frontmatter on the index.html page.
 footer_id: footer # the theme will include the page with id: footer in the frontmatter.
 
@@ -35,7 +37,8 @@ exclude: # put all files or directories that you want to exclude from your proje
   - "Gemfile"
   - "Gemfile.lock"
   - _drafts
-  - projects/jekyll-doc/site_builds
+  - _site/documentation-theme-jekyll
+  - bower_components
 
 
 # these are defaults that get applied to each page or post. you don't have to set these settings in the frontmatter if you put them here. But frontmatter settings will override the configs here.
