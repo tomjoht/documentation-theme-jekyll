@@ -68,3 +68,6 @@ sass:
 search_placeholder_text: search...
 search_no_results_text: No results found.
 
+collections:
+  tooltips:
+    output: true

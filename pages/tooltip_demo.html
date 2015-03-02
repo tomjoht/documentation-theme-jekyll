@@ -1,0 +1,134 @@
+---
+layout: page
+title: Tooltip demo
+permalink: /tooltip_demo/
+last_updated: March 2, 2015
+---
+{% include_relative reuse/variables.html %}
+Content in the popovers are pulled in dynamically from another file. For instructions on setting this up, see {{help_api}}.
+
+<!-- hi there -->
+{% comment %}
+I added frontmatter to this page so it would appear in my site. My site already has the bootstrap and 
+jquery tags. But usually the site pulling in the help will be separate from your jekyll help site. 
+If that's the case, replace the frontmatter tags with standard <html> tags and include these resources:
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+Put all the script content inside the head.
+
+{% endcomment %}
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+
+/*Bootstrap popovers are initialized with this script. In the options, I'm setting the placement
+to be on the right, the trigger to be hover rather than click, and to allow HTML. */
+
+    $('[data-toggle="popover"]').popover({
+        placement : 'right',
+        trigger: 'hover',
+        html: true
+    });
+
+/*set the location where tooltips.json is */
+var url = "{{site.baseurl}}/tooltips.json";
+
+
+/* developers using this call from other domains will get CORS errors if you don't add CORS
+permissions access into your directory */
+
+$.get( url, function( data ) {
+ 
+ /* Bootstrap popover text is defined inside a data-content attribute inside an element. That's 
+ why I'm using attr here. If you just want to insert content on the page, use append and remove the 
+ data-content argument from the parentheses.*/
+
+        $.each(data.entries, function(i, page) {
+            if (page.id == "basketball") {
+				$( "#basketball" ).attr( "data-content", page.body );
+            }
+
+            if (page.id == "baseball") {
+				$( "#baseball" ).attr( "data-content", page.body );
+            }
+
+            if (page.id == "football") {
+				$( "#football" ).attr( "data-content", page.body );
+            }
+
+            if (page.id == "soccer") {
+                $( "#soccer" ).attr( "data-content", page.body );
+            }
+
+
+        });
+    });
+
+ 
+});
+</script>
+
+
+</head>
+<body>
+
+
+<h2>Tooltips/Popovers Demo</h2>
+
+{% comment %} Here's where I have the capture tags -- they're inside definitions.html, which is included in variables.html {% endcomment %}
+
+{% include_relative reuse/variables.html %}
+
+The definitions here are also pulled in from the content stored in the collections files. 
+
+{% comment %} the glyphicon class provides the info icon {% endcomment %}
+
+    <p>Basketball <span class="glyphicon glyphicon-info-sign" id="basketball" data-toggle="popover"></span></p>
+
+    <p>Baseball <span class="glyphicon glyphicon-info-sign" id="baseball" data-toggle="popover"></span></p>
+
+    <p>Football <span class="glyphicon glyphicon-info-sign" id="football" data-toggle="popover"></span></p>
+
+    <p>Soccer <span class="glyphicon glyphicon-info-sign" id="soccer" data-toggle="popover"></span></p>
+
+<h2>Reuse Demo</h2>
+
+
+<table>
+<thead>
+<tr>
+<th>Sport</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Basketball</td>
+<td>{{basketball}}</td>
+</tr>
+
+<tr>
+<td>Baseball</td>
+<td>{{baseball}}</td>
+</tr>
+
+<tr>
+<td>Football</td>
+<td>{{football}}</td>
+</tr>
+
+<tr>
+<td>Soccer</td>
+<td>{{soccer}}</td>
+</tr>
+</tbody>
+</table>
+
+
+
+

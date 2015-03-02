@@ -22,7 +22,7 @@ If you have just one project, do the following:
 
 1. `mkdir acme` (assuming you want to call your program "acme")
 2. `cd acme`.
-3. git clone `https://github.com/tomjohnson1492/jekyll-doc.git .`
+3. git clone `https://github.com/tomjohnson1492/documentation-theme-jekyll.git .`
 4. Open _config.yml and customize all the values inside.
 5. Add your pages inside the Pages folder.
 5. Inside _data, open sidebar.yml and topnav.yml to customize the navigation.
@@ -32,10 +32,10 @@ If you have multiple projects (meaning you will be generating multiple outputs f
 
 1. `mkdir acme`
 2. `cd acme`.
-3. git clone `https://github.com/tomjohnson1492/jekyll-doc.git .`
-4. Inside configurations, rename config_jekyll-doc.yml to config_acme.yml.
-5. Open config_acme.yml and customize all the values inside. (At the very least, replace "jekyll-doc" with your project's name.)
-6. In the root directory, rename and customize jekyll-doc.sh to point to the config_acme.yml file inside the configurations folder.
+3. git clone `https://github.com/tomjohnson1492/documentation-theme-jekyll.git .`
+4. Inside configurations, rename config_documentation-theme-jekyll.yml to config_acme.yml.
+5. Open config_acme.yml and customize all the values inside. (At the very least, replace "documentation-theme-jekyll" with your project's name.)
+6. In the root directory, rename and customize doc.sh to point to the config_acme.yml file inside the configurations folder.
 7. Repeat steps 4-7 for as many projects as you have -- essentially create separate configuration files for each unique site you want to create.
 
 If you have radically separate projects with no overlapping content, just create separate directories for each project.

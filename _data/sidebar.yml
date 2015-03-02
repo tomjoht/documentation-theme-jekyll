@@ -54,3 +54,9 @@ entries:
           url: /conditional_logic/
         - title: Build arguments
           url: /build_arguments/
+    - title: Publishing Content
+      items:
+        - title: Create a Help API
+          url: /help_api/
+        - title: Tooltip Demo
+          url: /tooltip_demo/
