@@ -82,6 +82,8 @@ layout: none
 
 This code will loop through all pages in the tooltips collection and insert the id and body into key-value pairs for the JSON code.
 
+{{alertsuccess}}<b>Tip:</b> Check out <a href="https://google-styleguide.googlecode.com/svn/trunk/jsoncstyleguide.xml">Google's style guide for JSON</a>. These best practices can help you keep your JSON file valid.{{end}}
+
 Store this file in your root directory. You can add different fields depending on how you want the JSON to be structured. Here I just have to fields: `id` and `body`. And the JSON is looking just in the tooltips collection that I created. 
 
 When you build your site, Jekyll will iterate through every page in your _tooltips folder and put the page id and body into this format.
@@ -229,3 +231,40 @@ Then put the term you captured inside two curly brace pairs:
 {{basketball}}
 ```
 {% endraw %}
+
+Here's a demo:
+
+<h2>Reuse Demo</h2>
+
+
+<table>
+<thead>
+<tr>
+<th>Sport</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+
+<tr>
+<td>Basketball</td>
+<td>{{basketball}}</td>
+</tr>
+
+<tr>
+<td>Baseball</td>
+<td>{{baseball}}</td>
+</tr>
+
+<tr>
+<td>Football</td>
+<td>{{football}}</td>
+</tr>
+
+<tr>
+<td>Soccer</td>
+<td>{{soccer}}</td>
+</tr>
+</tbody>
+</table>
+
