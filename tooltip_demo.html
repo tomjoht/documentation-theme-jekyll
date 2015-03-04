@@ -1,19 +1,14 @@
 <html>
 <head>
-
+<title> Tooltip Demo</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-<style>
-body {font-family: Arial;}
-</style>
-
 <script type="text/javascript">
 $(document).ready(function(){
 
-/*Bootstrap popovers are initialized with this script. In the options, I'm setting the placement
-to be on the right, the trigger to be hover rather than click, and to allow HTML. */
+/*Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source. */
 
     $('[data-toggle="popover"]').popover({
         placement : 'right',
@@ -21,38 +16,31 @@ to be on the right, the trigger to be hover rather than click, and to allow HTML
         html: true
     });
 
-/*set the location where tooltips.json is */
-var url = "http://tomjohnson1492.github.io/documentation-theme-jekyll/tooltips.json";
-
-
-/* developers using this call from other domains will get CORS errors if you don't add CORS
-permissions access into your directory */
+/* Set the location where tooltips.json is. to demonstrate pulling from another site, I uploaded
+the tooltips.json file to another domain and enabled CORS in that domain. If you don't enable CORS on the server where the JSON file resides, developers calling the file will get errors.
+*/
+var url = "http://idratherbewriting.com/wp-content/apidemos/tooltips.json";
 
 $.get( url, function( data ) {
  
  /* Bootstrap popover text is defined inside a data-content attribute inside an element. That's 
- why I'm using attr here. If you just want to insert content on the page, use append and remove the 
- data-content argument from the parentheses.*/
+ why I'm using attr here. If you just want to insert content on the page, use append and remove the data-content argument from the parentheses.*/
 
         $.each(data.entries, function(i, page) {
             if (page.id == "basketball") {
 				$( "#basketball" ).attr( "data-content", page.body );
-                $("#basketballTable").append(page.body);
             }
 
             if (page.id == "baseball") {
 				$( "#baseball" ).attr( "data-content", page.body );
-                $("#baseballTable").append(page.body);
             }
 
             if (page.id == "football") {
 				$( "#football" ).attr( "data-content", page.body );
-                $("#footballTable").append(page.body);
             }
 
             if (page.id == "soccer") {
                 $( "#soccer" ).attr( "data-content", page.body );
-                $("#soccerTable").append(page.body);
             }
 
 
@@ -63,15 +51,22 @@ $.get( url, function( data ) {
 });
 </script>
 
+<style>
+body {padding-left:50px;}
+</style>
 
 </head>
 <body>
 
+<h1>Tooltip Demo</h1>
 
-<h2>Tooltips/Popovers Demo</h2>
+<p>This page is purposely separated out from the rest of the theme so you can see the bare minimum code to add to a page.</p>
 
-<p>The popover text is pulled in dynamically from the tooltips.json file.</p>
+<p>Content in the tooltips (actually "popovers" according to Bootstrap lingo) is pulled in dynamically from another file on another domain here: <a href="http://idratherbewriting.com/wp-content/apidemos/tooltips.json">http://idratherbewriting.com/wp-content/apidemos/tooltips.json</a>. </p>
 
+<div class="alert alert-info" role="alert"><b>Note:</b> Make sure you view the file source so you can read the notes I've added in code comments.</div>
+
+<!-- the glyphicon class provides the info icon.-->
 
     <p>Basketball <span class="glyphicon glyphicon-info-sign" id="basketball" data-toggle="popover"></span></p>
 
@@ -80,43 +75,3 @@ $.get( url, function( data ) {
     <p>Football <span class="glyphicon glyphicon-info-sign" id="football" data-toggle="popover"></span></p>
 
     <p>Soccer <span class="glyphicon glyphicon-info-sign" id="soccer" data-toggle="popover"></span></p>
-
-
-<h2>Reuse Demo</h2>
-
-<p>The definitions here are also pulled in from the content stored in the collections files. </p>
-<table>
-<thead>
-<tr>
-<th>Sport</th>
-<th>Comments</th>
-</tr>
-</thead>
-<tbody>
-
-<tr>
-<td>Basketball</td>
-<td id="basketballTable"></td>
-</tr>
-
-<tr>
-<td>Baseball</td>
-<td id="baseballTable"></td>
-</tr>
-
-<tr>
-<td>Football</td>
-<td id="footballTable"></td>
-</tr>
-
-<tr>
-<td>Soccer</td>
-<td id="soccerTable"></td>
-</tr>
-</tbody>
-</table>
-</body>
-</html>
-
-
-

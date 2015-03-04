@@ -6,8 +6,8 @@ contact_email: tomjohnson1492@gmail.com # a contact email for the project
 description: > # a description of your project. the ">" means to ignore newlines until "baseurl:"  
   A theme based on Jekyll designed for technical writers creating help systems. Feel free to clone, fork, and otherwise use. It's all open source and free to implement. 
   Please consider contributing back any innovations you make so that others can benefit.
-baseurl: "/documentation-theme-jekyll" # the subpath of your site. If you're publishing to the root directory, just type "". Usually set this as your project name.
-url: "http://tomjohnson1492.github.io" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site. If you're publishing to the root directory, just type "". Usually set this as your project name.
+url: "https://github.com/tomjohnson1492" # the base hostname & protocol for your site
 host: 127.0.0.1 # specified here because 0.0.0 gets defaulted to search in Chrome. this is how you will preview the site.
 port: 4000 # specified here in case you have multiple sites and want to view them simultaneously (you'll need different ports)
 

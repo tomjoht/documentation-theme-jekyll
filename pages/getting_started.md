@@ -72,15 +72,20 @@ Markdown link pointing to an external site:
 ```
 Markdown link pointing to an internal site:
 
+{% raw %}
+
 ```
 [Syntax Highlighting]({{ "/tutorial_syntax_highlighting" | prepend: site.baseurl }})
 ```
+{% endraw %}
 
 HTML link pointing to an internal site:
 
+{% raw %}
 ```
 <a title="my sample image" href="{{ "/tutorial_syntax_highlighting" | prepend: site.baseurl }}">Syntax Highlighting</a>
 ```
+{% endraw %}
 
 You can also store a link in a reuse file so it's easy to reuse the link. This method allows you to reuse the link; it also gets the page's title.
 
@@ -207,6 +212,7 @@ The Markdown supported here includes fenced code blocks, tables, and all the sta
 
 The theme has the [video.js](http://www.videojs.com/) player integrated. But the scripts only appear on a page or post if you have certain frontmatter in that page or post. If you want to embed a video in a page and use the Video JS player, add `video: true` in your frontmatter of a page or post, and then add code like this where you want the video to appear:
 
+{% raw %}
 ```html
 <video id="scenario-1" class="video-js vjs-default-skin" controls
  preload="auto" width="640" height="360" data-setup='{}'>
@@ -214,6 +220,7 @@ The theme has the [video.js](http://www.videojs.com/) player integrated. But the
 
 </video>
 ```
+{% endraw %}
 
 You'll know it's working if the video wrapper looks like the one here: [video.js: the open source HTML5 video player](http://www.videojs.com/). The play button will be in the upper-left corner. If you want the player button in the middle, change the class to `video-js vjs-default-skin vjs-big-play-centered`.
 

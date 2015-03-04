@@ -58,5 +58,3 @@ entries:
       items:
         - title: Create a Help API
           url: /help_api/
-        - title: Tooltip Demo
-          url: /tooltip_demo/
