@@ -2,62 +2,28 @@
 title: Content reuse
 permalink: /content_reuse/
 ---
-{% include_relative reuse/variables.html %}
 
 ## Include re-used components
 
-To include any content from your reuse directory, you must add this on each page:
-
-{% raw %}
-```
-{% include_relative reuse/variables.html %}
-```
-{% endraw %}
-
-Unfortunately, there's not a way to automatically include this reference on every Jekyll page. This file includes all callouts, links, and notes, and makes them available to you on the page. It won't insert the content from each of these files -- it just makes the variables in scope.
+To reuse content, store it in the notes.yml file in the _data folder. Use yml syntax, following the example shown in the file.
 
 ## Insert a callout or alert
 
-A number of callouts and alerts are available through what might be called "shortcodes" (to borrow a term from WordPress). In the pages/reuse/callouts.html file, I created various callouts and alerts from Bootstrap styles and Font Awesome images. Browse the file to see what's available:
+A number of callouts and alerts are available through what might be called "shortcodes" (to borrow a term from WordPress). In the _data/callouts.yml file, I created various callouts and alerts from Bootstrap styles and Font Awesome images. Browse the file to see what's available:
 
 To insert a callout or alert, just include the following:
 
 {% raw %}
 ```
-{{calloutdanger}}
+{{site.data.callouts.calloutdanger}}
 <h4>This is a warning</h4>whatever you do, do not trip while getting off a skyscraper's viewpoint platform.
-{{end}}
+{{site.data.callouts.end}}
 {% endraw %}
 ```
 
 Use the name of the callout or alert you want. You can see sample styles on the {{alerts}} page.
 
-You can add more callouts or alerts to the file as needed. Just follow the format shown in the callouts.html file. All of the styles need to have a closing `div` tag, so I created just one called {% raw %}`{{end}}`{% endraw %}.
-
-Note that if you use any component from the reuse folder, you must add the include to the reuse file on the page where you're using it:
-
-{% raw %}
-```
-{% include_relative reuse/variables.html %}
-```
-{% endraw %}
-
-
-## Reuse a note
-
-You can create notes that you re-use. In the pages/reuse.html file, add something like this:
-
-{% raw %}
-```
-{% capture warning_message %}
-Lock the door before you leave the building.
-{% endcapture %}
-```
-{% endraw %}
-
-Then use {% raw %}```{{ warning_message }}```{% endraw %} where you want to embed it.
-
-As with other components from reuse, remember to add {% raw %}`{% include_relative reuse/variables.html %}`{% endraw %} on the page where you're reusing content.
+You can add more callouts or alerts to the file as needed. Just follow the format shown in the callouts.yml file. All of the styles need to have a closing `div` tag, so I created just one called {% raw %}`{{site.data.callouts.end}}`{% endraw %}.
 
 ## Add conditional filtering
 

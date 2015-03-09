@@ -2,7 +2,7 @@
 title: Getting Started index
 permalink: /getting_started_index/
 ---
-{% include_relative reuse/variables.html %}
+
 Here are all pages tagged with getting_started:
 
 <ul>

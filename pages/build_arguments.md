@@ -3,8 +3,8 @@ title: Build arguments
 permalink: /build_arguments/
 tags: getting_started
 ---
-{% include_relative reuse/variables.html %}
-## Build arguments
+
+## How to build Jekyll sites
 
 The normal way to build the Jekyll site is through the build command:
 

@@ -1,12 +1,28 @@
 ---
-layout: page
 title: Images
 permalink: /images/
-tags: formatting
 ---
-{% include_relative reuse/variables.html %}
 
-For images, create an images folder and put it in your root Jekyll directory. You can create subfolders inside the images directory. 
+Put images inside the `images` folder in your root directory. You can create subdirectories inside this directory.
+
+Markdown image: 
+
+{% raw %}
+```
+![Sample Wiki Image]({{ "{{site.baseurl}}/images/samplewiki.png" | prepend: site.baseurl }})
+```
+{% endraw %}
+
+HTML image:
+
+{% raw %}
+```
+<img src="{{ "/images/samplewiki.png" | prepend: site.baseurl }}">
+```
+{% endraw %}
+
+
+## Samples
 
 HTML syntax:
 

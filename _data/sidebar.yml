@@ -8,16 +8,24 @@ entries:
   subcategories:
     - title: Getting started
       items:
-        - title: Getting started with the theme
+        - title: Getting started
           url: /getting_started/
-        - title: Content reuse
-          url: /content_reuse/
-        - title: General info
-          url: /general_info/
         - title: Supported features
           url: /supported_features/
+        - title: Pages
+          url: /pages/
+        - title: Navigation
+          url: /navigation/
+    - title: Content re-use
+      items:
+        - title: Conditional logic
+          url: /conditional_logic/
+        - title: Content reuse
+          url: /content_reuse/
     - title: Formatting
       items:
+        - title: Links
+          url: /links/
         - title: Callouts and alerts
           url: /alerts/
         - title: Icons
@@ -28,8 +36,10 @@ entries:
           url: /markdown_readability/
         - title: Labels
           url: /labels/
-        - title: I'd Rather Be Writing
+        - title: Sample external site
           external_url: http://idratherbewriting.com
+        - title: Videos
+          url: /videos/
     - title: Blog content
       items:
         - title: Latest posts
@@ -48,13 +58,17 @@ entries:
           url: /faq/
         - title: KB layout
           url: /kb_layout/
-    - title: Conditional filtering
-      items:
-        - title: Conditional logic
-          url: /conditional_logic/
-        - title: Build arguments
-          url: /build_arguments/
-    - title: Publishing Content
+    - title: Publishing
       items:
         - title: Create a Help API
           url: /help_api/
+        - title: Analytics
+          url: /analytics/
+        - title: Build arguments
+          url: /build_arguments/
+        - title: Building and Publishing
+          url: /building_and_publishing/
+        - title: Project styles
+          url: /project_styles/
+        - title: Excluding files
+          url: /excluding_files/

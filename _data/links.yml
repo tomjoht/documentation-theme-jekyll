@@ -1,0 +1,17 @@
+# HTML: <a href="{{site.data.links.mylink.url | prepend: site.baseurl}}">{{site.data.links.mylink.title}}</a>
+# Markdown: [{{site.data.links.mylink.title}}]({{site.baseurl}}{{site.data.links.mylink.url}})
+
+# Here's the easiest way to add links. After defining the title and url here, add a reference to your page like
+# this: 
+# See [mylink][1] for more info. 
+
+# [1]: {{site.baseurl}}{{site.data.links.mylink.url}} "{{site.data.links.mylink.title}}"
+
+link1:
+ title: "link1 name"
+ url: /link1url/
+
+link2: 
+ title: "link2 name"
+ url: /link2url/
+

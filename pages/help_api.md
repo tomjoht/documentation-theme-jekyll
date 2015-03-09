@@ -3,7 +3,7 @@ title: Create a Help API
 permalink: /help_api/
 last_updated: March 2, 2015
 ---
-{% include_relative reuse/variables.html %}
+
 
 You can create a help API that developers can use to pull in content. 
 
@@ -220,7 +220,7 @@ Where you want to insert the tag, make sure you include the variables.html file:
 
 {% raw %}
 ```
-{% include_relative reuse/variables.html %}
+
 ```
 {% endraw %}
 

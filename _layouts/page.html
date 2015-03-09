@@ -8,18 +8,9 @@ comments: true
 </div>
 <div class="post-content">
 
-
-<div class="post-summary">{{page.excerpt}}</div>
-
-
 {% include {{site.includes_directory}}/toc.html %}
 
 {{ content }}
-
-<div class="footerMeta">
-{% if page.last_updated %}<p>Page last updated: {{page.last_updated}}<br />{% endif %}
-Site last generated: {{ site.time | date: "%b %-d, %Y"  }}</p>
-</div>
 
 </div>
 

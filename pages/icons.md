@@ -1,10 +1,8 @@
 ---
-layout: page
 title: Icons
 permalink: /icons/
-tags: getting_started
 ---
-{% include_relative reuse/variables.html %}
+
 The theme has two font icon sets integrated: Font Awesome and Glyphicons Halflings. The latter is part of Bootstrap, while the former is independent. I downloaded both font icon sets to the theme so that if the site is rendered for offline use, it won't be dependent on a cloud-based font to download.
 
 ## See Font Awesome icons available

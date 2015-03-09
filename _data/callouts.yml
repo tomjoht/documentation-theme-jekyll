@@ -1,0 +1,13 @@
+# End every callout with the same {{site.data.callouts.end}} tag for the closing div tag
+
+calloutdanger: '<div class="bs-callout bs-callout-danger"'
+calloutdefault: '<div class="bs-callout bs-callout-default">'
+calloutprimary: '<div class="bs-callout bs-callout-primary">'
+calloutsuccess: '<div class="bs-callout bs-callout-success">'
+calloutinfo: '<div class="bs-callout bs-callout-info">'
+calloutwarning: '<div class="bs-callout bs-callout-warning">'
+alertsuccess: '<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i>'
+alertinfo: '<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i>'
+alertwarning: '<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i>'
+alertdanger: '<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i>'
+end: '</div>'

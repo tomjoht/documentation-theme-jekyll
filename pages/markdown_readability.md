@@ -2,7 +2,6 @@
 title: Making markdown readable
 permalink: "/markdown_readability/"
 ---
-{% include_relative reuse/variables.html %}
 One trick in making markdown more readable is to use figlets. you can install them via macports. `sudo port install figlet`. 
 
 macports is like brew -- it allows you to easily install utilities you need. 

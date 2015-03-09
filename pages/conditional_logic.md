@@ -1,11 +1,8 @@
 ---
-layout: page
 title: Conditional logic
 permalink: /conditional_logic/
-tags: conditional_logic
 ---
-{% include_relative reuse/variables.html %}
-If you're a technical writer creating different outputs for different audiences, you can do all of this using a combination of Jekyll's Liquid markup and values in your configuration file.
+If you want to create different outputs for different audiences, you can do all of this using a combination of Jekyll's Liquid markup and values in your configuration file.
 
 {{alertinfo}} Definitely check out [Liquid's documentation](http://docs.shopify.com/themes/liquid-documentation/basics) for more details about how to use operators and other liquid markup. The notes here are a small, somewhat superficial sample from the site.{{end}}
 
@@ -15,19 +12,19 @@ You can filter content based on values that you have set in your config file or 
 
 ## Conditional logic based on config file value
 
-Here's an example of conditional logic based on a value in your config file. In my config_web.yml file, I have the following:
+Here's an example of conditional logic based on a value in the _data/project.html file. In my project.html file, I have the following:
 
 ```
 audience: web
 ```
 
-On a page in my site (it can be html or markdown), I have the following:
+On a page in my site (it can be HTML or markdown), I have the following:
 
 
 {% comment %}
 {% raw %}
 ```
-{% if site.audience == "web" %}
+{% if site.data.project.audience == "web" %}
 The web audience should see this...
 {% elsif site.audience == "acme" %}
 The acme audience should see this ...
@@ -37,7 +34,7 @@ The acme audience should see this ...
  {% endcomment %}
 
 
-This uses simple `if-elsif` logic to determine what is shown. You access the configuration value through the site namespace, by using `site.audience`.
+This uses simple `if-elsif` logic to determine what is shown (note the spelling of `elsif`). 
 
 Here's an example of `if-else` logic inside a list:
 
@@ -46,9 +43,9 @@ Here's an example of `if-else` logic inside a list:
 To bake a casserole:
 
 1. Gather the ingredients.
-{% if site.audience == "omnivore" %}
+{% if site.data.project.audience == "omnivore" %}
 2. Add in a pound of meat.
-{% elsif site.audience == "vegetarian" %}
+{% elsif site.data.project.audience == "vegetarian" %}
 3. Add in an extra can of beans.
 {% endif %}
 3. Bake in oven for 45 min.
@@ -60,15 +57,14 @@ You can also add an `else` statement to handle all other conditions not handled 
 {% comment %}
 {% raw %}
 ```
-{% if site.audience == "web" %}
+{% if site.data.project.audience == "web" %}
 show this web content...
-{% elsif site.audience == "acme" %}
+{% elsif site.data.project.audience == "acme" %}
 show this acme content...
 {% else %}
 this shows if neither of the above two if conditions are met.
 {% endif %}
 ```
-
 {% endraw %}
 {% endcomment %}
 
@@ -81,37 +77,23 @@ For example, here's an example using `or`:
 
 {% raw %}
 ```
-{% if page.tags contains "homepage" or page.tags == "featured" %}
+{% if site.data.project.audience contains "vegan" or site.data.project.audience == "vegetarian" %}
     // run this.
 {% endif %}
 ```
 {% endraw %}
 
+## Specifying a data source
 
-## Conditional logic based on data file value
+You can also specify a `data_source` for your data location in your configuration file. Then you aren't limited to simply using `_data` to store your data. 
 
-You can also store values in your _data folder. The way you access the value is a little different. First, create a folder called `_data`. Next, create a YML file (you might call it options.yml) and put in similarly formatted content as in your config.yml file, such as: 
+For example, suppose you have 2 projects: alpha and beta. You might store all the data files for alpha inside data_alpha, and all the data files for beta inside data_beta. This way you can leave the file names the same for each project. 
+
+In your configuration file, specify the data source like this:
 
 ```
-audience: web
+data_source: data_alpha
 ```
-
-To access values in the options.yml file in your _data folder, you use the ``site.data.options`` namespace, where data is the name of the folder and options is the name of the file.
-
-
-Here's an example of conditional logic based on a value in a .yml file inside _data:
-
-```liquid
-{% raw %}
-{% if site.data.options.audience == "web" %}
-The web audience should see this...
-{% elsif site.data.options.audience == "acme" %}
-The acme audience should see this ...
-{% endif %}
- {% endraw %}
-```
-
-You can also specify a `data_source` for your data location in your configuration file. Then you aren't limited to simply using `_data` to store your data. For example, with the Jekyll-doc theme, I am storing data values in settings/jekyll-docs. There are two files in there: one called options.yml and another called nav.yml. You access the data source through `site.data.nav` or `site.data.options` depending on the file name you want to access.
 
 ## Conditional logic based on page namespace
 
@@ -121,7 +103,7 @@ You can also create conditional logic based on the page namespace. For example, 
 ```liquid
 ---
 layout: page
-type: homepage
+user_plan: full
 ---
 ```
  {% endraw %}
@@ -131,8 +113,8 @@ Now in any other file, you can create conditional logic based on the page namesp
 
 {% raw %}
 ```liquid
-{% if page.type == "homepage" %}
-{% include masthead.html %}
+{% if page.user_plan` == "full" %}
+// run this code
 {% endif %}
 ```
 {% endraw %}
