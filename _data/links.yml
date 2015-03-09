@@ -7,11 +7,11 @@
 
 # [1]: {{site.baseurl}}{{site.data.links.mylink.url}} "{{site.data.links.mylink.title}}"
 
-link1:
- title: "link1 name"
- url: /link1url/
 
-link2: 
- title: "link2 name"
- url: /link2url/
+supported_features:
+ title: "Supported features"
+ url: /supported_features/
 
+getting_started:
+ title: "Getting started"
+ url: /getting_started/
