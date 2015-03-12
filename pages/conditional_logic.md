@@ -8,7 +8,7 @@ If you want to create different outputs for different audiences, you can do all 
 
 ## Where to store filtering values
 
-You can filter content based on values that you have set in your config file or in a file in your _data folder. If you set the attribute in your config file, you need to restart the Jekyll server to see the changes. If you set the value in a file in your _data folder, you don't need to restart the server when you make changes. Therefore it's preferable to store values in your _data file rather than your config file, but do what makes sense to you.
+You can filter content based on values that you have set in your config file or in a file in your _data folder. If you set the attribute in your config file, you need to restart the Jekyll server to see the changes. If you set the value in a file in your _data folder, you don't need to restart the server when you make changes. Therefore it's preferable to store values in your _data file rather than your config file, but do what makes sense to you.  
 
 ## Conditional logic based on config file value
 

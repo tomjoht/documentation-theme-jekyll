@@ -16,6 +16,8 @@ entries:
           url: /pages/
         - title: Navigation
           url: /navigation/
+        - title: Adding homepage and footer
+          url: /adding_homepage_and_footer/
     - title: Content re-use
       items:
         - title: Conditional logic
