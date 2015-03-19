@@ -58,6 +58,7 @@ You can embed a page inside another page through a couple of different methods. 
 Alternative, you can add an ID tag to a page's frontmatter, and then get the page using this method:
 
 {% raw %}
+```
 {% for page in site.pages %}
 {% for id in page.id %}
 {% if page.id == site.homepage_id %}
