@@ -12,7 +12,7 @@ The search is a simple search that looks at content in pages or posts. It looks 
 
 ## Excluding pages form search
 
-If you want to exclude a page from search add `search: exclude` in the frontmatter. By default, every page is included. The configuration file specifies this default in the frontmatter of every page:
+By default, every page is included in the search. The configuration file specifies this default in the frontmatter of every page:
 
 ```
 defaults:
@@ -33,17 +33,18 @@ defaults:
       comments: true
       search: include
  ```
-This is why you need to add `search: exclude` if you want do not want a page to appear in search.
+
+Some pages will break the JSON formatting. If that happens, then the search will no longer work. If you want to exclude a page from search add `search: exclude` in the frontmatter. 
 
 ## Troubleshooting search
 
-You should exclude any files from search that you don't want appearing in the search results. For example, if you have a tooltips.json file, don't include it, as the formatting will be invalid in the search. 
+You should exclude any files from search that you don't want appearing in the search results. For example, if you have a tooltips.json file or prince-file-list.txt, don't include it, as the formatting will break the JSON format.
 
 If any formatting in the search.json file is invalid (in the build), search won't work. You'll know that search isn't working if no results appear when you start typing in the search box.
 
 If this happens, go directly to the search.json file in your browser, and then copy the content. Go to a [JSON validator](http://jsonlint.com/) and paste in the content. Look for the line causing trouble. Edit the file to either exclude it from search or fix the syntax so that it doesn't invalidate the JSON. 
 
-The search.json file already strips out content that would otherwise make the JSON invalid:
+The search.json file already tries to strip out content that would otherwise make the JSON invalid:
 
 {% raw %}
 
