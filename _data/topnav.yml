@@ -1,0 +1,37 @@
+# if you want to list an external url, use external_url instead of url. the theme will apply a different link base.
+
+# Topnav single links
+topnav:
+- title: Topnav
+  subcategories:
+    - title: About
+      url: /about/
+      audience: writer, designer
+  
+    - title: Github repo
+      external_url: https://github.com/tomjohnson1492/documentation-theme-jekyll
+      audience: writer, designer
+  
+    - title: My blog
+      external_url: http://idratherbewriting.com
+      audience: writer, designer
+
+#Topnav dropdowns
+topnav_dropdowns:
+- title: Topnav dropdowns
+  subcategories:
+    - title: Jekyll resources
+      audience: writer, designer
+    
+      items:
+        - title: Jekyll documentation
+          external_url: http://jekyllrb.com/docs/home/
+          audience: writer, designer
+
+        - title: Jekyll Talk
+          external_url: https://talk.jekyllrb.com/
+          audience: designer, writer
+
+        - title: Jekyll on Stackoverflow
+          external_url: http://stackoverflow.com/questions/tagged/jekyll
+          audience: writer, designer

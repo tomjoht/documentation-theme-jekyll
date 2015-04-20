@@ -1,0 +1,211 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+# Spacing is really important here. A two-space indent appears below each level to indicate a new depth.
+# 
+# Sidebar
+entries:
+- title: Sidebar # this title doesn't appear anywhere
+  subcategories:
+    - title: Overview
+      audience: writer, designer
+      print: true
+
+      items:
+        - title: Cover
+          url: /titlepage/
+          audience: writer, designer
+          print: true
+          web: false
+          
+        - title: Home
+          url: /
+          audience: writer, designer
+          print: true
+
+        - title: Getting started
+          url: /getting_started/
+          audience: writer, designer
+          print: true
+
+        - title: Supported features
+          url: /supported_features/
+          audience: writer, designer
+          print: true
+
+    - title: Formatting
+      audience: writer, designer
+      print: true
+
+      items:
+        - title: Pages and posts
+          url: /pages/
+          audience: writer, designer
+          print: true
+
+        - title: Alerts
+          url: /alerts/
+          audience: writer, designer
+          print: true
+
+        - title: Images
+          url: /images/
+          audience: writer, designer
+          print: true
+
+        - title: Links 
+          url: /links/
+          audience: writer, designer
+          print: true
+
+        - title: Syntax highlighting 
+          url: /syntax_highlighting/
+          audience: writer, designer
+          print: true
+
+        - title: Videos 
+          url: /videos/
+          audience: writer, designer
+          print: true
+
+        - title: Labels 
+          url: /labels/
+          audience: writer, designer
+          print: true
+
+        - title: Icons 
+          url: /icons/
+          audience: writer, designer
+          print: true
+
+        - title: Tables 
+          url: /tables/
+          audience: writer, designer
+          print: true
+
+    - title: Single Sourcing
+      audience: writer, designer
+      print: true
+
+      items:
+        - title: Conditional logic
+          url: /conditional_logic/
+          audience: writer, designer
+          print: true
+
+        - title: Content re-use
+          url: /content_reuse/
+          audience: writer, designer
+          print: true
+
+        - title: Excluding files
+          url: /excluding_files/
+          audience: writer, designer
+          print: true
+
+    - title: Publishing
+      audience: writer, designer
+      print: true
+
+      items:
+        - title: Build Arguments
+          url: /build_arguments/
+          audience: writer, designer
+          print: true
+
+        - title: Create a PDF
+          url: /create_pdf/
+          audience: writer, designer
+          print: true
+
+        - title: Creating a Help API
+          url: /help_api/
+          audience: writer, designer
+          print: true
+
+    - title: Navigation
+      audience: writer
+      print: true
+      items:
+        - title: Configuring sidebar and top navigation
+          url: /navigation/
+          audience: designer, writer
+          print: true
+
+        - title: Tags
+          url: /tags/
+          audience: writer, designer
+          print: true
+
+    - title: Special Layouts
+      audience: designer
+      print: false
+      items:
+        - title: Special layouts
+          url: /special_layouts/
+          audience: designer
+          print: true
+
+        - title: FAQ layout
+          url: /faq/
+          audience: designer
+          print: true
+
+        - title: KB layout
+          url: /kb_layout/
+          audience: designer
+          print: true
+
+        - title: Scroll
+          url: /scroll/
+          audience: designer
+          print: true
+
+        - title: Shuffle
+          url: /shuffle/
+          audience: designer
+          print: true
+
+    - title: Tag archives
+      audience: designer, w riter
+      print: false
+      items:
+      - title: Overview
+        audience: writer, designer
+        url: /tag-archives-overview/
+        print: false
+
+        thirdlevel: #demo's how to add a third level to the sidebar nav.
+          - title: Third level title
+            audience: writer, designer
+            print: false
+              
+            thirdlevelitems:
+               - title: Overview pages
+                 url: /tag-overview/
+                 audience: writer, designer
+                 print: false
+
+               - title: Getting Started pages
+                 url: /tag-getting-started/
+                 audience: writer, designer
+                 print: false
+
+               - title: Single Sourcing pages
+                 url: /tag-single-sourcing/
+                 audience: writer, designer
+                 print: false
+
+               - title: Publishing pages
+                 url: /tag-publishing/
+                 audience: writer, designer
+                 print: false
+
+               - title: Formatting pages
+                 url: /tag-formatting/
+                 audience: writer, designer
+                 print: false
+
+               - title: Special layout pages
+                 url: /tag-special-layouts/
+                 audience: writer, designer
+                 print: false
+

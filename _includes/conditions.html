@@ -1,0 +1,15 @@
+{% if site.audience == "writer" %}
+	{% assign buildAudience = "writer" %}
+	{% assign sidebar = site.data.sidebar.entries %}
+	{% assign topnav = site.data.topnav.topnav %}
+	{% assign topnav_dropdowns = site.data.topnav.topnav_dropdowns %}
+	 {% assign fileName = "writer_guide" %}
+
+{% elsif site.audience == "designer" %}
+	{% assign buildAudience = "designer" %}
+	{% assign sidebar = site.data.sidebar.entries %}
+ 	{% assign topnav = site.data.topnav.topnav %}
+ 	{% assign topnav_dropdowns = site.data.topnav.topnav_dropdowns %}
+ 	 {% assign fileName = "designer_guide %}
+
+{% endif %}

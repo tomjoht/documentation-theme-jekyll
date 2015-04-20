@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+  <head>
+ {% include head.html %}
+ {% comment %}
+      <script>
+          Prince.addScriptFunc("datestamp", function() {
+              return (new Date()).toString();
+          });
+      </script>
+{% endcomment %}
+    <link rel="stylesheet" href="{{ "/css/printstyles.css" | prepend:site.baseurl }}"  type='text/css'>
+
+{% if site.audience == "writer" %}
+      <link rel="stylesheet" href="{{ "/css/print-header-writer.css" | prepend:site.baseurl }}"  type='text/css'>
+{% else if site.audience == "designer" %}
+      <link rel="stylesheet" href="{{ "/css/print-header-designer.css" | prepend:site.baseurl }}"  type='text/css'>
+      {% endif %}
+
+{% if page.datatable == true %}
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.5/css/jquery.dataTables.css">
+
+<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.5/js/jquery.dataTables.js"></script>
+{% endif %}
+
+  </head>
+
+<body class="print">
+
+    <!-- Page Content -->
+    <div class="container">
+            <!-- Content Column -->
+            <div class="col-md-9">
+
+                {{content}}
+            </div>
+
+        <hr>
+
+    </div>    <!-- /.container -->
+
+</body>
+
+</html>
+

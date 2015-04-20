@@ -1,0 +1,42 @@
+---
+layout: default
+comments: true
+---
+<div class="post-header">
+   <h1 class="post-title-main">{{ page.title }}</h1>
+
+ {% unless page.type == "noTags" %}
+   <div class="pageTags"> 
+
+{% for tag in page.tags %}
+{% if site.data.tags.allowed-tags contains tag %}
+<a href="{{ "/tag-" | prepend: site.baseurl | append: {{tag}}/index.html ">
+<button type="button" class="btn btn-default navbar-btn">{{tag}}</button></a>
+{% endif %}
+{% endfor %}
+</div>
+
+   {% if site.show_audience_label == true %} 
+   {% if page.audience != null %}
+   <div class="audienceLabel">
+      <div class="prefaceAudienceLabel">Visibility</div>
+      {% if page.audience contains "writer" %}<span class="label label-info myLabel">Writer</span> {% endif %}
+      <p>
+         {% if page.audience contains "designer" %}<span class="label label-warning">Designer</span> {% endif %}
+   </div>
+   {% endif %}
+   {% endif %}
+</div>
+{% endunless %}
+
+  
+<div class="post-content">
+
+   {% include toc.html %}
+   {{ content }}
+    {% include disqus.html %}
+</div>
+
+
+   <!-- Footer -->
+      {% include footer.html %}

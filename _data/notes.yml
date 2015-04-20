@@ -1,0 +1,10 @@
+---
+videonote: >
+ This is a sample note. Everything under the note title needs to be indented one space. The > means that 
+ you start the string on the next line.
+
+samplenote: "something else"
+
+another_note: "hey there"
+
+

@@ -1,0 +1,16 @@
+---
+layout: default_print
+comments: true
+---
+<div class="post-header">
+   <h1 class="post-title-main" id="{{page.permalink | replace: '/', '' }}">{{ page.title }}</h1>
+</div>
+
+  
+
+<div class="post-content">
+
+ {% include toc.html %}
+   {{ content }}
+</div>
+

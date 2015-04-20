@@ -1,0 +1,59 @@
+---
+layout: default
+comments: true
+---
+
+<h1>{{ page.title }}</h1>
+ <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }} {% if page.author %} • by {{ page.author }} {% endif %} {% if page.tags %} • {{ page.tags | array_to_sentence_string }}{% endif %} {% if page.meta %} • {{ page.meta }}{% endif %}</p>
+
+ <div class="post-summary">{{page.excerpt}}</div>
+
+
+{% include {{site.includes_directory}}/toc.html %}
+
+
+{{ content }}
+
+
+{% include {{site.includes_directory}}/related_posts.html %}
+    
+
+<div class="well well-sm">
+
+<div class="nextPost">Next post: <a href="{{ page.next.url | prepend:site.baseurl }}">{{ page.next.title }}</a>.
+</div>
+
+
+</div>
+  {% if page.previous or page.next %}
+    <div class="post-navs row">
+      {% if page.previous %}
+        <div class="col-md-6 post-nav">
+          <h3 class="section-header">
+            Older
+            <span class="text-muted"> &middot; </span>
+            <a href="{{ "/blogarchive" | prepend:site.baseurl }}">View Archive ({{ site.posts.size }})</a>
+          </h3>
+          <h2 class="post-title-link"><a href="{{ page.previous.url | prepend:site.baseurl }}">{{ page.previous.title }}</a></h2>
+          {{ page.previous.excerpt | markdownify }}
+        </div>
+      {% endif %}
+      {% if page.next %}
+        <div class="col-md-6 post-nav">
+          <h3 class="section-header">
+            Newer
+            {% unless page.previous %}
+              <span class="text-muted"> &middot; </span>
+              <a href="{{ "/archive" | prepend:site.baseurl }}">View Archive ({{ site.posts.size }})</a>
+            {% endunless %}
+          </h3>
+          <h2 class="post-title-link"><a href="{{ page.next.url | prepend:site.baseurl }}">{{ page.next.title }}</a></h2>
+          {{ page.next.excerpt | markdownify }}
+        </div>
+      {% endif %}
+    </div>
+  {% endif %}
+  <h3>Related posts</h3>
+{% include related_posts.html %}
+
+{% if site.disqus %} {% include disqus.html %} {% endif %}

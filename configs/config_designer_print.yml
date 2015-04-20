@@ -1,0 +1,79 @@
+# the audience for this site. even if you're not single sourcing, you still need to define an audience here.
+audience: designer
+
+# your project's title. appears in the top nav home button.
+title: Jekyll for Designers 2.0
+
+# currently the version is used only in the print cover
+version: 2.0
+
+# appears above the sidebar (optional)
+tagline: Guide for designers
+
+# the base hostname & protocol for your site (everything at the .com or .org and before)
+url: "http://idratherbewriting.com" 
+
+# the subpath of your site. If you're publishing to the root directory, just type "". Usually set this as your project name.
+baseurl: "/documentation-theme-jekyll/designer" 
+
+# this is how you will preview the site on your local machine. leave as is.
+host: 127.0.0.1 
+
+# specified here in case you have multiple sites and want to view them simultaneously in different tabs (you'll need different ports)
+port: 4005 
+
+markdown: redcarpet
+
+# options for the redcarpet markdown processing. leave as is, especially the "with_toc_data" or the mini-toc won't appear.
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+highlighter: rouge
+
+# put all files or directories that you want to exclude from your project here.
+exclude: 
+  - _drafts
+  - bower_components
+  - .idea 
+  - _site
+
+# these are defaults that get applied to each page or post's frontmatter. note that the default layout for pages is page_print instead of page.
+permalink: :title
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page_print"
+      comments: true
+      search: include
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+      search: include
+  -
+    scope:
+      path: ""
+      type: "tooltips"
+    values:
+      layout: "page"
+      tooltip: true
+      search: include
+
+sass:
+    sass_dir: _sass
+
+# this enables the tooltip collection.
+collections:
+  tooltips:
+    output: true
+
+# if you want to show a label on each page indicating the audience that can see the content, put true here.
+show_audience_label: false
+
+# is this a print build? if so, put true. otherwise, false.
+print: true

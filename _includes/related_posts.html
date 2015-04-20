@@ -1,0 +1,19 @@
+{% unless post.related_posts == none %}
+
+<hr />
+
+<h3>Related posts</h3>
+
+<ul>
+{% assign counter = '0' %}
+{% for post in site.related_posts %}
+{% if post.title != currentTitle and counter < '3' %}
+{% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
+<li><a href="{{ post.permalink | prepend: site.baseurl }}">{{post.title}}</a></li>
+{% endif %}
+{% endfor %}
+{% if counter == '0' %}<span class="noOtherPages"><p>No other pages.</p></span>
+{% endif %}       
+</ul>
+
+{% endunless %}

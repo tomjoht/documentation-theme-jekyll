@@ -1,0 +1,15 @@
+# You can store various options here, such as audience. Then you can access the option with {{site.data.options.audience}}. 
+# This allows you to do conditional logic. Options you set here work similarly to options set in the configuration file, 
+# but the advantage here is that you don't have to restart the jekyll server to see changes. Also note that you access this location
+# using site.data instead of just site. And the location of data is defined in the configuration file through the data-source property. 
+
+# Sample logic: 
+# {% if {{site.data.options.widget_toggle}} == "mac" %}
+# do this for mac
+# {% elsif {{site.data.options.widget_toggle}} == "pc" %}
+# do this for pc
+# {% endif %}
+
+# This logic works in Markdown and HTML. You can compress onto the same line if the spacing creates issues in Markdown.
+
+widget_toggle: mac

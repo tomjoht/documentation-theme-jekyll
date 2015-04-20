@@ -1,0 +1,31 @@
+---
+layout: archive
+title: Latest posts 
+permalink: /latest_posts/
+search: exclude
+related_pages: none
+---
+
+    {% for post in site.posts limit: 5 %}
+
+        <h3>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h3>
+         <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }} {% if post.author %} • by {{ post.author }} {% endif %} {% if post.tags %} • {{ post.tags | array_to_sentence_string }}{% endif %} {% if post.meta %} • {{ post.meta }}{% endif %}</p>
+
+
+  {{ post.excerpt }}
+  <p class="text-right"><a href="{{ post.url | prepend:site.baseurl }}">Continue Reading &rarr;</a></p>
+
+    
+    {% endfor %}
+
+<a class="rss-subscribe" href="{{ "/feed.xml" | prepend: site.baseurl }}"><button type="button" class="btn btn-default btn-lg"><span style="color:orange"><i class="fa fa-rss fa-lg"></i></span> <span style="color: #248EC2">RSS feed</span></button></a>
+
+
+
+
+<hr>
+<div class="home-read-more">
+  <a href="{{ "/archive" | prepend:site.baseurl }}" class="btn btn-primary btn-lg">View All {{ site.posts | size }} Articles →</a>
+</div>

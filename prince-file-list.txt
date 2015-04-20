@@ -1,0 +1,25 @@
+---
+layout: none
+---
+{% include conditions.html %}
+
+         {% for entry in sidebar %}
+           {% for subcategory in entry.subcategories %}
+              {% if subcategory.audience contains buildAudience %}
+                      {% for item in subcategory.items %}
+                         {% if item.audience contains buildAudience and item.print == true %}
+                            {{site.url}}{{item.url | prepend: site.baseurl}}index.html
+                                  {% for thirdlevel in item.thirdlevel %}
+                                     {% if thirdlevel.audience contains buildAudience %}
+                                                {% for deeplevel in thirdlevel.thirdlevelitems %}
+                                                   {% if deeplevel.audience contains buildAudience and deeplevel.print == true %}
+                                                      {{site.url}}{{item.url | prepend: site.baseurl}}index.html
+                                                   {% endif %}
+                                                {% endfor %}
+                                     {% endif %}
+                                  {% endfor %}
+                        {% endif %}
+                     {% endfor %}
+              {% endif %}
+          {% endfor %}
+         {% endfor %}

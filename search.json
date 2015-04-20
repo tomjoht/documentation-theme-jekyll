@@ -1,0 +1,37 @@
+---
+layout: none
+---
+[
+  {% for page in site.pages %}
+    {% if page.search == "include" %}
+    {
+      "title"    : "{{ page.title | escape }}",
+      "category" : "{{ page.category }}",
+      "url"      : "{{ site.baseurl }}{{ page.url }}",
+      "date"     : "{{ page.date }}",
+      "body": "{{ page.content | strip_html | strip_newlines | replace: '\', '\\\\' | replace: '"', '\\"' }}",
+      "excerpt": "{{ page.content | strip_html | strip_newlines | truncate: 140, '…' | replace: '\', '\\' | replace: '"', '\\"' }}"
+    } {% unless forloop.last %},{% endunless %}
+
+      {% endif %}
+  {% endfor %}
+
+    {% for post in site.posts %}
+        {% if forloop.length != 0 and forloop.first %},{% endif %}
+
+    {% if post.search == "include" %}
+    {
+      "title"    : "{{ post.title | escape }}",
+      "category" : "{{ post.category }}",
+      "tags"     : "{{ post.tags | array_to_sentence_string }}",
+      "url"      : "{{ site.baseurl }}{{ post.url }}",
+      "date"     : "{{ post.date }}",
+      "body": "{{ post.content | strip_html | strip_newlines | replace: '\', '\\\\' | replace: '"', '\\"' }}",
+      "excerpt": "{{ post.content | strip_html | strip_newlines | truncate: 140, '…' | replace: '\', '\\' | replace: '"', '\\"' }}"
+    } {% unless forloop.last %},{% endunless %}
+      {% endif %}
+  {% endfor %}
+]
+
+
+

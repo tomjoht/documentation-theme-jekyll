@@ -1,0 +1,42 @@
+@page {
+    @top-left {
+        content: "Designer User Guide";
+        font-style: italic;
+        font-size: 12px;
+    }
+    @top-right {
+        content: "Last generated ..."
+        font-size: 12px;
+        font-style: italic;
+    }
+    @bottom-right {
+        content: "Page " counter(page);
+        font-size: 12px;
+    }
+    @bottom-left {
+        content: "Send feedback to ...";
+        font-size: 12px;
+    }
+}
+
+contents {
+    page: cover;
+    counter-reset: page 0
+}
+
+@page cover {
+    @top-left {
+        content: "";
+    }
+    @top-right {
+        content: ""
+
+    }
+    @bottom-right {
+        content: "";
+    }
+    @bottom-left {
+        content: "";
+    }
+}
+

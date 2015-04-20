@@ -1,0 +1,64 @@
+body.print h2 {color: orange !important; font-size:22px;}
+body.print .container {max-width: 650px;}
+hr {border-top: 0px;}
+.nav ul li a {border-top:0px; background-color:transparent; }
+#navig a[href] {color: black !important;}
+table .table {max-width:650px;}
+
+#navig li.sectionHead {font-weight: bold; font-size: 18px;}
+#navig li {font-weight: normal;}
+
+#navig a[href]::after { content: leader(".") target-counter(attr(href), page); } 
+
+a[href]::after, a[href].noCrossRef::after {
+    content: " (page " target-counter(attr(href), page) ")"
+    }
+
+a[href^="http:"]::after, a[href^="https:"]::after {
+   content: " (" attr(href) ")";
+    }
+
+a[href] {
+   color: blue !important;
+    }
+a[href*="mailto"]::after {
+   content: "";
+    }
+
+a[href*=tar.giz]::after {
+    content: "";
+}
+
+div.guideTitleArea {
+    border-top:2px solid #c0c0c0;
+    padding: 20px 20px;
+    page-break-after: always;
+}
+
+div.guideTitle {
+    font-size: 34px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.titleVersion {
+    font-size: 18px;
+    font-color: gray;
+    font-style: italic;
+    margin-top:20px;
+    text-align: right;
+}
+div.titleImage {
+    padding-top:100px;
+    padding-bottom:330px;
+}
+
+@page { size: A4 }
+
+@page { margin: 40pt 60pt 40pt 60pt }
+
+
+
+/*
+h1::before, h1::after { content: "***" }
+*/
