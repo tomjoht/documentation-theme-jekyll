@@ -31,6 +31,11 @@ entries:
           audience: writer, designer
           print: true
 
+        - title: Troubleshooting
+          url: /troubleshooting/
+          audience: writer, designer
+          print: true
+
     - title: Formatting
       audience: writer, designer
       print: true
