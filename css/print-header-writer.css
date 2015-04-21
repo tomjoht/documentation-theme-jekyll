@@ -18,3 +18,25 @@
         font-size: 12px;
     }
 }
+
+contents {
+    page: cover;
+    counter-reset: page 0
+}
+
+@page cover {
+    @top-left {
+        content: "";
+    }
+    @top-right {
+        content: ""
+
+    }
+    @bottom-right {
+        content: "";
+    }
+    @bottom-left {
+        content: "";
+    }
+}
+

@@ -1,20 +1,20 @@
 # the audience for this site. even if you're not single sourcing, you still need to define an audience here.
-audience: writer
+audience: designer
 
 # your project's title. appears in the top nav home button.
-title: Jekyll for Technical Writers 2.0 
+title: Jekyll for Designers 2.0
 
 # currently the version is used only in the print cover
 version: 2.0
 
 # appears above the sidebar (optional)
-tagline: Guide for technical writers
+tagline: Guide for designers
 
 # the base hostname & protocol for your site (everything at the .com or .org and before)
-url: "http://idratherbewriting.com" 
+url: "http://127.0.0.1:4005"
 
 # the subpath of your site. If you're publishing to the root directory, just type "". Usually set this as your project name.
-baseurl: "/documentation-theme-jekyll/writer" 
+baseurl: "/documentation-theme-jekyll/designer-pdf"
 
 # this is how you will preview the site on your local machine. leave as is.
 host: 127.0.0.1 

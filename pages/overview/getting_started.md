@@ -46,11 +46,11 @@ The theme shows two build outputs: one for designers, and one for writers. Here'
 
 1. Using iTerm, create the directory where you want to install the project. I like using ~[username]/projects, because ~[username] is the default directory that appears when you open iTerm on a Mac. 
     
-```
-cd projects
-mkdir acme
-cd acme
-```
+    ```
+    cd projects
+    mkdir acme
+    cd acme
+    ```
     
 2. Once you're inside the folder for your project (for example, acme), type `git clone https://github.com/tomjohnson1492/documentation-theme-jekyll.git .` (The ` .` means to clone the github repo into the current directory. Make sure the directory is empty before cloning the theme in there.)
 3. In your new project folder, remove the .git folder, because no doubt you'll be customizing this project's content and committing it to another revision control repository.
@@ -62,10 +62,8 @@ cd acme
 6. Remove the content inside the pages folder, and then add your own pages in this pages folder. (Using subfolders and sub-subfolders inside the pages folder is all right -- you don't have to worry about folder paths in links.)
 7. Inside _data, open sidebar.yml and topnav.yml and customize the navigation. (Don't mess up the spacing or change any of the YML level names or the site or sidebar won't build.)
 8. In the root directory, rename build_writer.sh to build_[your audience].sh (same with build_designer.sh for additional outputs). In the files' contents, change the build parameters to point to the configuration file and output directory that you want. 
-
-    The `--config` parameter specifies the directory where the build reads the configuration file, and the `-o` parameter specifies the directory where the PDF is built.)
     
-    {{note}} For more information on setting up PDF builds, see {{create_pdf}}. You will need to set up Prince in order for the PDF build to work. {{end}}
+    {{note}} When you're just starting out, don't worry about setting up the PDF builds. This workflow is more complicated and somewhat touchy. See {{create_pdf}} for more details. You will need to set up Prince in order for the PDF build to work. {{end}}
 
 9. In the root directory, customize the index.md file. This file will be the homepage for all of your projects. Use conditional tags (for example, `if site.audience == "writer" ...`) to change the content for different builds of your site. See {{conditional_logic}} for more information.
 10. In the _includes folder, open linkrefs.html and add capture tags for all the pages in your site following the sample format shown. This will make it easy to link to each of the topics. (Don't remove the capture tags for the alerts and callouts.) 
