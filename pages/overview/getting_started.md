@@ -4,15 +4,15 @@ permalink: /getting_started/
 tags: getting-started
 audience: writer, designer
 ---
-
+{% include linkrefs.html %}
 ## Prerequisites
 
 * Mac computer (recommended). If you have a PC, you need to see [Jekyll on Windows](http://jekyllrb.com/docs/windows/). Make sure you can get Jekyll working on Windows before proceeding.
-* Ruby. This should already be installed. Type `which ruby` to confirm. 
+* [Ruby](https://www.ruby-lang.org/en/). This should already be installed. Type `which ruby` to confirm. 
 * [Rubygems](https://rubygems.org/pages/download). This is a package manager for Ruby (gems).
-* Jekyllrb. To install: `gem install jekyll`
-* * [Git](http://git-scm.com/download/mac). Type `which git` to see if you already have it installed.
-* text editor (some examples: Sublime Text, Atom, WebStorm, Emacs)
+* [Jekyllrb](http://jekyllrb.com/). To install: `gem install jekyll`
+* [Git](http://git-scm.com/download/mac). Type `which git` to see if you already have it installed.
+* Text editor (some examples: Sublime Text, Atom, WebStorm)
 * [iTerm](http://iterm.sourceforge.net/) - optional but recommended instead of Terminal. 
 
 {{warning}} These instructions are designed for users on Macs. Jekyllrb supposedly works on Windows but is not officially supported on that platform. See <a href="Jekyll on Windows">http://jekyllrb.com/docs/windows/</a> for more details. {{end}}
@@ -54,26 +54,28 @@ cd acme
     
 2. Once you're inside the folder for your project (for example, acme), type `git clone https://github.com/tomjohnson1492/documentation-theme-jekyll.git .` (The ` .` means to clone the github repo into the current directory. Make sure the directory is empty before cloning the theme in there.)
 3. In your new project folder, remove the .git folder, because no doubt you'll be customizing this project's content and committing it to another revision control repository.
-4. In the theme's configs directory, rename config_writer.yml to config_[your audience].yml and customize all the values inside that file based on the instructions in that file. Do the same with config_designer.yml and continue to clone the config file for other audiences. 
+4. In the theme's configs directory, rename config_writer.yml to config_[your audience].yml and customize all the values inside that file based on the instructions in that file. Do the same with config_designer.yml and continue to clone and customize the config file for other audiences. 
     
-In this theme, each output requires an individual config file. Each print output requires a separate config file. If you have 10 audiences and you want both web and PDF outputs for each audience, then you'll have 20 config files in this directory.
+    In this theme, each output requires an individual config file. Each print output requires a separate config file. If you have 10 audiences and you want both web and PDF outputs for each audience, then you'll have 20 config files in this directory.
 
-5. In the _includes directory, open conditions.html and customize the values there specific to your outputs. (Basically, replace `writer` with your audience, and `designer` with another audience.)
-6. Remove the content inside the pages folder, and then add your own pages in this pages folder. (Using subfolders and sub-subfolders inside pages is all right -- you don't have to worry about folder paths in links.)
+5. In the _includes directory, open conditions.html and customize the values there specific to your outputs. (Basically, replace `writer` with your audience, and `designer` with another audience.) The conditions.html file is used to apply different audience requirements to the sidebar and other files.
+6. Remove the content inside the pages folder, and then add your own pages in this pages folder. (Using subfolders and sub-subfolders inside the pages folder is all right -- you don't have to worry about folder paths in links.)
 7. Inside _data, open sidebar.yml and topnav.yml and customize the navigation. (Don't mess up the spacing or change any of the YML level names or the site or sidebar won't build.)
-8. In the root directory, rename build_writer.sh to build_[your audience].sh (same with build_designer.sh for additional outputs). In the files' contents, change the build parameters to point to the configuration file and destination/output directory that you want. The `--config` parameter specifies the directory where the build reads the configuration file, and the `-o` parameter specifies the directory where the PDF is built.
+8. In the root directory, rename build_writer.sh to build_[your audience].sh (same with build_designer.sh for additional outputs). In the files' contents, change the build parameters to point to the configuration file and output directory that you want. 
+
+    The `--config` parameter specifies the directory where the build reads the configuration file, and the `-o` parameter specifies the directory where the PDF is built.)
     
-{{note}} See <a href="{{ /create_pdf | prepend: site.baseurl }}">Creating a PDF</a> for more details on creating PDF documents. You will need to set up Prince in order for the PDF build to work. {{end}}
+    {{note}} For more information on setting up PDF builds, see {{create_pdf}}. You will need to set up Prince in order for the PDF build to work. {{end}}
 
-9. In the root directory, customize the index.md file. This file will be the homepage for each of your projects. Use conditional tags to change the content for different builds of your site. See {{conditional_logic}} for more information.
-10. In the _includes folder, open linkrefs.html and add capture tags for all the pages in your site following the sample format  shown. This will make it easy to link to each of the topics. (Don't remove the capture tags for the alerts and callouts.)
-11. In the _includes folder, open footer.html and customize the content. If you have different footers for different outputs, use conditional tags.
+9. In the root directory, customize the index.md file. This file will be the homepage for all of your projects. Use conditional tags (for example, `if site.audience == "writer" ...`) to change the content for different builds of your site. See {{conditional_logic}} for more information.
+10. In the _includes folder, open linkrefs.html and add capture tags for all the pages in your site following the sample format shown. This will make it easy to link to each of the topics. (Don't remove the capture tags for the alerts and callouts.) 
+11. For each of your pages where you want to insert a link, note, or callout, add {%raw%}`{% include linkrefs.html %}`{%endraw%}  directly below the frontmatter.
+12. In the _includes folder, open footer.html and customize the content. If you have different footers for different outputs, use conditional tags as you did on index.md.
 12. In the layouts folder, open page.html and customize the values in the `site.show_audience_label` section. These are labels that appear on the page based on the audience attributes in the frontmatter for that page. If you want these shown, make sure you have `true` set for the `site.show_audience_label` property in your config file.
-11. Build your site with `. build_writer.sh` and preview it at the URL provided.
+11. Build your site with `. build_acme.sh` and preview it at the URL provided.
 
-If you have 10 different outputs, you'll have 10 separate configuration files in your configs directory, and probably 10 different shell scripts containing build arguments for each configuration.
 
-{{callout_info}}If you have multiple outputs, you probably don't want to use Github Pages to publish your site, since Github Pages looks for a _config.yml file in the root directory and uses that to build a site in the gh-pages branch of your repository. You can't instruct Github pages to look in another directory for the right configuration file. Instead, you'll probably have a better experience publishing to a Amazon Web Services S3 bucket or some other web host.{{end}}
+{{callout_info}}<b>Publishing to web hosts:</b> If you have multiple outputs, you probably don't want to use Github Pages to publish your site, since Github Pages looks for a _config.yml file in the root directory and uses that to build a site in the gh-pages branch of your repository. You can't instruct Github pages to look in another directory for the right configuration file. Instead, you'll probably have a better experience publishing to a Amazon Web Services S3 bucket or some other web host.{{end}}
 
 ## Questions
 
