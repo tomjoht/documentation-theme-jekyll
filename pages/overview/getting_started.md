@@ -67,7 +67,8 @@ In this theme, each output requires an individual config file. Each print output
 
 9. In the root directory, customize the index.md file. This file will be the homepage for each of your projects. Use conditional tags to change the content for different builds of your site. See {{conditional_logic}} for more information.
 10. In the _includes folder, open linkrefs.html and add capture tags for all the pages in your site following the sample format  shown. This will make it easy to link to each of the topics. (Don't remove the capture tags for the alerts and callouts.)
-11. In t he _includes folder, open footer.html and customize the content. If you have different footers for different outputs, use conditional tags.
+11. In the _includes folder, open footer.html and customize the content. If you have different footers for different outputs, use conditional tags.
+12. In the layouts folder, open page.html and customize the values in the `site.show_audience_label` section. These are labels that appear on the page based on the audience attributes in the frontmatter for that page. If you want these shown, make sure you have `true` set for the `site.show_audience_label` property in your config file.
 11. Build your site with `. build_writer.sh` and preview it at the URL provided.
 
 If you have 10 different outputs, you'll have 10 separate configuration files in your configs directory, and probably 10 different shell scripts containing build arguments for each configuration.
