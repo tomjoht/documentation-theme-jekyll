@@ -31,6 +31,9 @@ This process for creating a PDF relies on Prince to transform the HTML content i
 6. In the project's root directory, the logic in the prince-file-list.txt will pull all files from the sidebar.yml file to be included in the PDF. You can adjust any of the logic there as needed, but you shouldn't need to do anything to the file.
 5. In the root directory, rename the build_writer_pdf.sh file and customize its contents to point to the right paths on your computer.
 5. In the root directory, rename the build_writer_prince.sh file and customize the input and output directories. The input should point to where this project builds, so the script can find the processed prince-file-list.txt file and so it knows where to build the output. 
+6. In the root directory, open titlepage.html and customize the link to the logo and other details. The `site_print_title` and `site_version` variables will pull from the config_writer_pdf.yml file, so make sure there are values defined there. The titlepage.html also constructs the TOC by looping through the sidebar.yml file in the same way that the sidebar.html file loops through it. The main purpose is to replicate the hierarchy (headings and subitems). 
+7. The titlepage.html file is specified in the sidebar.yml file, with a property of `web: false` so that it's not included in the online output. Very few items are specific to print only, but if you have other, add `web: false` to them to ensure they are likewise excluded from the online output.
+7. Open the _data/sidebar.yml file and add `print: true` or `print: false` depending on what files you want to include in the PDF.
 7. In iTerm, first run `. build_writer_pdf.sh` to get the pdf version of the content ready.
 8. Now run `. build_writer_prince.sh` to generate the PDF from this version. 
 8. Check for links to non-existent topics in the PDF by looking for "page 0".

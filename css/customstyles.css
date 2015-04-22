@@ -62,7 +62,17 @@
 .gi-5x{font-size: 5em;}
 
 
+.fa-6x{font-size:900%;}
+.fa-7x{font-size:1100%;}
+.fa-8x{font-size:1300%;}
+.fa-9x{font-size:1500%;}
+.fa-10x{font-size:1700%;}
 
+i.border {
+
+    padding: 10px 20px;
+    background-color: whitesmoke;
+}
 
 
 .breadcrumb > .active {color: #777 !important;}

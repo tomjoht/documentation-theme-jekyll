@@ -8,16 +8,18 @@ This shows a sample layout for a knowledge base. Each square could link to a tag
 
 
 <div class="row">
-          <div class="col-md-4"><a href="{{ "/tag-getting-started" | prepend: site.baseurl }}"><img src="//placehold.it/300x300" class="img-responsive"></a></div>
-          <div class="col-md-4"><a href="{{ "/tag-overview" | prepend: site.baseurl }}"><img src="//placehold.it/300x300" class="img-responsive"></a></div>
-          <div class="col-md-4"><a href="{{ "/tag-single-sourcing" | prepend: site.baseurl }}"><img src="//placehold.it/300x300" class="img-responsive"></a></div>
+          <div class="col-md-4"><a href="{{ "/tag-getting-started" | prepend: site.baseurl }}"><i class="fa fa-server fa-7x border"></i></a></div>
+          <div class="col-md-4"><a href="{{ "/tag-overview" | prepend: site.baseurl }}"><i class="fa fa-bar-chart-o fa-7x border"></i></a></div>
+          <div class="col-md-4"><a href="{{ "/tag-single-sourcing" | prepend: site.baseurl }}"><i class="fa fa-code fa-7x border"></i></a></div>
 </div>
 <p>&nbsp;</p>
 <div class="row">
-          <div class="col-md-4"><a href="{{ "/tag-publishing" | prepend: site.baseurl }}"><img src="//placehold.it/300x300" class="img-responsive"></a></div>
-          <div class="col-md-4"><a href="{{ "/tag-special-layouts" | prepend: site.baseurl }}"><img src="//placehold.it/300x300" class="img-responsive"></a></div>
-          <div class="col-md-4"><a href="{{ "/tag-formtting" | prepend: site.baseurl }}"><img src="//placehold.it/300x300" class="img-responsive"></a></div>
+          <div class="col-md-4"><a href="{{ "/tag-publishing" | prepend: site.baseurl }}"><i class="fa fa-dashboard fa-7x border"></i></a></div>
+          <div class="col-md-4"><a href="{{ "/tag-special-layouts" | prepend: site.baseurl }}"><i class="fa fa-desktop fa-7x border"></i></a></div>
+          <div class="col-md-4"><a href="{{ "/tag-formtting" | prepend: site.baseurl }}"><i class="fa fa-cloud fa-7x border"></i></a></div>
 </div>
+        
+        
         
 ## Linking to non-tag archive pages
 

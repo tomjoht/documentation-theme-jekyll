@@ -80,6 +80,13 @@ And the result:
 
 Grab the right class name from the [Font Awesome library](http://fortawesome.github.io/Font-Awesome/icons/) and then implement it by following the pattern shown previously.
 
+If you want to make your fonts even larger than the 5x style, add a custom style to your stylesheet like this:
+
+```css
+.fa-10x{font-size:1700%;}
+```
+
+Then any element with the attribute `fa-10x` will be enlarged 1700%.
 
 ## Glyphicon icons available
 

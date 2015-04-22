@@ -17,10 +17,9 @@ url: "http://127.0.0.1:4005"
 baseurl: "/documentation-theme-jekyll/writer-pdf"
 
 # this is how you will preview the site on your local machine. leave as is.
-host: 127.0.0.1 
+host: 127.0.0.1
 
-# specified here in case you have multiple sites and want to view them simultaneously in different tabs (you'll need different ports)
-port: 4004
+port: 4005 # specified here in case you have multiple sites and want to view them simultaneously (you'll need different ports)
 
 markdown: redcarpet
 
