@@ -46,3 +46,9 @@ $( document ).ready(function() {
    $( "#mysidebar" ).attr("class", "nav affix");
    }
 });
+
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip({
+        placement : 'top'
+    });
+});
