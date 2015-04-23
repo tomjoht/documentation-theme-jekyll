@@ -14,6 +14,7 @@ audience: writer, designer
 * [Git](http://git-scm.com/download/mac). Type `which git` to see if you already have it installed.
 * Text editor (some examples: Sublime Text, Atom, WebStorm)
 * [iTerm](http://iterm.sourceforge.net/) - optional but recommended instead of Terminal. 
+* [pygments](http://pygments.org/download/) - Pygments handles syntax highlighting. In my experiments, the highlighting seemed better than the default rouge. To install Pygments, you will need Python installed. (If you don't install pygments, you'll get an error when you build the theme.)
 
 {{warning}} These instructions are designed for users on Macs. Jekyllrb supposedly works on Windows but is not officially supported on that platform. See <a href="Jekyll on Windows">http://jekyllrb.com/docs/windows/</a> for more details. {{end}}
 

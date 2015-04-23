@@ -36,7 +36,7 @@ markdown: redcarpet
 # options for the redcarpet markdown processing. leave as is, especially the "with_toc_data" or the mini-toc won't appear.
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
-highlighter: rouge
+highlighter: pygments
 
 # put all files or directories that you want to exclude from your project here.
 exclude: 

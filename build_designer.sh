@@ -1,1 +1,1 @@
-jekyll serve --config configs/config_designer.yml --destination /users/tjohnson/projects/documentation-theme-jekyll-builds/designer
+jekyll serve --config configs/config_designer.yml --destination ../documentation-theme-jekyll-builds/designer

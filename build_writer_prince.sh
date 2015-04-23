@@ -1,1 +1,1 @@
-prince --input-list=/users/tjohnson/projects/documentation-theme-jekyll-builds/writer-pdf/prince-file-list.txt -o /users/tjohnson/projects/documentation-theme-jekyll-builds/pdf-output/writer.pdf
+prince --input-list=../documentation-theme-jekyll-builds/writer-pdf/prince-file-list.txt -o ../documentation-theme-jekyll-builds/pdf-output/writer.pdf
