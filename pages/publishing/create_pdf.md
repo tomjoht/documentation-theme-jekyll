@@ -3,7 +3,7 @@ title: Create PDF
 permalink: /create_pdf/
 tags: publishing
 ---
-
+{% include linkrefs.html %}
 {% comment %}
 remaining tasks:
 
@@ -28,6 +28,7 @@ This process for creating a PDF relies on Prince to transform the HTML content i
 3. In the css folder, open the print-header-writer.css and print-header-designer.css files. Change the filenames to your audiences. Customize what appears in each of the page margins.
 4. In the default_print.html file in the layout folder, customize the conditional logic to match your audience with the stylesheets you created in the previous step.
 5. In the _data folder, open sidebar.yml and add `print: true` for each page that you want to appear in the print version. (The pages in the topnav aren't pushed to PDF, so if you need some of the pages there, add them to the sidebar and add a `web: false` property to each of them (in addition to a `print: true` property).)
+    {{note}} In addition to adding the right audience to the page, you must also add the audience to the section's audience attribute. This is because the theme logic first checks whether the section contains the right audience attribute, and then checks whether the items in that section have the right audience attribute.{{end}}
 6. In the project's root directory, the logic in the prince-file-list.txt will pull all files from the sidebar.yml file to be included in the PDF. You can adjust any of the logic there as needed, but you shouldn't need to do anything to the file.
 5. In the root directory, rename the build_writer_pdf.sh file and customize its contents to point to the right paths on your computer.
 5. In the root directory, rename the build_writer_prince.sh file and customize the input and output directories. The input should point to where this project builds, so the script can find the processed prince-file-list.txt file and so it knows where to build the output. 

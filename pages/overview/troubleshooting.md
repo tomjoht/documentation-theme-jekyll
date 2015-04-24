@@ -3,9 +3,11 @@ title: Troubleshooting
 permalink: /troubleshooting/
 ---
 
-## Address already in use
+## Issues building the site
 
-When you try to build the site, you get this error: 
+### Address already in use
+
+When you try to build the site, you get this error in iTerm: 
 
 ```
 jekyll 2.5.3 | Error:  Address already in use - bind(2)
@@ -20,8 +22,22 @@ Find the PID (for example, it  looks like "22298").
 
 Then type `kill -9 22298` where "22298" is the PID.
 
-## "page 0" cross references in the PDF
+### Pygments not installed
 
- If you see "page 0" cross-references in the PDF, the URL doesn't exist. Check to make sure you actually included this page in the build. If it's not a page but rather a file, you need to add a class to the file so that your print stylesheet excludes the counter from it. Try adding `class="noCrossRef"` as an attribute to the link. In the css/printstyles.css file, there is a style that should remove the counter from anchor elements with this class.
+The config file requires pygments for the highlighter. You must [download and install Pygments]([pygments](http://pygments.org/download/)), which requires Python, in order to use this syntax highlighter. If you don't want to bother with Pygments, open the configuration file and change `pygments` to `rouge`.
+
+## PDF issues
+
+### "page 0" cross references in the PDF
+
+ If you see "page 0" cross-references in the PDF, the URL doesn't exist. Check to make sure you actually included this page in the build. 
+ 
+ If it's not a page but rather a file, you need to add a class to the file so that your print stylesheet excludes the counter from it. Try adding `class="noCrossRef"` as an attribute to the link. In the css/printstyles.css file, there is a style that should remove the counter from anchor elements with this class.
+ 
+ ### The PDF is blank
+ 
+ Check the prince-file-list.txt file in the output to see if it contains links. If not, you have something wrong with the logic in the prince-file-list.txt file. Check the conditions.html file in your _includes to see if the audience specified in your configuration file aligns with the buildAudience in the conditions.html file
+ 
+ 
 
 

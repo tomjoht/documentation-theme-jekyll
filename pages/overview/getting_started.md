@@ -9,41 +9,48 @@ audience: writer, designer
 
 * Mac computer (recommended). If you have a PC, you need to see [Jekyll on Windows](http://jekyllrb.com/docs/windows/). Make sure you can get Jekyll working on Windows before proceeding.
 * [Ruby](https://www.ruby-lang.org/en/). This should already be installed. Type `which ruby` to confirm. 
-* [Rubygems](https://rubygems.org/pages/download). This is a package manager for Ruby (gems).
-* [Jekyllrb](http://jekyllrb.com/). To install: `gem install jekyll`
+* [Rubygems](https://rubygems.org/pages/download). This is a package manager for Ruby (gems). Type `which gem` to confirm.
+* [Jekyllrb](http://jekyllrb.com/). To install: `gem install jekyll`. Type `which jekyll` to confirm.
 * [Git](http://git-scm.com/download/mac). Type `which git` to see if you already have it installed.
 * Text editor (some examples: Sublime Text, Atom, WebStorm)
 * [iTerm](http://iterm.sourceforge.net/) - optional but recommended instead of Terminal. 
-* [pygments](http://pygments.org/download/) - Pygments handles syntax highlighting. In my experiments, the highlighting seemed better than the default rouge. To install Pygments, you will need Python installed. (If you don't install pygments, you'll get an error when you build the theme.)
+* [pygments](http://pygments.org/download/) - Pygments handles syntax highlighting. In my experiments, the highlighting seemed better than the default rouge highlighter. To install Pygments, you will need Python installed. (If you don't install pygments, you'll get an error when you build the theme.)
 
 {{warning}} These instructions are designed for users on Macs. Jekyllrb supposedly works on Windows but is not officially supported on that platform. See <a href="Jekyll on Windows">http://jekyllrb.com/docs/windows/</a> for more details. {{end}}
 
 ## Build the theme
 
-Because this theme is intended to build multiple outputs from the same project, it doesn't use the default _config.yml file like other Jekyll themes. Instead, each different output has its own config file in the configs directory. 
+{{important}} Because this theme is intended to build multiple outputs from the same project, it doesn't use the default _config.yml file like other Jekyll themes. Instead, each different output has its own config file in the configs directory. As a result, you can't type `jekyll serve` to build the theme, since this command looks for the _config.yml file in your project directory.{{end}}
 
-Each config file has a different preview port and build destination. It also specifies a different audience.
+1. Download the theme from the [documentation-theme-jekyll Github repository](https://github.com/tomjohnson1492/documentation-theme-jekyll). 
+    You can either download it directly by clicking the **Download Zip** button on the right, or use git to clone the repository to your local machine. Note, however, that you won't be using the pull command to update the theme since you'll be customizing it with your own content and won't want to overwrite those customizations.
+2. Note some unique aspects of this theme: *There's a separate config file for each unique output you're building.* Each config file has a different preview port and build destination. It also specifies a different audience.
+    
+    In general, you build the sites by using more specific build commands, like this:
 
-You build the sites by using more specific build commands, like this:
-
+    ```
+jekyll serve --config configs/config_writer.yml --destination ../documentation-theme-jekyll-builds/writer
 ```
-jekyll serve --config configs/config_writer.yml --destination /users/tjohnson/projects/documentation-theme-jekyll-builds/writer
-```
-Because these commands are long and bulky, it's easier to store them in a small shell script and then run the script. In the root directory, you'll find build_writer.sh, which simply contains this build argument. Instead of running the command above, run the following:
+    Because these commands are long and bulky, it's easier to store them in a small shell script and then run the script. 
+3. In the root directory, you'll find build_writer.sh, which simply contains this build argument. Instead of running the command above, run the following:
 
 ```
 . build_writer.sh
 ```
-
-If you run into permissions errors trying to run the .sh file, you may need to change the file permissions to make the sh file executable. To do that, browse to the directory containing build_writer.sh and run the following:
-
-```
+    
+    If you run into permissions errors trying to run the .sh file, you may need to change the file permissions to make the sh file executable. If you find you need to make the file writable (because iTerm won't execute it), browse to the directory containing build_writer.sh and run the following:
+    
+    ```
 chmod +x build_writer.sh
 ```
 
+If the theme builds successfully, great. You can move on to the next section: Customizing the theme. If you run into errors building the basic theme, you must solve them before moving on. See {{troubleshooting}} for more information.
+
 ## Customizing the theme
 
-The theme shows two build outputs: one for designers, and one for writers. Here's how you would customize the theme. In these instructions, I'll assume your project's name is "acme."
+The theme shows two build outputs: one for designers, and one for writers. The dual outputs is an example of the single sourcing nature of the theme. Here's how you would customize the theme. 
+
+{{important}} In these instructions, I'll assume your project's name is "acme."{{end}}
 
 1. Using iTerm, create the directory where you want to install the project. I like using ~[username]/projects, because ~[username] is the default directory that appears when you open iTerm on a Mac. 
     

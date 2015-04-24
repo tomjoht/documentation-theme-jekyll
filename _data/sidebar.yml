@@ -86,9 +86,9 @@ entries:
           audience: writer, designer
           print: true
 
-        - title: Adding Tooltips
+        - title: Tooltips
           url: /adding_tooltips/
-          add: writer, designer
+          audience: writer, designer
           print: true
 
 
