@@ -22,6 +22,14 @@ Find the PID (for example, it  looks like "22298").
 
 Then type `kill -9 22298` where "22298" is the PID.
 
+### build_writer.sh file not executable
+
+If you run into permissions errors trying to run the build_writer.sh file, you may need to change the file permissions to make the sh file executable. Browse to the directory containing build_writer.sh and run the following:
+    
+```
+chmod +x build_writer.sh
+```
+
 ### Pygments not installed
 
 The config file requires pygments for the highlighter. You must [download and install Pygments]([pygments](http://pygments.org/download/)), which requires Python, in order to use this syntax highlighter. If you don't want to bother with Pygments, open the configuration file and change `pygments` to `rouge`.
@@ -37,6 +45,7 @@ The config file requires pygments for the highlighter. You must [download and in
  ### The PDF is blank
  
  Check the prince-file-list.txt file in the output to see if it contains links. If not, you have something wrong with the logic in the prince-file-list.txt file. Check the conditions.html file in your _includes to see if the audience specified in your configuration file aligns with the buildAudience in the conditions.html file
+ 
  
  
 

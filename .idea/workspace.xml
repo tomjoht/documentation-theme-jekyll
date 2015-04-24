@@ -157,8 +157,8 @@
       <file leaf-file-name="getting_started.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/overview/getting_started.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21314387">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.77264655">
+              <caret line="95" column="284" selection-start-line="95" selection-start-column="284" selection-end-line="95" selection-end-column="284" />
               <folding />
             </state>
           </provider>
@@ -167,11 +167,34 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="linkrefs.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_includes/linkrefs.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-5.0">
+              <caret line="8" column="101" selection-start-line="8" selection-start-column="101" selection-end-line="8" selection-end-column="101" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="troubleshooting.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/overview/troubleshooting.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.462963">
-              <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+            <state vertical-scroll-proportion="-5.240741">
+              <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="MarkdownPreviewEditor">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="use_git_to_download_theme.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_drafts/use_git_to_download_theme.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -195,8 +218,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pages/profile_matching/matching_overview.md" />
-        <option value="$PROJECT_DIR$/printtoc.html" />
         <option value="$PROJECT_DIR$/buildfiles/config_resolve_fe.yml" />
         <option value="$PROJECT_DIR$/buildfiles/config_resolve_customer.yml" />
         <option value="$PROJECT_DIR$/buildfiles/config_resolve_customer_print.yml" />
@@ -244,8 +265,10 @@
         <option value="$PROJECT_DIR$/pages/formatting/adding_tooltips.md" />
         <option value="$PROJECT_DIR$/_data/sidebar.yml" />
         <option value="$PROJECT_DIR$/pages/publishing/create_pdf.md" />
-        <option value="$PROJECT_DIR$/pages/overview/getting_started.md" />
+        <option value="$PROJECT_DIR$/_includes/linkrefs.html" />
         <option value="$PROJECT_DIR$/pages/overview/troubleshooting.md" />
+        <option value="$PROJECT_DIR$/_drafts/2015-02-05-troubleshooting.md" />
+        <option value="$PROJECT_DIR$/pages/overview/getting_started.md" />
       </list>
     </option>
   </component>
@@ -502,6 +525,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="_drafts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resolve" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="documentation-theme-jekyll" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="_data" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -661,14 +698,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/css/customstyles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/overview/troubleshooting.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -826,13 +855,6 @@
       </provider>
       <provider editor-type-id="MarkdownPreviewEditor">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/linkrefs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.0">
-          <caret line="25" column="106" selection-start-line="25" selection-start-column="106" selection-end-line="25" selection-end-column="106" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/titlepage.html">
@@ -1060,10 +1082,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/linkrefs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0">
+          <caret line="8" column="101" selection-start-line="8" selection-start-column="101" selection-end-line="8" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pages/overview/troubleshooting.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.462963">
-          <caret line="38" column="39" selection-start-line="38" selection-start-column="39" selection-end-line="38" selection-end-column="39" />
+        <state vertical-scroll-proportion="-5.240741">
+          <caret line="48" column="1" selection-start-line="48" selection-start-column="1" selection-end-line="48" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_drafts/use_git_to_download_theme.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1073,8 +1114,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/overview/getting_started.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21314387">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.77264655">
+          <caret line="95" column="284" selection-start-line="95" selection-start-column="284" selection-end-line="95" selection-end-column="284" />
           <folding />
         </state>
       </provider>
