@@ -3,7 +3,11 @@ title: Build arguments
 permalink: /build_arguments/
 tags: [single-sourcing, publishing]
 audience: writer, designer
+keywords: 
+last_updated: 
+summary: 
 ---
+{% include linkrefs.html %} 
 
 ## How to build Jekyll sites
 

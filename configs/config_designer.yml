@@ -20,7 +20,10 @@ baseurl: "/documentation-theme-jekyll/designer"
 host: 127.0.0.1 
 
 # specified here in case you have multiple sites and want to view them simultaneously in different tabs (you'll need different ports)
-port: 4007 
+port: 4007
+
+# Add a feedback email for the top navigation bar
+feedback_email: tomjohnson1492@gmail.com
 
 # whether you want the sidebar to use an accordion, such that other sections collapse when one expands.
 sidebar_accordion: true
@@ -55,7 +58,7 @@ defaults:
     values:
       layout: "page"
       comments: true
-      search: include
+      search: true
   -
     scope:
       path: ""
@@ -63,7 +66,7 @@ defaults:
     values:
       layout: "post"
       comments: true
-      search: include
+      search: true
   -
     scope:
       path: ""
@@ -71,7 +74,7 @@ defaults:
     values:
       layout: "page"
       tooltip: true
-      search: include
+      search: true
 
 sass:
     sass_dir: _sass

@@ -3,7 +3,11 @@ title: Documentation theme for Jekyll
 permalink: "/"
 audience: writer, designer
 tags: getting-started
+keywords: 
+last_updated: 
+summary: 
 ---
+{% include linkrefs.html %} 
 
 This is a Jekyll theme intended for documentation projects. What makes this theme unique is the approach in using Jekyll for single sourcing, that is, producing multiple outputs from the same theme. For example, you might have 3 different help systems that you're generating from the same Jekyll project files. More than anything, this Jekyll theme shows you how to use Jekyll for documentation projects from the perspective of a technical writer. 
 

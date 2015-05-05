@@ -3,7 +3,11 @@ title: Create a Help API
 permalink: /help_api/
 tags: publishing
 audience: writer, designer
+keywords: 
+last_updated: 
+summary: 
 ---
+{% include linkrefs.html %} 
 
 You can create a help API that developers can use to pull in content. 
 

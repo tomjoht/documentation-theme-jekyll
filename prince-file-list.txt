@@ -1,8 +1,8 @@
 ---
 layout: none
-search: exclude
+search: false
 ---
-{% include conditions.html %}
+{% include custom/conditions.html %}
 
          {% for entry in sidebar %}
            {% for subcategory in entry.subcategories %}

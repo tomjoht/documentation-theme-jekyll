@@ -1,3 +1,18 @@
+<!-- Send feedback function -->
+<script>
+    function SendLinkByMail(href) {
+        var subject= "{{site.title}} {{site.version}} documentation feedback";
+        var body = "I have some feedback about the {{page.title}} page: ";
+        body += window.location.href;
+        body += "";
+        var uri = "mailto:{{site.feedback_email}}?subject=";
+        uri += encodeURIComponent(subject);
+        uri += "&body=";
+        uri += encodeURIComponent(body);
+        window.location.href = uri;
+    }
+</script>
+
 <!-- Navigation -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
    <div class="container topnavlinks">
@@ -8,13 +23,13 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       </button>
-      <a class="fa fa-home fa-lg navbar-brand" href="{{ "/index.html" | prepend: site.baseurl }}">&nbsp;<span class="projectTitle"> {{site.title}}</span></a>
+      <a class="fa fa-home fa-lg navbar-brand" href="{{ "/index.html" | prepend: site.baseurl }}">&nbsp;<span class="projectTitle"> {{site.title}} {{1.0}}</span></a>
    </div>
    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
       <!-- entries without drop-downs appear here -->
       <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
-      {% include conditions.html %}
+      {% include custom/conditions.html %}
 
       {% for entry in topnav %}
         {% for subcategory in entry.subcategories %}
@@ -22,13 +37,16 @@
             {% if subcategory.external_url %}
                 <li><a href="{{subcategory.external_url}}" target="_blank">{{subcategory.title}}</a></li>
             {% elsif page.url contains subcategory.url %}
-                <li class="active"><a href="{{subcategory.url | prepend: site.baseurl}}" class="active">{{subcategory.title}}</a></li>
+                <li class="active"><a href="{{subcategory.url | prepend: site.baseurl}}index.html" class="active">{{subcategory.title}}</a></li>
             {% else %}
-                <li><a href="{{subcategory.url | prepend: site.baseurl}}">{{subcategory.title}}</a></li>
+                <li><a href="{{subcategory.url | prepend: site.baseurl}}index.html">{{subcategory.title}}</a></li>
             {% endif %}
           {% endif %}
         {% endfor %}
       {% endfor %}
+      {% if site.feedback_email %}<li><a class="fa fa-envelope-o mailto" href="javascript:(function()%7BSendLinkByMail()%3B%7D)()%3B"> Feedback</a></li>{% endif %}
+
+
       <!-- entries with drop-downs appear here -->
       <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
 
@@ -44,9 +62,9 @@
                     {% if subitem.external_url %}
                       <li><a href="{{subitem.external_url}}" target="_blank">{{subitem.title}}</a></li>
                     {% elsif page.url contains subitem.url %}
-                      <li class="dropdownActive"><a href="{{subitem.url | prepend: site.baseurl}}">{{subitem.title}}</a></li>
+                      <li class="dropdownActive"><a href="{{subitem.url | prepend: site.baseurl}}index.html">{{subitem.title}}</a></li>
                     {% else %}
-                     <li><a href="{{subitem.url | prepend: site.baseurl}}">{{subitem.title}}</a></li>
+                     <li><a href="{{subitem.url | prepend: site.baseurl}}index.html">{{subitem.title}}</a></li>
                     {% endif %}
                   {% endif %}
                 {% endfor %}
@@ -75,6 +93,8 @@
          </script>
          <!-- end search -->
       </li>
+    
+
    </div>
    <!-- /.container -->
 </nav>

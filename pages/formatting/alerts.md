@@ -3,8 +3,12 @@ title: Alerts
 permalink: /alerts/
 audience: writer, designer
 tags: formatting
+keywords: 
+last_updated: 
+summary: 
 ---
-{% include linkrefs.html %}
+{% include linkrefs.html %} 
+
 Alerts are little warnings, info, or other messages that you have called out in special formatting. In order to use these alerts or callouts, put this include at the top of your page, just below your frontmatter:
 
 {%raw%}

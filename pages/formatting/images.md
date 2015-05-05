@@ -3,7 +3,11 @@ title: Images
 permalink: /images/
 audience: writer, designer
 tags: formatting
+keywords: 
+last_updated: 
+summary: 
 ---
+{% include linkrefs.html %} 
 
 You embed an image the same way you embed other files or assets: you put the file into a folder, and then link to that file. The difference here is that the asset doesn't have a permalink, so here the file path actually matters.
 

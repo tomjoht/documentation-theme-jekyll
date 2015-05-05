@@ -21,6 +21,7 @@ host: 127.0.0.1
 
 port: 4005 # specified here in case you have multiple sites and want to view them simultaneously (you'll need different ports)
 
+feedback_email: tomjohnson1492@gmail.com
 
 markdown: redcarpet
 
@@ -46,7 +47,7 @@ defaults:
     values:
       layout: "page_print"
       comments: true
-      search: include
+      search: true
   -
     scope:
       path: ""
@@ -54,7 +55,7 @@ defaults:
     values:
       layout: "post"
       comments: true
-      search: include
+      search: true
   -
     scope:
       path: ""
@@ -62,7 +63,7 @@ defaults:
     values:
       layout: "page"
       tooltip: true
-      search: include
+      search: true
 
 sass:
     sass_dir: _sass

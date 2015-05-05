@@ -3,7 +3,11 @@ title: Labels
 permalink: /labels/
 audience: writer, designer
 tags: formatting
+keywords: 
+last_updated: 
+summary: 
 ---
+{% include linkrefs.html %} 
 
 These labels might come in handy for labeling things, such as POST, DELETE, UPDATE methods for endpoints. You can use any classes from Bootstrap in your content.
 

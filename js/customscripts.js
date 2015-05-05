@@ -30,10 +30,19 @@ function setNavigation() {
 
         }
 
-    });
+            $("ul.pagination a").each(function () {
+        var href = $(this).attr('href');
+        if (path.substring(0, href.length) === href) {
+            $(this).closest('li').addClass('active');
+             $(this).closest('li').parents().addClass('active');
 
-}
+        }
 
+
+    })
+        }
+
+)}
 
 $('#mysidebar').height($(".nav").height());
 
@@ -42,10 +51,12 @@ $('#mysidebar').height($(".nav").height());
 $( document ).ready(function() {
     var h = $(window).height();
     console.log (h);
-    if (h > 700) {
+    if (h > 600) {
    $( "#mysidebar" ).attr("class", "nav affix");
    }
 });
+
+
 
 $(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip({

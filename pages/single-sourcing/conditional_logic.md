@@ -3,7 +3,12 @@ title: Conditional logic
 permalink: /conditional_logic/
 tags: single-sourcing
 audience: writer, designer
+keywords: 
+last_updated: 
+summary: 
 ---
+{% include linkrefs.html %} 
+
 If you want to create different outputs for different audiences, you can do all of this using a combination of Jekyll's Liquid markup and values in your configuration file.
 
 {{tip}} Definitely check out [Liquid's documentation](http://docs.shopify.com/themes/liquid-documentation/basics) for more details about how to use operators and other liquid markup. The notes here are a small, somewhat superficial sample from the site.{{end}}

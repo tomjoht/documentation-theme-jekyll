@@ -2,8 +2,13 @@
 title: Create PDF
 permalink: /create_pdf/
 tags: publishing
+keywords: 
+audience: 
+last_updated: 
+summary: 
 ---
-{% include linkrefs.html %}
+{% include linkrefs.html %} 
+
 {% comment %}
 remaining tasks:
 

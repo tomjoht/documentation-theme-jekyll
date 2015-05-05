@@ -3,8 +3,13 @@ title: Getting started
 permalink: /getting_started/
 tags: getting-started
 audience: writer, designer
+keywords: 
+last_updated: 
+summary: 
 ---
-{% include linkrefs.html %}
+{% include linkrefs.html %} 
+
+
 ## Step 1: Install all the prerequisites
 
 Before you start installing the theme, make sure you have all of these prerequisites in place.

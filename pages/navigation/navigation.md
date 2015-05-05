@@ -3,7 +3,11 @@ title: Navigation
 permalink: /navigation/
 audience: writer, designer
 tags: navigation
+keywords: 
+last_updated: 
+summary: 
 ---
+{% include linkrefs.html %} 
 
 The sidebar and top navigation bar read their values from yml files inside the _data folder. Follow the YML syntax shown in the file. 
 

@@ -1,9 +1,13 @@
 ---
 title: Special layouts
 permalink: /special_layouts/
-audience: writer, designer
 tags: special-layouts
+keywords: 
+audience: writer, designer
+last_updated: 
+summary: 
 ---
+{% include linkrefs.html %} 
 
 This theme has a few special layouts. Special layouts include the JS files they need directly in the page. The JavaScript for each special layout does not load by default for every page in the site.
 

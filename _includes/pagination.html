@@ -1,0 +1,10 @@
+<ul class="pagination">
+{% assign thisSeries = page.series %}
+{% for p in site.pages %}
+{% if p.series == thisSeries and p.permalink == page.url %}
+<li class="active"><a href="{{p.permalink | prepend: site.baseurl}}index.html">{{p.title}}</a></li>
+{% else %}
+<li><a href="{{p.permalink | prepend: site.baseurl}}index.html">{{p.title}}</a></li>
+{% endif %}
+{% endfor %}
+</ul>

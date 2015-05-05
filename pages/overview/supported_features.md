@@ -3,7 +3,11 @@ title: Supported features
 permalink: /supported_features/
 audience: writer, designer
 tags: [overview, getting-started]
+keywords: 
+last_updated: 
+summary: 
 ---
+{% include linkrefs.html %} 
 
 Before you get into exploring Jekyll as a potential platform for help content, you may be wondering if it supports some basic features. The following table shows what is supported in Jekyll.
 

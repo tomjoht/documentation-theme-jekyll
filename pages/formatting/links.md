@@ -3,7 +3,10 @@ title: Links
 permalink: /links/
 audience: writer, designer
 tags: [formatting, navigation]
+last_updated: 
+summary: 
 ---
+{% include linkrefs.html %} 
 
 ## Create a link
 

@@ -3,26 +3,19 @@
 <html>
   <head>
  {% include head.html %}
- {% comment %}
-      <script>
-          Prince.addScriptFunc("datestamp", function() {
-              return (new Date()).toString();
-          });
-      </script>
-{% endcomment %}
+
+<link rel="stylesheet" href="{{ "/css/customstyles.css" | prepend:site.baseurl }}"  type='text/css'>
+
     <link rel="stylesheet" href="{{ "/css/printstyles.css" | prepend:site.baseurl }}"  type='text/css'>
 
-{% if site.audience == "writer" %}
-      <link rel="stylesheet" href="{{ "/css/print-header-writer.css" | prepend:site.baseurl }}"  type='text/css'>
-{% else if site.audience == "designer" %}
-      <link rel="stylesheet" href="{{ "/css/print-header-designer.css" | prepend:site.baseurl }}"  type='text/css'>
+{% if site.audience == "fe" %}
+      <link rel="stylesheet" href="{{ "/css/print-header-fe.css" | prepend:site.baseurl }}"  type='text/css'>
+{% elsif site.audience == "customer" %}
+      <link rel="stylesheet" href="{{ "/css/print-header-customer.css" | prepend:site.baseurl }}"  type='text/css'>
+
+{% elsif site.audience == "sales" %}
+      <link rel="stylesheet" href="{{ "/css/print-header-sales.css" | prepend:site.baseurl }}"  type='text/css'>
       {% endif %}
-
-{% if page.datatable == true %}
-<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.5/css/jquery.dataTables.css">
-
-<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.5/js/jquery.dataTables.js"></script>
-{% endif %}
 
   </head>
 

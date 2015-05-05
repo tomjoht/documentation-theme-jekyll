@@ -2,7 +2,13 @@
 title: Tags
 permalink: /tags/
 audience: writer, designer
+tags: []
+keywords: 
+audience: 
+last_updated: 
+summary: 
 ---
+{% include linkrefs.html %} 
 
 You can add tags to pages by adding `tags` in the frontmatter, like this:
 

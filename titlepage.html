@@ -1,20 +1,22 @@
 ---
 permalink: /titlepage/
+search: false
 ---
 {% comment %} this print-frontmatter class lets Prince apply a different header/footer for this page. {% endcomment %}
 <div class="print-frontmatter">
     <div class="titleImage">
-        <img src="{{ "/images/jekyll.png" | prepend: site.baseurl }}" style="max-width: 600px;" >
+        <img src="{{ "/images/adtruth_logo_big.png" | prepend: site.baseurl }}" style="max-width: 600px;" >
     </div>
 <div class="guideTitleArea">
     <div class="guideTitle">{{site.print_title}}</div>
     <div class="titleVersion">version {{site.version}}</div>
+    <div class="titleVersion">Last generated: {{ site.time | date: "%b %-d, %Y"  }} </div>
 </div>
 
 
 <div id="navig">
     <h1>Table of Contents</h1>
-{% include conditions.html %}
+{% include custom/conditions.html %}
 
 <ul id="mysidebar" class="nav">
 {% comment %} if you want a fixed floating sidebar, change the class to "nav affix" {% endcomment %}
@@ -25,14 +27,14 @@ permalink: /titlepage/
          <li class="sectionHead">{{ subcategory.title }}
             <ul>
               {% for item in subcategory.items %}
-                 {% if item.audience contains buildAudience and item.print == true %}
+                 {% if item.audience contains buildAudience and item.print == true and item.toc != false %}
                        <li><a href="{{item.url | prepend: site.baseurl}}index.html">{{item.title}}</a>
                           {% for thirdlevel in item.thirdlevel %}
                              {% if thirdlevel.audience contains buildAudience and thirdlevel.print == true %}
                                <li class="sectionHead">{{ thirdlevel.title }}
                                     <ul>
                                         {% for deeplevel in thirdlevel.thirdlevelitems%}
-                                           {% if deeplevel.audience contains buildAudience and deeplevel.print == true %}
+                                           {% if deeplevel.audience contains buildAudience and deeplevel.print == true and item.toc != false %}
                                               <li><a href="{{deeplevel.url | prepend: site.baseurl}}index.html">{{deeplevel.title}}</a></li>
                                            {% endif %}
                                         {% endfor %}

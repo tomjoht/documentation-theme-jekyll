@@ -2,7 +2,12 @@
 title: Knowledge-base homepage
 permalink: /kb_layout/
 tags: special-layouts
+keywords: 
+audience: 
+last_updated: 
+summary: 
 ---
+{% include linkrefs.html %} 
 
 This shows a sample layout for a knowledge base. Each square could link to a tag archive page. 
 

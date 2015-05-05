@@ -31,6 +31,8 @@ disqus_shortname: idrbwjekyll
 # Insert your google analytics tracking number. leave blank if you don't want google analytics integration.
 google_analytics:  UA-408430-5
 
+feedback_email: tomjohnson1492@gmail.com
+
 markdown: redcarpet
 
 # options for the redcarpet markdown processing. leave as is, especially the "with_toc_data" or the mini-toc won't appear.
@@ -60,7 +62,7 @@ defaults:
     values:
       layout: "page"
       comments: true
-      search: include
+      search: true
   -
     scope:
       path: ""
@@ -68,7 +70,7 @@ defaults:
     values:
       layout: "post"
       comments: true
-      search: include
+      search: true
   -
     scope:
       path: ""
@@ -76,7 +78,7 @@ defaults:
     values:
       layout: "page"
       tooltip: true
-      search: include
+      search: true
 
 sass:
     sass_dir: _sass

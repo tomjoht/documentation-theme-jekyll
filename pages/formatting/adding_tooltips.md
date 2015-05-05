@@ -1,7 +1,13 @@
 ---
 title: Adding tooltips
 permalink: /adding_tooltips/
+tags: []
+keywords: 
+audience: 
+last_updated: 
+summary: 
 ---
+{% include linkrefs.html %} 
 
 You can add tooltips to your content. Because this theme is built on Bootstrap, you can simply use a specific attribute on an element to insert a tooltip.
 

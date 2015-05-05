@@ -3,7 +3,11 @@ title: Content reuse
 permalink: /content_reuse/
 tags: single-sourcing
 audience: writer, designer
+keywords: 
+last_updated: 
+summary: 
 ---
+{% include linkrefs.html %} 
 
 You can embed content from one file inside another using includes. Put the file containing content you want to reuse (e.g., mypage.html) inside the _includes folder, and then use a tag like this:
 

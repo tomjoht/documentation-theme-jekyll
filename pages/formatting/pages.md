@@ -3,7 +3,11 @@ title: Pages
 permalink: /pages/
 audience: writer, designer
 tags: [getting-started, formatting]
+keywords: 
+last_updated: 
+summary: 
 ---
+{% include linkrefs.html %} 
 
 Use a text editor such as Sublime Text, WebStorm, or Emacs to create pages. Make sure each page has frontmatter at the top like this:
 

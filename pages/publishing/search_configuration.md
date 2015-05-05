@@ -3,7 +3,11 @@ title: Search configuration
 permalink: /search_configuration/
 audience: writer, designer
 tags: publishing
+keywords: 
+last_updated: 
+summary: 
 ---
+{% include linkrefs.html %} 
 
 The search is configured through the search.json file in the root directory. Take a look at that code if you want to change what content is included. 
 
@@ -23,7 +27,7 @@ defaults:
     values:
       layout: "page"
       comments: true
-      search: include
+      search: true
   -
     scope:
       path: ""
@@ -31,7 +35,7 @@ defaults:
     values:
       layout: "post"
       comments: true
-      search: include
+      search: true
  ```
 
 Some pages will break the JSON formatting. If that happens, then the search will no longer work. If you want to exclude a page from search add `search: exclude` in the frontmatter. 

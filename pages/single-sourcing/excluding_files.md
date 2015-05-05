@@ -3,7 +3,11 @@ title: Excluding files and folders
 permalink: /excluding_files/
 tags: single-sourcing
 audience: writer, designer
+keywords: 
+last_updated: 
+summary: 
 ---
+{% include linkrefs.html %} 
 
 By default, all files in your project are included in your output. To exclude files, note them in the `exclude` section in the configuration file. Here's a sample:
 

@@ -3,7 +3,12 @@ title: Icons
 permalink: /icons/
 audience: writer, designer
 tags: formatting
+keywords: 
+last_updated: 
+summary: 
 ---
+{% include linkrefs.html %} 
+
 
 The theme has two font icon sets integrated: Font Awesome and Glyphicons Halflings. The latter is part of Bootstrap, while the former is independent. 
 

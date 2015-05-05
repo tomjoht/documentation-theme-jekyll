@@ -1,7 +1,13 @@
 ---
 title: Troubleshooting
 permalink: /troubleshooting/
+tags: []
+keywords: 
+audience: 
+last_updated: 
+summary: 
 ---
+{% include linkrefs.html %} 
 
 ## Issues building the site
 

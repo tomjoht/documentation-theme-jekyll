@@ -1,7 +1,13 @@
 ---
 title: Tables
 permalink: /tables/
+tags: []
+keywords: 
+audience: 
+last_updated: 
+summary: 
 ---
+{% include linkrefs.html %} 
 
 ## Multimarkdown Tables
 

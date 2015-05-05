@@ -6,24 +6,12 @@
  {% include head.html %}
 
 {% if page.video == true %}
-
 <link href="https://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
 <script src="https://vjs.zencdn.net/4.12/video.js"></script>
-{%comment%}
-<!-- 
-if you want the video js and css local instead of cdn, use the following code instead of the cdn links above.
--->
-<link href="{{ "/js/video-js/video-js.min.css" | prepend:site.baseurl }}"  rel="stylesheet" type="text/css"></link>
-<script src="{{ "/js/video-js/video.js" | prepend:site.baseurl }}"></script> 
-<script> videojs.options.flash.swf = "{{site.baseurl}}/js/video-js/video-js.swf";</script>
-{%endcomment%} 
-
 {% endif %}
-
 
 {% if page.datatable == true %}
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.5/css/jquery.dataTables.css">
-
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.5/js/jquery.dataTables.js"></script>
 {% endif %}
 

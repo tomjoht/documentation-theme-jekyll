@@ -3,7 +3,11 @@ title: Syntax highlighting
 permalink: /syntax_highlighting/
 audience: writer, designer
 tags: formatting
+keywords: 
+last_updated: 
+summary: 
 ---
+{% include linkrefs.html %} 
 
 For syntax highlighting, use fenced code blocks optionally followed by the language syntax you want:
 
