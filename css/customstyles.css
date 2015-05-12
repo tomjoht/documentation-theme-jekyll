@@ -385,7 +385,9 @@ ul#mysidebar {
 
 
 #mysidebar {
-min-width: 240px;
+  width: 100%;
+  word-wrap: break-word;
+  position: relative;
 }
 
 .nav ul li ul li a {
