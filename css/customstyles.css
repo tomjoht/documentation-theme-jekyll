@@ -83,8 +83,10 @@ body h1 {margin-top:40px;}
 
 .post-content img {
     margin: 12px 0px 3px 0px;
-    max-width: 100%;
-
+    width: auto;
+    height: auto;
+    max-width: 630px;
+    max-height: 100%;
 }
 
 .post-content ol li, .post-content ul li {

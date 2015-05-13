@@ -37,9 +37,9 @@
             {% if subcategory.external_url %}
                 <li><a href="{{subcategory.external_url}}" target="_blank">{{subcategory.title}}</a></li>
             {% elsif page.url contains subcategory.url %}
-                <li class="active"><a href="{{subcategory.url | prepend: site.baseurl}}index.html" class="active">{{subcategory.title}}</a></li>
+                <li class="active"><a href="{{subcategory.url | prepend: site.baseurl | append: site.suffix}}">{{subcategory.title}}</a></li>
             {% else %}
-                <li><a href="{{subcategory.url | prepend: site.baseurl}}index.html">{{subcategory.title}}</a></li>
+                <li><a href="{{subcategory.url | prepend: site.baseurl | append: site.suffix}}">{{subcategory.title}}</a></li>
             {% endif %}
           {% endif %}
         {% endfor %}
@@ -62,9 +62,9 @@
                     {% if subitem.external_url %}
                       <li><a href="{{subitem.external_url}}" target="_blank">{{subitem.title}}</a></li>
                     {% elsif page.url contains subitem.url %}
-                      <li class="dropdownActive"><a href="{{subitem.url | prepend: site.baseurl}}index.html">{{subitem.title}}</a></li>
+                      <li class="dropdownActive"><a href="{{subitem.url | prepend: site.baseurl | append: site.suffix}}">{{subitem.title}}</a></li>
                     {% else %}
-                     <li><a href="{{subitem.url | prepend: site.baseurl}}index.html">{{subitem.title}}</a></li>
+                     <li><a href="{{subitem.url | prepend: site.baseurl | append: site.suffix}}">{{subitem.title}}</a></li>
                     {% endif %}
                   {% endif %}
                 {% endfor %}
@@ -84,8 +84,8 @@
             SimpleJekyllSearch.init({
               searchInput: document.getElementById('search-input'),
               resultsContainer: document.getElementById('results-container'),
-              dataSource: '{{ site.baseurl }}/search.json',
-              searchResultTemplate: '<li><a href="{url}index.html" title="{{page.title}}">{title}</a></li>',
+              dataSource: '{{site.baseurl}}/search.json',
+              searchResultTemplate: '<li><a href="{url}{{site.suffix}}" title="{{page.title}}">{title}</a></li>',
               noResultsText: '{{site.data.strings.search_no_results_text}}',
               limit: 10,
               fuzzy: true,

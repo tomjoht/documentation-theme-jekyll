@@ -1,70 +1,31 @@
-$('.sub_menu').hide();
-$('.clickable').toggle(function (){
-    $(this).next('ul').slideToggle();
-    $(this).css('background-position', '0px -12px');
-}, function (){
-        $(this).next('ul').slideToggle();
-        $(this).css('background-position', '0px 5px');
-});
-
-$('ul.sub_menu').has('a.active').css('display', 'block');
-
-$('#myButton').tooltip();
-
-// this does the highlighting for the active tab of the sidebar
-
-$(function () {
-    setNavigation();
-});
-
-function setNavigation() {
-    var path = window.location.pathname;
-    path = path.replace(/\/$/, "");
-    path = decodeURIComponent(path);
-
-    $(".nav a").each(function () {
-        var href = $(this).attr('href');
-        if (path.substring(0, href.length) === href) {
-            $(this).closest('li').addClass('active');
-             $(this).closest('li').parents().addClass('active');
-
-        }
-
-            $("ul.pagination a").each(function () {
-        var href = $(this).attr('href');
-        if (path.substring(0, href.length) === href) {
-            $(this).closest('li').addClass('active');
-             $(this).closest('li').parents().addClass('active');
-
-        }
-
-
-    })
-        }
-
-)}
 
 $('#mysidebar').height($(".nav").height());
 
-// only use the affix class if the viewport is greater than 500px. otherwise it gets cut off. 
 
 $( document ).ready(function() {
+
+    //this script says, if the height of the viewport is greater than 600px, then insert affix class, which makes the nav bar float in a fixed
+    // position as your scroll. if you have a lot of nav items, this height may not work for you.
+    {% unless site.floating_nav == "false" %}
     var h = $(window).height();
     console.log (h);
     if (h > 600) {
    $( "#mysidebar" ).attr("class", "nav affix");
    }
-});
+    {% endif %}
 
+    // activate tooltips. although this is a bootstrap js function, it must be activated this way in your theme.
 
-
-$(document).ready(function(){
     $('[data-toggle="tooltip"]').tooltip({
         placement : 'top'
     });
+
+    // this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page.
+    $("li.active").parents('li').toggleClass("active");
+
 });
 
-// needed for nav tabs
+// needed for nav tabs on pages. See Formatting > Nav tabs for more details.
 // script from http://stackoverflow.com/questions/10523433/how-do-i-keep-the-current-tab-active-with-twitter-bootstrap-after-a-page-reload
 $(function() {
     var json, tabsState;
@@ -94,3 +55,5 @@ $(function() {
         }
     });
 });
+
+

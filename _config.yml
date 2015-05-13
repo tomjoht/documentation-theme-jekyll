@@ -88,3 +88,10 @@ collections:
 
 # is this a print build? if so, put true. otherwise, false.
 print: false
+
+floating_nav: true
+
+# this option allows you to add a suffix to the permalinks in case you're publishing on a host such as Salesforce's site.com.
+# on Salesforce's site.com, uploaded files must have index.html to display correctly. Most likely just ignore or remove this section unless
+# you're publishing on Salesforce.
+# suffix: index.html

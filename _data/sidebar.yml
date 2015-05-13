@@ -15,11 +15,6 @@ entries:
           audience: writer, designer
           print: true
           web: false
-          
-        - title: Home
-          url: /
-          audience: writer, designer
-          print: true
 
         - title: Getting started
           url: /getting_started/

@@ -41,8 +41,9 @@ Note that you can arbitrary key value pairs in the configuration file, and then 
 |  **defaults**   | Here you can set default values for frontmatter based on the content type (page, post, or collection).    |          
 |  **sass**   | The directory for sass files. This is a Jekyll-specific settings. Sass isn't customized in this theme.    |        
 |  **collections**   |  Any specific collections (custom content types that extend beyond pages or posts) that you want to define. This theme defines a collection called tooltips. You access this collection by using site.tooltips instead of site.pages or site.posts. Put the tooltip content types inside a folder in your project called \_tooltips.                
-|  **print**  | Boolean. Whether this build is a print build or not. This setting allows you to run conditions in your content such as {% raw %} {% if site.print == true %} do this... {% endif %} {% endraw %}.   |          
-
+|  **print**  | Boolean. Whether this build is a print build or not. This setting allows you to run conditions in your content such as {% raw %} {% if site.print == true %} do this... {% endif %} {% endraw %}.   |     
+| **floating_nav** | Boolean. If you add `false`, then the sidebar navigation won't apply a fixed floating property. When the user scrolls. the nav bar won't stay in the same place. If you have a large nav bar, you may want to turn off the floating properties. Also, for small screens with viewports of 600px of height or smaller, the fixed nav is automatically turned off because the options tend to extend past the visible screen. Usually leave this set to `true` or omit the option altogether (the default is true).
+| **suffix** | If you publish on Salesforce's site.com, you have to add index.html to the permalink or else the page won't render. I'm not sure why. If you add `suffix: index.html` in your config file, this file will be appended in the URLs. If you're not publishing to Salesforce, don't add this property to your configuration file.
 
 ## Where to store configuration files
 

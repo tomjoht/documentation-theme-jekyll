@@ -32,18 +32,36 @@ Frontmatter is always formatted with three hyphens at the top and bottom. Your f
 
 The following table describes each of the frontmatter that you can use with this theme:
 
-| Frontmatter | Description |
-|-------------|-------------|
-| **title** | The title for the page |
-| permalink  | The URL path for the page  |
-| **tags** | Tags for the page. Make all tags single words, with hyphens if needed. Separate them with commas. Enclose the whole list within brackets. Also, note that tags must be added to _data/tags.yml to be allowed entrance into the page.   |
-| **keywords** | Synonyms and other keywords for the page. This information gets stuffed into the page's metadata to increase SEO. The user won't see the keywords, but if you search for one of the keywords, it will be picked up by the search engine.  |
-| **last_updated**  | The date the page was last updated. This information is helpful for readers trying to evaluate how current and authoritative information is. |
-| **summary** | A 1-2 word sentence summarizing the content on the page. This gets formatted into the summary section in the page layout. Adding summaries is a key way to make your content more scannable by users (check out [Jakob Nielsen's site](http://www.nngroup.com/articles/corporate-blogs-front-page-structure/) for a great example of page summaries.)  |
+| Frontmatter | Required? | Description |
+|-------------|-------------|-------------|
+| **title** | Required | The title for the page |
+| **permalink**  | Required | The URL path for the page  |
+| **tags** | Optional | Tags for the page. Make all tags single words, with hyphens if needed. Separate them with commas. Enclose the whole list within brackets. Also, note that tags must be added to \_data/tags.yml to be allowed entrance into the page.   |
+| **keywords** | Optional | Synonyms and other keywords for the page. This information gets stuffed into the page's metadata to increase SEO. The user won't see the keywords, but if you search for one of the keywords, it will be picked up by the search engine.  |
+| **last_updated**  | Optional | The date the page was last updated. This information is helpful for readers trying to evaluate how current and authoritative information is. |
+| **summary** | Optional | A 1-2 word sentence summarizing the content on the page. This gets formatted into the summary section in the page layout. Adding summaries is a key way to make your content more scannable by users (check out [Jakob Nielsen's site](http://www.nngroup.com/articles/corporate-blogs-front-page-structure/) for a great example of page summaries.)  |
+| **metadata** | Optional | Boolean (`true` or `false`). If you add `metadata: false` to the frontmatter, then the page metadata sidebar won't appear for the page. You might want to hide the sidebar for special pages such as glossaries, knowledge-base layouts, or more.
+| **datatable** | Optional | Boolean. If you add `true`, then scripts for the [jQuery datatables plugin](https://www.datatables.net/) appear for the page. |
+| **video** | Optional | If you add `true`, then scripts for [Video JS: The HTML5 video player](http://www.videojs.com/) appear on the page. |
+
+{{tip}} You can see the scripts that conditionally appear by looking in the \_layouts/default.html page. Note that these scripts are served via a CDN, so the user must be online for the scripts to work. However, if the user isn't online, the tables and video still appear &mdash; they degrade gracefully. {{end}}
 
 Only the title and permalink are actually required. If you leave the other fields blank, the theme will not show them (for example, if you leave tags blank, the theme won't show "Tags:" with nothing after it in the page metadata. Instead, the whole line will be hidden.
 
-To see how these metadata values get inserted into the theme, look at the page layout, specifically the included pagemetadata.html file.
+To see how these metadata values get inserted into the theme, look at the page layout, specifically the \_includes/pagemetadata.html file.
+
+## Creating a Jekyll template in WebStorm
+
+Rather than insert the frontmatter by hand each time, it's much faster to simply create a Jekyll template in WebStorm (my favorite editor for Jekyll projects). 
+
+To create a Jekyll template:
+
+1. Right-click a file in the list of project files, and select **New > Edit File Templates**.
+2. In the upper-left corner of the dialog box that appears, click the **+** button to create a new template.
+3. Name it Jekyll. Insert the frontmatter you want, and save it.
+
+To use the Jekyll template, when you create a new file in your WebStorm project, you can select your Jekyll file template.
+
 
 ## Markdown or HTML format
 

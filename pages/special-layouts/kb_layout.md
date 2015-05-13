@@ -10,7 +10,7 @@ metadata: false
 ---
 {% include linkrefs.html %} 
 
-This shows a sample layout for a knowledge base. Each square could link to a tag archive page. 
+This shows a sample layout for a knowledge base. Each square could link to a tag archive page. In this example, font icons from Font Awesome are enlarged to a large size. You could also add captions below each icon, and so forth. In a real implementation, you would probably make your own square graphics that included the text inside them.
 
 
 <div class="row">

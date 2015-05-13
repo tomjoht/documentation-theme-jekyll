@@ -1,87 +1,101 @@
- <!-- Content Row -->
-        <div class="row">
-            <!-- Sidebar Column -->
-            <div class="col-md-3">
+<!-- Content Row -->
+<div class="row">
+    <!-- Sidebar Column -->
+    <div class="col-md-3">
 
 
 
-<script>
+        <script>
 
-$(document).ready(function() {
-    // Initialize navgoco with default options
-    $("#mysidebar").navgoco({
-        caretHtml: '',
-        accordion: {{site.sidebar_accordion}},
-        openClass: 'active', // open
-        save: false, // leave false or nav higlighting doesn't work right
-        cookie: {
-            name: 'navgoco',
-            expires: false,
-            path: '/'
-        },
-        slide: {
-            duration: 400,
-            easing: 'swing'
-        }
-    });
+            $(document).ready(function() {
+                        // Initialize navgoco with default options
+                        $("#mysidebar").navgoco({
+                            caretHtml: '',
+                            accordion: {{site.sidebar_accordion}},
+                    openClass: 'active', // open
+                    save: false, // leave false or nav higlighting doesn't work right
+                    cookie: {
+                name: 'navgoco',
+                        expires: false,
+                        path: '/'
+            },
+            slide: {
+                duration: 400,
+                        easing: 'swing'
+            }
+            });
 
-    $("#collapseAll").click(function(e) {
-        e.preventDefault();
-        $("#mysidebar").navgoco('toggle', false);
-    });
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
 
-    $("#expandAll").click(function(e) {
-        e.preventDefault();
-        $("#mysidebar").navgoco('toggle', true);
-    });
-      
-});
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
 
-</script>
-  
+            });
 
-{% include custom/conditions.html %}
+        </script>
 
-<ul id="mysidebar" class="nav">
 
-  <div class="siteTagline">{{site.tagline}}</div>
+        {% include custom/conditions.html %}
 
-{% for entry in sidebar %}
-   {% for subcategory in entry.subcategories %}
-      {% if subcategory.audience contains buildAudience %}
-         <li><a href="#">{{ subcategory.title }}</a>
-            <ul>
-              {% for item in subcategory.items %}
-                 {% if item.audience contains buildAudience and item.web != false %}
-                       <li><a href="{{item.url | prepend: site.baseurl}}index.html">{{item.title}}</a>
-                          {% for thirdlevel in item.thirdlevel %}
-                             {% if thirdlevel.audience contains buildAudience and web != false %}
-                               <li class="thirdlevel"><a href="#">{{ thirdlevel.title }}</a>
-                                    <ul>
-                                        {% for deeplevel in thirdlevel.thirdlevelitems%}
-                                           {% if deeplevel.audience contains buildAudience and item.web != false  %}
-                                              <li><a href="{{deeplevel.url | prepend: site.baseurl}}index.html">{{deeplevel.title}}</a></li>
-                                           {% endif %}
-                                        {% endfor %}
-                                      </ul>
-                                  </li>
-                             {% endif %}
-                          {% endfor %}
-                       </li>
-                {% endif %}
-             {% endfor %}
-           </ul>
+        <ul id="mysidebar" class="nav">
+
+            <div class="siteTagline">{{site.tagline}}</div>
+
+            {% for entry in sidebar %}
+            {% for subcategory in entry.subcategories %}
+            {% if subcategory.audience contains buildAudience %}
+            <li><a href="#">{{ subcategory.title }}</a>
+                <ul>
+                    {% for item in subcategory.items %}
+                    {% if item.audience contains buildAudience and item.web != false %}
+                    {% if item.external_url %}
+                    <li><a href="{{item.external_url}}" target="_blank">{{subcategory.title}}</a></li>
+                    {% elsif page.url contains item.url %}
+                    <li class="active"><a href="{{item.url | prepend: site.baseurl | append: site.suffix}}">{{item.title}}</a></li>
+                    {% else %}
+                    <li><a href="{{item.url | prepend: site.baseurl | append: site.suffix}}">{{item.title}}</a></li>
+                    {% endif %}
+
+                    {% for thirdlevel in item.thirdlevel %}
+                    {% if thirdlevel.audience contains buildAudience and web != false %}
+                    <li class="thirdlevel"><a href="#">{{ thirdlevel.title }}</a>
+                        <ul>
+                            {% for deeplevel in thirdlevel.thirdlevelitems %}
+                            {% if deeplevel.audience contains buildAudience and item.web != false  %}
+                            {% if deeplevel.external_url %}
+                            <li><a href="{{deeplevel.external_url}}" target="_blank">{{deeplevel.title}}</a></li>
+                            {% elsif page.url contains deeplevel.url %}
+                            <li class="active"><a href="{{deeplevel.url | prepend: site.baseurl | append: site.suffix}}">{{deeplevel.title}}</a></li>
+                            {% else %}
+                            <li><a href="{{deeplevel.url | prepend: site.baseurl | append: site.suffix}}">{{deeplevel.title}}</a></li>
+                            {% endif %}
+
+                            {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </li>
+                    {% endif %}
+                    {% endfor %}
+            </li>
+            {% endif %}
+            {% endfor %}
+        </ul>
         </li>
-      {% endif %}
-  {% endfor %}
-{% endfor %}
-</ul>
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+        </ul>
 
 
-{% if site.sidebar_accordion == false %}
-<p class="external">
-    <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
-</p>
-{% endif %}
-</div>
+        {% if site.sidebar_accordion == false %}
+        <p class="external">
+            <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+        </p>
+        {% endif %}
+    </div>
 
