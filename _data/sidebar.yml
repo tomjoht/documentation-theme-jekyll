@@ -40,8 +40,7 @@ entries:
           url: /troubleshooting/
           audience: writer, designer
           print: true
-
-    - title: Formatting
+    - title: Content types
       audience: writer, designer
       print: true
 
@@ -50,6 +49,18 @@ entries:
           url: /pages/
           audience: writer, designer
           print: true
+
+        - title: Collections
+          url: /collections/
+          audience: writer, designer
+          print: true
+
+    - title: Formatting
+      audience: writer, designer
+      print: true
+
+      items:
+
 
         - title: Alerts
           url: /alerts/
@@ -101,6 +112,11 @@ entries:
           audience: writer, designer
           print: true
 
+        - title: Shortcuts for Jekyll syntax
+          url: /shortcuts_for_jekyll_syntax/
+          audience: writer, designer
+          print: true
+
     - title: Single Sourcing
       audience: writer, designer
       print: true
@@ -138,6 +154,11 @@ entries:
 
         - title: Creating a help API
           url: /help_api/
+          audience: writer, designer
+          print: true
+
+        - title: Setting up iTerm profiles
+          url: /iterm_profiles/
           audience: writer, designer
           print: true
 
