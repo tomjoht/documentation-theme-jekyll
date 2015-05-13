@@ -122,7 +122,7 @@ entries:
 
       items:
 
-        - title: Configuration files
+        - title: Setting up the configuration files
           url: /config_setup/
           audience: writer, designer
           print: true

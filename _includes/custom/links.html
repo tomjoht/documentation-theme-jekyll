@@ -1,39 +1,47 @@
-
 {% comment %}<!-- OVERVIEW -->{% endcomment %}
-{% capture overview %}<a href="{{"/overview" | prepend: site.baseurl}}/index.html">Overview</a>{% endcapture %}
-{% capture access %}<a href="{{"/access" | prepend: site.baseurl}}/index.html">Access</a>{% endcapture %}
-{% capture changepassword %}<a href="{{"/changepassword" | prepend: site.baseurl}}/index.html">Change Password</a>{% endcapture %}
-{% capture architecture%}<a href="{{"/architecture" | prepend: site.baseurl}}/index.html">Architecture</a>{% endcapture %}
-{% capture performance %}<a href="{{"/performance" | prepend: site.baseurl}}/index.html">Performance</a>{% endcapture %}
-{% capture deployment_process_overview %}<a href="{{"/deployment_process_overview" | prepend: site.baseurl}}/index.html">Deployment Process Overview </a>{% endcapture %}
-{% capture delivery_models %}<a href="{{"/delivery_models" | prepend: site.baseurl}}/index.html">Delivery Models</a>{% endcapture %}
 
 
+{% capture name %}<a href="{{"/name" | prepend: site.baseurl}}">Name</a>{% endcapture %}
 
-{% comment %}<!-- TOP NAV -->{% endcomment %}
-
-{% capture faq %}<a href="{{"/faq" | prepend: site.baseurl}}/index.html">FAQ</a>{% endcapture %}
-{% capture glossary %}<a href="{{"/glossary" | prepend: site.baseurl}}/index.html">Glossary</a>{% endcapture %}
-
-
-{% comment %}<!-- MANAGE USERS AND CUSTOMERS-->{% endcomment %}
-{% capture managing_users %}<a href="{{"/managing_users" | prepend: site.baseurl}}/index.html">Managing Users</a>{% endcapture %}
-{% capture managing_customers %}<a href="{{"/managing_customers" | prepend: site.baseurl}}/index.html">Managing Customers</a>{% endcapture %}
-
-{% comment %}<!-- FULL DI SETUP -->{% endcomment %}
-{% capture workflow_setup_full %}<a href="{{"/workflow_setup_full" | prepend: site.baseurl}}/index.html">Workflow for Setting Up DI Cloud</a>{% endcapture %}
-{% capture configure_clientjs %}<a href="{{"/configure_clientjs" | prepend: site.baseurl}}/index.html">1. Configure Settings on the client.js Tab</a>{% endcapture %}
-{% capture configure_recipes %}<a href="{{"/configure_recipes" | prepend: site.baseurl}}/index.html">2. Configure the DeviceInsight Recipes</a>{% endcapture %}
-{% capture copy_installation_scripts %}<a href="{{"/copy_installation_scripts" | prepend: site.baseurl}}/index.html">3. Copy the Installation Scripts</a>{% endcapture %}
+{% comment %}<!-- OVERVIEW --> {% endcomment %}
+{% capture getting_started %}<a href="{{"/getting_started" | prepend: site.baseurl}}">Getting Started</a>{% endcapture %}
+{% capture supported_features %}<a href="{{"/supported_features" | prepend: site.baseurl}}">Supported Features</a>{% endcapture %}
+{% capture troubleshooting %}<a href="{{"/troubleshooting" | prepend: site.baseurl}}">Troubleshooting</a>{% endcapture %}
 
 
-{% comment %}<!-- JSC HOST ONLY SETUP -->{% endcomment %}
-{% capture setup_jsc_only %}<a href="{{"/setup_jsc_only" | prepend: site.baseurl}}/index.html">Setting Up JSC Hosting Only</a>{% endcapture %}
+{% comment %}<!-- FORMATTING --> {% endcomment %}
+{% capture pages %}<a href="{{"/pages" | prepend: site.baseurl}}">Pages</a>{% endcapture %}
+{% capture alerts %}<a href="{{"/alerts" | prepend: site.baseurl}}">Alerts</a>{% endcapture %}
+{% capture images %}<a href="{{"/images" | prepend: site.baseurl}}">Images</a>{% endcapture %}
+{% capture links %}<a href="{{"/links" | prepend: site.baseurl}}">Links</a>{% endcapture %}
+{% capture syntax_highlighting %}<a href="{{"/syntax_highlighting" | prepend: site.baseurl}}">Syntax Highlighting</a>{% endcapture %}
+{% capture videos %}<a href="{{"/videos" | prepend: site.baseurl}}">Videos</a>{% endcapture %}
+{% capture labels %}<a href="{{"/labels" | prepend: site.baseurl}}">Labels</a>{% endcapture %}
+{% capture icons %}<a href="{{"/icons" | prepend: site.baseurl}}">Icons</a>{% endcapture %}
+{% capture tables %}<a href="{{"/tables" | prepend: site.baseurl}}">Tables</a>{% endcapture %}
 
-{% capture workflow_jsc %}<a href="{{"/workflow_jsc" | prepend: site.baseurl}}/index.html">Workflow for JSC Hosting Only</a>{% endcapture %}
+{% comment %}<!-- TAG ARCHIVES --> {% endcomment %}
 
+{% capture tag-overview %}<a href="{{"/tag-overview" | prepend: site.baseurl}}">Overview pages</a>{% endcapture %}
+{% capture tag-getting-started %}<a href="{{"/tag-getting-started" | prepend: site.baseurl}}">Getting started pages</a>{% endcapture %}
+{% capture tag-single-sourcing %}<a href="{{"/tag-single-sourcing" | prepend: site.baseurl}}">Single-sourcing pages</a>{% endcapture %}
+{% capture tag-publishing %}<a href="{{"/tag-publishing" | prepend: site.baseurl}}">Publishing pages</a>{% endcapture %}
+{% capture tag-formatting %}<a href="{{"/tag-formatting" | prepend: site.baseurl}}">Formatting pages</a>{% endcapture %}
 
-{% comment %}<!-- LOGS -->{% endcomment %}
+{% comment %}<!-- SINGLE SOURCING --> {% endcomment %}
 
-{% capture viewing_logs %}<a href="{{"/viewing_logs" | prepend: site.baseurl}}/index.html">Viewing Logs</a>{% endcapture %}
+{% capture conditional_logic %}<a href="{{"/conditional_logic" | prepend: site.baseurl}}">Conditional logic</a>{% endcapture %}
+{% capture content_reuse %}<a href="{{"/content_reuse" | prepend: site.baseurl}}">Content re-use</a>{% endcapture %}
+{% capture  excluding_files %}<a href="{{"/ excluding_files" | prepend: site.baseurl}}">Excluding files</a>{% endcapture %}
 
+{% comment %}<!-- PUBLISHING --> {% endcomment %}
+
+{% capture build_arguments %}<a href="{{"/build_arguments" | prepend: site.baseurl}}">Build arguments</a>{% endcapture %}
+{% capture create_pdf %}<a href="{{"/create_pdf" | prepend: site.baseurl}}">Creating PDFs</a>{% endcapture %}
+{% capture help_api %}<a href="{{"/help_api" | prepend: site.baseurl}}">Creating a Help API</a>{% endcapture %}
+{% capture configuration_file %}<a href="{{"/configuration_file" | prepend: site.baseurl}}">Creating a Help API</a>{% endcapture %}
+
+{% comment %}<!-- NAVIGATION --> {% endcomment %}
+
+{% capture navigation %}<a href="{{"/navigation" | prepend: site.baseurl}}">Creating navigation</a>{% endcapture %}
+{% capture tags %}<a href="{{"/tags" | prepend: site.baseurl}}">Creating tags</a>{% endcapture %}
