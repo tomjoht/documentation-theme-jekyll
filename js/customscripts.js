@@ -15,13 +15,9 @@ $( document ).ready(function() {
     {% endif %}
 
     // activate tooltips. although this is a bootstrap js function, it must be activated this way in your theme.
-
     $('[data-toggle="tooltip"]').tooltip({
         placement : 'top'
     });
-
-    // this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page.
-    $("li.active").parents('li').toggleClass("active");
 
 });
 
