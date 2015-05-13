@@ -26,6 +26,11 @@ entries:
           audience: writer, designer
           print: true
 
+        - title: Setting up the configuration files
+          url: /config_setup/
+          audience: writer, designer
+          print: true
+
         - title: Supported features
           url: /supported_features/
           audience: writer, designer
@@ -121,12 +126,6 @@ entries:
       print: true
 
       items:
-
-        - title: Setting up the configuration files
-          url: /config_setup/
-          audience: writer, designer
-          print: true
-
         - title: Build arguments
           url: /build_arguments/
           audience: writer, designer
