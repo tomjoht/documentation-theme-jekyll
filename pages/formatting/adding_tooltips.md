@@ -1,17 +1,17 @@
 title: Adding tooltips
 permalink: /adding_tooltips/
-tags: []
-keywords: 
-audience: 
-last_updated: 
-summary: 
+tags: [formatting]
+keywords: popovers
+audience: writers, designers
+last_updated: May 8, 2015
+summary: "You can add tooltips to your content. These tooltips work well for glossary definitions."
 ---
 {% include linkrefs.html %} 
 =======
 
 ## permalink: /adding_tooltips/
 
-You can add tooltips to your content. Because this theme is built on Bootstrap, you can simply use a specific attribute on an element to insert a tooltip. &nbsp;test...
+Because this theme is built on Bootstrap, you can simply use a specific attribute on an element to insert a tooltip. 
 
 Suppose you have a glossary.yml file inside your _data folder. You could pull in that glossary definition like this:
 

@@ -91,6 +91,10 @@ entries:
           audience: writer, designer
           print: true
 
+        - title: Navtabs
+          url: /navtabs/
+          audience: writer, designer
+          print: true
 
     - title: Single Sourcing
       audience: writer, designer
@@ -117,7 +121,13 @@ entries:
       print: true
 
       items:
-        - title: Build Arguments
+
+        - title: Configuration files
+          url: /config_setup/
+          audience: writer, designer
+          print: true
+
+        - title: Build arguments
           url: /build_arguments/
           audience: writer, designer
           print: true
@@ -127,7 +137,7 @@ entries:
           audience: writer, designer
           print: true
 
-        - title: Creating a Help API
+        - title: Creating a help API
           url: /help_api/
           audience: writer, designer
           print: true

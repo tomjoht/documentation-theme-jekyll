@@ -82,8 +82,9 @@ dt[id]{
 body h1 {margin-top:40px;}
 
 .post-content img {
-max-width: 610px;
-margin: 12px 0px 3px 0px;
+    margin: 12px 0px 3px 0px;
+    max-width: 100%;
+
 }
 
 .post-content ol li, .post-content ul li {
@@ -246,9 +247,9 @@ margin: 3px;
 }
 
 div#toc ul li {
-margin: 0px 0px 3px 10px;
+margin: 8px 0px 8px 10px;
 font-size: 90%;
-list-style: none;
+list-style: square;
 }
 div#toc ul {
 background-color: whitesmoke;
@@ -383,11 +384,6 @@ ul#mysidebar {
   border-radius:0px;
 }
 
-
-#mysidebar {
-min-width: 240px;
-}
-
 .nav ul li ul li a {
   padding-left:20px;
 }
@@ -473,8 +469,8 @@ dl dd {
 
 figcaption {
 
-	padding-bottom:12px;
-	padding-top:6px;
+    padding-bottom:12px;
+    padding-top:6px;
   max-width: 90%;
   margin-bottom:20px;
 
@@ -599,12 +595,26 @@ a[data-toggle] {
 }
 
 .pageMetadata {
-  padding:13px;
-  margin:15px;
-  float:right;
-  border:1px solid #dedede;
-  background-color: whitesmoke;
-  width:200px;
+    padding:13px;
+    margin:15px 0px 15px 15px;
+    float:right;
+    border:1px solid #dedede;
+    background-color: whitesmoke;
+    width:200px;
+}
+
+@media (max-width: 1000px) {
+
+    .pageMetadata {
+        float:none;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    .nav {
+        min-width: 240px;
+    }
 }
 
 .pageMetadataTitle {
@@ -614,8 +624,9 @@ a[data-toggle] {
 }
 
 .metadataRow {
-  font-weight:500;
   color: #555;
+  margin-top:10px;
+  margin-bottom:10px;
 }
 
 .pageMetadata p {
@@ -631,3 +642,21 @@ h3 {color: #b62273; font-weight:normal; font-size:155%;}
 .alert, .callout {
     overflow: hidden;
 }
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    background-color: #248ec2;
+    color: white;
+}
+
+ol li ol li {list-style-type: lower-alpha;}
+
+li img {clear:both; }
+
+div#toc ul li ul li {list-style-type:none;}
+
+.tab-content {
+  padding: 15px;
+  background-color: #FAFAFA;
+}
+
+span.tagTitle {font-weight: 500;}

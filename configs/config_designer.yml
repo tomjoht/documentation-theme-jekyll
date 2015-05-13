@@ -2,7 +2,7 @@
 audience: designer
 
 # your project's title. appears in the top nav home button.
-title: Jekyll for Designers 2.0 
+title: Jekyll for Designers
 
 # currently the version is used only in the print cover
 version: 2.0
@@ -10,8 +10,8 @@ version: 2.0
 # appears above the sidebar (optional)
 tagline: Guide for designers
 
-# the base hostname & protocol for your site (everything at the .com or .org and before)
-url: "http://idratherbewriting.com" 
+# leave the url empty so that you can upload the files into any domain. You just need to define the baseurl.
+# url: "http://idratherbewriting.com"
 
 # the subpath of your site. If you're publishing to the root directory, just type "". Usually set this as your project name.
 baseurl: "/documentation-theme-jekyll/designer" 
@@ -25,7 +25,7 @@ port: 4007
 # Add a feedback email for the top navigation bar
 feedback_email: tomjohnson1492@gmail.com
 
-# whether you want the sidebar to use an accordion, such that other sections collapse when one expands.
+# whether you want the sidebar to use an accordion, so that other sections in the toc collapse when one section expands.
 sidebar_accordion: true
 
 # Disqus shortname for commenting features. leave blank if you don't want a comment form.
@@ -39,6 +39,8 @@ markdown: redcarpet
 # options for the redcarpet markdown processing. leave as is, especially the "with_toc_data" or the mini-toc won't appear.
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "tables", "with_toc_data"]
+
+# pygments requires you to install a gem on your machine. if you don't want this, use rouge instead.
 highlighter: pygments
 
 # put all files or directories that you want to exclude from your project here.
@@ -83,14 +85,6 @@ sass:
 collections:
   tooltips:
     output: true
-
-# this enables the tooltip collection.
-collections:
-  tooltips:
-    output: true
-
-# if you want to show a label on each page indicating the audience that can see the content, put true here.
-show_audience_label: true
 
 # is this a print build? if so, put true. otherwise, false.
 print: false

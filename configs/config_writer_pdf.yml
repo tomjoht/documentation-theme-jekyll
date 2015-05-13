@@ -73,8 +73,5 @@ collections:
   tooltips:
     output: true
 
-# if you want to show a label on each page indicating the audience that can see the content, put true here.
-show_audience_label: false
-
 # is this a print build? if so, put true. otherwise, false.
 print: true

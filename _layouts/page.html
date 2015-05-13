@@ -2,54 +2,21 @@
 layout: default
 comments: true
 ---
+
 <div class="post-header">
-   <h1 class="post-title-main">{{ page.title }}</h1>
+    <h1 class="post-title-main">{{ page.title }}</h1>
+    {% include pagemetadata.html %}
+    <div class="post-content">
 
-{% unless page.metadata == false %}
-      <p>
-      <div class="pageMetadata">
-      <div class="pageMetadataTitle">Table of Contents</div>
-        {% include toc.html %}
-        <hr/>
-       <div class="pageMetadataTitle">Page Information</div>
-        {% if page.tags != null %}
-          <span class="metadataRow">Tags: </span> 
-          {% for tag in page.tags %}
-            {% if site.data.tags.allowed-tags contains tag %}
-                <a href="{{ "/tag-" | prepend: site.baseurl | append: {{tag}}/index.html ">{{tag}}</a>{% unless forloop.last %}, {% endunless%}
-            {% endif %}
-          {% endfor %}</p>
+        {% if page.summary %}
+        <div class="summary">{{page.summary}}</div>
         {% endif %}
 
-        {% if site.show_audience_label == true and page.audience != null %}
-          <p>
-          <span class="metadataRow">Audience: </span> 
-          {% for audience in page.audience %}
-            {{audience}} {% unless forloop.last %}, {% endunless%}
-          {% endfor %}
-          </p>   
-        {% endif %}
+        {{content}}
 
-  {% if page.last_updated != null %}
-     <p><span class="metadataRow">Last updated: </span>{{page.last_updated}}</p>
-  {% endif %}
+        {% include disqus.html %}
 
-    </div> <!-- end pageMetadata -->
-{% endunless %}
+    </div>
 
-  
-<div class="post-content">
-
-   {% if page.summary %}
-    <div class="summary">{{page.summary}}</div>
-   {% endif %}
-
-   {{ content }}
-   {% if site.disqus %}
-    {% include disqus.html %}
-  {% endif %}
-</div>
-
-
-   <!-- Footer -->
-      {% include footer.html %}
+    <!-- Footer -->
+    {% include footer.html %}

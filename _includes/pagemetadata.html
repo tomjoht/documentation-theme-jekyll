@@ -1,0 +1,35 @@
+<!-- start page metadata -->
+{% unless page.metadata == false %}
+
+<div class="pageMetadata">
+    <div class="pageMetadataTitle">Table of Contents</div>
+    {% include toc.html %}
+    <hr/>
+    {% if page.tags != null or page.audience != null or page.last_updated != null %}
+    <div class="pageMetadataTitle">Page Information</div>
+    {% endif %}
+    {% if page.tags != null %}
+    <div class="metadataRow"><span class="tagTitle">Tags:</span> 
+    {% for tag in page.tags %}
+    {% if site.data.tags.allowed-tags contains tag %}
+    <a href="{{ "/tag-" | prepend: site.baseurl | append: {{tag}}/index.html ">{{tag}}</a>{% unless forloop.last %}, {% endunless%}
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+      </div>
+
+    {% if site.show_audience_label == true and page.audience != null %}
+
+    <div class="metadataRow"><span class="tagTitle">Audience:</span>
+    {% for audience in page.audience %}
+    {{audience}} {% unless forloop.last %}, {% endunless%}
+    {% endfor %}
+    {% endif %}</div>
+
+    {% if page.last_updated != null %}
+    <p><div class="metadataRow"><span class="tagTitle">Last updated:</span> {{page.last_updated}}</div></p>
+    {% endif %}
+
+</div>
+{% endunless %}
+<!-- end pageMetadata -->
