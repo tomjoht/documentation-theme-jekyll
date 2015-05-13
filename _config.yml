@@ -10,11 +10,11 @@ version: 2.0
 # appears above the sidebar (optional)
 tagline: Guide for designers
 
-# leave the url empty so that you can upload the files into any domain. You just need to define the baseurl.
-# url: "http://idratherbewriting.com"
+# You can leave the url empty so that you can upload the files into any domain. You just need to define the baseurl.
+url: "http://tomjohnson1492.github.io"
 
 # the subpath of your site. If you're publishing to the root directory, just type "". Usually set this as your project name.
-baseurl: "/documentation-theme-jekyll/designer" 
+baseurl: "/documentation-theme-jekyll"
 
 # this is how you will preview the site on your local machine. leave as is.
 host: 127.0.0.1 
