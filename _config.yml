@@ -12,6 +12,10 @@ topnav_title: Jekyll for Designers
 
 topnav_version: 2.1
 
+homepage_title: Doc theme for Jekyll 
+
+site_title: Documentation theme for Jekyll
+
 tagline: Guide for designers
 
 baseurl: "/documentation-theme-jekyll"
