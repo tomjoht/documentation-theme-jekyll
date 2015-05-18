@@ -22,14 +22,6 @@ entries:
           print: true
           web: false
 
-        - title: Introduction
-          url: /
-          audience: writer, designer
-          platform: all
-          product: all
-          version: all
-          print: true
-
         - title: Getting started
           url: /getting_started/
           audience: writer, designer

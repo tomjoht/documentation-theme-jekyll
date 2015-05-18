@@ -14,6 +14,19 @@ summary: "You can automatically link together topics belonging to the same serie
 
 Here's a demo that pulls together three posts that are part of an "acme_series".
 
+{% assign pages = site.pages | sort:"weight"  %}
+<ol>
+  {% for p in pages %}
+  {% if p.series == "acme_series" %}
+    <li>
+      <b><a {% if p.url == page.url %}class="active"{% endif %} href="{{p.url | prepend: site.baseurl | append: site.suffix}}">{{p.title}}</a>.</b> {{p.summary}}
+    </li>
+    {% endif %}
+  {% endfor %}
+</ol>
+
+When you click on each link, you'll see a Series selector that looks like this:
+
 {% include custom/acme_series.html %}
 
 None of the pages in the list are highlighted because you're not on that page. If you go to a series page, the active page isn't linked, appears in bold, and has a left arrow pointing to it. This allows the user to know where he or she is within the series.
