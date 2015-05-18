@@ -10,7 +10,7 @@ version: all
 
 topnav_title: Jekyll for Designers
 
-topnav_version: 2.0
+topnav_version: 2.1
 
 tagline: Guide for designers
 
@@ -20,7 +20,7 @@ port: 4006
 
 host: 127.0.0.1 
 
-url: "http://tomjohnson1492.github.io"
+# url: "http://tomjohnson1492.github.io"
 
 feedback_email: tomjohnson1492@gmail.com
 
