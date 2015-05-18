@@ -20,3 +20,7 @@ baseurl: "/documentation-theme-jekyll/writer"
 port: 4008
 
 destination: ../documentation-theme-jekyll-builds/writer
+
+homepage_title: Doc theme for Jekyll -- writer version
+
+site_title: Documentation theme for Jekyll -- designer version

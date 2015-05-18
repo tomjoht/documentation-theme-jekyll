@@ -2,6 +2,7 @@
 title: Documentation Theme for Jekyll
 permalink: "/"
 tags: overview
+homepage: true
 ---
 {% include linkrefs.html %}
 
