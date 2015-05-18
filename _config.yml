@@ -14,7 +14,7 @@ topnav_version: 2.1
 
 tagline: Guide for designers
 
-baseurl: "/documentation-theme-jekyll/designer"
+baseurl: "/documentation-theme-jekyll"
 
 port: 4006
 
