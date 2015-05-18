@@ -23,7 +23,7 @@
       <span class="icon-bar"></span>
       <span class="icon-bar"></span>
       </button>
-      <a class="fa fa-home fa-lg navbar-brand" href="{{ "/index.html" | prepend: site.baseurl }}">&nbsp;<span class="projectTitle"> {{site.title}} {{1.0}}</span></a>
+      <a class="fa fa-home fa-lg navbar-brand" href="{{ "/index.html" | prepend: site.baseurl }}">&nbsp;<span class="projectTitle"> {{site.topnav_title}} {{site.topnav_version}}</span></a>
    </div>
    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
@@ -33,12 +33,12 @@
 
       {% for entry in topnav %}
         {% for subcategory in entry.subcategories %}
-          {% if subcategory.audience contains buildAudience %}
+            {% if subcategory.audience contains audience and subcategory.product contains product and subcategory.platform contains platform and subcategory.version contains version and subcategory.web != false %}
             {% if subcategory.external_url %}
                 <li><a href="{{subcategory.external_url}}" target="_blank">{{subcategory.title}}</a></li>
             {% elsif page.url contains subcategory.url %}
                 <li class="active"><a href="{{subcategory.url | prepend: site.baseurl | append: site.suffix}}">{{subcategory.title}}</a></li>
-            {% else %}
+             {% else %}
                 <li><a href="{{subcategory.url | prepend: site.baseurl | append: site.suffix}}">{{subcategory.title}}</a></li>
             {% endif %}
           {% endif %}
@@ -50,15 +50,15 @@
       <!-- entries with drop-downs appear here -->
       <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
 
- 
+
       {% for entry in topnav_dropdowns %}
         {% for subcategory in entry.subcategories %}
-          {% if subcategory.audience contains buildAudience %}
+          {% if subcategory.audience contains audience and subcategory.product contains product and subcategory.platform contains platform and subcategory.version contains version and subcategory.web != false %}
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ subcategory.title }}<b class="caret"></b></a>
               <ul class="dropdown-menu">
                 {% for subitem in subcategory.items %}
-                  {% if subitem.audience contains buildAudience %}
+                  {% if subitem.audience contains audience and subitem.product contains product and subitem.platform contains platform and subitem.version contains version and subitem.web != false% %}
                     {% if subitem.external_url %}
                       <li><a href="{{subitem.external_url}}" target="_blank">{{subitem.title}}</a></li>
                     {% elsif page.url contains subitem.url %}

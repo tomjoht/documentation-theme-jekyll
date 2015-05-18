@@ -1,2 +1,1 @@
-jekyll serve --config configs/config_writer.yml --destination ../documentation-theme-jekyll-builds/writer
-
+jekyll serve --config_base.yml,config config_writer.yml

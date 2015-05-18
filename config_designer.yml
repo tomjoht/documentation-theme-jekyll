@@ -1,0 +1,19 @@
+project: documentation-theme-jekyll-designer
+
+audience: designer
+
+product: all
+
+platform: all
+
+version: all
+
+topnav_title: Jekyll for Designers
+
+topnav_version: 2.0
+
+tagline: Guide for designers
+
+baseurl: "/documentation-theme-jekyll/designer"
+
+port: 4006

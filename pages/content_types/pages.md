@@ -22,8 +22,9 @@ Make sure each page has frontmatter at the top like this:
 title:  
 permalink: //
 tags: []
-keywords: audience: 
-last_updated
+keywords: 
+audience: 
+last_updated: 
 summary: 
 ---
 {% include linkrefs.html %} 
@@ -62,7 +63,6 @@ To create a Jekyll template:
 
 To use the Jekyll template, when you create a new file in your WebStorm project, you can select your Jekyll file template.
 
-
 ## Markdown or HTML format
 
 Pages can be either Markdown or HTML format (specified through either an .md or .html file extension).
@@ -78,14 +78,6 @@ For your Markdown files, note that a space or two indent will set text off as co
 Store all your pages inside the pages folder. The number of subfolders inside your pages directory doesn't matter. You won't have to use paths (such as ../) when linking to pages. Instead, all the pages will be pulled out to the root directory (each page rendered into its own folder), and links are established through the permalink value in the page's frontmatter.
 
 If you want to use a colon in your page title, you must enclose the title's value in quotation marks.
-
-## Pages versus posts
-
-Most of the theme is designed for using pages, but you can also use posts. Posts are intended for blog entries. They have dates in the filenames, and they sort chronologically when get the posts. Create posts inside the _posts folder.
-
-The latest_posts.html file shows the latest posts. The tagindex.html file sorts posts by tags. The archive.html sorts posts by date.
-
-{{note}} I haven't done much testing with posts, so you may run into some snags there. I'm planning to convert my blog (idratherbewriting.com) to Jekyll using this same theme, and when I do, I'll iron out all the issues with posts. {{end}}
 
 ## Github-flavored Markdown
 

@@ -1,15 +1,19 @@
-{% if site.audience == "writer" %}
-	{% assign buildAudience = "writer" %}
-	{% assign sidebar = site.data.sidebar.entries %}
-	{% assign topnav = site.data.topnav.topnav %}
-	{% assign topnav_dropdowns = site.data.topnav.topnav_dropdowns %}
-	 {% assign fileName = "writer_guide" %}
+{% if site.project == "documentation-theme-jekyll-writer" %}
+{% assign audience = "writer" %}
+{% assign sidebar = site.data.sidebar.entries %}
+{% assign topnav = site.data.topnav.topnav %}
+{% assign topnav_dropdowns = site.data.topnav.topnav_dropdowns %}
+{% assign version = "all" %}
+{% assign product = "all" %}
+{% assign platform = "all" %}
+{% endif %}
 
-{% elsif site.audience == "designer" %}
-	{% assign buildAudience = "designer" %}
-	{% assign sidebar = site.data.sidebar.entries %}
- 	{% assign topnav = site.data.topnav.topnav %}
- 	{% assign topnav_dropdowns = site.data.topnav.topnav_dropdowns %}
- 	 {% assign fileName = "designer_guide" %}
-
+{% if site.project == "documentation-theme-jekyll-designer" %}
+{% assign audience = "designer" %}
+{% assign sidebar = site.data.sidebar.entries %}
+{% assign topnav = site.data.topnav.topnav %}
+{% assign topnav_dropdowns = site.data.topnav.topnav_dropdowns %}
+{% assign version = "all" %}
+{% assign product = "all" %}
+{% assign platform = "all" %}
 {% endif %}

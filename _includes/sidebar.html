@@ -48,11 +48,11 @@
 
             {% for entry in sidebar %}
             {% for subcategory in entry.subcategories %}
-            {% if subcategory.audience contains buildAudience %}
+            {% if subcategory.audience contains audience and subcategory.product contains product and subcategory.platform contains platform and subcategory.version contains version and subcategory.web != false %}
             <li><a href="#">{{ subcategory.title }}</a>
                 <ul>
                     {% for item in subcategory.items %}
-                    {% if item.audience contains buildAudience and item.web != false %}
+                    {% if item.audience contains audience and item.product contains product and item.platform contains platform and item.version contains version and item.web != false %}
                     {% if item.external_url %}
                     <li><a href="{{item.external_url}}" target="_blank">{{subcategory.title}}</a></li>
                     {% elsif page.url contains item.url %}
@@ -98,6 +98,5 @@
         </p>
         {% endif %}
     </div>
-
-   <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above.-->
+       <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above.-->
     <script>$("li.active").parents('li').toggleClass("active");</script>

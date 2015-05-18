@@ -1,26 +1,6 @@
-project: documentation-theme-jekyll-designer
-
-audience: designer
-
-product: all
-
-platform: all
-
-version: all
-
-topnav_title: Jekyll for Designers
-
-topnav_version: 2.0
-
-tagline: Guide for designers
-
-baseurl: "/documentation-theme-jekyll/designer"
-
-port: 4006
-
 host: 127.0.0.1 
 
-url: "http://tomjohnson1492.github.io"
+#url: "http://tomjohnson1492.github.io"
 
 feedback_email: tomjohnson1492@gmail.com
 

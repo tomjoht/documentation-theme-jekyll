@@ -7,14 +7,23 @@ topnav:
     - title: About
       url: /about/
       audience: writer, designer
+      platform: all
+      product: all
+      version: all
   
     - title: Github repo
       external_url: https://github.com/tomjohnson1492/documentation-theme-jekyll
       audience: writer, designer
+      platform: all
+      product: all
+      version: all
   
     - title: My blog
       external_url: http://idratherbewriting.com
       audience: writer, designer
+      platform: all
+      product: all
+      version: all
 
 #Topnav dropdowns
 topnav_dropdowns:
@@ -22,16 +31,28 @@ topnav_dropdowns:
   subcategories:
     - title: Jekyll resources
       audience: writer, designer
+      platform: all
+      product: all
+      version: all
     
       items:
         - title: Jekyll documentation
           external_url: http://jekyllrb.com/docs/home/
           audience: writer, designer
+          platform: all
+          product: all
+          version: all
 
         - title: Jekyll Talk
           external_url: https://talk.jekyllrb.com/
           audience: designer, writer
+          platform: all
+          product: all
+          version: all
 
         - title: Jekyll on Stackoverflow
           external_url: http://stackoverflow.com/questions/tagged/jekyll
           audience: writer, designer
+          platform: all
+          product: all
+          version: all
