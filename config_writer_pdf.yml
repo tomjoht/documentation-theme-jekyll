@@ -1,6 +1,0 @@
-jekyll serve --config config_writer_pdf.yml,config_writer.yml, config_base.yml&
-sleep 9
-
-prince --input-list=../documentation-theme-jekyll-builds/writer-pdf/prince-file-list.txt -o ../documentation-theme-jekyll-builds/pdf-output/writer.pdf
-
-kill -9 $(ps aux | grep '[j]ekyll' | awk '{print $2}')

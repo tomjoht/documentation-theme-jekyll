@@ -9,7 +9,7 @@ search: false
       "title": "{{ page.title | escape }}",
       "tags": "{{ page.tags }}",
       "keywords": "{{page.keywords}}",
-      "url": "{{ site.baseurl }}{{ page.url }}",
+      "url": "{{ page.url | replace: "/", "" }}",
       "last_updated": "{{ page.last_updated }}",
       "summary": "{{page.summary}}",
       "body": "{{ page.content | strip_html | strip_newlines | replace: '\', '\\\\' | replace: '"', '\\"' }}"

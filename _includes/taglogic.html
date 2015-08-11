@@ -1,4 +1,4 @@
-<p>The following pages are tagged with <button type="button" class="btn btn-default navbar-btn cursorNorm">{{page.tagName}}</button></p>
+<p>The following pages are tagged with <button type="button" style="cursor: default" class="btn btn-primary navbar-btn">{{page.tagName}}</button></p>
     <table><thead><tr><th>Page</th><th>Excerpt</th></tr></thead>
     <tbody>
     {% assign thisTag = page.tagName %}
@@ -6,8 +6,8 @@
     {% for tag in page.tags %}
         {% if tag == thisTag %}
         
-        <tr><td><a href="{{ page.permalink | prepend: site.baseurl | append: site.suffix" }}">{{page.title}}</a></td>
-        	<td>{% if page.summary %} {{ page.summary | strip_html | strip_newlines | truncate: 160 }} {% else %} {{ page.content | truncatewords: 50 | strip_html }} {% endif %}</td>
+        <tr><td><a href="{{ page.url | replace: '/',''}}">{{page.title}}</a></td>
+          <td>{% if page.summary %} {{ page.summary | strip_html | strip_newlines | truncate: 160 }} {% else %} {{ page.content | truncatewords: 50 | strip_html }} {% endif %}</td>
         </tr>
         {% endif %}
      {% endfor %}

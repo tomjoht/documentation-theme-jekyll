@@ -1,0 +1,16 @@
+destination: /Applications/XAMPP/xamppfiles/htdocs/documentation-theme-jekyll/writers-pdf
+url: "http://127.0.0.1:4004"
+baseurl: "/writers"
+port: 4004
+print: true
+print_title: Jekyll Documentation Theme for Writers
+print_subtitle: version 3.0
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page_print"
+      comments: true
+      search: true

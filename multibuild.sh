@@ -1,2 +1,0 @@
-jekyll build --config configs/config_writer.yml --destination ../documentation-theme-jekyll-builds/writer
-jekyll build --config configs/config_designer.yml --destination ../documentation-theme-jekyll-builds/designer

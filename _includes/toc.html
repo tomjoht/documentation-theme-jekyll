@@ -17,5 +17,6 @@ $('#toc').on('click', 'a', function() {
   
 });
 </script>
-
+{% unless page.toc == false %}
 <div id="toc"></div>
+{% endunless %}

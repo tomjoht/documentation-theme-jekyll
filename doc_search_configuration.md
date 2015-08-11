@@ -1,0 +1,105 @@
+---
+title: Search configuration
+audience: writer, designer
+tags: publishing
+keywords: 
+last_updated: 
+summary: 
+---
+{% include linkrefs.html %} 
+
+The search is configured through the search.json file in the root directory. Take a look at that code if you want to change what content is included. 
+
+The search is a simple search that looks at content in pages. It looks at both titles and bodies. However, the search doesn't work like google -- you can't hit return and see a list of results on the search results page, with the keywords in bold. Instead, this search shows a list of page titles that contain keyword matches. It's fast, but simple.
+
+## Excluding pages form search
+
+By default, every page is included in the search. The configuration file specifies this default in the frontmatter of every page:
+
+```json
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+      comments: true
+      search: true
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+      search: true
+```
+
+Some pages will break the JSON formatting. If that happens, then the search will no longer work. If you want to exclude a page from search add `search: exclude` in the frontmatter. 
+
+## Troubleshooting search
+
+You should exclude any files from search that you don't want appearing in the search results. For example, if you have a tooltips.json file or prince-file-list.txt, don't include it, as the formatting will break the JSON format.
+
+If any formatting in the search.json file is invalid (in the build), search won't work. You'll know that search isn't working if no results appear when you start typing in the search box.
+
+If this happens, go directly to the search.json file in your browser, and then copy the content. Go to a [JSON validator](http://jsonlint.com/) and paste in the content. Look for the line causing trouble. Edit the file to either exclude it from search or fix the syntax so that it doesn't invalidate the JSON. 
+
+The search.json file already tries to strip out content that would otherwise make the JSON invalid:
+
+```json
+{% raw %}
+      "body": "{{ page.content | strip_html | strip_newlines | replace: '\', '\\\\' | replace: '"', '\\"' }}",
+{% endraw %}
+```
+
+
+However, it's possible that the formatting may not account for all the scenarios that would invalidate the JSON.
+
+## Customizing search results
+
+At some point, you may want to customize the search results more. Here's a little more detail that will be helpful. The search.json file retrieves various page values:
+
+```json
+{% raw %}
+    {% if page.search == true %}
+      {
+      "title": "{{ page.title | escape }}",
+      "tags": "{{ page.tags }}",
+      "keywords": "{{page.keywords}}",
+      "url": "{{ page.url | replace: "/", "" }}",
+      "last_updated": "{{ page.last_updated }}",
+      "summary": "{{page.summary}}",
+      "body": "{{ page.content | strip_html | strip_newlines | replace: '\', '\\\\' | replace: '"', '\\"' }}"
+      }
+{% endraw %}
+```
+
+The \_includes/topnav.html file then makes use of these values:
+
+```html
+<!-- start search -->
+<div id="search-demo-container">
+<input type="text" id="search-input" placeholder="{{site.data.strings.search_placeholder_text}}">
+<ul id="results-container"></ul>
+</div>
+<script src="js/jekyll-search.js" type="text/javascript"></script>
+<script type="text/javascript">
+SimpleJekyllSearch.init({
+searchInput: document.getElementById('search-input'),
+resultsContainer: document.getElementById('results-container'),
+dataSource: 'search.json',
+searchResultTemplate: '<li><a href="{url}" title="{{page.title}}">{title}</a></li>',
+noResultsText: '{{site.data.strings.search_no_results_text}}',
+limit: 10,
+fuzzy: true,
+})
+</script>
+<!-- end search -->
+</li>
+```
+
+Where you see `{url}` and `{title}`, the search is retrieving the values for these as specified in the search.json file. 
+
+At some point, you may want to add in the `{summary}` as well. You could create a dedicated search page that could include the summary as an instant result as you type. 

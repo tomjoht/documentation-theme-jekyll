@@ -1,9 +1,9 @@
 <footer>
             <div class="row">
                 <div class="col-lg-12 footer">
-                <a href="{{ "/copyright" | prepend: site.baseurl }}">&copy;2015 Your Company</a>. All rights reserved. <br />
-<p>Site last generated: {{ site.time | date: "%b %-d, %Y"  }} <br />
-<p><img src="{{ "/images/jekyll.png" | prepend: site.baseurl }}"/></p>
+               {{site.data.strings.copyright_line}}<br />
+{% if page.last_updated %}<p>Page last updated:</span> {{page.last_updated}}<br/>{% endif %} Site last generated: {{ site.time | date: "%b %-d, %Y"  }} <br />
+<p><img src="images/company_logo.png"/></p>
                 </div>
             </div>
         </footer>

@@ -5,6 +5,11 @@
 
  {% include head.html %}
 
+<script>
+  $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
 {% if page.video == true %}
 <link href="https://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
 <script src="https://vjs.zencdn.net/4.12/video.js"></script>
@@ -13,6 +18,15 @@
 {% if page.datatable == true %}
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.5/css/jquery.dataTables.css">
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.5/js/jquery.dataTables.js"></script>
+<script>
+  $(document).ready(function(){
+
+      $('table.datatable').DataTable( {
+                  paging: false,
+                  stateSave: true
+              }
+      );
+</script>
 {% endif %}
 
   </head>
@@ -24,23 +38,16 @@
 
     <!-- Page Content -->
     <div class="container">
-    <div class="col-lg-12">&nbsp;</div>
+        <div class="col-lg-12">&nbsp;</div>
 
-
-
-{% unless page.sidebar == "none" %}
 
 {% include sidebar.html %}
-
-{% endunless %}
 
             <!-- Content Column -->
             <div class="col-md-9">
 
                 {{content}}
             </div><!-- /.row -->
-
-        <hr>
 
     </div>    <!-- /.container -->
 

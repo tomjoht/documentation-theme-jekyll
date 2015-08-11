@@ -1,1 +1,0 @@
-jekyll serve --config config_base.yml,config_designer.yml

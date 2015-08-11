@@ -2,24 +2,15 @@
 <html lang="en">
 <html>
   <head>
- {% include head.html %}
+ {% include head_print.html %}
 
-<link rel="stylesheet" href="{{ "/css/customstyles.css" | prepend:site.baseurl }}"  type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/customstyles.css">
+<link rel="stylesheet" type="text/css" href="css/{{site.theme_file}}">
+<link rel="stylesheet" type="text/css" href="css/printstyles.css">
 
-    <link rel="stylesheet" href="{{ "/css/printstyles.css" | prepend:site.baseurl }}"  type='text/css'>
+</head>
 
-{% if site.audience == "fe" %}
-      <link rel="stylesheet" href="{{ "/css/print-header-fe.css" | prepend:site.baseurl }}"  type='text/css'>
-{% elsif site.audience == "customer" %}
-      <link rel="stylesheet" href="{{ "/css/print-header-customer.css" | prepend:site.baseurl }}"  type='text/css'>
-
-{% elsif site.audience == "sales" %}
-      <link rel="stylesheet" href="{{ "/css/print-header-sales.css" | prepend:site.baseurl }}"  type='text/css'>
-      {% endif %}
-
-  </head>
-
-<body class="print">
+<body class="{% if page.type == "title"%}title{% elsif page.type == "frontmatter" %}frontmatter{% elsif page.type == "first_page" %}first_page{% endif %} print">
 
     <!-- Page Content -->
     <div class="container">
@@ -28,8 +19,6 @@
 
                 {{content}}
             </div>
-
-        <hr>
 
     </div>    <!-- /.container -->
 

@@ -6,15 +6,15 @@ search: false
 
          {% for entry in sidebar %}
            {% for subcategory in entry.subcategories %}
-              {% if subcategory.audience contains buildAudience %}
+              {% if subcategory.audience contains audience and subcategory.platform contains platform and subcategory.product contains product and subcategory.version contains version %}
                       {% for item in subcategory.items %}
-                         {% if item.audience contains buildAudience and item.print == true %}
-                            {{site.url}}{{item.url | prepend: site.baseurl}}{{site.suffix}}
+                         {% if item.audience contains audience and item.platform contains platform and item.product contains product and item.version contains version %}
+                            {{site.url}}{{site.baseurl}}{{item.url }}
                                   {% for thirdlevel in item.thirdlevel %}
-                                     {% if thirdlevel.audience contains buildAudience %}
+                                     {% if thirdlevel.audience %}
                                                 {% for deeplevel in thirdlevel.thirdlevelitems %}
-                                                   {% if deeplevel.audience contains buildAudience and deeplevel.print == true %}
-                                                      {{site.url}}{{item.url | prepend: site.baseurl}}{{site.suffix}}
+                                                   {% if deeplevel.audience contains audience and deeplevel.product contains product and deeplevel.platform contains platform and deeplevel.version contains version %}
+                                                      {{site.url}}{{site.baseurl}}{{item.url}}
                                                    {% endif %}
                                                 {% endfor %}
                                      {% endif %}
@@ -24,3 +24,4 @@ search: false
               {% endif %}
           {% endfor %}
          {% endfor %}
+

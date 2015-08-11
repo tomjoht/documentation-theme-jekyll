@@ -1,64 +1,152 @@
-body.print h2 {color: orange !important; font-size:22px;}
-body.print .container {max-width: 650px;}
-hr {border-top: 0px;}
-.nav ul li a {border-top:0px; background-color:transparent; }
-#navig a[href] {color: black !important;}
+
+/*body.print .container {max-width: 650px;}*/
+
+.nav ul li a {border-top:0px; background-color:transparent; color: #808080; }
+#navig a[href] {color: #595959 !important;}
 table .table {max-width:650px;}
 
-#navig li.sectionHead {font-weight: bold; font-size: 18px;}
-#navig li {font-weight: normal;}
+#navig li.sectionHead {font-weight: bold; font-size: 18px; color: #595959 !important; }
+#navig li {font-weight: normal; }
 
-#navig a[href]::after { content: leader(".") target-counter(attr(href), page); } 
+#navig a[href]::after { content: leader(".") target-counter(attr(href), page); }
 
-a[href]::after, a[href].noCrossRef::after {
+a[href]::after {
     content: " (page " target-counter(attr(href), page) ")"
-    }
+}
 
 a[href^="http:"]::after, a[href^="https:"]::after {
-   content: " (" attr(href) ")";
-    }
+    content: " (" attr(href) ")";
+}
 
 a[href] {
-   color: blue !important;
-    }
-a[href*="mailto"]::after {
-   content: "";
-    }
-
-a[href*=tar.giz]::after {
+    color: blue !important;
+}
+a[href*="mailto"]::after, a[data-toggle="tooltip"]::after, a[href].noCrossRef::after {
     content: "";
 }
 
-div.guideTitleArea {
-    border-top:2px solid #c0c0c0;
-    padding: 20px 20px;
-    page-break-after: always;
+
+@page {
+    margin: 60pt 90pt 60pt 90pt;
+    font-family: sans-serif;
+    font-style:none;
+    color: gray;
+
 }
 
-div.guideTitle {
-    font-size: 34px;
+.printTitle {
+    line-height:30pt;
+    font-size:27pt;
     font-weight: bold;
-    text-align: right;
+    letter-spacing: -.5px;
+    margin-bottom:25px;
 }
 
-.titleVersion {
-    font-size: 18px;
-    font-color: gray;
+.printSubtitle {
+    font-size: 19pt;
+    color: #cccccc !important;
+    front-family: "Grotesque MT Light";
+    line-height: 22pt;
+    letter-spacing: -.5px;
+    margin-bottom:20px;
+}
+.printTitleArea hr {
+    color: #999999 !important;
+    height: 2px;
+    width: 100%;
+}
+
+.printTitleImage {
+    max-width:300px;
+    margin-bottom:200px;
+}
+
+
+.printTitleImage {
+    max-width: 250px;
+}
+
+#navig {
+    /*page-break-before: always;*/
+}
+
+.copyrightBoilerplate {
+    page-break-before:always;
+}
+
+.lastGeneratedDate {
     font-style: italic;
-    margin-top:20px;
-    text-align: right;
-}
-div.titleImage {
-    padding-top:100px;
-    padding-bottom:330px;
+    font-size:14px;
+    color: gray;
 }
 
-@page { size: A4 }
+.alert a {
+    text-decoration: none !important;
+}
 
-@page { margin: 40pt 60pt 40pt 60pt }
+
+body.title { page: title }
+
+@page title {
+    @top-left {
+        content: " ";
+    }
+    @top-right {
+        content: " "
+    }
+    @bottom-right {
+        content: " ";
+    }
+    @bottom-left {
+        content: " ";
+    }
+}
+
+body.frontmatter { page: frontmatter }
+body.frontmatter {counter-reset: page 1}
 
 
+@page frontmatter {
+    @top-left {
+        content: prince-script(guideName);
+    }
+    @top-right {
+        content: prince-script(datestamp);
+    }
+    @bottom-right {
+        content: counter(page, lower-roman);
+    }
+    @bottom-left {
+        content: "youremail@domain.com";   }
+}
 
-/*
-h1::before, h1::after { content: "***" }
-*/
+body.first_page {counter-reset: page 1}
+
+h1 { string-set: doctitle content() }
+
+@page {
+    @top-left {
+        content: string(doctitle);
+        font-size: 11px;
+        font-style: italic;
+    }
+    @top-right {
+        content: prince-script(datestamp);
+        font-size: 11px;
+    }
+
+    @bottom-right {
+        content: "Page " counter(page);
+        font-size: 11px;
+    }
+    @bottom-left {
+        content: prince-script(guideName);
+        font-size: 11px;
+    }
+}
+.alert {
+    background-color: #f0f0f0 !important;
+    border-color: #dedede !important;
+}
+
+

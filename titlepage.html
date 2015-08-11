@@ -1,55 +1,26 @@
 ---
-permalink: /titlepage/
-search: false
+type: title
 ---
-{% comment %} this print-frontmatter class lets Prince apply a different header/footer for this page. {% endcomment %}
-<div class="print-frontmatter">
-    <div class="titleImage">
-        <img src="{{ "/images/adtruth_logo_big.png" | prepend: site.baseurl }}" style="max-width: 600px;" >
+    <div class="printTitleArea">
+        <div class="printTitle">{{site.print_title}}</div>
+        <div class="printSubtitle">{{site.print_subtitle}}</div>
+        <div class="lastGeneratedDate">Last generated: {{ site.time | date: '%B %d, %Y' }}</div>
+        <hr />
+
+        <div class="printTitleImage">
+            <img src="images/company_logo_big.png" >
+
+        </div>
+
+        <div class="copyrightBoilerplate">
+            &copy; 2015 Your company's copyright information...
+            <p>All rights reserved. No part of this book may be reproduced in any form or by any electronic or mechanical means, including information storage and retrieval systems, without written permission from the author, except in the case of a reviewer, who may quote brief passages embodied in critical articles or in a review.</p>
+
+            <p>Trademarked names appear throughout this book. Rather than use a trademark symbol with every occurrence of a trademarked name, names are used in an editorial fashion, with no intention of infringement of the respective owner’s trademark.</p>
+
+            <p>The information in this book is distributed on an “as is” basis, without warranty. Although every precaution has been taken in the preparation of this work, neither the author nor the publisher shall have any liability to any person or entity with respect to any loss or damage caused or alleged to be caused directly or indirectly by the information contained in this book.</p>
+
+        </div>
+
     </div>
-<div class="guideTitleArea">
-    <div class="guideTitle">{{site.print_title}}</div>
-    <div class="titleVersion">version {{site.version}}</div>
-    <div class="titleVersion">Last generated: {{ site.time | date: "%b %-d, %Y"  }} </div>
-</div>
 
-
-<div id="navig">
-    <h1>Table of Contents</h1>
-{% include custom/conditions.html %}
-
-<ul id="mysidebar" class="nav">
-{% comment %} if you want a fixed floating sidebar, change the class to "nav affix" {% endcomment %}
-
-{% for entry in sidebar %}
-   {% for subcategory in entry.subcategories %}
-      {% if subcategory.audience contains buildAudience and subcategory.print == true %}
-         <li class="sectionHead">{{ subcategory.title }}
-            <ul>
-              {% for item in subcategory.items %}
-                 {% if item.audience contains buildAudience and item.print == true and item.toc != false %}
-                       <li><a href="{{item.url | prepend: site.baseurl}}index.html">{{item.title}}</a>
-                          {% for thirdlevel in item.thirdlevel %}
-                             {% if thirdlevel.audience contains buildAudience and thirdlevel.print == true %}
-                               <li class="sectionHead">{{ thirdlevel.title }}
-                                    <ul>
-                                        {% for deeplevel in thirdlevel.thirdlevelitems%}
-                                           {% if deeplevel.audience contains buildAudience and deeplevel.print == true and item.toc != false %}
-                                              <li><a href="{{deeplevel.url | prepend: site.baseurl}}index.html">{{deeplevel.title}}</a></li>
-                                           {% endif %}
-                                        {% endfor %}
-                                      </ul>
-                                  </li>
-                             {% endif %}
-                          {% endfor %}
-                       </li>
-                {% endif %}
-             {% endfor %}
-           </ul>
-        </li>
-      {% endif %}
-  {% endfor %}
-{% endfor %}
-</ul>
-</div>
-</div>
