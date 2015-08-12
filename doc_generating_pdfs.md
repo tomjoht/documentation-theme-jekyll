@@ -357,5 +357,11 @@ To generate the PDF, you just run several scripts that have the commands package
 
 ## JavaScript conflicts
 
-I've noticed that when I have JavaScript in my pages, sometimes Prince doesn't like this, as it tries to process the JavaScript. It's better to conditionalize out any JavaScript from your PDF output before building your PDFs. 
+I've noticed that when I have JavaScript in my pages, sometimes Prince doesn't like this, as it tries to process the JavaScript. It's better to conditionalize out any JavaScript from your PDF output before building your PDFs. If Prince encounters JavaScript on a page, it will give you this error:
+
+```
+prince: http://127.0.0.1:4002/designers/doc_shuffle.html:2: error: TypeError: value is not an object
+```
+
+However, the PDF will still build.
 
