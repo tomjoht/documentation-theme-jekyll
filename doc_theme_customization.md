@@ -1,5 +1,5 @@
 ---
-title: Customizing the theme
+title: Theme customization
 tags: getting-started
 audience: writer, designer
 keywords: 

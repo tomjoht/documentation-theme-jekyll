@@ -56,8 +56,8 @@ entries:
           product: all
           version: all
 
-        - title: Customizing the theme
-          url: /doc_customize_the_theme.html
+        - title: Theme customization
+          url: /doc_theme_customization.html
           audience: writers, designers
           platform: all
           product: all
