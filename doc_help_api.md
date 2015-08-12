@@ -44,7 +44,7 @@ In your Jekyll project, create a new folder called "_tooltips" and put every pag
 
 ## 2. Create pages in your collection
 
-Create pages inside your new tooltips collection. Each page needs only a unique `id` in the frontmatter. Here's an example: 
+Create pages inside your new tooltips collection (that is, inside the \_tooltips folder). Each page needs only a unique `id` in the frontmatter. Here's an example:
 
 {%raw%}
 ```liquid
@@ -81,15 +81,15 @@ layout: none
 {% endraw %}
 ```
 
-This code will loop through all pages in the tooltips collection and insert the id and body into key-value pairs for the JSON code. Here's an example of what that looks like after it's process by Jekyll in the site build: <a target="_blank" title="ToolTip Demo" href="{{ "/tooltips.json" | prepend: site.baseurl }}">Tooltips</a>. 
+This code will loop through all pages in the tooltips collection and insert the id and body into key-value pairs for the JSON code. Here's an example of what that looks like after it's processed by Jekyll in the site build: <a target="_blank" title="ToolTip Demo" href="{{ "/tooltips.json" | prepend: site.baseurl }}">Tooltips</a>.
 
 {{tip}} Check out <a href="https://google-styleguide.googlecode.com/svn/trunk/jsoncstyleguide.xml">Google's style guide for JSON</a>. These best practices can help you keep your JSON file valid.{{end}}
 
-Store this file in your root directory. You can add different fields depending on how you want the JSON to be structured. Here I just have to fields: `id` and `body`. And the JSON is looking just in the tooltips collection that I created. 
+Store this tooltips.json file in your root directory. You can add different fields depending on how you want the JSON to be structured. Here I just have to fields: `id` and `body`. And the JSON is looking just in the tooltips collection that I created.
 
 When you build your site, Jekyll will iterate through every page in your _tooltips folder and put the page id and body into this format.
 
-You could create different JSON files that specialize in different content. For example, suppose you have some getting started information. You could put that into a different JSON file. Using the same structure, you might add an `if` tag that checks whether the page has frontmatter that says "getting_started: true" or something. Or you could put it into a separate collection entirely (different from tooltips).
+You could create different JSON files that specialize in different content. For example, suppose you have some getting started information. You could put that into a different JSON file. Using the same structure, you might add an `if` tag that checks whether the page has frontmatter that says `getting_started: true` or something. Or you could put it into a separate collection entirely (different from tooltips).
 
 By chunking up your JSON files, you can provide a quicker lookup, though I'm not sure how big the JSON file can be before you experience any latency with the jQuery lookup.
 
@@ -107,12 +107,14 @@ If your server setup allows htaccess files to override general server permission
 Header set Access-Control-Allow-Origin "*"
 ```
 
-Store this in the same directory as your project. This is what I've done in a directory on my web host (bluehost.com). Inside http://idratherbewriting.com/wp-content/apidemos/, I uploaded a file called htaccess with the preceding code. After I uploaded it, I renamed it to .htaccess, right-clicked the file and set the permissions to 774.
+Store this in the same directory as your project. This is what I've done in a directory on my web host (bluehost.com). Inside http://idratherbetellingstories.com/wp-content/apidemos/, I uploaded a file called ".htaccess" with the preceding code.
+
+After I uploaded it, I renamed it to .htaccess, right-clicked the file and set the permissions to 774.
 
 To test whether your server permissions are set correctly, open a terminal and run the following curl command pointing to your tooltips.json file:
 
 ```
-curl -I http://idratherbewriting.com/wp-content/apidemos/tooltips.json
+curl -I http://idratherbetellingstories.com/wp-content/apidemos/tooltips.json
 ```
 
 If the server permissions are set correctly, you should see the following line somewhere in the response:
@@ -140,6 +142,8 @@ In other server setups, you may need to edit one of your Apache configuration fi
 
 If you don't have CORS enabled, users will see a CORS error/warning message in the console of the page making the request. 
 
+{{tip}} If enabling CORS is problematic, you could always just send developers the tooltips.json file and ask them to place it on their own server. {{end}}
+
 ## 5. Explain how developers can access the help
 
 Developers can access the help using the `.get` method from jQuery, among other methods. Here's an example of how to get a page with the ID of `basketball`:
@@ -149,7 +153,7 @@ Developers can access the help using the `.get` method from jQuery, among other 
 <script type="text/javascript">
 $(document).ready(function(){
 
-var url = "{{site.baseurl}}/tooltips.json";
+var url = "{url}/tooltips.json";
 
 
 $.get( url, function( data ) {
@@ -167,9 +171,9 @@ $.get( url, function( data ) {
 {% endraw %}
 ```
 
-The `url` is where your tooltips.json file is. The `each` method looks through all the JSON content to find the item whose `page.id` is `basketball`. It then looks for an element on the page named `#basketball` and adds a `data-content` attribute to that element. 
+The `{url}` is where your tooltips.json file is. The `each` method looks through all the JSON content to find the item whose `page.id` is equal to `basketball`. It then looks for an element on the page named `#basketball` and adds a `data-content` attribute to that element.
 
-{{warning}}<b>Note:</b> Make sure your JSON file is valid. Otherwise, this method won't work. I use the <a href="https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en">JSON Formatter extension for Chrome</a>. When I go to the tooltips.json page in my browser, the JSON content -- if valid -- is nicely formatted (and includes some color coding). If the file isn't valid, it's not formatted and there isn't any color. You can also check the JSON formatting using <a href="http://jsonformatter.curiousconcept.com/">JSON Formatter and Validator</a>. If your JSON file isn't valid, identify the problem area using the validator and troubleshoot the file causing issues. It's usually due to some code that isn't escaping correctly. {{end}}
+{{warning}}<b>Note:</b> Make sure your JSON file is valid. Otherwise, this method won't work. I use the <a href="https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en">JSON Formatter extension for Chrome</a>. When I go to the tooltips.json page in my browser, the JSON content &mdash; if valid &mdash; is nicely formatted (and includes some color coding). If the file isn't valid, it's not formatted and there isn't any color. You can also check the JSON formatting using <a href="http://jsonformatter.curiousconcept.com/">JSON Formatter and Validator</a>. If your JSON file isn't valid, identify the problem area using the validator and troubleshoot the file causing issues. It's usually due to some code that isn't escaping correctly. {{end}}
 
 Why `data-content`? Well, in this case, I'm using [Bootstrap popovers](http://getbootstrap.com/javascript/#popovers) to display the tooltip content. The `data-content` attribute is how Bootstrap injects popovers.
 
@@ -197,7 +201,7 @@ $(document).ready(function(){
     });
 ```
 
-By the way, Bootstrap's popovers require you to initialize them using the above code -- they aren't turned on by default.
+Note that even though you reference a Bootstrap js script, Bootstrap's popovers require you to initialize them using the above code as well &mdash; they aren't turned on by default.
 
 View the source code of the <a target="_blank" title="ToolTip Demo" href="{{ "/tooltip_demo.html" | prepend: site.baseurl }}">Tooltip Demo</a> for the full comments. 
 
@@ -206,7 +210,7 @@ View the source code of the <a target="_blank" title="ToolTip Demo" href="{{ "/t
 You might also want to insert the same content into different parts of your help site. For example, if you have tooltips providing definitions for fields, you'll probably want to create a page in your help that lists those same definitions. You could use the same method developers use to pull help content into their applications. But it will probably be easier to simply use Jekyll's tags for doing it. 
 
 
-Here's a demo:
+Here's how you would reuse the content:
 
 ```html
 {% raw %}

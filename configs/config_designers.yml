@@ -50,7 +50,6 @@ defaults:
     values:
       layout: "page"
       comments: true
-      search: true
   -
     scope:
       path: ""
@@ -58,6 +57,5 @@ defaults:
     values:
       layout: "post"
       comments: true
-      search: true
 
 

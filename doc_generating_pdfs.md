@@ -370,25 +370,24 @@ To generate the PDF, you just run several scripts that have the commands package
 
 ## JavaScript conflicts
 
-I've noticed that when I have JavaScript in my pages, sometimes Prince doesn't like this, as it tries to process the JavaScript. As a result, it will create an error like this in Terminal:
+If you have JavaScript on any of your pages, Prince will note errors in Terminal like this:
 
 ```
 error: TypeError: value is not an object
 ```
 
-It's better to conditionalize out any JavaScript from your PDF output before building your PDFs. If Prince encounters JavaScript on a page, it will give you this error:
-
-```
-prince: http://127.0.0.1:4002/designers/doc_shuffle.html:2: error: TypeError: value is not an object
-```
-
 However, the PDF will still build.
 
-If you encounter this error, surround the JavaScript with conditional tags like this:
+You need to conditionalize out any JavaScript from your PDF web output before building your PDFs. Make sure that the PDF configuration files have the `print: true` property.
+
+Then surround the JavaScript with conditional tags like this:
 
 ```
 {% raw %}
-{% unless site.print == false %}  javascript content here ... {% endunless %}
+{% unless site.print == true %}
+javascript content here ...
+{% endunless %}
 {% endraw %}
 ```
 
+For more detail about using `unless` in conditional logic, see {{doc_conditional_logic}}. What this code means is basically the opposite of `{% raw %}if site.print == true {% endraw %}`.

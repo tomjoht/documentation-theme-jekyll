@@ -8,16 +8,14 @@ summary:
 ---
 {% include linkrefs.html %} 
 
-By default, all files in your project are included in your output. To exclude files, note them in the `exclude` section in the configuration file. Here's a sample:
+By default, all files in your project are included in your output (regardless of whether they're listed in the sidebar_doc.yml file or not). To exclude files, note them in the `exclude` section in the configuration file. Here's a sample:
 
 ```
 
 exclude: 
-  - "Gemfile"
-  - "Gemfile.lock"
-  - drafts
-  - _site/documentation-theme-jekyll
+  - doc_writers_*
   - bower_components
+  - Gemfile
 ```
 
 If you have different outputs for your site, you'll want to customize the exclude sections in your various configuration files.
@@ -37,6 +35,7 @@ exclude:
 In your exclude list for your alpha project, specify it as follows:
 
 ```
+exclude:
 - beta_*
 ```
 
@@ -61,9 +60,16 @@ exclude:
 
 - alpha_cpp_*
 - alpha_beta_*
+```
 
+When you exclude folders, include the trailing slash at the end of the folder name:
 
-There isn't a way to automatically exclude all folders. By default, everything is included unless you explicitly list it under the exclude section.
+```
+exclude:
+- images/alpha/
+```
+
+There isn't a way to automatically exclude anything. By default, everything is included unless you explicitly list it under the exclude section.
 
 ## Excluding draft content
 
@@ -71,4 +77,4 @@ If you're working on a draft, put it inside the \_drafts folder or add `publishe
 
 ## Limitations
 
-What if a file should appear in two projects but not the third? This can get tricky. For some files, rather than using a wildcard, you may need to manually specify the entire filename that you're excluding instead of excluding it by way of pattern.
+What if a file should appear in two projects but not the third? This can get tricky. For some files, rather than using a wildcard, you may need to manually specify the entire filename that you're excluding instead of excluding it by way of a wildcard pattern.

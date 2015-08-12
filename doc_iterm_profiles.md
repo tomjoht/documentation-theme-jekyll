@@ -24,7 +24,11 @@ When you're working with tech docs, a lot of times you're single sourcing multip
     Leave the Login shell option selected.
 	
 6. In the Working Directory section, select **Directory** and enter the directory for your project, such as **/Users/tjohnson/projects/documentation-theme-jekyll**.
-7. Close the profiles panel. 
+7. Close the profiles panel.
+
+Here's an example:
+
+![iTerm profile example](images/itermexample.png)
 
 ## Launching a profile
 

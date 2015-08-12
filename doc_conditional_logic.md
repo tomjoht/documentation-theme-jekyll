@@ -98,6 +98,24 @@ Note that you have to specify the full condition each time. You can't shorten th
 
 This won't work.
 
+## Unless operator
+
+You can also use `unless` in your logic, like this:
+
+```liquid
+{% raw %}
+{% unless site.print == true %}
+...
+{% endunless %}
+{% endraw %}
+```
+
+When figuring out this logic, read it like this: "Run the code here *unless* this condition is satisfied." Or "If this condition is satisfied, don't run this code."
+
+Don't read it the other way around or you'll get confused. (It's not executing the code only if the condition is satisfied.)
+
+In this situation, if `site.print == true`, then the code will *not* be run here.
+
 ## Storing conditions in the \_data folder
 
 Here's an example of using conditional logic based on a value in a data file:

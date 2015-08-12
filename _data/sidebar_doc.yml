@@ -178,7 +178,7 @@ entries:
           version: all
 
         - title: Links
-          url: /doc_links.html
+          url: /doc_hyperlinks.html
           audience: writers, designers
           platform: all
           product: all
@@ -285,7 +285,7 @@ entries:
           version: all
 
         - title: iTerm profiles
-          url: /iterm_profiles.html
+          url: /doc_iterm_profiles.html
           audience: writers, designers
           platform: all
           product: all
@@ -392,7 +392,7 @@ entries:
                   product: all
 
                 - title: Special layout pages
-                  url: /doc_special-layouts.html
+                  url: /doc_tag-special-layouts.html
                   audience: writers, designers
                   platform: all
                   version: all

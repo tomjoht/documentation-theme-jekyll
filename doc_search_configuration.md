@@ -8,35 +8,17 @@ summary:
 ---
 {% include linkrefs.html %} 
 
-The search is configured through the search.json file in the root directory. Take a look at that code if you want to change what content is included. 
+The search is configured through the search.json file in the root directory. Take a look at that code if you want to change what fields are included.
 
-The search is a simple search that looks at content in pages. It looks at both titles and bodies. However, the search doesn't work like google -- you can't hit return and see a list of results on the search results page, with the keywords in bold. Instead, this search shows a list of page titles that contain keyword matches. It's fast, but simple.
+The search is a simple search that looks at content in pages. It looks at titles, summaries, keywords, tags, and bodies.
+
+However, the search doesn't work like google &mdash; you can't hit return and see a list of results on the search results page, with the keywords in bold. Instead, this search shows a list of page titles that contain keyword matches. It's fast, but simple.
 
 ## Excluding pages form search
 
-By default, every page is included in the search. The configuration file specifies this default in the frontmatter of every page:
+By default, every page is included in the search. Depending on the type of content you're including, you may find that some pages will break the JSON formatting. If that happens, then the search will no longer work.
 
-```json
-defaults:
-  -
-    scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
-      comments: true
-      search: true
-  -
-    scope:
-      path: ""
-      type: "posts"
-    values:
-      layout: "post"
-      comments: true
-      search: true
-```
-
-Some pages will break the JSON formatting. If that happens, then the search will no longer work. If you want to exclude a page from search add `search: exclude` in the frontmatter. 
+If you want to exclude a page from search add `search: exclude` in the frontmatter.
 
 ## Troubleshooting search
 
@@ -54,9 +36,9 @@ The search.json file already tries to strip out content that would otherwise mak
 {% endraw %}
 ```
 
+However, it's possible that the formatting may not account for all the scenarios that would invalidate the JSON. (Sometimes it's an extra comma after the last item that makes it invalid.)
 
-However, it's possible that the formatting may not account for all the scenarios that would invalidate the JSON.
-
+{% if site.audience == "designers" %}
 ## Customizing search results
 
 At some point, you may want to customize the search results more. Here's a little more detail that will be helpful. The search.json file retrieves various page values:
@@ -103,3 +85,4 @@ fuzzy: true,
 Where you see `{url}` and `{title}`, the search is retrieving the values for these as specified in the search.json file. 
 
 At some point, you may want to add in the `{summary}` as well. You could create a dedicated search page that could include the summary as an instant result as you type. 
+{% endif %}
