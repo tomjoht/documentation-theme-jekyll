@@ -1,40 +1,23 @@
 ---
+title: search
 layout: none
-search: false
+search: exclude
 ---
 [
-  {% for page in site.pages %}
-    {% if page.search == true %}
-      {
-      "title": "{{ page.title | escape }}",
-      "tags": "{{ page.tags }}",
-      "keywords": "{{page.keywords}}",
-      "url": "{{ page.url | replace: "/", "" }}",
-      "last_updated": "{{ page.last_updated }}",
-      "summary": "{{page.summary}}",
-      "body": "{{ page.content | strip_html | strip_newlines | replace: '\', '\\\\' | replace: '"', '\\"' }}"
-      }
-    {% unless forloop.last %},{% endunless %}
+{% for page in site.pages %}
+{% unless page.search == "exclude" %}
+{
+"title": "{{ page.title | escape }}",
+"tags": "{{ page.tags }}",
+"keywords": "{{page.keywords}}",
+"url": "{{ page.url | replace: '/','' }}",
+"summary": "{{page.summary}}",
+"body": "{{ page.content | strip_html | strip_newlines | replace: '\', '\\\\' | replace: '"', '\\"' }}"
+},
+{% endunless %}
 
-      {% endif %}
-  {% endfor %}
-
-    {% for post in site.posts %}
-        {% if forloop.length != 0 and forloop.first %},{% endif %}
-
-    {% if post.search == true %}
-      {
-      "title": "{{ page.title | escape }}",
-      "tags": "{{ page.tags }}",
-      "keywords": "{{page.keywords}}",
-      "url": "{{ site.baseurl }}{{ page.url }}",
-      "last_updated": "{{ page.last_updated }}",
-      "summary": "{{page.summary}}",
-      "body": "{{ page.content | strip_html | strip_newlines | replace: '\', '\\\\' | replace: '"', '\\"' }}"
-      } {% unless forloop.last %},{% endunless %}
-      {% endif %}
-  {% endfor %}
+{% endfor %}
+null
 ]
-
 
 
