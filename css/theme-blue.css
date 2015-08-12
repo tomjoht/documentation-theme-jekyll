@@ -54,6 +54,15 @@ a[data-toggle="tooltip"] {
     border-color: #347DBE;
 }
 
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+   background-color: #248ec2;
+    border-color: #347DBE;
+}
+
 .printTitle {
     color: #015CAE !important;
 }

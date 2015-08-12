@@ -4,7 +4,7 @@ audience: designers
 product: all
 platform: all
 version: all
-destination: /Applications/XAMPP/xamppfiles/htdocs/jekyll-documentation-theme/designers
+destination: ../designers
 topnav_title: Jekyll Documentation Theme
 homepage_title: Jekyll Documentation Theme &mdash; Designers
 site_title: Jekyll Documentation Theme &mdash; Designers
