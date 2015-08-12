@@ -67,7 +67,7 @@ Change "acme" to the name of your series.
 
 Save this in your \_includes folder as series\_acme\_next.html. 
 
-## 3. Add the right frontmatter to each of your series pages
+## 3. Add the correct frontmatter to each of your series pages
 
 Now add the following frontmatter to each page in the series:
 
@@ -78,7 +78,7 @@ weight: 1.0
 
 With weight, you could use 1, 2, 3, etc.., but Jekyll will treat 10 as coming after 1. This is why I use 1.0 and 1.1, 1.2, etc. 
 
-If you do use whole numbers, change the `plus: "0.1"` to `plus: "1". 
+If you do use whole numbers, change the `plus: "0.1"` to `plus: "1"`.
 
 ## 4. Add links to the series button and next button on each page.
 
@@ -86,6 +86,8 @@ On each series page, add a link to the series button at the top and a link to th
  
 ```html
 {% raw %}
+<!-- your frontmatter goes here -->
+
 {% include custom/doc/series_acme.html %}
 
 <!-- your page content goes here ... -->
@@ -96,4 +98,4 @@ On each series page, add a link to the series button at the top and a link to th
 
 ## Changing the series drop-down color
 
-The Bootstrap menu uses the `primary` class for styling. If you change this class in your theme, the Bootstrap menu should automatically change color as well.
+The Bootstrap menu uses the `primary` class for styling. If you change this class in your theme, the Bootstrap menu should automatically change color as well. You can also just use another Bootstrap class in your button code. Instead of `btn-primary`, use `btn-info` or `btn-warning`. See {{doc_labels}} for more Bootstrap button classes.

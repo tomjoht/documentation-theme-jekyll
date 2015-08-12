@@ -12,36 +12,34 @@ video: true
 The theme has the [video.js](http://www.videojs.com/) player integrated. But the scripts only appear on a page or post if you have certain frontmatter in that page or post. If you want to embed a video in a page and use the Video JS player, add `video: true` in your frontmatter of a page or post, and then add code like this where you want the video to appear:
 
 ```html
-<video id="scenario-1" class="video-js vjs-default-skin vjs-big-play-centered" controls
+<p><video id="scenario-1" class="video-js vjs-default-skin vjs-big-play-centered" controls
  preload="auto" width="640" height="480" data-setup='{}'>
   <source src="http://idratherbetellingstories.com/podcasts/ontariochapterpresentation/ontariochapterv4.mp4" type='video/mp4'>
-</video>
+</video></p>
 ```
 
 Here's an example: 
 
-<video id="scenario-1" class="video-js vjs-default-skin vjs-big-play-centered" controls
+<p><video id="scenario-1" class="video-js vjs-default-skin vjs-big-play-centered" controls
  preload="auto" width="640"  height="480" data-setup='{}'>
   <source src="http://idratherbetellingstories.com/podcasts/ontariochapterpresentation/ontariochapterv4.mp4" type='video/mp4'>
-</video>
-
-You'll know it's working if the video wrapper looks like the one here: [video.js: the open source HTML5 video player](http://www.videojs.com/).
+</video></p>
 
 If you want the player button in the upper-left corner (which is the default), remove the `vjs-big-play-centered` from the video class.
 
-<video id="scenario-1" class="video-js vjs-default-skin" controls
+<p><video id="scenario-1" class="video-js vjs-default-skin" controls
  preload="auto" width="640" height="480" data-setup='{}'>
   <source src="http://idratherbetellingstories.com/podcasts/ontariochapterpresentation/ontariochapterv4.mp4" type='video/mp4'>
-</video>
+</video></p>
 
-Here are [more details on this video player](https://github.com/videojs/video.js/blob/stable/docs/guides/setup.md).
+Here are [more details on this video player from Video JS](https://github.com/videojs/video.js/blob/stable/docs/guides/setup.md).
 
-Note that if some of the js doesn't load correctly, the default fallback player is the regular HTML5 video player available via the browser. Here's an example: 
+Note that if some of the js doesn't load correctly, the default fallback player is the regular HTML5 video player available via the browser. Here's an example of the built-in browser video wrapper:
 
-<video width="640" controls>
+<p><video width="640" controls>
   <source src="http://idratherbetellingstories.com/podcasts/ontariochapterpresentation/ontariochapterv4.mp4" type="video/mp4">
 Your browser does not support the video tag.
-</video>
+</video></p>
 
 However, I don't think the built-in browser video players work very well (you can't easily scrub around the video without seeing lots of buffering and other issues). But definitely compare the two. You may find that adding the Video JS wrapper is overkill.
 

@@ -88,3 +88,7 @@ The following demonstrate the formatting for each callout.
 
 If you want to blast a warning to users on every page, add the alert or callout to the layouts/page.html page right below the frontmatter. Every page using the page layout (all, by defaut) will show this message.
 
+## Using Markdown inside of notes
+
+You can't use Markdown formatting inside notes.
+

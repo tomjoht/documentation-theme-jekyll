@@ -6,9 +6,10 @@ keywords:
 summary:
 ---
 {% include linkrefs.html %}
-
+{% unless site.print == false %}
 <script src="js/jquery.shuffle.min.js"></script>
 <script src="js/jquery.ba-throttle-debounce.min.js"></script>
+{% endunless %}
 
       <div class="filter-options">
       <button class="btn btn-primary" data-group="all">All</button>

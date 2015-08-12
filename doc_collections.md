@@ -20,14 +20,14 @@ collections:
     output: true
 ```
 
-In this example, tooltips is the name of the collection.
+In this example, "tooltips"" is the name of the collection.
 
 ## Interacting with collections
 
-You can interact with collections by using the `site.collection_namespace` path, where `collection_namespace` is what you've configured. In this case, if I wanted to loop through all tooltips, I would use `site.tooltips` instead of `site.pages` or `site.posts`. 
+You can interact with collections by using the `site.collectionname` namespace, where `collectionname` is what you've configured. In this case, if I wanted to loop through all tooltips, I would use `site.tooltips` instead of `site.pages` or `site.posts`.
 
 See [Collections in the Jekyll documentation](http://jekyllrb.com/docs/collections/) for more information.
 
 ## How to use collections
 
-I haven't found a huge use for collections in normal documentation. However, I did find a use for collections in generating a tooltip file that would be used for delivering tooltips to a user interface from text files in the documentation.
+I haven't found a huge use for collections in normal documentation. However, I did find a use for collections in generating a tooltip file that would be used for delivering tooltips to a user interface from text files in the documentation. See {{doc_help_api}} for details.

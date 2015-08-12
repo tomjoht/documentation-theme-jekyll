@@ -5,8 +5,9 @@ keywords:
 datatable: true
 summary: 
 ---
-{% include linkrefs.html %} 
+{% include linkrefs.html %}
 
+{% unless site.print == true %}
 <script>
 $(document).ready(function(){
 
@@ -18,6 +19,7 @@ $(document).ready(function(){
         );
 });
 </script>
+{% endunless %}
 
 ## Multimarkdown Tables
 
@@ -39,9 +41,9 @@ cell 2a | cell 2b
 
 ## jQuery datables
 
-You also have the option of using a [jQuery datatable](https://www.datatables.net/), which gives you some more options. If you want to use a jQuery datatable, then add `datatable: true` in a page's frontmatter. This will enable the right scripts for the table on that page only (rather than loading the scripts on every page of the site.)
+You also have the option of using a [jQuery datatable](https://www.datatables.net/), which gives you some more options. If you want to use a jQuery datatable, then add `datatable: true` in a page's frontmatter. This will load the right jQuery datatable scripts for the table on that page only (rather than loading the scripts on every page of the site.)
 
-Also, add the scripts to trigger the jQuery table on your page:
+Also, you need to add this script to trigger the jQuery table on your page:
 
 ```js
 <script>
@@ -59,7 +61,7 @@ $(document).ready(function(){
 
 The available options for the datable are described in the [datatable documentation](https://www.datatables.net/manual/options), which is excellent.
 
-Additionally, you must add a class of `display` to the table. (You can change the class, but then you'll need to change the trigger above from `table.display` to whatever class you want to you. You might have different triggers with different options for different tables.)
+Additionally, you must add a class of `display` to your tables. (You can change the class, but then you'll need to change the trigger above from `table.display` to whatever class you want to you. You might have different triggers with different options for different tables.)
 
 Since Markdown doesn't allow you to add classes to tables, you'll need to use HTML for any datatables. Here's an example: 
 

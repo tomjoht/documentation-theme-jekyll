@@ -18,13 +18,17 @@ tags: [formatting, single-sourcing]
 ```
 
 ## Tags overview
-{{note}} With posts, tags have a namespace that you can access with `posts.tags.tagname`, where `tagname` is the name of the tag. You can then list all posts in that tag namespace. But pages don't off this same tag namespace, so you could actually use another key instead of `tags`. Nevertheless, I'm using the same `tags` name here.{{end}}
+{% if site.audience == "designers" %}
+{{note}} With posts, tags have a namespace that you can access with <code>posts.tags.tagname</code>, where <code>tagname</code> is the name of the tag. You can then list all posts in that tag namespace. But pages don't off this same tag namespace, so you could actually use another key instead of <code>tags</code>. Nevertheless, I'm using the same <code>tags</code> name here.{{end}}
+{% endif %}
 
-To prevent tags from getting out of control and inconsistent, first make sure the tag appears in the tags_doc.yml file. If it's not there, the tag you add to a page won't be read. I added this check just to make sure you're using the same tags consistently and not adding new tags that don't have tag archive pages. 
+To prevent tags from getting out of control and inconsistent, first make sure the tag appears in the \date/tags_doc.yml file. If it's not there, the tag you add to a page won't be read. I added this check just to make sure I'm using the same tags consistently and not adding new tags that don't have tag archive pages.
 
-{{note}} Unlike with WordPress, you have to build out the functionality for tags so that clicking a tag name shows you all pages with that tag. It's much more manual.{{end}}
+{% if site.audience == "designers" %}
+{{note}} Unlike with WordPress, you have to build out the functionality for tags so that clicking a tag name shows you all pages with that tag. Tags in Jekyll are much more manual.{{end}}
+{% endif %}
 
-Additionally, you must create a tag archive page similar to the other pages named doc_tag-tagname.html folder. This theme doesn't auto-create tag archive pages. 
+Additionally, you must create a tag archive page similar to the other pages named doc_tag-{tagname}.html folder. This theme doesn't auto-create tag archive pages.
 
 For simplicity, make all your tags single words (connect them with hyphens if necessary).
 
@@ -54,8 +58,6 @@ Tags have a few components.
 	  - special-layouts
 	  - content types
 	```
-		
-3.  In the \_includes folder, there's a taglogic.html file. This file has common logic for getting the tags and listing out the pages containing the tag in a table with summaries or truncated excerpts. You don't have to do anything with the file &mdash; just leave it there because the tag archive pages reference it.
 	
 4. Create a tag archive file for each tag in your tags_doc.yml list. Name the file like this: doc_tag-getting-started.html, where doc is your project name. (Again, tags with multiple words need hyphens in them.)
 	
@@ -70,7 +72,9 @@ Tags have a few components.
     {% include taglogic.html %}
     {% endraw %}
     ```
-	
+
+		{{note}}In the \_includes folder, there's a taglogic.html file. This file (included in each tag archive file) has common logic for getting the tags and listing out the pages containing the tag in a table with summaries or truncated excerpts. You don't have to do anything with the file &mdash; just leave it there because the tag archive pages reference it.{{end}}
+
 5. Adjust button color or tag placement as desired. 
 	
 	By default, the \_layouts/page.html file will look for any tags on a page and insert them at the bottom of the page using this code:
@@ -91,22 +95,22 @@ Tags have a few components.
 	{% endraw %}
 	```
 	
-	Here's what the code does:
-	<div class="tags">
-    	    {% if page.tags != null %}
-    	    <b>Tags: </b>
-    	    {% include custom/conditions.html %}
-    	    {% for tag in page.tags %}
-    	    {% if projectTags contains tag %}
-    	    <a href="{{site.project}}_tag-{{tag}}.html"><button type="button" class="btn btn-info navbar-btn cursorNorm">{{page.tagName}}{{tag}}</button></a>{% unless forloop.last %}{% endunless%}
-    	    {% endif %}
-    	    {% endfor %}
-    	    {% endif %}
-    	</div>
+	Here's an example of what the code does:
+<div class="tags">
+	{% if page.tags != null %}
+	<b>Tags: </b>
+	{% include custom/conditions.html %}
+	{% for tag in page.tags %}
+	{% if projectTags contains tag %}
+	<a href="{{site.project}}_tag-{{tag}}.html"><button type="button" class="btn btn-info navbar-btn cursorNorm">{{page.tagName}}{{tag}}</button></a>{% unless forloop.last %}{% endunless%}
+	{% endif %}
+	{% endfor %}
+	{% endif %}
+</div>
     	
-	Because this code appears on the \layouts/page.html file by default, you don't need to do anything. However, if you want to alter the placement or change the button color, you can do so.
+Because this code appears on the \_layouts/page.html file by default, you don't need to do anything. However, if you want to alter the placement or change the button color, you can do so.
 	
-	You can change the button color by changing the class on the button from `btn-info` to one of the other button classes bootstrap allows. See {{doc_labels}} for more options on button class names.
+You can change the button color by changing the class on the button from `btn-info` to one of the other button classes bootstrap provides. See {{doc_labels}} for more options on button class names.
 
 ## Retrieving pages for a specific tag
 
@@ -138,10 +142,40 @@ Getting started pages:
 <li><a href="{{page.url}}">{{page.title}}</a></li>
 {% endif %}
 {% endfor %}
-{% endfor %} 
+{% endfor %}
 </ul>
 
-Tags will be sorted in alphabetical order.
+If you want to sort the pages alphabetically, you have to apply a `sort` filter:
+
+```liquid
+{% raw %}
+Getting started pages:
+<ul>
+{% assign sorted_pages = (site.pages | sort: 'title') %}
+{% for page in sorted_pages %}
+{% for tag in page.tags %}
+{% if tag == "getting-started" %}
+<li><a href="{{page.url}}">{{page.title}}</a></li>
+{% endif %}
+{% endfor %}
+{% endfor %} 
+</ul>
+{% endraw %}
+```
+
+Here's how that code renders:
+
+Getting started pages:
+<ul>
+{% assign sorted_pages = (site.pages | sort: 'title') %}
+{% for page in sorted_pages %}
+{% for tag in page.tags %}
+{% if tag == "getting-started" %}
+<li><a href="{{page.url}}">{{page.title}}</a></li>
+{% endif %}
+{% endfor %}
+{% endfor %}
+</ul>
 
 ## Efficiency
 Although the tag approach here uses `for` loops, these are somewhat inefficient on a large site. Most of my tech doc projects don't have hundreds of pages (like my blog does). If your project does have hundreds of pages, this `for` loop approach with tags is going to slow down your build times. 
@@ -159,11 +193,11 @@ If your page shows "tags:" at the bottom without any value, it could mean a coup
 * You're using a tag that isn't specified in your allowed tags list in your doc_tags.yml file.
 * You have an empty `tags: []` property in your frontmatter.
 
-If you don't want tags to appear at all on your page, then should remove the tags property from your frontmatter.
+If you don't want tags to appear at all on your page, remove the tags property from your frontmatter.
 
 ## Remembering the right tags
 
 Since you may have many tags and find it difficult to remember what tags are allowed, I recommend creating a template that prepopulates all your frontmatter with all possible tags. Then just remove the tags that don't apply. 
 
-You can easily create templates in IntelliJ and WebStorm. Right-click the file area, then choose **New > Edit File Templates**.
+See {{doc_webstorm_text_editor}} for tips on creating file templates in WebStorm.
 

@@ -18,7 +18,7 @@ You can embed content from one file inside another using includes. Put the file 
 
 With content in your \_includes folder, you don't add any frontmatter to these pages because they will be included on other pages already containing frontmatter.
 
-Also, when you include a file, all of the file's contents get included. You can't specify that you only want a specific part of the file included. However, you can use parameters with includes. See Jekyll's documentation for more information on that.
+Also, when you include a file, all of the file's contents get included. You can't specify that you only want a specific part of the file included. However, you can use parameters with includes. See []Jekyll's documentation](http://stackoverflow.com/questions/21976330/passing-parameters-to-inclusion-in-liquid-templates) for more information on that.
 
 ## Page-level variables
 

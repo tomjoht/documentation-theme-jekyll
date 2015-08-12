@@ -8,11 +8,11 @@ summary:
 ---
 {% include linkrefs.html %} 
 
-The theme has two font icon sets integrated: Font Awesome and Glyphicons Halflings. The latter is part of Bootstrap, while the former is independent. 
+The theme has two font icon sets integrated: Font Awesome and Glyphicons Halflings. The latter is part of Bootstrap, while the former is independent. Font icons allow you to insert icons drawn as vectors from a CDN (so you don't have any local images on your own site).
 
 ## See Font Awesome icons available
 
-Go to the [Font Awesome library](http://fortawesome.github.io/Font-Awesome/icons/)
+Go to the [Font Awesome library](http://fortawesome.github.io/Font-Awesome/icons/) to see the available icons.
 
 The Font Awesome icons allow you to adjust their size by simply adding `fa-2x`, `fa-3x` and so forth as a class to the icon to adjust their size to two times or three times the original size. As vector icons, they scale crisply at any size.
 
@@ -46,7 +46,7 @@ Here's the result:
 
 <div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle fa-lg"></i> This is a special warning message.</div>
 
-Some of the Bootstrap styles are pre-coded with Font Awesome and stored in the linkrefs.html file in `capture` tags. That file includes the following:
+The notes, tips, warnings, etc., are pre-coded with Font Awesome and stored in the linkrefs.html file in `capture` tags. That file includes the following:
 
 {% raw %}
 ```html
@@ -76,17 +76,19 @@ Here's the result:
 
 {{warning}} If you overlook this, you may die. {{end}}
 
+The color scheme is the default colors from Bootstrap. You can modify the icons or colors as needed.
+
 ## Creating your own combinations
 
-You can innovate with your own combinations. Here's a similar approach with a check square:
+You can innovate with your own combinations. Here's a similar approach with a file download icon:
 
 ```html
-<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o fa-lg"></i> This is a special success message.</div>
+<div class="alert alert-success" role="alert"><i class="fa fa-download fa-lg"></i> This is a special tip about some file to download....</div>
 ```
 
 And the result:
 
-<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o fa-lg"></i> This is a special success message.</div>
+<div class="alert alert-success" role="alert"><i class="fa fa-download fa-lg"></i> This is a special tip about some file to download....</div>
 
 
 Grab the right class name from the [Font Awesome library](http://fortawesome.github.io/Font-Awesome/icons/) and then implement it by following the pattern shown previously.
@@ -185,4 +187,5 @@ You can use any of the following:
 ```
 {% endraw %}
 
+Callouts are explained in a bit more detail here: {{doc_alerts}}.
 

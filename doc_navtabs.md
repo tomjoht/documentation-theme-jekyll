@@ -84,6 +84,7 @@ You must use HTML within the navtab content because each navtab section is surro
 
 Each tab's `href` attribute must match the `id` attribute of the tab content's `div` section. So if your tab has `href="#acme"`, then you add `acme` as the ID attribute in `<div role="tabpanel" class="tab-pane" id="acme">`.
 
+## Set an active tab
 One of the tabs needs to be set as active, depending on what tab you want to be open by default (usually the first one).
 
 ```html

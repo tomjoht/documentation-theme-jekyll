@@ -17,11 +17,11 @@ When you're working with tech docs, a lot of times you're single sourcing multip
 3. Click the + button in the lower-left corner to create a new profile.
 4. In the **Name** field, type a name describing the output, such as `Doc theme -- designers`.
 5. In the **Send text at start** field, type the command for the build script, such as this:
-	
-	```
-	jekyll serve --config configs/config_designers.yml
-	```
-	 Leave the Login shell option selected.
+
+    ```
+    jekyll serve --config configs/config_designers.yml
+    ```
+    Leave the Login shell option selected.
 	
 6. In the Working Directory section, select **Directory** and enter the directory for your project, such as **/Users/tjohnson/projects/documentation-theme-jekyll**.
 7. Close the profiles panel. 

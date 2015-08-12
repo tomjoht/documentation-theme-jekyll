@@ -10,7 +10,6 @@ summary:
 
 You embed an image the same way you embed other files or assets: you put the file into a folder, and then link to that file. 
 
-## Images
 Put images inside the `images` folder in your root directory. You can create subdirectories inside this directory. Although you could use Markdown syntax for images, the HTML syntax is probably easier:
 
 {% raw %}
@@ -19,13 +18,24 @@ Put images inside the `images` folder in your root directory. You can create sub
 ```
 {% endraw %}
 
-Here's a sample:
+And the result:
 
 <img title="my sample image" src="images/jekyll.png">
 
+Here's the same Markdown syntax:
+
+```
+![My sample page](images/jekyll.png)
+```
+
+And the result:
+
+![My sample page](images/jekyll.png)
+
+
 ## SVG Images
 
-You can also embed SVG graphics. Here's a sample embed:
+You can also embed SVG graphics. If you use SVG, you need to use the HTML syntax so that you can define a width/container for the graphic. Here's a sample embed:
 
 ```html
 <img src="images/helpapi.svg" style="width: 650px;"/>

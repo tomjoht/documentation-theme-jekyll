@@ -47,19 +47,19 @@ It renders the same:
 {% endhighlight %}
 
 
-The theme has syntax highlighting configured in the configuration file as follows:
+The theme has syntax highlighting specified in the configuration file as follows:
 
 ```
 highlighter: pygments
 ```
 
-You can use another highlighter such as rouge.
+You can use another highlighter such as `rouge`.
 
 The syntax highlighting is done via the css/syntax.css file.
 
 ## Available Pygments lexers
 
-The keywords you must add to specify the highlighting are called "lexers." You can search for "pygments lexers" or go directly to [Available lexers](http://pygments.org/docs/lexers/) to see what values you can use. Here are some common ones I use:
+The keywords you must add to specify the highlighting (in the previous example, `ruby`) are called "lexers." You can search for "pygments lexers" or go directly to [Available lexers](http://pygments.org/docs/lexers/) to see what values you can use. Here are some common ones I use:
 
 * js
 * html

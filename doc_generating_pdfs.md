@@ -9,7 +9,7 @@ summary:
 {% include linkrefs.html %} 
 
 ## Overview 
-This process for creating a PDF relies on Prince to transform the HTML content into PDF. Prince costs about $500 per license. That might seem like a lot, but if you're creating a PDF, you're probably working for a company that sells a product, so you likely have access to some resources.
+This process for creating a PDF relies on Prince XML to transform the HTML content into PDF. Prince costs about $500 per license. That might seem like a lot, but if you're creating a PDF, you're probably working for a company that sells a product, so you likely have access to some resources.
 
 The basic approach is to generate a list of all pages that need to be added to the PDF, and then add leverage Prince to package them up into a PDF.
 
@@ -31,7 +31,7 @@ You can see an example of the finished product here:
 
 ## 1. Set up Prince
 
-Download and install [Prince](http://www.princexml.com/).
+Download and install [Prince](http://www.princexml.com/doc/installing/).
 
 You can install a fully functional trial version. The only difference is that the title page will have a small Prince PDF watermark.
 
@@ -40,12 +40,12 @@ You can install a fully functional trial version. The only difference is that th
 The PDF configuration file will build on the settings in the regular configuration file but will some additional fields. Here's the configuration file for the config_designers.yml file for this theme:
 
 ```
-destination: /Applications/XAMPP/xamppfiles/htdocs/jekyll-documentation-theme/designers
+destination: ../doc_designers-pdf
 url: "http://127.0.0.1:4002"
-baseurl: "/designers/"
+baseurl: "/doc_designers"
 port: 4002
 print: true
-print_title: Jekyll Documentation Theme for Writers
+print_title: Jekyll Documentation Theme for Designers
 print_subtitle: version 3.0
 defaults:
   -
@@ -58,9 +58,9 @@ defaults:
       search: true
 ```
 
-{{note}} Although you're creating a PDF, you must still build a web target before running Prince. Prince will pull from the HTML files and from the file-list for the TOC. Prince won't be able to find files if they simply have relative paths, such as /sample.html. The must have full URLs it can access &mdash; hence the url and baseurl. {{end}}
+{{note}} Although you're creating a PDF, you must still build a web target before running Prince. Prince will pull from the HTML files and from the file-list for the TOC. Prince won't be able to find files if they simply have relative paths, such as /sample.html. The must have full URLs it can access &mdash; hence the <code>url</code> and <code>baseurl</code>. {{end}}
 
-Unlike the other configuration files, the PDF configuration files require a url and baseurl. This is because the Prince utility needs to access the pages in a specific place. While you could probably set up locations via file folders, it's easier just to provide the locations here as url and baseurl.
+Unlike the other configuration files, the PDF configuration files require a `url` and `baseurl`. This is because the Prince utility needs to access the pages in a specific place. While you could probably set up locations via absolute paths to file folders, it's easier just to provide the locations here as `url` and `baseurl`.
 
 Also note that the default page layout is `page_print`. This layout strips out all the sections that shouldn't appear in the print PDF, such as the sidebar and top navigation bar.
 
@@ -70,7 +70,7 @@ In the configuration file, customize the values for the `print_title` and `print
      
 ## 3. Make sure your sidebar_doc.yml file has a titlepage.html and tocpage.html
 
-There are two template pages in the root directory that are critical to PDFs:
+There are two template pages in the root directory that are critical to the PDF:
 
 * titlepage.html
 * tocpage.html
@@ -105,16 +105,17 @@ entries:
            web: false
 ```
 
-Leave these pages here in your sidebar. (The `web: false` property means they won't appear in your online TOC because the conditional logic of the sidebar.html checks whether `web` is equal to `false` or not.)
+Leave these pages here in your sidebar. (The `web: false` property means they won't appear in your online TOC because the conditional logic of the sidebar.html checks whether `web` is equal to `false` or not before including the item in the web version of the content.)
 
-The code in the tocpage.html is nearly identical to that of the sidebar.html page except that it includes the baseurl for the URLs. This is essential for Prince to create the page numbers correctly with cross references.
+The code in the tocpage.html is nearly identical to that of the sidebar.html page except that it includes the `site` and `baseurl` for the URLs. This is essential for Prince to create the page numbers correctly with cross references.
 
-There's another file (in the root directory of the theme) that is critical to the PDF generation process: prince-file-list.txt. This file simply iterates through the items in your sidebar and creates a list of links. Prince will consume the list of links from this file and create a running PDF that contains all of the pages listed, with appropriate cross references and styling for them all.
+There's another file (in the root directory of the theme) that is critical to the PDF generation process: prince-file-list.txt. This file simply iterates through the items in your sidebar and creates a list of links. Prince will consume the list of links from prince-file-list.txt and create a running PDF that contains all of the pages listed, with appropriate cross references and styling for them all.
 
 ## 4. Customize your headers and footers
 
 Open up the css/printstyles.css file and customize what you want for the headers and footers. At the very least, customize the email address that appears in the bottom left.
-{% if site.audience == "designers" %}e
+
+{% if site.audience == "designers" %}
 Exactly how the print styling works here is pretty cool. You don't need to understand the rest of the content in this section unless you want to customize your PDFs to look different from what I've configured. 
 
 This style creates a page reference for a link:
@@ -145,7 +146,7 @@ a[href^="http:"]::after, a[href^="https:"]::after {
 
 This style sets your page margins:
 
-```
+```css
 @page {
     margin: 60pt 90pt 60pt 90pt;
     font-family: sans-serif;
@@ -183,13 +184,15 @@ type: first_page
 
 The default_print.html layout will change the class of the `body` element based on the type value in the page's frontmatter:
 
-```
+```liquid
+{% raw %}
 <body class="{% if page.type == "title"%}title{% elsif page.type == "frontmatter" %}frontmatter{% elsif page.type == "first_page" %}first_page{% endif %} print">
+{% endraw %}
 ```
 
 Now in the css/printstyles.css file, you can assign a page name based on a specific class:
 
-```
+```css
 body.title { page: title }
 ```
 
@@ -271,7 +274,7 @@ h1 { string-set: doctitle content() }
 
 You'll see some other items in there such as `prince-script`. This means we're using JavaScript to run some functions to dynamically generate that content. These JavaScript functions are located in the \_includes/head_print.html:
 
-```
+```js
 <script>
     Prince.addScriptFunc("datestamp", function() {
         return "PDF last generated: {{ site.time | date: '%B %d, %Y' }}";
@@ -321,29 +324,39 @@ echo "Serving Designers PDF"
 jekyll serve --detach --config configs/config_designers.yml,configs/config_designers_pdf.yml
 ```
 
-Note that the first part kills all Jekyll instances. This way you won't try to server Jekyll at a port that is already occupied. 
+Note that the first part kills all Jekyll instances. This way you won't try to server Jekyll at a port that is already occupied.
+
+The `jekyll serve` command serves up the PDF configurations for our two projects. This web version is where Prince will go to get its content.
 
 ## 6. Configure the Prince scripts
 
 Open up doc_multibuild_pdf.sh and look at the Prince commands:
 
 ```
-echo "Building the Writers PDF..."
-prince --javascript --input-list=/Applications/XAMPP/xamppfiles/htdocs/documentation-theme-jekyll/writers-pdf/prince-file-list.txt -o /Users/tjohnson/projects/documentation-theme-jekyll/files/doc/documentation_theme_jekyll_writers_pdf.pdf;
+prince --javascript --input-list=../doc_designers-pdf/prince-file-list.txt -o /Users/tjohnson/projects/documentation-theme-jekyll/doc_designers_pdf.pdf;
 ```
 
-This script issues a command to the Prince utility. JavaScript is enabled (`--javascript`), and we tell it exactly where to find the list of files (`--input-list`) &mdash; just point to the prince-file-list.txt file. Then we tell it what to output and where (`-o`).
+This script issues a command to the Prince utility. JavaScript is enabled (`--javascript`), and we tell it exactly where to find the list of files (`--input-list`) &mdash; just point to the prince-file-list.txt file. Then we tell it where and what to output (`-o`).
 
-Make sure that the path to the prince-file-list.txt is correct. For the output directory, I like to output the PDF file into my project's source. Then when I build the web output, the PDF is included. 
-
+Make sure that the path to the prince-file-list.txt is correct. For the output directory, I like to output the PDF file into my project's source. Then when I build the web output, the PDF is included and something I can refer to.
 
 ## 7. Add a download button for the PDF
 
-You can add a download button using some Bootstrap button code:
+You can add a download button for your PDF using some Bootstrap button code:
 
 ```html
 <a target="_blank" class="noCrossRef" href="doc_designers_pdf.pdf"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Designers PDF Download</button></a>
 ```
+
+Here's what that looks like:
+
+{% if site.audience == "designers" %}
+<a target="_blank" class="noCrossRef" href="doc_designers_pdf.pdf"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Designers PDF Download</button></a>
+{% endif %}
+
+{% if site.audience == "writers" %}
+<a target="_blank" class="noCrossRef" href="doc_writers_pdf.pdf"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Writers PDF Download</button></a>
+{% endif %}
 
 ## 8. Run the scripts
 
@@ -351,17 +364,31 @@ To generate the PDF, you just run several scripts that have the commands package
 
 1. First run doc_multiserve_pdf.sh to serve up the PDF sites. The commands will detach the site from the preview server so that you can serve up multiple Jekyll sites in the same command terminal.
 2. Then run doc_multibuild_pdf.sh to build the PDF files. 
-3. There are commands to kill all Jekyll preview servers before this runs. 
+3. Now run doc_multibuild_web.sh to build the web version that includes the generated PDF files.
 
 {{note}} If you don't like the style of the PDFs, just adjust the styles in the printstyles.css file.{{end}}
 
 ## JavaScript conflicts
 
-I've noticed that when I have JavaScript in my pages, sometimes Prince doesn't like this, as it tries to process the JavaScript. It's better to conditionalize out any JavaScript from your PDF output before building your PDFs. If Prince encounters JavaScript on a page, it will give you this error:
+I've noticed that when I have JavaScript in my pages, sometimes Prince doesn't like this, as it tries to process the JavaScript. As a result, it will create an error like this in Terminal:
+
+```
+error: TypeError: value is not an object
+```
+
+It's better to conditionalize out any JavaScript from your PDF output before building your PDFs. If Prince encounters JavaScript on a page, it will give you this error:
 
 ```
 prince: http://127.0.0.1:4002/designers/doc_shuffle.html:2: error: TypeError: value is not an object
 ```
 
 However, the PDF will still build.
+
+If you encounter this error, surround the JavaScript with conditional tags like this:
+
+```
+{% raw %}
+{% unless site.print == false %}  javascript content here ... {% endunless %}
+{% endraw %}
+```
 

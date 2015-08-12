@@ -7,7 +7,7 @@ tags: special-layouts
 {% include linkrefs.html %}
 
 <p>This page demonstrates how you the integration of a script called ScrollTo, which is used here to link definitions of a JSON code sample to a list of definitions for that particular term. The scenario here is that the JSON blocks are really long, with extensive nesting and subnesting, which makes it difficult for tables below the JSON to adequately explain the term in a usable way.</p>
-
+{% unless site.print == false %}
  <script src="{{ "/js/jquery.scrollTo.min.js" | prepend:site.baseurl }}"></script> 
     <!-- local scroll must come after scrollTo, because localScroll is based on scrollTo, which is based on jQuery -->
 <script src="{{ "/js/jquery.localScroll.min.js" | prepend:site.baseurl }}"></script>
@@ -32,6 +32,7 @@ $('#small-box-links').localScroll({
 
 });
 </script>
+{% endunless %}
 
 <!-- documentation for localScroll function: http://flesler.blogspot.com/2007/10/jquerylocalscroll-10.html -->
     <style type="text/css">

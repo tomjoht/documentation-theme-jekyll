@@ -10,7 +10,7 @@ summary:
 
 If you want to create different outputs for different audiences, you can do all of this using a combination of Jekyll's Liquid markup and values in your configuration file.
 
-{{tip}} Definitely check out [Liquid's documentation](http://docs.shopify.com/themes/liquid-documentation/basics) for more details about how to use operators and other liquid markup. The notes here are a small, somewhat superficial sample from the site.{{end}}
+{{tip}} Definitely check out <a href="http://docs.shopify.com/themes/liquid-documentation/basics">Liquid's documentation</a> for more details about how to use operators and other liquid markup. The notes here are a small, somewhat superficial sample from the site.{{end}}
 
 ## Where to store filtering values
 
@@ -28,7 +28,7 @@ This theme requires you to add the following attributes in your configuration fi
 
 If you've ever used DITA, you probably recognize these attributes, since DITA has mostly the same ones. I've found that most single-sourcing projects I work on can be sliced and diced in the ways I need using these conditional attributes.
 
-If you're not single sourcing and you find it annoying having to specify these attributes in your sidebar, you can rip out the logic from the sidebar.html file; then you wouldn't need these attributes in your configuration file.
+If you're not single sourcing and you find it annoying having to specify these attributes in your sidebar, you can rip out the logic from the sidebar.html, topnav.html file and any other places where conditions.html appears; then you wouldn't need these attributes in your configuration file.
 
 ## Conditional logic based on config file value
 
@@ -70,6 +70,8 @@ To bake a casserole:
 ```
 {% endraw %}
 
+You don't need the `elsif` or `else`. You could just use an `if` (but be sure to close it with `endif`).
+
 ## Or operator
 
 You can use more advanced Liquid markup for conditional logic, such as an `or` command. See [Shopify's Liquid documentation](http://docs.shopify.com/themes/liquid-documentation/basics/operators) for more details. 
@@ -84,13 +86,22 @@ For example, here's an example using `or`:
 {% endraw %}
 ```
 
-With conditional statements, you don't need the `elsif` or `else` options. But you do always need the `endif`.
+Note that you have to specify the full condition each time. You can't shorten the above logic to the following:
+
+```
+{% raw %}
+{% if site.audience contains "vegan" or "vegetarian" %}
+    // run this.
+{% endif %}
+{% endraw %}
+```
+
+This won't work.
 
 ## Storing conditions in the \_data folder
 
 Here's an example of using conditional logic based on a value in a data file:
 
-{% comment %}
 ```
 {% raw %}
 {% if site.data.options.output == "alpha" %}
@@ -102,29 +113,37 @@ this shows if neither of the above two if conditions are met.
 {% endif %}
 {% endraw %}
 ```
-{% endcomment %}
 
-To use this, I would need to have a \_data folder called options where the audience property is stored. 
+To use this, I would need to have a \_data folder called options where the `output` property is stored.
 
 I don't really use the \_data folder as much for project options. I store them in the configuration file because I usually want different projects to use different values for the same property. 
 
-For example, maybe a file or function name is called something different for different audiences. I currently single source the same content to both a fraud-prevention audience and an advertising technology audience. The identification technology is largely the same. 
+For example, maybe a file or function name is called something different for different audiences. I currently single source the same content to at least two audiences in different markets.
 
-For the fraud audience, the function name might be called `generate`, but for the ad tech audience, the same function is called `expand`. In my content, I'd just use `{% raw %}{{site.function}}{% endraw %}` in the configuration file and change its value appropriately for the audience.
+For the first audience, the function name might be called `generate`, but for the second audience, the same function might be called called `expand`. In my content, I'd just use `{% raw %}{{site.function}}{% endraw %}`. Then in the configuration file I change its value appropriately for the audience.
 
-## Specifying a data source
+## Specifying the location for \_data
 
-You can also specify a `data_source` for your data location in your configuration file. Then you aren't limited to simply using `\_data` to store your data. 
+You can also specify a `data_source` for your data location in your configuration file. Then you aren't limited to simply using `_data` to store your data files.
 
 For example, suppose you have 2 projects: alpha and beta. You might store all the data files for alpha inside data_alpha, and all the data files for beta inside data_beta.
 
-In your configuration file, specify the data source like this:
+In your alpha configuration file, specify the data source like this:
 
 ```
 data_source: data_alpha
 ```
 
-Then create a folder called data_alpha.
+Then create a folder called \_data_alpha.
+
+For your beta configuratoin file, specify the data source like this:
+
+```
+data_source: data_beta
+```
+
+Then create a folder called \_data_beta.
+
 
 ## Conditional logic based on page namespace
 
@@ -145,7 +164,7 @@ Now you can run logic based on the conditional property in that page's front mat
 
 ```liquid
 {% raw %}
-{% if page.user_plan` == "full" %}
+{% if page.user_plan == "full" %}
 // run this code
 {% endif %}
 {% endraw %}

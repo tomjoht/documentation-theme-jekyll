@@ -10,12 +10,12 @@
       $('[data-toggle="tooltip"]').tooltip()
   })
 </script>
-{% if page.video == true %}
+{% if page.video == true and site.print == false %}
 <link href="https://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
 <script src="https://vjs.zencdn.net/4.12/video.js"></script>
 {% endif %}
 
-{% if page.datatable == true %}
+{% if page.datatable == true and site.print == false %}
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.5/css/jquery.dataTables.css">
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.5/js/jquery.dataTables.js"></script>
 <script>
