@@ -1,6 +1,6 @@
-destination: /Applications/XAMPP/xamppfiles/htdocs/documentation-theme-jekyll/designers-pdf
+destination: ../doc_designers-pdf
 url: "http://127.0.0.1:4002"
-baseurl: "/designers"
+baseurl: "/doc_designers"
 port: 4002
 print: true
 print_title: Jekyll Documentation Theme for Designers

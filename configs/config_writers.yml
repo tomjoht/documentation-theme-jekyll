@@ -4,7 +4,7 @@ audience: writers
 product: all
 platform: all
 version: all
-destination: ../writers
+destination: ../doc_writers
 topnav_title: Jekyll Documentation Theme
 homepage_title: Jekyll Documentation Theme &mdash; Writers
 site_title: Jekyll Documentation Theme &mdash; Writers

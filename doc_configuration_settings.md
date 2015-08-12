@@ -20,11 +20,10 @@ Some of the options you can set in the configuration file determine theme settin
 
 Note that you can define arbitrary key-value pairs in the configuration file, and then you can access them through `site.yourkey`, where `yourkey` is the name of the key. However, the values in these tables are used to control different aspects of the theme and are not arbitrary key-value pairs.
 
-## Configuration settings
+## Configuration settings for web outputs
 
 | Field | Required? | Description |
 |-------|-----------|-----------|
- |
 | **project** | Required| A unique name for the project. The \_includes/custom/{project}/conditions.html file will use this project name to determine what sidebar and top nav data files to use. Make this value unique. |
 | **audience** | Required | The audience for the output. Each entry in \_data/sidebar_doc.yml and  \_data/topnav_doc.yml needs to have an audience attribute that matches the value here in order for the sidebar or topnav item to be included.|
 | **platform** | Required | The platform for the output. See additional information in audience.
@@ -88,6 +87,37 @@ The file in \_includes/custom/doc/conditions.html contains a project setting and
 
 It's a little complicated to describe, but it works. Once you configure your project correctly, you don't even think about how the theme is processing all of this on the backend.
 
+## Configuration settings for PDF output
+
+The PDF configuration files build on all the settings in the web configuration files, but they add a few more options. 
+
+When you build the PDF output (such as for the writers output), the command will look like this:
+
+```
+jekyll serve --detach --config configs/config_writers.yml,configs/config_writers_pdf.yml
+```
+
+First Jekyll will read the config_writers.yml file, and then Jekyll will read the config_writers_pdf.yml file.
+ 
+More detail about generating PDFs is provided in {{doc_generating_pdfs}}, but the configuration settings used for the PDFs are described here.
+
+The process for creating PDFs relies on two steps:
+
+1. First you build a printer-friendly web version of the content. 
+2. Then you run PrinceXML to get all the printer-friendly web pages and package them into a PDF.
+
+Thus, you actually build a web version for the PDF first before generating the PDF. (You might be able to remove this first step by doing more coding, but I found it easier just to strip out components I didn't want included and make other adjustments.)
+
+| Field | Required? | Description |
+|-------|-----------|-----------|
+| destination | Where the PDF web version should be served so that Prince XML can find it. By default, this is in ../doc_designers-pdf, so just one level above where your project is.  |
+| url | The URL where the files can be viewed. This is `http://127.0.0.1:4002` in the sample theme files for the designers output. Prince XML requires a URL to access the file. (My attempts to use local file paths didn't work.) |
+| baseurl | The subdirectory after the url where the content is stored. In the sample theme files for the designers output, this is `/designers`. | 
+| port | The port required by the preview server. |
+| print | A boolean so that you can construct conditional statements in your content to check whether print is true or not. This setting can help you filter out content that doesn't fit well into a PDF (such as dynamic web elements). |
+| print_title | The title for the PDF. In the sample theme files for designers output, the print title is "Jekyll Documentation Theme for Designers"|
+| print_subtitle | The subtitle for the PDF. In the sample theme files, the subtitle is "version 3.0." |
+| defaults | See the sample settings in the config_designers_pdf.yml file. The only difference between this file and config_designers.yml is that the layout used for pages is `page_print` instead of `page`. The `page_print` layout also used `head_print` instead of `head`. This layout strips out components such as the sidebar and top navigation. It also leverages printstyles.css and includes some JavaScript for Prince XML. |
 
 
 

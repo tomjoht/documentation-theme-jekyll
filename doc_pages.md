@@ -69,19 +69,9 @@ If you want to use a colon in your page title, you must enclose the title's valu
 
 ## Saving pages as drafts
 
-If you add `published: false` in the frontmatter, then your page won't be published. You can also move draft pages into the _drafts folder to exclude them from the build. 
+If you add `published: false` in the frontmatter, then your page won't be published. You can also move draft pages into the _drafts folder to exclude them from the build.
 
-## Creating a Jekyll template in WebStorm
-
-Rather than insert the frontmatter by hand each time, it's much faster to simply create a Jekyll template in WebStorm (my favorite editor for Jekyll projects). 
-
-To create a Jekyll template:
-
-1. Right-click a file in the list of project files, and select **New > Edit File Templates**.
-2. In the upper-left corner of the dialog box that appears, click the **+** button to create a new template.
-3. Name it Jekyll. Insert the frontmatter you want, and save it.
-
-To use the Jekyll template, when you create a new file in your WebStorm project, you can select your Jekyll file template.
+{{tip}} You can create file templates in WebStorm that have all your common frontmatter, such as all possible tags, prepopulated. See {{doc_webstorm_text_editor}} for details. {{end}}
 
 ## Markdown or HTML format
 

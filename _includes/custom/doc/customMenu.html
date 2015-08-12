@@ -3,9 +3,9 @@
 <li class="dropdown">
     <a href="#" class="dropdown-toggle otherProgLangs" data-toggle="dropdown">Custom Menu<b class="caret"></b></a>
     <ul class="dropdown-menu">
-        <li {% if site.audience == "writers" %}class="dropdownActive"{% endif %}><a href="{% if page.homepage == true or page.switch == false %}../writers/{{site.suffix}}">Writer docs</a> {% else %} ../writers{{page.url}}">Writer docs</a>{% endif %}</li>
+        <li {% if site.audience == "writers" %}class="dropdownActive"{% endif %}><a href="{% if page.homepage == true or page.switch == false %}../doc_writers/{{site.suffix}}">Writer docs</a> {% else %} ../doc_writers{{page.url}}">Writer docs</a>{% endif %}</li>
 
-<li {% if site.audience == "designers" %}class="dropdownActive"{% endif %}><a href="{% if page.homepage == true or page.switch == false %}../designers/{{site.suffix}}">Designer doc</a> {% else %} ../designers{{page.url}}">Designer docs</a>{% endif %}</li>
+<li {% if site.audience == "designers" %}class="dropdownActive"{% endif %}><a href="{% if page.homepage == true or page.switch == false %}../doc_designers/{{site.suffix}}">Designer doc</a> {% else %} ../doc_designers{{page.url}}">Designer docs</a>{% endif %}</li>
 
 </ul>
 </li>

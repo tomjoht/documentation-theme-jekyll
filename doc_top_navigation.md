@@ -30,9 +30,9 @@ It's common to publish multiple sites. If you want to link them together, you co
 Included in the topnav.html file is an include to /doc/customMenu.html. The code there is as follows:
 
 ```
-  <li {% if site.audience == "writers" %}class="dropdownActive"{% endif %}><a href="{% if page.homepage == true or page.switch == false %}../writers/{{site.suffix}}">Writer docs</a> {% else %} ../writers{{page.url}}">Writer docs</a>{% endif %}</li>
+  <li {% if site.audience == "writers" %}class="dropdownActive"{% endif %}><a href="{% if page.homepage == true or page.switch == false %}../doc_writers/{{site.suffix}}">Writer docs</a> {% else %} ../doc_writers{{page.url}}">Writer docs</a>{% endif %}</li>
 
-<li {% if site.audience == "designers" %}class="dropdownActive"{% endif %}><a href="{% if page.homepage == true or page.switch == false %}../designers/{{site.suffix}}">Designer doc</a> {% else %} ../designers{{page.url}}">Designer docs</a>{% endif %}</li>
+<li {% if site.audience == "designers" %}class="dropdownActive"{% endif %}><a href="{% if page.homepage == true or page.switch == false %}../doc_designers/{{site.suffix}}">Designer doc</a> {% else %} ../doc_designers{{page.url}}">Designer docs</a>{% endif %}</li>
 ```
 
 The current doc site is highlighted. If you select another doc site, the site switches to that doc site and goes to the same page on that doc site. This way, if you have a task such as "Configuring the license" in several different programming languages, users can switch to other programming languages to see the same page.

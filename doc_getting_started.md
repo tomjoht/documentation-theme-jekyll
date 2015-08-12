@@ -67,7 +67,7 @@ Before you start customizing the theme, make sure you can build the theme with t
 	. doc_multibuild_web.sh
 	```
 	
-	The themes build in the ../designers and ../writers folders. Use finder and browse to one level above where you installed the project (probably username/projects). 
+	The themes build in the ../doc_designers and ../doc_writers folders. Use finder and browse to one level above where you installed the project (probably username/projects). 
 	
 	Open the writers and designers folders and click the index.html file. The themes should launch and appear similar to their appearance in the preview folder. This is because the themes are build using a relative link structure, so you can move the theme to any folder you want without breaking the links. 
 	

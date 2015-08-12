@@ -1,6 +1,6 @@
-destination: /Applications/XAMPP/xamppfiles/htdocs/documentation-theme-jekyll/writers-pdf
+destination: ../doc_writers-pdf
 url: "http://127.0.0.1:4004"
-baseurl: "/writers"
+baseurl: "/doc_writers"
 port: 4004
 print: true
 print_title: Jekyll Documentation Theme for Writers

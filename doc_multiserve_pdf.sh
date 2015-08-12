@@ -12,5 +12,5 @@ jekyll serve --detach --config configs/config_writers.yml,configs/config_writers
 echo "Serving Designers PDF"
 jekyll serve --detach --config configs/config_designers.yml,configs/config_designers_pdf.yml
 
-# All done.
-# Now run . doc_multibuild_pdf.sh
+echo "All done."
+echo "Now run . doc_multibuild_pdf.sh"
