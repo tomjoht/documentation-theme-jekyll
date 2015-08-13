@@ -1,5 +1,8 @@
 ---
 title: WebStorm Text editor
+keywords: webstorm, sublime, markdown, atom, gnome, notepad ++, textpad, bbedit
+tags: [getting-started]
+last_updated: August 12, 2015
 summary:
 ---
 

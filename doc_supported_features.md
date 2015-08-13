@@ -1,10 +1,9 @@
 ---
 title: Supported features
-audience: writer, designer
 tags: [getting-started]
-keywords: 
-last_updated: 
-summary: 
+keywords: features, capabilities, scalability, multichannel output, dita, hats, comparison, benefits
+last_updated: August 12, 2015
+summary: "If you're not sure whether Jekyll and this theme will support your requirements, this list provides a semi-comprehensive overview of available features."
 ---
 {% include linkrefs.html %} 
 

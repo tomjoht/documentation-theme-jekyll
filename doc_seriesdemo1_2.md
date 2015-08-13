@@ -4,6 +4,7 @@ last_updated: May 17, 2015
 summary: "This is the third post in the series."
 series: "ACME series"
 weight: 1.2
+last_updated: August 12, 2015
 ---
 {% include linkrefs.html %} 
 

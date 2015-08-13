@@ -1,9 +1,8 @@
 ---
 title: Theme customization
-tags: getting-started
-audience: writer, designer
-keywords: 
-last_updated: 
+tags: [getting-started]
+last_updated: August 12, 2015
+keywords: getting started, customization, beginning steps, modifying the theme, modification
 summary: 
 ---
 {% include linkrefs.html %} 

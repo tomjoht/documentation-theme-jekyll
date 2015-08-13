@@ -1,16 +1,15 @@
 ---
 title: Help APIs and UI tooltips
-tags: publishing
-audience: writer, designer
-keywords: 
-last_updated: 
-summary: 
+tags: [publishing, single-sourcing, content-types]
+last_updated: August 12, 2015
+keywords: API, content API, UI text, inline help, context-sensitive help, popovers, tooltips
+summary: "You can loop through files and generate a JSON file that developers can consume like a help API. Developers can pull in values from the JSON into interface elements, styling them as popovers for user interface text. The beauty of this method is that the UI text remains in the help system and isn't hard-coded into the UI."
 ---
-{% include linkrefs.html %} 
+{% include linkrefs.html %}
 
-You can create a help API that developers can use to pull in content. 
+## Full code demo of content API
 
-## Full code demo
+You can create a help API that developers can use to pull in content.
 
 For the full code demo, see the notes in the <a target="_blank" title="ToolTip Demo" href="{{ "/tooltip_demo.html" | prepend: site.baseurl }}">Tooltip Demo</a>.
 

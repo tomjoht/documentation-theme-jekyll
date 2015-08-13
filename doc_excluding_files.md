@@ -1,13 +1,13 @@
 ---
 title: Excluding files
-tags: single-sourcing
-audience: writer, designer
-keywords: 
-last_updated: 
-summary: 
+tags: [single-sourcing]
+last_updated: August 12, 2015
+keywords: exclusion, separating outputs, removing files from outputs
+summary: "By default, all the files in your Jekyll project are included in the output (this differs from DITA projects, which don't include files unless noted on the map). If you're single sourcing, you'll need to exclude the files that shouldn't be included in the output. The sidebar doesn't control inclusion or exclusion."
 ---
 {% include linkrefs.html %} 
 
+## About exclusion
 By default, all files in your project are included in your output (regardless of whether they're listed in the sidebar_doc.yml file or not). To exclude files, note them in the `exclude` section in the configuration file. Here's a sample:
 
 ```

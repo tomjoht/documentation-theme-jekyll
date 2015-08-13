@@ -1,10 +1,9 @@
 ---
 title: Support
-audience: writer, designer
 tags: [getting-started]
-keywords: 
-last_updated: 
-summary: 
+keywords: questions, troubleshooting, contact, support
+last_updated: August 12, 2015
+summary: "Contact me for any support issues."
 ---
 {% include linkrefs.html %} 
 

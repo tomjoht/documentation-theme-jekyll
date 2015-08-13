@@ -1,10 +1,9 @@
 ---
 title: Getting started with this theme
-tags: getting-started
-audience: writer, designer
-keywords: 
-last_updated: 
-summary: 
+tags: [getting-started]
+keywords: start, introduction, begin, install, build, hello world,
+last_updated: August 12, 2015
+summary: "To get started with this theme, first make sure you have all the prerequisites in place; then build the theme following the sample build commands. Because this theme is set up for single sourcing projects, it doesn't follow the same pattern as most Jekyll projects (which have just a _config.yml file in the root directory)."
 ---
 {% include linkrefs.html %} 
 

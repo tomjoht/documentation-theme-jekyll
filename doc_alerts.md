@@ -1,13 +1,13 @@
 ---
 title: Alerts
-audience: writer, designer
-tags: formatting
-keywords: 
-last_updated: 
-summary: 
+tags: [formatting]
+keywords: notes, tips, cautions, warnings, admonitions
+last_updated: August 12, 2015
+summary: "You can insert notes, tips, warnings, and important alerts in your content. These notes are stored as shortcodes made available through the linksrefs.hmtl include."
 ---
 {% include linkrefs.html %} 
 
+## About alerts
 Alerts are little warnings, info, or other messages that you have called out in special formatting. In order to use these alerts or callouts, put this include at the top of your page, just below your frontmatter:
 
 {%raw%}

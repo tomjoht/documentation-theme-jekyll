@@ -1,13 +1,13 @@
 ---
 title: Icons
-audience: writer, designer
-tags: formatting
-keywords: 
-last_updated: 
-summary: 
+tags: [formatting]
+keywords: font icons, buttons, images, vectors, font awesome, glyphicons
+last_updated: August 12, 2015
+summary: "You can integrate font icons through the Font Awesome and Glyphical Halflings libraries. These libraries allow you to embed icons through their libraries delivered as a link reference. You don't need any image libraries downloaded in your project."
 ---
 {% include linkrefs.html %} 
 
+## Font icon options
 The theme has two font icon sets integrated: Font Awesome and Glyphicons Halflings. The latter is part of Bootstrap, while the former is independent. Font icons allow you to insert icons drawn as vectors from a CDN (so you don't have any local images on your own site).
 
 ## See Font Awesome icons available

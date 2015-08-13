@@ -1,14 +1,13 @@
 ---
-title: Special layouts
-tags: special-layouts
-keywords: 
-audience: writer, designer
-last_updated: 
-summary: 
+title: Special layouts overview
+tags: [special-layouts]
+keywords: layouts, information design, presentation
+last_updated: August 12, 2015
+summary: "This theme has a few special layouts. Special layouts include the JS files they need directly in the page. The JavaScript for each special layout does not load by default for every page in the site."
 ---
-{% include linkrefs.html %} 
+{% include linkrefs.html %}
 
-This theme has a few special layouts. Special layouts include the JS files they need directly in the page. The JavaScript for each special layout does not load by default for every page in the site.
+{{note}} By "layout," I'm not referring to the layouts in \_layouts in the project files. I'm referring to special ways of presenting information on the same "page" layout. {{end}}
 
 ## FAQ layout
 

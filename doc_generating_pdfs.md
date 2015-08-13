@@ -1,14 +1,13 @@
 ---
 title: Generating PDF
-tags: publishing
-keywords: 
-audience: 
-last_updated: 
-summary: 
+tags: [publishing, single-sourcing, content-types]
+keywords: PDF, prince, prince XML, ant, xsl fo
+last_updated: August 12, 2015
+summary: "You can generate a PDF from your Jekyll project. You do this by creating a web version of your project that is printer friendly. You then use utility called Prince to iterate through the pages and create a PDF from them. It works quite well and gives you complete control to customize the PDF output through CSS, including page directives and dynamic tags from Prince."
 ---
 {% include linkrefs.html %} 
 
-## Overview 
+## PDF overview
 This process for creating a PDF relies on Prince XML to transform the HTML content into PDF. Prince costs about $500 per license. That might seem like a lot, but if you're creating a PDF, you're probably working for a company that sells a product, so you likely have access to some resources.
 
 The basic approach is to generate a list of all pages that need to be added to the PDF, and then add leverage Prince to package them up into a PDF.

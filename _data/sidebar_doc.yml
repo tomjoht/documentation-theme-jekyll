@@ -384,6 +384,13 @@ entries:
                   version: all
                   product: all
 
+                - title: Content types pages
+                  url: /doc_tag-content-types.html
+                  audience: writers, designers
+                  platform: all
+                  version: all
+                  product: all
+
                 - title: Publishing pages
                   url: /doc_tag-publishing.html
                   audience: writers, designers

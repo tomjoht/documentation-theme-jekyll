@@ -1,10 +1,9 @@
 ---
 title: Images
-audience: writer, designer
-tags: formatting
-keywords: 
-last_updated: 
-summary: 
+tags: [formatting]
+keywords: images, screenshots, vectors, svg, markdown syntax
+last_updated: August 12, 2015
+summary: "You embed images using traditional HTML or Markdown syntax for images. Unlike pages, you can store images in subfolders (in this theme). This is because when pages reference the images, the references are always as subpaths, never requiring the reference to move up directories."
 ---
 {% include linkrefs.html %} 
 

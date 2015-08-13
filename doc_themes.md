@@ -1,9 +1,8 @@
 ---
 title: Themes
-audience: writer, designer
-tags: publishing
-keywords: 
-last_updated: 
+tags: [publishing]
+keywords: themes, styles, colors, css
+last_updated: August 12, 2015
 summary: 
 ---
 {% include linkrefs.html %} 

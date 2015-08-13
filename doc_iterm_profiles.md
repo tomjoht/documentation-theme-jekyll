@@ -1,12 +1,13 @@
 ---
 title: iTerm profiles 
 tags: [publishing]
-keywords: 
-audience: 
-last_updated: May 13, 2015
-summary: "Set up profiles in iTerm to facilitate the build process. This can make it a lot easier to quickly build multiple outputs."
+keywords: iterm, terminal, build shortcuts, mac
+last_updated: August 12, 2015
+summary: "Set up profiles in iTerm to facilitate the build process with just a few clicks. This can make it a lot easier to quickly build multiple outputs."
 ---
 {% include linkrefs.html %} 
+
+## About iTerm profiles
 
 When you're working with tech docs, a lot of times you're single sourcing multiple outputs. It can be a hassle to fire up each one of these outputs using the build files containing the shell scripts. Instead, it's easier to configure iTerm with profiles that initiate the scripts.
 

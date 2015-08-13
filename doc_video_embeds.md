@@ -1,9 +1,8 @@
 ---
 title: Video embeds
-audience: writer, designer
-tags: formatting
-keywords: 
-last_updated: 
+tags: [formatting]
+keywords: videos, youtube, vimeo, video js, video wrapper, mp4, stream
+last_updated: August 12, 2015
 summary: 
 video: true
 ---

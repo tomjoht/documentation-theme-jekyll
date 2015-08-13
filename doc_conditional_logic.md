@@ -1,14 +1,16 @@
 ---
 title: Conditional logic
 tags: [single-sourcing]
-audience: writer, designer
-keywords: 
-last_updated: 
-summary: 
+keywords: if else logic, conditions, conditional attributes, conditional filtering
+last_updated: August 12, 2015
+summary: "You can implement advanced conditional logic that includes if statements, or statements, unless, and more. This conditional logic facilitates single sourcing scenarios in which you're outputting the same content for different audiences."
 ---
 {% include linkrefs.html %} 
 
+## About Liquid and conditional statements
 If you want to create different outputs for different audiences, you can do all of this using a combination of Jekyll's Liquid markup and values in your configuration file.
+
+You can then incorporate conditional statements that check the values in the configuration files.
 
 {{tip}} Definitely check out <a href="http://docs.shopify.com/themes/liquid-documentation/basics">Liquid's documentation</a> for more details about how to use operators and other liquid markup. The notes here are a small, somewhat superficial sample from the site.{{end}}
 

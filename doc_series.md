@@ -1,13 +1,13 @@
 ---
 title: Series pages
-tags: []
-keywords: series
-audience: writers, designers
-last_updated: May 17, 2015 
+tags: [content-types]
+keywords: series, connected articles, tutorials, hello world
+last_updated: August 12, 2015
 summary: "You can automatically link together topics belonging to the same series. This helps users know the context within a particular process."
 ---
 {% include linkrefs.html %} 
 
+## Using series for pages
 You create a series by looking for all pages within a tag namespace that contain certain frontmatter. Here's a demo: {{doc_seriesdemo1_1}}. 
 
 ## 1. Create the series button 

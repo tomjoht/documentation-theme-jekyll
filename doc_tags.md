@@ -2,7 +2,9 @@
 title: Tags
 audience: writer, designer
 tags: [navigation]
-summary: 
+last_updated: August 12, 2015
+keywords: tags, navigation, buttons, links, association
+summary: "Tags provide another means of navigation for your content. Unlike the table of contents, tags can show the content in a variety of arrangements and groupings. Implementing tags in this Jekyll theme is somewhat of a manual process."
 ---
 {% include linkrefs.html %} 
 

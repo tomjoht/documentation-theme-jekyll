@@ -3,6 +3,7 @@ title:  Series demo 1.3
 summary: "This is the fourth post in the series."
 series: "ACME series"
 weight: 1.3
+last_updated: August 12, 2015
 ---
 {% include linkrefs.html %} 
 

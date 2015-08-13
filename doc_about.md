@@ -1,10 +1,9 @@
 ---
 title: About this theme
-tags: []
-keywords: 
-audience: writer, designer
-last_updated: 
-summary: 
+keywords: documentation theme, jekyll, technical writers, help authoring tools, hat replacements
+last_updated: August 12, 2015
+tags: [getting-started]
+summary: "I use this theme for sophisticated single-sourcing projects that I work on as a professional technical writer."
 ---
 {% include linkrefs.html %} 
 
@@ -12,9 +11,9 @@ My name is Tom Johnson, and I'm a technical writer, blogger, and podcaster based
 
 I'm using this theme for my documentation projects. This theme has undergone several major iterations, and now it's fairly stable and full of all the features that I need. You are welcome to use it for your documentation projects for free.
 
-I think this theme does pretty much everything that you can do with something like OxygenXML, but without the constraints of structured authoring. Everything is completely open and changeable, so if you start tinkering around with the theme's files, you can break things. 
+I think this theme does pretty much everything that you can do with something like OxygenXML, but without the constraints of structured authoring. Everything is completely open and changeable, so if you start tinkering around with the theme's files, you can break things. But it's completely empowering as well!
 
-By having a completely open architecture and code, there are more points of risk. At the same time, it's much easier to modify the code to make it do exactly what you want, without having to jump through all kinds of confusing or proprietary code.
+With a completely open architecture and code base, you can modify the code to make it do exactly what you want, without having to jump through all kinds of confusing or proprietary code.
 
 If there's a feature you need but it isn't available here, let me know and I might add it. Alternatively, if you fork the theme, I would love to see your modifications and enhancements.
 

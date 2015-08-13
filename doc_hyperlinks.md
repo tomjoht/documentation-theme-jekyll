@@ -2,11 +2,13 @@
 title: Links
 audience: writer, designer
 tags: [formatting, navigation]
-summary: 
+keywords: links, hyperlinks, cross references, related links, relationship tables
+summary: "When creating links, although you can use standard HTML or Markdown, a better way to handle links is to store them as captured variables in an include file, and then reference the capture keywords for the links. This way you can update titles in one place, more easily identify broken links, and better manage your links. This approach is simliar to the keyref-style links in DITA."
+last_updated: August 12, 2015
 ---
 {% include linkrefs.html %} 
 
-## Link strategy
+## Link strategies
 
 One of the more difficult parts of a documentation site is keeping all the internal links accurate and valid. Although there are many ways to create links, I'll just describe what I've found to work well.
 

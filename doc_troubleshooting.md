@@ -1,9 +1,8 @@
 ---
 title: Troubleshooting
-tags: []
-keywords: 
-audience: 
-last_updated: 
+tags: [getting-started]
+keywords: trouble, problems, support, error messages, problems, failure, error, #fail
+last_updated: August 12, 2015
 summary: 
 ---
 {% include linkrefs.html %} 

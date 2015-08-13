@@ -1,10 +1,9 @@
 ---
 title: Pages
-audience: writer, designer
-tags: [getting-started, formatting]
-keywords: 
-last_updated: 
-summary: 
+tags: [getting-started, formatting, content-types]
+keywords: pages, authoring, exclusion, frontmatter
+last_updated: August 12, 2015
+summary: "This theme uses pages only, not posts. You need to make sure your pages have the appropriate frontmatter. One frontmatter tag your users might find helpful is the summary tag. This functions similar in purpose to the shortdesc element in DITA."
 ---
 {% include linkrefs.html %} 
 
@@ -35,8 +34,9 @@ Make sure each page has frontmatter at the top like this:
 {% raw %}
 ---
 title: Your page title
-tags: [deployment]
+tags: [formatting, getting-started]
 keywords: overview, going live, high-level
+last_updated: August 12, 2015
 summary: "Deploying DeviceInsight requires the following steps."
 {% endraw %}
 ---

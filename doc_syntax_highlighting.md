@@ -1,13 +1,13 @@
 ---
 title: Syntax highlighting
-audience: writer, designer
-tags: formatting
-keywords: 
-last_updated: 
-summary: 
+tags: [formatting]
+keywords: rouge, pygments, prettify, color coding,
+last_updated: August 12, 2015
+summary: "You can apply syntax highlighting to your code. This theme uses pygments and applies color coding based on the lexer you specify."
 ---
 {% include linkrefs.html %} 
 
+## About syntax highlighting
 For syntax highlighting, use fenced code blocks optionally followed by the language syntax you want:
 
 <pre>

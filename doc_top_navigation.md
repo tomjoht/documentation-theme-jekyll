@@ -1,9 +1,8 @@
 ---
 title: Top navigation
-audience: writer, designer
 tags: [navigation]
-keywords:
-last_updated:
+keywords: bootstrap, lists, drop-down, drop down navigation, top nav bar, topnav
+last_updated: August 12, 2015
 summary: "The top navigation provides either single links or a drop-down menu. There are some other features, such as a feedback email, custom menu, and popout link."
 ---
 {% include linkrefs.html %}

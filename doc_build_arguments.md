@@ -1,10 +1,9 @@
 ---
 title: Build arguments
 tags: [publishing]
-audience: writer, designer
-keywords: 
-last_updated: 
-summary: 
+keywords: building, serving, serve, build
+last_updated: August 12, 2015
+summary: "When you have a single sourcing project, you use more advanced arguments when you're building or serving your Jekyll sites. These arguments specify a particular configuration file and may build on other configuration files."
 ---
 {% include linkrefs.html %} 
 

@@ -1,13 +1,13 @@
 ---
 title: Search configuration
-audience: writer, designer
-tags: publishing
-keywords: 
-last_updated: 
-summary: 
+tags: [publishing, navigation]
+keywords: search, json, configuration, findability
+last_updated: August 12, 2015
+summary: "The search feature uses JavaScript to look for keyword matches in a JSON file. The results show instant matches, but it doesn't provide a search results page like Google. Also, sometimes invalid formatting can break the JSON file."
 ---
 {% include linkrefs.html %} 
 
+## About search
 The search is configured through the search.json file in the root directory. Take a look at that code if you want to change what fields are included.
 
 The search is a simple search that looks at content in pages. It looks at titles, summaries, keywords, tags, and bodies.
