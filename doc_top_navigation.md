@@ -26,7 +26,7 @@ You configure the email in the configuration file with this property: `site.feed
 
 It's common to publish multiple sites. If you want to link them together, you could simply list links to the other doc sites in a drop-down menu configured in the topnav_dropdowns section in the topnav_doc.yml file. However, suppose you want to do something more fancy.
 
-Included in the topnav.html file is an include to /doc/customMenu.html. The code there is as follows:
+Included in the topnav.html file is an include to /doc/customMenu.html. The code in customMenu.html is as follows:
 
 ```
 <li {% if site.audience == "writers" %}class="dropdownActive"{% endif %}><a href="{% if page.homepage == true or page.switch == false %}../doc_writers/{{site.suffix}}">Writer docs</a> {% else %} ../doc_writers{{page.url}}">Writer docs</a>{% endif %}</li>

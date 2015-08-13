@@ -24,10 +24,18 @@ Since you'll be writing in Markdown, having color coding and other support for M
 |Command | Shortcuts |
 |-------|--------|
 | Shift + Shift | Allows you to find a file by searching for its name. |
-| Ctrl + H | Find in whole project. (WebStorm uses the term "Find in "path".) |
-| Edit > Find > Replace in Path | Replace in whole project. (Unfortunately, I can't find a keyboard shortcut for this common operation.) |
-| Right-click > Refactor > Safe Delete | Allows you to delete a file. |
+| Shift + Command + F | Find in whole project. (WebStorm uses the term "Find in "path".) |
+| Shift + Command + R | Replace in whole project.  |
+| Command + F | Find on page |
+| Shift + R | Replace on page |
 | Right-click > Add to Favorites | Allows you to add files to a Favorites section, which expands below the list of files in the project pane. |
+| Shift + tab | Applies outdenting (opposite of tabbing) |
+| Shift + Function + F6 | Rename a file |
+| Command + Delete | Delete a file |
+| Command + 2 | Show Favorites pane |
+| Shift + Option + F | Add to Favorites |
+
+{{tip}} If these shortcut keys aren't working for you, make sure you have the "Max OS X 10.5+" keymap selected. Go to <b>WebStorm > Preferences > Keymap</b> and select it there. {{end}}
 
 ## Identifying changed files
 
@@ -48,4 +56,4 @@ Rather than insert the frontmatter by hand each time, it's much faster to simply
 
 ## Disable pair quotes
 
-By default, each time you type `'`, WebStorm will pair the quote. You can disable this by going to **WebStorm > Preferences > Editor > Smartkeys**. Clear the **Insert pair quotes** check box.
+By default, each time you type `'`, WebStorm will pair the quote (creating two quotes). You can disable this by going to **WebStorm > Preferences > Editor > Smartkeys**. Clear the **Insert pair quotes** check box.
