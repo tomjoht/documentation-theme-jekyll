@@ -1,5 +1,5 @@
 ---
-title: Generating PDF
+title: Generating PDFs
 tags: [publishing, single-sourcing, content-types]
 keywords: PDF, prince, prince XML, ant, xsl fo
 last_updated: August 12, 2015
