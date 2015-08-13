@@ -3,7 +3,7 @@ title: Troubleshooting
 tags: [getting-started]
 keywords: trouble, problems, support, error messages, problems, failure, error, #fail
 last_updated: August 12, 2015
-summary: 
+summary: "This page lists common errors and the steps needed to troubleshoot them."
 ---
 {% include linkrefs.html %} 
 

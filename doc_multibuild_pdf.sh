@@ -6,5 +6,5 @@ prince --javascript --input-list=../doc_writers-pdf/prince-file-list.txt -o /Use
 echo "Building the Designers PDF ..."
 prince --javascript --input-list=../doc_designers-pdf/prince-file-list.txt -o /Users/tjohnson/projects/documentation-theme-jekyll/doc_designers_pdf.pdf;
 
-# All done.
-# Now run . doc_multiweb_pdf.sh
+echo "All done."
+echo "Now run . doc_multibuild_web.sh"

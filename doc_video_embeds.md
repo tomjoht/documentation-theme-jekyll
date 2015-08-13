@@ -3,11 +3,12 @@ title: Video embeds
 tags: [formatting]
 keywords: videos, youtube, vimeo, video js, video wrapper, mp4, stream
 last_updated: August 12, 2015
-summary: 
+summary: "You can embed files with a Video JS wrapper by adding 'video: true' in the frontmatter. Alternatively, you can just fall back on the default video wrapper in the browser."
 video: true
 ---
 {% include linkrefs.html %} 
 
+## About Video JS
 The theme has the [video.js](http://www.videojs.com/) player integrated. But the scripts only appear on a page or post if you have certain frontmatter in that page or post. If you want to embed a video in a page and use the Video JS player, add `video: true` in your frontmatter of a page or post, and then add code like this where you want the video to appear:
 
 ```html

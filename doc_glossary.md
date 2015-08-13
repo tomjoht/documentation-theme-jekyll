@@ -1,5 +1,5 @@
 ---
-title: Glossaries
+title: Glossary layout
 tags: [formatting, special-layouts]
 keywords: definitions, glossaries, terms, style guide
 last_updated: August 12, 2015

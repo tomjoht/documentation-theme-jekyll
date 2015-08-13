@@ -21,7 +21,8 @@ summary: "This layout shows an example of a knowledge-base style navigation syst
       <button class="btn btn-primary" data-group="getting-started">Getting Started</button>
       <button class="btn btn-primary" data-group="formatting">Formatting</button>
       <button class="btn btn-primary" data-group="publishing">Publishing</button>
-      <button class="btn btn-primary" data-group="single-sourcing">Single Sourcing</button>
+      <button class="btn btn-primary" data-group="content-types">Content types</button>
+          <button class="btn btn-primary" data-group="single-sourcing">Single Sourcing</button>
       <button class="btn btn-primary" data-group="special-layouts">Special Layouts</button>
     </div>      
 
@@ -30,7 +31,7 @@ summary: "This layout shows an example of a knowledge-base style navigation syst
 
     <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["getting-started"]'>
 
-               <div class="panel panel-danger">
+               <div class="panel panel-default">
                <div class="panel-heading">Getting started</div>
                <div class="panel-body">
                   If you're getting started with Jekyll, see the links in this section. It will take you from the beginning level to comfortable. 
@@ -49,7 +50,23 @@ summary: "This layout shows an example of a knowledge-base style navigation syst
     </div>
    
 
-    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["news"]'>
+    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["content-types"]'>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Content types</div>
+            <div class="panel-body">
+                This section lists different content types and how to work with them.
+                <ul>
+                    {% for page in site.pages %}
+                    {% for tag in page.tags %}
+                    {% if tag == "content-types" %}
+                    <li><a href="{{page.url}}">{{page.title}}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
         
     </div>
 
@@ -57,7 +74,7 @@ summary: "This layout shows an example of a knowledge-base style navigation syst
 
     <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["formatting"]'>
 
-                <div class="panel panel-danger">
+                <div class="panel panel-default">
                <div class="panel-heading">Formatting</div>
                <div class="panel-body">
                   These topics get into formatting syntax, such as images and tables, that you'll use on each of your pages: 
@@ -81,7 +98,7 @@ summary: "This layout shows an example of a knowledge-base style navigation syst
          
       <div class="panel panel-default">
                <div class="panel-heading">Single Sourcing</div>
-               <div class="panel-body">These topics cover strategies for single-sourcing:
+               <div class="panel-body">These topics cover strategies for single-sourcing. Single sourcing refers to strategies for re-using the same source in different outputs for different audiences or purposes.
                <ul>
                 {% for page in site.pages %}
                 {% for tag in page.tags %}
@@ -97,10 +114,10 @@ summary: "This layout shows an example of a knowledge-base style navigation syst
     </div>
 
        <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["publishing"]'>
-         
-<div class="panel panel-primary">
+
+           <div class="panel panel-default">
                <div class="panel-heading">Publishing</div>
-               <div class="panel-body">
+               <div class="panel-body">When you're building, publishing, and deploying your Jekyll site, you might find these topics helpful.
                    <ul>
                 {% for page in site.pages %}
                 {% for tag in page.tags %}
@@ -117,7 +134,7 @@ summary: "This layout shows an example of a knowledge-base style navigation syst
 
         <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["special-layouts"]'>
 
-             <div class="panel panel-warning">
+             <div class="panel panel-default">
                <div class="panel-heading">Special Layouts</div>
                <div class="panel-body">
                   These pages highlight special layouts outside of the conventional page and TOC hierarchy.
@@ -144,6 +161,6 @@ summary: "This layout shows an example of a knowledge-base style navigation syst
 {% include initialize_shuffle.html %}
 {% endunless %}
 
-{{note}} This was mostly an experiment to see if there was a better way to document a long JSON code example. I haven't actually used this approach in my own documentation.{{end}}
+{{note}} This was mostly an experiment to see if I could break away from the hierarchical TOC and provide a different way of arranging the content. However, this layout is somewhat problematic because it doesn't allow you to browse other navigation options on the side while viewing a topic.{{end}}
 
 

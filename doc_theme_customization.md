@@ -3,7 +3,7 @@ title: Theme customization
 tags: [getting-started]
 last_updated: August 12, 2015
 keywords: getting started, customization, beginning steps, modifying the theme, modification
-summary: 
+summary: "You start customizing the theme by gutting the existing content in this theme and replacing it with your own content. Start with the configuration files, then customize the data files, and add your own markdown pages in the root directory."
 ---
 {% include linkrefs.html %} 
 

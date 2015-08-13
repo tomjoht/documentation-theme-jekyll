@@ -20,6 +20,7 @@ exclude:
 
 If you have different outputs for your site, you'll want to customize the exclude sections in your various configuration files.
 
+## Exclude strategies
 Here's the process I recommend. Put all files in the root directory of your project. Suppose one project's name is alpha and the other is beta. Then name each file as follows:
 
 * alpha_sample.html

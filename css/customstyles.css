@@ -157,9 +157,7 @@ table > colgroup + thead > tr:first-child > td,
 table > thead:first-child > tr:first-child > td {
   border-top: 0;
 }
-table > tbody + tbody {
-  b
-}
+
 table > tbody > tr:nth-of-type(odd) {
   background-color: #f9f9f9;
 }
@@ -777,6 +775,13 @@ pre, table code {
 
 pre {
     margin: 25px 0px;
+}
+
+.panel-heading {
+    font-weight: bold;
+}
+#json-box-container pre {
+    margin: 0px;
 }
 
 p.dataType {display: block; font-color: gray; font-size: 80%;}

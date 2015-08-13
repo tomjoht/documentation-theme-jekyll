@@ -11,8 +11,8 @@ summary: "The top navigation provides either single links or a drop-down menu. T
 
 The top navigation reads from the \_data/topnav_doc.yml file. There are two *separate* sections:
 
-* `topnav``
-* `topnav_dropdowns``
+* `topnav`
+* `topnav_dropdowns`
 
 Items in the `topnav` section are rendered as single links. In contrast, items in the `topnav_dropdowns` section are rendered as a drop-down menu.
 
@@ -29,7 +29,7 @@ It's common to publish multiple sites. If you want to link them together, you co
 Included in the topnav.html file is an include to /doc/customMenu.html. The code there is as follows:
 
 ```
-  <li {% if site.audience == "writers" %}class="dropdownActive"{% endif %}><a href="{% if page.homepage == true or page.switch == false %}../doc_writers/{{site.suffix}}">Writer docs</a> {% else %} ../doc_writers{{page.url}}">Writer docs</a>{% endif %}</li>
+<li {% if site.audience == "writers" %}class="dropdownActive"{% endif %}><a href="{% if page.homepage == true or page.switch == false %}../doc_writers/{{site.suffix}}">Writer docs</a> {% else %} ../doc_writers{{page.url}}">Writer docs</a>{% endif %}</li>
 
 <li {% if site.audience == "designers" %}class="dropdownActive"{% endif %}><a href="{% if page.homepage == true or page.switch == false %}../doc_designers/{{site.suffix}}">Designer doc</a> {% else %} ../doc_designers{{page.url}}">Designer docs</a>{% endif %}</li>
 ```

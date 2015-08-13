@@ -3,7 +3,7 @@ title: Help APIs and UI tooltips
 tags: [publishing, single-sourcing, content-types]
 last_updated: August 12, 2015
 keywords: API, content API, UI text, inline help, context-sensitive help, popovers, tooltips
-summary: "You can loop through files and generate a JSON file that developers can consume like a help API. Developers can pull in values from the JSON into interface elements, styling them as popovers for user interface text. The beauty of this method is that the UI text remains in the help system and isn't hard-coded into the UI."
+summary: "You can loop through files and generate a JSON file that developers can consume like a help API. Developers can pull in values from the JSON into interface elements, styling them as popovers for user interface text, for example. The beauty of this method is that the UI text remains in the help system and isn't hard-coded into the UI."
 ---
 {% include linkrefs.html %}
 
