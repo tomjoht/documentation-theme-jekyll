@@ -24,8 +24,8 @@ Since you'll be writing in Markdown, having color coding and other support for M
 |Command | Shortcuts |
 |-------|--------|
 | Shift + Shift | Allows you to find a file by searching for its name. |
-| Shift + Command + F | Find in whole project. (WebStorm uses the term "Find in "path".) |
-| Shift + Command + R | Replace in whole project.  |
+| Shift + Command + F | Find in whole project. (WebStorm uses the term "Find in path".) |
+| Shift + Command + R | Replace in whole project. (Again, WebStorm calls it "Replace in path.") |
 | Command + F | Find on page |
 | Shift + R | Replace on page |
 | Right-click > Add to Favorites | Allows you to add files to a Favorites section, which expands below the list of files in the project pane. |
