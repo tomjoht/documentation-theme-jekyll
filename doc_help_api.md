@@ -11,7 +11,7 @@ summary: "You can loop through files and generate a JSON file that developers ca
 
 You can create a help API that developers can use to pull in content.
 
-For the full code demo, see the notes in the <a target="_blank" title="ToolTip Demo" href="{{ "/tooltip_demo.html" | prepend: site.baseurl }}">Tooltip Demo</a>.
+For the full code demo, see the notes in the <a target="_blank" title="ToolTip Demo" href="{{ "tooltip_demo.html" | prepend: site.baseurl }}">Tooltip Demo</a>.
 
 In this demo, the popovers pull in and display content from the information in an external tooltips.json file located on a different host.
 

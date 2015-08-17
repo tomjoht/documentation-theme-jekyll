@@ -144,7 +144,7 @@ entries:
       items:
         - title: Tooltips
           url: /doc_adding_tooltips.html
-          audience: writers, designers
+          audience: writers
           platform: all
           product: all
           version: all
