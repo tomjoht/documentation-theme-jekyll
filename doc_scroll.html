@@ -12,8 +12,8 @@ summary: "This page demonstrates how you the integration of a script called Scro
 {{note}} The content on this page doesn't display well on PDF, but I included it anyway so you could see the problems this layout poses if you're including it in PDF.  {{end}}
 {% endif %}
 
-{% unless site.print == true %}
- <script src="{{ "/js/jquery.scrollTo.min.js" | prepend:site.baseurl }}"></script> 
+{% if site.print == false %}
+ <script src="{{ "/js/jquery.scrollTo.min.js" | prepend:site.baseurl }}"></script>
     <!-- local scroll must come after scrollTo, because localScroll is based on scrollTo, which is based on jQuery -->
 <script src="{{ "/js/jquery.localScroll.min.js" | prepend:site.baseurl }}"></script>
 
@@ -118,7 +118,7 @@ $('#small-box-links').localScroll({
 
     </style>
 
-{% endunless %}
+{% endif %}
 <div class="container">
 <div class="row">
  
