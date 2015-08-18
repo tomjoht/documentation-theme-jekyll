@@ -27,7 +27,7 @@ To get started, see these three topics:
 
 1. {{doc_getting_started}}
 2. {{doc_configuration_settings}}
-3. {{doc_theme_customization}}
+3. {{doc_customizing_the_theme}}
 
 ## PDF Download 
 

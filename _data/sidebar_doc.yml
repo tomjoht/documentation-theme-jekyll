@@ -42,22 +42,22 @@ entries:
           product: all
           version: all
 
-        - title: Get started with this theme
+        - title: Getting started with this theme
           url: /doc_getting_started.html
           audience: writers, designers
           platform: all
           product: all
           version: all
 
-        - title: Configuration options
+        - title: Setting configuration options
           url: /doc_configuration_settings.html
           audience: writers, designers
           platform: all
           product: all
           version: all
 
-        - title: Theme customization
-          url: /doc_theme_customization.html
+        - title: Customizing the theme
+          url: /doc_customizing_the_theme.html
           audience: writers, designers
           platform: all
           product: all

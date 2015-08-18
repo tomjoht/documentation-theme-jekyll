@@ -1,5 +1,5 @@
 ---
-title: Configuration settings
+title: Setting configuration options
 tags: [single-sourcing, publishing]
 keywords: configuration, config, publishing options, outputs, projects
 last_updated: August 12, 2015

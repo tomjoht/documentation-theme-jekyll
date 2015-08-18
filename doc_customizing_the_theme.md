@@ -1,5 +1,5 @@
 ---
-title: Theme customization
+title: Customizing the theme
 tags: [getting-started]
 last_updated: August 12, 2015
 keywords: getting started, customization, beginning steps, modifying the theme, modification
