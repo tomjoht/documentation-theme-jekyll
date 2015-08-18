@@ -126,7 +126,7 @@ Getting started pages:
 {% for page in site.pages %}
 {% for tag in page.tags %}
 {% if tag == "getting-started" %}
-<li><a href="{{page.url}}">{{page.title}}</a></li>
+<li><a href="{{page.url | replace: '/',''}}">{{page.title}}</a></li>
 {% endif %}
 {% endfor %}
 {% endfor %} 
@@ -141,7 +141,7 @@ Getting started pages:
 {% for page in site.pages %}
 {% for tag in page.tags %}
 {% if tag == "getting-started" %}
-<li><a href="{{page.url}}">{{page.title}}</a></li>
+<li><a href="{{page.url | replace: '/',''}}">{{page.title}}</a></li>
 {% endif %}
 {% endfor %}
 {% endfor %}
@@ -157,7 +157,7 @@ Getting started pages:
 {% for page in sorted_pages %}
 {% for tag in page.tags %}
 {% if tag == "getting-started" %}
-<li><a href="{{page.url}}">{{page.title}}</a></li>
+<li><a href="{{page.url | replace: '/',''}}">{{page.title}}</a></li>
 {% endif %}
 {% endfor %}
 {% endfor %} 
@@ -173,7 +173,7 @@ Getting started pages:
 {% for page in sorted_pages %}
 {% for tag in page.tags %}
 {% if tag == "getting-started" %}
-<li><a href="{{page.url}}">{{page.title}}</a></li>
+<li><a href="{{page.url | replace: '/',''}}">{{page.title}}</a></li>
 {% endif %}
 {% endfor %}
 {% endfor %}
