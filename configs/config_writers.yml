@@ -16,6 +16,7 @@ google_analytics: UA-66296557-1
 sidebar_tagline: writers
 sidebar_version: version 3.0
 theme_file: theme-green.css
+project_file_name: doc
 
 port: 4003
 exclude:
