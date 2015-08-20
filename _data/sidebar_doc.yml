@@ -362,6 +362,7 @@ entries:
               platform: all
               version: all
               product: all
+              print: false
               thirdlevelitems:
                 - title: Getting started pages
                   url: /doc_tag-getting-started.html
@@ -369,6 +370,7 @@ entries:
                   platform: all
                   version: all
                   product: all
+                  print: false
 
                 - title: Formatting pages
                   url: /doc_tag-formatting.html
@@ -376,6 +378,7 @@ entries:
                   platform: all
                   version: all
                   product: all
+                  print: false
 
                 - title: Navigation pages
                   url: /doc_tag-navigation.html
@@ -383,6 +386,7 @@ entries:
                   platform: all
                   version: all
                   product: all
+                  print: false
 
                 - title: Content types pages
                   url: /doc_tag-content-types.html
@@ -390,6 +394,7 @@ entries:
                   platform: all
                   version: all
                   product: all
+                  print: false
 
                 - title: Publishing pages
                   url: /doc_tag-publishing.html
@@ -397,6 +402,7 @@ entries:
                   platform: all
                   version: all
                   product: all
+                  print: false
 
                 - title: Special layout pages
                   url: /doc_tag-special-layouts.html
@@ -404,3 +410,4 @@ entries:
                   platform: all
                   version: all
                   product: all
+                  print: false

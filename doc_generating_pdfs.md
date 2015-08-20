@@ -110,6 +110,8 @@ The code in the tocpage.html is nearly identical to that of the sidebar.html pag
 
 There's another file (in the root directory of the theme) that is critical to the PDF generation process: prince-file-list.txt. This file simply iterates through the items in your sidebar and creates a list of links. Prince will consume the list of links from prince-file-list.txt and create a running PDF that contains all of the pages listed, with appropriate cross references and styling for them all.
 
+{{note}} If you have any files that you do not want to appear in the PDF, add <code>print: false</code> in the list of attributes in your sidebar. The prince-file-list.txt file that loops through the sidebar_doc.yml file to grab the URLs of each page that should appear in the PDF will skip over any items that have <code>print: false</code> in the item attributes. For example, you might not want your tag archives to appear in the PDF, but you probably will want to list them in the online help navigation. {{end}}
+
 ## 4. Customize your headers and footers
 
 Open up the css/printstyles.css file and customize what you want for the headers and footers. At the very least, customize the email address that appears in the bottom left.
