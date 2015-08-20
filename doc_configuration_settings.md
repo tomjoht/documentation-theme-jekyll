@@ -25,7 +25,7 @@ Note that you can define arbitrary key-value pairs in the configuration file, an
 
 | Field | Required? | Description |
 |-------|-----------|-----------|
-| **project** | Required| A unique name for the project. The \_includes/custom/{project}/conditions.html file will use this project name to determine what sidebar and top nav data files to use. Make this value unique. |
+| **project** | Required| A unique name for the project. The \_includes/custom/{project}/conditions.html file will use this project name to determine what sidebar and top nav data files to use. Make this value unique. Note that the project name also determines what conditions are set in the \_includes/conditions.html file. Therefore it's critical that the project name you specify in the configuration file matches the project names in the conditions.html file. Otherwise, the conditions.html file won't be able to set the right variables needed for single sourcing. |
 | **audience** | Required | The audience for the output. Each entry in \_data/sidebar_doc.yml and  \_data/topnav_doc.yml needs to have an audience attribute that matches the value here in order for the sidebar or topnav item to be included.|
 | **platform** | Required | The platform for the output. See additional information in audience.
 | **product** | Required | The product for the output. See additional information in audience.
