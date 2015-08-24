@@ -37,12 +37,20 @@ And the result:
 You can also embed SVG graphics. If you use SVG, you need to use the HTML syntax so that you can define a width/container for the graphic. Here's a sample embed:
 
 ```html
-<img src="images/helpapi.svg" style="width: 650px;"/>
+<img src="images/dicloud/dicloud_architecture.svg" style="max-width: 700px;" />
 ```
 
 Here's the result:
 
-<img src="images/helpapi.svg" style="width: 650px;"/>
+<img src="images/helpapi.svg" style="max-width: 700px;" />
 
 SVG images will expand to the size of their artboard, so you can either set the artboard the right size when you create the graphic in Illustrator, or you can set an inline style that confines the size to a certain width as shown in the code above.
+
+Also, if you're working with SVG graphics, note that Firefox does not support SVG fonts. In Illustrator, when you do a Save As with your AI file and choose SVG, to preserve your fonts, in the Font section, select "Convert to outline" as the Type (don't choose SVG in the Font section).
+
+Also, remove the check box for "Use textpath element for text on a path". And select "Embed" rather than "Link." The following screenshot shows the settings I use. Your graphics will look great in Firefox.
+
+<img src="{{ "/images/illustratoroptions.png" | prepend: site.baseurl }}" alt="Essential options for SVG with Illustrator" />
+
+
 
