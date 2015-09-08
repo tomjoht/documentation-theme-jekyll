@@ -9,7 +9,7 @@ This site provides documentation, training, and other notes for the Jekyll Docum
 Some of the more prominent features of this theme include the following:
 
 * Bootstrap framework
-* Sidebar with page hierarchy
+* Sidebar with page hierarchy and advanced toc
 * PDF generation (with Prince XML utility)
 * Notes, tips, and warning information notes
 * Tags
