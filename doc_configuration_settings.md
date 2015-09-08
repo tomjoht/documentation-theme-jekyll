@@ -25,7 +25,7 @@ Note that you can define arbitrary key-value pairs in the configuration file, an
 
 | Field | Required? | Description |
 |-------|-----------|-----------|
-| **project** | Required| A unique name for the project. The \_includes/custom/{project}/conditions.html file will use this project name to determine what sidebar and top nav data files to use. Make this value unique. Note that the project name also determines what conditions are set in the \_includes/conditions.html file. Therefore it's critical that the project name you specify in the configuration file matches the project names in the conditions.html file. Otherwise, the conditions.html file won't be able to set the right variables needed for single sourcing. |
+| **project** | Required| A unique name for the project. The \_includes/custom/conditions.html file will use this project name to determine what sidebar and top nav data files to use. Make this value unique. Note that the project name also determines what conditions are set in the \_includes/conditions.html file. Therefore it's critical that the project name you specify in the configuration file matches the project names in the conditions.html file. Otherwise, the conditions.html file won't be able to set the right variables needed for single sourcing. |
 | **audience** | Required | The audience for the output. Each entry in \_data/sidebar_doc.yml and  \_data/topnav_doc.yml needs to have an audience attribute that matches the value here in order for the sidebar or topnav item to be included.|
 | **platform** | Required | The platform for the output. See additional information in audience.
 | **product** | Required | The product for the output. See additional information in audience.
@@ -85,7 +85,7 @@ If all of these conditions are met, then the item will qualify to be included in
   version: all
 ```
 
-The file in \_includes/custom/doc/conditions.html contains a project setting and also assigns general names for each of these specific values. This way the same theme files can be used interchangeably depending on the assignments, whose values are specified in the configuration file.
+The file in \_includes/custom/conditions.html contains a project setting and also assigns general names for each of these specific values. This way the same theme files can be used interchangeably depending on the assignments, whose values are specified in the configuration file.
 
 It's a little complicated to describe, but it works. Once you configure your project correctly, you don't even think about how the theme is processing all of this on the backend.
 

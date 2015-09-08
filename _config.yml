@@ -29,7 +29,7 @@ exclude:
 host: 127.0.0.1
 feedback_email: tomjohnson1492@gmail.com
 sidebar_accordion: true
-markdown: redcarpet
+markdown: kramdown
 print: false
 theme_file: theme-blue.css
 # only use suffix if you need to force index.html to display
@@ -38,7 +38,15 @@ theme_file: theme-blue.css
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "tables", "with_toc_data"]
 
-highlighter: pygments
+highlighter: rouge
+
+kramdown:
+  auto_ids:       true
+  footnote_nr:    1
+  entity_output:  as_char
+  toc_levels:     1..6
+  smart_quotes:   lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
 
 collections:
   tooltips:

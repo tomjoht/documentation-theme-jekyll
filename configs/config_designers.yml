@@ -1,5 +1,5 @@
 # project definitions
-project: doc
+project: doc_designers
 audience: designers
 product: all
 platform: all
