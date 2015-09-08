@@ -30,13 +30,16 @@ exclude:
 host: 127.0.0.1
 feedback_email: tomjohnson1492@gmail.com
 sidebar_accordion: true
-markdown: kramdown
+markdown: redcarpet
 print: false
 
 # only use suffix if you need to force index.html to display
 # suffix: index.html
 
 highlighter: pygments
+
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "tables", "with_toc_data"]
 
 collections:
   tooltips:
