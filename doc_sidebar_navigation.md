@@ -58,7 +58,7 @@ The audience, platform, product, and version are specified in the includes/custo
 
 ```liquid
 {% raw %}
-{% if site.project == "doc" %}
+{% if site.project == "doc_designers" %}
 {% assign audience = "designers" %}
 {% assign sidebar = site.data.sidebar_doc.entries %}
 {% assign topnav = site.data.topnav_doc.topnav %}
