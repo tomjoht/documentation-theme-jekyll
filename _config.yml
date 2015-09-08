@@ -1,6 +1,6 @@
 ## This content is duplicated here from configs/config_designers.yml because I'm building this site through Github Pages, and Github Pages just looks for the _config.yml file in the root directory to create the build.
 # project definitions
-project: doc
+project: doc_designers
 audience: designers
 product: all
 platform: all
@@ -20,16 +20,16 @@ sidebar_version: version 3.0
 port: 4001
 
 exclude:
-  - doc_writer*
+  - doc_writers*
   - configs/
   - _site
-  - di_multi*
+  - doc_multi*
 
 # same for all
 host: 127.0.0.1
 feedback_email: tomjohnson1492@gmail.com
 sidebar_accordion: true
-markdown: kramdown
+markdown: redcarpet
 print: false
 theme_file: theme-blue.css
 # only use suffix if you need to force index.html to display
@@ -39,14 +39,6 @@ redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "tables", "with_toc_data"]
 
 highlighter: rouge
-
-kramdown:
-  auto_ids:       true
-  footnote_nr:    1
-  entity_output:  as_char
-  toc_levels:     1..6
-  smart_quotes:   lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
 
 collections:
   tooltips:
