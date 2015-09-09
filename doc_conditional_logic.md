@@ -80,7 +80,7 @@ You can use more advanced Liquid markup for conditional logic, such as an `or` c
 
 For example, here's an example using `or`:
 
-```
+```liquid
 {% raw %}
 {% if site.audience contains "vegan" or site.audience == "vegetarian" %}
     // run this.
@@ -90,7 +90,7 @@ For example, here's an example using `or`:
 
 Note that you have to specify the full condition each time. You can't shorten the above logic to the following:
 
-```
+```liquid
 {% raw %}
 {% if site.audience contains "vegan" or "vegetarian" %}
     // run this.
@@ -122,7 +122,7 @@ In this situation, if `site.print == true`, then the code will *not* be run here
 
 Here's an example of using conditional logic based on a value in a data file:
 
-```
+```liquid
 {% raw %}
 {% if site.data.options.output == "alpha" %}
 show this content...

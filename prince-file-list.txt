@@ -14,7 +14,7 @@ search: exclude
                                      {% if thirdlevel.audience %}
                                                 {% for deeplevel in thirdlevel.thirdlevelitems %}
                                                    {% if deeplevel.audience contains audience and deeplevel.product contains product and deeplevel.platform contains platform and deeplevel.version contains version %}
-                                                      {{site.url}}{{site.baseurl}}{{item.url}}
+                                                      {{site.url}}{{site.baseurl}}{{deeplevel.url}}
                                                    {% endif %}
                                                 {% endfor %}
                                      {% endif %}
