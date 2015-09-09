@@ -18,7 +18,7 @@ search: exclude
                 {% if item.audience contains audience and item.product contains product and item.platform contains platform and item.version contains version and item.web != false %}
                 <li><a href="{{item.url | prepend: site.baseurl}}">{{item.title}}</a>
                     {% for thirdlevel in item.thirdlevel %}
-                    {% if thirdlevel.audience contains buildAudience and thirdlevel.print == true %}
+                    {% if thirdlevel.audience contains audience and thirdlevel.platform contains platform and thirdlevel.product contains product and thirdlevel.version contains version %}
                 <li class="sectionHead">{{ thirdlevel.title }}
                     <ul>
                         {% for deeplevel in thirdlevel.thirdlevelitems%}
