@@ -6,14 +6,14 @@ search: exclude
 
          {% for entry in sidebar %}
            {% for subcategory in entry.subcategories %}
-              {% if subcategory.audience contains audience and subcategory.platform contains platform and subcategory.product contains product and subcategory.version contains version %}
+              {% if subcategory.audience contains audience and subcategory.platform contains platform and subcategory.product contains product and subcategory.version contains version and subcategory.print != false  %}
                       {% for item in subcategory.items %}
-                         {% if item.audience contains audience and item.platform contains platform and item.product contains product and item.version contains version %}
+                         {% if item.audience contains audience and item.platform contains platform and item.product contains product and item.version contains version and item.print != false  %}
                             {{site.url}}{{site.baseurl}}{{item.url }}
                                   {% for thirdlevel in item.thirdlevel %}
-                                        {% if thirdlevel.audience contains audience and thirdlevel.platform contains platform and thirdlevel.product contains product and thirdlevel.version contains version %}
+                                        {% if thirdlevel.audience contains audience and thirdlevel.platform contains platform and thirdlevel.product contains product and thirdlevel.version contains version and thirdlevel.print != false  %}
                                                 {% for deeplevel in thirdlevel.thirdlevelitems %}
-                                                   {% if deeplevel.audience contains audience and deeplevel.product contains product and deeplevel.platform contains platform and deeplevel.version contains version %}
+                                                   {% if deeplevel.audience contains audience and deeplevel.product contains product and deeplevel.platform contains platform and deeplevel.version contains version and deeplevel.print != false  %}
                                                       {{site.url}}{{site.baseurl}}{{deeplevel.url}}
                                                    {% endif %}
                                                 {% endfor %}
