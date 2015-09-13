@@ -5,13 +5,13 @@ last_updated: August 12, 2015
 keywords: API, content API, UI text, inline help, context-sensitive help, popovers, tooltips
 summary: "You can loop through files and generate a JSON file that developers can consume like a help API. Developers can pull in values from the JSON into interface elements, styling them as popovers for user interface text, for example. The beauty of this method is that the UI text remains in the help system and isn't hard-coded into the UI."
 ---
-{% include linkrefs.html %}
+
 
 ## Full code demo of content API
 
 You can create a help API that developers can use to pull in content.
 
-For the full code demo, see the notes in the <a target="_blank" title="ToolTip Demo" href="{{ "tooltip_demo.html" | prepend: site.baseurl }}">Tooltip Demo</a>.
+For the full code demo, see the notes in the <a href="tooltip_demo.html" class="noCrossRef">tooltip demo</a>.
 
 In this demo, the popovers pull in and display content from the information in an external tooltips.json file located on a different host.
 
@@ -80,9 +80,9 @@ layout: none
 {% endraw %}
 ```
 
-This code will loop through all pages in the tooltips collection and insert the id and body into key-value pairs for the JSON code. Here's an example of what that looks like after it's processed by Jekyll in the site build: <a target="_blank" title="ToolTip Demo" href="{{ "/tooltips.json" | prepend: site.baseurl }}">Tooltips</a>.
+This code will loop through all pages in the tooltips collection and insert the id and body into key-value pairs for the JSON code. Here's an example of what that looks like after it's processed by Jekyll in the site build: <a class="noCrossRef" href="tooltips.json">tooltips.json</a>.
 
-{{tip}} Check out <a href="https://google-styleguide.googlecode.com/svn/trunk/jsoncstyleguide.xml">Google's style guide for JSON</a>. These best practices can help you keep your JSON file valid.{{end}}
+{{site.data.alerts.tip}} Check out <a href="https://google-styleguide.googlecode.com/svn/trunk/jsoncstyleguide.xml">Google's style guide for JSON</a>. These best practices can help you keep your JSON file valid.{{site.data.alerts.end}}
 
 Store this tooltips.json file in your root directory. You can add different fields depending on how you want the JSON to be structured. Here I just have to fields: `id` and `body`. And the JSON is looking just in the tooltips collection that I created.
 
@@ -141,7 +141,7 @@ In other server setups, you may need to edit one of your Apache configuration fi
 
 If you don't have CORS enabled, users will see a CORS error/warning message in the console of the page making the request. 
 
-{{tip}} If enabling CORS is problematic, you could always just send developers the tooltips.json file and ask them to place it on their own server. {{end}}
+{{site.data.alerts.tip}} If enabling CORS is problematic, you could always just send developers the tooltips.json file and ask them to place it on their own server. {{site.data.alerts.end}}
 
 ## 5. Explain how developers can access the help
 
@@ -172,7 +172,7 @@ $.get( url, function( data ) {
 
 The `{url}` is where your tooltips.json file is. The `each` method looks through all the JSON content to find the item whose `page.id` is equal to `basketball`. It then looks for an element on the page named `#basketball` and adds a `data-content` attribute to that element.
 
-{{warning}}<b>Note:</b> Make sure your JSON file is valid. Otherwise, this method won't work. I use the <a href="https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en">JSON Formatter extension for Chrome</a>. When I go to the tooltips.json page in my browser, the JSON content &mdash; if valid &mdash; is nicely formatted (and includes some color coding). If the file isn't valid, it's not formatted and there isn't any color. You can also check the JSON formatting using <a href="http://jsonformatter.curiousconcept.com/">JSON Formatter and Validator</a>. If your JSON file isn't valid, identify the problem area using the validator and troubleshoot the file causing issues. It's usually due to some code that isn't escaping correctly. {{end}}
+{{site.data.alerts.warning}}<b>Note:</b> Make sure your JSON file is valid. Otherwise, this method won't work. I use the <a href="https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en">JSON Formatter extension for Chrome</a>. When I go to the tooltips.json page in my browser, the JSON content &mdash; if valid &mdash; is nicely formatted (and includes some color coding). If the file isn't valid, it's not formatted and there isn't any color. You can also check the JSON formatting using <a href="http://jsonformatter.curiousconcept.com/">JSON Formatter and Validator</a>. If your JSON file isn't valid, identify the problem area using the validator and troubleshoot the file causing issues. It's usually due to some code that isn't escaping correctly. {{site.data.alerts.end}}
 
 Why `data-content`? Well, in this case, I'm using [Bootstrap popovers](http://getbootstrap.com/javascript/#popovers) to display the tooltip content. The `data-content` attribute is how Bootstrap injects popovers.
 
@@ -202,7 +202,7 @@ $(document).ready(function(){
 
 Note that even though you reference a Bootstrap js script, Bootstrap's popovers require you to initialize them using the above code as well &mdash; they aren't turned on by default.
 
-View the source code of the <a target="_blank" title="ToolTip Demo" href="{{ "/tooltip_demo.html" | prepend: site.baseurl }}">Tooltip Demo</a> for the full comments. 
+View the source code of the <a class="noCrossRef" href="tooltip_demo.html">Tooltip Demo</a> for the full comments. 
 
 ## 6. Create easy links to embed the help in your help site
 

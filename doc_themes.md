@@ -5,7 +5,7 @@ keywords: themes, styles, colors, css
 last_updated: August 12, 2015
 summary: "You can choose between two different themes (one green, the other blue) for your projects. The theme CSS is stored in the CSS folder and configured in the configuration file for each project."
 ---
-{% include linkrefs.html %} 
+
 
 ## Theme options
 You can choose a green or blue theme, or you can create your own. In the css folder, there are two theme files: theme-blue.css and theme-green.css. These files have the most common CSS elements extracted in their own CSS file. Just change the hex colors to the ones you want.

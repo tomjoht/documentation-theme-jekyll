@@ -5,7 +5,7 @@ keywords: images, screenshots, vectors, svg, markdown syntax
 last_updated: August 12, 2015
 summary: "You embed images using traditional HTML or Markdown syntax for images. Unlike pages, you can store images in subfolders (in this theme). This is because when pages reference the images, the references are always as subpaths, never requiring the reference to move up directories."
 ---
-{% include linkrefs.html %} 
+
 
 You embed an image the same way you embed other files or assets: you put the file into a folder, and then link to that file. 
 
@@ -50,7 +50,7 @@ Also, if you're working with SVG graphics, note that Firefox does not support SV
 
 Also, remove the check box for "Use textpath element for text on a path". And select "Embed" rather than "Link." The following screenshot shows the settings I use. Your graphics will look great in Firefox.
 
-<img src="{{ "images/illustratoroptions.png" | prepend: site.baseurl }}" alt="Essential options for SVG with Illustrator" />
+![Essential options for SVG with Illustrator](images/illustratoroptions.png)
 
 
 

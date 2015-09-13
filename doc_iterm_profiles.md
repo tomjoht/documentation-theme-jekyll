@@ -5,7 +5,7 @@ keywords: iterm, terminal, build shortcuts, mac
 last_updated: August 12, 2015
 summary: "Set up profiles in iTerm to facilitate the build process with just a few clicks. This can make it a lot easier to quickly build multiple outputs."
 ---
-{% include linkrefs.html %} 
+
 
 ## About iTerm profiles
 
@@ -36,4 +36,4 @@ Here's an example:
 1. In iTerm, make sure the Toolbar is shown. Go to **View > Toggle Toolbar**.
 2. Click the **New** button and select your profile.
 
-{{tip}} When you're done with the session, make sure to click **Ctrl+C**.{{end}}
+{{site.data.alerts.tip}} When you're done with the session, make sure to click **Ctrl+C**.{{site.data.alerts.end}}

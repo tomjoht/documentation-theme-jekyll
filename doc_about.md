@@ -5,7 +5,7 @@ last_updated: August 12, 2015
 tags: [getting-started]
 summary: "I use this theme for sophisticated single-sourcing projects that I work on as a professional technical writer."
 ---
-{% include linkrefs.html %} 
+
 
 My name is Tom Johnson, and I'm a technical writer, blogger, and podcaster based in San Jose, California. My blog is here: [http://idratherbewriting.com](http://idratherbewriting.com). I write several posts there a week. See [my blog's about page](http://idratherbewriting.com/aboutme/) for more details about me.
 

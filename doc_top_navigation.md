@@ -5,7 +5,7 @@ keywords: bootstrap, lists, drop-down, drop down navigation, top nav bar, topnav
 last_updated: August 12, 2015
 summary: "The top navigation provides either single links or a drop-down menu. There are some other features, such as a feedback email, custom menu, and popout link."
 ---
-{% include linkrefs.html %}
+
 
 ## Changing the top navigation
 
@@ -34,13 +34,11 @@ Included in the topnav.html file is an include to /doc/customMenu.html. The code
 <li {% if site.audience == "designers" %}class="dropdownActive"{% endif %}><a href="{% if page.homepage == true or page.switch == false %}../doc_designers/{{site.suffix}}">Designer doc</a> {% else %} ../doc_designers{{page.url}}">Designer docs</a>{% endif %}</li>
 ```
 
-{{note}} In the theme, the link to the customMenu.html include in the \_includes/topnav.html file is currently commented out. This is because this feature only works when you have multiple outputs hosted on the same server. Github Pages, where I'm publishing this theme,  allows only one output per Github Pages directory. So rather than removing this customMenu feature from the theme, I've just commented it out so that it won't appear broken in the demo.{{end}}
+{{site.data.alerts.note}} In the theme, the link to the customMenu.html include in the \_includes/topnav.html file is currently commented out. This is because this feature only works when you have multiple outputs hosted on the same server. Github Pages, where I'm publishing this theme,  allows only one output per Github Pages directory. So rather than removing this customMenu feature from the theme, I've just commented it out so that it won't appear broken in the demo.{{site.data.alerts.end}}
 
 The current doc site is highlighted. If you select another doc site, the site switches to that doc site and goes to the same page on that doc site. This way, if you have a task such as "Configuring the license" in several different programming languages, users can switch to other programming languages to see the same page.
 
-You need to have both the designers and writers sites deployed on a web server to see this in action. Go to the following link: <a href="http://idratherbetellingstories.com/documentation-theme-jekyll/doc_designers/" target="_blank">idratherbetellingstories.com/documentation-theme-jekyll/doc_designers/</a>.
-
-Browse to any page in the navigation. Then go to the **Custom Menu** and select the **Writers** site. You'll go to the exact same page but on the Writers site.
+You need to have both the designers and writers sites deployed on a web server to see this in action. Once deployed, browse to any page in the navigation. Then go to the **Custom Menu** and select the **Writers** site. You'll go to the exact same page but on the Writers site.
 
 If your current page doesn't have an equivalent in your other outputs, then put this in the frontmatter of the page:
 

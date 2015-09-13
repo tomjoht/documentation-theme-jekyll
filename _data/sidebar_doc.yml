@@ -35,6 +35,7 @@ entries:
       print: true
 
       items:
+
         - title: Introduction
           url: /index.html
           audience: writers, designers
@@ -69,7 +70,6 @@ entries:
           platform: all
           product: all
           version: all
-
 
     - title: Authoring
       audience: writers, designers

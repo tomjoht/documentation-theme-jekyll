@@ -5,7 +5,6 @@ keywords: font icons, buttons, images, vectors, font awesome, glyphicons
 last_updated: August 12, 2015
 summary: "You can integrate font icons through the Font Awesome and Glyphical Halflings libraries. These libraries allow you to embed icons through their libraries delivered as a link reference. You don't need any image libraries downloaded in your project."
 ---
-{% include linkrefs.html %} 
 
 ## Font icon options
 The theme has two font icon sets integrated: Font Awesome and Glyphicons Halflings. The latter is part of Bootstrap, while the former is independent. Font icons allow you to insert icons drawn as vectors from a CDN (so you don't have any local images on your own site).
@@ -46,35 +45,45 @@ Here's the result:
 
 <div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle fa-lg"></i> This is a special warning message.</div>
 
-The notes, tips, warnings, etc., are pre-coded with Font Awesome and stored in the linkrefs.html file in `capture` tags. That file includes the following:
+The notes, tips, warnings, etc., are pre-coded with Font Awesome and stored in the alerts.yml file. That file includes the following:
 
 {% raw %}
-```html
-{% capture tip %}<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip: </b>{% endcapture %}
-{% capture note %}<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note: </b>{% endcapture %}
-{% capture important %}<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Important: </b>{% endcapture %}
-{% capture warning %}<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning: </b>{% endcapture %}
-{% capture end %}</div>{% endcapture %}
+```yaml
+tip: '<div class="alert alert-success" role="alert"><i class="fa fa-check-square-o"></i> <b>Tip: </b>'
+note: '<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note: </b>'
+important: '<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Important: </b>'
+warning: '<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning: </b>'
+end: '</div>'
+
+callout_danger: '<div class="bs-callout bs-callout-danger">'
+callout_default: '<div class="bs-callout bs-callout-default">'
+callout_primary: '<div class="bs-callout bs-callout-primary">'
+callout_success: '<div class="bs-callout bs-callout-success">'
+callout_info: '<div class="bs-callout bs-callout-info">'
+callout_warning: '<div class="bs-callout bs-callout-warning">'
+
+hr_faded: '<hr class="faded"/>'
+hr_shaded: '<hr class="shaded"/>'
 ```
 {% endraw %}
 
 This means you can insert a tip, note, warning, or important alert simply by using these tags:
 
 {% raw %}
-```
-{{note}} Add your note here. {{end}}
+```liquid
+{{site.data.alerts.note}} Add your note here. {{site.data.alerts.end}}
 ```
 {% endraw %}
 
 Here's the result:
 
-{{note}} Add your note here. {{end}}
+{{site.data.alerts.note}} Add your note here. {{site.data.alerts.end}}
 
-{{tip}} Here's my tip. {{end}}
+{{site.data.alerts.tip}} Here's my tip. {{site.data.alerts.end}}
 
-{{important}} This information is very important.{{end}}
+{{site.data.alerts.important}} This information is very important.{{site.data.alerts.end}}
 
-{{warning}} If you overlook this, you may die. {{end}}
+{{site.data.alerts.warning}} If you overlook this, you may die. {{site.data.alerts.end}}
 
 The color scheme is the default colors from Bootstrap. You can modify the icons or colors as needed.
 
@@ -171,7 +180,7 @@ And here's the shortcode:
 
 {% raw %}
 ```
-{{callout_info}}<div class="bs-callout bs-callout-info">{{end}}
+{{site.data.alerts.callout_info}}<div class="bs-callout bs-callout-info">{{site.data.alerts.end}}
 {% endraw %}
 ```
 
@@ -179,13 +188,13 @@ You can use any of the following:
 {% raw %}
 ```
 {{callout_danger}} 
-{{callout_default}} 
-{{callout_primary}} 
-{{callout_success}} 
-{{callout_info}} 
-{{callout_warning}} 
+{{site.data.alerts.callout_default}} 
+{{site.data.alerts.callout_primary}} 
+{{site.data.alerts.callout_success}} 
+{{site.data.alerts.callout_info}} 
+{{site.data.alerts.callout_warning}} 
 ```
 {% endraw %}
 
-Callouts are explained in a bit more detail here: {{doc_alerts}}.
+Callouts are explained in a bit more detail here: {{site.data.urls.doc_alerts.link}}.
 

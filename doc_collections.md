@@ -5,7 +5,7 @@ keywords: groups, api, structure
 last_updated: August 12, 2015
 summary: "Collections are useful if you want to loop through a special folder of pages that you make available in a content API. You could also use collections if you have a set of articles that you want to treat differently from the other content, with a different layout or format."
 ---
-{% include linkrefs.html %} 
+
 
 ## What are collections
 Collections are custom content types different from pages and posts. You might create a collection if you want to treat a specific set of articles in a unique way, such as with a custom layout or listing. For more detail on collections, see [Ben Balter's explanation of collections here](http://ben.balter.com/2015/02/20/jekyll-collections/).
@@ -29,4 +29,4 @@ See [Collections in the Jekyll documentation](http://jekyllrb.com/docs/collectio
 
 ## How to use collections
 
-I haven't found a huge use for collections in normal documentation. However, I did find a use for collections in generating a tooltip file that would be used for delivering tooltips to a user interface from text files in the documentation. See {{doc_help_api}} for details.
+I haven't found a huge use for collections in normal documentation. However, I did find a use for collections in generating a tooltip file that would be used for delivering tooltips to a user interface from text files in the documentation. See {{site.data.urls.doc_help_api}} for details.

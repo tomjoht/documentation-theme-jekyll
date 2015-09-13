@@ -5,7 +5,7 @@ keywords: configuration, config, publishing options, outputs, projects
 last_updated: August 12, 2015
 summary: "The configuration file contains important settings for your project. Some of the values you set here affect &mdash; especially the product, platform, audience, and version &mdash; the display and functionality of the theme."
 ---
-{% include linkrefs.html %} 
+
 
 ## Importance of Configuration File
 
@@ -13,7 +13,7 @@ The configuration file serves important functions with single sourcing. For each
 
 The configuration file contains all the settings and other details unique to that site output, such as variables, titles, output directories, build folders, and more.
 
-{{warning}} This theme is coded to look for specific values set by the configuration file. If something isn't working correctly, check to make sure that you have the configuration values that are defined here.{{end}}
+{{site.data.alerts.warning}} This theme is coded to look for specific values set by the configuration file. If something isn't working correctly, check to make sure that you have the configuration values that are defined here.{{site.data.alerts.end}}
 
 ## Configuration file options
 
@@ -101,7 +101,7 @@ jekyll serve --detach --config configs/config_writers.yml,configs/config_writers
 
 First Jekyll will read the config_writers.yml file, and then Jekyll will read the config_writers_pdf.yml file.
  
-More detail about generating PDFs is provided in {{doc_generating_pdfs}}, but the configuration settings used for the PDFs are described here.
+More detail about generating PDFs is provided in {{site.data.urls.doc_generating_pdfs.link}}, but the configuration settings used for the PDFs are described here.
 
 The process for creating PDFs relies on two steps:
 

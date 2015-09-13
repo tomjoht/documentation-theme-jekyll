@@ -1,0 +1,49 @@
+---
+layout: none
+search: exclude
+---
+{% include custom/conditions.html %}
+
+{% for entry in sidebar %}
+{% for subcategory in entry.subcategories %}
+{% for item in subcategory.items %}
+{{item.url | replace: "/","" | replace: ".html", ""}}:
+  title: "{{item.title}}"
+  url: "{{item.url | replace: '/','' }}"
+  link: "<a href='{{item.url | replace: "/","" }}'>{{item.title}}</a>"
+{% for thirdlevel in item.thirdlevel %}
+{% for deeplevel in thirdlevel.thirdlevelitems %}
+{{deeplevel.url | replace: "/","" | replace: ".html", ""}}:
+  title: "{{deeplevel.title}}"
+  url: "{{deeplevel.url | replace: '/','' }}"
+  link: "<a href='{{deeplevel.url | replace: "/","" }}'>{{deeplevel.title}}</a>"
+{% endfor %}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+
+
+{% for entry in topnav %}
+{% for subcategory in entry.subcategories %}
+{% unless subcategory.external_url %}
+{{subcategory.url | replace: "/","" | replace: ".html", ""}}:
+  title: "{{subcategory.title}}"
+  url: "{{subcategory.url | replace: '/','' }}"
+  link: "<a href='{{subcategory.url | replace: "/","" }}'>{{subcategory.title}}</a>"
+{% endunless %}
+{% endfor %}
+{% endfor %}
+
+{% for entry in topnav_dropdowns %}
+{% for subcategory in entry.subcategories %}
+{% for subitem in subcategory.items %}
+{% unless subitem.external_url %}
+{{subitem.url | replace: "/","" | replace: ".html", ""}}:
+  title: "{{subitem.title}}"
+  url: "{{subitem.url | replace: '/','' }}"
+  link: "<a href='{{subitem.url | replace: "/","" }}'>{{subitem.title}}</a>"
+{% endunless %}
+{% endfor %}
+{% endfor %}
+{% endfor %}

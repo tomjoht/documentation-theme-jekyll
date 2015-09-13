@@ -5,8 +5,6 @@ keywords: start, introduction, begin, install, build, hello world,
 last_updated: August 12, 2015
 summary: "To get started with this theme, first make sure you have all the prerequisites in place; then build the theme following the sample build commands. Because this theme is set up for single sourcing projects, it doesn't follow the same pattern as most Jekyll projects (which have just a _config.yml file in the root directory)."
 ---
-{% include linkrefs.html %} 
-
 
 ## Step 1: Set up the prerequisites
 
@@ -34,7 +32,7 @@ Before you start customizing the theme, make sure you can build the theme with t
  * Each configuration file specifies a different project and potentially a different audience, product, platform, and version. By setting unique values for these properties in the includes/custom/conditions.html file, you determine how the sidebar and top navigation get constructed. 
  * You can build all the outputs in your configs directory by running the doc_multibuild_web.sh file in the root directory.
  
-    {{tip}} The main goal of this theme is to enable single sourcing. With single sourcing, you build multiple outputs from the same source, with somewhat different content in each site based on the particular product, platform, version, and audience. You don't have to use this theme for single sourcing, but most tech writing projects involve this requirement.{{end}}
+    {{site.data.alerts.tip}} The main goal of this theme is to enable single sourcing. With single sourcing, you build multiple outputs from the same source, with somewhat different content in each site based on the particular product, platform, version, and audience. You don't have to use this theme for single sourcing, but most tech writing projects involve this requirement.{{site.data.alerts.end}}
     
     There are four configuration files in this project: config_writer.yml and config_designer.yml as well as their PDF equivalents. The idea is that there's an output specific to writers, and an output specific to designers. 
     
@@ -70,15 +68,15 @@ Before you start customizing the theme, make sure you can build the theme with t
 	
 	Open the writers and designers folders and click the index.html file. The themes should launch and appear similar to their appearance in the preview folder. This is because the themes are build using a relative link structure, so you can move the theme to any folder you want without breaking the links. 
 	
-    If the theme builds both outputs successfully, great. You can move on to the other sections. If you run into errors building the themes, try to solve them before moving on. See {{doc_troubleshooting}} for more information.
+    If the theme builds both outputs successfully, great. You can move on to the other sections. If you run into errors building the themes, try to solve them before moving on. See {{site.data.urls.doc_troubleshooting.link}} for more information.
     
-{{tip}} You can set up profiles in iTerm to initiate all your builds with one selection. See {{doc_iterm_profiles}} for details. {{end}}
-
-	More information about building the PDF versions is provided in {{doc_generating_pdfs}}.
+{{site.data.alerts.tip}} You can set up profiles in iTerm to initiate all your builds with one selection. See {{site.data.urls.doc_iterm_profiles.link}} for details. {{site.data.alerts.end}}
+	
+	More information about building the PDF versions is provided in {{site.data.urls.doc_generating_pdfs.link}}.
 
 ## Questions
 
-If you have questions, contact me at <a href="mailto:tomjohnson1492@gmail.com">tomjohnson1492@gmail.com</a>. My regular site is [http://idratherbewriting.com](idratherbewriting.com). I'm eager to make these installation instructions as clear as possible, so please let me know if there are areas of confusion that need clarifying.
+If you have questions, contact me at <a href="mailto:tomjohnson1492@gmail.com">tomjohnson1492@gmail.com</a>. My regular site is [idratherbewriting.com](http://idratherbewriting.com). I'm eager to make these installation instructions as clear as possible, so please let me know if there are areas of confusion that need clarifying.
 
 
 

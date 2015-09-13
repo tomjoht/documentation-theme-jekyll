@@ -5,7 +5,7 @@ keywords: trouble, problems, support, error messages, problems, failure, error, 
 last_updated: August 12, 2015
 summary: "This page lists common errors and the steps needed to troubleshoot them."
 ---
-{% include linkrefs.html %} 
+
 
 ## Issues building the site
 
@@ -56,7 +56,7 @@ chmod +x build_writer.sh
 
 ### Pygments not installed
 
-The config file requires pygments for the highlighter. You must [download and install Pygments]([pygments](http://pygments.org/download/)), which requires Python, in order to use this syntax highlighter. If you don't want to bother with Pygments, open the configuration file and change `pygments` to `rouge`.
+The config file requires pygments for the highlighter. You must [download and install Pygments](http://pygments.org/download/), which requires Python, in order to use this syntax highlighter. If you don't want to bother with Pygments, open the configuration file and change `pygments` to `rouge`.
 
 ### "page 0" cross references in the PDF
 
@@ -76,7 +76,7 @@ The config file requires pygments for the highlighter. You must [download and in
 
  If you don't have any values for these properties, you still need to keep them in your configuration file. Just put something like `all` as the value. 
 
- {{note}} This theme is designed for single sourcing. If you're only building one site, you can remove these values from the \_includes/sidebar.html file and \_data/sidebar.yml files.{{end}}
+ {{site.data.alerts.note}} This theme is designed for single sourcing. If you're only building one site, you can remove these values from the \_includes/sidebar.html file and \_data/sidebar.yml files.{{site.data.alerts.end}}
 
  Understanding how the theme works can be helpful in troubleshooting. The \_includes/sidebar.html file loops through the values in the \_data/sidebar.yml file. There are `if` statements that check whether the conditions (as specified in the conditions.html file) are met. If the sidebar.yml item has the right product, platform, audience, and version, then it gets displayed in the sidebar. If not, it get skipped.
 

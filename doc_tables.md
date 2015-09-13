@@ -6,7 +6,7 @@ last_updated: August 12, 2015
 datatable: true
 summary: "You can format tables using either multimarkdown syntax or HTML. You can also use jQuery datatables (a plugin) if you need more robust tables."
 ---
-{% include linkrefs.html %}
+
 
 {% unless site.print == true %}
 <script>
@@ -160,4 +160,4 @@ Notice a few features:
 
 Read more of the [datatable documentation](https://www.datatables.net/manual/options) to get a sense of the options you can configure. You should probably only use datatables when you have long, massive tables full of information.
 
-{{note}} Try to keep the columns to 3 or 4 columns only. If you add 5+ columns, your table may create horizontal scrolling with the theme.{{end}}
+{{site.data.alerts.note}} Try to keep the columns to 3 or 4 columns only. If you add 5+ columns, your table may create horizontal scrolling with the theme.{{site.data.alerts.end}}

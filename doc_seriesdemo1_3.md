@@ -5,7 +5,7 @@ series: "ACME series"
 weight: 1.3
 last_updated: August 12, 2015
 ---
-{% include linkrefs.html %} 
+
 
 {% include custom/doc/series_acme.html %}
 

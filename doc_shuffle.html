@@ -5,10 +5,10 @@ last_updated: August 12, 2015
 keywords: shuffle, card layout, dynamic grid, doc portal, support portal
 summary: "This layout shows an example of a knowledge-base style navigation system, where there is no hierarchy, just groups of pages that have certain tags."
 ---
-{% include linkrefs.html %}
+
 
 {% if site.print == true %}
-{{note}} The content on this page doesn't display well on PDF, but I included it anyway so you could see the problems this layout poses if you're including it in PDF.  {{end}}
+{{site.data.alerts.note}} The content on this page doesn't display well on PDF, but I included it anyway so you could see the problems this layout poses if you're including it in PDF.  {{site.data.alerts.end}}
 {% endif %}
 
 {% unless site.print == true %}
@@ -39,7 +39,7 @@ summary: "This layout shows an example of a knowledge-base style navigation syst
                 {% for page in site.pages %}
                 {% for tag in page.tags %}
                 {% if tag == "getting-started" %}
-                  <li><a href="{{page.url}}">{{page.title}}</a></li>
+                  <li><a href="{{page.url | replace: '/',''}}">{{page.title}}</a></li>
                 {% endif %}
                 {% endfor %}
                 {% endfor %} 
@@ -60,7 +60,7 @@ summary: "This layout shows an example of a knowledge-base style navigation syst
                     {% for page in site.pages %}
                     {% for tag in page.tags %}
                     {% if tag == "content-types" %}
-                    <li><a href="{{page.url}}">{{page.title}}</a></li>
+                    <li><a href="{{page.url | replace: '/',''}}">{{page.title}}</a></li>
                     {% endif %}
                     {% endfor %}
                     {% endfor %}
@@ -79,15 +79,13 @@ summary: "This layout shows an example of a knowledge-base style navigation syst
                <div class="panel-body">
                   These topics get into formatting syntax, such as images and tables, that you'll use on each of your pages: 
                   <ul>
-                    <ul>
                 {% for page in site.pages %}
                 {% for tag in page.tags %}
                 {% if tag == "formatting" %}
-                  <li><a href="{{page.url}}">{{page.title}}</a></li>
+                  <li><a href="{{page.url | replace: '/',''}}">{{page.title}}</a></li>
                 {% endif %}
                 {% endfor %}
-                {% endfor %} 
-                    
+                {% endfor %}
                   </ul>
                </div>
             </div>
@@ -103,7 +101,7 @@ summary: "This layout shows an example of a knowledge-base style navigation syst
                 {% for page in site.pages %}
                 {% for tag in page.tags %}
                 {% if tag == "single-sourcing" %}
-                  <li><a href="{{page.url}}">{{page.title}}</a></li>
+                  <li><a href="{{page.url | replace: '/',''}}">{{page.title}}</a></li>
                 {% endif %}
                 {% endfor %}
                 {% endfor %} 
@@ -122,7 +120,7 @@ summary: "This layout shows an example of a knowledge-base style navigation syst
                 {% for page in site.pages %}
                 {% for tag in page.tags %}
                 {% if tag == "publishing" %}
-                  <li><a href="{{page.url}}">{{page.title}}</a></li>
+                  <li><a href="{{page.url | replace: '/',''}}">{{page.title}}</a></li>
                 {% endif %}
                 {% endfor %}
                 {% endfor %}
@@ -142,7 +140,7 @@ summary: "This layout shows an example of a knowledge-base style navigation syst
                 {% for page in site.pages %}
                 {% for tag in page.tags %}
                 {% if tag == "special-layouts" %}
-                     <li><a href="{{page.url}}">{{page.title}}</a></li>
+                     <li><a href="{{page.url | replace: '/',''}}">{{page.title}}</a></li>
                 {% endif %}
                 {% endfor %}
                 {% endfor %} 
@@ -161,6 +159,6 @@ summary: "This layout shows an example of a knowledge-base style navigation syst
 {% include initialize_shuffle.html %}
 {% endunless %}
 
-{{note}} This was mostly an experiment to see if I could break away from the hierarchical TOC and provide a different way of arranging the content. However, this layout is somewhat problematic because it doesn't allow you to browse other navigation options on the side while viewing a topic.{{end}}
+{{site.data.alerts.note}} This was mostly an experiment to see if I could break away from the hierarchical TOC and provide a different way of arranging the content. However, this layout is somewhat problematic because it doesn't allow you to browse other navigation options on the side while viewing a topic.{{site.data.alerts.end}}
 
 

@@ -5,7 +5,7 @@ keywords: pages, authoring, exclusion, frontmatter
 last_updated: August 12, 2015
 summary: "This theme uses pages only, not posts. You need to make sure your pages have the appropriate frontmatter. One frontmatter tag your users might find helpful is the summary tag. This functions similar in purpose to the shortdesc element in DITA."
 ---
-{% include linkrefs.html %} 
+
 
 ## Where to author content
 Use a text editor such as Sublime Text, WebStorm, IntelliJ, or Atom to create pages. 
@@ -40,7 +40,7 @@ last_updated: August 12, 2015
 summary: "Deploying DeviceInsight requires the following steps."
 {% endraw %}
 ---
-{% include linkrefs.html %} 
+
 ```
 Frontmatter is always formatted with three hyphens at the top and bottom. Your frontmatter must have a `title` value. All the other values are optional.
 
@@ -56,7 +56,7 @@ The following table describes each of the frontmatter that you can use with this
 | **datatable** | Optional | Boolean. If you add `true`, then scripts for the [jQuery datatables plugin](https://www.datatables.net/) get included on the page. |
 | **video** | Optional | If you add `true`, then scripts for [Video JS: The HTML5 video player](http://www.videojs.com/) get included on the page. |
 
-{{tip}} You can see the scripts that conditionally appear by looking in the _layouts/default.html page. Note that these scripts are served via a CDN, so the user must be online for the scripts to work. However, if the user isn't online, the tables and video still appear. In other words, they degrade gracefully. {{end}}
+{{site.data.alerts.tip}} You can see the scripts that conditionally appear by looking in the _layouts/default.html page. Note that these scripts are served via a CDN, so the user must be online for the scripts to work. However, if the user isn't online, the tables and video still appear. In other words, they degrade gracefully. {{site.data.alerts.end}}
 
 ## What about permalinks? 
 What about permalinks? This theme isn't build using permalinks because it makes linking and directory structures problematic. Permalinks generate an index file inside a folder for each file in the output. This makes it so links (to other pages as well as to resources such as styles and scripts) need to include `../` depending upon where the other assets are located. But for any pages outside folders, such as the index.html page, you wouldn't use the `../` structure.
@@ -71,7 +71,7 @@ If you want to use a colon in your page title, you must enclose the title's valu
 
 If you add `published: false` in the frontmatter, your page won't be published. You can also move draft pages into the _drafts folder to exclude them from the build.
 
-{{tip}} You can create file templates in WebStorm that have all your common frontmatter, such as all possible tags, prepopulated. See {{doc_webstorm_text_editor}} for details. {{end}}
+{{site.data.alerts.tip}} You can create file templates in WebStorm that have all your common frontmatter, such as all possible tags, prepopulated. See {{site.data.urls.doc_webstorm_text_editor.link}} for details. {{site.data.alerts.end}}
 
 ## Markdown or HTML format
 
@@ -110,7 +110,7 @@ These extensions mean the following:
 
 You can also add "autolink" as an option if you want links such as http://google.com to automatically be converted into links. 
 
-{{note}} Make sure you leave the <code>with_toc_data</code> option included. This auto-creates an ID for each Markdown-formatted heading, which then gets injected into the mini-TOC. Without this auto-creation of IDs, the mini-TOC won't include the heading. If you ever use HTML formatting for headings, you need to manually add an ID attribute to the heading in order for the heading to appear in the mini-TOC. {{end}}
+{{site.data.alerts.note}} Make sure you leave the <code>with_toc_data</code> option included. This auto-creates an ID for each Markdown-formatted heading, which then gets injected into the mini-TOC. Without this auto-creation of IDs, the mini-TOC won't include the heading. If you ever use HTML formatting for headings, you need to manually add an ID attribute to the heading in order for the heading to appear in the mini-TOC. {{site.data.alerts.end}}
 
 ## Automatic mini-TOCs
 

@@ -35,7 +35,7 @@ Since you'll be writing in Markdown, having color coding and other support for M
 | Command + 2 | Show Favorites pane |
 | Shift + Option + F | Add to Favorites |
 
-{{tip}} If these shortcut keys aren't working for you, make sure you have the "Max OS X 10.5+" keymap selected. Go to <b>WebStorm > Preferences > Keymap</b> and select it there. {{end}}
+{{site.data.alerts.tip}} If these shortcut keys aren't working for you, make sure you have the "Max OS X 10.5+" keymap selected. Go to <b>WebStorm > Preferences > Keymap</b> and select it there. {{site.data.alerts.end}}
 
 ## Identifying changed files
 

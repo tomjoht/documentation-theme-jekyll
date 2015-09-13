@@ -6,7 +6,7 @@ last_updated: August 12, 2015
 keywords: tags, navigation, buttons, links, association
 summary: "Tags provide another means of navigation for your content. Unlike the table of contents, tags can show the content in a variety of arrangements and groupings. Implementing tags in this Jekyll theme is somewhat of a manual process."
 ---
-{% include linkrefs.html %} 
+
 
 ## Add a tag to a page
 You can add tags to pages by adding `tags` in the frontmatter with values inside brackets, like this:
@@ -21,13 +21,13 @@ tags: [formatting, single-sourcing]
 
 ## Tags overview
 {% if site.audience == "designers" %}
-{{note}} With posts, tags have a namespace that you can access with <code>posts.tags.tagname</code>, where <code>tagname</code> is the name of the tag. You can then list all posts in that tag namespace. But pages don't off this same tag namespace, so you could actually use another key instead of <code>tags</code>. Nevertheless, I'm using the same <code>tags</code> name here.{{end}}
+{{site.data.alerts.note}} With posts, tags have a namespace that you can access with <code>posts.tags.tagname</code>, where <code>tagname</code> is the name of the tag. You can then list all posts in that tag namespace. But pages don't off this same tag namespace, so you could actually use another key instead of <code>tags</code>. Nevertheless, I'm using the same <code>tags</code> name here.{{site.data.alerts.end}}
 {% endif %}
 
 To prevent tags from getting out of control and inconsistent, first make sure the tag appears in the \date/tags_doc.yml file. If it's not there, the tag you add to a page won't be read. I added this check just to make sure I'm using the same tags consistently and not adding new tags that don't have tag archive pages.
 
 {% if site.audience == "designers" %}
-{{note}} Unlike with WordPress, you have to build out the functionality for tags so that clicking a tag name shows you all pages with that tag. Tags in Jekyll are much more manual.{{end}}
+{{site.data.alerts.note}} Unlike with WordPress, you have to build out the functionality for tags so that clicking a tag name shows you all pages with that tag. Tags in Jekyll are much more manual.{{site.data.alerts.end}}
 {% endif %}
 
 Additionally, you must create a tag archive page similar to the other pages named doc_tag-{tagname}.html folder. This theme doesn't auto-create tag archive pages.
@@ -75,7 +75,7 @@ Tags have a few components.
     {% endraw %}
     ```
 
-		{{note}}In the \_includes folder, there's a taglogic.html file. This file (included in each tag archive file) has common logic for getting the tags and listing out the pages containing the tag in a table with summaries or truncated excerpts. You don't have to do anything with the file &mdash; just leave it there because the tag archive pages reference it.{{end}}
+		{{site.data.alerts.note}}In the \_includes folder, there's a taglogic.html file. This file (included in each tag archive file) has common logic for getting the tags and listing out the pages containing the tag in a table with summaries or truncated excerpts. You don't have to do anything with the file &mdash; just leave it there because the tag archive pages reference it.{{site.data.alerts.end}}
 
 5. Adjust button color or tag placement as desired. 
 	
@@ -104,7 +104,7 @@ Tags have a few components.
 	{% include custom/conditions.html %}
 	{% for tag in page.tags %}
 	{% if projectTags contains tag %}
-	<a href="{{site.project}}_tag-{{tag}}.html"><button type="button" class="btn btn-info navbar-btn cursorNorm">{{page.tagName}}{{tag}}</button></a>{% unless forloop.last %}{% endunless%}
+	<a class="noCrossRef" href="{{site.project}}_tag-{{tag}}.html"><button type="button" class="btn btn-info navbar-btn cursorNorm">{{page.tagName}}{{tag}}</button></a>{% unless forloop.last %}{% endunless%}
 	{% endif %}
 	{% endfor %}
 	{% endif %}
@@ -112,12 +112,11 @@ Tags have a few components.
     	
 Because this code appears on the \_layouts/page.html file by default, you don't need to do anything. However, if you want to alter the placement or change the button color, you can do so.
 	
-You can change the button color by changing the class on the button from `btn-info` to one of the other button classes bootstrap provides. See {{doc_labels}} for more options on button class names.
+You can change the button color by changing the class on the button from `btn-info` to one of the other button classes bootstrap provides. See {{site.data.urls.doc_labels.link}} for more options on button class names.
 
 ## Retrieving pages for a specific tag
 
 If you want to retrieve pages outside of a particular doc_tag-archive page, you could use this code:
-
 
 ```html
 {% raw %}
@@ -201,5 +200,5 @@ If you don't want tags to appear at all on your page, remove the tags property f
 
 Since you may have many tags and find it difficult to remember what tags are allowed, I recommend creating a template that prepopulates all your frontmatter with all possible tags. Then just remove the tags that don't apply. 
 
-See {{doc_webstorm_text_editor}} for tips on creating file templates in WebStorm.
+See {{site.data.urls.doc_webstorm_text_editor.link}} for tips on creating file templates in WebStorm.
 

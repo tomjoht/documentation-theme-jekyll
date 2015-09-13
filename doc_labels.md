@@ -5,7 +5,7 @@ keywords: labels, buttons, bootstrap, api methods
 last_updated: August 12, 2015
 summary: "Labels are just a simple Bootstrap component that you can include in your pages as needed. They represent one of many Bootstrap options you can include in your theme."
 ---
-{% include linkrefs.html %} 
+
 
 ## About labels
 Labels might come in handy for adding button-like tags next to elements, such as POST, DELETE, UPDATE methods for endpoints. You can use any classes from Bootstrap in your content.

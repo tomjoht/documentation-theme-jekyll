@@ -5,7 +5,7 @@ keywords: PDF, prince, prince XML, ant, xsl fo
 last_updated: August 12, 2015
 summary: "You can generate a PDF from your Jekyll project. You do this by creating a web version of your project that is printer friendly. You then use utility called Prince to iterate through the pages and create a PDF from them. It works quite well and gives you complete control to customize the PDF output through CSS, including page directives and dynamic tags from Prince."
 ---
-{% include linkrefs.html %} 
+
 
 ## PDF overview
 This process for creating a PDF relies on Prince XML to transform the HTML content into PDF. Prince costs about $500 per license. That might seem like a lot, but if you're creating a PDF, you're probably working for a company that sells a product, so you likely have access to some resources.
@@ -57,7 +57,7 @@ defaults:
       search: true
 ```
 
-{{note}} Although you're creating a PDF, you must still build a web target before running Prince. Prince will pull from the HTML files and from the file-list for the TOC. Prince won't be able to find files if they simply have relative paths, such as /sample.html. The must have full URLs it can access &mdash; hence the <code>url</code> and <code>baseurl</code>. {{end}}
+{{site.data.alerts.note}} Although you're creating a PDF, you must still build a web target before running Prince. Prince will pull from the HTML files and from the file-list for the TOC. Prince won't be able to find files if they simply have relative paths, such as /sample.html. The must have full URLs it can access &mdash; hence the <code>url</code> and <code>baseurl</code>. {{site.data.alerts.end}}
 
 Unlike the other configuration files, the PDF configuration files require a `url` and `baseurl`. This is because the Prince utility needs to access the pages in a specific place. While you could probably set up locations via absolute paths to file folders, it's easier just to provide the locations here as `url` and `baseurl`.
 
@@ -110,7 +110,7 @@ The code in the tocpage.html is nearly identical to that of the sidebar.html pag
 
 There's another file (in the root directory of the theme) that is critical to the PDF generation process: prince-file-list.txt. This file simply iterates through the items in your sidebar and creates a list of links. Prince will consume the list of links from prince-file-list.txt and create a running PDF that contains all of the pages listed, with appropriate cross references and styling for them all.
 
-{{note}} If you have any files that you do not want to appear in the PDF, add <code>print: false</code> in the list of attributes in your sidebar. The prince-file-list.txt file that loops through the sidebar_doc.yml file to grab the URLs of each page that should appear in the PDF will skip over any items that have <code>print: false</code> in the item attributes. For example, you might not want your tag archives to appear in the PDF, but you probably will want to list them in the online help navigation. {{end}}
+{{site.data.alerts.note}} If you have any files that you do not want to appear in the PDF, add <code>print: false</code> in the list of attributes in your sidebar. The prince-file-list.txt file that loops through the sidebar_doc.yml file to grab the URLs of each page that should appear in the PDF will skip over any items that have <code>print: false</code> in the item attributes. For example, you might not want your tag archives to appear in the PDF, but you probably will want to list them in the online help navigation. {{site.data.alerts.end}}
 
 ## 4. Customize your headers and footers
 
@@ -135,7 +135,7 @@ a[href*="mailto"]::after, a[data-toggle="tooltip"]::after, a[href].noCrossRef::a
 }
 ```
 
-If you have a link to a file download, for example, add `noCrossRef` as a class to avoid having it say "page 0" in the cross reference.
+{{site.data.alerts.tip}} If you have a link to a file download, or some other link that shouldn't have a cross reference (such as link used in JavaScript for navtabs or collapsible sections, for example, add `noCrossRef` as a class to the link to avoid having it say "page 0" in the cross reference.{{site.data.alerts.end}}
 
 This style specifies that after links to web resources, the URL should be inserted instead of the page number: 
 
@@ -367,7 +367,7 @@ To generate the PDF, you just run several scripts that have the commands package
 2. Then run doc_multibuild_pdf.sh to build the PDF files. 
 3. Now run doc_multibuild_web.sh to build the web version that includes the generated PDF files.
 
-{{note}} If you don't like the style of the PDFs, just adjust the styles in the printstyles.css file.{{end}}
+{{site.data.alerts.note}} If you don't like the style of the PDFs, just adjust the styles in the printstyles.css file.{{site.data.alerts.end}}
 
 ## JavaScript conflicts
 
@@ -391,4 +391,4 @@ javascript content here ...
 {% endraw %}
 ```
 
-For more detail about using `unless` in conditional logic, see {{doc_conditional_logic}}. What this code means is basically the opposite of `{% raw %}if site.print == true {% endraw %}`.
+For more detail about using `unless` in conditional logic, see {{site.data.urls.doc_conditional_logic.link}}. What this code means is basically the opposite of `{% raw %}if site.print == true {% endraw %}`.

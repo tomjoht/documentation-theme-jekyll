@@ -5,7 +5,7 @@ keywords: sidebar, toc, table of contents, navigation
 last_updated: August 12, 2015
 summary: "The sidebar and top navigation bar read their values from yml files. The navigation components are one of the most unique parts of this theme, since the navigation components are only included if they meet all of the product, audience, version, etc., values as specified in the project settings."
 ---
-{% include linkrefs.html %} 
+
 
 ## Sidebar overview
 

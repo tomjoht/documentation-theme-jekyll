@@ -6,10 +6,10 @@ tags: special-layouts
 last_updated: August 12, 2015
 summary: "This page demonstrates how you the integration of a script called ScrollTo, which is used here to link definitions of a JSON code sample to a list of definitions for that particular term. The scenario here is that the JSON blocks are really long, with extensive nesting and subnesting, which makes it difficult for tables below the JSON to adequately explain the term in a usable way."
 ---
-{% include linkrefs.html %}
+
 
 {% if site.print == true %}
-{{note}} The content on this page doesn't display well on PDF, but I included it anyway so you could see the problems this layout poses if you're including it in PDF.  {{end}}
+{{site.data.alerts.note}} The content on this page doesn't display well on PDF, but I included it anyway so you could see the problems this layout poses if you're including it in PDF.  {{site.data.alerts.end}}
 {% endif %}
 
 {% if site.print == false %}
@@ -234,5 +234,5 @@ $('#small-box-links').localScroll({
 </div> <!-- end row -->
 </div> <!-- end container -->
 
-{{note}} This was mostly an experiment to see if there was a better way to document a long JSON code example. I haven't actually used this approach in my own documentation.{{end}}
+{{site.data.alerts.note}} This was mostly an experiment to see if there was a better way to document a long JSON code example. I haven't actually used this approach in my own documentation.{{site.data.alerts.end}}
 

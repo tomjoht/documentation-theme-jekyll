@@ -5,7 +5,7 @@ keywords: popovers, tooltips, user interface text, glossaries, definitions
 last_updated: August 12, 2015
 summary: "You can add tooltips to any word, such as an acronym or specialized term. Tooltips work well for glossary definitions, because you don't have to keep repeating the definition, nor do you assume the reader already knows the word's meaning."
 ---
-{% include linkrefs.html %} 
+
 
 ## Creating tooltips
 Because this theme is built on Bootstrap, you can simply use a specific attribute on an element to insert a tooltip. 

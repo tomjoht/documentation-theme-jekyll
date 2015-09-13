@@ -5,7 +5,7 @@ keywords: navigation tabs, hide sections, tabbers, interface tabs
 last_updated: August 12, 2015
 summary: "Navtabs provide a tab-based navagation directly in your content, allowing users to click from tab to tab to see different panels of content. Navtabs are especially helpful for showing code samples for different programming languages. The only downside to using navtabs is that you must use HTML instead of Markdown."
 ---
-{% include linkrefs.html %} 
+
 
 ## Common uses
 
@@ -20,9 +20,9 @@ Navtabs are better for SEO since you avoid duplicate content and drive users to 
 The following is a demo of a navtab. Refresh your page to see the tab you selected remain active.
  
 <ul id="profileTabs" class="nav nav-tabs">
-    <li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
-    <li><a href="#about" data-toggle="tab">About</a></li>
-    <li><a href="#match" data-toggle="tab">Match</a></li>
+    <li class="active"><a class="noCrossRef" href="#profile" data-toggle="tab">Profile</a></li>
+    <li><a class="noCrossRef" href="#about" data-toggle="tab">About</a></li>
+    <li><a class="noCrossRef" href="#match" data-toggle="tab">Match</a></li>
 </ul>
   <div class="tab-content"> 
 <div role="tabpanel" class="tab-pane active" id="profile">

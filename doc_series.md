@@ -5,10 +5,10 @@ keywords: series, connected articles, tutorials, hello world
 last_updated: August 12, 2015
 summary: "You can automatically link together topics belonging to the same series. This helps users know the context within a particular process."
 ---
-{% include linkrefs.html %} 
+
 
 ## Using series for pages
-You create a series by looking for all pages within a tag namespace that contain certain frontmatter. Here's a demo: {{doc_seriesdemo1_1}}. 
+You create a series by looking for all pages within a tag namespace that contain certain frontmatter. Here's a <a href="doc_seriesdemo1_0.html" class="noCrossRef">demo</a>. 
 
 ## 1. Create the series button 
 
@@ -98,4 +98,4 @@ On each series page, add a link to the series button at the top and a link to th
 
 ## Changing the series drop-down color
 
-The Bootstrap menu uses the `primary` class for styling. If you change this class in your theme, the Bootstrap menu should automatically change color as well. You can also just use another Bootstrap class in your button code. Instead of `btn-primary`, use `btn-info` or `btn-warning`. See {{doc_labels}} for more Bootstrap button classes.
+The Bootstrap menu uses the `primary` class for styling. If you change this class in your theme, the Bootstrap menu should automatically change color as well. You can also just use another Bootstrap class in your button code. Instead of `btn-primary`, use `btn-info` or `btn-warning`. See {{site.data.urls.doc_labels.link}} for more Bootstrap button classes.
