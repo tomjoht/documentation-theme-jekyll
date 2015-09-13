@@ -39,9 +39,7 @@ To customize the theme:
     
 9. In the root directory, customize the index.md file. This file will be the homepage for all of your projects.
 	
-    Use conditional tags (for example, `{% raw %}{% if site.project == "writers" %} ... {% endif %}{% endraw %}`) to change the content for different builds of your site. Store the content of the homepage in your \_includes/custom/{project_name} folder. See {{site.data.urls.conditional_logic.link}} for more information on applying conditions.
-	   
-12. In the \_includes folder, open footer.html and customize the content (namely the footer image). If you have different footers for different outputs, use conditional tags as you did with index.md.
+    Use conditional tags (for example, `{% raw %}{% if site.project == "writers" %} ... {% endif %}{% endraw %}`) to change the content for different builds of your site. See {{site.data.urls.conditional_logic.link}} for more information on applying conditions.
+    
+10. In the \_includes folder, open footer.html and customize the content (namely the footer image). If you have different footers for different outputs, use conditional tags as you did with index.md.
 11. Build your site with a command such as `jekyll serve --config configs/config_writers.yml` etc., and preview it at the URLs provided.
-
-{{site.data.alerts.callout_info}}<b>Publishing to web hosts:</b> If you have multiple outputs, you probably don't want to use Github Pages to publish your site, since Github Pages looks for a \_config.yml file in the root directory and uses that to build a site in the gh-pages branch of your repository. You can't instruct Github pages to look in another directory for the right configuration file. Instead, you'll probably have a better experience publishing to a Amazon Web Services S3 bucket or some other web host. See {{site.data.urls.doc_push_build_to_server.link}} for more information.{{site.data.alerts.end}}

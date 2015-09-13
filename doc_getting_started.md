@@ -70,7 +70,7 @@ Before you start customizing the theme, make sure you can build the theme with t
 	
     If the theme builds both outputs successfully, great. You can move on to the other sections. If you run into errors building the themes, try to solve them before moving on. See {{site.data.urls.doc_troubleshooting.link}} for more information.
     
-{{site.data.alerts.tip}} You can set up profiles in iTerm to initiate all your builds with one selection. See {{site.data.urls.doc_iterm_profiles.link}} for details. {{site.data.alerts.end}}
+	{{site.data.alerts.tip}} You can set up profiles in iTerm to initiate all your builds with one selection. See {{site.data.urls.doc_iterm_profiles.link}} for details. {{site.data.alerts.end}}
 	
 	More information about building the PDF versions is provided in {{site.data.urls.doc_generating_pdfs.link}}.
 
