@@ -33,7 +33,7 @@ Here the `configs/config_writers.yml` file is used instead of `_config.yml`. The
 
 If you don't want to enter the long Jekyll argument every time, with all your configuration details, you can create a shell script and then just run the script. This theme shows an example with the doc_multibuild_web.sh file in the root directory.
 
-My preference is to add the scripts to profiles in iTerm. See {{site.data.urls.doc_iterm_profiles}} for more details.
+My preference is to add the scripts to profiles in iTerm. See {{site.data.urls.doc_iterm_profiles.link}} for more details.
 
 ## Stop a server
 
