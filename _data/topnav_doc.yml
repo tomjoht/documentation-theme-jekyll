@@ -20,7 +20,7 @@ topnav_dropdowns:
       product: all
       version: all
       items:
-        - title: About
+        - title: About this theme
           url: /doc_about.html
           audience: writers, designers
           platform: all

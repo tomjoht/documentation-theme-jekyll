@@ -1,5 +1,5 @@
 ---
-title: Series pages
+title: Series
 tags: [content-types]
 keywords: series, connected articles, tutorials, hello world
 last_updated: August 12, 2015

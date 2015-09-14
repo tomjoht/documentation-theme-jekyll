@@ -18,6 +18,7 @@ entries:
           product: all
           version: all
           web: false
+          frontmatter: true
 
         - title: Table of Contents
           url: /tocpage.html
@@ -26,6 +27,7 @@ entries:
           product: all
           version: all
           web: false
+          frontmatter: true
 
     - title: Getting started
       audience: writers, designers
@@ -256,21 +258,28 @@ entries:
           product: all
           version: all
 
-        - title: Generating PDFs
-          url: /doc_generating_pdfs.html
+        - title: Link validation
+          url: /doc_link_validation.html
           audience: writers, designers
           platform: all
           product: all
           version: all
 
-        - title: Exclude files
+        - title: Generating PDFs
+          url: /doc_generating_pdfsx.html
+          audience: writers, designers
+          platform: all
+          product: all
+          version: all
+
+        - title: Excluding files
           url: /doc_excluding_files.html
           audience: writers, designers
           platform: all
           product: all
           version: all
 
-        - title: Help API and UI tooltips
+        - title: Help APIs and UI tooltips
           url: /doc_help_api.html
           audience: writers, designers
           platform: all
