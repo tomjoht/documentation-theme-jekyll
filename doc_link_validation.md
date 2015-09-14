@@ -23,7 +23,7 @@ Note that in order for the title-checker file to run correctly, it has to detect
 
 ## Generate a PDF
 
-When you generate a PDF, Prince XML will print "page 0" for any cross references it can't find. This lets you know that a particular link is bad. 
+When you generate a PDF, Prince XML will print "page 0" for any cross references it can't find. This lets you know that a particular link is bad because the page is missing.
 
 If you have links in your PDF that aren't references to other topics (maybe they're links to PDF file assets, or links within a navtab or collapsible section), then you must add a class of `noCrossRef` to the link to avoid having Prince write "page 0" for the link. 
 
