@@ -13,13 +13,13 @@ Additionally, technical writers frequently manage large numbers of topics, and a
 
 During this time, if you have inline links that point to specific pages, how do you avoid broken links in your output?
 
-## Use the URL checker
+## Use the title checker
 
-The theme has a file called url-checker.html. This file will iterate through all the pages listed in the sidebar navigation and top navigation, and compare the navigation titles against the page titles based on matching URLs. If there are inconsistencies in the titles, they get noted on the url-checker.html page. 
+The theme has a file called title-checker.html. This file will iterate through all the pages listed in the sidebar navigation and top navigation, and compare the navigation titles against the page titles based on matching URLs. If there are inconsistencies in the titles, they get noted on the title-checker.html page. 
 
-To run the link checker, just build or serve your project, and go to url-checker.html in your browser (such as Chrome). If there are inconsistencies, they will be noted on the page.
+To run the link checker, just build or serve your project, and go to title-checker.html in your browser (such as Chrome). If there are inconsistencies, they will be noted on the page.
 
-Note that in order for the URL checker to run correctly, it has to detect a match between the URL listed in the sidebar or top navigation with the URL for the page (based on the file name). If you have the wrong URL, it won't tell you if the page titles match. Therefore you should always click through all the topics in your navigation to make sure the URLs are accurate.
+Note that in order for the title-checker file to run correctly, it has to detect a match between the URL listed in the sidebar or top navigation with the URL for the page (based on the file name). If you have the wrong URL, it won't tell you if the page titles match. Therefore you should always click through all the topics in your navigation to make sure the URLs are accurate.
 
 ## Generate a PDF
 
