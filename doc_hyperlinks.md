@@ -87,11 +87,9 @@ After downloading the theme, you can [get started in building the theme]({% raw 
 
 This leverages Markdown syntax. If you're in an HTML file or section, use this:
 
-{% raw %}
 ```html
 <p>After downloading the theme, you can <a href="{% raw %}{{site.data.urls.doc_getting_started.url}}{% endraw %}">get started in building the theme</a>.</p>
 ```
-{% endraw %}
 
 Note that the `url` value accesses the URL for the page only, whereas `link` gets the title and url in a link format.
 
