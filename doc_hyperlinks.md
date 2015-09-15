@@ -52,14 +52,12 @@ For internal links, I've found that it's a best practice to store the link in a 
 
 The theme has a file called urls.txt. This file contains the same code as the table of contents (but without the conditional qualifiers). It iterates through every page listed in the table of contents sidebar (as well as the top navigation menus) and creates an output that looks like this for each link: 
 
-{% raw %}
 ```yaml
 doc_getting_started:
   title: "Getting started with this theme"
   url: "doc_getting_started.html"
   link: "<a href='doc_getting_started.html'>Getting started with this theme</a>"
 ```
-{% raw %}
 
 From the site output folder, open urls.txt and observe that it is properly populated (blank spaces between entries doesn't matter). Then manually copy the contents from the urls.txt and insert it into the urls.yml in your project folder. 
 
@@ -67,34 +65,31 @@ Because the urls.txt is produced from the table of contents, you ensure that the
  
 To create a link in a topic, just reference the appropriate value in the urls.yml file, like this:
 
-{% raw %}
+
 ```html
-{{site.data.urls.doc_getting_started.link}}
+{% raw %}{{site.data.urls.doc_getting_started.link}}{% endraw %}
 ```
-{% raw %}
 
 This will insert the following into your topic:
 
-{% raw %}
 ```html
 <a href='doc_getting_started.html'>Getting started with this theme</a>
 ```
-{% endraw %}
 
 You don't need to worry whether you can use Markdown syntax when inserting a link this way, because the insertion is HTML. 
 
 To insert a link in the context of a phrase, you can use this syntax:
 
-{% raw %}
+
 ```html
-After downloading the theme, you can [get started in building the theme]({{site.data.urls.doc_getting_started.url}}).
+After downloading the theme, you can [get started in building the theme]({% raw %}{{site.data.urls.doc_getting_started.url}}{% endraw %}).
 ```
 
 This leverages Markdown syntax. If you're in an HTML file or section, use this:
 
 {% raw %}
 ```html
-<p>After downloading the theme, you can <a href="{{site.data.urls.doc_getting_started.url}}">get started in building the theme</a>.</p>
+<p>After downloading the theme, you can <a href="{% raw %}{{site.data.urls.doc_getting_started.url}}{% endraw %}">get started in building the theme</a>.</p>
 ```
 {% endraw %}
 
