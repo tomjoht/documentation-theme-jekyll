@@ -42,8 +42,8 @@
 
         <ul id="mysidebar" class="nav">
 
-            <div class="siteTagline">{{site.sidebar_tagline}}</div>
-            <div class="versionTagline">{{site.sidebar_version}}</div>
+            <span class="siteTagline">{{site.sidebar_tagline}}</span>
+            <span class="versionTagline">{{site.sidebar_version}}</span>
 
             {% for entry in sidebar %}
             {% for subcategory in entry.subcategories %}
@@ -80,11 +80,10 @@
                     </li>
                     {% endif %}
                     {% endfor %}
-            </li>
+
             {% endif %}
             {% endfor %}
-            {% if subcategory.class == "series" %}</ul>{% else %}</ul>{% endif %}
-        </li>
+</ul>        </li>
         {% endif %}
         {% endfor %}
         {% endfor %}
