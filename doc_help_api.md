@@ -15,6 +15,8 @@ For the full code demo, see the notes in the <a href="tooltip_demo.html" class="
 
 In this demo, the popovers pull in and display content from the information in an external tooltips.json file located on a different host.
 
+Instead of tooltip popovers, you could also print content directly to the page. Basically whatever you can stuff into a JSON file, developers can integrate it onto a page.
+
 ## Diagram overview
 
 Here's a diagram showing the basic idea of the help API: 
