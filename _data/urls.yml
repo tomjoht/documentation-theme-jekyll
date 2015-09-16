@@ -284,18 +284,18 @@ doc_tag-formatting:
 
 doc_tag-navigation:
   title: "Navigation pages"
-  url: "doc_tag-navigation.html"
-  link: "<a href='doc_tag-navigation.html'>Navigation pages</a>"
+  url: "tag-navigation.html"
+  link: "<a href='tag-navigation.html'>Navigation pages</a>"
 
 doc_tag-content-types:
   title: "Content types pages"
-  url: "doc_tag-content-types.html"
-  link: "<a href='doc_tag-content-types.html'>Content types pages</a>"
+  url: "tag-content-types.html"
+  link: "<a href='tag-content-types.html'>Content types pages</a>"
 
 doc_tag-publishing:
   title: "Publishing pages"
-  url: "doc_tag-publishing.html"
-  link: "<a href='doc_tag-publishing.html'>Publishing pages</a>"
+  url: "tag-publishing.html"
+  link: "<a href='tag-publishing.html'>Publishing pages</a>"
 
 doc_tag-special-layouts:
   title: "Special layout pages"

@@ -30,7 +30,7 @@ To prevent tags from getting out of control and inconsistent, first make sure th
 {{site.data.alerts.note}} Unlike with WordPress, you have to build out the functionality for tags so that clicking a tag name shows you all pages with that tag. Tags in Jekyll are much more manual.{{site.data.alerts.end}}
 {% endif %}
 
-Additionally, you must create a tag archive page similar to the other pages named doc_tag-{tagname}.html folder. This theme doesn't auto-create tag archive pages.
+Additionally, you must create a tag archive page similar to the other pages named tag-{tagname}.html folder. This theme doesn't auto-create tag archive pages.
 
 For simplicity, make all your tags single words (connect them with hyphens if necessary).
 
@@ -61,7 +61,7 @@ Tags have a few components.
 	  - content types
 	```
 	
-4. Create a tag archive file for each tag in your tags_doc.yml list. Name the file like this: doc_tag-getting-started.html, where doc is your project name. (Again, tags with multiple words need hyphens in them.)
+4. Create a tag archive file for each tag in your tags_doc.yml list. Name the file like this: tag-getting-started.html, where doc is your project name. (Again, tags with multiple words need hyphens in them.)
 	
 	Each tag archive file needs only this:
 	
@@ -116,7 +116,7 @@ You can change the button color by changing the class on the button from `btn-in
 
 ## Retrieving pages for a specific tag
 
-If you want to retrieve pages outside of a particular doc_tag-archive page, you could use this code:
+If you want to retrieve pages outside of a particular tag-archive page, you could use this code:
 
 ```html
 {% raw %}
@@ -191,7 +191,7 @@ Still, if the build times are getting long (e.g., 1 or 2 minutes per build), loo
 
 If your page shows "tags:" at the bottom without any value, it could mean a couple of things:
 
-* You're using a tag that isn't specified in your allowed tags list in your doc_tags.yml file.
+* You're using a tag that isn't specified in your allowed tags list in your tags.yml file.
 * You have an empty `tags: []` property in your frontmatter.
 
 If you don't want tags to appear at all on your page, remove the tags property from your frontmatter.

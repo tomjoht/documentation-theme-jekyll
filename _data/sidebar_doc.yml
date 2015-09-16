@@ -131,7 +131,7 @@ entries:
           version: all
 
         - title: Tags
-          url: /doc_tags.html
+          url: /tags.html
           audience: writers, designers
           platform: all
           product: all
@@ -280,7 +280,7 @@ entries:
           version: all
 
         - title: Help APIs and UI tooltips
-          url: /doc_help_apis.html
+          url: /doc_help_api.html
           audience: writers, designers
           platform: all
           product: all
@@ -359,7 +359,7 @@ entries:
       items:
 
         - title: Tag archives overview
-          url: /doc_tag_archives_overview.html
+          url: /tag_archives_overview.html
           audience: writers, designers
           platform: all
           product: all
@@ -374,7 +374,7 @@ entries:
               print: false
               thirdlevelitems:
                 - title: Getting started pages
-                  url: /doc_tag-getting-started.html
+                  url: /tag-getting-started.html
                   audience: writers, designers
                   platform: all
                   version: all
@@ -382,7 +382,7 @@ entries:
                   print: false
 
                 - title: Formatting pages
-                  url: /doc_tag-formatting.html
+                  url: /tag-formatting.html
                   audience: writers, designers
                   platform: all
                   version: all
@@ -390,7 +390,7 @@ entries:
                   print: false
 
                 - title: Navigation pages
-                  url: /doc_tag-navigation.html
+                  url: /tag-navigation.html
                   audience: writers, designers
                   platform: all
                   version: all
@@ -398,7 +398,7 @@ entries:
                   print: false
 
                 - title: Content types pages
-                  url: /doc_tag-content-types.html
+                  url: /tag-content-types.html
                   audience: writers, designers
                   platform: all
                   version: all
@@ -406,7 +406,7 @@ entries:
                   print: false
 
                 - title: Publishing pages
-                  url: /doc_tag-publishing.html
+                  url: /tag-publishing.html
                   audience: writers, designers
                   platform: all
                   version: all
@@ -414,7 +414,7 @@ entries:
                   print: false
 
                 - title: Special layout pages
-                  url: /doc_tag-special-layouts.html
+                  url: /tag-special-layouts.html
                   audience: writers, designers
                   platform: all
                   version: all
