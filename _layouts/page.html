@@ -12,8 +12,10 @@ layout: default
    {% endif %}
 
     {% include toc.html %}
-    <a target="blank" href="http://prose.io/#tomjohnson1492/documentation-theme-jekyll/edit/gh-pages{{page.url | replace: '.html', '.md'}}"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Edit me</button></a>
+    <a target="blank" href="https://github.com/{{site.github_editme_path}}{{page.url | replace: '.html', '.md'}}"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Edit me</button></a>
   {{content}}
+
+
 
 <div class="tags">
     {% if page.tags != null %}

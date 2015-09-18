@@ -131,7 +131,7 @@ entries:
           version: all
 
         - title: Tags
-          url: /tags.html
+          url: /doc_tags.html
           audience: writers, designers
           platform: all
           product: all

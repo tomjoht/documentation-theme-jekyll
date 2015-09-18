@@ -11,7 +11,8 @@ homepage_title: Jekyll Documentation Theme &mdash; Designers
 site_title: Jekyll Documentation Theme &mdash; Designers
 disqus_shortname: idrbwjekyll
 google_analytics: UA-66296557-1
-
+github_editme_path: tomjohnson1492/documentation-theme-jekyll/blob/gh-pages
+# don't use a slash before or after the above path. here's how this url gets written out in page.html: https://github.com/{{site.github_editme_path}}{{page.url | replace: '.html', '.md'}}
 # variables
 
 sidebar_tagline: designers

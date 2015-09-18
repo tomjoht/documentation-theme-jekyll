@@ -12,7 +12,6 @@ published: true
 ## Changing the top navigation
 
 The top navigation reads from the \_data/topnav_doc.yml file. There are two *separate* sections:
-{% comment %} this is a comment that I am adding here...{% endcomment %}
 
 * `topnav`
 * `topnav_dropdowns`
