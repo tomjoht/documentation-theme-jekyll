@@ -1,12 +1,15 @@
 ---
 title: Sidebar navigation
-tags: [navigation]
-keywords: sidebar, toc, table of contents, navigation
-last_updated: August 12, 2015
+tags: 
+  - navigation
+keywords: "sidebar, toc, table of contents, navigation"
+last_updated: "August 12, 2015"
 summary: "The sidebar and top navigation bar read their values from yml files. The navigation components are one of the most unique parts of this theme, since the navigation components are only included if they meet all of the product, audience, version, etc., values as specified in the project settings."
+published: true
 ---
 
 
+{% comment %} small edit from saphira {% endcomment %}
 ## Sidebar overview
 
 To configure the sidebar, edit the values in the \_data/sidebar_doc.yml file. Follow the example  in this theme. Note that YML spacing is picky. Each new level is two spaces indented. I usually just keep a template that shows all three levels and then copy and paste from it as needed.
