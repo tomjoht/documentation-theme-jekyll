@@ -6,7 +6,7 @@ keywords: links, hyperlinks, cross references, related links, relationship table
 summary: "When creating links, although you can use standard HTML or Markdown, this approach is usually susceptible to a lot of errors and broken links. A better approach to handling links is to use references to a YML file."
 last_updated: August 12, 2015
 ---
-
+{% comment %} test comment 3 by saphira {% endcomment %}
 
 ## Link strategies
 
