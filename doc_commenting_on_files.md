@@ -10,20 +10,23 @@ published: true
 
 ## About the review process
 
-If you're using the doc as code approach, you should also consider using the same techniques for reviewing the doc as people use in reviewing code. This approach will involve using Prose.io as an interface. Users will have Github accounts and authorize Prose.io to access their Github.
+If you're using the doc as code approach, you might also consider using the same techniques for reviewing the doc as people use in reviewing code. This approach will involve using Github to edit the files. 
 
 There's an Edit me button on each page on this theme. This button allows collaborators to edit the content on Github.
 
+Here's the code for that button on the page.html layout:
 
-## Add the edit button to your pages
-
-
-## Instruct reviewers to authorize Prose.io
-
-People who plan to review the project need to authorize Prose.io on their computers. 
-
-<img src="{{ "/images/authorizeongithub.png" | prepend: site.baseurl }}" alt="Authorize Prose.io" />
+```
+    {% if site.github_editme_path %}
+    <a href="https://github.com/{{site.github_editme_path}}{{page.url | replace: '.html', '.md'}}" class="btn btn-default " role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    {% endif %}
+```
 
 
+## Add reviewers as collaborators
 
-<img src="{{ "/images/authorizegithubscreen2.png" | prepend: site.baseurl }}" alt="Authorze Prose.io on screen 2" />
+If you want people to collaborate on your project so that their edits get committed to a branch on your project, you need to add them as collaborators. For your Github repo, click **Settings** and add the collaborators on the Collaborators tab using their Github usernames.
+
+If you don't want to allow anyone to commit to your Github branch, don't add the reviewers as collaborators. When someone makes an edit, Github will fork the theme. The person's edit then will appear as a pull request to your repo. You can then choose to merge the change indicated in the pull or not.
+
+

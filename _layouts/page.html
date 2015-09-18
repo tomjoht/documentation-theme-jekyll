@@ -12,10 +12,11 @@ layout: default
    {% endif %}
 
     {% include toc.html %}
-    <a target="blank" href="https://github.com/{{site.github_editme_path}}{{page.url | replace: '.html', '.md'}}"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> Edit me</button></a>
-  {{content}}
+    {% if site.github_editme_path %}
+    <a href="https://github.com/{{site.github_editme_path}}{{page.url | replace: '.html', '.md'}}" class="btn btn-default " role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    {% endif %}
 
-
+       {{content}}
 
 <div class="tags">
     {% if page.tags != null %}
@@ -23,7 +24,8 @@ layout: default
     {% include custom/conditions.html %}
     {% for tag in page.tags %}
     {% if projectTags contains tag %}
-    <a href="tag-{{tag}}.html"><button type="button" class="btn btn-primary navbar-btn cursorNorm">{{page.tagName}}{{tag}}</button></a>{% unless forloop.last %}{% endunless%}
+
+    <a href="tag-{{tag}}.html" class="btn btn-info navbar-btn cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
     {% endif %}
     {% endfor %}
     {% endif %}

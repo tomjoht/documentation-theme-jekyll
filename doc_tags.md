@@ -89,7 +89,7 @@ Tags have a few components.
 	    {% include custom/conditions.html %}
 	    {% for tag in page.tags %}
 	    {% if projectTags contains tag %}
-	    <a href="{{site.project}}_tag-{{tag}}.html"><button type="button" class="btn btn-info navbar-btn cursorNorm">{{page.tagName}}{{tag}}</button></a>{% unless forloop.last %}{% endunless%}
+	       <a href="tag-{{tag}}.html" class="btn btn-info navbar-btn cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
 	    {% endif %}
 	    {% endfor %}
 	    {% endif %}
@@ -104,7 +104,7 @@ Tags have a few components.
 	{% include custom/conditions.html %}
 	{% for tag in page.tags %}
 	{% if projectTags contains tag %}
-	<a class="noCrossRef" href="{{site.project}}_tag-{{tag}}.html"><button type="button" class="btn btn-info navbar-btn cursorNorm">{{page.tagName}}{{tag}}</button></a>{% unless forloop.last %}{% endunless%}
+	    <a href="tag-{{tag}}.html" class="btn btn-info navbar-btn cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
 	{% endif %}
 	{% endfor %}
 	{% endif %}

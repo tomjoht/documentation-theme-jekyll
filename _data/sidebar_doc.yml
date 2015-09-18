@@ -236,6 +236,20 @@ entries:
           product: all
           version: all
 
+    - title: Handling reviews
+      audience: writers, designers
+      platform: all
+      product: all
+      version: all
+      print: true
+      items:
+        - title: Commenting on files
+          url: /doc_commenting_on_files.html
+          audience: writers, designers
+          platform: all
+          product: all
+          version: all
+
     - title: Publishing
       audience: writers, designers
       platform: all
