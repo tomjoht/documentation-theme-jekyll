@@ -1,15 +1,19 @@
 ---
 title: Top navigation
-tags: [navigation]
-keywords: bootstrap, lists, drop-down, drop down navigation, top nav bar, topnav
-last_updated: August 12, 2015
+tags: 
+  - navigation
+keywords: "bootstrap, lists, drop-down, drop down navigation, top nav bar, topnav"
+last_updated: "August 12, 2015"
 summary: "The top navigation provides either single links or a drop-down menu. There are some other features, such as a feedback email, custom menu, and popout link."
+published: true
 ---
+
 
 
 ## Changing the top navigation
 
 The top navigation reads from the \_data/topnav_doc.yml file. There are two *separate* sections:
+{% comment %} this is a comment that I am adding here...{% endcomment %}
 
 * `topnav`
 * `topnav_dropdowns`
@@ -53,5 +57,3 @@ This Custom Menu may not be something you want, and if so, just remove the inclu
 The top navigation bar also has an include to frameescape.html. If the site is embedded inside a frame, a link on the top navigation bar appears that says Pop-out, and it will open the site in a new window. 
 
 In most cases, you'll want to simply remove this include. I added this because some of my doc sites are delivered through a Salesforce Community and are embedded inside another page in a small area. This pop-out link is a way of liberating the site from these embedded page scenarios. If your site isn't embedded in an iframe, the Pop-out link is removed.
-
-
