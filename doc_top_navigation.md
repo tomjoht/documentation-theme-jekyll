@@ -8,6 +8,7 @@ summary: "The top navigation provides either single links or a drop-down menu. T
 published: true
 ---
 
+{% comment %} note 6 by saphira {% endcomment %}
 ## Changing the top navigation
 
 The top navigation reads from the \_data/topnav_doc.yml file. There are two *separate* sections:
