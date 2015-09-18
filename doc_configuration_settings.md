@@ -5,7 +5,7 @@ keywords: configuration, config, publishing options, outputs, projects
 last_updated: August 12, 2015
 summary: "The configuration file contains important settings for your project. Some of the values you set here affect &mdash; especially the product, platform, audience, and version &mdash; the display and functionality of the theme."
 ---
-{% comment %} note 5 by saphira {% encomment%}
+
 
 ## Importance of Configuration File
 
