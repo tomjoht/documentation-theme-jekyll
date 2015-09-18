@@ -5,6 +5,7 @@ keywords: notes, tips, cautions, warnings, admonitions
 last_updated: August 12, 2015
 summary: "You can insert notes, tips, warnings, and important alerts in your content. These notes are stored as shortcodes made available through the linksrefs.hmtl include."
 ---
+{% comment %} comment 4 by saphira {% endcomment %}
 
 ## About alerts
 Alerts are little warnings, info, or other messages that you have called out in special formatting. In order to use these alerts or callouts, just reference the appropriate value stored in the alerts.yml file as described in the following sections.
