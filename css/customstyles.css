@@ -194,6 +194,7 @@ p.external a {
   font-size:12px;
   font-color: #0088cc;
   display:inline;
+    margin-top:7px;
 }
 
 #definition-box-container div a.active {

@@ -55,26 +55,24 @@ Each of the items in the sidebar needs to have the attributes shown here:
   version: all
 ```
 
-The audience, platform, product, and version are specified in the includes/custom/conditions.html file:
+The project, audience, platform, product, and version are specified in the includes/custom/conditions.html file:
 
 ```liquid
 {% raw %}
 {% if site.project == "doc_designers" %}
 {% assign audience = "designers" %}
-{% assign sidebar = site.data.sidebar_doc.entries %}
-{% assign topnav = site.data.topnav_doc.topnav %}
-{% assign topnav_dropdowns = site.data.topnav_doc.topnav_dropdowns %}
+{% assign sidebar = site.data.sidebar.entries %}
+{% assign topnav = site.data.topnav.topnav %}
+{% assign topnav_dropdowns = site.data.topnav.topnav_dropdowns %}
 {% assign version = "all" %}
 {% assign product = "all" %}
 {% assign platform = "all" %}
-{% assign link = "custom/doc/links_doc.html" %}
 {% assign projectTags = site.data.tags_doc.allowed-tags %}
-{% assign searchGroup = "doc" %}
 {% endif %}
 {% endraw %}
 ```
 
-Additionally, note how some assignments are set here as well. The conditions.html file set things like `sidebar = site.data.sidebar_doc.entries`. 
+Additionally, note how some assignments are set here as well. The conditions.html file set things like `sidebar = site.data.sidebar.entries`. You could use this logic to extend the single sourcing possibilities of the theme.
 
 When the sidebar.html file runs the logic, it includes these statements: 
 
@@ -94,14 +92,27 @@ The assignment of the `sidebar` value through the conditions.html file means thi
 {% raw %}
 {% include custom/conditions.html %}
 
-{% for entry in site.data.sidebar_doc.entries %}
+{% for entry in site.data.sidebar.entries %}
 {% endraw %}
 ```
 
-Since different projects will use different data files, I had to make the logic run using the standard `sidebar` variable, but change the meaning of that variable based on the project.
+Since different projects might use different data files, I had to made the logic run using the standard `sidebar` variable but change the meaning of that variable based on the project.
 
 # Sidebar accordion
-The configuration file (configs/config_writers.yml) file includes a value (`sidebar_accordion`) that lets you choose whether to use the accordion feature in the sidebar or not. The accordion feature collapses other sections when a section is opened, which conserves space on the screen. Put `true` or `false` for the value.
+If you don't want the accordion feature in the sidebar, open the \_includes/sidebar.html file and change the value for `accordion` in the `.navgoco` options from `true` to `false` (don't surround the value with quotes).
+
+Additionally, to show "Collapse All" and "Expand All" buttons, uncomment this section near bottom on the same sidebar.html page:
+
+```
+   <!-- if you aren't using the accordion, uncomment this block:
+
+        <p class="external">
+            <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+        </p>
+    -->
+```
+
+Note that if you Expand all sections in your sidebar and you have a lot of items, the sidebar will likely extend past the viewing frame. In this case, you should disable the fixed sidebar setting by removing the JavaScript code explained in the next section ("Sidebar fixed or moving").
 
 ## Sidebar fixed or moving
 

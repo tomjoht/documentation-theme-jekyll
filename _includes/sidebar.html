@@ -9,7 +9,7 @@
                         // Initialize navgoco with default options
                         $("#mysidebar").navgoco({
                             caretHtml: '',
-                            accordion: {% if site.sidebar_accordion %}{{site.sidebar_accordion}}{% else %}true{% endif %},
+                            accordion: true,
                             openClass: 'active', // open
                             save: false, // leave false or nav highlighting doesn't work right
                             cookie: {
@@ -49,7 +49,7 @@
             {% for subcategory in entry.subcategories %}
             {% if subcategory.audience contains audience and subcategory.product contains product and subcategory.platform contains platform and subcategory.version contains version and subcategory.web != false %}
             <li><a href="#">{{ subcategory.title }}</a>
-                {% if subcategory.class == "series" %}<ul class="series">{% else %}<ul>{% endif %}
+                <ul>
                     {% for item in subcategory.items %}
                     {% if item.audience contains audience and item.product contains product and item.platform contains platform and item.version contains version and item.web != false %}
                     {% if item.external_url %}
@@ -83,17 +83,19 @@
 
             {% endif %}
             {% endfor %}
-</ul>        </li>
+</ul>
         {% endif %}
         {% endfor %}
         {% endfor %}
-        </ul>
 
-        {% if site.sidebar_accordion == false %}
+
+   <!-- if you aren't using the accordion, uncomment this block:
+
         <p class="external">
             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
         </p>
-        {% endif %}
+    -->
+
     </div>
        <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above.-->
     <script>$("li.active").parents('li').toggleClass("active");</script>
