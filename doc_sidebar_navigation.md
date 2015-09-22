@@ -98,7 +98,7 @@ The assignment of the `sidebar` value through the conditions.html file means thi
 
 Since different projects might use different data files, I had to made the logic run using the standard `sidebar` variable but change the meaning of that variable based on the project.
 
-@# Sidebar accordion
+## Sidebar accordion
 If you don't want the accordion feature in the sidebar, open the \_includes/sidebar.html file and change the value for `accordion` in the `.navgoco` options from `true` to `false` (don't surround the value with quotes).
 
 This will make it so users can expand more than one sidebar section at once without the other sections collapsing.
