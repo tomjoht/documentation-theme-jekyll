@@ -10,13 +10,17 @@ summary: "To get started with this theme, first make sure you have all the prere
 
 Before you start installing the theme, make sure you have all of these prerequisites in place.
 
-* **Mac computer (recommended)**. If you have a PC, you need to see [Jekyll on Windows](http://jekyllrb.com/docs/windows/). Make sure you can get Jekyll working on Windows before proceeding.
+* **Mac computer (recommended)**. If you have a PC, see the note below. Make sure you can get Jekyll working on Windows before proceeding.
 * **[Ruby](https://www.ruby-lang.org/en/)**. On a Mac, this should already be installed. Open your Terminal and type `which ruby` to confirm. 
 * **[Rubygems](https://rubygems.org/pages/download)**. This is a package manager for Ruby. Type `which gem` to confirm.
 * **[Jekyllrb](http://jekyllrb.com/)**. To install: `gem install jekyll`. Type `which jekyll` to confirm that Jekyll is installed.
 * **Text editor** (some examples: Sublime Text, Atom, WebStorm, IntelliJ)
 * **[iTerm](http://iterm.sourceforge.net/)** - Optional but recommended instead of Terminal. 
-* **[pygments](http://pygments.org/download/)** - Pygments handles syntax highlighting. In my experiments, the Pygments highlighter seemed better than the default rouge highlighter. To install Pygments, you will need Python installed. (If you don't install pygments, you'll get an error when you build the theme.) To check if Python is installed, type `which python`. To install Pygments: `gem install pygments.rb`. If you want to use `rouge` instead, change `pygments` to `rouge` in the configuration files.
+* **[pygments](http://pygments.org/download/)** - Pygments handles syntax highlighting. In my experiments, the Pygments highlighter seemed better than the default rouge highlighter. To install Pygments, you will need Python installed. (If you don't install pygments, you'll get an error when you build the theme.) To check if Python is installed, type `which python`. To install Pygments: `gem install pygments.rb`. 
+
+{{site.data.alerts.note}} If you're on Windows, you can still install and run this theme. However, you must first set up a few things &mdash; Ruby, Ruby Dev Kit, Python, . Follow the instructions here: <a href="http://yizeng.me/2013/05/10/setup-jekyll-on-windows/">Set up Jekyll on Windows</a>. Also see <a href="http://jekyllrb.com/docs/windows">Jekyll on Windows</a>.{{site.data.alerts.end}}
+
+
 
 ## Step 2: Build the theme
 

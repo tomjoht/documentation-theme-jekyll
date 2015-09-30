@@ -33,7 +33,7 @@ topnav_dropdowns:
           product: all
           version: all
         - title: Troubleshooting
-          url: /doc_troubleshooting.html
+          external_url: ../somedirectory/doc_troubleshooting.html
           audience: writers, designers
           platform: all
           product: all
