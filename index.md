@@ -6,7 +6,6 @@ type: first_page
 homepage: true
 published: true
 ---
-small change for demo purposes only...
 
 ## Overview 
 
