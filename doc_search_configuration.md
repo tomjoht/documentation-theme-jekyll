@@ -32,11 +32,13 @@ The search.json file already tries to strip out content that would otherwise mak
 
 ```json
 {% raw %}
-      "body": "{{ page.content | strip_html | strip_newlines | replace: '\', '\\\\' | replace: '"', '\\"' }}",
+      "body": "{{ page.content | strip_html | strip_newlines | replace: '\', '\\\\' | replace: '"', '\\"' | replace: '^t', '    '  }}",
 {% endraw %}
 ```
 
-However, it's possible that the formatting may not account for all the scenarios that would invalidate the JSON. (Sometimes it's an extra comma after the last item that makes it invalid.)
+Note that the last replace, `| replace: '^t', '    ' `, looks for any tab character and replaces it with four spaces. Yes, an innocent little tab character invalidates JSON. Geez. If you run into other problematic formatting, you can use regex expressions to find and replace the content. See [Regular Expressions](http://www.ultraedit.com/support/tutorials_power_tips/ultraedit/regular_expressions.html) for details on finding and replacing code.
+
+It's possible that the formatting may not account for all the scenarios that would invalidate the JSON. (Sometimes it's an extra comma after the last item that makes it invalid.)
 
 {% if site.audience == "designers" %}
 ## Customizing search results
