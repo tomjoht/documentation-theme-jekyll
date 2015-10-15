@@ -6,7 +6,6 @@ weight: 1.0
 last_updated: August 12, 2015
 ---
 
-
 {% include custom/doc/series_acme.html %}
 
 This is the first post in the series.
