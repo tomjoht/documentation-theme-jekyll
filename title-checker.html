@@ -4,46 +4,52 @@ search: exclude
 ---
 <html>
 <head>
-<title>Page checker</title>
+    <title>Title checker</title>
 </head>
 <body>
-<h2>Page Checker Report</h2>
+<h2>Title Checker Report</h2>
 {% include custom/conditions.html %}
-
 {% for entry in sidebar %}
 {% for subcategory in entry.subcategories %}
 {% for item in subcategory.items %}
 {% unless item.frontmatter == true %}
-  {% assign itemTitle = item.title | replace: '"', '' %}
-  {% assign itemUrl = item.url %}
-  {% for page in site.pages %}
-  {% if page.url == item.url %}
-  {% assign pageTitle = page.title | replace: '"', '' %}
-  {% assign pageUrl = page.url %}
-  {% if pageTitle != itemTitle %}
+{% assign itemTitle = item.title | replace: '"', '' %}
+{% assign itemUrl = item.url %}
+{% for page in site.pages %}
+{% if page.url == item.url %}
+{% assign pageTitle = page.title | replace: '"', '' %}
+{% assign pageUrl = page.url %}
+{% if pageTitle != itemTitle %}
 <hr/>
-  <p>Problem: The sidebar item title "{{itemTitle}}" does not match the page title "{{pageTitle}}".</p>
+<p>Problem: The sidebar item title "{{itemTitle}}" does not match the page title "{{pageTitle}}".</p>
+{% if pageUrl != itemUrl %}
+<p>Problem: The sidebar item URL "{{itemUrl}}" does not match the page title URL "{{pageUrl}}".</p>
 {% endif %}
-  {% endif %}
-  {% endfor %}
-  {% endunless %}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% endunless %}
 {% for thirdlevel in item.thirdlevel %}
 {% for deeplevel in thirdlevel.thirdlevelitems %}
 {% unless deeplevel.frontmatter == true %}
 
-  {% assign deeplevelTitle = deeplevel.title | replace: '"', '' %}
-  {% assign deeplevelUrl = deeplevel.url %}
-  {% for page in site.pages %}
-  {% if page.url == deeplevel.url %}
-  {% assign pageTitle = page.title | replace: '"', '' %}
-  {% assign pageUrl = page.url %}
-  {% if pageTitle != deeplevelTitle %}
+{% assign deeplevelTitle = deeplevel.title | replace: '"', '' %}
+{% assign deeplevelUrl = deeplevel.url %}
+{% for page in site.pages %}
+{% if page.url == deeplevel.url %}
+{% assign pageTitle = page.title | replace: '"', '' %}
+{% assign pageUrl = page.url %}
+{% if pageTitle != deeplevelTitle %}
 <hr/>
-  <p>Problem: The sidebar deeplevel title "{{deeplevelTitle}}" does not match the page title "{{pageTitle}}".</p>
-  {% endif %}
-  {% endif %}
-  {% endfor %}
-  {% endunless %}
+<p>Problem: The sidebar deeplevel title "{{deeplevelTitle}}" does not match the page title "{{pageTitle}}".</p>
+{% if pageUrl != deeplevelUrl %}
+<p>Problem: The sidebar deeplevel URL "{{deeplevelUrl}}" does not match the page title URL "{{pageUrl}}".</p>
+
+{% endif %}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% endunless %}
 {% endfor %}
 {% endfor %}
 {% endfor %}
@@ -55,18 +61,22 @@ search: exclude
 {% for subcategory in entry.subcategories %}
 {% unless subcategory.external_url or subcategory.frontmatter %}
 <hr/>
-  {% assign subcategoryTitle = subcategory.title | replace: '"', '' %}
-  {% assign subcategoryUrl = subcategory.url %}
-  {% for page in site.pages %}
-  {% if page.url == subcategory.url %}
-  {% assign pageTitle = page.title | replace: '"', '' %}
-  {% assign pageUrl = page.url %}
-  {% if pageTitle != subcategoryTitle %}
-  <p>Problem: The top navigation item title "{{subcategoryTitle}}" does not match the page title "{{pageTitle}}".</p>
-  {% endif %}
-  {% endif %}
-  {% endfor %}
-  {% endunless %}
+{% assign subcategoryTitle = subcategory.title | replace: '"', '' %}
+{% assign subcategoryUrl = subcategory.url %}
+{% for page in site.pages %}
+{% if page.url == subcategory.url %}
+{% assign pageTitle = page.title | replace: '"', '' %}
+{% assign pageUrl = page.url %}
+{% if pageTitle != subcategoryTitle %}
+<p>Problem: The top navigation item title "{{subcategoryTitle}}" does not match the page title "{{pageTitle}}".</p>
+{% if pageUrl != subcategoryUrl %}
+<p>Problem: The top navigation item URL "{{subcategoryUrl}}" does not match the page title URL "{{pageUrl}}".</p>
+
+{% endif %}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% endunless %}
 {% endfor %}
 {% endfor %}
 
@@ -75,18 +85,22 @@ search: exclude
 {% for subitem in subcategory.items %}
 {% unless subitem.external_url or subitem.frontmatter %}
 
-  {% assign subitemTitle = subitem.title | replace: '"', '' %}
-  {% assign subitemUrl = subitem.url %}
-  {% for page in site.pages %}
-  {% if page.url == subitem.url %}
-  {% assign pageTitle = page.title | replace: '"', '' %}
-  {% assign pageUrl = page.url %}
-  {% if pageTitle != subitemTitle %}
-  Problem: The top drop-down navigation item title "{{subitemTitle}}" does not match the page title "{{pageTitle}}".
-  {% endif %}
-  {% endif %}
-  {% endfor %}
-  {% endunless %}
+{% assign subitemTitle = subitem.title | replace: '"', '' %}
+{% assign subitemUrl = subitem.url %}
+{% for page in site.pages %}
+{% if page.url == subitem.url %}
+{% assign pageTitle = page.title | replace: '"', '' %}
+{% assign pageUrl = page.url %}
+{% if pageTitle != subitemTitle %}
+Problem: The top drop-down navigation item title "{{subitemTitle}}" does not match the page title "{{pageTitle}}".
+{% if pageUrl != subitemUrl %}
+Problem: The top drop-down navigation item URL "{{subitemUrl}}" does not match the page title URL "{{pageUrl}}".
+
+{% endif %}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% endunless %}
 {% endfor %}
 {% endfor %}
 {% endfor %}

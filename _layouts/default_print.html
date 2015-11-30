@@ -4,11 +4,8 @@
   <head>
  {% include head_print.html %}
 
-<link rel="stylesheet" type="text/css" href="css/customstyles.css">
-<link rel="stylesheet" type="text/css" href="css/{{site.theme_file}}">
-<link rel="stylesheet" type="text/css" href="css/printstyles.css">
 
-</head>
+  </head>
 
 <body class="{% if page.type == "title"%}title{% elsif page.type == "frontmatter" %}frontmatter{% elsif page.type == "first_page" %}first_page{% endif %} print">
 

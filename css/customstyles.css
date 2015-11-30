@@ -1,3 +1,7 @@
+body {
+    font-size:15px;
+}
+
 .bs-callout {
     padding: 20px;
     margin: 20px 0;
@@ -157,7 +161,9 @@ table > colgroup + thead > tr:first-child > td,
 table > thead:first-child > tr:first-child > td {
   border-top: 0;
 }
-
+table > tbody + tbody {
+  b
+}
 table > tbody > tr:nth-of-type(odd) {
   background-color: #f9f9f9;
 }
@@ -194,7 +200,6 @@ p.external a {
   font-size:12px;
   font-color: #0088cc;
   display:inline;
-    margin-top:7px;
 }
 
 #definition-box-container div a.active {
@@ -318,21 +323,6 @@ a.accordion-toggle, a.accordion-collapsed {
 font-size: 14px;
 text-decoration: none;
 }
-
-dl dt p {
-    margin-left:20px;
-}
-
-
-dl dd {
-    margin-top:10px;
-    margin-bottom:10px;
-}
-
-dl.dl-horizontal dd {
-    padding-top: 20px;
-}
-
 
 /* navgoco sidebar styles (customized) */
 .nav, .nav ul, .nav li {
@@ -465,24 +455,23 @@ font-style:italic;
 font-size:12px;
 }
 
-@media (max-width: 767px) {
-.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
-color: #444;
-}}
-
-
 img.screenshotSmall {
 max-width: 300px;
 }
 
 
+dl dt p {
+    margin-left:20px;
+}
 
 
+dl dd {
+    margin-top:10px;
+    margin-bottom:10px;
+}
 
-@media (max-width: 990px) {
-  #mysidebar {
-    position: relative;
-  }
+dl.dl-horizontal dd {
+    padding-top: 20px;
 }
 
 figcaption {
@@ -491,13 +480,19 @@ figcaption {
     padding-top:6px;
   max-width: 90%;
   margin-bottom:20px;
+    font-style: italic;
+    color: gray;
 
 }
 
-.siteTagline {
-margin: 20px 0px;
-font-size:17px;
+.testing {
+  color: orange;
 }
+
+.preference {
+  color: red;
+}
+
 
 table.dataTable thead {
   background-color: #444;
@@ -520,7 +515,6 @@ section table tr.warning, table tr.testing, table tr.testing > td.sorting_1  {
 section table tr.danger, table tr.preference, table tr.preference > td.sorting_1  {
   background-color: #f2dede !important;
 }
-
 
 .orange {
   color: orange;
@@ -587,11 +581,6 @@ hr.shaded {
 i.border {
     padding: 10px 20px;
     background-color: whitesmoke;
-    border: 1px solid #777;
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
 }
 
 a[data-toggle] {
@@ -600,8 +589,11 @@ a[data-toggle] {
 
 .summary {
   font-size:120%;
+    color: #808080;
   margin:20px 0px 20px 0px;
+    border-left: 5px solid #ED1951;
     padding-left: 10px;
+
 }
 
 .summary:before {
@@ -614,11 +606,16 @@ a.fa.fa-envelope-o.mailto {
   font-weight: 600;
 }
 
-h3 { font-weight:normal; font-size:130%;}
-h4 {font-weight:normal; font-size:120%; font-style:italic;}
+h3 {color: #ED1951; font-weight:normal; font-size:130%;}
+h4 {color: #808080; font-weight:normal; font-size:120%; font-style:italic;}
 
 .alert, .callout {
     overflow: hidden;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    background-color: #248ec2;
+    color: white;
 }
 
 ol li ol li {list-style-type: lower-alpha;}
@@ -687,6 +684,12 @@ span.otherProgrammingLanguages {
 font-style: normal;
 }
 
+a[data-toggle="tooltip"] {
+    color: #649345;
+    font-style: italic;
+    cursor: default;
+}
+
 .seriesNext, .seriesContext {
     margin-top: 15px;
     margin-bottom: 15px;
@@ -709,14 +712,22 @@ ol.series li {
     font-family: monospace;
     text-align: center;
     line-height: 10px;
+    margin: 20px 0px;
+    display: block;
 }
 
 .versionTagline {
     text-align: center;
     margin-bottom: 20px;
-    font-family: monospace;
+    font-family: courier;
     font-color: silver;
     color: #444;
+    display:block;
+}
+
+/* not sure if using this ...*/
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #248ec2 !important;
 }
 
 #mysidebar .nav ul {
@@ -738,21 +749,13 @@ ol.series li {
     background-color: #FAFAFA;
 }
 
-@media (min-width: 1000px) {
-
-    ul#mysidebar {
-        width: 225px;
-    }
+/*
+a.dropdown-toggle.otherProgLangs {
+    color: #f7e68f !important;
 }
+*/
 
-@media (max-width: 900px) {
-
-        ul#mysidebar {
-            max-width: 100%;
-        }
-}
-
-span.muted {color: #C0C0C0;}
+span.muted {color: #666;}
 
 table code {background-color: transparent;}
 
@@ -778,20 +781,31 @@ pre {
     margin: 25px 0px;
 }
 
-.panel-heading {
-    font-weight: bold;
-}
 #json-box-container pre {
     margin: 0px;
 }
 
-p.dataType {display: block; font-color: gray; font-size: 80%;}
+.video-js {
+    margin: 30px 0px;
+}
+
+video {
+    display: block;
+    margin: 30px 0px;
+    border: 1px solid #c0c0c0;
+}
+
+
+p.required, p.dataType {display: block; color: #c0c0c0; font-size: 80%; margin-left:4px;}
 
 dd {margin-left:20px;}
 
 .post-content img.inline {
     margin:0px;
     margin-bottom:6px;
+}
+.panel-heading {
+    font-weight: bold;
 }
 
 .note code, .alert code, .warning code, div#toc code, h2 code, h3 code, h4 code {
@@ -803,18 +817,136 @@ dd {margin-left:20px;}
     margin-bottom:10px;
 }
 
-.kbCaption {
-    padding: 5px;
-    font-family: courier;
-    background-color: #dedede;
-    text-align: center;
+/* branding */
+.navbar-inverse {
+    background-color: #347DBE;
+    border-color: #015CAE;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #015CAE;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: #015CAE;
+    color: #ffffff;
 }
 
 a.accordion-toggle {
     font-style: normal;
 }
 
+span.red {
+    color: red;
+    font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+}
 
-.tommy {font-weight:bold; font-color: red;}
-#johnson {font-weight:bold; font-color: blue;}
+h3.codeExplanation {
+    font-size:18px;
+    font-style:normal;
+    color: black;
+    line-height: 24px;
+}
 
+span.soft {
+    color: #c0c0c0;
+}
+
+.githubEditButton {
+    margin-bottom:7px;
+}
+
+.endpoint {
+    padding: 15px;
+    background-color: #f0f0f0;
+    font-family: courier;
+    font-size: 110%;
+    margin: 20px 0px;
+    color: #444;
+}
+
+.parameter {
+    font-family: courier;
+    color: red !important;
+}
+
+.formBoundary {
+    border: 1px solid gray;
+    padding: 15px;
+    margin: 15px 0px;
+    background-color: whitesmoke;
+}
+
+@media (max-width: 767px) {
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+        color: #444;
+    }
+}
+
+@media (max-width: 990px) {
+    #mysidebar {
+        position: relative;
+    }
+}
+
+@media (min-width: 1000px) {
+
+    ul#mysidebar {
+        width: 225px;
+    }
+}
+
+@media (max-width: 900px) {
+
+    ul#mysidebar {
+        max-width: 100%;
+    }
+}
+
+.col-md-9 img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.videoThumbs img {
+    float: left;
+    margin:15px 15px 15px 0px;
+    box-shadow: 2px 2px 1px #f0f0f0;
+    border: 1px solid #dedede;
+}
+
+
+@media only screen and (min-width: 900px), @media only screen and (min-device-width: 900px) {
+    .col-md-9 img {
+        max-width: 700px;
+        max-height: 700px;
+    }
+}
+
+*:hover > .anchorjs-link {
+    transition: color .25s linear;
+    text-decoration: none;
+}
+
+.kbCaption {
+    color: white;
+    background-color: #444;
+    padding:10px;
+}
+
+/* this part adds an icon after external links, using FontAwesome*/
+a[href^="http://"]:after, a[href^="https://"]:after {
+    content: "\f08e";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: none;
+    padding-left: 3px;
+}
+/* Strip from links to own domain or with class no_icon */
+a[href^="http://own-domain.com"]:after,
+a.no_icon:after {
+    content:"" !important;
+    padding-left: 0;
+}

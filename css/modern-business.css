@@ -76,7 +76,7 @@ footer {
 /* Responsive Styles */
 
 @media(max-width:991px) {
-    .customer-img,
+    .client-img,
     .img-related {
         margin-bottom: 30px;
     }

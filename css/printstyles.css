@@ -1,6 +1,9 @@
 
 /*body.print .container {max-width: 650px;}*/
 
+body {
+    font-size:14px;
+}
 .nav ul li a {border-top:0px; background-color:transparent; color: #808080; }
 #navig a[href] {color: #595959 !important;}
 table .table {max-width:650px;}
@@ -72,6 +75,7 @@ a[href*="mailto"]::after, a[data-toggle="tooltip"]::after, a[href].noCrossRef::a
 
 .copyrightBoilerplate {
     page-break-before:always;
+    font-size:14px;
 }
 
 .lastGeneratedDate {

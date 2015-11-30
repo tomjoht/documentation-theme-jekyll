@@ -3,16 +3,14 @@ layout: default_print
 comments: true
 ---
 <div class="post-header">
-   <h1 class="post-title-main" id="{{page.permalink | replace: '/', '' }}">{{ page.title }}</h1>
+    <h1 class="post-title-main" id="{{page.permalink | replace: '/', '' }}">{{ page.title }}</h1>
 </div>
-
-  
 
 <div class="post-content">
 
-    {% if page.summary %}
+{% if page.summary %}
     <div class="summary">{{page.summary}}</div>
-    {% endif %}
+{% endif %}
    {{ content }}
 </div>
 

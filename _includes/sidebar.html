@@ -6,32 +6,32 @@
         <script>
 
             $(document).ready(function() {
-                        // Initialize navgoco with default options
-                        $("#mysidebar").navgoco({
-                            caretHtml: '',
-                            accordion: true,
-                            openClass: 'active', // open
-                            save: false, // leave false or nav highlighting doesn't work right
-                            cookie: {
-                                name: 'navgoco',
-                                expires: false,
-                                path: '/'
-                        },
-                        slide: {
-                            duration: 400,
-                            easing: 'swing'
-                                }
-                                });
+                // Initialize navgoco with default options
+                $("#mysidebar").navgoco({
+                    caretHtml: '',
+                    accordion: true,
+                    openClass: 'active', // open
+                    save: false, // leave false or nav highlighting doesn't work right
+                    cookie: {
+                        name: 'navgoco',
+                        expires: false,
+                        path: '/'
+                    },
+                    slide: {
+                        duration: 400,
+                        easing: 'swing'
+                    }
+                });
 
-            $("#collapseAll").click(function(e) {
-                e.preventDefault();
-                $("#mysidebar").navgoco('toggle', false);
-            });
+                $("#collapseAll").click(function(e) {
+                    e.preventDefault();
+                    $("#mysidebar").navgoco('toggle', false);
+                });
 
-            $("#expandAll").click(function(e) {
-                e.preventDefault();
-                $("#mysidebar").navgoco('toggle', true);
-            });
+                $("#expandAll").click(function(e) {
+                    e.preventDefault();
+                    $("#mysidebar").navgoco('toggle', true);
+                });
 
             });
 
@@ -47,31 +47,31 @@
 
             {% for entry in sidebar %}
             {% for subcategory in entry.subcategories %}
-            {% if subcategory.audience contains audience and subcategory.product contains product and subcategory.platform contains platform and subcategory.version contains version and subcategory.web != false %}
+            {% if subcategory.audience contains audience and subcategory.product contains product and subcategory.platform contains platform and subcategory.version contains version and subcategory.output contains "web" %}
             <li><a href="#">{{ subcategory.title }}</a>
                 <ul>
                     {% for item in subcategory.items %}
-                    {% if item.audience contains audience and item.product contains product and item.platform contains platform and item.version contains version and item.web != false %}
+                    {% if item.audience contains audience and item.product contains product and item.platform contains platform and item.version contains version and item.output contains "web" %}
                     {% if item.external_url %}
                     <li><a href="{{item.external_url}}" target="_blank">{{subcategory.title}}</a></li>
                     {% elsif page.url == item.url %}
-                    <li class="active"><a href="{{item.url | replace: "/",""}}">{{item.title}}</a></li>
+                    <li class="active"><a href="{{item.url | prepend: ".."}}">{{item.title}}</a></li>
                     {% else %}
-                    <li><a href="{{item.url | replace: "/",""}}">{{item.title}}</a></li>
+                    <li><a href="{{item.url | prepend: ".."}}">{{item.title}}</a></li>
                     {% endif %}
 
                     {% for thirdlevel in item.thirdlevel %}
-                    {% if thirdlevel.audience contains audience and thirdlevel.product contains product and thirdlevel.platform contains platform and thirdlevel.version contains version and thirdlevel.web != false %}
+                    {% if thirdlevel.audience contains audience and thirdlevel.product contains product and thirdlevel.platform contains platform and thirdlevel.version contains version and thirdlevel.output contains "web" %}
                     <li class="thirdlevel"><a href="#">{{ thirdlevel.title }}</a>
                         <ul>
                             {% for deeplevel in thirdlevel.thirdlevelitems %}
-                            {% if deeplevel.audience contains audience and deeplevel.product contains product and deeplevel.platform contains platform and deeplevel.version contains version and deeplevel.web != false %}
+                            {% if deeplevel.audience contains audience and deeplevel.product contains product and deeplevel.platform contains platform and deeplevel.version contains version and deeplevel.output contains "web" %}
                             {% if deeplevel.external_url %}
                             <li><a href="{{deeplevel.external_url}}" target="_blank">{{deeplevel.title}}</a></li>
                             {% elsif page.url == deeplevel.url %}
-                            <li class="active"><a href="{{deeplevel.url | replace: "/",""}}">{{deeplevel.title}}</a></li>
+                            <li class="active"><a href="{{deeplevel.url | prepend: ".."}}">{{deeplevel.title}}</a></li>
                             {% else %}
-                            <li><a href="{{deeplevel.url | replace: "/",""}}">{{deeplevel.title}}</a></li>
+                            <li><a href="{{deeplevel.url | prepend: ".."}}">{{deeplevel.title}}</a></li>
                             {% endif %}
 
                             {% endif %}
@@ -81,21 +81,21 @@
                     {% endif %}
                     {% endfor %}
 
-            {% endif %}
-            {% endfor %}
-</ul>
-        {% endif %}
-        {% endfor %}
-        {% endfor %}
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+                {% endif %}
+                {% endfor %}
+                {% endfor %}
 
 
-   <!-- if you aren't using the accordion, uncomment this block:
+                <!-- if you aren't using the accordion, uncomment this block:
 
-        <p class="external">
-            <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
-        </p>
-    -->
+                     <p class="external">
+                         <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+                     </p>
+                 -->
 
     </div>
-       <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above.-->
+    <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
     <script>$("li.active").parents('li').toggleClass("active");</script>

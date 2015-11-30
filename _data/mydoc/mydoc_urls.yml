@@ -1,0 +1,391 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+home:
+  title: "Introduction"
+  url: "../mydoc/home.html"
+  link: "<a href='../mydoc/home.html'>Introduction</a>"
+
+
+
+mydoc_getting_started:
+  title: "Getting started with this theme"
+  url: "../mydoc/mydoc_getting_started.html"
+  link: "<a href='../mydoc/mydoc_getting_started.html'>Getting started with this theme</a>"
+
+
+
+mydoc_configuration_settings:
+  title: "Setting configuration options"
+  url: "../mydoc/mydoc_configuration_settings.html"
+  link: "<a href='../mydoc/mydoc_configuration_settings.html'>Setting configuration options</a>"
+
+
+
+mydoc_adding_new_projects:
+  title: "Adding new projects"
+  url: "../mydoc/mydoc_adding_new_projects.html"
+  link: "<a href='../mydoc/mydoc_adding_new_projects.html'>Adding new projects</a>"
+
+
+
+mydoc_supported_features:
+  title: "Supported features"
+  url: "../mydoc/mydoc_supported_features.html"
+  link: "<a href='../mydoc/mydoc_supported_features.html'>Supported features</a>"
+
+
+
+
+
+mydoc_pages:
+  title: "Pages"
+  url: "../mydoc/mydoc_pages.html"
+  link: "<a href='../mydoc/mydoc_pages.html'>Pages</a>"
+
+
+
+mydoc_webstorm_text_editor:
+  title: "WebStorm Text Editor"
+  url: "../mydoc/mydoc_webstorm_text_editor.html"
+  link: "<a href='../mydoc/mydoc_webstorm_text_editor.html'>WebStorm Text Editor</a>"
+
+
+
+mydoc_series:
+  title: "Series"
+  url: "../mydoc/mydoc_series.html"
+  link: "<a href='../mydoc/mydoc_series.html'>Series</a>"
+
+
+
+mydoc_collections:
+  title: "Collections"
+  url: "../mydoc/mydoc_collections.html"
+  link: "<a href='../mydoc/mydoc_collections.html'>Collections</a>"
+
+
+
+
+
+mydoc_sidebar_navigation:
+  title: "Sidebar navigation"
+  url: "../mydoc/mydoc_sidebar_navigation.html"
+  link: "<a href='../mydoc/mydoc_sidebar_navigation.html'>Sidebar navigation</a>"
+
+
+
+mydoc_top_navigation:
+  title: "Top navigation"
+  url: "../mydoc/mydoc_top_navigation.html"
+  link: "<a href='../mydoc/mydoc_top_navigation.html'>Top navigation</a>"
+
+
+
+mydoc_tags:
+  title: "Tags"
+  url: "../mydoc/mydoc_tags.html"
+  link: "<a href='../mydoc/mydoc_tags.html'>Tags</a>"
+
+
+
+
+
+mydoc_adding_tooltips:
+  title: "Tooltips"
+  url: "../mydoc/mydoc_adding_tooltips.html"
+  link: "<a href='../mydoc/mydoc_adding_tooltips.html'>Tooltips</a>"
+
+
+
+mydoc_alerts:
+  title: "Alerts"
+  url: "../mydoc/mydoc_alerts.html"
+  link: "<a href='../mydoc/mydoc_alerts.html'>Alerts</a>"
+
+
+
+mydoc_icons:
+  title: "Icons"
+  url: "../mydoc/mydoc_icons.html"
+  link: "<a href='../mydoc/mydoc_icons.html'>Icons</a>"
+
+
+
+mydoc_images:
+  title: "Images"
+  url: "../mydoc/mydoc_images.html"
+  link: "<a href='../mydoc/mydoc_images.html'>Images</a>"
+
+
+
+mydoc_labels:
+  title: "Labels"
+  url: "../mydoc/mydoc_labels.html"
+  link: "<a href='../mydoc/mydoc_labels.html'>Labels</a>"
+
+
+
+mydoc_hyperlinks:
+  title: "Links"
+  url: "../mydoc/mydoc_hyperlinks.html"
+  link: "<a href='../mydoc/mydoc_hyperlinks.html'>Links</a>"
+
+
+
+mydoc_navtabs:
+  title: "Navtabs"
+  url: "../mydoc/mydoc_navtabs.html"
+  link: "<a href='../mydoc/mydoc_navtabs.html'>Navtabs</a>"
+
+
+
+mydoc_video_embeds:
+  title: "Video embeds"
+  url: "../mydoc/mydoc_video_embeds.html"
+  link: "<a href='../mydoc/mydoc_video_embeds.html'>Video embeds</a>"
+
+
+
+mydoc_tables:
+  title: "Tables"
+  url: "../mydoc/mydoc_tables.html"
+  link: "<a href='../mydoc/mydoc_tables.html'>Tables</a>"
+
+
+
+mydoc_syntax_highlighting:
+  title: "Syntax highlighting"
+  url: "../mydoc/mydoc_syntax_highlighting.html"
+  link: "<a href='../mydoc/mydoc_syntax_highlighting.html'>Syntax highlighting</a>"
+
+
+
+
+
+mydoc_conditional_logic:
+  title: "Conditional logic"
+  url: "../mydoc/mydoc_conditional_logic.html"
+  link: "<a href='../mydoc/mydoc_conditional_logic.html'>Conditional logic</a>"
+
+
+
+mydoc_content_reuse:
+  title: "Content reuse"
+  url: "../mydoc/mydoc_content_reuse.html"
+  link: "<a href='../mydoc/mydoc_content_reuse.html'>Content reuse</a>"
+
+
+
+
+
+mydoc_commenting_on_files:
+  title: "Commenting on files"
+  url: "../mydoc/mydoc_commenting_on_files.html"
+  link: "<a href='../mydoc/mydoc_commenting_on_files.html'>Commenting on files</a>"
+
+
+
+
+
+mydoc_build_arguments:
+  title: "Build arguments"
+  url: "../mydoc/mydoc_build_arguments.html"
+  link: "<a href='../mydoc/mydoc_build_arguments.html'>Build arguments</a>"
+
+
+
+mydoc_themes:
+  title: "Themes"
+  url: "../mydoc/mydoc_themes.html"
+  link: "<a href='../mydoc/mydoc_themes.html'>Themes</a>"
+
+
+
+mydoc_link_validation:
+  title: "Link validation"
+  url: "../mydoc/mydoc_link_validation.html"
+  link: "<a href='../mydoc/mydoc_link_validation.html'>Link validation</a>"
+
+
+
+mydoc_generating_pdfs:
+  title: "Generating PDFs"
+  url: "../mydoc/mydoc_generating_pdfs.html"
+  link: "<a href='../mydoc/mydoc_generating_pdfs.html'>Generating PDFs</a>"
+
+
+
+mydoc_excluding_files:
+  title: "Excluding files"
+  url: "../mydoc/mydoc_excluding_files.html"
+  link: "<a href='../mydoc/mydoc_excluding_files.html'>Excluding files</a>"
+
+
+
+mydoc_help_api:
+  title: "Help APIs and UI tooltips"
+  url: "../mydoc/mydoc_help_api.html"
+  link: "<a href='../mydoc/mydoc_help_api.html'>Help APIs and UI tooltips</a>"
+
+
+
+mydoc_search_configuration:
+  title: "Search configuration"
+  url: "../mydoc/mydoc_search_configuration.html"
+  link: "<a href='../mydoc/mydoc_search_configuration.html'>Search configuration</a>"
+
+
+
+mydoc_iterm_profiles:
+  title: "iTerm profiles"
+  url: "../mydoc/mydoc_iterm_profiles.html"
+  link: "<a href='../mydoc/mydoc_iterm_profiles.html'>iTerm profiles</a>"
+
+
+
+mydoc_push_build_to_server:
+  title: "Pushing builds to server"
+  url: "../mydoc/mydoc_push_build_to_server.html"
+  link: "<a href='../mydoc/mydoc_push_build_to_server.html'>Pushing builds to server</a>"
+
+
+
+
+
+mydoc_kb_layout:
+  title: "Knowledge-base layout"
+  url: "../mydoc/mydoc_kb_layout.html"
+  link: "<a href='../mydoc/mydoc_kb_layout.html'>Knowledge-base layout</a>"
+
+
+
+mydoc_scroll:
+  title: "Scroll layout"
+  url: "../mydoc/mydoc_scroll.html"
+  link: "<a href='../mydoc/mydoc_scroll.html'>Scroll layout</a>"
+
+
+
+mydoc_shuffle:
+  title: "Shuffle layout"
+  url: "../mydoc/mydoc_shuffle.html"
+  link: "<a href='../mydoc/mydoc_shuffle.html'>Shuffle layout</a>"
+
+
+
+mydoc_faq:
+  title: "FAQ layout"
+  url: "../mydoc/mydoc_faq.html"
+  link: "<a href='../mydoc/mydoc_faq.html'>FAQ layout</a>"
+
+
+
+mydoc_glossary:
+  title: "Glossary layout"
+  url: "../mydoc/mydoc_glossary.html"
+  link: "<a href='../mydoc/mydoc_glossary.html'>Glossary layout</a>"
+
+
+
+
+
+mydoc_troubleshooting:
+  title: "Troubleshooting"
+  url: "../mydoc/mydoc_troubleshooting.html"
+  link: "<a href='../mydoc/mydoc_troubleshooting.html'>Troubleshooting</a>"
+
+
+
+
+
+mydoc_tag_archives_overview:
+  title: "Tag archives overview"
+  url: "../mydoc/mydoc_tag_archives_overview.html"
+  link: "<a href='../mydoc/mydoc_tag_archives_overview.html'>Tag archives overview</a>"
+
+
+
+tag_getting_started:
+  title: "Getting started pages"
+  url: "../mydoc/tag_getting_started.html"
+  link: "<a href='../mydoc/tag_getting_started.html'>Getting started pages</a>"
+
+
+tag_formatting:
+  title: "Formatting pages"
+  url: "../mydoc/tag_formatting.html"
+  link: "<a href='../mydoc/tag_formatting.html'>Formatting pages</a>"
+
+
+tag_navigation:
+  title: "Navigation pages"
+  url: "../mydoc/tag_navigation.html"
+  link: "<a href='../mydoc/tag_navigation.html'>Navigation pages</a>"
+
+
+tag_content_types:
+  title: "Content types pages"
+  url: "../mydoc/tag_content_types.html"
+  link: "<a href='../mydoc/tag_content_types.html'>Content types pages</a>"
+
+
+tag_publishing:
+  title: "Publishing pages"
+  url: "../mydoc/tag_publishing.html"
+  link: "<a href='../mydoc/tag_publishing.html'>Publishing pages</a>"
+
+
+tag_special_layouts:
+  title: "Special layout pages"
+  url: "../mydoc/tag_special_layouts.html"
+  link: "<a href='../mydoc/tag_special_layouts.html'>Special layout pages</a>"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/mydoc_about:
+  title: "About this theme"
+  url: "../mydoc_about.html"
+  link: "<a href='../mydoc_about.html'>About this theme</a>"
+
+
+
+/mydoc_support:
+  title: "Support"
+  url: "../mydoc_support.html"
+  link: "<a href='../mydoc_support.html'>Support</a>"
+
+
+
+
+
+
+
+
+

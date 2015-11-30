@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
 <html>
   <head>
 
@@ -9,17 +10,10 @@
       $('[data-toggle="tooltip"]').tooltip()
   })
 </script>
-{% unless site.print == true %}
-{% if page.video == true %}
-<link href="https://vjs.zencdn.net/4.12/video-js.css" rel="stylesheet">
-<script src="https://vjs.zencdn.net/4.12/video.js"></script>
-{% endif %}
-{% endunless %}
 
-{% unless site.print == true %}
 {% if page.datatable == true %}
-<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.5/css/jquery.dataTables.css">
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.5/js/jquery.dataTables.js"></script>
+<link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.5/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.5/js/jquery.dataTables.js"></script>
 <script>
   $(document).ready(function(){
 
@@ -30,7 +24,6 @@
       );
 </script>
 {% endif %}
-{% endunless %}
 
   </head>
 

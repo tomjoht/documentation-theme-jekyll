@@ -1,30 +1,29 @@
-## This content is duplicated here from configs/config_designers.yml because I'm building this site through Github Pages, and Github Pages just looks for the _config.yml file in the root directory to create the build.
 # project definitions
-project: doc_designers
+project: mydoc_designers
 audience: designers
-product: all
+product: doc
 platform: all
 version: all
-destination: ../doc_designers
-topnav_title: Jekyll Documentation Theme
-homepage_title: Jekyll Documentation Theme &mdash; Designers
-site_title: Jekyll Documentation Theme &mdash; Designers
-disqus_shortname: idrbwjekyll
-google_analytics: UA-66296557-1
-github_editme_path: tomjohnson1492/documentation-theme-jekyll/blob/gh-pages
-# don't use a slash before or after the above path. here's how this url gets written out in page.html: https://github.com/{{site.github_editme_path}}{{page.url | replace: '.html', '.md'}}
+destination: ../doc_outputs/mydoc/designers
+topnav_title: Doc theme &mdash; designers
+homepage_title: Jekyll doc theme for designers
+site_title: Jekyll theme for designers
+project_folder: doc
+
 # variables
 
-sidebar_tagline: designers
-sidebar_version: version 3.0
+sidebar_tagline: Designers
+sidebar_version: Version 4.0
+theme_file: theme-blue.css
+project_file_name: doc
 
-port: 4001
+port: 4009
 
 exclude:
-  - doc_writers*
-  - configs/
   - _site
-  - doc_multi*
+  - _drafts
+  - configs/
+  - doc/mydoc_writers*
 
 # same for all
 host: 127.0.0.1
@@ -32,14 +31,13 @@ feedback_email: tomjohnson1492@gmail.com
 sidebar_accordion: true
 markdown: redcarpet
 print: false
-theme_file: theme-blue.css
-# only use suffix if you need to force index.html to display
-# suffix: index.html
+
+suffix: index.html
 
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "tables", "with_toc_data"]
 
-highlighter: pygments
+highlighter: rouge
 
 collections:
   tooltips:
@@ -53,6 +51,7 @@ defaults:
     values:
       layout: "page"
       comments: true
+      search: true
   -
     scope:
       path: ""
@@ -60,3 +59,7 @@ defaults:
     values:
       layout: "post"
       comments: true
+      search: true
+
+sass:
+    sass_dir: _sass

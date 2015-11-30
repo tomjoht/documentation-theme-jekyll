@@ -1,23 +1,42 @@
-{% if site.project == "doc_writers" %}
+
+{% comment %}
+__        __    _ _
+\ \      / / __(_) |_ ___ _ __ ___
+ \ \ /\ / / '__| | __/ _ \ '__/ __|
+  \ V  V /| |  | | ||  __/ |  \__ \
+   \_/\_/ |_|  |_|\__\___|_|  |___/
+{% endcomment %}
+
+{% if site.project == "mydoc_writers" %}
 {% assign audience = "writers" %}
-{% assign sidebar = site.data.sidebar_doc.entries %}
-{% assign topnav = site.data.topnav_doc.topnav %}
-{% assign topnav_dropdowns = site.data.topnav_doc.topnav_dropdowns %}
+{% assign sidebar = site.data.mydoc.mydoc_sidebar.entries %}
+{% assign topnav = site.data.mydoc.mydoc_topnav.topnav %}
+{% assign topnav_dropdowns = site.data.mydoc.mydoc_topnav.topnav_dropdowns %}
 {% assign version = "all" %}
 {% assign product = "all" %}
 {% assign platform = "all" %}
-{% assign link = "custom/doc/links_doc.html" %}
-{% assign projectTags = site.data.tags_doc.allowed-tags %}
+{% assign projectTags = site.data.mydoc.mydoc_tags.allowed-tags %}
+{% assign projectFolder = "mydoc" %}
 {% endif %}
 
-{% if site.project == "doc_designers" %}
+
+{% comment %}
+____            _
+|  _ \  ___  ___(_) __ _ _ __   ___ _ __ ___
+| | | |/ _ \/ __| |/ _` | '_ \ / _ \ '__/ __|
+| |_| |  __/\__ \ | (_| | | | |  __/ |  \__ \
+|____/ \___||___/_|\__, |_| |_|\___|_|  |___/
+                   |___/
+{% endcomment %}
+
+{% if site.project == "mydoc_designers" %}
 {% assign audience = "designers" %}
-{% assign sidebar = site.data.sidebar_doc.entries %}
-{% assign topnav = site.data.topnav_doc.topnav %}
-{% assign topnav_dropdowns = site.data.topnav_doc.topnav_dropdowns %}
+{% assign sidebar = site.data.mydoc.mydoc_sidebar.entries %}
+{% assign topnav = site.data.mydoc.mydoc_topnav.topnav %}
+{% assign topnav_dropdowns = site.data.mydoc.mydoc_topnav.topnav_dropdowns %}
 {% assign version = "all" %}
 {% assign product = "all" %}
 {% assign platform = "all" %}
-{% assign link = "custom/doc/links_doc.html" %}
-{% assign projectTags = site.data.tags_doc.allowed-tags %}
+{% assign projectTags = site.data.mydoc.mydoc_tags.allowed-tags %}
+{% assign projectFolder = "mydoc" %}
 {% endif %}
