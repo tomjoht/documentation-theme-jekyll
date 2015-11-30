@@ -1,21 +1,26 @@
+# This is duplicated here from configs/mydoc/config_designers.yml so that Github Pages can read it. Github Pages requires this file for the build process. It can't read a configuration file stored in another location.
+
 # project definitions
 project: mydoc_designers
 audience: designers
 product: doc
 platform: all
 version: all
+output: web
 destination: ../doc_outputs/mydoc/designers
-topnav_title: Doc theme &mdash; designers
+topnav_title: Jekyll Documentation Theme
 homepage_title: Jekyll doc theme for designers
 site_title: Jekyll theme for designers
-project_folder: doc
-
+project_folder: mydoc
+company_name: Your company
+footer_image_location: ../common_images/company_logo.png
+github_editme_path: tomjohnson1492/documentation-theme-jekyll/edit/reviews
 # variables
 
 sidebar_tagline: Designers
 sidebar_version: Version 4.0
 theme_file: theme-blue.css
-project_file_name: doc
+pdf_file_name: mydoc_designers_pdf.pdf
 
 port: 4009
 
@@ -28,20 +33,17 @@ exclude:
 # same for all
 host: 127.0.0.1
 feedback_email: tomjohnson1492@gmail.com
-sidebar_accordion: true
-markdown: redcarpet
-print: false
 
-suffix: index.html
+markdown: redcarpet
 
 redcarpet:
   extensions: ["no_intra_emphasis", "fenced_code_blocks", "tables", "with_toc_data"]
 
-highlighter: rouge
+highlighter: pygments
 
 collections:
   tooltips:
-    output: true
+    output: false
 
 defaults:
   -
@@ -55,11 +57,10 @@ defaults:
   -
     scope:
       path: ""
-      type: "posts"
+      type: "tooltips"
     values:
-      layout: "post"
+      layout: "page"
       comments: true
       search: true
+      tooltip: true
 
-sass:
-    sass_dir: _sass

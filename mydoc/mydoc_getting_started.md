@@ -50,25 +50,21 @@ Before you start customizing the theme, make sure you can build the theme with t
 	
 	Bundler looks at the gems (Ruby plugins) in a project's gemfile and then gets all of the gems that depend on those gems. This way you don't end up with incompatible gems.
 	
-	However, I'm publishing this project on Github Pages, and currently Github Pages only supports Jekyll 2.5.3, not Jekyll 3.0.1. Therefore you have to switch up something in the Gemfile to run the latest Jekyll.
-	
-4. In terminal, browse to the jekyll-documentation-theme folder and type `open Gemfile`. Replace the contents of the Gemfile with the following:
+	Since I'm publishing this project on Github Pages, there are some specific gem dependencies. The 2.5.3 github-pages gem has dependencies on jekyll 2.4.0, pygments.rb 0.6.3, and redcarpet 3.3.2 (you can see this after running `bundle install`). If you're not publishing on Github Pages and you want to run Jekyll 3.0.1 (the latest), browse to the jekyll-documentation-theme folder and type `open Gemfile`. Replace the contents of the Gemfile with the following:
 
 	```
 	source 'https://rubygems.org'
-	gem 'jekyll', '~> 3.0', '>= 3.0.1'
-	gem 'redcarpet'
+	gem 'jekyll', '~> 3.0'
+	gem 'redcarpet', '~> 3.3', '>= 3.3.3'
+	gem 'pygments.rb', '~> 0.6.3'
 	```
-
-5. Open the config files in the configs/mydoc folder and change the `highlighter` value from `pygments` to `rouge`. 
-	
-	I anticipate that Github Pages will soon start supporting rouge as well, but for now I keep getting error messages when trying to use the rouge highlighter with Jekyll 2.5.3, which is the latest version that Github Pages supports. If you're planning to publish on Github Pages, you can keep the highlighter set to `pygments`. The differences are hardly noticeable.
 	
 5. In a terminal, browse to the documentation-theme-jekyll directory and type the following:
 
 	```
 	bundle install
 	```
+	
 6. Build the writer's output:
 	
     ```
