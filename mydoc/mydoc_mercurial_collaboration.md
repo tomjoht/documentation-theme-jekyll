@@ -3,6 +3,7 @@ title: Mercurial notes and tips
 summary: "If you're using Mercurial to collaborate on a project, see the tips and notes on this page."
 tags: collaboration
 keywords: mercurial, hg, collaboration, interaction, project teams
+published: false
 ---
 
 

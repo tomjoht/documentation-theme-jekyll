@@ -479,29 +479,29 @@ entries:
       version: all
       output: web, pdf
 
-  - title: Collaborating with version control
-    audience: writers, designers
-    platform: all
-    product: all
-    version: all
-    output: web, pdf
-    items:
-
-    - title: Mercurial notes and tips
-      url: /mydoc/mydoc_mercurial_collaboration.html
-      audience: writers, designers
-      platform: all
-      product: all
-      version: all
-      output: web, pdf
-
-    - title: Git notes and tips
-      url: /mydoc/mydoc_git_collaboration.html
-      audience: writers, designers
-      platform: all
-      product: all
-      version: all
-      output: web, pdf
+#  - title: Collaborating with version control
+#    audience: writers, designers
+#    platform: all
+#    product: all
+#    version: all
+#    output: web, pdf
+#    items:
+#
+#    - title: Mercurial notes and tips
+#      url: /mydoc/mydoc_mercurial_collaboration.html
+#      audience: writers, designers
+#      platform: all
+#      product: all
+#      version: all
+#      output: web, pdf
+#
+#    - title: Git notes and tips
+#      url: /mydoc/mydoc_git_collaboration.html
+#      audience: writers, designers
+#      platform: all
+#      product: all
+#      version: all
+#      output: web, pdf
 
   - title: Troubleshooting
     audience: writers, designers
