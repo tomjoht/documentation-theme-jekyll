@@ -16,7 +16,6 @@ Before you start installing the theme, make sure you have all of these prerequis
 * **Mac computer**. If you have a Windows machine, make sure you can get a vanilla Jekyll site working before proceeding. You'll probably need Ruby and Ruby Dev Kit installed first. Also note that the shell scripts (.sh files) in this theme for automating the builds work only on a Mac. To run them on Windows, you need to convert them to BAT.  
 * **[Ruby](https://www.ruby-lang.org/en/)**. On a Mac, this should already be installed. Open your Terminal and type `which ruby` to confirm. 
 * **[Rubygems](https://rubygems.org/pages/download)**. This is a package manager for Ruby. Type `which gem` to confirm.
-* **[Bundler](http://bundler.io/)**. Bundler is Ruby gem that automatically downloads Ruby gems that you need for a specific project. 
 * **Text editor**: My recommendations is WebStorm (or IntelliJ). You can use another text editor. However, there are certain shortcuts and efficiencies in WebStorm (such as using Find and Replace across the project, or Markdown syntax highlighting) that I'll be noting in this documentation.
 
 ## Build the default project
@@ -27,7 +26,7 @@ Before you start customizing the theme, make sure you can build the theme with t
     
     You can either download the theme files directly by clicking the **Download Zip** button on the right of the repo, or use git to clone the repository to your local machine. 
 	
-5. After downloading the theme, note some unique aspects of the file structure: 
+2. After downloading the theme, note some unique aspects of the file structure: 
  * Although there's a \_config.yml file in the root directory, it's there only so that Github Pages will build the theme. Because the theme is set up for single sourcing, there's a separate configuration file for each unique output you're building. 
  * All the configuration files are stored in the configs directory. Each configuration file has a different preview port. If you want, you can build and preview all your outputs simultaneously in different preview servers. 
  * Each configuration file specifies a different project and potentially a different audience, product, platform, and version. By setting unique values for these properties in the includes/custom/conditions.html file, you determine how the sidebar and top navigation get constructed. 
@@ -40,31 +39,15 @@ Before you start customizing the theme, make sure you can build the theme with t
     
     In reality, both of these outputs are pretty much the same. I mainly incorporated two outputs here mainly to demonstrate how the single sourcing works.
 
-3. Install Bundler: 
+3. Unless you're planning to publish on Github Pages, you can delete the Gemfile. The Gemfile is only in this project to allow publishing on Github Pages.
+	
+	The theme is not using a Gemfile to manage project dependencies. Although theoretically the Gemfile should make things easier, I've found that it tends to give users more errors than they need. Add to this the incompatibility of Github Pages with Jekyll 3.0 and the Gemfile becomes even more problematic.
 
-	```
-	gem install bundler
-	```
+4. Install the [Jekyll](https://rubygems.org/gems/jekyll), [redcarpet](https://rubygems.org/gems/redcarpet), and [pygments](https://rubygems.org/gems/pygments.rb) gems.
 	
-	Bundler is a utility for retrieving all of the project's dependencies automatically. This utility helps you avoid errors in building the project.
+	These gems are the only ones the project uses. Go to the [Rubygems site](https://rubygems.org) for each of these gems (based on the links above). In the right column, click the "INSTALL" command and paste the copied command into your terminal. If your computer gives you permissions errors, add `sudo` before the command.
 	
-	Bundler looks at the gems (Ruby plugins) in a project's gemfile and then gets all of the gems that depend on those gems. This way you don't end up with incompatible gems.
-	
-	Since I'm publishing this project on Github Pages, there are some specific gem dependencies. The 2.5.3 github-pages gem has dependencies on jekyll 2.4.0, pygments.rb 0.6.3, and redcarpet 3.3.2 (you can see this after running `bundle install`). If you're not publishing on Github Pages and you want to run Jekyll 3.0.1 (the latest), browse to the jekyll-documentation-theme folder and type `open Gemfile`. Replace the contents of the Gemfile with the following:
-
-	```
-	source 'https://rubygems.org'
-	gem 'jekyll', '~> 3.0'
-	gem 'redcarpet', '~> 3.3', '>= 3.3.3'
-	gem 'pygments.rb', '~> 0.6.3'
-	```
-	
-5. In a terminal, browse to the documentation-theme-jekyll directory and type the following:
-
-	```
-	bundle install
-	```
-	
+5. In your terminal, browse to the documentation-theme-jekyll folder that you downloaded. 
 6. Build the writer's output:
 	
     ```
@@ -75,8 +58,8 @@ Before you start customizing the theme, make sure you can build the theme with t
     
     Open a new tab in your browser and preview the site at the preview URL shown.
 	
-4. Press **Ctrl+C** in Terminal to shut down the writer's preview server. 
-5. Build the designers output:
+7. Press **Ctrl+C** in Terminal to shut down the writer's preview server. 
+8. Build the designers output:
 	
     ```
     jekyll serve -config configs/mydoc/config_designers.yml
@@ -84,8 +67,8 @@ Before you start customizing the theme, make sure you can build the theme with t
     
     Open a new tab in your browser and preview the site at the preview URL shown. Notice how the themes differ (designers is blue, writers is green).
 
-5. Press **Ctrl+C** in Terminal to shut down the designer's preview server. 
-6. Build both themes by running the following command:
+9. Press **Ctrl+C** in Terminal to shut down the designer's preview server. 
+10. Build both themes by running the following command:
 
 	```
 	. mydoc_3_multibuild_web.sh

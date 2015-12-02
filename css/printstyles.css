@@ -149,8 +149,12 @@ h1 { string-set: doctitle content() }
     }
 }
 .alert {
-    background-color: #f0f0f0 !important;
+    background-color: #fafafa !important;
     border-color: #dedede !important;
+    color: black;
 }
 
+pre {
+    background-color: #fafafa;
+}
 

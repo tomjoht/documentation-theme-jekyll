@@ -379,3 +379,22 @@ javascript content here ...
 {% endraw %}
 
 For more detail about using `unless` in conditional logic, see {{site.data.mydoc.mydoc_urls.mydoc_conditional_logic.link}}. What this code means is "run this code unless this value is the case."
+
+## Overriding Bootstrap Print Styles
+
+The theme relies on Bootstrap's CSS for styling. However, for print media, Bootstrap applies the following style:
+
+```
+@media print{*,:after,:before{color:#000!important;text-shadow:none!important;background:0 0!important;-webkit-box-shadow:none!important;box-shadow:none!important}
+```
+This is minified, but basically the `*` (asterisk) means select all, and applied the color #000 (black). As a result, the Bootstrap style strips out all color from the PDF (for Bootstrap elements). 
+
+This is problematic for code snippets that have syntax highlighting. I decided to remove this de-coloring from the print output. I commented out the Bootstrap style:
+
+```
+@media print{*,:after,:before{/*color:#000!important;*/text-shadow:none!important;/*background:0 0!important*/;-webkit-box-shadow:none!important;box-shadow:none!important}
+```
+
+If you update Bootrap, make sure you make this edit. (Sorry, admittedly I couldn't figure out how to simply overwrite the `*` selector with a later style.)
+
+I did, however, remove the color from the alerts and lighten the background shading for `pre` elements. The printstyles.css has this setting.
