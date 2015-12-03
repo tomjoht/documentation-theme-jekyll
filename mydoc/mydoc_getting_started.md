@@ -51,7 +51,7 @@ Before you start customizing the theme, make sure you can build the theme with t
 6. Build the writer's output:
 	
     ```
-    jekyll serve -config configs/mydoc/config_writers.yml
+    jekyll serve --config configs/mydoc/config_writers.yml
     ```
 	
     The `--config` parameter specifies the location of the configuration file to be used in the build. The configuration file itself contains the destination location for where the site gets built. 
@@ -62,7 +62,7 @@ Before you start customizing the theme, make sure you can build the theme with t
 8. Build the designers output:
 	
     ```
-    jekyll serve -config configs/mydoc/config_designers.yml
+    jekyll serve --config configs/mydoc/config_designers.yml
     ```
     
     Open a new tab in your browser and preview the site at the preview URL shown. Notice how the themes differ (designers is blue, writers is green).
