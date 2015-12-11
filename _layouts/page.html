@@ -13,12 +13,10 @@ layout: default
    {% endif %}
 {% include toc.html %}
 
-    {% if jekyll.environment == "development" %}
     {% if site.github_editme_path %}
 
     <a target="_blank" href="https://github.com/{{site.github_editme_path}}{{page.url | replace: '.html', '.md'}}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
 
-    {% endif %}
     {% endif %}
   {{content}}
 
