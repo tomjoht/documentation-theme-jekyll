@@ -817,21 +817,6 @@ dd {margin-left:20px;}
     margin-bottom:10px;
 }
 
-/* branding */
-.navbar-inverse {
-    background-color: #347DBE;
-    border-color: #015CAE;
-}
-
-.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
-    color: #015CAE;
-}
-
-.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
-    background-color: #015CAE;
-    color: #ffffff;
-}
-
 a.accordion-toggle {
     font-style: normal;
 }
