@@ -36,7 +36,7 @@ In this theme, each output requires a separate config file. If you have 10 audie
 
 More details about customizing the settings in the configuration files will be explained later. For now you're just duplicating the necessary project files for your new project.
 
-### 3. Create a includes folder
+### 3. Create a new folder inside \_includes
 
 In the _includes/custom directory, add a new folder there called "acme." This folder should sit parallel to the mydoc folder. This is where you can store includes for your project. 
 

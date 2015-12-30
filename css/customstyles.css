@@ -929,7 +929,8 @@ a[href^="http://"]:after, a[href^="https://"]:after {
     text-decoration: none;
     padding-left: 3px;
 }
-/* Strip from links to own domain or with class no_icon */
+
+/* Strip the outbound icon when this class is present */
 a[href^="http://own-domain.com"]:after,
 a.no_icon:after {
     content:"" !important;

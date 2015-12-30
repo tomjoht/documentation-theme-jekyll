@@ -6,7 +6,6 @@ last_updated: November 30, 2015
 summary: "You embed images using traditional HTML or Markdown syntax for images. Unlike pages, you can store images in subfolders (in this theme). This is because when pages reference the images, the references are always as subpaths, never requiring the reference to move up directories."
 ---
 
-
 You embed an image the same way you embed other files or assets: you put the file into a folder, and then link to that file. 
 
 Put images inside the `images` folder in your root directory. You can create subdirectories inside this directory. Although you could use Markdown syntax for images, the HTML syntax is probably easier:
@@ -37,7 +36,7 @@ And the result:
 You can also embed SVG graphics. If you use SVG, you need to use the HTML syntax so that you can define a width/container for the graphic. Here's a sample embed:
 
 ```html
-<img src="images/dicloud/dicloud_architecture.svg" style="max-width: 700px;" />
+<img src="images/dicloud_architecture.svg" style="max-width: 700px;" />
 ```
 
 Here's the result:
