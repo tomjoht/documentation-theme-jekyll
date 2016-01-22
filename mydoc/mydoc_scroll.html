@@ -12,9 +12,9 @@ summary: "This page demonstrates how you the integration of a script called Scro
 {% endif %}
 
 {% if site.output == "web" %}
- <script src="../../js/jquery.scrollTo.min.js"></script>
+ <script src="../js/jquery.scrollTo.min.js"></script>
     <!-- local scroll must come after scrollTo, because localScroll is based on scrollTo, which is based on jQuery -->
-<script src="../../js/jquery.localScroll.min.js"></script>
+<script src="../js/jquery.localScroll.min.js"></script>
 
 <script>
 
@@ -232,6 +232,7 @@ $('#small-box-links').localScroll({
 </div> <!-- end small-box-links -->
 </div> <!-- end row -->
 </div> <!-- end container -->
+
 
 {{site.data.alerts.note}} This was mostly an experiment to see if there was a better way to document a long JSON code example. I haven't actually used this approach in my own documentation.{{site.data.alerts.end}}
 
