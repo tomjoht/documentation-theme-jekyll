@@ -7,6 +7,11 @@ last_updated: November 30, 2015
 summary: "This page demonstrates how you the integration of a script called ScrollTo, which is used here to link definitions of a JSON code sample to a list of definitions for that particular term. The scenario here is that the JSON blocks are really long, with extensive nesting and subnesting, which makes it difficult for tables below the JSON to adequately explain the term in a usable way."
 ---
 
+{% if site.output == "pdf" %}
+{{site.data.alerts.note}} The content on this page doesn't display well on PDF, but I included it anyway so you could see the problems this layout poses if you're including it in PDF.  {{site.data.alerts.end}}
+{% endif %}
+
+{% if site.output == "web" %}
  <script src="../../js/jquery.scrollTo.min.js"></script>
     <!-- local scroll must come after scrollTo, because localScroll is based on scrollTo, which is based on jQuery -->
 <script src="../../js/jquery.localScroll.min.js"></script>
@@ -177,7 +182,7 @@ $('#small-box-links').localScroll({
     <div id="giraffe"><h5>giraffe</h5>Nullam venenatis at lectus sed pharetra. Sed hendrerit ligula lectus, non pellentesque diam faucibus sit amet. Aliquam dictum hendrerit pellentesque. Cras eu nisl sagittis, faucibus velit sit amet, sagittis odio. Donec vulputate ex vitae purus</div>
 
     <div id="hippo"><h5>hippo</h5>Cras nec pretium nulla. Suspendisse tempus tortor vel venenatis pulvinar. Integer varius tempor enim fringilla tincidunt. Phasellus magna turpis, auctor vitae elit eget, fringilla pellentesque est. Phasellus ut porta risus. Curabitur iaculis sapien sed venenatis auctor. Integer eu orci at lectus eleifend auctor id rutrum urna.</div>
-    
+
     <div id="igloo"><h5>igloo</h5>Suspendisse tempus tortor vel venenatis pulvinar. Integer varius tempor enim fringilla tincidunt. Phasellus magna turpis, auctor vitae elit eget, fringilla pellentesque est. Phasellus ut porta risus.  </div>
 
     <div id="jeep"><h5>jeep</h5>Nulla vitae metus rutrum, condimentum orci nec, maximus est. Aenean sit amet ante nec elit dignissim faucibus eget quis quam. </div>
@@ -229,4 +234,6 @@ $('#small-box-links').localScroll({
 </div> <!-- end container -->
 
 {{site.data.alerts.note}} This was mostly an experiment to see if there was a better way to document a long JSON code example. I haven't actually used this approach in my own documentation.{{site.data.alerts.end}}
+
+{% endif %}
 
