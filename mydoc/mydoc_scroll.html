@@ -7,11 +7,6 @@ last_updated: November 30, 2015
 summary: "This page demonstrates how you the integration of a script called ScrollTo, which is used here to link definitions of a JSON code sample to a list of definitions for that particular term. The scenario here is that the JSON blocks are really long, with extensive nesting and subnesting, which makes it difficult for tables below the JSON to adequately explain the term in a usable way."
 ---
 
-{% if site.output == "pdf" %}
-{{site.data.alerts.note}} The content on this page doesn't display well on PDF, but I included it anyway so you could see the problems this layout poses if you're including it in PDF.  {{site.data.alerts.end}}
-{% endif %}
-
-{% if site.output == "web" %}
  <script src="../../js/jquery.scrollTo.min.js"></script>
     <!-- local scroll must come after scrollTo, because localScroll is based on scrollTo, which is based on jQuery -->
 <script src="../../js/jquery.localScroll.min.js"></script>
@@ -116,7 +111,7 @@ $('#small-box-links').localScroll({
 
     </style>
 
-{% endif %}
+
 <div class="container">
 <div class="row">
  
@@ -165,7 +160,7 @@ $('#small-box-links').localScroll({
 <div class="col-md-3">
 
 <div id="definition-box-container">
-   
+
 
     <div id="apples"><h5>apples</h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer magna massa, euismod sed rutrum at, ullamcorper quis tellus. Vestibulum erat purus, aliquet sit amet pellentesque eget, tempus at ante. Nulla justo nisi, elementum nec nisi eget, consectetur varius tortor. </div>
 
@@ -202,7 +197,7 @@ $('#small-box-links').localScroll({
     <div id="radical"><h5>radical</h5>Etiam hendrerit interdum tellus, at aliquet sapien egestas in. Aenean eu urna nisl. Cras vitae risus pharetra, elementum mauris nec, auctor lectus. Fusce pellentesque venenatis dictum. Proin at augue at mauris finibus semper ultricies sed eros.</div>
 
     <div id="silly"><h5>silly</h5>Praesent pulvinar consequat posuere. Morbi egestas rhoncus felis, id fermentum metus lobortis in. Vestibulum nibh orci, euismod eget vestibulum nec, vehicula vitae tortor. Aenean ullamcorper enim nunc, eu auctor ligula auctor eget.</div>
-    
+
     <div id="taffy"><h5>taffy</h5>Etiam et arcu vel lacus aliquet lobortis in in massa. Nunc non mollis elit. Aenean accumsan orci quis risus aliquam, non gravida nulla molestie. Mauris pharetra libero et magna aliquam aliquam. Integer quis luctus dolor. </div>
 
     <div id="umbrella"><h5>umbrella</h5>Fusce molestie finibus malesuada. Nullam ac egestas quam, id venenatis ligula. Pellentesque pulvinar elit et vestibulum fringilla. Cras volutpat sed quam ornare scelerisque. Vivamus volutpat ante pretium scelerisque tempus. Etiam venenatis tempor nisl dignissim sollicitudin. Curabitur ac risus vitae dolor pretium posuere vel vitae diam. Donec in odio arcu.</div>
