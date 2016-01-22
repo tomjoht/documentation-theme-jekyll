@@ -3,6 +3,14 @@
 topnav:
 - title: Topnav
   subcategories:
+    - title: Search
+      url: /mydoc/search.html
+      audience: writers, designers
+      platform: all
+      product: all
+      version: all
+      output: web
+
     - title: Github Repo
       external_url: https://github.com/tomjohnson1492/documentation-theme-jekyll
       audience: writers, designers
@@ -22,14 +30,6 @@ topnav_dropdowns:
       version: all
       output: web
       items:
-        - title: test
-          url: /mydoc/mydoc_princexml_setup
-          audience: writers, designers
-          platform: all
-          product: all
-          version: all
-          output: web
-
         - title: Jekyll Talk
           external_url: https://talk.jekyllrb.com
           audience: writers, designers

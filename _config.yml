@@ -1,5 +1,3 @@
-# This is duplicated here from configs/mydoc/config_designers.yml so that Github Pages can read it. Github Pages requires this file for the build process. It can't read a configuration file stored in another location.
-
 # project definitions
 project: mydoc_designers
 audience: designers
@@ -23,6 +21,12 @@ sidebar_version: Version 4.0
 theme_file: theme-blue.css
 pdf_file_name: mydoc_designers_pdf.pdf
 
+gems:
+  - algoliasearch-jekyll
+
+algolia:
+  application_id: 'HXUBJERYYB'
+  index_name:     'documentation_theme_jekyll_designers'
 port: 4009
 
 exclude:

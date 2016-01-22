@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<div class="post-header">
+   <h1 class="post-title-main">{% if page.homepage == true %} {{site.homepage_title}} {% else %}{{ page.title }}{% endif %}</h1>
+</div>
+
+<div class="post-content">
+
+   {% if page.summary %}
+    <div class="summary">{{page.summary}}</div>
+   {% endif %}
+{% include toc.html %}
+
+    {% if site.github_editme_path %}
+
+    <a target="_blank" href="https://github.com/{{site.github_editme_path}}{{page.url | replace: '.html', '.md'}}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    {% endif %}
+    <h2>sample link</h2>
+samplelink: {{page.samplelink}}
+    samplelinktoo: {{page.samplelinktoo}}
+    <h2>Endpoint</h2>
+{{page.paths.service/matchdevice.post.summary}}
+
+    <h2>hmac</h2>
+{{page.securityDefinitions.hmac.type}}
+
+  {{content}}
+
+<div class="tags">
+    {% if page.tags != null %}
+    <b>Tags: </b>
+    {% include custom/conditions.html %}
+    {% for tag in page.tags %}
+    {% if projectTags contains tag %}
+    <a href="tag_{{tag}}.html" class="btn btn-default navbar-btn cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+</div>
+
+{% include disqus.html %}
+
+</div>
+
+{{hr_shaded}}
+
+{% include footer.html %}

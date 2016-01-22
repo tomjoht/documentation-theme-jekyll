@@ -21,6 +21,42 @@ sidebar_version: Version 4.0
 theme_file: theme-blue.css
 pdf_file_name: mydoc_designers_pdf.pdf
 
+# algolia settings
+gems:
+  - algoliasearch-jekyll
+
+algolia:
+  application_id: 'HXUBJERYYB'
+  index_name: 'documentation_theme_jekyll_designers'
+  search_only_api_key: '82f9e5197317a79bdec5f45ec91bf4e7'
+  record_css_selector: 'p,ul'
+  excluded_files:
+    - _data
+    - _drafts
+    - _includes
+    - _layouts
+    - _tooltips
+    - css
+    - fonts
+    - js
+    - licenses
+    - mydoc/images
+    - _site
+    - _drafts
+    - configs/
+    - doc/mydoc_writers*
+  settings:
+    attributesToIndex:
+      - title
+      - h1
+      - h2
+      - h3
+      - h4
+      - h5
+      - h6
+      - summary
+      - body
+
 port: 4009
 
 exclude:

@@ -936,3 +936,25 @@ a.no_icon:after {
     content:"" !important;
     padding-left: 0;
 }
+
+.btn-default {
+    margin-bottom: 10px;
+}
+
+/* algolia search */
+
+.search {
+    text-align: left;
+}
+.search input {
+    font-size: 20px;
+    width: 300px;
+}
+.results {
+    margin: auto;
+    text-align: left;
+}
+.results ul {
+    list-style-type: none;
+    padding: 0;
+}
