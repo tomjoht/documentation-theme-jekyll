@@ -16,10 +16,6 @@ github_editme_path: tomjohnson1492/documentation-theme-jekyll/edit/reviews
 disqus_shortname: idrbwjekyll
 # variables
 
-markdown: kramdown
-kramdown:
-  auto_ids: true
-
 
 sidebar_tagline: Designers
 sidebar_version: Version 4.0
@@ -46,6 +42,9 @@ host: 127.0.0.1
 feedback_email: tomjohnson1492@gmail.com
 
 highlighter: rouge
+markdown: kramdown
+kramdown:
+  auto_ids: true
 
 collections:
   tooltips:
