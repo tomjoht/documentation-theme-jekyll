@@ -7,7 +7,6 @@ summary: "You add a new project essentially by duplicating all the mydoc project
 series: "Getting Started"
 weight: 2
 ---
-<!-- your frontmatter goes here -->
 
 {% include custom/mydoc/getting_started_series.html %}
 
@@ -34,13 +33,15 @@ In the configs folder, copy the mydoc folder and its contents. Rename it to acme
 
 In this theme, each output requires a separate config file. If you have 10 audiences and you want separate sites for each, then then you'll have 10 config files in this directory. 
 
+Change the file names from config_writers.yml and so forth to whatever file names best represent the audiences for your outputs.
+
 More details about customizing the settings in the configuration files will be explained later. For now you're just duplicating the necessary project files for your new project.
 
-### 3. Create a new folder inside \_includes
+### 3. Create a new folder inside \_includes/custom
 
 In the _includes/custom directory, add a new folder there called "acme." This folder should sit parallel to the mydoc folder. This is where you can store includes for your project. 
 
-### 4. Add an acme folder in the root directory
+### 4. Add a new folder in the root directory
 
 In the root directory, add a folder for your pages called acme (similar to the mydoc folder). Include two subfolders inside acme: files and images.
 
@@ -52,7 +53,7 @@ Note that you cannot create subfolders in this acme directory. All of your pages
 
 ### 5. Copy and customize the mydoc shell scripts in the root directory
 
-In the root directory, duplicate the shell scripts and rename the prefix to "acme_". The following files are the shell scripts that need to be duplicated:
+In the root directory, duplicate the shell scripts (the file extension is .sh) and rename the prefix to "acme_". The following files are the shell scripts that need to be duplicated:
 
 * mydoc_1_multiserve_pdf.sh
 * mydoc_2_multibuild_pdf.sh

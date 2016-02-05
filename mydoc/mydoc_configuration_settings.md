@@ -15,6 +15,18 @@ The configuration file serves important functions with single sourcing. For each
 
 The configuration file contains most of the settings and other details unique to that site output, such as variables, titles, output directories, build folders, and more.
 
+## Change the project name within the config file
+
+By default, the config file contains the project name, such as mydoc, in numerous places. You can do a find and replace in each of the configuration files to replace "mydoc" with your new project's name. You can also fine tune the configuration settings by looking at what each of them does (as described in the following sections).
+
+## Update the exclude list
+
+By default, all the files in the Jekyll project are included in the output. You have two manually tell Jekyll which files and folders you want to exclude from the output. In  each configuration file there is an `exclude` property that takes a list of items that should be excluded from the build.
+
+In the new configuration file that you created, exclude the mydoc folder and any other mydoc files that you don't want to be output. Similarly, update the mydoc configuration files to exclude the new project that you added.
+ 
+Manually excluding files from the output is one of pain points in Jekyll that I could never solve. Jekyll was not designed for multiple output publishing but was conceived as a way to manage files for a single website.
+
 ## Configuration file variables
 
 You can define arbitrary key-value pairs in the configuration file, and then you can access them through `site.yourkey`, where `yourkey` is the name of the key. 
