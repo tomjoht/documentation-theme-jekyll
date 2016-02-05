@@ -21,14 +21,13 @@ sidebar_version: Version 4.0
 theme_file: theme-blue.css
 pdf_file_name: mydoc_designers_pdf.pdf
 
-gems:
-  - algoliasearch-jekyll
-
 # the algolia entries here are experimental only.
 
+#gems:
+#  - algoliasearch-jekyll
 algolia:
-  application_id: 'HXUBJERYYB'
-  index_name:     'documentation_theme_jekyll_designers'
+#  application_id: 'HXUBJERYYB'
+#  index_name:     'documentation_theme_jekyll_designers'
 port: 4009
 
 exclude:
