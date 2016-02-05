@@ -6,7 +6,7 @@ last_updated: November 30, 2015
 summary: "You can apply syntax highlighting to your code. This theme uses pygments and applies color coding based on the lexer you specify."
 ---
 
-
+{% comment %}
 ## About syntax highlighting
 For syntax highlighting, use fenced code blocks optionally followed by the language syntax you want:
 
@@ -52,16 +52,14 @@ It renders the same:
 The theme has syntax highlighting specified in the configuration file as follows:
 
 ```
-highlighter: pygments
+highlighter: rouge
 ```
 
-You can use another highlighter such as `rouge`.
-
 The syntax highlighting is done via the css/syntax.css file.
+{% endcomment %}
+## Available  lexers
 
-## Available Pygments lexers
-
-The keywords you must add to specify the highlighting (in the previous example, `ruby`) are called "lexers." You can search for "pygments lexers" or go directly to [Available lexers](http://pygments.org/docs/lexers/) to see what values you can use. Here are some common ones I use:
+The keywords you must add to specify the highlighting (in the previous example, `ruby`) are called "lexers." You can search for "lexers." Here are some common ones I use:
 
 * js
 * html

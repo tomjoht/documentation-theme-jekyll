@@ -42,6 +42,7 @@ audience: writers
 On a page in my site (it can be HTML or markdown), I can conditionalize content using the following:
 
 {% raw %}
+
 ```liquid
 {% if site.audience == "writers" %}
 The writer audience should see this...
@@ -49,6 +50,7 @@ The writer audience should see this...
 The designer audience should see this ...
 {% endif %}
 ```
+
 {% endraw %}
 
 This uses simple `if-elsif` logic to determine what is shown (note the spelling of `elsif`). The `else` statement handles all other conditions not handled by the `if` statements. 

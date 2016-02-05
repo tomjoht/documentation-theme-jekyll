@@ -16,6 +16,9 @@ github_editme_path: tomjohnson1492/documentation-theme-jekyll/edit/reviews
 disqus_shortname: idrbwjekyll
 # variables
 
+
+
+
 sidebar_tagline: Designers
 sidebar_version: Version 4.0
 theme_file: theme-blue.css
@@ -25,7 +28,7 @@ pdf_file_name: mydoc_designers_pdf.pdf
 
 #gems:
 #  - algoliasearch-jekyll
-algolia:
+#algolia:
 #  application_id: 'HXUBJERYYB'
 #  index_name:     'documentation_theme_jekyll_designers'
 port: 4009

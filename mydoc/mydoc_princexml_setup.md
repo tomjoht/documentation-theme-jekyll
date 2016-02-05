@@ -10,6 +10,7 @@ weight: 9
 ---
 
 {{site.data.alerts.tip}} More details about generating PDFs are listed in {{site.data.mydoc.mydoc_urls.mydoc_generating_pdfs.link}}. {{site.data.alerts.end}}
+
 ## Install Prince XML
 
 Prince XML is a utility I've decided to use to create PDFs. The Prince XML utility requires a list of web pages from which it can construct a PDF. 
