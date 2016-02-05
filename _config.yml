@@ -17,8 +17,6 @@ disqus_shortname: idrbwjekyll
 # variables
 
 
-
-
 sidebar_tagline: Designers
 sidebar_version: Version 4.0
 theme_file: theme-blue.css
@@ -44,6 +42,10 @@ host: 127.0.0.1
 feedback_email: tomjohnson1492@gmail.com
 
 highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
 
 collections:
   tooltips:
