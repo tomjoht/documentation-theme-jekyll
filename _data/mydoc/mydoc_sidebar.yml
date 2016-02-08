@@ -217,7 +217,7 @@ entries:
       version: all
       output: web, pdf
 
-    - title: Working with YAML
+    - title: YAML tutorial in the context of Jekyll
       url: /mydoc/mydoc_yaml_tutorial.html
       audience: writers, designers
       platform: all

@@ -1,43 +1,40 @@
 ---
-title: Working with YAML
+title: YAML tutorial in the context of Jekyll
 tags: [formatting]
 keywords: search
-summary: "YAML is a format that relies on white spacing to separate out the various content elements. Jekyll lets you use Liquid with YAML as a way to parse through the YAML content. One of the most common uses of YAML is to store the items for your table of contents."
+summary: "YAML is a format that relies on white spacing to separate out the various elements of content. Jekyll lets you use Liquid with YAML as a way to parse through the data. Storing items for your table of contents is one of the most common uses of YAML with Jekyll."
 ---
 ## Overview
-One of the most interesting features of Jekyll is the ability to separate out data elements from formatting elements using a combination of YAML (stored in data files inside your \_data folder), and filtering and looping through that YAML using Liquid. This setup is most common when you're trying to create a table of contents. 
+One of the most interesting features of Jekyll is the ability to separate out data elements from formatting elements using a combination of YAML and Liquid. This setup is most common when you're trying to create a table of contents. 
 
 Not many Jekyll themes actually have a robust table of contents, which is critical when you are creating any kind of documentation or reference material that has a lot of pages.
 
-## Basic approach
+Here's the basic approach in creating a table of contents. You store your data items in a YAML file using YAML syntax. (I'll go over more about YAML syntax in a later section.) You then create your HTML structure in another file, such as sidebar.html. You might leverage one of the many different table of content frameworks (such as [Navgoco](https://github.com/tefra/navgoco)) that have been created for this HTML structure. 
 
-Here's the basic approach in creating a table of contents. You store your data items in a YAML file using YAML syntax. (I'll go over more about YAML syntax in a later section.) You then create your HTML structure in another file, such as sidebar.html. You might leverage one of the many different table of content's frameworks (such as [Navgoco](https://github.com/tefra/navgoco)) that have been created for this HTML structure. 
-
-Then, using Liquid syntax for loops and other iteration techniques, you access all of those values from the data file and splice them into HTML formatting. This will become more clear as we go through some examples.
+Then, using Liquid syntax for loops and conditions, you access all of those values from the data file and splice them into HTML formatting. This will become more clear as we go through some examples.
 
 ## YAML overview
 
 Rather than just jump into YAML at the most advanced level, I'm going to start from ground zero with an introduction to YAML and how you access basic values in your data files using Jekyll. 
 
-Note that you don't actually have to use Jekyll when using YAML. YAML is used in a lot of other  systems and is a format completely independent of Jekyll. However, because Jekyll uses Liquid, it  gives you a lot of power to parse through your YAML data and make use of it. 
+Note that you don't actually have to use Jekyll when using YAML. YAML is used in a lot of other systems and is a format completely independent of Jekyll. However, because Jekyll uses Liquid, it gives you a lot of power to parse through your YAML data and make use of it. 
 
-YAML itself doesn't really do anything &#mdash; it's just a way of storing your data in a specific structure that other utilities can parse.
+YAML itself doesn't do anything on its own &mdash; it's just a way of storing your data in a specific structure that other utilities can parse.
 
 ## YAML basics
 You can read about YAML from a lot of different sources. Here are some basic characteristics of YAML:
 
-* YAML doesn't use markup tags. This means you won't see any kind of angle brackets. It uses white space as a way to form the structure. This makes YAML much more human readable.  
+* YAML ("**Y**AML **A**in't **N**o **M**arkup **L**anguage") doesn't use markup tags. This means you won't see any kind of angle brackets. It uses white space as a way to form the structure. This makes YAML much more human readable. 
 *  Because YAML does use white space for the structure, YAML is extremely picky about the exactness of spaces. If you have just one extra space somewhere, it can cause the whole file to be invalid.
-* For each new level in YAML, you indent two spaces.
-* Because tabs are not universally implemented the same way, a tab might not equate to two spaces. In general, it's best to manually type two spaces to create a new level in YAML. 
+* For each new level in YAML, you indent two spaces. Each level provides a different access point for the content. You use dot notation to access each new level.
+* Because tabs are not universally implemented the same way in editors, a tab might not equate to two spaces. In general, it's best to manually type two spaces to create a new level in YAML. 
 * YAML has several types of elements. The most common are mappings and lists. A mapping is simply a key-value pair. A list is a sequence of items. List start with hyphens.
 * Items at each level can have various properties. You can create conditions based on the properties. 
-* You use dot notation to access each new level.
 * You can use "for" loops to iterate through a list. 
 
 I realize a lot of this vague and general; however, it will become a lot more clear as we go through some concrete examples.
 
-In the _data/mydoc folder,  there's a file called samplelist.yml. All of these examples come from that file.
+In the \_data/mydoc folder, there's a file called samplelist.yml. All of these examples come from that file.
  
 ## Example 1: Simple mapping
 
@@ -103,7 +100,9 @@ block: |
 **Block**
 {{site.data.mydoc.samplelist.block}}
 
+The right angle bracket `<` allows you to put the value on the next lines. Even if you create a line break, the output will remove all of those line breaks.
 
+The pipe `|` functions like the angle bracket in that it allows you to put the values for the mapping on the next lines. However, the pipe does preserve all of the line breaks that you use. This makes the pipe method ideal for storing code samples.
 
 ## Example 3: Simple list
 
@@ -132,7 +131,7 @@ bikes:
 * {{item.title}}
 {% endfor %}
 
-Here we use a "for" loop to get each item in the bikes list. By using ".title" we only get the title property from each list item.
+Here we use a "for" loop to get each item in the bikes list. By using `.title` we only get the `title` property from each list item.
 
 ## Example 4: List items
  
@@ -172,11 +171,9 @@ salesteams:
 </ul>
 {% endfor %}
 
-Hopefully you can start to see how to wrap more complex formatting around the YAML content. When you use a "for" loop, you basically choose the variable of what to call the list items. Each list item starts with the hyphen "–".  It's important to understand that you cannot directly access the list item by referring to a mapping (unless you specify the position in the list). You only loop through the list items. 
+Hopefully you can start to see how to wrap more complex formatting around the YAML content. When you use a "for" loop, you choose the variable of what to call the list items. The variable you choose to use becomes how you access the properties of each list item. In this case, I decided to use the variable `item`. In order to get each property of the list item, I used `item.subitems`.
 
-If you wanted to access the list item, you would have to use something like `[1]`, which is how you access the position in an array. You cannot access a list item like you can access a mapping key.
-
-The variable you choose to use becomes how you access the properties of each list item. In this case, I decided to use the variable "item". I In order to get each property of the list item, I used "item.subitems".
+Each list item starts with the hyphen `–`.  You cannot directly access the list item by referring to a mapping. You only loop through the list items. If you wanted to access the list item, you would have to use something like `[1]`, which is how you access the position in an array. You cannot access a list item like you can access a mapping key.
 
 ## Example 5: Table of contents
 
@@ -227,7 +224,7 @@ toc:
 </ul>
 {% endfor %}
 
-This example is similar to the previous one, but it's more developed  as a real table of contents. I wanted to show kind of how it pretty much works.
+This example is similar to the previous one, but it's more developed as a real table of contents. 
 
 ## Example 6: Variables
 
@@ -250,11 +247,11 @@ myref: *hello
 
 {{ site.data.mydoc.samplelist.myref }}
 
-This example is different. Here I'm showing how to reuse content in YAML file. If you have the same value that you want to repeat in other mappings, you can create a variable using the `&` symbol. Then when you want to refer to that variable's value, you use an asterisk `*` followed by the name of the variable.
+This example is notably different. Here I'm showing how to reuse content in YAML file. If you have the same value that you want to repeat in other mappings, you can create a variable using the `&` symbol. Then when you want to refer to that variable's value, you use an asterisk `*` followed by the name of the variable.
  
 In this case the variable is `&hello` and its value is `Greetings earthling!` In order to reuse that same value, you just type `*hello`.
  
-I don't use variables very much myself, but that's not to say they couldn't be highly useful. For example, let's say you put name of the product in parentheses after each title (because you have various products that you're providing documentation for in the same site). You could create a variable for that product name so that if you change how you're referring to it, you wouldn't have to change all instances of it in your YAML file.
+I don't use variables much, but that's not to say they couldn't be highly useful. For example, let's say you put name of the product in parentheses after each title (because you have various products that you're providing documentation for in the same site). You could create a variable for that product name so that if you change how you're referring to it, you wouldn't have to change all instances of it in your YAML file.
 
 ## Example 7: Positions in lists
 
@@ -280,9 +277,9 @@ about:
 
 {{ site.data.mydoc.samplelist.about[0] }}
 
-You can see that were accessing one of the items in the list using `[0]`.  this refers to the position in the array with a list item is. And remember that you start counting at zero, not one.
+You can see that I'm accessing one of the items in the list using `[0]`. This refers to the position in the array where a list item is. Like most programming languages, you start counting at zero, not one.
  
-I wanted to include this example because it points to the challenge in getting a value from a specific list item. You can't just call out a specific item in a list like you can with a mapping that has a key – value pair. This is why you usually iterate through the list items using a "for" loop. 
+I wanted to include this example because it points to the challenge in getting a value from a specific list item. You can't just call out a specific item in a list like you can with a mapping. This is why you usually iterate through the list items using a "for" loop. 
 
 ## Example 8: Properties from list items at specific positions
 
@@ -362,7 +359,9 @@ mypages:
 {% endif %}
 {% endfor %}
 
-Let's adjust the condition just a little. Now let's add a second condition so that the `audience` property has to be writers and the `product` property has to be gizmo. This is how you would write.
+This example shows how you can use conditions in order to selectively get the YAML content. In your table of contents, you might have a lot of different pages. However, you might only want to get the pages for a particular audience. Conditions lets you get only the items that meet those audience attributes.
+ 
+Now let's adjust the condition just a little. Let's add a second condition so that the `audience` property has to be `writers` and the `product` property has to be gizmo. This is how you would write it:
 
 {% raw %}
 ```liquid
