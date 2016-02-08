@@ -41,9 +41,10 @@ This is my reference notes and quick reference for using Mercurial.
 
 <dt>bookmarks:</dt><dd>This is a way to create branches in Mercurial. First run <code>hg bookmark hell</code>. Then <code>hg checkout hell</code>. Now you're working in hell. Then run <code>hg bookmark --delete hell</code> to delete hell. </dd>
 
-<dt>branches</dt><dd> You don't really work with branches in Mercurial. If you create a branch, it's considered a separate line of code. Rarely do you merge branches back in. In this regard, Mercurial differs greatly from Git. However, Mercurial's approach to branching is that you should simply clone the repository. When you want to merge your clone, you pull changes from your clone. There's really no reason to add in this new "branching" functionality when all you're doing is basically the same clone operation. </dd.
+<dt>branches</dt><dd> You don't really work with branches in Mercurial. If you create a branch, it's considered a separate line of code. Rarely do you merge branches back in. In this regard, Mercurial differs greatly from Git. However, Mercurial's approach to branching is that you should simply clone the repository. When you want to merge your clone, you pull changes from your clone. There's really no reason to add in this new "branching" functionality when all you're doing is basically the same clone operation. </dd>.
 
 </dl>
+
 
 ## Commands
  
