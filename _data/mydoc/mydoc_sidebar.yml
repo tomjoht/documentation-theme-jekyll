@@ -217,6 +217,15 @@ entries:
       version: all
       output: web, pdf
 
+    - title: Working with YAML
+      url: /mydoc/mydoc_yaml_tutorial.html
+      audience: writers, designers
+      platform: all
+      product: all
+      version: all
+      output: web, pdf
+
+
     - title: Tags
       url: /mydoc/mydoc_tags.html
       audience: writers, designers
@@ -479,22 +488,38 @@ entries:
       version: all
       output: web, pdf
 
-#  - title: Collaborating with version control
-#    audience: writers, designers
-#    platform: all
-#    product: all
-#    version: all
-#    output: web, pdf
-#    items:
-#
-#    - title: Mercurial notes and tips
-#      url: /mydoc/mydoc_mercurial_collaboration.html
-#      audience: writers, designers
-#      platform: all
-#      product: all
-#      version: all
-#      output: web, pdf
-#
+  - title: Algolia search
+    audience: writers, designers
+    platform: all
+    product: all
+    version: all
+    output: web, pdf
+    items:
+
+    - title: Configuring Algolia search
+      url: /mydoc/mydoc_algoliasearch.html
+      audience: writers, designers
+      platform: all
+      product: all
+      version: all
+      output: web, pdf
+
+  - title: Collaborating with version control
+    audience: writers, designers
+    platform: all
+    product: all
+    version: all
+    output: web, pdf
+    items:
+
+    - title: Mercurial notes and tips
+      url: /mydoc/mydoc_mercurial_collaboration.html
+      audience: writers, designers
+      platform: all
+      product: all
+      version: all
+      output: web, pdf
+
 #    - title: Git notes and tips
 #      url: /mydoc/mydoc_git_collaboration.html
 #      audience: writers, designers

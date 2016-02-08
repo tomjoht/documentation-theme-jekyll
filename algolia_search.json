@@ -4,17 +4,20 @@ layout: none
 search: exclude
 ---
 
-{
-{% for post in site.pages %}
+[
+{% for page in site.pages %}
 {% unless page.search == "exclude" %}
-"{{ post.url | slugify }}": {
-"title": "{{ post.title | xml_escape }}",
-"url": " {{ post.url | xml_escape | prepend: '..'}}",
-"summary": {{post.summary}},
-"body": {{post.content}},
-"tags": "{{ post.tags | xml_escape }}"
-}
+{
+"title": "{{ page.title | escape }}",
+"tags": "{{ page.tags }}",
+"keywords": "{{page.keywords}}",
+"url": "{{ page.url | prepend: '..' }}",
+"summary": "{{page.summary}}",
+"body": "{{ page.content | strip | strip_html | strip_newlines | replace: '\', '\\\\' | replace: '"', '\\"' | replace: '	', '    ' }}"
+
+},
 {% endunless %}
-{% unless forloop.last %},{% endunless %}
+
 {% endfor %}
-}
+null
+]

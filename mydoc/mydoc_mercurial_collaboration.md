@@ -3,7 +3,6 @@ title: Mercurial notes and tips
 summary: "If you're using Mercurial to collaborate on a project, see the tips and notes on this page."
 tags: collaboration
 keywords: mercurial, hg, collaboration, interaction, project teams
-published: false
 ---
 
 
@@ -37,14 +36,12 @@ This is my reference notes and quick reference for using Mercurial.
 
 <dt>child</dt> <dd>Later in the changeset history. the first parent is the first changeset, and then you have a list of descendants, which are the children.</dd>
 
-<dt>merge conflict scenarios</dt> <dd>Merge conflicts happen wou add or modify a file that another has removed from one commit to another, you make conflicting changes to the same file from one commit to another, or Mercurial notes some other file discrepancy. When a merge conflict happens, Mercurial launches a merge program to resolve the conflict. When merge conflicts happen, Mercurial removes the problematic files from the working directory until you fix them. You have to add them again to the working directory.
+<dt>merge conflict scenarios</dt> <dd>Merge conflicts happen when add or modify a file that another has removed from one commit to another, you make conflicting changes to the same file from one commit to another, or Mercurial notes some other file discrepancy. When a merge conflict happens, Mercurial launches a merge program to resolve the conflict. When merge conflicts happen, Mercurial removes the problematic files from the working directory until you fix them. You have to add them again to the working directory.
 </dd>
 
 <dt>bookmarks:</dt><dd>This is a way to create branches in Mercurial. First run <code>hg bookmark hell</code>. Then <code>hg checkout hell</code>. Now you're working in hell. Then run <code>hg bookmark --delete hell</code> to delete hell. </dd>
 
 <dt>branches</dt><dd> You don't really work with branches in Mercurial. If you create a branch, it's considered a separate line of code. Rarely do you merge branches back in. In this regard, Mercurial differs greatly from Git. However, Mercurial's approach to branching is that you should simply clone the repository. When you want to merge your clone, you pull changes from your clone. There's really no reason to add in this new "branching" functionality when all you're doing is basically the same clone operation. </dd.
-
-<dt>rebase</dt><dd> I think this refers to drug use of some kind.  </dd>
 
 </dl>
 
@@ -88,8 +85,7 @@ This is my reference notes and quick reference for using Mercurial.
 | bookmark --delete {bookmark_name | deletes the bookmark |
 | revert | go back to the way the files were at the last commit |
 
-{{site.data.alerts.note}} {{site.data.alerts.end}}
-You can add a source for all of these commands. If no source is specified, the default repo (from which the existing repo was cloned) is used. For example, pull (source) will pull from a source other than the default if specified.
+{{site.data.alerts.note}} You can add a source for all of these commands. If no source is specified, the default repo (from which the existing repo was cloned) is used. For example, pull (source) will pull from a source other than the default if specified.{{site.data.alerts.end}}
 
 When you run `hg status`, there are various icons next to the files. 
 
@@ -106,9 +102,10 @@ When you run `hg status`, there are various icons next to the files.
 
 As a general worfklow:
 
-1. Pull -u (or fetch)
 1. Commit
-2. Push
+2. Pull -u (or fetch)
+3. Merge
+4. Push
 
 
 ## Merge conflicts
@@ -116,16 +113,18 @@ As a general worfklow:
 When a conflict happens, the default merge program configured in .hgrc launches. [P4Merge](https://www.perforce.com/product/components/perforce-visual-merge-and-diff-tools) works well. 
 To configure Mercurial to use p4merge, install P4Merge, and then put this into your .hgrc file (if it's not already there).
 
+```
 p4merge.executable = /Applications/p4merge.app/Contents/MacOS/p4merge
 p4merge.priority = 50
 p4merge.premerge = True
 p4merge.gui = True
 p4merge.args = $base $local $other $output
 p4merge.binary = True
+```
 
 When P4Merge launches to resolve a merge conflict, you select the change you want, or add your own. Then Save. Then quit P4merge completely.
 
-I am not sure if you have to run `hg addremove` and then `hg resolve --mark` to mark the conflict as resolved.
+(I am not sure if you have to run `hg addremove` and then `hg resolve --mark` to mark the conflict as resolved.)
 
 For more details, see [P4Merge](https://www.mercurial-scm.org/wiki/P4Merge).
 
@@ -148,7 +147,7 @@ If you forget to add certain files to your ignore list, you can add them later a
 
 ## Merge conflicts
 
-Here's the scenario. After you do hg pull -u, you get this error message:
+Here's the scenario. After you do `hg pull -u`, you get this error message:
 
 ```
 abort: untracked files in working directory differ from files in requested revision
@@ -167,12 +166,14 @@ When you run into problems with Mercurial, you should try to sort it out the bes
 
 1. Change the name of your "repo" to "repo-old".
 2. Reclone the project.
-3. Copy over the contents from repo old into repo. (Don't copy over the .hg. idea, .DS_Store, or .hgignore files.)
+3. Copy over the contents from repo-old into repo. (Don't copy over the .hg. idea, .DS_Store, or .hgignore files.)
 
 Now follow the standard Commit and Push instructions here. It should fix the issue.
 
 ## Creating a Mercurial Test Playground on Your Local Machine
+
 You can create some local Mercurial repos on your machine so you can play around with commits, merges, and other experiments.
+
 Create a folder and initialize Mercurial in the folder:
 
 ```
@@ -242,10 +243,7 @@ If you run the hg addremove command, Mercurial will simply add back the file you
 
 You should add this file to an ignore list. 
 
-Go to the root directory of your jekyll project.
-
-Create a file called .hgignore.
-
-Add each file you want to ignore (e.g., .jekyll-metadata) on a separate line.
-
-Now make sure that everyone else adds these files to their ignore list. If someone else commits a file that you've ignored, Mercurial will complain when you pull the latest revision.
+1. Go to the root directory of your jekyll project.
+2. Create a file called .hgignore.
+3. Add each file you want to ignore (e.g., .jekyll-metadata) on a separate line.
+4. Now make sure that everyone else adds these files to their ignore list. If someone else commits a file that you've ignored, Mercurial will complain when you pull the latest revision.

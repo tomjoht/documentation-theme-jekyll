@@ -4,32 +4,18 @@ layout: none
 search: exclude
 ---
 
-//[
-//{% for page in site.pages %}
-//{% unless page.search == "exclude" %}
-//{
-//"title": "{{ page.title | escape }}",
-//"tags": "{{ page.tags }}",
-//"keywords": "{{page.keywords}}",
-//"url": "{{ page.url | prepend: '..' }}",
-//"summary": "{{page.summary}}"
-//},
-//{% endunless %}
-//
-//{% endfor %}
-//null
-//]
-
-{
-{% for post in site.pages %}
+[
+{% for page in site.pages %}
 {% unless page.search == "exclude" %}
-"{{ post.url | slugify }}": {
-"title": "{{ post.title | xml_escape }}",
-"url": " {{ post.url | xml_escape | prepend: '..'}}",
-"summary": {{post.summary}},
-"tags": "{{ post.tags | xml_escape }}"
-}
+{
+"title": "{{ page.title | escape }}",
+"tags": "{{ page.tags }}",
+"keywords": "{{page.keywords}}",
+"url": "{{ page.url | prepend: '..' }}",
+"summary": "{{page.summary}}"
+},
 {% endunless %}
-{% unless forloop.last %},{% endunless %}
+
 {% endfor %}
-}
+null
+]

@@ -44,6 +44,7 @@ feedback_email: tomjohnson1492@gmail.com
 highlighter: rouge
 markdown: kramdown
 kramdown:
+  input: GFM
   auto_ids: true
 
 collections:

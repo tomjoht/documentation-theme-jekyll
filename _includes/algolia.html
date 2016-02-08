@@ -12,8 +12,8 @@
 
 <script>
     $(document).ready(function() {
-        var client = algoliasearch('{{site.algolia.application_id}}', '{{site.algolia.search_only_api_key}}');
-        var index = client.initIndex('{{site.algolia.index_name}}');
+        var client = algoliasearch('{{site.algolia_application_id}}', '{{site.algolia_search_only_api_key}}');
+        var index = client.initIndex('{{site.algolia_index_name}}');
         var $input = $('input');
         $input.keyup(function() {
             index.search($input.val(), {
@@ -34,7 +34,7 @@
         $users.empty();
 
         for (var i = 0; i < content.hits.length; i++) {
-            $users.append('<li> <a href="' + content.hits[i].url + '">' + content.hits[i].title + '</a></li>');
+            $users.append('<li> <a href="' + content.hits[i].url + '">' + content.hits[i].title + '</a> ' + content.hits[i]._highlightResult.body.value + '</li>');
         }
     };
 </script>
