@@ -3,13 +3,13 @@
 topnav:
 - title: Topnav
   subcategories:
-    - title: Search
-      url: /mydoc/search.html
-      audience: writers, designers
-      platform: all
-      product: all
-      version: all
-      output: web
+#    - title: Sample
+#      url: /mydoc/sample.html
+#      audience: writers, designers
+#      platform: all
+#      product: all
+#      version: all
+#      output: web
 
     - title: Github Repo
       external_url: https://github.com/tomjohnson1492/documentation-theme-jekyll
