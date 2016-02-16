@@ -87,7 +87,7 @@ Additionally, if your page names are prefaced with numbers, such as "1. Download
 On each series page, add a link to the series button at the top and a link to the next button at the bottom.
  
 {% raw %}
-```html
+```liquid
 <!-- your frontmatter goes here -->
 
 {% include custom/mydoc/series_acme.html %}

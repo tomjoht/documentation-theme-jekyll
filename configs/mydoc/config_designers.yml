@@ -41,21 +41,20 @@ exclude:
 host: 127.0.0.1
 feedback_email: tomjohnson1492@gmail.com
 
-# Ideally use these settings once Jekyll and Github Pages sort out their issues...
-#highlighter: rouge
-#markdown: kramdown
-#kramdown:
-#  input: GFM
-#  auto_ids: true
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  auto_ids: true
+  hard_wrap: false
+  syntax_highlighter: rouge
 
-# For now, these settings work:
+# old markdown and pygments settings
 
-highlighter: pygments
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "tables", "with_toc_data"]
-
-
+#highlighter: pygments
+#markdown: redcarpet
+#redcarpet:
+#  extensions: ["no_intra_emphasis", "fenced_code_blocks", "tables", "with_toc_data"]
 
 
 collections:

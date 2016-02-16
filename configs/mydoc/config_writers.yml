@@ -46,7 +46,15 @@ markdown: kramdown
 kramdown:
   input: GFM
   auto_ids: true
+  hard_wrap: false
+  syntax_highlighter: rouge
 
+# old markdown and pygments settings
+
+#highlighter: pygments
+#markdown: redcarpet
+#redcarpet:
+#  extensions: ["no_intra_emphasis", "fenced_code_blocks", "tables", "with_toc_data"]
 collections:
   tooltips:
     output: false
