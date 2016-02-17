@@ -24,7 +24,7 @@ YAML itself doesn't do anything on its own &mdash; it's just a way of storing yo
 ## YAML basics
 You can read about YAML from a lot of different sources. Here are some basic characteristics of YAML:
 
-* YAML ("**Y**AML **A**in't **N**o **M**arkup **L**anguage") doesn't use markup tags. This means you won't see any kind of angle brackets. It uses white space as a way to form the structure. This makes YAML much more human readable. 
+* YAML ("**Y**AML **A**in't **M**arkup **L**anguage") doesn't use markup tags. This means you won't see any kind of angle brackets. It uses white space as a way to form the structure. This makes YAML much more human readable. 
 *  Because YAML does use white space for the structure, YAML is extremely picky about the exactness of spaces. If you have just one extra space somewhere, it can cause the whole file to be invalid.
 * For each new level in YAML, you indent two spaces. Each level provides a different access point for the content. You use dot notation to access each new level.
 * Because tabs are not universally implemented the same way in editors, a tab might not equate to two spaces. In general, it's best to manually type two spaces to create a new level in YAML. 
@@ -46,7 +46,7 @@ name:
   wife: Shannon
 ```
 
-**Markdown:**
+**Markdown + Liquid:**
 
 {% raw %}
 ```liquid
@@ -100,9 +100,9 @@ block: |
 **Block**
 {{site.data.mydoc.samplelist.block}}
 
-The right angle bracket `<` allows you to put the value on the next lines. Even if you create a line break, the output will remove all of those line breaks.
+The right angle bracket `>` allows you to put the value on the next lines (which must be indented). Even if you create a line break, the output will remove all of those line breaks, creating one paragraph.
 
-The pipe `|` functions like the angle bracket in that it allows you to put the values for the mapping on the next lines. However, the pipe does preserve all of the line breaks that you use. This makes the pipe method ideal for storing code samples.
+The pipe `|` functions like the angle bracket in that it allows you to put the values for the mapping on the next lines (which again must be indented). However, the pipe does preserve all of the line breaks that you use. This makes the pipe method ideal for storing code samples.
 
 ## Example 3: Simple list
 
@@ -297,7 +297,7 @@ numbercolors:
    properties: blue
 ```
 
-**Markdown:**
+**Markdown + Liquid:**
 
 {% raw %}
 ```liquid
@@ -372,6 +372,14 @@ Now let's adjust the condition just a little. Let's add a second condition so th
 {% endfor %}
 ```
 {% endraw %}
+
+And here is the result:
+
+{% for sec in site.data.mydoc.samplelist.mypages %}
+{% if sec.audience == "writers" and sec.product == "gizmo" %}
+* {{sec.url}}
+{% endif %}
+{% endfor %}
 
 ## More resources
 

@@ -619,6 +619,7 @@ h4 {color: #808080; font-weight:normal; font-size:120%; font-style:italic;}
 }
 
 ol li ol li {list-style-type: lower-alpha;}
+ol li ul li {list-style-type: disc;}
 
 li img {clear:both; }
 
