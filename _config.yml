@@ -1,3 +1,5 @@
+# this is simply copied over from config/config_designers.yml
+
 # project definitions
 project: mydoc_designers
 audience: designers
@@ -11,7 +13,7 @@ homepage_title: Jekyll doc theme for designers
 site_title: Jekyll theme for designers
 project_folder: mydoc
 company_name: Your company
-footer_image_location: ../common_images/company_logo.png
+footer_image_location: ../../common_images/company_logo.png
 github_editme_path: tomjohnson1492/documentation-theme-jekyll/edit/reviews
 disqus_shortname: idrbwjekyll
 # variables
@@ -41,11 +43,21 @@ exclude:
 host: 127.0.0.1
 feedback_email: tomjohnson1492@gmail.com
 
-highlighter: rouge
-markdown: kramdown
-kramdown:
-  input: GFM
-  auto_ids: true
+# these settings should work, but they don't seem to apply the right highlighting
+
+#highlighter: rouge
+#markdown: kramdown
+#kramdown:
+#  input: GFM
+#  auto_ids: true
+#  hard_wrap: false
+#  syntax_highlighter: rouge
+
+highlighter: pygments
+markdown: redcarpet
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "tables", "with_toc_data"]
+
 
 collections:
   tooltips:
