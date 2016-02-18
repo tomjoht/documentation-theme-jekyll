@@ -11,7 +11,7 @@ homepage_title: Jekyll doc theme for designers
 site_title: Jekyll theme for designers
 project_folder: mydoc
 company_name: Your company
-footer_image_location: ../common_images/company_logo.png
+footer_image_location: ../../common_images/company_logo.png
 github_editme_path: tomjohnson1492/documentation-theme-jekyll/edit/reviews
 disqus_shortname: idrbwjekyll
 # variables
