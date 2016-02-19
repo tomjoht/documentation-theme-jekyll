@@ -129,7 +129,9 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll
   pygments.rb
+  redcarpet
 
 BUNDLED WITH
    1.10.6
