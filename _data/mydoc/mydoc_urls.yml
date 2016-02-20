@@ -13,6 +13,11 @@
 
 
 
+
+
+
+
+
 home:
   title: "Introduction"
   url: "../mydoc/home.html"
@@ -20,31 +25,96 @@ home:
 
 
 
-mydoc_getting_started:
-  title: "Getting started with this theme"
-  url: "../mydoc/mydoc_getting_started.html"
-  link: "<a href='../mydoc/mydoc_getting_started.html'>Getting started with this theme</a>"
-
-
-
-mydoc_configuration_settings:
-  title: "Setting configuration options"
-  url: "../mydoc/mydoc_configuration_settings.html"
-  link: "<a href='../mydoc/mydoc_configuration_settings.html'>Setting configuration options</a>"
-
-
-
-mydoc_adding_new_projects:
-  title: "Adding new projects"
-  url: "../mydoc/mydoc_adding_new_projects.html"
-  link: "<a href='../mydoc/mydoc_adding_new_projects.html'>Adding new projects</a>"
-
-
-
 mydoc_supported_features:
   title: "Supported features"
   url: "../mydoc/mydoc_supported_features.html"
   link: "<a href='../mydoc/mydoc_supported_features.html'>Supported features</a>"
+
+
+
+mydoc_about:
+  title: "About the theme author"
+  url: "../mydoc/mydoc_about.html"
+  link: "<a href='../mydoc/mydoc_about.html'>About the theme author</a>"
+
+
+
+mydoc_support:
+  title: "Support"
+  url: "../mydoc/mydoc_support.html"
+  link: "<a href='../mydoc/mydoc_support.html'>Support</a>"
+
+
+
+
+
+mydoc_getting_started:
+  title: "1. Build the default project"
+  url: "../mydoc/mydoc_getting_started.html"
+  link: "<a href='../mydoc/mydoc_getting_started.html'>1. Build the default project</a>"
+
+
+
+mydoc_adding_new_projects:
+  title: "2. Add a new project"
+  url: "../mydoc/mydoc_adding_new_projects.html"
+  link: "<a href='../mydoc/mydoc_adding_new_projects.html'>2. Add a new project</a>"
+
+
+
+mydoc_decide_on_attributes:
+  title: "3. Decide on your project's attributes"
+  url: "../mydoc/mydoc_decide_on_attributes.html"
+  link: "<a href='../mydoc/mydoc_decide_on_attributes.html'>3. Decide on your project's attributes</a>"
+
+
+
+mydoc_configuration_settings:
+  title: "4. Set the configuration options"
+  url: "../mydoc/mydoc_configuration_settings.html"
+  link: "<a href='../mydoc/mydoc_configuration_settings.html'>4. Set the configuration options</a>"
+
+
+
+mydoc_conditions_file_customization:
+  title: "5. Customize the conditions file"
+  url: "../mydoc/mydoc_conditions_file_customization.html"
+  link: "<a href='../mydoc/mydoc_conditions_file_customization.html'>5. Customize the conditions file</a>"
+
+
+
+mydoc_configure_sidebar:
+  title: "6. Configure the sidebar"
+  url: "../mydoc/mydoc_configure_sidebar.html"
+  link: "<a href='../mydoc/mydoc_configure_sidebar.html'>6. Configure the sidebar</a>"
+
+
+
+mydoc_top_navigation:
+  title: "7. Configure the top navigation"
+  url: "../mydoc/mydoc_top_navigation.html"
+  link: "<a href='../mydoc/mydoc_top_navigation.html'>7. Configure the top navigation</a>"
+
+
+
+mydoc_url_generator_customization:
+  title: "8. Customize the URL generator"
+  url: "../mydoc/mydoc_url_generator_customization.html"
+  link: "<a href='../mydoc/mydoc_url_generator_customization.html'>8. Customize the URL generator</a>"
+
+
+
+mydoc_princexml_setup:
+  title: "9. Set up Prince XML"
+  url: "../mydoc/mydoc_princexml_setup.html"
+  link: "<a href='../mydoc/mydoc_princexml_setup.html'>9. Set up Prince XML</a>"
+
+
+
+mydoc_build_scripts:
+  title: "10. Configure the build scripts"
+  url: "../mydoc/mydoc_build_scripts.html"
+  link: "<a href='../mydoc/mydoc_build_scripts.html'>10. Configure the build scripts</a>"
 
 
 
@@ -64,10 +134,17 @@ mydoc_webstorm_text_editor:
 
 
 
-mydoc_series:
-  title: "Series"
-  url: "../mydoc/mydoc_series.html"
-  link: "<a href='../mydoc/mydoc_series.html'>Series</a>"
+mydoc_conditional_logic:
+  title: "Conditional logic"
+  url: "../mydoc/mydoc_conditional_logic.html"
+  link: "<a href='../mydoc/mydoc_conditional_logic.html'>Conditional logic</a>"
+
+
+
+mydoc_content_reuse:
+  title: "Content reuse"
+  url: "../mydoc/mydoc_content_reuse.html"
+  link: "<a href='../mydoc/mydoc_content_reuse.html'>Content reuse</a>"
 
 
 
@@ -87,10 +164,10 @@ mydoc_sidebar_navigation:
 
 
 
-mydoc_top_navigation:
-  title: "Top navigation"
-  url: "../mydoc/mydoc_top_navigation.html"
-  link: "<a href='../mydoc/mydoc_top_navigation.html'>Top navigation</a>"
+mydoc_yaml_tutorial:
+  title: "YAML tutorial in the context of Jekyll"
+  url: "../mydoc/mydoc_yaml_tutorial.html"
+  link: "<a href='../mydoc/mydoc_yaml_tutorial.html'>YAML tutorial in the context of Jekyll</a>"
 
 
 
@@ -98,6 +175,13 @@ mydoc_tags:
   title: "Tags"
   url: "../mydoc/mydoc_tags.html"
   link: "<a href='../mydoc/mydoc_tags.html'>Tags</a>"
+
+
+
+mydoc_series:
+  title: "Series"
+  url: "../mydoc/mydoc_series.html"
+  link: "<a href='../mydoc/mydoc_series.html'>Series</a>"
 
 
 
@@ -175,22 +259,6 @@ mydoc_syntax_highlighting:
 
 
 
-mydoc_conditional_logic:
-  title: "Conditional logic"
-  url: "../mydoc/mydoc_conditional_logic.html"
-  link: "<a href='../mydoc/mydoc_conditional_logic.html'>Conditional logic</a>"
-
-
-
-mydoc_content_reuse:
-  title: "Content reuse"
-  url: "../mydoc/mydoc_content_reuse.html"
-  link: "<a href='../mydoc/mydoc_content_reuse.html'>Content reuse</a>"
-
-
-
-
-
 mydoc_commenting_on_files:
   title: "Commenting on files"
   url: "../mydoc/mydoc_commenting_on_files.html"
@@ -218,6 +286,13 @@ mydoc_link_validation:
   title: "Link validation"
   url: "../mydoc/mydoc_link_validation.html"
   link: "<a href='../mydoc/mydoc_link_validation.html'>Link validation</a>"
+
+
+
+mydoc_title_checker:
+  title: "Check page title consistency"
+  url: "../mydoc/mydoc_title_checker.html"
+  link: "<a href='../mydoc/mydoc_title_checker.html'>Check page title consistency</a>"
 
 
 
@@ -263,6 +338,13 @@ mydoc_push_build_to_server:
 
 
 
+mydoc_no_password_prompts_scp:
+  title: "Getting around the password prompts in SCP"
+  url: "../mydoc/mydoc_no_password_prompts_scp.html"
+  link: "<a href='../mydoc/mydoc_no_password_prompts_scp.html'>Getting around the password prompts in SCP</a>"
+
+
+
 
 
 mydoc_kb_layout:
@@ -302,10 +384,35 @@ mydoc_glossary:
 
 
 
+mydoc_algoliasearch:
+  title: "Configuring Algolia search"
+  url: "../mydoc/mydoc_algoliasearch.html"
+  link: "<a href='../mydoc/mydoc_algoliasearch.html'>Configuring Algolia search</a>"
+
+
+
+
+
+mydoc_mercurial_collaboration:
+  title: "Mercurial notes and tips"
+  url: "../mydoc/mydoc_mercurial_collaboration.html"
+  link: "<a href='../mydoc/mydoc_mercurial_collaboration.html'>Mercurial notes and tips</a>"
+
+
+
+
+
 mydoc_troubleshooting:
   title: "Troubleshooting"
   url: "../mydoc/mydoc_troubleshooting.html"
   link: "<a href='../mydoc/mydoc_troubleshooting.html'>Troubleshooting</a>"
+
+
+
+mydoc_install_dependencies:
+  title: "Adding all project dependencies"
+  url: "../mydoc/mydoc_install_dependencies.html"
+  link: "<a href='../mydoc/mydoc_install_dependencies.html'>Adding all project dependencies</a>"
 
 
 
@@ -354,6 +461,10 @@ tag_special_layouts:
   link: "<a href='../mydoc/tag_special_layouts.html'>Special layout pages</a>"
 
 
+tag_collaboration:
+  title: "Collaboration pages"
+  url: "../mydoc/tag_collaboration.html"
+  link: "<a href='../mydoc/tag_collaboration.html'>Collaboration pages</a>"
 
 
 
@@ -369,17 +480,9 @@ tag_special_layouts:
 
 
 
-/mydoc_about:
-  title: "About this theme"
-  url: "../mydoc_about.html"
-  link: "<a href='../mydoc_about.html'>About this theme</a>"
 
 
 
-/mydoc_support:
-  title: "Support"
-  url: "../mydoc_support.html"
-  link: "<a href='../mydoc_support.html'>Support</a>"
 
 
 

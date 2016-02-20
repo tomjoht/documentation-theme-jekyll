@@ -19,6 +19,11 @@ By default, WebStorm comes packaged with a lot more functionality than you proba
 
 Since you'll be writing in Markdown, having color coding and other support for Markdown is key. Install the Markdown Support plugin by going to **WebStorm > Preferences > Plugins** and clicking **Install JetBrains Plugin**. Search for **Markdown Support**.
 
+
+## Enable Soft Wraps (word wrapping)
+
+Most likely you'll want to enable soft wraps, which wraps lines rather than extending them out forever and requiring you to scroll horizontally to see the text. To enable softwrapping, go to **WebStorm > Preferences > Editor > General** and see the Soft Wraps section. Select the **Use soft wraps in editor** check box.
+
 ## Learn a few key commands
 
 |Command | Shortcuts |

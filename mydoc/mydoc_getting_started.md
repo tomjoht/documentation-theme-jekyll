@@ -18,6 +18,8 @@ Before you start installing the theme, make sure you have all of these prerequis
 * **[Rubygems](https://rubygems.org/pages/download)**. This is a package manager for Ruby. Type `which gem` to confirm.
 * **Text editor**: My recommendations is WebStorm (or IntelliJ). You can use another text editor. However, there are certain shortcuts and efficiencies in WebStorm (such as using Find and Replace across the project, or Markdown syntax highlighting) that I'll be noting in this documentation.
 
+I added a page called {{site.data.mydoc.mydoc_urls.mydoc_install_dependencies.link}} that explains how to install any necessary RubyGem dependencies in case you run into errors.
+
 ## Build the default project
 
 Before you start customizing the theme, make sure you can build the theme with the default content and settings first.
