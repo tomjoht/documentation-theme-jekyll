@@ -2,11 +2,12 @@
 title: Tables
 tags: [formatting]
 keywords: datatables, tables, grids, markdown, multimarkdown, jquery plugins
-last_updated: November 30, 2015
-datatable: true
+last_updated: March 20, 2016
+datatable: active
 summary: "You can format tables using either multimarkdown syntax or HTML. You can also use jQuery datatables (a plugin) if you need more robust tables."
+sidebar: mydoc_sidebar
+permalink: /mydoc_tables/
 ---
-
 
 {% unless site.output == "pdf" %}
 <script>
@@ -42,7 +43,7 @@ cell 2a | cell 2b
 
 ## jQuery datables
 
-You also have the option of using a [jQuery datatable](https://www.datatables.net/), which gives you some more options. If you want to use a jQuery datatable, then add `datatable: true` in a page's frontmatter. This will load the right jQuery datatable scripts for the table on that page only (rather than loading the scripts on every page of the site.)
+You also have the option of using a [jQuery datatable](https://www.datatables.net/), which gives you some more options. If you want to use a jQuery datatable, then add `datatable: active` in a page's frontmatter. This will load the right jQuery datatable scripts for the table on that page only (rather than loading the scripts on every page of the site.)
 
 Also, you need to add this script to trigger the jQuery table on your page:
 

@@ -1,9 +1,11 @@
 ---
 title: Help APIs and UI tooltips
 tags: [publishing, single_sourcing, content-types]
-last_updated: November 30, 2015
+last_updated: March 20, 2016
 keywords: API, content API, UI text, inline help, context-sensitive help, popovers, tooltips
 summary: "You can loop through files and generate a JSON file that developers can consume like a help API. Developers can pull in values from the JSON into interface elements, styling them as popovers for user interface text, for example. The beauty of this method is that the UI text remains in the help system (or at least in a single JSON file delivered to the dev team) and isn't hard-coded into the UI."
+sidebar: mydoc_sidebar
+permalink: /mydoc_help_api/
 ---
 
 
@@ -23,7 +25,7 @@ Additionally, instead of tooltip popovers, you could also print content directly
 
 Here's a diagram showing the basic idea of the help API: 
 
-<img src="images/helpapi.svg" style="width: 650px;"/>
+<img src="{{ "/images/helpapi.svg" | prepend: site.baseurl }}" style="width: 650px;"/>
 
 Is this really an API? Well, sort of. The help content is pushed out into a JSON file that other websites and applications can easily consume. The endpoints don't deliver different data based on parameters added to a URL. But the overall concept is similar to an API: you have a client requesting resources from a server.
 
@@ -49,7 +51,7 @@ In Jekyll, folders that begin with an underscore ("_") aren't included in the ou
 
 ## 2. Create tooltip definitions in a YAML file
 
-Inside \_data > mydoc create a YAML file called something like mydoc_definitions.yml. Add the definitions for each of your tooltips here like this:
+Inside \_data > mydoc create a YAML file called something like definitions.yml. Add the definitions for each of your tooltips here like this:
 
 ```yaml
 basketball: "Basketball is a sport involving two teams of five players each competing to put a ball through a small circular rim 10 feet above the ground. Basketball requires players to be in top physical condition, since they spend most of the game running back and forth along a 94-foot-long floor."
@@ -59,7 +61,7 @@ The definition of basketball is stored this data file so that you can re-use it 
 
 ## 3. Create pages in your collection
 
-Create pages inside your new tooltips collection (that is, inside the \_tooltips folder). Each page needs to have a unique `id` in the frontmatter as well as a `product`. Then reference the definition you created in the mydoc_definitions.yml file. 
+Create pages inside your new tooltips collection (that is, inside the \_tooltips folder). Each page needs to have a unique `id` in the frontmatter as well as a `product`. Then reference the definition you created in the definitions.yml file.
 
 Here's an example:
 
@@ -70,7 +72,7 @@ id: basketball
 product: mydoc
 ---
 
-{{site.data.mydoc.mydoc_definitions.basketball}}
+{{site.data.definitions.basketball}}
 ```
 {%endraw%}
 
@@ -115,19 +117,19 @@ This code will loop through all pages in the tooltips collection and insert the 
   "entries": [
     {
       "id": "baseball",
-      "body": "{{site.data.mydoc.mydoc_definitions.baseball}}"
+      "body": "{{site.data.definitions.baseball}}"
     },
     {
       "id": "basketball",
-      "body": "{{site.data.mydoc.mydoc_definitions.basketball}}"
+      "body": "{{site.data.definitions.basketball}}"
     },
     {
       "id": "football",
-      "body": "{{site.data.mydoc.mydoc_definitions.football}}"
+      "body": "{{site.data.definitions.football}}"
     },
     {
       "id": "soccer",
-      "body": "{{site.data.mydoc.mydoc_definitions.soccer}}"
+      "body": "{{site.data.definitions.soccer}}"
     }
   ]
 }
@@ -220,7 +222,7 @@ $.get( url, function( data ) {
 
         $.each(data.entries, function(i, page) {
             if (page.id == "basketball") {
-				$( "#basketball" ).attr( "data-content", page.body );
+            $( "#basketball" ).attr( "data-content", page.body );
             }
 
         });
@@ -295,22 +297,22 @@ Here's how you would reuse the content:
 
 <tr>
 <td>Basketball</td>
-<td>{{site.data.mydoc.mydoc_definitions.basketball}}</td>
+<td>{{site.data.definitions.basketball}}</td>
 </tr>
 
 <tr>
 <td>Baseball</td>
-<td>{{site.data.mydoc.mydoc_definitions.baseball}}</td>
+<td>{{site.data.definitions.baseball}}</td>
 </tr>
 
 <tr>
 <td>Football</td>
-<td>{{site.data.mydoc.mydoc_definitions.football}}</td>
+<td>{{site.data.definitions.football}}</td>
 </tr>
 
 <tr>
 <td>Soccer</td>
-<td>{{site.data.mydoc.mydoc_definitions.soccer}}</td>
+<td>{{site.data.definitions.soccer}}</td>
 </tr>
 </tbody>
 </table>
@@ -333,22 +335,22 @@ And here's the code:
 
 <tr>
 <td>Basketball</td>
-<td>{{site.data.mydoc.mydoc_definitions.basketball}}</td>
+<td>{{site.data.definitions.basketball}}</td>
 </tr>
 
 <tr>
 <td>Baseball</td>
-<td>{{site.data.mydoc.mydoc_definitions.baseball}}</td>
+<td>{{site.data.definitions.baseball}}</td>
 </tr>
 
 <tr>
 <td>Football</td>
-<td>{{site.data.mydoc.mydoc_definitions.football}}</td>
+<td>{{site.data.definitions.football}}</td>
 </tr>
 
 <tr>
 <td>Soccer</td>
-<td>{{site.data.mydoc.mydoc_definitions.soccer}}</td>
+<td>{{site.data.definitions.soccer}}</td>
 </tr>
 </tbody>
 </table>

@@ -2,8 +2,10 @@
 title: Troubleshooting
 tags: [getting_started]
 keywords: trouble, problems, support, error messages, problems, failure, error, #fail
-last_updated: November 30, 2015
+last_updated: March 20, 2016
 summary: "This page lists common errors and the steps needed to troubleshoot them."
+sidebar: mydoc_sidebar
+permalink: /mydoc_troubleshooting/
 ---
 
 
@@ -72,7 +74,7 @@ The config file requires pygments for the highlighter. You must [download and in
 
  If you build your site but the sidebar doesn't appear, check the following: 
 
- Look in \_includes/custom/conditions.html and make sure the conditional values there match up with the values declared in the configuration file. Specifically, you need to make sure you've declared a value for project, product, platform, and version. 
+ Look in \_includes/custom/sidebarconfigs.html and make sure the conditional values there match up with the values declared in the configuration file. Specifically, you need to make sure you've declared a value for project, product, platform, and version. 
 
  If you don't have any values for these properties, you still need to keep them in your configuration file. Just put something like `all` as the value. 
 

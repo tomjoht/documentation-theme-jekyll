@@ -4,6 +4,8 @@ summary: "If you're interacting with your team using Git, the notes and tips wil
 tags: collaboration
 keywords: git, github, collaboration, interaction, file sharing, push
 published: false
+sidebar: mydoc_sidebar
+permalink: /mydoc_git_collaboration/
 ---
 
 

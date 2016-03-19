@@ -1,9 +1,11 @@
 ---
 title: Tag archives overview
 keywords: archives, tagging
-last_updated: November 30, 2015
+last_updated: March 20, 2016
 tags: [navigation]
 summary: "This is an overview to the tag archives section. Really the only reason this section is listed explicitly in the TOC here is to demonstrate how to add a third-level to the navigation."
+sidebar: mydoc_sidebar
+permalink: /mydoc_tag_archives_overview/
 ---
 
 ## Reasons for tags

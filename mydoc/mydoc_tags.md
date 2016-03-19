@@ -2,9 +2,11 @@
 title: Tags
 audience: writer, designer
 tags: [navigation]
-last_updated: November 30, 2015
+last_updated: March 20, 2016
 keywords: tags, navigation, buttons, links, association
 summary: "Tags provide another means of navigation for your content. Unlike the table of contents, tags can show the content in a variety of arrangements and groupings. Implementing tags in this Jekyll theme is somewhat of a manual process."
+sidebar: mydoc_sidebar
+permalink: /mydoc_tags/
 ---
 
 
@@ -21,13 +23,13 @@ tags: [formatting, single_sourcing]
 
 ## Tags overview
 
-{{site.data.alerts.note}} With posts, tags have a namespace that you can access with <code>posts.tags.tagname</code>, where <code>tagname</code> is the name of the tag. You can then list all posts in that tag namespace. But pages don't off this same tag namespace, so you could actually use another key instead of <code>tags</code>. Nevertheless, I'm using the same <code>tags</code> name here.{{site.data.alerts.end}}
+{{site.data.alerts.note}} With posts, tags have a namespace that you can access with <code>posts.tags.tagname</code>, where <code>tagname</code> is the name of the tag. You can then list all posts in that tag namespace. But pages don't off this same tag namespace, so you could actually use another key instead of <code>tags</code>. Nevertheless, I'm using the same <code>tags</code> approach for posts as with pages.{{site.data.alerts.end}}
 
 
-To prevent tags from getting out of control and inconsistent, first make sure the tag appears in the \date/tags_doc.yml file. If it's not there, the tag you add to a page won't be read. I added this check just to make sure I'm using the same tags consistently and not adding new tags that don't have tag archive pages.
+To prevent tags from getting out of control and inconsistent, first make sure the tag appears in the \_data/tags.yml file. If it's not there, the tag you add to a page won't be read. I added this check just to make sure I'm using the same tags consistently and not adding new tags that don't have tag archive pages.
 
 
-{{site.data.alerts.note}} Unlike with WordPress, you have to build out the functionality for tags so that clicking a tag name shows you all pages with that tag. Tags in Jekyll are much more manual.{{site.data.alerts.end}}
+{{site.data.alerts.note}} In contrast to WordPress, with Jekyll to get tags on pages you have to build out the functionality for tags so that clicking a tag name shows you all pages with that tag. Tags in Jekyll are much more manual.{{site.data.alerts.end}}
 
 
 Additionally, you must create a tag archive page similar to the other pages named tag_{tagname}.html folder. This theme doesn't auto-create tag archive pages.
@@ -38,67 +40,61 @@ For simplicity, make all your tags single words (connect them with hyphens if ne
 
 Tags have a few components.
 
-1. First make sure you configure a few details in the conditions.html file. In particular, see this setting:
-	{% raw %}
-	```liquid
-	{% assign projectTags = site.data.tags_doc.allowed-tags %}
-	```
-	{% endraw %}
-	
-	The tags_doc name must correspond with how you label your tags file. Here, "doc" should be your project name.
-	
-2. In the \_data file, add a yml file similar to tags_doc.yml. The YML file lists the tags that are allowed:
-	
-	```json
-	allowed-tags:
-	  - getting_started
-	  - overview
-	  - formatting
-	  - publishing
-	  - single_sourcing
-	  - special_layouts
-	  - content types
-	```
-	
-3. Create a tag archive file for each tag in your tags_doc.yml list. Name the file like this: tag_getting_started.html, where doc is your project name. (Again, tags with multiple words need hyphens in them.)
-	
-	Each tag archive file needs only this:
-	
-	{% raw %}
-	```liquid
-	---
-    title: "Getting Started Pages"
-    tagName: getting_started
-    ---
-    {% include taglogic.html %}
-    ```
+1. In the \_data/tags.yml file, add the tag names you want to allow. For example:
+   
+   ```json
+   allowed-tags:
+     - getting_started
+     - overview
+     - formatting
+     - publishing
+     - single_sourcing
+     - special_layouts
+     - content types
+   ```
+   
+3. Create a tag archive file for each tag in your tags_doc.yml list. Name the file following the same pattern in the tags folder, like this: tag_collaboration.html. 
+   
+   Each tag archive file needs only this:
+   
+   {% raw %}
+   ```liquid
+---
+title: "Collaboration pages"
+tagName: collaboration
+search: exclude
+permalink: /tag_collaboration/
+sidebar: tags_sidebar
+---
+{% include taglogic.html %}
+   ```
     {% endraw %}
 
-	{{site.data.alerts.note}}In the \_includes/mydoc folder, there's a taglogic.html file. This file (included in each tag archive file) has common logic for getting the tags and listing out the pages containing the tag in a table with summaries or truncated excerpts. You don't have to do anything with the file &mdash; just leave it there because the tag archive pages reference it.{{site.data.alerts.end}}
+   {{site.data.alerts.note}}In the \_includes/mydoc folder, there's a taglogic.html file. This file (included in each tag archive file) has common logic for getting the tags and listing out the pages containing the tag in a table with summaries or truncated excerpts. You don't have to do anything with the file &mdash; just leave it there because the tag archive pages reference it.{{site.data.alerts.end}}
+   
+4. Change the title, tagName, and permalink values to be specific to the tag name you just created.
+      
+   By default, the \_layouts/page.html file will look for any tags on a page and insert them at the bottom of the page using this code:
 
-5. Adjust button color or tag placement as desired. 
-	
-	By default, the \_layouts/page.html file will look for any tags on a page and insert them at the bottom of the page using this code:
-
-	{% raw %}
-	```
-<div class="tags">
+   {% raw %}
+   ```
+   <div class="tags">
     {% if page.tags != null %}
     <b>Tags: </b>
-    {% include custom/conditions.html %}
+    {% assign projectTags = site.data.tags.allowed-tags %}
     {% for tag in page.tags %}
     {% if projectTags contains tag %}
-    <a href="tag_{{tag}}.html" class="btn btn-info navbar-btn cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
+    <a href="{{ "/tag_" | prepend: site.baseurl | append: tag }}" class="btn btn-default navbar-btn cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
     {% endif %}
     {% endfor %}
     {% endif %}
-</div>
-	```
-	{% endraw %}
-	
-Because this code appears on the \_layouts/page.html file by default, you don't need to do anything. However, if you want to alter the placement or change the button color, you can do so.
-	
-You can change the button color by changing the class on the button from `btn-info` to one of the other button classes bootstrap provides. See {{site.data.mydoc.mydoc_urls.mydoc_labels.link}} for more options on button class names.
+   </div>
+   ```
+   {% endraw %}
+   
+Because this code appears on the \_layouts/page.html file by default, you don't need to do anything in your page to get the tags to appear. However, if you want to alter the placement or change the button color, you can do so within the \_includes/taglogic.html file.
+   
+You can change the button color by changing the class on the button from `btn-info` to one of the other button classes bootstrap provides. See <a href="{{ "/mydoc_labels" | prepend: site.baseurl }}">page</a> for more options on button class names.
 
 ## Retrieving pages for a specific tag
 
@@ -186,5 +182,5 @@ If you don't want tags to appear at all on your page, remove the tags property f
 
 Since you may have many tags and find it difficult to remember what tags are allowed, I recommend creating a template that prepopulates all your frontmatter with all possible tags. Then just remove the tags that don't apply. 
 
-See {{site.data.mydoc.mydoc_urls.mydoc_webstorm_text_editor.link}} for tips on creating file templates in WebStorm.
+See <a href="{{ "/mydoc_webstorm_text_editor" | prepend: site.baseurl }}">WebStorm Text Editor</a> for tips on creating file templates in WebStorm.
 

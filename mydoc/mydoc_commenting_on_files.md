@@ -3,9 +3,10 @@ title: Commenting on files
 tags: 
   - navigation
 keywords: "annotations, comments, feedback"
-last_updated: "November 30, 2015"
-summary: "You can add a button to your pages that allows people to add comments. Prose.io is an overlay on Github that would allow people to make comments in an easier interface."
-published: true
+last_updated: "November 30, 2016"
+summary: "You can add a button to your pages that allows people to add comments."
+sidebar: mydoc_sidebar
+permalink: /mydoc_commenting_on_files/
 ---
 
 ## About the review process
@@ -18,32 +19,29 @@ Here's the code for that button on the page.html layout:
 
 {% raw %}
 ```
-{% if site.github_editme_path %}
-<a href="https://github.com/{{site.github_editme_path}}{{page.url | replace: '.html', '.md'}}" class="btn btn-default " role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
-{% endif %}
+{% unless jekyll.environment == "production" %}
+
+    {% if site.github_editme_path %}
+
+    <a target="_blank" href="https://github.com/{{site.github_editme_path}}{% unless page.url contains "html" %}{{page.url | replace: '.html', '.md'}}{% endunless %}{% if page.url contains "html" %}{{page.url }}{% endif %}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    {% endif %}
+
+    {% endunless %}
 ```
 {% endraw %}
 
-You could also make it so the Github button appears only when you're working in a development environment.
+This code is only active if you're publishing in a development environment, which is the default.
+
+To activate the production environment, add the [production environment flag](http://jekyllrb.com/docs/configuration/) in your build command:
 
 {% raw %}
 ```
-{% if jekyll.environment == "development" %}
-{% if site.github_editme_path %}
-<a target="_blank" href="https://github.com/{{site.github_editme_path}}{{page.url | replace: '.html', '.md'}}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
-{% endif %}
+JEKYLL_ENV=production jekyll serve
 ```
 {% endraw %}
 
-To activate the development environment, add the [environment flag](http://jekyllrb.com/docs/configuration/) in your build command:
+In your configuration file, edit the value for `github_editme_path`. For example, you might create a branch called "reviews" on your Github repo. Then you would add something like this in your configuration file for the 'github_editme_path': tomjohnson1492/documentation-theme-jekyll/edit/reviews. Here "tomjohnson1492" is my github account name. The repo name is "documentation-theme-jekyll". The "reviews" name is the branch.
 
-{% raw %}
-```
-JEKYLL_ENV=development jekyll serve
-```
-{% endraw %}
-
-The default environment is production.
 
 ## Add reviewers as collaborators
 
@@ -54,3 +52,16 @@ If you don't want to allow anyone to commit to your Github branch, don't add the
 {{site.data.alerts.note}} When you process pull requests, you have to accept everything or nothing. You can't pick and choose which changes you'll merge. Therefore you'll probably want to edit the branch you're planning to merge or ask the contributor to make some changes to the fork before processing the pull request.{{site.data.alerts.end}} 
 
 
+## Workflow
+
+Users will make edits in your "reviews" branch (or whatever you want to call it). You can then commit those edits as you make updates.
+
+When you're finished making all updates in the branch, you can merge the branch into the master.
+
+Note that if you're making updates online, those updates will be out of sync with any local edits. 
+
+{{site.data.alerts.warning}} Don't make edits both online using Github's browser-based interface AND offline on your local machine using your local tools. When you try to push from your local, you'll likely get a merge conflict error. Instead, make sure you do a pull and update on your local after making any edits online.{{site.data.alerts.end}}
+
+## Prose.io
+
+ Prose.io is an overlay on Github that would allow people to make comments in an easier interface. If you simply go to [prose.io](http://prose.io), it asks to authorize your Github account, and so it will read files directly from Github but in the Prose.io interface.

@@ -1,0 +1,28 @@
+---
+layout: none
+search: exclude
+---
+
+{% include custom/sidebarconfigs.html %}
+
+
+ {% for entry in sidebar_pdf %}
+   {% for subcategory in entry.subcategories %}
+      {% if subcategory.output contains "pdf" %}
+              {% for item in subcategory.items %}
+                 {% if item.output contains "pdf" %}
+                    {{site.url}}{{site.baseurl}}{{item.url }}
+                          {% for thirdlevel in item.thirdlevel %}
+                             {% if thirdlevel.output contains "pdf" %}
+                                        {% for deeplevel in thirdlevel.thirdlevelitems %}
+                                           {% if deeplevel.output contains "pdf" %}
+                                              {{site.url}}{{site.baseurl}}{{deeplevel.url}}
+                                           {% endif %}
+                                        {% endfor %}
+                             {% endif %}
+                          {% endfor %}
+                {% endif %}
+             {% endfor %}
+      {% endif %}
+  {% endfor %}
+ {% endfor %}

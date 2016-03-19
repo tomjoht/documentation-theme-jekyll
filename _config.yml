@@ -1,62 +1,30 @@
-# this is simply copied over from config/config_designers.yml
-
-# project definitions
-project: mydoc_designers
-audience: designers
-product: doc
-platform: all
-version: all
+permalink: /:year/:month/:day/:title/
+url: http://idratherbewriting.com
+baseurl: "/documentation-theme-jekyll"
 output: web
-destination: ../doc_outputs/mydoc/designers
 topnav_title: Jekyll Documentation Theme
-homepage_title: Jekyll doc theme for designers
 site_title: Jekyll theme for designers
-project_folder: mydoc
 company_name: Your company
-footer_image_location: ../../common_images/company_logo.png
 github_editme_path: tomjohnson1492/documentation-theme-jekyll/edit/reviews
 disqus_shortname: idrbwjekyll
-# variables
-
-
-sidebar_tagline: Designers
-sidebar_version: Version 4.0
-theme_file: theme-blue.css
-pdf_file_name: mydoc_designers_pdf.pdf
-
-# the algolia entries here are experimental only.
-
-#gems:
-#  - algoliasearch-jekyll
-#algolia:
-#  application_id: 'HXUBJERYYB'
-#  index_name:     'documentation_theme_jekyll_designers'
+host: 127.0.0.1
 port: 4009
 
 exclude:
   - _site
   - _drafts
   - configs/
-  - doc/mydoc_writers*
 
-# same for all
-host: 127.0.0.1
 feedback_email: tomjohnson1492@gmail.com
 
-# these settings should work, but they don't seem to apply the right highlighting
 
-#highlighter: rouge
-#markdown: kramdown
-#kramdown:
-#  input: GFM
-#  auto_ids: true
-#  hard_wrap: false
-#  syntax_highlighter: rouge
-
-highlighter: pygments
-markdown: redcarpet
-redcarpet:
-  extensions: ["no_intra_emphasis", "fenced_code_blocks", "tables", "with_toc_data"]
+highlighter: rouge
+markdown: kramdown
+kramdown:
+ input: GFM
+ auto_ids: true
+ hard_wrap: false
+ syntax_highlighter: rouge
 
 
 collections:
@@ -72,6 +40,7 @@ defaults:
       layout: "page"
       comments: true
       search: true
+      sidebar: home_sidebar
   -
     scope:
       path: ""
@@ -82,3 +51,17 @@ defaults:
       search: true
       tooltip: true
 
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      comments: true
+      search: true
+      sidebar: tags_sidebar
+
+
+
+# the description is used in the feed.xml file
+description: "Intended as a documentation theme based on Jekyll for technical writers documenting software and other technical products, this theme has all the elements you would need to handle multiple products with both multi-level sidebar navigation, tags, and other documentation features."

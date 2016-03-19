@@ -3,13 +3,15 @@ title: 10. Configure the build scripts
 tags: 
   - publishing
 keywords: "build scripts, generating outputs, building, publishing"
-last_updated: "November 30, 2015"
+last_updated: "November 30, 2016"
 summary: "You need to customize the build scripts. These script automate the publishing of your PDFs and web outputs through shell scripts on the command line."
 series: "Getting Started"
 weight: 10
+sidebar: mydoc_sidebar
+permalink: /mydoc_build_scripts/
 ---
 
-{% include custom/mydoc/getting_started_series.html %}
+{% include custom/getting_started_series.html %}
 
 ## About the build scripts 
 
@@ -23,16 +25,16 @@ To set up your projects:
 
 1. Set up your Jekyll theme in a folder called "docs." All of the source files for every project the team is working on should live in this directory. Most likely you already either downloaded or cloned the jekyll-documentation-theme. Just rename the folder to "docs" and move it into the projects folder as shown here.
 2. In the same root directory where the docs folder is, create another directory parallel to docs called doc_outputs. 
-	
-	Thus, your folder structure should be something like this:
-	
-	```
-	projects
-	- docs
-	- doc_outputs
-	```
-	
-	The docs folder contains the source of all your files, while the doc_outputs contains the site outputs.
+   
+   Thus, your folder structure should be something like this:
+   
+   ```
+   projects
+   - docs
+   - doc_outputs
+   ```
+   
+   The docs folder contains the source of all your files, while the doc_outputs contains the site outputs.
 
 ## Configure the Build Scripts
 
@@ -148,7 +150,7 @@ This script first removes the project folder on /var/www/html/yourpublishingdire
 
 Note that the delete part of the script (`rm -rf`) works really well. It annihilates a folder in a heartbeat and doesn't give you any warning prompts, so make sure you have it set up correctly.
 
-Also, in case you haven't set up the SSH publishing without a password, see {{site.data.mydoc.mydoc_no_password_prompts_scp.link}}. Otherwise the script will stop and ping you to enter your password for each directory it transfers.
+Also, in case you haven't set up the SSH publishing without a password, see {{site.data.mydoc_no_password_prompts_scp.link}}. Otherwise the script will stop and ping you to enter your password for each directory it transfers.
 
 ### (Optional) Push to repositories
 
@@ -188,4 +190,4 @@ After you've configured all the scripts, you can run them all by running `. mydo
 ## Test out the scripts
 
 After setting up and customizing the build scripts, run a few tests to make sure everything is generating correctly. Getting this part right is somewhat difficult and may likely require you to tinker around with the scripts a while before it works flawlessly. 
-{% include custom/mydoc/getting_started_series_next.html %}
+{% include custom/getting_started_series_next.html %}

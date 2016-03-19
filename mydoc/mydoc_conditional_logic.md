@@ -2,55 +2,45 @@
 title: Conditional logic
 tags: [single_sourcing]
 keywords: if else logic, conditions, conditional attributes, conditional filtering
-last_updated: November 30, 2015
+last_updated: March 20, 2016
 summary: "You can implement advanced conditional logic that includes if statements, or statements, unless, and more. This conditional logic facilitates single sourcing scenarios in which you're outputting the same content for different audiences."
+sidebar: mydoc_sidebar
+permalink: /mydoc_conditional_logic/
 ---
 
 ## About Liquid and conditional statements
-If you want to create different outputs for different audiences, you can do all of this using a combination of Jekyll's Liquid markup and values in your configuration file.
+If you want to create different outputs for different audiences, you can do all of this using a combination of Jekyll's Liquid markup and values in your configuration file. This is how I previously configured the theme. I had different configuration files for each output. Each configuration file specified different values for product, audience, version, and so on. Then I had different build processes that would leverage the different configuration files. It seemed like a perfect implementation of DITA-like techniques with Jekyll.
 
-You can then incorporate conditional statements that check the values in the configuration files.
+But I soon found that having lots of separate outputs for a project was undesirable. If you have 10 different outputs that have different nuances for different audiences, it's hard to manage and maintain. In this latest version of the theme, I consolidated all information into the same output to explicitly do away with the multi-output approach. 
+
+As such, the conditional logic won't have as much play as it previously did. Instead of conditions, you'll probably want to incorporate [navtabs](mydoc_navtabs) to split up the information.
+
+However, you can still of course use conditional logic as needed. 
 
 {{site.data.alerts.tip}} Definitely check out <a href="http://docs.shopify.com/themes/liquid-documentation/basics">Liquid's documentation</a> for more details about how to use operators and other liquid markup. The notes here are a small, somewhat superficial sample from the site.{{site.data.alerts.end}}
 
 ## Where to store filtering values
 
-You can filter content based on values that you have set either in your config file or in a file in your \_data folder. If you set the attribute in your config file, you need to restart the Jekyll server to see the changes. If you set the value in a file in your \_data folder, you don't need to restart the server when you make changes. 
-
-## Required conditional attributes
-
-This theme requires you to add the following attributes in your configuration file:
-
-* project 
-* audience
-* product 
-* platform 
-* version
-
-If you've ever used DITA, you probably recognize these attributes, since DITA has mostly the same ones. I've found that most single_sourcing projects I work on can be sliced and diced in the ways I need using these conditional attributes.
-
-If you're not single sourcing and you find it annoying having to specify these attributes in your sidebar, you can rip out the logic from the sidebar.html, topnav.html file and any other places where conditions.html appears; then you wouldn't need these attributes in your configuration file.
+You can filter content based on values that you have set either in your page's frontmatter, a config file, or in a file in your \_data folder. If you set the attribute in your config file, you need to restart the Jekyll server to see the changes. If you set the value in a file in your \_data folder or page frontmatter, you don't need to restart the server when you make changes. 
 
 ## Conditional logic based on config file value
 
-Here's an example of conditional logic based on a value in the configs/config_writer.yml file. In my config_writer.yml file, I have the following:
+Here's an example of conditional logic based on a value in the page's frontmatter. Suppose you have the following in your frontmatter:
 
 ```
-audience: writers
+platform: mac
 ```
 
-On a page in my site (it can be HTML or markdown), I can conditionalize content using the following:
+On a page in my site (it can be HTML or markdown), you can conditionalize content using the following:
 
 {% raw %}
-
 ```liquid
-{% if site.audience == "writers" %}
-The writer audience should see this...
-{% elsif site.audience == "designers" %}
-The designer audience should see this ...
+{% if page.platform == "mac" %}
+Here's some info about the Mac.
+{% elsif page.platform == "windows" %}
+Here's some info about Windows ...
 {% endif %}
 ```
-
 {% endraw %}
 
 This uses simple `if-elsif` logic to determine what is shown (note the spelling of `elsif`). The `else` statement handles all other conditions not handled by the `if` statements. 
@@ -62,9 +52,9 @@ Here's an example of `if-else` logic inside a list:
 To bake a casserole:
 
 1. Gather the ingredients.
-{% if site.audience == "writer" %}
+{% if page.audience == "writer" %}
 2. Add in a pound of meat.
-{% elsif site.audience == "designer" %}
+{% elsif page.audience == "designer" %}
 3. Add in an extra can of beans.
 {% endif %}
 3. Bake in oven for 45 min.
@@ -81,8 +71,8 @@ For example, here's an example using `or`:
 
 {% raw %}
 ```liquid
-{% if site.audience contains "vegan" or site.audience == "vegetarian" %}
-    // run this.
+{% if page.audience contains "vegan" or page.audience == "vegetarian" %}
+    Then run this...
 {% endif %}
 ```
 {% endraw %}
@@ -91,7 +81,7 @@ Note that you have to specify the full condition each time. You can't shorten th
 
 {% raw %}
 ```liquid
-{% if site.audience contains "vegan" or "vegetarian" %}
+{% if page.audience contains "vegan" or "vegetarian" %}
     // run this.
 {% endif %}
 ```
@@ -106,16 +96,14 @@ You can also use `unless` in your logic, like this:
 {% raw %}
 ```liquid
 {% unless site.output == "pdf" %}
-...
+...do this
 {% endunless %}
 ```
 {% endraw %}
 
-When figuring out this logic, read it like this: "Run the code here *unless* this condition is satisfied." Or "If this condition is satisfied, don't run this code."
+When figuring out this logic, read it like this: "Run the code here *unless* this condition is satisfied."."
 
-Don't read it the other way around or you'll get confused. (It's not executing the code only if the condition is satisfied.)
-
-In this situation, if `site.print == true`, then the code will *not* be run here.
+Don't read it the other way around or you'll get confused. (It's *not* executing the code only if the condition is satisfied.)
 
 ## Storing conditions in the \_data folder
 
@@ -135,12 +123,6 @@ this shows if neither of the above two if conditions are met.
 
 To use this, I would need to have a \_data folder called options where the `output` property is stored.
 
-I don't really use the \_data folder as much for project options. I store them in the configuration file because I usually want different projects to use different values for the same property. 
-
-For example, maybe a file or function name is called something different for different audiences. I currently single source the same content to at least two audiences in different markets.
-
-For the first audience, the function name might be called `generate`, but for the second audience, the same function might be called called `expand`. In my content, I'd just use {% raw %}`{{site.function}}`{% endraw %}. Then in the configuration file I change its value appropriately for the audience.
-
 ## Specifying the location for \_data
 
 You can also specify a `data_source` for your data location in your configuration file. Then you aren't limited to simply using `_data` to store your data files.
@@ -150,7 +132,7 @@ For example, suppose you have 2 projects: alpha and beta. You might store all th
 In your alpha configuration file, specify the data source like this:
 
 ```
-data_source: data_alpha
+data_source: data_amydoc_content_reuselpha
 ```
 
 Then create a folder called \_data_alpha.
@@ -163,29 +145,6 @@ data_source: data_beta
 
 Then create a folder called \_data_beta.
 
-
-## Conditional logic based on page namespace
-
-You can also create conditional logic based on the page namespace. For example, create a page with front matter as follows:
-
-{% raw %}
-```liquid
----
-layout: page
-user_plan: full
----
-```
-{% endraw %}
-
-Now you can run logic based on the conditional property in that page's front matter:
-
-{% raw %}
-```liquid
-{% if page.user_plan == "full" %}
-// run this code
-{% endif %}
-```
-{% endraw %}
 
 ## Conditions versus includes
 

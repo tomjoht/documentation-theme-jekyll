@@ -3,6 +3,8 @@ title: YAML tutorial in the context of Jekyll
 tags: [formatting]
 keywords: search
 summary: "YAML is a format that relies on white spacing to separate out the various elements of content. Jekyll lets you use Liquid with YAML as a way to parse through the data. Storing items for your table of contents is one of the most common uses of YAML with Jekyll."
+sidebar: mydoc_sidebar
+permalink: /mydoc_yaml_tutorial/
 ---
 ## Overview
 One of the most interesting features of Jekyll is the ability to separate out data elements from formatting elements using a combination of YAML and Liquid. This setup is most common when you're trying to create a table of contents. 
@@ -50,19 +52,19 @@ name:
 
 {% raw %}
 ```liquid
-Husband's name: {{site.data.mydoc.samplelist.name.husband}}
+Husband's name: {{site.data.samplelist.name.husband}}
 
-Wife's name: {{site.data.mydoc.samplelist.name.wife}}
+Wife's name: {{site.data.samplelist.name.wife}}
 ```
 {% endraw %}
 
-Notice that in order to access the data file, you use `site.data.mydoc.samplelist`. `mydoc` is the folder, and `samplelist` is the name of the YAML file.
+Notice that in order to access the data file, you use `site.data.samplelist`. `mydoc` is the folder, and `samplelist` is the name of the YAML file.
 
 **Result:**
 
-Husband's name: {{site.data.mydoc.samplelist.name.husband}}
+Husband's name: {{site.data.samplelist.name.husband}}
 
-Wife's name: {{site.data.mydoc.samplelist.name.wife}}
+Wife's name: {{site.data.samplelist.name.wife}}
 
 ## Example 2: Line breaks
 
@@ -86,19 +88,19 @@ block: |
 
 ```liquid
 **Feedback**
-{{site.data.mydoc.samplelist.feedback}}
+{{site.data.samplelist.feedback}}
 
 **Block**
-{{site.data.mydoc.samplelist.block}}
+{{site.data.samplelist.block}}
 ```
 
 **Result:**
 
 **Feedback**
-{{site.data.mydoc.samplelist.feedback}}
+{{site.data.samplelist.feedback}}
 
 **Block**
-{{site.data.mydoc.samplelist.block}}
+{{site.data.samplelist.block}}
 
 The right angle bracket `>` allows you to put the value on the next lines (which must be indented). Even if you create a line break, the output will remove all of those line breaks, creating one paragraph.
 
@@ -119,7 +121,7 @@ bikes:
 
 {% raw %}
 ```liquid
-{% for item in site.data.mydoc.samplelist.bikes %}
+{% for item in site.data.samplelist.bikes %}
 * {{item.title}}
 {% endfor %}
 ```
@@ -127,7 +129,7 @@ bikes:
 
 **Result:**
 
-{% for item in site.data.mydoc.samplelist.bikes %}
+{% for item in site.data.samplelist.bikes %}
 * {{item.title}}
 {% endfor %}
 
@@ -150,7 +152,7 @@ salesteams:
 
 {% raw %}
 ```
-{% for item in site.data.mydoc.samplelist.salesteams %}
+{% for item in site.data.samplelist.salesteams %}
 <h3>{{item.title}}</h3>
 <ul>
 {% for entry in item.subitems %}
@@ -162,7 +164,7 @@ salesteams:
 {% endraw %}
 
 **Result:**
-{% for item in site.data.mydoc.samplelist.salesteams %}
+{% for item in site.data.samplelist.salesteams %}
 <h3>{{item.title}}</h3>
 <ul>
 {% for entry in item.subitems %}
@@ -202,7 +204,7 @@ toc:
 
 {% raw %}
 ```liquid
-{% for item in site.data.mydoc.samplelist.toc %}
+{% for item in site.data.samplelist.toc %}
 <h3>{{item.title}}</h3>
 <ul>
 {% for entry in item.subitems %}
@@ -215,7 +217,7 @@ toc:
 
 **Result:**
 
-{% for item in site.data.mydoc.samplelist.toc %}
+{% for item in site.data.samplelist.toc %}
 <h3>{{item.title}}</h3>
 <ul>
 {% for entry in item.subitems %}
@@ -239,13 +241,13 @@ myref: *hello
 
 {% raw %}
 ```liquid
-{{ site.data.mydoc.samplelist.myref }}
+{{ site.data.samplelist.myref }}
 ```
 {% endraw %}
 
 **Result:**
 
-{{ site.data.mydoc.samplelist.myref }}
+{{ site.data.samplelist.myref }}
 
 This example is notably different. Here I'm showing how to reuse content in YAML file. If you have the same value that you want to repeat in other mappings, you can create a variable using the `&` symbol. Then when you want to refer to that variable's value, you use an asterisk `*` followed by the name of the variable.
  
@@ -269,13 +271,13 @@ about:
 
 {% raw %}
 ```
-{{ site.data.mydoc.samplelist.about[0] }}
+{{ site.data.samplelist.about[0] }}
 ```
 {% endraw %}
 
 **Result:**
 
-{{ site.data.mydoc.samplelist.about[0] }}
+{{ site.data.samplelist.about[0] }}
 
 You can see that I'm accessing one of the items in the list using `[0]`. This refers to the position in the array where a list item is. Like most programming languages, you start counting at zero, not one.
  
@@ -301,13 +303,13 @@ numbercolors:
 
 {% raw %}
 ```liquid
-{{ site.data.mydoc.samplelist.numbercolors[0].properties }}
+{{ site.data.samplelist.numbercolors[0].properties }}
 ```
 {% endraw %}
 
 **Result:**
 
-{{ site.data.mydoc.samplelist.numbercolors[0].properties }}
+{{ site.data.samplelist.numbercolors[0].properties }}
 
 This example is similar as before; however, in this case were getting a specific property from the list item in the zero position.
 
@@ -343,7 +345,7 @@ mypages:
 
 {% raw %}
 ```liquid
-{% for sec in site.data.mydoc.samplelist.mypages %}
+{% for sec in site.data.samplelist.mypages %}
 {% if sec.audience == "writers" %}
 * {{sec.url}}
 {% endif %}
@@ -353,7 +355,7 @@ mypages:
 
 **Result:**
 
-{% for sec in site.data.mydoc.samplelist.mypages %}
+{% for sec in site.data.samplelist.mypages %}
 {% if sec.audience == "writers" %}
 * {{sec.url}}
 {% endif %}
@@ -365,7 +367,7 @@ Now let's adjust the condition just a little. Let's add a second condition so th
 
 {% raw %}
 ```liquid
-{% for sec in site.data.mydoc.samplelist.mypages %}
+{% for sec in site.data.samplelist.mypages %}
 {% if sec.audience == "writers" and sec.product == "gizmo" %}
 * {{sec.url}}
 {% endif %}
@@ -375,7 +377,7 @@ Now let's adjust the condition just a little. Let's add a second condition so th
 
 And here is the result:
 
-{% for sec in site.data.mydoc.samplelist.mypages %}
+{% for sec in site.data.samplelist.mypages %}
 {% if sec.audience == "writers" and sec.product == "gizmo" %}
 * {{sec.url}}
 {% endif %}

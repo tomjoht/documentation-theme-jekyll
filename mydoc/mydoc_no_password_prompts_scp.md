@@ -1,5 +1,7 @@
 ---
 title: Getting around the password prompts in SCP
+sidebar: mydoc_sidebar
+permalink: /mydoc_no_password_prompts_scp/
 ---
 
 You can publish your docs via SSH through a Terminal window or more likely, via a shell script that you simply execute as part of the publishing process. However, you will be prompted for your password with each file transfer unless you configure passwordless SSH. 

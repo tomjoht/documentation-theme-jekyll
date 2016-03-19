@@ -3,6 +3,8 @@ title: Adding all project dependencies
 tags: [getting-started]
 keywords:
 summary: ""
+sidebar: mydoc_sidebar
+permalink: /mydoc_install_dependencies/
 ---
 
 You want to be sure that you have all the required gems and other utilities on your computer to make the project run. Jekyll runs on Ruby, and there are various plugins for Ruby that enable different functionality. These Ruby plugins are referred to as gems, and you install the gems you need for your projects.
@@ -12,7 +14,7 @@ To manage the various gems and their versions needed for your project, you can u
 
 ## RubyGems
 
-Make sure you have RubyGems. This should be installed by default.
+Make sure you have RubyGems. This should be installed by default on Mac.
 
 Open Terminal and type `which gem`. You should get a response indicating the location of Rubygems, such as `/Users/MacBookPro/.rvm/rubies/ruby-2.2.1/bin/gem`.
 
@@ -89,4 +91,28 @@ Finally, you can run the following to make sure the installed gems get associate
 
 ```
 bundle exec jekyll serve
+```
+
+## Ruby permissions errors
+
+While trying to install a missing gem, you get an error message that says, 
+
+>ERROR:  While executing gem ... (Gem::FilePermissionError)
+ You don't have write permissions for the /Library/Ruby/Gems/2.0.0 directory.
+ 
+This most likely happens with El Capitan on the Mac.
+
+As long as you have brew installed (see the previous section), run the following:
+
+```
+brew update
+brew install ruby
+```
+
+Close your terminal, and then restart a fresh session.
+
+Now run the gem you're trying to install, such as the following:
+
+```
+gem install kramdown
 ```

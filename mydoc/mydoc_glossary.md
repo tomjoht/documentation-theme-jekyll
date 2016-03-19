@@ -2,8 +2,10 @@
 title: Glossary layout
 tags: [formatting, special_layouts]
 keywords: definitions, glossaries, terms, style guide
-last_updated: November 30, 2015
+last_updated: March 20, 2016
 summary: "Your glossary page can take advantage of definitions stored in a data file. This gives you the ability to reuse the same definition in multiple places. Additionally, you can use Bootstrap classes to arrange your definition list horizontally."
+sidebar: mydoc_sidebar
+permalink: /mydoc_glossary/
 ---
 
 

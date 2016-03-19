@@ -3,11 +3,13 @@ title: Top navigation
 tags: 
   - navigation
 keywords: "custom menu, custom_menu, pop-out, frameescape, frame escape, top nav bar, topnav"
-last_updated: "November 30, 2015"
+last_updated: "November 30, 2016"
 summary: "The top navigation provides some additional features involving a custom menu and pop-out link that you can customize."
+sidebar: mydoc_sidebar
+permalink: /mydoc_top_navigation_deep_dive/
 ---
 
-{{site.data.alerts.note}} For basic information about configuring the top navigation, see {{site.data.mydoc.mydoc_urls.mydoc_top_navigation.link}}. This section gets into the top navigation in more depth. {{site.data.alerts.end}}
+{{site.data.alerts.note}} For basic information about configuring the top navigation, see {{site.data.mydoc_urls.mydoc_top_navigation.link}}. This section gets into the top navigation in more depth. {{site.data.alerts.end}}
 ## Custom Menu
 
 It's common to publish multiple sites. If you want to link the multiple together, you could simply list links to the other doc sites in a drop-down menu configured in the topnav_dropdowns section in the topnav_doc.yml file. However, suppose you want to do something more fancy.

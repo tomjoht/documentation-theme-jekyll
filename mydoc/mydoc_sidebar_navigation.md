@@ -1,14 +1,12 @@
 ---
 title: Sidebar Navigation
 tags: [getting_started]
-last_updated: November 30, 2015
+last_updated: March 20, 2016
 keywords: sidebar, accordion, yaml, iteration, for loop, navigation, attributes, conditional filtering
-summary: "The sidebar navigation uses a jQuery component called Navgoco. The sidebar is a somewhat complex part of the theme that remembers your current page, highlights the active item, stays in a fixed position on the page, and more."
+summary: "The sidebar navigation uses a jQuery component called Navgoco. The sidebar is a somewhat complex part of the theme that remembers your current page, highlights the active item, stays in a fixed position on the page, and more. This page explains a bit about how the sidebar was put together."
+sidebar: mydoc_sidebar
+permalink: /mydoc_sidebar_navigation/
 ---
-
-{{site.data.alerts.note}} For basic information about configuring the sidebar navigation, see {{site.data.mydoc.mydoc_urls.mydoc_configure_sidebar.link}}. This section gets into the top sidebar navigation in more depth.{{site.data.alerts.end}}
-
-When you set up your project, you configured the sidebar following the instructions in {{site.data.mydoc.mydoc_urls.mydoc_configure_sidebar.link}}. In this topic, I dive deeper into other aspects of the sidebar.
 
 ## Navgoco foundation
 
@@ -18,11 +16,11 @@ The sidebar uses the [Navgoco jQuery plugin](https://github.com/tefra/navgoco) a
 * Navgoco inserts an `active` class based on the navigation option that's open. This is essential for keeping the accordion open.
 * Navgoco includes the expand and collapse features of a sidebar.
 
-In short, the sidebar has some complex logic here. I've integrated Navgoco's features with the sidebar.html and sidebar_doc.yml to build the sidebar. It's probably the most impressive part of this theme. (Other themes usually aren't focused on creating hierarchies of pages, but this kind of hierarchy is important in a documentation site.)
+In short, the sidebar has some complex logic here. I've integrated Navgoco's features with the sidebar.html and sidebar data files to build the sidebar. It's probably the most impressive part of this theme. (Other themes usually aren't focused on creating hierarchies of pages, but this kind of hierarchy is important in a documentation site.)
 
 ## Accordion sidebar feature
 
-As mentioned in the previous section, the theme uses the [Navgoco sidebar](http://www.komposta.net/article/navgoco). The sidebar.html file (inside the _includes folder) contains the `.navgoco` method called on the `#mysidebar` element. 
+The sidebar.html file (inside the _includes folder) contains the `.navgoco` method called on the `#mysidebar` element. 
 
 There are some options to set within the `.navgoco` method. The only noteworthy option is `accordion`. This option makes it so when you expand a section, the other sections collapse. It's a way of keeping your navigation controls condensed. 
 
@@ -78,14 +76,10 @@ This is why the `url` value in the sidebar data file looks something like this:
 
 ```yaml
     - title: Understanding how the sidebar works
-      url: /mydoc/mydoc_understand_sidebar.html
-      audience: writers, designers
-      platform: all
-      product: all
-      version: all
-      output: web, pdf   
+      url: /mydoc_understand_sidebar/ 
+      output: web, pdf
 ```
 
-Note that the url includes the project folder where the file is stored.
+Note that the url does not include the project folder where the file is stored. This is because the site uses permalinks, which pulls the topics out of subfolders and places them into the root directory when the site builds.
 
 Now the page.url and the item.url can match and the `active` class can get applied. With the `active` class applied, the sidebar section remains open.

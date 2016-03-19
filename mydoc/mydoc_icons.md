@@ -2,8 +2,10 @@
 title: Icons
 tags: [formatting]
 keywords: font icons, buttons, images, vectors, font awesome, glyphicons
-last_updated: November 30, 2015
+last_updated: March 20, 2016
 summary: "You can integrate font icons through the Font Awesome and Glyphical Halflings libraries. These libraries allow you to embed icons through their libraries delivered as a link reference. You don't need any image libraries downloaded in your project."
+sidebar: mydoc_sidebar
+permalink: /mydoc_icons/
 ---
 
 ## Font icon options
@@ -67,11 +69,29 @@ hr_shaded: '<hr class="shaded"/>'
 ```
 {% endraw %}
 
-This means you can insert a tip, note, warning, or important alert simply by using these tags:
+This means you can insert a tip, note, warning, or important alert simply by using these tags.
 
 {% raw %}
 ```liquid
 {{site.data.alerts.note}} Add your note here. {{site.data.alerts.end}}
+```
+{% endraw %}
+
+{% raw %}
+```liquid
+{{site.data.alerts.tip}} Add your tip here. {{site.data.alerts.end}}
+```
+{% endraw %}
+
+{% raw %}
+```liquid
+{{site.data.alerts.important}} Add your important info here. {{site.data.alerts.end}}
+```
+{% endraw %}
+
+{% raw %}
+```liquid
+{{site.data.alerts.warning}} Add your warning here. {{site.data.alerts.end}}
 ```
 {% endraw %}
 
@@ -180,14 +200,17 @@ And here's the shortcode:
 
 {% raw %}
 ```
-{{site.data.alerts.callout_info}}<div class="bs-callout bs-callout-info">{{site.data.alerts.end}}
+{{site.data.alerts.callout_info}This is a special callout information message. {{site.data.alerts.end}}
 {% endraw %}
 ```
+
+Here's the result:
+
+{{site.data.alerts.callout_info}}This is a special callout information message. {{site.data.alerts.end}}
 
 You can use any of the following:
 {% raw %}
 ```
-{{callout_danger}} 
 {{site.data.alerts.callout_default}} 
 {{site.data.alerts.callout_primary}} 
 {{site.data.alerts.callout_success}} 
@@ -196,5 +219,7 @@ You can use any of the following:
 ```
 {% endraw %}
 
-Callouts are explained in a bit more detail here: {{site.data.mydoc.mydoc_urls.mydoc_alerts.link}}.
+The only difference is the color of the left bar. 
+
+Callouts are explained in a bit more detail in <a href="{{ "/mydoc_alerts" | prepend: site.baseurl }}">Alerts</a>.
 

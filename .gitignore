@@ -1,3 +1,5 @@
 _site/
 .sass-cache/
-.idea
+.jekyll-metadata
+_pdf
+.idea/

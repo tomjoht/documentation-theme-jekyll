@@ -2,8 +2,10 @@
 title:  Navtabs
 tags: [formatting]
 keywords: navigation tabs, hide sections, tabbers, interface tabs
-last_updated: November 30, 2015
+last_updated: March 20, 2016
 summary: "Navtabs provide a tab-based navagation directly in your content, allowing users to click from tab to tab to see different panels of content. Navtabs are especially helpful for showing code samples for different programming languages. The only downside to using navtabs is that you must use HTML instead of Markdown."
+sidebar: mydoc_sidebar
+permalink: /mydoc_navtabs/
 ---
 
 

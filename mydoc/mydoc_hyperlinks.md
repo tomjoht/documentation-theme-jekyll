@@ -3,19 +3,15 @@ title: Links
 audience: writer, designer
 tags: [formatting, navigation]
 keywords: links, hyperlinks, cross references, related links, relationship tables
-summary: "When creating links, although you can use standard HTML or Markdown, this approach is usually susceptible to a lot of errors and broken links. There's a URL generator that will facilitate linking to other pages in ways that ensures the links won't break."
-last_updated: November 30, 2015
+summary: "When creating links, you can use standard HTML or Markdown formatting. Note that this approach is susceptible to errors and broken links, so check your outputs for broken links."
+last_updated: March 20, 2016
+sidebar: mydoc_sidebar
+permalink: /mydoc_hyperlinks/
 ---
-
-## Link strategies
-
-One of the more difficult parts of a documentation site is keeping all the internal links accurate and valid. When you're single sourcing, you usually have multiple documentation outputs that include certain pages for certain audiences. Orphan links are a common problem to avoid. 
-
-Although there are many ways to create links, I'll just describe what I've found to work well.
 
 ## Create an external link
 
-When linking to an external site, use Markdown formatting:
+When linking to an external site, use Markdown formatting because it's simplest:
 
 ```
 [Google](http://google.com)
@@ -29,36 +25,42 @@ If you need to use HTML, use the normal syntax:
 
 ## Linking to internal pages
 
-When linking to internal pages, you could use this same syntax:
+When linking to internal pages, you can use this same syntax:
 
 ```
-[Sample](sample.html)
+[Sample]({{ "/page" | prepend: site.baseurl }})
 ```
 
 OR
 
 ```html
-<a href="sample.html">Sample</a>
+<a href="{{ "/page" | prepend: site.baseurl }}">page</a>
 ```
 
-However, what happens when you change the page's title or link? Jekyll doesn't automatically pull in the page's title when you create links.
+I find that using the HTML formatting is easiest. Store the code in a shortcut in aText to populate it easily. 
 
-In my experience, coding links like this results in a lot of broken links.
+## Avoiding broken links
 
-## Managed links
+In general, avoid broken links and outdated titles in links by doing the following:
 
-For internal links, I've found that it's a best practice to store the link in a YAML file that is derived from the table of contents. 
+* Where possible, avoid using the exact titles in link names. For example, if you write, see the <a href="{{ "/mydoc_hyperlinks/" | prepend: site.baseurl}}">Links</a> page, this title is likely to become more outdated than if you were to write, learn how to <a href="{{ "/mydoc_hyperlinks/" | prepend: site.baseurl}}">manage links</a>.
+* Use a broken link checker on your site output to see if links are broken.
+* Generate a PDF, since the PDF tends to highlight broken links more forcefully.
 
-The theme has a file called urls_mydoc.txt. This file contains the same code as the table of contents (but without the conditional qualifiers). It iterates through every page listed in the table of contents sidebar (as well as the top navigation menus) and creates an output that looks like this for each link: 
+## Other methods for managing links
+
+You can also adopt an indirect-reference systems for managing links. This involves storing the link text in YAML syntax.
+ 
+If you want to try this method, look in the root directory. The urls.txt file contains the same code as the table of contents (but without the conditional qualifiers), duplicated for each of the sidebars. The code iterates through every page listed in the table of contents sidebars (as well as the top navigation menus) and creates an output that looks like this for each link: 
 
 ```yaml
-mydoc_getting_started:
-  title: "Getting started with this theme"
-  url: "mydoc_getting_started.html"
-  link: "<a href='mydoc_getting_started.html'>Getting started with this theme</a>"
+mydoc_introduction:
+  title: "Introduction"
+  url: "mydoc_introduction"
+  link: "<a href='/mydoc_introduction/'>Introduction</a>"
 ```
 
-From the site output folder (in ../doc_outputs), open urls_mydoc.txt and observe that it is properly populated (blank spaces between entries doesn't matter). Then manually copy the contents from the mydoc_urls.txt and insert it into the \_data/mydoc/mydoc_urls.yml file in your project folder. 
+From the site output folder (in \_site), open urls.txt and observe that it is properly populated (blank spaces between entries doesn't matter). Then manually copy the contents from the urls.txt and insert it into the \_data/urls.yml file in your project folder. 
 
 Because the urls.txt is produced from the table of contents, you ensure that the same titles and URLs used in your table of contents and top navigation will also be used in your inline links. 
  
@@ -66,14 +68,14 @@ To create a link in a topic, just reference the appropriate value in the urls.ym
 
 {% raw %}
 ```html
-{{site.data.mydoc.mydoc_urls.mydoc_getting_started.link}}
+{{site.data.urls.mydoc_introduction.link}}
 ```
 {% endraw %}
 
 This will insert the following into your topic:
 
 ```html
-<a href='mydoc_getting_started.html'>Getting started with this theme</a>
+<a href='/mydoc_getting_started/'>Getting started</a>
 ```
 
 You don't need to worry whether you can use Markdown syntax when inserting a link this way, because the insertion is HTML. 
@@ -82,7 +84,7 @@ To insert a link in the context of a phrase, you can use this syntax:
 
 {% raw %}
 ```html
-After downloading the theme, you can [get started in building the theme]({{site.data.mydoc.mydoc_urls.mydoc_getting_started.url}}).
+After downloading the theme, you can [get started in building the theme]({{site.data.urls.mydoc_getting_started.url}}).
 ```
 {% endraw %}
 
@@ -90,7 +92,7 @@ This leverages Markdown syntax. If you're in an HTML file or section, use this:
 
 {% raw %}
 ```html
-<p>After downloading the theme, you can <a href="{{site.data.mydoc.mydoc_urls.mydoc_getting_started.url}}">get started in building the theme</a>.</p>
+<p>After downloading the theme, you can <a href="{{site.data.urls.mydoc_getting_started.url}}">get started in building the theme</a>.</p>
 ```
 {% endraw %}
 
@@ -104,15 +106,15 @@ By using this approach, you're less likely to end up with broken links.
 
 ## Always make sure your TOC page is accurate
 
-You should treat your sidebar_doc.yml file with a lot of care. Every time you add a page to your site, make sure it's listed in your sidebar_doc.yml file (or in your top navigation). If you don't have pages listed in your sidebar_doc.yml file, they won't be included in the urls_mydoc.txt file, and as your site grows, it will be harder to recognize pages that are absent from the TOC.
+You should treat your sidebar data files (in /_data/sidebars) with a lot of care. Every time you add a page to your site, make sure it's listed in your sidebar file (or in your top navigation). If you don't have pages listed in your sidebar file, they won't be included in the urls.txt file, and as your site grows, it will be harder to recognize pages that are absent from the TOC.
 
 Because all the pages are stored in the root directory, the list of files can grow really long. I typically find pages by navigating to the page in the preview server, copying the page name (e.g., mydoc_hyperlinks), and then pressing **Shift + Shift** in WebStorm to locate the page.
  
- This is the only sane way to locate your pages when you have hundreds of pages in your root directory. If the page isn't listed in your TOC, it will be difficult to navigate to it and find it.
+This is the only sane way to locate your pages when you have hundreds of pages in your root directory. If the page isn't listed in your TOC, it will be difficult to navigate to it and find it.
 
 ## Checking for broken links
 
-Another way to ensure you don't have any broken links in your output is to [generate a PDF]({{site.data.mydoc.mydoc_urls.mydoc_generating_pdfs.url}}). When you generate a PDF, look for the following two problems in the output:
+Another way to ensure you don't have any broken links in your output is to [generate a PDF]({{site.data.urls.mydoc_generating_pdfs.url}}). When you generate a PDF, look for the following two problems in the output:
 
 * page 0
 * see .
@@ -122,21 +124,3 @@ Both instances indicate a broken link. The "page 0" indicates that Prince XML co
 If you see "see ." it means that the reference (for example, {% raw %}`{{mylink...}}`{% endraw %} doesn't actually refer to anything. As a result, it's simply blank in the output. 
 
 {{site.data.alerts.note}} To keep Prince XML from trying to insert a cross reference into a link, add <code>class="noCrossRef"</code> to the link. {{site.data.alerts.end}}
-
-## Relative link paths
-
-The site is coded with relative links. There aren't any permalinks, urls, or baseurls. The folder structure you see in the project directory is the same folder directory that gets built in the site output.
-
-Author all pages in your root directory. This greatly simplifies linking. However, when you're linking to images, files, or other content, you can put these assets into subfolders. 
-
-For example, to link to a file stored in files/doc/whitepaper.pdf, you would use "files/doc/whitepaper.pdf" as the link. 
-
-Why not put pages too into subfolders? If you put a page into a subfolder, then links to the stylesheets, JavaScript, and other sources will fail. On those sub-folder pages, you'd need to use `../` to move up a level in the directory to access the stylesheets, JavaScript, etc. But if you have some pages in folders on one level, others in sub-sub-folders, and others in the root, trying to guess which files should contain `../` or `../../` or nothing at all and which shouldn't will be a nightmare.
-
-Jekyll gets around some of this link path variation by using `baseurl` and including code that prepends the `baseurl` before a link. This converts the links into absolute rather than relative links.
-
-With absolute links, the site only displays at the `baseurl` you configured. This is problematic for tech docs because you usually need to move files around from one folder to another based on versions you're archiving or when you're moving your documentation from draft to testing to production folders.
-
-## Limitations with links
-
-One of the shortcomings in this theme is that the link titles in the sidebar and inline links don't necessarily have to match the titles specified on each page. You have to manually keep the page titles in sync with the titles listed in the sidebar and top navigation. Although I could potentially get rid of the titles key in the article topic, it would make it more difficult to know what page you're editing.

@@ -1,9 +1,10 @@
 ---
 title: WebStorm Text Editor
 keywords: webstorm, sublime, markdown, atom, gnome, notepad ++, textpad, bbedit
-tags: [getting_started]
-last_updated: November 30, 2015
+last_updated: March 20, 2016
 summary: "You can use a variety of text editors when working with a Jekyll project. WebStorm from IntelliJ offers a lot of project-specific features, such as find and replace, that make it ideal for working with tech comm projects."
+sidebar: mydoc_sidebar
+permalink: /mydoc_webstorm_text_editor/
 ---
 
 ## About text editors and WebStorm
@@ -17,14 +18,19 @@ By default, WebStorm comes packaged with a lot more functionality than you proba
 
 ## Add the Markdown Support plugin
 
-Since you'll be writing in Markdown, having color coding and other support for Markdown is key. Install the Markdown Support plugin by going to **WebStorm > Preferences > Plugins** and clicking **Install JetBrains Plugin**. Search for **Markdown Support**.
-
+Since you'll be writing in Markdown, having color coding and other support for Markdown is important. Install the Markdown Support plugin by going to **WebStorm > Preferences > Plugins** and clicking **Install JetBrains Plugin**. Search for **Markdown Support**. (I would avoid the Multimarkdown plugin &mdash; it seemed to make all my dashes in frontmatter tags extend half way across the page.)
 
 ## Enable Soft Wraps (word wrapping)
 
 Most likely you'll want to enable soft wraps, which wraps lines rather than extending them out forever and requiring you to scroll horizontally to see the text. To enable softwrapping, go to **WebStorm > Preferences > Editor > General** and see the Soft Wraps section. Select the **Use soft wraps in editor** check box.
 
-## Learn a few key commands
+## Exclude a directory
+
+When you're searching for content, you don't want to edit any file that appears in the \_site directory. You can exclude a directory from Webstorm by right-clicking the directory and choosing **Mark Directory As** and then selecting **Excluded**.
+
+## Shortcuts
+
+It can help to learn a few key shortcuts:
 
 |Command | Shortcuts |
 |-------|--------|
@@ -42,6 +48,10 @@ Most likely you'll want to enable soft wraps, which wraps lines rather than exte
 
 {{site.data.alerts.tip}} If these shortcut keys aren't working for you, make sure you have the "Max OS X 10.5+" keymap selected. Go to <b>WebStorm > Preferences > Keymap</b> and select it there. {{site.data.alerts.end}}
 
+## Finding files
+
+When I want to find a file, I browse to the file in the preview site and copy the page name in the URL. Then in Webstorm I press **Shift** twice and paste in the file name. The search feature automatically highlights the file I want, and I press **Enter**.
+
 ## Identifying changed files
 
 When you have the Git and Github integration, changed files appear in blue. This lets you know what needs to be committed to your repository.
@@ -52,12 +62,12 @@ Rather than insert the frontmatter by hand each time, it's much faster to simply
 
 1. Right-click a file in the list of project files, and select **New > Edit File Templates**.
 
-    If you don't see the Edit File Templates option, you may need to create a file template first. Go to **File > Default Settings > Editor > File and Code Templates**. Create a new file template with an md extension, and then close and restart WebStorm. Then repeat this step and you will see the File Templates option appear in the right context menu.
+   If you don't see the Edit File Templates option, you may need to create a file template first. Go to **File > Default Settings > Editor > File and Code Templates**. Create a new file template with an md extension, and then close and restart WebStorm. Then repeat this step and you will see the File Templates option appear in the right context menu.
 
 2. In the upper-left corner of the dialog box that appears, click the **+** button to create a new template.
 3. Name it something like Jekyll page. Insert the frontmatter you want, and save it.
 
-    To use the Jekyll template, when you create a new file in your WebStorm project, you can select your Jekyll file template.
+   To use the Jekyll template, when you create a new file in your WebStorm project, you can select your Jekyll file template.
 
 ## Disable pair quotes
 

@@ -2,10 +2,11 @@
 title: Alerts
 tags: [formatting]
 keywords: notes, tips, cautions, warnings, admonitions
-last_updated: November 30, 2015
-summary: "You can insert notes, tips, warnings, and important alerts in your content. These notes are stored as shortcodes made available through the linksrefs.hmtl include."
+last_updated: March 20, 2016
+summary: "You can insert notes, tips, warnings, and important alerts in your content. These notes make use of Bootstrap styling and are available through data references such as site.data.alerts.note."
+sidebar: mydoc_sidebar
+permalink: /mydoc_alerts/
 ---
-{% comment %} comment 4 by saphira {% endcomment %}
 
 ## About alerts
 Alerts are little warnings, info, or other messages that you have called out in special formatting. In order to use these alerts or callouts, just reference the appropriate value stored in the alerts.yml file as described in the following sections.
@@ -80,5 +81,5 @@ If you want to blast a warning to users on every page, add the alert or callout 
 
 ## Using Markdown inside of notes
 
-You can't use Markdown formatting inside alerts. This is because the alerts leverage HTML, and you can't use Markdown inside of HTML tags.
+You can't use Markdown formatting inside alerts. This is because the alerts leverage HTML, and you can't use Markdown inside of HTML tags. It's very easy to forget this, which is why I recommend using HTML formatting for links in every case. This way you're less likely to forget to switch into HTML mode when you're writing content in a tip. You must remember, however, to avoid Markdown with code and bold formatting inside of notes.
 

@@ -1,0 +1,45 @@
+---
+type: frontmatter
+search: exclude
+permalink: /tocpage/
+---
+
+<!-- new page -->
+<div id="navig">
+    <h1>Table of Contents</h1>
+
+    {% include custom/sidebarconfigs.html %}
+
+
+    <ul id="mysidebar" class="nav">
+        {% for entry in sidebar_pdf %}
+        {% for subcategory in entry.subcategories %}
+        {% if subcategory.output contains "pdf" and subcategory.type != "frontmatter" %}
+        <li class="sectionHead">{{ subcategory.title }}
+            <ul>
+                {% for item in subcategory.items %}
+                {% if item.output contains "pdf" and item.type != "frontmatter"%}
+                <li><a href="{{item.url | prepend: site.baseurl}}">{{item.title}}</a>
+                    {% for thirdlevel in item.thirdlevel %}
+                    {% if thirdlevel.audience contains "pdf" and thirdlevel.type != "frontmatter" %}
+                <li class="sectionHead">{{ thirdlevel.title }}
+                    <ul>
+                        {% for deeplevel in thirdlevel.thirdlevelitems%}
+                        {% if deeplevel.output contains "pdf" and deeplevel.type != "frontmatter"%}
+                        <li><a href="{{deeplevel.url | prepend: site.baseurl}}">{{deeplevel.title}}</a></li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </li>
+                {% endif %}
+                {% endfor %}
+                </li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </li>
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+    </ul>
+</div>
