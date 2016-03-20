@@ -12,7 +12,7 @@ permalink: /mydoc_search_configuration/
 ## About search
 The search is configured through the search.json file in the root directory. Take a look at that code if you want to change what fields are included.
 
-The search is a simple search that looks at content in pages. It looks at titles, summaries, keywords, tags, and bodies.
+The search is a simple search that looks at content in pages. It looks at titles, summaries, keywords, and tags.
 
 However, the search doesn't work like google &mdash; you can't hit return and see a list of results on the search results page, with the keywords in bold. Instead, this search shows a list of page titles that contain keyword matches. It's fast, but simple.
 

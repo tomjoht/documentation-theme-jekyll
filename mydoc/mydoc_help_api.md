@@ -8,14 +8,13 @@ sidebar: mydoc_sidebar
 permalink: /mydoc_help_api/
 ---
 
-
 ## Full code demo of content API
 
 You can create a help API that developers can use to pull in content.
 
-For the full code demo, see the notes in the <a target="_blank" href="mydoc_tooltips_fields.html" class="noCrossRef">tooltip demo</a>.
+For the full code demo, see the notes in the <a target="_blank" href="{{ "/tooltips" | prepend: site.baseurl}}" class="noCrossRef">tooltip demo</a>.
 
-In this demo, the popovers pull in and display content from the information in a <a target="_blank" href="mydoc_tooltips_source.json">mydoc_tooltips_source.json</a> file located in the same directory.
+In this demo, the popovers pull in and display content from the information in a <a target="_blank" href="{{ "/tooltips.json" | prepend: site.baseurl}}">tooltips.json</a> file located in the same directory.
 
 Instead of placing the JSON source in the same directory, you could also host the JSON file on another site.
 
@@ -51,7 +50,7 @@ In Jekyll, folders that begin with an underscore ("_") aren't included in the ou
 
 ## 2. Create tooltip definitions in a YAML file
 
-Inside \_data > mydoc create a YAML file called something like definitions.yml. Add the definitions for each of your tooltips here like this:
+Inside the \_data folder, create a YAML file called something like definitions.yml. Add the definitions for each of your tooltips here like this:
 
 ```yaml
 basketball: "Basketball is a sport involving two teams of five players each competing to put a ball through a small circular rim 10 feet above the ground. Basketball requires players to be in top physical condition, since they spend most of the game running back and forth along a 94-foot-long floor."
@@ -65,16 +64,17 @@ Create pages inside your new tooltips collection (that is, inside the \_tooltips
 
 Here's an example:
 
-{%raw%}
-```liquid
+{% highlight yaml %}
+{% raw %}```liquid
 ---
 id: basketball
 product: mydoc
 ---
 
-{{site.data.definitions.basketball}}
+{{site.data.definitions.basketball}}{% endraw %}
 ```
-{%endraw%}
+{% endhighlight %}
+
 
 You need to create a separate page for each tooltip you want to deliver.  
 
@@ -84,10 +84,10 @@ The product attribute is required in the frontmatter to distinguish the tooltips
 
 Now it's time to create a JSON file with Liquid code that iterates through our tooltip collection and grabs the information from each tooltip file.
 
-Inside your project's pages directory (e.g., mydoc), add a file called "mydoc_tooltips_source.json." (You can use whatever name you want.) Add the following to your JSON file:
+Inside your project's pages directory (e.g., mydoc), add a file called "tooltips.json." (You can use whatever name you want.) Add the following to your JSON file:
 
 {% raw %}
-```
+```liquid
 ---
 layout: none
 search: exclude
@@ -135,21 +135,19 @@ This code will loop through all pages in the tooltips collection and insert the 
 }
 ```
 
-You can also view the same JSON file here: <a class="noCrossRef" href="mydoc_tooltips_source.json">mydoc_tooltips_source.json</a>.
+You can also view the same JSON file here: <a target="_blank" href="{{ "/tooltips.json" | prepend: site.baseurl}}">tooltips.json</a>.
 
 You can add different fields depending on how you want the JSON to be structured. Here we just have to fields: `id` and `body`. And the JSON is looking just in the tooltips collection that we created.
 
 {{site.data.alerts.tip}} Check out <a href="https://google-styleguide.googlecode.com/svn/trunk/jsoncstyleguide.xml">Google's style guide for JSON</a>. These best practices can help you keep your JSON file valid.{{site.data.alerts.end}}
 
-You can store your mydoc_tooltips_source.json file anywhere you want, but to me it make sense to store it inside a tooltips folder for your specific project. This way it will automatically be excluded from other projects that are already excluding that project directory.
-
 Note that you can create different JSON files that specialize in different content. For example, suppose you have some getting started information. You could put that into a different JSON file. Using the same structure, you might add an `if` tag that checks whether the page has frontmatter that says `type: getting_started` or something. Or you could put the content into separate collection entirely (different from tooltips).
 
-By chunking up your JSON files, you can provide a quicker lookup, though I'm not sure how big the JSON file can be before you experience any latency with the jQuery lookup.
+By chunking up your JSON files, you can provide a quicker lookup. (I'm not sure how big the JSON file can be before you experience any latency with the jQuery lookup.)
 
 ## 5. Build your site and look for the JSON file
 
-When you build your site, Jekyll will iterate through every page in your \_tooltips folder and put the page id and body into this format. In the output, look for the JSON file in the mydoc/tooltips/mydoc_tooltips_source.json file. You'll see that Jekyll has populated it with content. This is because of the triple hyphen lines in the JSON file &mdash; this instructs Jekyll to process the file.
+When you build your site, Jekyll will iterate through every page in your \_tooltips folder and put the page id and body into this format. In the output, look for the JSON file in the tooltips.json file. You'll see that Jekyll has populated it with content. This is because of the triple hyphen lines in the JSON file &mdash; this instructs Jekyll to process the file.
 
 ## 6. Allow CORS access to your help if stored on a remote server
 
@@ -167,14 +165,14 @@ If your server setup allows htaccess files to override general server permission
 Header set Access-Control-Allow-Origin "*"
 ```
 
-Store this in the same directory as your project. This is what I've done in a directory on my web host (bluehost.com). Inside http://idratherbetellingstories.com/wp-content/apidemos/, I uploaded a file called ".htaccess" with the preceding code. You can view it [here](http://idratherbetellingstories.com/wp-content/apidemos/mydoc_tooltips_source.json).
+Store this in the same directory as your project. This is what I've done in a directory on my web host (bluehost.com). Inside http://idratherassets.com/wp-content/apidemos/, I uploaded a file called ".htaccess" with the preceding code. 
 
 After I uploaded it, I renamed it to .htaccess, right-clicked the file and set the permissions to 774.
 
 To test whether your server permissions are set correctly, open a terminal and run the following curl command pointing to your tooltips.json file:
 
 ```
-curl -I http://idratherbetellingstories.com/wp-content/apidemos/mydoc_tooltips_source.json
+curl -I http://idratherassets.com/wp-content/apidemos/tooltips.json
 ```
 
 The `-I` command tells cURL to return the request header only. 
@@ -198,7 +196,7 @@ If you have an AWS S3 bucket, you can supposedly add a CORS configuration to the
 </CORSConfiguration>
 ```
 
-Although this should work, in my experiment it doesn't. And I'm not sure why...
+(Although this should work, in my experiment it doesn't. And I'm not sure why...)
 
 In other server setups, you may need to edit one of your Apache configuration files. See [Enable CORS](http://enable-cors.org/server.html) or search online for ways to allow CORS for your server.
 
@@ -210,9 +208,8 @@ If you don't have CORS enabled, users will see a CORS error/warning message in t
 
 Developers can access the help using the `.get` method from jQuery, among other methods. Here's an example of how to get a page with the ID of `basketball`:
 
-{% raw %}
 ```js
-<script type="text/javascript">
+{% raw %}<script type="text/javascript">
 $(document).ready(function(){
 
 var url = "mydoc_tooltips_source.json";
@@ -229,13 +226,12 @@ $.get( url, function( data ) {
     });
  
 });
-</script>
+</script>{% endraw %}
 ```
-{% endraw %}
 
-View the <a class="noCrossRef" href="tooltips/mydoc_tooltips_fields.html">Tooltip Demo</a> for a demo.
+View the <a target="_blank" href="{{ "/tooltips" | prepend: site.baseurl}}" class="noCrossRef">tooltip demo</a> for a demo.
 
-The `url` here is relative, but you could equally point it to an absolute path on a remote host assuming CORS is enabled on the host. 
+The `url` in the demo is relative, but you could equally point it to an absolute path on a remote host assuming CORS is enabled on the host. 
 
 The `each` method looks through all the JSON content to find the item whose `page.id` is equal to `basketball`. It then looks for an element on the page named `#basketball` and adds a `data-content` attribute to that element.
 
@@ -267,11 +263,11 @@ $(document).ready(function(){
     });
 ```
 
-Again, see the <a class="noCrossRef" href="tooltips/mydoc_tooltips_fields.html">Tooltip Demo</a> for a demo of the full code.
+Again, see the <a class="noCrossRef" href="/tooltips">Tooltip Demo</a> for a demo of the full code.
 
 Note that even though you reference a Bootstrap JS script, Bootstrap's popovers require you to initialize them using the above code as well &mdash; they aren't turned on by default.
 
-View the source code of the <a class="noCrossRef" href="mydoc_tooltips_fields.html">Tooltip Demo</a> for the full comments. 
+View the source code of the <a target="_blank" href="{{ "/tooltips" | prepend: site.baseurl}}" class="noCrossRef">tooltip demo</a> for the full comments. 
 
 ## 8. Create easy links to embed the help in your help site
 
@@ -281,9 +277,9 @@ You could use the same method developers use to pull help content into their app
 
 Here's how you would reuse the content:
 
-{% raw %}
+
 ```html
-<h2>Reuse Demo</h2>
+{% raw %}<h2>Reuse Demo</h2>
 
 
 <table>
@@ -315,9 +311,8 @@ Here's how you would reuse the content:
 <td>{{site.data.definitions.soccer}}</td>
 </tr>
 </tbody>
-</table>
+</table>{% endraw %}
 ```
-{% endraw %}
 
 And here's the code: 
 
