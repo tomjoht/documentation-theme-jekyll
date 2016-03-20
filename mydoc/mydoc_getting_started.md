@@ -9,6 +9,7 @@ sidebar: mydoc_sidebar
 permalink: /mydoc_getting_started/
 ---
 
+
 ## Getting up and running
 
 To get up and running with this theme, make sure you can build a vanilla jekyll site first. See the [Jekyll docs](http://jekyllrb.com/). 

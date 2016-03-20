@@ -215,9 +215,6 @@ entries:
       thirdlevel:
       - title: Tag archive pages
         thirdlevelitems:
-        - title: Getting started pages
-          url: /tag_getting_started/
-          output: web
 
         - title: Formatting pages
           url: /tag_formatting/
