@@ -1,5 +1,5 @@
 <!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container topnavlinks">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -8,14 +8,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-
             <a class="fa fa-home fa-lg navbar-brand" href="{{site.baseurl}}/">&nbsp;<span class="projectTitle"> {{site.topnav_title}}</span></a>
-
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <!-- entries without drop-downs appear here -->
-
                 {% for entry in site.data.topnav.topnav %}
                 {% for subcategory in entry.subcategories %}
                 {% if subcategory.external_url %}
@@ -27,14 +24,10 @@
                 {% endif %}
                 {% endfor %}
                 {% endfor %}
-
-
                 <!-- entries with drop-downs appear here -->
                 <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
-
-
-                    {% for entry in site.data.topnav.topnav_dropdowns %}
-                    {% for subcategory in entry.subcategories %}
+                {% for entry in site.data.topnav.topnav_dropdowns %}
+                {% for subcategory in entry.subcategories %}
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ subcategory.title }}<b class="caret"></b></a>
                     <ul class="dropdown-menu">
@@ -47,37 +40,34 @@
                         <li><a href="{{subitem.url | prepend: site.baseurl}}">{{subitem.title}}</a></li>
                         {% endif %}
                         {% endfor %}
-
                     </ul>
                 </li>
                 {% endfor %}
                 {% endfor %}
-
                 {% include feedback.html %}
-
                 <!--comment out this block if you want to hide search-->
                 <li>
-                     <!--start search-->
+                    <!--start search-->
                     <div id="search-demo-container">
                         <input type="text" id="search-input" placeholder="{{site.data.strings.search_placeholder_text}}">
                         <ul id="results-container"></ul>
                     </div>
                     <script src="{{ "/js/jekyll-search.js" | prepend: site.baseurl }}" type="text/javascript"></script>
                     <script type="text/javascript">
-                        SimpleJekyllSearch.init({
-                            searchInput: document.getElementById('search-input'),
-                            resultsContainer: document.getElementById('results-container'),
-                            dataSource: '{{ "/search.json" | prepend: site.baseurl }}',
-                            searchResultTemplate: '<li><a href="{url}" title="{{page.title | replace: "'", "\"}}">{title}</a></li>',
-                        noResultsText: '{{site.data.strings.search_no_results_text}}',
-                                limit: 10,
-                                fuzzy: true,
-                        })
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: '{{ "/search.json" | prepend: site.baseurl }}',
+                                searchResultTemplate: '<li><a href="{url}" title="{{page.title | replace: "'", "\"}}">{title}</a></li>',
+                    noResultsText: '{{site.data.strings.search_no_results_text}}',
+                            limit: 10,
+                            fuzzy: true,
+                    })
                     </script>
-                     <!--end search-->
+                    <!--end search-->
                 </li>
-
-
+            </ul>
+        </div>
         </div>
         <!-- /.container -->
 </nav>

@@ -36,14 +36,11 @@
             });
 
         </script>
+        {% include custom/sidebarconfigs.html %}
 
-
+        <span class="siteTagline">{{sidebar[0].product}}</span>
+        <span class="versionTagline">{{sidebar[0].version}}</span>
         <ul id="mysidebar" class="nav">
-
-  {% include custom/sidebarconfigs.html %}
-
-            <span class="siteTagline">{{sidebar[0].product}}</span>
-            <span class="versionTagline">{{sidebar[0].version}}</span>
 
                 {% for entry in sidebar %}
                 {% for subcategory in entry.subcategories %}
