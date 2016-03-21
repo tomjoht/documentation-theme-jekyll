@@ -1,6 +1,6 @@
 ---
 title: Support
-tags: [getting_started]
+tags: [getting_started, troubleshooting]
 keywords: questions, troubleshooting, contact, support
 last_updated: March 20, 2016
 summary: "Contact me for any support issues."

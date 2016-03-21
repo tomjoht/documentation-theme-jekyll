@@ -1,16 +1,13 @@
 ---
 title: Adding all project dependencies
-tags: [getting-started]
+tags: [getting-started, troubleshooting]
 keywords:
-summary: ""
+summary: "You want to be sure that you have all the required gems and other utilities on your computer to make the project run. Jekyll runs on Ruby, and there are various plugins for Ruby that enable different functionality. These Ruby plugins are referred to as gems, and you install the gems you need for your projects."
 sidebar: mydoc_sidebar
 permalink: /mydoc_install_dependencies/
 ---
 
-You want to be sure that you have all the required gems and other utilities on your computer to make the project run. Jekyll runs on Ruby, and there are various plugins for Ruby that enable different functionality. These Ruby plugins are referred to as gems, and you install the gems you need for your projects.
-
 To manage the various gems and their versions needed for your project, you can use a package manager called Bundler. Many projects will have a gemfile in their project that lists the gems required for the project. You then run Bundler in order to automatically install the required gems and any dependencies for those gems on your machine.
-
 
 ## RubyGems
 

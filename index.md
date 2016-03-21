@@ -1,18 +1,13 @@
 ---
 title: Getting started
 tags: [getting_started]
-keywords: start, introduction, begin, install, build, hello world,
-last_updated: March 20, 2016
-summary: "To get started with this theme, first make sure you have all the prerequisites in place; then build the theme following the sample build commands."
-series: "Getting Started"
 sidebar: mydoc_sidebar
-permalink: /mydoc_getting_started/
 ---
 
 
 ## Getting up and running
 
-To get up and running with this theme, make sure you can build a vanilla jekyll site first. See the [Jekyll docs](http://jekyllrb.com/). 
+To get up and running with this theme, make sure you can build a vanilla jekyll site first. See the [Jekyll docs](http://jekyllrb.com/).
 
 If you're in Windows, you might want to [install Jekyll using Chocolately](https://www.google.com/search?q=install+jekyll+using+chocolately).
 
@@ -80,12 +75,12 @@ Note that your sidebar can only have 2 levels. Given that each product has its o
 The sidebar data file uses a specific YAML syntax that you must follow. Follow the sample pattern shown:
 
 ```yaml
-  - title: Overview
-    output: web, pdf
-    items:
-    - title: Mydoc home
-      url: /mydoc_landing_page/
-      output: web
+- title: Overview
+output: web, pdf
+items:
+- title: Mydoc home
+url: /mydoc_landing_page/
+output: web
 ```
 
 Each heading must contain a title and output property. Each item must contain a title, url, and output property.
@@ -97,18 +92,18 @@ The YAML syntax depends on exact spacing, so make sure you follow the pattern sh
 To accommodate the title page and table of contents in PDF outputs, each product sidebar must list these pages before any other:
 
 ```yaml
-  - title:
-    output: pdf
-    type: frontmatter
-    items:
-    - title:
-      url: /titlepage/
-      output: pdf
-      type: frontmatter
-    - title:
-      url: /tocpage/
-      output: pdf
-      type: frontmatter
+- title:
+output: pdf
+type: frontmatter
+items:
+- title:
+url: /titlepage/
+output: pdf
+type: frontmatter
+- title:
+url: /tocpage/
+output: pdf
+type: frontmatter
 ```
 
 Leave the output as `output: pdf` so that they don't appear in the web output.
@@ -135,7 +130,7 @@ For titles, surrounding the title in quotes is optional, but if you have a colon
 
 Keywords get populated into the metadata of the page for SEO.
 
-Tags must be defined in your \_data/tags.yml list. You also need a corresponding tag file inside the tags folder that follows the same pattern as the other tag files shown in the tags folder. (Jekyll wont auto-create these tag files.) 
+Tags must be defined in your \_data/tags.yml list. You also need a corresponding tag file inside the tags folder that follows the same pattern as the other tag files shown in the tags folder. (Jekyll wont auto-create these tag files.)
 ```
 
 If you don't want the mini-TOC to show on a page (such as for the homepage or landing pages), add `toc: none` in the frontmatter.
@@ -148,7 +143,7 @@ For external URLs, use `external_url` in the item property, as shown in the exam
 
 Note that the topnav has two sections: topnav and topnav_dropdowns. The topnav section contains single links, while the topnav_dropdowns section contains dropdown menus. The two sections are independent of each other.
 
-## Generating PDF 
+## Generating PDF
 
 If you want to generate PDF, you'll need a license for [Prince XML](http://www.princexml.com/). You will also need to [install Prince](http://www.princexml.com/doc/installing/).  You can generate PDFs by product (but not for every product on the site combined together into one massive PDF). Prince will work even without a license, but it will imprint a small Prince image on the first page.
 
@@ -158,7 +153,7 @@ See the section on [generating PDFs](mydoc_generating_pdfs) for more details abo
 
 ## Blogs / News
 
-For blog posts, create your markdown files in the \_posts folder following the sample formats. Post file names always begin with the date (YYYY-MM-DD-title). 
+For blog posts, create your markdown files in the \_posts folder following the sample formats. Post file names always begin with the date (YYYY-MM-DD-title).
 
 The news/news.html file displays the posts, and the news_archive.html file shows a yearly history of posts. In documentation, you might use the news to highlight product features outside of your documentation, or to provide release notes and other updates.
 
@@ -170,8 +165,6 @@ This theme uses Kramdown markdown. Kramdown is similar to Github-flavored Markdo
 ## Other instructions
 
 For other details in working with the theme, see the various sections in the sidebar.
-
-
 
 
 

@@ -1,13 +1,12 @@
 ---
 title: Troubleshooting
-tags: [getting_started]
+tags: [troubleshooting]
 keywords: trouble, problems, support, error messages, problems, failure, error, #fail
 last_updated: March 20, 2016
 summary: "This page lists common errors and the steps needed to troubleshoot them."
 sidebar: mydoc_sidebar
 permalink: /mydoc_troubleshooting/
 ---
-
 
 ## Issues building the site
 
@@ -34,20 +33,6 @@ Alternatively, type the following to stop all Jekyll servers:
 kill -9 $(ps aux | grep '[j]ekyll' | awk '{print $2}')
 ```
 
-### Build not entirely finishing
-
-If your build doesn't entirely finish on the command line, check to see if you have a space after a comma when using multiple configuration files, like this:
-
-```
-jekyll serve --config config_base.yml, config_designer.yml
-```
-
-Remove the space after the comma, and the build will finish executing:
-
-```
-jekyll serve --config config_base.yml,config_designer.yml
-```
-
 ### shell file not executable
 
 If you run into permissions errors trying to run a shell script file (such as mydoc_multibuild_web.sh), you may need to change the file permissions to make the sh file executable. Browse to the directory containing the shell script and run the following:
@@ -56,37 +41,29 @@ If you run into permissions errors trying to run a shell script file (such as my
 chmod +x build_writer.sh
 ```
 
-### Pygments not installed
+## shell file not runnable
 
-The config file requires pygments for the highlighter. You must [download and install Pygments](http://pygments.org/download/), which requires Python, in order to use this syntax highlighter. If you don't want to bother with Pygments, open the configuration file and change `pygments` to `rouge`.
+If you're using a PC, rename your shell files with a .bat extension.
 
 ### "page 0" cross references in the PDF
 
- If you see "page 0" cross-references in the PDF, the URL doesn't exist. Check to make sure you actually included this page in the build. 
- 
- If it's not a page but rather a file, you need to add a `noCrossRef` class to the file so that your print stylesheet excludes the counter from it. Add `class="noCrossRef"` as an attribute to the link. In the css/printstyles.css file, there is a style that should remove the counter from anchor elements with this class.
+If you see "page 0" cross-references in the PDF, the URL doesn't exist. Check to make sure you actually included this page in the build. 
+
+If it's not a page but rather a file, you need to add a `noCrossRef` class to the file so that your print stylesheet excludes the counter from it. Add `class="noCrossRef"` as an attribute to the link. In the css/printstyles.css file, there is a style that should remove the counter from anchor elements with this class.
  
 ### The PDF is blank
  
- Check the prince-file-list.txt file in the output to see if it contains links. If not, you have something wrong with the logic in the prince-file-list.txt file. Check the conditions.html file in your \_includes to see if the audience specified in your configuration file aligns with the buildAudience in the conditions.html file
+Check the prince-list.txt file in the output to see if it contains links. If not, you have something wrong with the logic in the prince-list.txt file. Check the conditions.html file in your \_includes to see if the audience specified in your configuration file aligns with the buildAudience in the conditions.html file
 
 ### Sidebar not appearing
 
- If you build your site but the sidebar doesn't appear, check the following: 
+If you build your site but the sidebar doesn't appear, check the following: 
 
- Look in \_includes/custom/sidebarconfigs.html and make sure the conditional values there match up with the values declared in the configuration file. Specifically, you need to make sure you've declared a value for project, product, platform, and version. 
+Look in \_includes/custom/sidebarconfigs.html and make sure the conditional values there match up with values you're using in each page's frontmatter.
 
- If you don't have any values for these properties, you still need to keep them in your configuration file. Just put something like `all` as the value. 
+Make sure each TOC item has an output property that specifies web or pdf.
 
- {{site.data.alerts.note}} This theme is designed for single sourcing. If you're only building one site, you can remove these values from the \_includes/sidebar.html file and \_data/sidebar.yml files.{{site.data.alerts.end}}
-
- Understanding how the theme works can be helpful in troubleshooting. The \_includes/sidebar.html file loops through the values in the \_data/sidebar.yml file. There are `if` statements that check whether the conditions (as specified in the conditions.html file) are met. If the sidebar.yml item has the right product, platform, audience, and version, then it gets displayed in the sidebar. If not, it get skipped.
-
-### Sidebar heading level not opening
-
- In your \_data/sidebar.yml file, you must also include the correct parameters (platform, product, audience version) for each heading. If an item contains something that should be displayed, the attributes for the heading should be listed.
-
- Without any attributes on heading levels, you could end up with scenarios where a section is entirely designed for one output but appears in every output regardless.
+Understanding how the theme works can be helpful in troubleshooting. The \_includes/sidebar.html file loops through the values in the \_data/sidebar.yml file. There are `if` statements that check whether the conditions (as specified in the conditions.html file) are met. If the sidebar.yml item doesn't have the right output, then it won't get displayed in the sidebar. It would instead get skipped.
 
 ### Sidebar isn't collapsed
 

@@ -28,6 +28,14 @@ Most likely you'll want to enable soft wraps, which wraps lines rather than exte
 
 When you're searching for content, you don't want to edit any file that appears in the \_site directory. You can exclude a directory from Webstorm by right-clicking the directory and choosing **Mark Directory As** and then selecting **Excluded**.
 
+## Set tabs to 3 spaces
+
+You can set the default number of spaces a tab sets, including whether Webstorm uses a tab character or spaces. You want spaces, and you want to set this to default number of spaces to ```3``` spaces instead of 4. Note that this is due to the way Kramdown handles the continuation of lists. 
+
+When you intercept a list with a paragraph or code sample, the indentation of the intercepting paragraph or list must align with the beginning of the first character after the space in the list item numbering. This is typically 3 spaces, not 4. Note that this style differs from the Github-flavored Markdown style. (Welcome to the world of subtle and infuriating discrepancies between Markdown flavors.)
+
+To set the indentation, see the "Tabs and Indents" topic in this [Code Style. Javascript](https://www.jetbrains.com/help/webstorm/2016.1/code-style-javascript.html?origin=old_help#d658997e132) topic in Webstorm's help.
+
 ## Shortcuts
 
 It can help to learn a few key shortcuts:

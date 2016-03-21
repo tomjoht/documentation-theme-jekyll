@@ -1,0 +1,56 @@
+{% include custom/sidebarconfigs.html %}
+
+<div class="sidebarTitle">{{sidebar[0].product}} {{sidebar[0].version}}</div>
+<ul id="mysidebar" class="nav">
+    {% for entry in sidebar %}
+    {% for subcategory in entry.subcategories %}
+    {% if subcategory.output contains "web" %}
+    <li>
+        <a href="#">{{ subcategory.title }}</a>
+        <ul>
+            {% for item in subcategory.items %}
+            {% if item.output contains "web" %}
+            {% if item.external_url %}
+            <li><a href="{{item.external_url}}" target="_blank">{{subcategory.title}}</a></li>
+            {% elsif page.url == item.url %}
+            <li class="active"><a href="{{item.url | prepend: site.baseurl}}">{{item.title}}</a></li>
+            {% else %}
+            <li><a href="{{item.url | prepend: site.baseurl}}">{{item.title}}</a></li>
+            {% endif %}
+            {% for thirdlevel in item.thirdlevel %}
+            {% if thirdlevel.output contains "web" %}
+            <li class="thirdlevel">
+                <a href="#">{{ thirdlevel.title }}</a>
+                <ul>
+                    {% for deeplevel in thirdlevel.thirdlevelitems %}
+                    {% if deeplevel.output contains "web" %}
+                    {% if deeplevel.external_url %}
+                    <li><a href="{{deeplevel.external_url}}" target="_blank">{{deeplevel.title}}</a></li>
+                    {% elsif page.url == deeplevel.url %}
+                    <li class="active"><a href="{{deeplevel.url | prepend: site.baseurl}}">{{deeplevel.title}}</a></li>
+                    {% else %}
+                    <li><a href="{{deeplevel.url | prepend: site.baseurl}}">{{deeplevel.title}}</a></li>
+                    {% endif %}
+                    {% endif %}
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endif %}
+            {% endfor %}
+            {% endif %}
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+        <!-- if you aren't using the accordion, uncomment this block:
+           <p class="external">
+               <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+           </p>
+           -->
+    </li>
+</ul>
+</div>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>

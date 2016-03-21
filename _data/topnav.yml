@@ -24,7 +24,7 @@ topnav_dropdowns:
           external_url: http://idratherbewriting.com/category-jekyll/
     - title: Products
       items:
-        - title: Theme instructions
+        - title: Jekyll Documentation Theme
           url: /mydoc_introduction/
         - title: Product 1
           url: /p1_landing_page/

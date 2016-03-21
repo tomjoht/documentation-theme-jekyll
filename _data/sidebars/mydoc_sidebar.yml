@@ -1,9 +1,9 @@
 # This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
 
 entries:
-- title: Mydoc
-  product: Mydoc
-  version: version 5.0
+- title: sidebar
+  product: Jekyll Doc Theme
+  version: 5.0
   subcategories:
 
   - title:
@@ -23,16 +23,20 @@ entries:
     output: web, pdf
     items:
 
+    - title: 5.0 Release notes
+      url: /mydoc_release_notes_50/
+      output: web, pdf
+
+    - title: Get started
+      url: /
+      output: web, pdf
+
     - title: Introduction
       url: /mydoc_introduction/
       output: web, pdf
 
     - title: Supported features
       url: /mydoc_supported_features/
-      output: web, pdf
-
-    - title: Get started
-      url: /mydoc_getting_started/
       output: web, pdf
 
     - title: About the theme author
@@ -139,6 +143,10 @@ entries:
       url: /mydoc_commenting_on_files/
       output: web, pdf
 
+#    - title: Git collaboration
+#      url: /mydoc_git_collaboration/
+#      output: web, pdf
+
   - title: Publishing
     output: web, pdf
     
@@ -191,6 +199,10 @@ entries:
       url: /mydoc_glossary/
       output: web, pdf
 
+    - title: FAQ layout
+      url: /mydoc_faq_layout/
+      output: web, pdf
+
   - title: Troubleshooting
     output: web, pdf
     
@@ -214,6 +226,7 @@ entries:
 
       thirdlevel:
       - title: Tag archive pages
+        output: web
         thirdlevelitems:
 
         - title: Formatting pages
@@ -238,4 +251,8 @@ entries:
 
         - title: Collaboration pages
           url: /tag_collaboration/
+          output: web
+
+        - title: Troubleshooting pages
+          url: /tag_troubleshooting/
           output: web
