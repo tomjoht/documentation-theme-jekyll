@@ -112,7 +112,7 @@ search: exclude
          |_|
 {% endcomment %}
 
-{% for entry in topnav %}
+{% for entry in site.data.topnav.topnav %}
 {% for subcategory in entry.subcategories %}
 {% unless subcategory.external_url %}
 {{subcategory.url | replace: "/", ""| replace: "\", ""}}:
@@ -123,7 +123,7 @@ search: exclude
 {% endfor %}
 {% endfor %}
 
-{% for entry in topnav_dropdowns %}
+{% for entry in site.data.topnav.topnav_dropdowns %}
 {% for subcategory in entry.subcategories %}
 {% for subitem in subcategory.items %}
 {% unless subitem.external_url %}

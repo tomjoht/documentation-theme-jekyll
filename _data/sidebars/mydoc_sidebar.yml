@@ -23,14 +23,14 @@ entries:
     output: web, pdf
     items:
 
-    - title: 5.0 Release notes
-      url: /mydoc_release_notes_50/
-      output: web, pdf
-
     - title: Get started
       url: /
       output: web, pdf
 
+    - title: 5.0 Release notes
+      url: /mydoc_release_notes_50/
+      output: web, pdf
+      
     - title: Introduction
       url: /mydoc_introduction/
       output: web, pdf

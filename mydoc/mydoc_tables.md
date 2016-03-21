@@ -3,7 +3,7 @@ title: Tables
 tags: [formatting]
 keywords: datatables, tables, grids, markdown, multimarkdown, jquery plugins
 last_updated: March 20, 2016
-datatable: active
+datatable: true
 summary: "You can format tables using either multimarkdown syntax or HTML. You can also use jQuery datatables (a plugin) if you need more robust tables."
 sidebar: mydoc_sidebar
 permalink: /mydoc_tables/

@@ -133,7 +133,7 @@ Keywords get populated into the metadata of the page for SEO.
 Tags must be defined in your \_data/tags.yml list. You also need a corresponding tag file inside the tags folder that follows the same pattern as the other tag files shown in the tags folder. (Jekyll wont auto-create these tag files.)
 ```
 
-If you don't want the mini-TOC to show on a page (such as for the homepage or landing pages), add `toc: none` in the frontmatter.
+If you don't want the mini-TOC to show on a page (such as for the homepage or landing pages), add `toc: false` in the frontmatter.
 
 ## Configure the top navigation
 
