@@ -5,13 +5,18 @@ sidebar: mydoc_sidebar
 ---
 
 
-## Getting up and running
+## Make sure you can build a vanilla Jekyll site first
 
 To get up and running with this theme, make sure you can build a vanilla jekyll site first. See the [Jekyll docs](http://jekyllrb.com/).
 
 If you're in Windows, you might want to [install Jekyll using Chocolately](https://www.google.com/search?q=install+jekyll+using+chocolately).
 
-After ensuring you can run Jekyll on your machine, you can build this site using the usual Jekyll command: `jekyll serve`.
+## Build this theme
+
+1. Download the theme from the [Github repo for the Jekyll doc theme](https://github.com/tomjohnson1492/documentation-theme-jekyll).
+2. Delete the Gemfile and Gemfile.lock files in the theme (unless you're planning to publish on Github Pages. If that's the case, see <a href="{{ "/mydoc_publishing_github_pages" | prepend: site.baseurl }}">Publishing on Github Pages"</a>.
+3. Customize the values in the \_config.yml file following the documentation included in that file).
+3. Build the site using the usual Jekyll command: `jekyll serve`.
 
 ## Configuring the theme
 

@@ -30,7 +30,7 @@ entries:
     - title: 5.0 Release notes
       url: /mydoc_release_notes_50/
       output: web, pdf
-      
+
     - title: Introduction
       url: /mydoc_introduction/
       output: web, pdf
@@ -185,6 +185,10 @@ entries:
 
     - title: Getting around the password prompts in SCP
       url: /mydoc_no_password_prompts_scp/
+      output: web, pdf
+
+    - title: Publishing on Github Pages
+      url: /mydoc_publishing_github_pages/
       output: web, pdf
 
   - title: Special layouts
