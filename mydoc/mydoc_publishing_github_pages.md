@@ -16,20 +16,10 @@ summary: "You can publish your project on Github Pages, which is a free web host
 6. Add a license if desired.
 7. Leave the other options at the defaults and click **Create repository**.
 8. Click the **Settings** button. 
-   
-   <img src="{{ "/images/publishingapidocs/githubreposettings.png" | prepend: site.baseurl }}" alt="Github repo settings" />
-   
 9. Go to your repository's home page, and click the branch drop-down menu. 
-10. Create a new branch called **gh-pages**.
-   
-   <img src="{{ "/images/publishingapidocs/ghpages.png" | prepend: site.baseurl }}" alt="Creating a Github Pages branch" />
-   
+10. Create a new branch called **gh-pages**.  
 11. Click **Settings** and change the default branch to **gh-pages**.
-   
 11. Go back to your repository's homepage. With the gh-pages branch selected, copy the **https clone url**:
-   
-   <img src="{{ "/images/publishingapidocs/cloneurl.png" | prepend: site.baseurl }}" alt="clone URL" />
-   
 12. Open a terminal, browse to a convenient location for your project, and type `git clone https://github.com/tomjohnson1492/myreponame.git`, replacing the `https://github.com/tomjohnson1492/myreponame.git` with your repository's https clone URL that you copied.
 13. Move the jekyll theme files into this new folder that you just created in the previous step.
 14. Open the _config.yml file and add the following:
