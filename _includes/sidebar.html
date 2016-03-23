@@ -1,7 +1,8 @@
 {% include custom/sidebarconfigs.html %}
 
-<div class="sidebarTitle">{{sidebar[0].product}} {{sidebar[0].version}}</div>
+
 <ul id="mysidebar" class="nav">
+    <div class="sidebarTitle">{{sidebar[0].product}} {{sidebar[0].version}}</div>
     {% for entry in sidebar %}
     {% for subcategory in entry.subcategories %}
     {% if subcategory.output contains "web" %}

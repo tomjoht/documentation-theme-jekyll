@@ -25,6 +25,7 @@ entries:
 
     - title: Get started
       url: /
+      type: homepage
       output: web, pdf
 
     - title: 5.0 Release notes

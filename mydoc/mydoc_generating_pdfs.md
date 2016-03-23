@@ -34,7 +34,7 @@ You can install a fully functional trial version. The only difference is that th
 
 The PDF configuration file will build on the settings in the regular configuration file but will some additional fields. Here's the configuration file for the mydoc product within this theme. This configuration file is located in the pdfconfigs folder.
 
-```
+```yaml
 destination: _site/
 url: "http://127.0.0.1:4010"
 baseurl: "/mydoc-pdf"
@@ -72,7 +72,7 @@ There are two template pages in the root directory that are critical to the PDF:
 
 These pages should appear in your sidebar YML file (in this product, mydoc_sidebar.yml):
 
-```json
+```yaml
   - title:
     output: pdf
     type: frontmatter
@@ -145,7 +145,7 @@ To set a specific style property for a particular page, you have to name the pag
 
 First you add frontmatter to the page that specifies the type. For the titlepage.html, here's the frontmatter:
 
-```
+```yaml
 ---
 type: title
 ---
@@ -153,7 +153,7 @@ type: title
 
 For the tocpage, here's the frontmatter:
 
-```
+```yaml
 ---
 type: frontmatter
 ---
@@ -161,7 +161,7 @@ type: frontmatter
 
 For the index.html page, we have this type tag (among others):
 
-```
+```yaml
 ---
 type: first_page
 ---
