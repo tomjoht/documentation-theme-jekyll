@@ -1000,7 +1000,7 @@ span.label.label-primary {
 }
 .col-lg-12 .nav li a {background-color: white}
 
-div.sidebarTitle {
+li.sidebarTitle {
     margin-top:40px;
     font-weight:normal;
     font-size:130%;
