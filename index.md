@@ -1,24 +1,20 @@
 ---
-title: Getting started
+title: Getting started overview
 tags: [getting_started]
 sidebar: mydoc_sidebar
 type: homepage
 ---
 
-These instructions will help you get started quickly with the theme. The other topics in this help provide additional information and notes about working with other aspects of this theme and Jekyll.
+## Overview 
 
-## Make sure you can build a vanilla Jekyll site first
-
-To get up and running with this theme, make sure you can build a vanilla jekyll site first. See the [Jekyll docs](http://jekyllrb.com/). If you're in Windows, you'll need to install Ruby and Ruby Dev Kit first. See {{site.data.urls.mydoc_install_jekyll_on_windows.link}} for details.
+These instructions will help you get started quickly with the theme. The other topics in this help provide additional information and detail about working with other aspects of this theme and Jekyll.
 
 ## Build this theme
 
-1. Download the theme from the [Github repo for the Jekyll doc theme](https://github.com/tomjohnson1492/documentation-theme-jekyll).
-2. Delete the Gemfile and Gemfile.lock files in the theme (unless you're planning to publish on Github Pages. If that's the case, see <a href="{{ "/mydoc_publishing_github_pages" | prepend: site.baseurl }}">Publishing on Github Pages</a>).
-3. Customize the values in the \_config.yml file following the documentation included in that file.
-3. Build the site using the usual Jekyll command: `jekyll serve`
+If you're used to running Jekyll sites, you can type the normal jekyll command, `jekyll serve`, to run this site. However, if you're a new Jekyll user or if you run into issues, see the following two topics:
 
-For more information about build arguments in general with Jekyll, see {{site.data.urls.mydoc_build_arguments.link}}.
+* {{site.data.urls.mydoc_install_jekyll_on_mac.link}}
+* {{site.data.urls.mydoc_install_jekyll_on_windows.link}}
 
 ## Configure the sidebar
 

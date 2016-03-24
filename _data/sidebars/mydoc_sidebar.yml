@@ -48,6 +48,22 @@ entries:
       url: /mydoc_support/
       output: web, pdf
 
+  - title: Installation
+    output: web, pdf
+    items:
+
+    - title: About Ruby, Gems, Bundler, etc.
+      url: /mydoc_about_ruby_gems_etc/
+      output: web, pdf
+
+    - title: Install Jekyll on Mac
+      url: /mydoc_install_jekyll_on_mac/
+      output: web, pdf
+
+    - title: Install Jekyll on Windows
+      url: /mydoc_install_jekyll_on_windows/
+      output: web, pdf
+
   - title: Authoring
     output: web, pdf
     
@@ -215,14 +231,6 @@ entries:
 
     - title: Troubleshooting
       url: /mydoc_troubleshooting/
-      output: web, pdf
-
-    - title: Adding all project dependencies
-      url: /mydoc_install_dependencies/
-      output: web, pdf
-
-    - title: Install Jekyll on Windows
-      url: /mydoc_install_jekyll_on_windows/
       output: web, pdf
 
   - title: Tag archives

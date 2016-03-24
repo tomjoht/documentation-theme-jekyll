@@ -16,6 +16,7 @@ mydoc_homepage:
 
 
 
+
 mydoc_release_notes_50:
   title: "5.0 Release notes"
   url: "/documentation-theme-jekyll/mydoc_release_notes_50/"
@@ -48,6 +49,29 @@ mydoc_support:
   title: "Support"
   url: "/documentation-theme-jekyll/mydoc_support/"
   link: "<a href='/documentation-theme-jekyll/mydoc_support/'>Support</a>"
+
+
+
+
+
+mydoc_about_ruby_gems_etc:
+  title: "About Ruby, Gems, Bundler, etc."
+  url: "/documentation-theme-jekyll/mydoc_about_ruby_gems_etc/"
+  link: "<a href='/documentation-theme-jekyll/mydoc_about_ruby_gems_etc/'>About Ruby, Gems, Bundler, etc.</a>"
+
+
+
+mydoc_install_jekyll_on_mac:
+  title: "Install Jekyll on Mac"
+  url: "/documentation-theme-jekyll/mydoc_install_jekyll_on_mac/"
+  link: "<a href='/documentation-theme-jekyll/mydoc_install_jekyll_on_mac/'>Install Jekyll on Mac</a>"
+
+
+
+mydoc_install_jekyll_on_windows:
+  title: "Install Jekyll on Windows"
+  url: "/documentation-theme-jekyll/mydoc_install_jekyll_on_windows/"
+  link: "<a href='/documentation-theme-jekyll/mydoc_install_jekyll_on_windows/'>Install Jekyll on Windows</a>"
 
 
 
@@ -300,20 +324,6 @@ mydoc_troubleshooting:
   title: "Troubleshooting"
   url: "/documentation-theme-jekyll/mydoc_troubleshooting/"
   link: "<a href='/documentation-theme-jekyll/mydoc_troubleshooting/'>Troubleshooting</a>"
-
-
-
-mydoc_install_dependencies:
-  title: "Adding all project dependencies"
-  url: "/documentation-theme-jekyll/mydoc_install_dependencies/"
-  link: "<a href='/documentation-theme-jekyll/mydoc_install_dependencies/'>Adding all project dependencies</a>"
-
-
-
-mydoc_install_jekyll_on_windows:
-  title: "Install Jekyll on Windows"
-  url: "/documentation-theme-jekyll/mydoc_install_jekyll_on_windows/"
-  link: "<a href='/documentation-theme-jekyll/mydoc_install_jekyll_on_windows/'>Install Jekyll on Windows</a>"
 
 
 
