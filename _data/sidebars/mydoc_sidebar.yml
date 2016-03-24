@@ -221,6 +221,10 @@ entries:
       url: /mydoc_install_dependencies/
       output: web, pdf
 
+    - title: Install Jekyll on Windows
+      url: /mydoc_install_jekyll_on_windows/
+      output: web, pdf
+
   - title: Tag archives
     output: web
     items:

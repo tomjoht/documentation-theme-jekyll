@@ -4,6 +4,18 @@
 
 
 
+
+
+
+
+
+mydoc_homepage:
+  title: "Get started"
+  url: "/documentation-theme-jekyll/"
+  link: "<a href='/documentation-theme-jekyll/'>Get started</a>"
+
+
+
 mydoc_release_notes_50:
   title: "5.0 Release notes"
   url: "/documentation-theme-jekyll/mydoc_release_notes_50/"
@@ -295,6 +307,13 @@ mydoc_install_dependencies:
   title: "Adding all project dependencies"
   url: "/documentation-theme-jekyll/mydoc_install_dependencies/"
   link: "<a href='/documentation-theme-jekyll/mydoc_install_dependencies/'>Adding all project dependencies</a>"
+
+
+
+mydoc_install_jekyll_on_windows:
+  title: "Install Jekyll on Windows"
+  url: "/documentation-theme-jekyll/mydoc_install_jekyll_on_windows/"
+  link: "<a href='/documentation-theme-jekyll/mydoc_install_jekyll_on_windows/'>Install Jekyll on Windows</a>"
 
 
 

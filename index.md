@@ -9,7 +9,7 @@ These instructions will help you get started quickly with the theme. The other t
 
 ## Make sure you can build a vanilla Jekyll site first
 
-To get up and running with this theme, make sure you can build a vanilla jekyll site first. See the [Jekyll docs](http://jekyllrb.com/). If you're in Windows, you might want to [install Jekyll using Chocolately](https://www.google.com/search?q=install+jekyll+using+chocolately).
+To get up and running with this theme, make sure you can build a vanilla jekyll site first. See the [Jekyll docs](http://jekyllrb.com/). If you're in Windows, you'll need to install Ruby and Ruby Dev Kit first. See {{site.data.urls.mydoc_install_jekyll_on_windows.link}} for details.
 
 ## Build this theme
 
