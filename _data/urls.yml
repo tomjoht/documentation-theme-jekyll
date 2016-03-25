@@ -1,22 +1,5 @@
 
 
-
-
-
-
-
-
-
-
-
-mydoc_homepage:
-  title: "Get started"
-  url: "/documentation-theme-jekyll/"
-  link: "<a href='/documentation-theme-jekyll/'>Get started</a>"
-
-
-
-
 mydoc_release_notes_50:
   title: "5.0 Release notes"
   url: "/documentation-theme-jekyll/mydoc_release_notes_50/"
@@ -584,7 +567,4 @@ p2_landing_page:
   title: "Product 2"
   url: "p2_landing_page"
   link: "<a href='/p2_landing_page/'>Product 2</a>"
-
-
-
 

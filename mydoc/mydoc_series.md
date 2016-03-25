@@ -1,6 +1,6 @@
 ---
 title: Series
-tags: [content-types]
+tags: [content_types]
 keywords: series, connected articles, tutorials, hello world
 last_updated: March 20, 2016
 summary: "You can automatically link together topics belonging to the same series. This helps users know the context within a particular process."

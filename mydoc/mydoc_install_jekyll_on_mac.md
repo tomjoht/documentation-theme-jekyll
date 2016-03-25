@@ -9,34 +9,48 @@ permalink: /mydoc_install_jekyll_on_mac/
 
 ## Ruby and RubyGems
 
-Ruby and [RubyGems](https://rubygems.org/pages/download) are usually installed by default on Macs. Open your Terminal and type 'which ruby' and  `which gem` to confirm that you have Ruby and Rubygems. You should get a response indicating the location of Rubygems, such as `/Users/MacBookPro/.rvm/rubies/ruby-2.2.1/bin/gem`.
+Ruby and [RubyGems](https://rubygems.org/pages/download) are usually installed by default on Macs. Open your Terminal and type `which ruby` and  `which gem` to confirm that you have Ruby and Rubygems. You should get a response indicating the location of Ruby and Rubygems.
+ 
+If you get responses that look like this:
 
-However, you will likely run into permissions errors when executing from the operating system's version of Ruby. A sample error looks like this:
+```
+/usr/local/bin/ruby
+```
+
+and 
+
+```
+/usr/local/bin/gem
+```
+
+Great! Skip down to the [Bundler](#bundler) section.
+ 
+However, if your location is something like `/Users/MacBookPro/.rvm/rubies/ruby-2.2.1/bin/gem`, which points to your system location of Rubygems, you will likely run into permissions errors when trying to get a gem. A sample permissions error might look like this for Rubygems:
  
 ```
  >ERROR:  While executing gem ... (Gem::FilePermissionError)
   You don't have write permissions for the /Library/Ruby/Gems/2.0.0 directory.
 ```  
   
-Instead of changing the write permissions on your OS's version of Ruby, you can install another instance of Ruby (one that is writable) to get around this.
+Instead of changing the write permissions on your operating system's version of Ruby and Rubygems (which could pose security issues), you can install another instance of Ruby (one that is writable) to get around this.
 
 ## Install Homebrew
 
-Homebrew is a package manager for the Mac, and you can use it to install alternative Ruby libraries. To install Homebrew, run this command:
+Homebrew is a package manager for the Mac, and you can use it to install alternative Ruby code. To install Homebrew, run this command:
 
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-## Install Ruby through Homebrew
-
-If you already had Homebrew installed on your computer, first update it:
+If you already had Homebrew installed on your computer, be sure to update it:
 
 ```
 brew update
 ```
 
-Install Ruby through Homebrew:
+## Install Ruby through Homebrew
+
+Now use Homebrew to install Ruby:
 
 ```
 brew install ruby
@@ -72,9 +86,9 @@ Then initialize rbenv:
 rbenv init
 ```
 
-If you still have issues, you need to resolve them before installing Bundler.
+If you still have issues getting a writeable version of Ruby, you need to resolve them before installing Bundler.
 
-## Install Bundler
+<h2 id="bundler">Install Bundler</h2>
 
 At this point you should have a writeable version of Ruby on your machine. Now you need to get all the gems (or Ruby plugins) that you need for your Jekyll project. [Bundler](http://bundler.io/) is a package manager for RubyGems.
 
@@ -88,7 +102,7 @@ If you're prompted to switch to superuser mode (`sudo`) to get the correct permi
 
 ## Customize the Gemfile
 
-Bundler goes out and retreives all the gems that are specified in your project's Gemfile. If you have a gem that depends on other gems to work, Bundler will go out and retrieve all of the dependencies as well. (To learn more about Bundler, see {{site.data.urls.mydoc_about_ruby_gems_bundler.link}}.
+Bundler goes out and retreives all the gems that are specified in your project's Gemfile. If you have a gem that depends on other gems to work, Bundler will go out and retrieve all of the dependencies as well. (To learn more about Bundler, see {{site.data.urls.mydoc_about_ruby_gems_etc.link}}.
 
 Open the Gemfile (in any text editor) in the Jekyll doc theme project:
 
@@ -107,7 +121,7 @@ gem 'github-pages'
 gem 'jekyll'
 ```
 
-If you're publishing on Github Pages, leave the `github-pages` gem there. But if not, remove `github-pages` -- Github sometimes has dependencies that conflict with the latest versions of the Jekyll gem and Kramdown, which can be frustrating.
+If you're publishing on Github Pages, leave the `github-pages` gem there. But if not, remove `github-pages` because Github sometimes has dependencies that conflict with the latest versions of the Jekyll gem and Kramdown, which can be frustrating.
 
 Use Bundler to install all the needed Ruby gems:
 
