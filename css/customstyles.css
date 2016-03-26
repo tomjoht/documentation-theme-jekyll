@@ -911,101 +911,107 @@ span.soft {
     }
 }
 
-    *:hover > .anchorjs-link {
-        transition: color .25s linear;
-        text-decoration: none;
-    }
+*:hover > .anchorjs-link {
+    transition: color .25s linear;
+    text-decoration: none;
+}
 
-    .kbCaption {
-        color: white;
-        background-color: #444;
-        padding:10px;
-    }
+.kbCaption {
+    color: white;
+    background-color: #444;
+    padding:10px;
+}
 
-    /* this part adds an icon after external links, using FontAwesome*/
-    a[href^="http://"]:after, a[href^="https://"]:after {
-        content: "\f08e";
-        font-family: FontAwesome;
-        font-weight: normal;
-        font-style: normal;
-        display: inline-block;
-        text-decoration: none;
-        padding-left: 3px;
-    }
+/* this part adds an icon after external links, using FontAwesome*/
+a[href^="http://"]:after, a[href^="https://"]:after {
+    content: "\f08e";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: none;
+    padding-left: 3px;
+}
 
-    /* Strip the outbound icon when this class is present */
-    a[href^="http://own-domain.com"]:after,
-    a.no_icon:after {
-        content:"" !important;
-        padding-left: 0;
-    }
+/* Strip the outbound icon when this class is present */
+a[href^="http://own-domain.com"]:after,
+a.no_icon:after {
+    content:"" !important;
+    padding-left: 0;
+}
 
-    .btn-default {
-        margin-bottom: 10px;
-    }
+.btn-default {
+    margin-bottom: 10px;
+}
 
-    /* algolia search */
+/* algolia search */
 
-    .search {
-        text-align: left;
-    }
-    .search input {
-        font-size: 20px;
-        width: 300px;
-    }
-    .results {
-        margin: auto;
-        text-align: left;
-    }
-    .results ul {
-        list-style-type: none;
-        padding: 0;
-    }
+.search {
+    text-align: left;
+}
+.search input {
+    font-size: 20px;
+    width: 300px;
+}
+.results {
+    margin: auto;
+    text-align: left;
+}
+.results ul {
+    list-style-type: none;
+    padding: 0;
+}
 
-    /* algolia */
+/* algolia */
 
-    div.results {
-        position: absolute;
-        background-color: white;
-        width: 100%;
-    }
+div.results {
+    position: absolute;
+    background-color: white;
+    width: 100%;
+}
 
-    .post-meta {
-        font-size: 14px;
-        color: #828282;
-    }
+.post-meta {
+    font-size: 14px;
+    color: #828282;
+}
 
-    .post-link {
-        font-size: 22px;
-    }
+.post-link {
+    font-size: 22px;
+}
 
-    .post-list p {
-        margin: 10px 0px;
-    }
+.post-list p {
+    margin: 10px 0px;
+}
 
-    time {
-        margin-right: 10px;
-    }
+time {
+    margin-right: 10px;
+}
 
-    p.post-meta time {
-        margin-right: 0px;
-    }
+p.post-meta time {
+    margin-right: 0px;
+}
 
-    span.label.label-default {
-        background-color: gray;
-    }
+span.label.label-default {
+    background-color: gray;
+}
 
-    span.label.label-primary {
-        background-color: #f0ad4e;
-    }
-    .col-lg-12 .nav li a {background-color: white}
+span.label.label-primary {
+    background-color: #f0ad4e;
+}
+.col-lg-12 .nav li a {background-color: white}
 
-    li.sidebarTitle {
-        margin-top:40px;
-        font-weight:normal;
-        font-size:130%;
-        color: #ED1951;
-        margin-bottom:10px;
-        margin-left: 5px;
+li.sidebarTitle {
+    margin-top:40px;
+    font-weight:normal;
+    font-size:130%;
+    color: #ED1951;
+    margin-bottom:10px;
+    margin-left: 5px;
 
+}
+
+.nav li.active > a.subfoldersTitle {
+    background-color: whitesmoke;
+    font-weight: bold;
+    color: black;
     }
