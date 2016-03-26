@@ -76,7 +76,7 @@ These pages should appear in your sidebar YML file (in this product, mydoc_sideb
   - title:
     output: pdf
     type: frontmatter
-    items:
+    folderitems:
     - title:
       url: /titlepage/
       output: pdf

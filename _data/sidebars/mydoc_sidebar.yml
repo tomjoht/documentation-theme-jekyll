@@ -4,12 +4,12 @@ entries:
 - title: sidebar
   product: Jekyll Doc Theme
   version: 5.0
-  subcategories:
+  folders:
 
   - title:
     output: pdf
     type: frontmatter
-    items:
+    folderitems:
     - title:
       url: /titlepage/
       output: pdf
@@ -21,7 +21,7 @@ entries:
 
   - title: Overview
     output: web, pdf
-    items:
+    folderitems:
 
     - title: Get started
       url: /
@@ -50,7 +50,7 @@ entries:
 
   - title: Installation
     output: web, pdf
-    items:
+    folderitems:
 
     - title: About Ruby, Gems, Bundler, etc.
       url: /mydoc_about_ruby_gems_etc/
@@ -67,7 +67,7 @@ entries:
   - title: Authoring
     output: web, pdf
     
-    items:
+    folderitems:
     - title: Pages
       url: /mydoc_pages/
       output: web, pdf
@@ -95,7 +95,7 @@ entries:
   - title: Navigation
     output: web, pdf
     
-    items:
+    folderitems:
     - title: Sidebar navigation
       url: /mydoc_sidebar_navigation/
       output: web, pdf
@@ -115,7 +115,7 @@ entries:
   - title: Formatting
     output: web, pdf
     
-    items:
+    folderitems:
     - title: Tooltips
       url: /mydoc_adding_tooltips/
       output: web, pdf
@@ -155,7 +155,7 @@ entries:
   - title: Handling reviews
     output: web, pdf
     
-    items:
+    folderitems:
     - title: Commenting on files
       url: /mydoc_commenting_on_files/
       output: web, pdf
@@ -167,7 +167,7 @@ entries:
   - title: Publishing
     output: web, pdf
     
-    items:
+    folderitems:
     - title: Build arguments
       url: /mydoc_build_arguments/
       output: web, pdf
@@ -211,7 +211,7 @@ entries:
   - title: Special layouts
     output: web, pdf
     
-    items:
+    folderitems:
     - title: Knowledge-base layout
       url: /mydoc_kb_layout/
       output: web, pdf
@@ -227,7 +227,7 @@ entries:
   - title: Troubleshooting
     output: web, pdf
     
-    items:
+    folderitems:
 
     - title: Troubleshooting
       url: /mydoc_troubleshooting/
@@ -235,16 +235,16 @@ entries:
 
   - title: Tag archives
     output: web
-    items:
+    folderitems:
 
     - title: Tag archives overview
       url: /mydoc_tag_archives_overview/
       output: web
 
-      thirdlevel:
+      subfolders:
       - title: Tag archive pages
         output: web
-        thirdlevelitems:
+        subfolderitems:
 
         - title: Formatting pages
           url: /tag_formatting/

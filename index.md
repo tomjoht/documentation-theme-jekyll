@@ -76,15 +76,37 @@ For more detail on the sidebar, see {{site.data.urls.mydoc_sidebar_navigation.li
 The sidebar data file uses a specific YAML syntax that you must follow. Follow the sample pattern shown. For example:
 
 ```yaml
-  - title: Overview
+entries:
+- title: sidebar
+  product: Jekyll Doc Theme
+  version: 5.0
+  folders:
+  - title: Overview 
     output: web, pdf
-    items:
-    - title: Get started
-      url: /mydoc_getting_started.md
+    folderitems:
+    - title: Some page
+      url: /some-doc-page/
       output: web, pdf
+    - title: Another page
+      url: /another-doc-page/
+      output: web, pdf
+      
+  - title: Configuration
+    output: web
+    folderitems:
+    - title: How to configure the system
+      url: /configure-system/
+      output: web, pdf
+      subfolders:
+      - title: Config process
+        output: web, pdf
+        subfolderitems:
+        - title: Creating the config file
+          url: /config-file-how-to/
+          output: web, pdf
 ```
 
-Each heading must contain a title and output property. Each item must contain a title, url, and output property.
+Each folder or subfolder must contain a title and output property. Each folderitem or subfolderitem must contain a title, url, and output property.
 
 The two outputs available are web and pdf. (Even if you aren't publishing PDF, you still need to specify `output: web`).
 
@@ -96,7 +118,7 @@ To accommodate the title page and table of contents in PDF outputs, each product
   - title:
     output: pdf
     type: frontmatter
-    items:
+    folderitems:
     - title:
       url: /titlepage/
       output: pdf

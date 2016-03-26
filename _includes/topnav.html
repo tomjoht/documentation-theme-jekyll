@@ -14,30 +14,30 @@
             <ul class="nav navbar-nav navbar-right">
                 <!-- entries without drop-downs appear here -->
                 {% for entry in site.data.topnav.topnav %}
-                {% for subcategory in entry.subcategories %}
-                {% if subcategory.external_url %}
-                <li><a href="{{subcategory.external_url}}" target="_blank">{{subcategory.title}}</a></li>
-                {% elsif page.url contains subcategory.url %}
-                <li class="active"><a href="{{subcategory.url | prepend: site.baseurl}}">{{subcategory.title}}</a></li>
+                {% for item in entry.items %}
+                {% if item.external_url %}
+                <li><a href="{{item.external_url}}" target="_blank">{{item.title}}</a></li>
+                {% elsif page.url contains item.url %}
+                <li class="active"><a href="{{item.url | prepend: site.baseurl}}">{{item.title}}</a></li>
                 {% else %}
-                <li><a href="{{subcategory.url | prepend: site.baseurl }}">{{subcategory.title}}</a></li>
+                <li><a href="{{item.url | prepend: site.baseurl }}">{{item.title}}</a></li>
                 {% endif %}
                 {% endfor %}
                 {% endfor %}
                 <!-- entries with drop-downs appear here -->
                 <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
                 {% for entry in site.data.topnav.topnav_dropdowns %}
-                {% for subcategory in entry.subcategories %}
+                {% for folder in entry.folders %}
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ subcategory.title }}<b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ folder.title }}<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        {% for subitem in subcategory.items %}
-                        {% if subitem.external_url %}
-                        <li><a href="{{subitem.external_url}}" target="_blank">{{subitem.title}}</a></li>
-                        {% elsif page.url contains subitem.url %}
-                        <li class="dropdownActive"><a href="{{subitem.url | prepend: site.baseurl}}">{{subitem.title}}</a></li>
+                        {% for folderitem in folder.folderitems %}
+                        {% if folderitem.external_url %}
+                        <li><a href="{{folderitem.external_url}}" target="_blank">{{folderitem.title}}</a></li>
+                        {% elsif page.url contains folderitem.url %}
+                        <li class="dropdownActive"><a href="{{folderitem.url | prepend: site.baseurl}}">{{folderitem.title}}</a></li>
                         {% else %}
-                        <li><a href="{{subitem.url | prepend: site.baseurl}}">{{subitem.title}}</a></li>
+                        <li><a href="{{folderitem.url | prepend: site.baseurl}}">{{folderitem.title}}</a></li>
                         {% endif %}
                         {% endfor %}
                     </ul>

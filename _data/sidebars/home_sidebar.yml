@@ -3,11 +3,11 @@
 entries:
 - title: Sidebar
   levels: one
-  subcategories:
+  folders:
 
   - title: Products
     output: web
-    items:
+    folderitems:
     - title: Home
       url: /
       output: web

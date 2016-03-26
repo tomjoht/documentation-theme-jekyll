@@ -5,11 +5,11 @@ entries:
   version: all products
   levels: one
   output: web
-  subcategories:
+  folders:
 
   - title: News
     output: web
-    items:
+    folderitems:
     - title: News
       url: /news/
       output: web
@@ -18,7 +18,7 @@ entries:
       output: web
   - title: Tags
     output: web
-    items:
+    folderitems:
     - title: Collaboration
       url: /tag_collaboration/
       output: web

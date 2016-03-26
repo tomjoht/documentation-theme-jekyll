@@ -142,7 +142,7 @@ Here we use a "for" loop to get each item in the bikes list. By using `.title` w
 ```yaml
 salesteams:
 - title: Regions
- subitems:
+ subfolderitems:
    - location: US
    - location: Spain
    - location: France
@@ -184,17 +184,17 @@ Each list item starts with the hyphen `–`.  You cannot directly access the lis
 ```yaml
 toc:
   - title: Group 1
-    subitems:
+    subfolderitems:
       - page: Thing 1
       - page: Thing 2
       - page: Thing 3
   - title: Group 2
-    subitems:
+    subfolderitems:
       - page: Piece 1
       - page: Piece 2
       - page: Piece 3
   - title: Group 3
-    subitems:
+    subfolderitems:
       - page: Widget 1
       - page: Widget 2 it's
       - page: Widget 3

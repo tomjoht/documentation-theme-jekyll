@@ -44,9 +44,8 @@ For example, the sidebar.html file contains the following code:
 
 {% raw %}
 ```liquid
-{% if item.external_url %}
-    <li><a href="{{item.external_url}}" target="_blank">{{subcategory.title}}</a></li>
-    {% elsif page.url == item.url %}
+ {% if subfolderitem.external_url %}
+<li><a href="{{subfolderitem.external_url}}" target="_blank">{{deeplevel.title}}</a></li>
 ```
 {% endraw %}
 
@@ -60,15 +59,12 @@ For example, the sidebar.html file contains the following code:
 
 {% raw %}
 ```liquid
-    {% elsif page.url == item.url %}
-    <li class="active"><a href="{{item.url | prepend: ".."}}">{{item.title}}</a></li>
-    {% else %}
-    <li><a href="{{item.url | prepend: ".."}}">{{item.title}}</a></li>
-    {% endif %}
+{% elsif page.url == subfolderitem.url %}
+  <li class="active"><a href="{{subfolderitem.url | prepend: site.baseurl}}">{{subfolderitem.title}}</a></li>
 ```
 {% endraw %}
 
-If the `page.url` matches the `item.url`, then an `active` class gets applied. If not, the `active` class does not get applied. 
+If the `page.url` matches the `subfolderitem.url`, then an `active` class gets applied. If not, the `active` class does not get applied. 
 
 The `page.url` in Jekyll is a site-wide variable. If you insert {% raw %}`{{page.url}}`{% endraw %} on a page, it will render as follows: {{page.url}}. The `url` attribute in the sidebar item must match the page URL in order to get the `active` class applied. 
 

@@ -5,12 +5,12 @@ entries:
 - title: Sidebar
   product: Product1
   version: 1.0
-  subcategories:
+  folders:
 
   - title:
     output: pdf
     type: frontmatter
-    items:
+    folderitems:
     - title:
       url: /titlepage/
       output: pdf
@@ -22,7 +22,7 @@ entries:
 
   - title: Getting Started
     output: web, pdf
-    items:
+    folderitems:
     - title: Product 1 home
       url: /p1_landing_page/
       output: web
@@ -42,7 +42,7 @@ entries:
   - title: Another heading
     output: web, pdf
 
-    items:
+    folderitems:
     - title: Sample 4
       url: /p1_sample4/
       output: web, pdf

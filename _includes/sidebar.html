@@ -1,36 +1,40 @@
 {% include custom/sidebarconfigs.html %}
 
 
+
+
+
+
 <ul id="mysidebar" class="nav">
     <li class="sidebarTitle">{{sidebar[0].product}} {{sidebar[0].version}}</li>
     {% for entry in sidebar %}
-    {% for subcategory in entry.subcategories %}
-    {% if subcategory.output contains "web" %}
+    {% for folder in entry.folders %}
+    {% if folder.output contains "web" %}
     <li>
-        <a href="#">{{ subcategory.title }}</a>
+        <a href="#">{{ folder.title }}</a>
         <ul>
-            {% for item in subcategory.items %}
-            {% if item.output contains "web" %}
-            {% if item.external_url %}
-            <li><a href="{{item.external_url}}" target="_blank">{{item.title}}</a></li>
-            {% elsif page.url == item.url %}
-            <li class="active"><a href="{{item.url | prepend: site.baseurl}}">{{item.title}}</a></li>
+            {% for folderitem in folder.folderitems %}
+            {% if folderitem.output contains "web" %}
+            {% if folderitem.external_url %}
+            <li><a href="{{item.external_url}}" target="_blank">{{folderitem.title}}</a></li>
+            {% elsif page.url == folderitem.url %}
+            <li class="active"><a href="{{item.url | prepend: site.baseurl}}">{{folderitem.title}}</a></li>
             {% else %}
-            <li><a href="{{item.url | prepend: site.baseurl}}">{{item.title}}</a></li>
+            <li><a href="{{folderitem.url | prepend: site.baseurl}}">{{folderitem.title}}</a></li>
             {% endif %}
-            {% for thirdlevel in item.thirdlevel %}
-            {% if thirdlevel.output contains "web" %}
-            <li class="thirdlevel">
-                <a href="#">{{ thirdlevel.title }}</a>
+            {% for subfolders in folderitem.subfolders %}
+            {% if subfolders.output contains "web" %}
+            <li class="subfolders">
+                <a href="#">{{ subfolders.title }}</a>
                 <ul>
-                    {% for deeplevel in thirdlevel.thirdlevelitems %}
-                    {% if deeplevel.output contains "web" %}
-                    {% if deeplevel.external_url %}
-                    <li><a href="{{deeplevel.external_url}}" target="_blank">{{deeplevel.title}}</a></li>
-                    {% elsif page.url == deeplevel.url %}
-                    <li class="active"><a href="{{deeplevel.url | prepend: site.baseurl}}">{{deeplevel.title}}</a></li>
+                    {% for subfolderitem in subfolders.subfolderitems %}
+                    {% if subfolderitem.output contains "web" %}
+                    {% if subfolderitem.external_url %}
+                    <li><a href="{{subfolderitem.external_url}}" target="_blank">{{deeplevel.title}}</a></li>
+                    {% elsif page.url == subfolderitem.url %}
+                    <li class="active"><a href="{{subfolderitem.url | prepend: site.baseurl}}">{{subfolderitem.title}}</a></li>
                     {% else %}
-                    <li><a href="{{deeplevel.url | prepend: site.baseurl}}">{{deeplevel.title}}</a></li>
+                    <li><a href="{{subfolderitem.url | prepend: site.baseurl}}">{{subfolderitem.title}}</a></li>
                     {% endif %}
                     {% endif %}
                     {% endfor %}

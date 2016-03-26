@@ -4,13 +4,13 @@ entries:
 - title: Product2
   product: Product2
   version: 1.0
-  subcategories:
+  folders:
 
   - title:
     output: pdf
     type: frontmatter
 
-    items:
+    folderitems:
     - title:
       url: /titlepage/
       output: pdf
@@ -22,7 +22,7 @@ entries:
 
   - title: Getting Started
     output: web, pdf
-    items:
+    folderitems:
 
     - title: Product 2 home
       url: /p2_landing_page/
@@ -38,7 +38,7 @@ entries:
 
   - title: Another heading
     output: web, pdf
-    items:
+    folderitems:
 
     - title: Sample 3
       url: /p2_sample3/
@@ -50,7 +50,7 @@ entries:
 
   - title: Another heading
     output: web, pdf
-    items:
+    folderitems:
 
     - title: Sample 5
       url: /p2_sample5/
