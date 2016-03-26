@@ -14,19 +14,19 @@ search: exclude
 {% endcomment %}
 
 {% for entry in site.data.sidebars.mydoc_sidebar.entries %}
-{% for subcategory in entry.subcategories %}
-{% for item in subcategory.items %} {% if subcategory.type != "frontmatter" %}
-{{item.url | replace: "/", "" }}:
-  title: "{{item.title }}"
-  url: "{{item.url | prepend: site.baseurl }}"
-  link: "<a href='{{item.url | prepend: site.baseurl }}'>{{item.title}}</a>"
+{% for folder in entry.folders %}
+{% for folderitem in folder.folderitems %} {% if folderitem.type != "frontmatter" %}
+{{folderitem.url | replace: "/", "" }}:
+  title: "{{folderitem.title }}"
+  url: "{{folderitem.url | prepend: site.baseurl }}"
+  link: "<a href='{{folderitem.url | prepend: site.baseurl }}'>{{folderitem.title}}</a>"
 {% endif %}
-{% for thirdlevel in item.thirdlevel %}
-{% for deeplevel in thirdlevel.thirdlevelitems %} {% if thirdlevel.type != "frontmatter" %}
-{{deeplevel.url | replace: "/" }}:
-  title: "{{deeplevel.title}}"
-  url: "{{deeplevel.url| prepend: site.baseurl }}"
-  link: "<a href='{{deeplevel.url | prepend: site.baseurl }}'>{{deeplevel.title}}</a>"
+{% for subfolders in folderitem.subfolders %}
+{% for subfolderitem in subfolders.subfolderitems%} {% if subfolderitem.type != "frontmatter" %}
+{{subfolderitem.url | replace: "/" }}:
+  title: "{{subfolderitem.title}}"
+  url: "{{subfolderitem.url| prepend: site.baseurl }}"
+  link: "<a href='{{subfolderitem.url | prepend: site.baseurl }}'>{{subfolderitem.title}}</a>"
 {% endif %}
 {% endfor %}
 {% endfor %}
@@ -46,19 +46,19 @@ search: exclude
 
 
 {% for entry in site.data.sidebars.product1_sidebar.entries %}
-{% for subcategory in entry.subcategories %}
-{% for item in subcategory.items %} {% if subcategory.type != "frontmatter" %}
-{{item.url | replace: "/", "" }}:
-  title: "{{item.title }}"
-  url: "{{item.url | prepend: site.baseurl }}"
-  link: "<a href='{{item.url | prepend: site.baseurl }}'>{{item.title}}</a>"
+{% for folder in entry.folders %}
+{% for folderitem in folder.folderitems %} {% if folderitem.type != "frontmatter" %}
+{{folderitem.url | replace: "/", "" }}:
+  title: "{{folderitem.title }}"
+  url: "{{folderitem.url | prepend: site.baseurl }}"
+  link: "<a href='{{folderitem.url | prepend: site.baseurl }}'>{{folderitem.title}}</a>"
 {% endif %}
-{% for thirdlevel in item.thirdlevel %}
-{% for deeplevel in thirdlevel.thirdlevelitems %} {% if thirdlevel.type != "frontmatter" %}
-{{deeplevel.url | replace: "/" }}:
-  title: "{{deeplevel.title}}"
-  url: "{{deeplevel.url| prepend: site.baseurl }}"
-  link: "<a href='{{deeplevel.url | prepend: site.baseurl }}'>{{deeplevel.title}}</a>"
+{% for subfolders in folderitem.subfolders %}
+{% for subfolderitem in subfolders.subfolderitems%} {% if subfolderitem.type != "frontmatter" %}
+{{subfolderitem.url | replace: "/" }}:
+  title: "{{subfolderitem.title}}"
+  url: "{{subfolderitem.url| prepend: site.baseurl }}"
+  link: "<a href='{{subfolderitem.url | prepend: site.baseurl }}'>{{subfolderitem.title}}</a>"
 {% endif %}
 {% endfor %}
 {% endfor %}
@@ -80,27 +80,27 @@ search: exclude
 
 {% endcomment %}
 
-{% for entry in site.data.sidebars.product2_sidebar.entries %}
-{% for subcategory in entry.subcategories %}
-{% for item in subcategory.items %} {% if subcategory.type != "frontmatter" %}
-{{item.url | replace: "/", "" }}:
-  title: "{{item.title }}"
-  url: "{{item.url | prepend: site.baseurl }}"
-  link: "<a href='{{item.url | prepend: site.baseurl }}'>{{item.title}}</a>"
-{% endif %}
-{% for thirdlevel in item.thirdlevel %}
-{% for deeplevel in thirdlevel.thirdlevelitems %} {% if thirdlevel.type != "frontmatter" %}
-{{deeplevel.url | replace: "/" }}:
-  title: "{{deeplevel.title}}"
-  url: "{{deeplevel.url| prepend: site.baseurl }}"
-  link: "<a href='{{deeplevel.url | prepend: site.baseurl }}'>{{deeplevel.title}}</a>"
-{% endif %}
-{% endfor %}
-{% endfor %}
-{% endfor %}
-{% endfor %}
-{% endfor %}
 
+{% for entry in site.data.sidebars.product2_sidebar.entries %}
+{% for folder in entry.folders %}
+{% for folderitem in folder.folderitems %} {% if folderitem.type != "frontmatter" %}
+{{folderitem.url | replace: "/", "" }}:
+  title: "{{folderitem.title }}"
+  url: "{{folderitem.url | prepend: site.baseurl }}"
+  link: "<a href='{{folderitem.url | prepend: site.baseurl }}'>{{folderitem.title}}</a>"
+{% endif %}
+{% for subfolders in folderitem.subfolders %}
+{% for subfolderitem in subfolders.subfolderitems%} {% if subfolderitem.type != "frontmatter" %}
+{{subfolderitem.url | replace: "/" }}:
+  title: "{{subfolderitem.title}}"
+  url: "{{subfolderitem.url| prepend: site.baseurl }}"
+  link: "<a href='{{subfolderitem.url | prepend: site.baseurl }}'>{{subfolderitem.title}}</a>"
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+{% endfor %}
 
 
 {% comment %}
@@ -113,24 +113,24 @@ search: exclude
 {% endcomment %}
 
 {% for entry in site.data.topnav.topnav %}
-{% for subcategory in entry.subcategories %}
-{% unless subcategory.external_url %}
-{{subcategory.url | replace: "/", ""| replace: "\", ""}}:
-  title: "{{subcategory.title}}"
-  url: "{{subcategory.url | replace: "/", ""| replace: "\", ""}}"
-  link: "<a href='{{subcategory.url}}'>{{subcategory.title}}</a>"
+{% for item in entry.items %}
+{% unless item.external_url %}
+{{item.url | replace: "/", ""| replace: "\", ""}}:
+  title: "{{item.title}}"
+  url: "{{item.url | replace: "/", ""| replace: "\", ""}}"
+  link: "<a href='{{item.url}}'>{{item.title}}</a>"
 {% endunless %}
 {% endfor %}
 {% endfor %}
 
 {% for entry in site.data.topnav.topnav_dropdowns %}
-{% for subcategory in entry.subcategories %}
-{% for subitem in subcategory.items %}
-{% unless subitem.external_url %}
-{{subitem.url | replace: "/", ""| replace: "\", "" }}:
-  title: "{{subitem.title}}"
-  url: "{{subitem.url| replace: "/", ""| replace: "\", ""}}"
-  link: "<a href='{{subitem.url}}'>{{subitem.title}}</a>"
+{% for folder in entry.folders %}
+{% for folderitem in folder.folderitems %}
+{% unless folderitem.external_url %}
+{{folderitem.url | replace: "/", ""| replace: "\", "" }}:
+  title: "{{folderitem.title}}"
+  url: "{{folderitem.url| replace: "/", ""| replace: "\", ""}}"
+  link: "<a href='{{folderitem.url}}'>{{folderitem.title}}</a>"
 {% endunless %}
 {% endfor %}
 {% endfor %}

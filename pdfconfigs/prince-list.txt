@@ -5,18 +5,17 @@ search: exclude
 
 {% include custom/sidebarconfigs.html %}
 
-
  {% for entry in sidebar_pdf %}
-   {% for subcategory in entry.subcategories %}
-      {% if subcategory.output contains "pdf" %}
-              {% for item in subcategory.items %}
-                 {% if item.output contains "pdf" %}
-                    {{site.url}}{{site.baseurl}}{{item.url }}
-                          {% for thirdlevel in item.thirdlevel %}
-                             {% if thirdlevel.output contains "pdf" %}
-                                        {% for deeplevel in thirdlevel.thirdlevelitems %}
-                                           {% if deeplevel.output contains "pdf" %}
-                                              {{site.url}}{{site.baseurl}}{{deeplevel.url}}
+   {% for folder in entry.folders %}
+      {% if folder.output contains "pdf" %}
+              {% for folderitem in folder.folderitems %}
+                 {% if folderitem.output contains "pdf"  %}
+                    {{site.url}}{{site.baseurl}}{{folderitem.url}}
+                          {% for subfolders in folderitem.subfolders %}
+                             {% if subfolders.output contains "pdf" %}
+                                        {% for subfolderitem in subfolders.subfolderitems %}
+                                           {% if subfolderitem.output contains "pdf" %}
+                                              {{site.url}}{{site.baseurl}}{{subfolderitem.url}}
                                            {% endif %}
                                         {% endfor %}
                              {% endif %}
