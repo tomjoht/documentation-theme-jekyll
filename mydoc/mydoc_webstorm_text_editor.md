@@ -16,6 +16,14 @@ If you decide to use WebStorm, here are a few tips on configuring the editor.
 
 By default, WebStorm comes packaged with a lot more functionality than you probably need. You can lighten the editor by removing some of the plugins. Go to **WebStorm > Preferences > Plugins** and clear the check boxes of plugins you don't need.
 
+## Set default tab indent to 3 spaces instead of 4
+
+You can set the way the tab works, and whether it uses spaces or a tab character. For details, see [Code Style. JavaScript](https://www.jetbrains.com/help/webstorm/2016.1/code-style-javascript.html?origin=old_help#d658997e132) in WebStorm's help.
+
+On a Mac, go to **WebStorm | Preferences | Editor | Code Style | Other File Types**. Don't select the "Use tab character" check box. Set **3** for the **Tab size** and **Indent** check boxes. 
+
+On Windows, go to **File | Settings | Editor | Code Style | Other File Types** to access the same menu.
+
 ## Add the Markdown Support plugin
 
 Since you'll be writing in Markdown, having color coding and other support for Markdown is important. Install the Markdown Support plugin by going to **WebStorm > Preferences > Plugins** and clicking **Install JetBrains Plugin**. Search for **Markdown Support**. (I would avoid the Multimarkdown plugin &mdash; it seemed to make all my dashes in frontmatter tags extend half way across the page.)
