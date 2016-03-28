@@ -25,7 +25,7 @@ and
 
 Great! Skip down to the [Bundler](#bundler) section.
  
-However, if your location is something like `/Users/MacBookPro/.rvm/rubies/ruby-2.2.1/bin/gem`, which points to your system location of Rubygems, you will likely run into permissions errors when trying to get a gem. A sample permissions error might look like this for Rubygems:
+However, if your location is something like `/Users/MacBookPro/.rvm/rubies/ruby-2.2.1/bin/gem`, which points to your system location of Rubygems, you will likely run into permissions errors when trying to get a gem. A sample permissions error (triggered when you try to install the jekyll gem such as `gem install jekyll`) might look like this for Rubygems:
  
 ```
  >ERROR:  While executing gem ... (Gem::FilePermissionError)
@@ -36,7 +36,7 @@ Instead of changing the write permissions on your operating system's version of 
 
 ## Install Homebrew
 
-Homebrew is a package manager for the Mac, and you can use it to install alternative Ruby code. To install Homebrew, run this command:
+Homebrew is a package manager for the Mac, and you can use it to install an alternative instance of Ruby code. To install Homebrew, run this command:
 
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -72,21 +72,7 @@ And this:
 
 Now Ruby and Rubygems are installed under your username, so these directories are writeable.
 
-Note that if you don't see these paths, try restarting your computer or try installing rbenv, which is a Ruby version management tool. 
-
-You can install rbenv through Homebrew using this command: 
-
-```
-brew install rbenv
-```
-
-Then initialize rbenv:
-
-```
-rbenv init
-```
-
-If you still have issues getting a writeable version of Ruby, you need to resolve them before installing Bundler.
+Note that if you don't see these paths, try restarting your computer or try installing rbenv, which is a Ruby version management tool. If you still have issues getting a writeable version of Ruby, you need to resolve them before installing Bundler.
 
 <h2 id="bundler">Install Bundler</h2>
 
