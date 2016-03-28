@@ -19,21 +19,22 @@ search: exclude
 {% for folderitem in folder.folderitems %} {% unless folderitem.type == "frontmatter" or folderitem.external_url %}
 {{folderitem.url | replace: "/", "" }}:
   title: "{{folderitem.title }}"
-  url: "{{folderitem.url | prepend: site.baseurl }}"
-  link: "<a href='{{folderitem.url | prepend: site.baseurl }}'>{{folderitem.title}}</a>"
+  url: "{{folderitem.url | prepend: site.baseurl }} '{{folderitem.title}}'"
+  link: "<a href='{{folderitem.url | prepend: site.baseurl }}' title='{{folderitem.title}}'>{{folderitem.title}}</a>"
 {% endunless %}
 {% for subfolders in folderitem.subfolders %}
 {% for subfolderitem in subfolders.subfolderitems%} {% unless subfolderitem.type == "frontmatter" or subfolderitem.external_url %}
 {{subfolderitem.url | replace: "/" }}:
   title: "{{subfolderitem.title}}"
-  url: "{{subfolderitem.url| prepend: site.baseurl }}"
-  link: "<a href='{{subfolderitem.url | prepend: site.baseurl }}'>{{subfolderitem.title}}</a>"
+  url: "{{subfolderitem.url| prepend: site.baseurl }} '{{subfolderitem.title}}'"
+  link: "<a href='{{subfolderitem.url | prepend: site.baseurl }}' title='{{subfolderitem.title}}'>{{subfolderitem.title}}</a>"
 {% endunless %}
 {% endfor %}
 {% endfor %}
 {% endfor %}
 {% endfor %}
 {% endfor %}
+
 
 {% comment %}
                      _            _   _
@@ -49,21 +50,22 @@ search: exclude
 {% for folderitem in folder.folderitems %} {% unless folderitem.type == "frontmatter" or folderitem.external_url %}
 {{folderitem.url | replace: "/", "" }}:
   title: "{{folderitem.title }}"
-  url: "{{folderitem.url | prepend: site.baseurl }}"
-  link: "<a href='{{folderitem.url | prepend: site.baseurl }}'>{{folderitem.title}}</a>"
+  url: "{{folderitem.url | prepend: site.baseurl }} '{{folderitem.title}}'"
+  link: "<a href='{{folderitem.url | prepend: site.baseurl }}' title='{{folderitem.title}}'>{{folderitem.title}}</a>"
 {% endunless %}
 {% for subfolders in folderitem.subfolders %}
 {% for subfolderitem in subfolders.subfolderitems%} {% unless subfolderitem.type == "frontmatter" or subfolderitem.external_url %}
 {{subfolderitem.url | replace: "/" }}:
   title: "{{subfolderitem.title}}"
-  url: "{{subfolderitem.url| prepend: site.baseurl }}"
-  link: "<a href='{{subfolderitem.url | prepend: site.baseurl }}'>{{subfolderitem.title}}</a>"
+  url: "{{subfolderitem.url| prepend: site.baseurl }} '{{subfolderitem.title}}'"
+  link: "<a href='{{subfolderitem.url | prepend: site.baseurl }}' title='{{subfolderitem.title}}'>{{subfolderitem.title}}</a>"
 {% endunless %}
 {% endfor %}
 {% endfor %}
 {% endfor %}
 {% endfor %}
 {% endfor %}
+
 
 
 
@@ -82,21 +84,22 @@ search: exclude
 {% for folderitem in folder.folderitems %} {% unless folderitem.type == "frontmatter" or folderitem.external_url %}
 {{folderitem.url | replace: "/", "" }}:
   title: "{{folderitem.title }}"
-  url: "{{folderitem.url | prepend: site.baseurl }}"
-  link: "<a href='{{folderitem.url | prepend: site.baseurl }}'>{{folderitem.title}}</a>"
+  url: "{{folderitem.url | prepend: site.baseurl }} '{{folderitem.title}}'"
+  link: "<a href='{{folderitem.url | prepend: site.baseurl }}' title='{{folderitem.title}}'>{{folderitem.title}}</a>"
 {% endunless %}
 {% for subfolders in folderitem.subfolders %}
 {% for subfolderitem in subfolders.subfolderitems%} {% unless subfolderitem.type == "frontmatter" or subfolderitem.external_url %}
 {{subfolderitem.url | replace: "/" }}:
   title: "{{subfolderitem.title}}"
-  url: "{{subfolderitem.url| prepend: site.baseurl }}"
-  link: "<a href='{{subfolderitem.url | prepend: site.baseurl }}'>{{subfolderitem.title}}</a>"
+  url: "{{subfolderitem.url| prepend: site.baseurl }} '{{subfolderitem.title}}'"
+  link: "<a href='{{subfolderitem.url | prepend: site.baseurl }}' title='{{subfolderitem.title}}'>{{subfolderitem.title}}</a>"
 {% endunless %}
 {% endfor %}
 {% endfor %}
 {% endfor %}
 {% endfor %}
 {% endfor %}
+
 
 {% comment %}
  _
