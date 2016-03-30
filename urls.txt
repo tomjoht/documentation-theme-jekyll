@@ -1,6 +1,10 @@
 ---
 layout: none
 search: exclude
+sidebar:
+- mydoc_sidebar
+- product1_sidebar
+- product2_sidebar
 ---
 
 {% comment %}
@@ -13,17 +17,17 @@ search: exclude
 
 {% endcomment %}
 
-
-{% for entry in site.data.sidebars.mydoc_sidebar.entries %}
+{% for sidebar in page.sidebar %}
+{% for entry in site.data.sidebars[sidebar].entries %}
 {% for folder in entry.folders %}
-{% for folderitem in folder.folderitems %} {% unless folderitem.type == "frontmatter" or folderitem.external_url %}
+{% for folderitem in folder.folderitems %} {% unless folderitem.type == "frontmatter" or folderitem.external_url or folderitem.type == "homepage" %}
 {{folderitem.url | replace: "/", "" }}:
   title: "{{folderitem.title }}"
   url: "{{folderitem.url | prepend: site.baseurl }} '{{folderitem.title}}'"
   link: "<a href='{{folderitem.url | prepend: site.baseurl }}' title='{{folderitem.title}}'>{{folderitem.title}}</a>"
 {% endunless %}
 {% for subfolders in folderitem.subfolders %}
-{% for subfolderitem in subfolders.subfolderitems%} {% unless subfolderitem.type == "frontmatter" or subfolderitem.external_url %}
+{% for subfolderitem in subfolders.subfolderitems%} {% unless subfolderitem.type == "frontmatter" or subfolderitem.external_url or subfolderitem.type == "homepage" %}
 {{subfolderitem.url | replace: "/" }}:
   title: "{{subfolderitem.title}}"
   url: "{{subfolderitem.url| prepend: site.baseurl }} '{{subfolderitem.title}}'"
@@ -34,71 +38,9 @@ search: exclude
 {% endfor %}
 {% endfor %}
 {% endfor %}
-
-
-{% comment %}
-                     _            _   _
- _ __  _ __ ___   __| |_   _  ___| |_/ |
-| '_ \| '__/ _ \ / _` | | | |/ __| __| |
-| |_) | | | (_) | (_| | |_| | (__| |_| |
-| .__/|_|  \___/ \__,_|\__,_|\___|\__|_|
-|_|
-{% endcomment %}
-
-{% for entry in site.data.sidebars.product1_sidebar.entries %}
-{% for folder in entry.folders %}
-{% for folderitem in folder.folderitems %} {% unless folderitem.type == "frontmatter" or folderitem.external_url %}
-{{folderitem.url | replace: "/", "" }}:
-  title: "{{folderitem.title }}"
-  url: "{{folderitem.url | prepend: site.baseurl }} '{{folderitem.title}}'"
-  link: "<a href='{{folderitem.url | prepend: site.baseurl }}' title='{{folderitem.title}}'>{{folderitem.title}}</a>"
-{% endunless %}
-{% for subfolders in folderitem.subfolders %}
-{% for subfolderitem in subfolders.subfolderitems%} {% unless subfolderitem.type == "frontmatter" or subfolderitem.external_url %}
-{{subfolderitem.url | replace: "/" }}:
-  title: "{{subfolderitem.title}}"
-  url: "{{subfolderitem.url| prepend: site.baseurl }} '{{subfolderitem.title}}'"
-  link: "<a href='{{subfolderitem.url | prepend: site.baseurl }}' title='{{subfolderitem.title}}'>{{subfolderitem.title}}</a>"
-{% endunless %}
-{% endfor %}
-{% endfor %}
-{% endfor %}
-{% endfor %}
 {% endfor %}
 
 
-
-
-{% comment %}
-                     _            _   ____
- _ __  _ __ ___   __| |_   _  ___| |_|___ \
-| '_ \| '__/ _ \ / _` | | | |/ __| __| __) |
-| |_) | | | (_) | (_| | |_| | (__| |_ / __/
-| .__/|_|  \___/ \__,_|\__,_|\___|\__|_____|
-|_|
-
-{% endcomment %}
-
-{% for entry in site.data.sidebars.product2_sidebar.entries %}
-{% for folder in entry.folders %}
-{% for folderitem in folder.folderitems %} {% unless folderitem.type == "frontmatter" or folderitem.external_url %}
-{{folderitem.url | replace: "/", "" }}:
-  title: "{{folderitem.title }}"
-  url: "{{folderitem.url | prepend: site.baseurl }} '{{folderitem.title}}'"
-  link: "<a href='{{folderitem.url | prepend: site.baseurl }}' title='{{folderitem.title}}'>{{folderitem.title}}</a>"
-{% endunless %}
-{% for subfolders in folderitem.subfolders %}
-{% for subfolderitem in subfolders.subfolderitems%} {% unless subfolderitem.type == "frontmatter" or subfolderitem.external_url %}
-{{subfolderitem.url | replace: "/" }}:
-  title: "{{subfolderitem.title}}"
-  url: "{{subfolderitem.url| prepend: site.baseurl }} '{{subfolderitem.title}}'"
-  link: "<a href='{{subfolderitem.url | prepend: site.baseurl }}' title='{{subfolderitem.title}}'>{{subfolderitem.title}}</a>"
-{% endunless %}
-{% endfor %}
-{% endfor %}
-{% endfor %}
-{% endfor %}
-{% endfor %}
 
 
 {% comment %}

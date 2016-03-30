@@ -47,11 +47,13 @@ In general, avoid broken links and outdated titles in links by doing the followi
 * Use a broken link checker on your site output to see if links are broken.
 * Generate a PDF, since the PDF tends to highlight broken links more forcefully.
 
-## Other methods for managing links
+## Managed Links
 
-You can also adopt an indirect-reference systems for managing links. This involves storing the link text in YAML syntax.
+You can also adopt an indirect-reference systems for managing links. This "managed links" approach involves storing the link text in YAML syntax.
  
-If you want to try this method, look in the root directory. The urls.txt file contains the same code as the table of contents (but without the conditional qualifiers), duplicated for each of the sidebars. The code iterates through every page listed in the table of contents sidebars (as well as the top navigation menus) and creates an output that looks like this for each link: 
+Look at the urls.txt file in the root directory. The urls.txt file contains more or less the same code as the table of contents (but without the conditional qualifiers). A `for` loop runs each of the product sidebars listed in the frontmatter through the url generator. 
+
+The code iterates through every page listed in the table of contents sidebars (as well as the top navigation menus) and creates an output that looks like this for each link: 
 
 ```yaml
 mydoc_introduction:
@@ -60,7 +62,26 @@ mydoc_introduction:
   link: "<a href='/mydoc_introduction/'>Introduction</a>"
 ```
 
-From the site output folder (in \_site), open urls.txt and observe that it is properly populated (blank spaces between entries doesn't matter). Then manually copy the contents from the urls.txt and insert it into the \_data/urls.yml file in your project folder. 
+In the frontmatter for urls.txt, add the name of each of your sidebars, like this:
+
+```yaml
+---
+layout: none
+search: exclude
+sidebar:
+- mydoc_sidebar
+- product1_sidebar
+- product2_sidebar
+---
+```
+
+From the site output folder (in \_site), open urls.txt and observe that it is properly populated (blank spaces between entries doesn't matter). Then manually copy the contents from the urls.txt and insert it into the \_data/urls.yml file in your project folder. Alternatively, run the urls-update.sh file:
+
+```
+. urls-update.txt
+```
+
+This will move and rename the file through a script.
 
 Because the urls.txt is produced from the table of contents, you ensure that the same titles and URLs used in your table of contents and top navigation will also be used in your inline links. 
  
@@ -78,7 +99,7 @@ This will insert the following into your topic:
 <a href='/mydoc_getting_started/'>Getting started</a>
 ```
 
-You don't need to worry whether you can use Markdown syntax when inserting a link this way, because the insertion is HTML. 
+You don't need to worry whether you can use Markdown syntax when inserting a link this way, because the code that gets inserted is HTML. 
 
 To insert a link in the context of a phrase, you can use this syntax:
 
@@ -88,7 +109,9 @@ After downloading the theme, you can [get started in building the theme]({{site.
 ```
 {% endraw %}
 
-This leverages Markdown syntax. If you're in an HTML file or section, use this:
+Note that `.url` is used instead of `.link`.
+
+If you're in HTML and can't use Markdown, then use the following code: 
 
 {% raw %}
 ```html
@@ -96,11 +119,15 @@ This leverages Markdown syntax. If you're in an HTML file or section, use this:
 ```
 {% endraw %}
 
-Note that the `url` value accesses the URL for the page only, whereas `link` gets the title and url in a link format.
+The `url` value accesses the URL for the page only, whereas `link` gets the title and url in a link format.
 
-You shouldn't have to copy the contents from the urls.txt file into your YAML data source too often &mdash; only when you're creating new pages. 
+You shouldn't have to transfer the contents from the urls.txt file into your YAML data source too often &mdash; only when you're creating new pages.
+ 
+I also added a simple script called "run.sh" that performs the urls-update.sh command prior to running Jekyll serve, so you can kill two birds with one stone.
 
-By using this approach, you're less likely to end up with broken links.
+Note that for the index.html file, which doesn't have a permalink, this file is not included in the urls.txt generation. To link to the homepage, just refer users to the root url of your site.
+
+Overall, by using managed links, you're less likely to end up with broken links.
 
 {{site.data.alerts.tip}} To avoid having to remember this long syntax, use a text macro program like <a href="https://itunes.apple.com/us/app/atext/id488566438?mt=12">aText</a>. {{site.data.alerts.end}}
 

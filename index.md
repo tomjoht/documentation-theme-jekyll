@@ -7,7 +7,7 @@ type: homepage
 
 ## Overview 
 
-These instructions will help you get started quickly with the theme. The other topics in this help provide additional information and detail about working with other aspects of this theme and Jekyll.
+These brief instructions will help you get started quickly with the theme. The other topics in this help provide additional information and detail about working with other aspects of this theme and Jekyll.
 
 ## Build this theme
 
@@ -67,7 +67,7 @@ The `sidebar: mydoc_sidebar` refers to the \_data/sidebars/mydoc_sidebar.yml fil
 
 If no sidebar assignment is found in the page frontmatter, the default sidebar (specified by the `else` statement) will be shown: `site.data.sidebars.home_sidebar.entries`.
 
-Note that your sidebar can only have 2 levels. Given that each product has its own sidebar, this depth should be sufficient. Deeper nesting goes against usability recommendations.
+Note that your sidebar can only have 2 levels. Given that each product has its own sidebar, this depth should be sufficient (it's really like 3 levels). Deeper nesting goes against usability recommendations.
 
 For more detail on the sidebar, see {{site.data.urls.mydoc_sidebar_navigation.link}}.
 
@@ -106,9 +106,9 @@ entries:
           output: web, pdf
 ```
 
-Each folder or subfolder must contain a title and output property. Each folderitem or subfolderitem must contain a title, url, and output property.
+Each folder or subfolder must contain a title and output property. Each `folderitem` or `subfolderitem` must contain a `title`, `url`, and `output` property.
 
-The two outputs available are web and pdf. (Even if you aren't publishing PDF, you still need to specify `output: web`).
+The two outputs available are `web` and `pd`f. (Even if you aren't publishing PDF, you still need to specify `output: web`).
 
 The YAML syntax depends on exact spacing, so make sure you follow the pattern shown in the sample sidebars. See my [YAML tutorial](mydoc_yaml_tutorial) for more details about how YAML works.
 
@@ -198,7 +198,36 @@ See {{site.data.urls.mydoc_posts}} for more information.
 
 ## Markdown
 
-This theme uses Kramdown markdown. Kramdown is similar to Github-flavored Markdown, except that when you have text that intercepts list items, the spacing of the intercepting text must align with the spacing of the first character after the space of a numbered list item. See the topics under "Formatting" in the sidebar for more information.
+This theme uses Kramdown markdown. Kramdown is similar to Github-flavored Markdown, except that when you have text that intercepts list items, the spacing of the intercepting text must align with the spacing of the first character after the space of a numbered list item. Basically, with your list item numbering, use two spaces after the dot in the number, like this:
+
+```
+1.  First item
+2.  Second item
+3.  Third item
+```
+
+When you want to insert paragraphs, notes, code snippets, or other matter in between the list items, use four spaces to indent. The four spaces will line up with the first letter of the list item (the **F**irst or **S**econd or **T**hird).
+
+```
+1.  First item
+    
+    ```
+    alert("hello");
+    ```
+    
+2.  Second item
+    
+    Some pig!
+    
+3.  Third item
+```
+
+
+See the topics under "Formatting" in the sidebar for more information.
+
+## Managing links
+
+If you want to use a simple system for managing links, see the "Managed Links" section in {{site.data.urls.mydoc_hyperlinks.link}}.
 
 ## Other instructions
 

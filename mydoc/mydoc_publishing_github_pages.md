@@ -43,7 +43,7 @@ Bundler is a package manager for Ruby that will install all dependencies you mig
 2. Install Bundler:
    
    ```
-   brew install bundler
+   gem install bundler
    ```
 
 
