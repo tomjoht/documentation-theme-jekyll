@@ -148,10 +148,10 @@ table > tfoot > tr > td {
 table > thead > tr > th {
     vertical-align: bottom;
     border-bottom: 2px solid #ddd;
-    text-transform: uppercase;
-    background-color: #444;
+    text-transform: none;
+    background-color: #777;
     color: white;
-    text-align: center;
+    text-align: left;
 }
 table > caption + thead > tr:first-child > th,
 table > colgroup + thead > tr:first-child > th,
@@ -1015,3 +1015,15 @@ li.sidebarTitle {
     font-weight: bold;
     color: black;
     }
+
+a code {
+    color: #248EC2;
+}
+
+code + a > code {
+    margin-left: -7px;
+}
+
+table th code {
+    color: white;
+}

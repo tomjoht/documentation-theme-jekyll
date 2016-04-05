@@ -13,7 +13,7 @@
             {% if folderitem.external_url %}
             <li><a href="{{folderitem.external_url}}" target="_blank">{{folderitem.title}}</a></li>
             {% elsif page.url == folderitem.url %}
-            <li class="active"><a href="{{item.url | prepend: site.baseurl}}">{{folderitem.title}}</a></li>
+            <li class="active"><a href="{{folderitem.url | prepend: site.baseurl}}">{{folderitem.title}}</a></li>
             {% else %}
             <li><a href="{{folderitem.url | prepend: site.baseurl}}">{{folderitem.title}}</a></li>
             {% endif %}
