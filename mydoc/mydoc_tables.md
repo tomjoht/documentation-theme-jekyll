@@ -43,7 +43,7 @@ cell 2a | cell 2b
 
 ## jQuery datables
 
-You also have the option of using a [jQuery datatable](https://www.datatables.net/), which gives you some more options. If you want to use a jQuery datatable, then add `datatable: active` in a page's frontmatter. This will load the right jQuery datatable scripts for the table on that page only (rather than loading the scripts on every page of the site.)
+You also have the option of using a [jQuery datatable](https://www.datatables.net/), which gives you some more options. If you want to use a jQuery datatable, then add `datatable: true` in a page's frontmatter. This will load the right jQuery datatable scripts for the table on that page only (rather than loading the scripts on every page of the site.)
 
 Also, you need to add this script to trigger the jQuery table on your page:
 
@@ -161,4 +161,4 @@ Notice a few features:
 
 Read more of the [datatable documentation](https://www.datatables.net/manual/options) to get a sense of the options you can configure. You should probably only use datatables when you have long, massive tables full of information.
 
-{{site.data.alerts.note}} Try to keep the columns to 3 or 4 columns only. If you add 5+ columns, your table may create horizontal scrolling with the theme.{{site.data.alerts.end}}
+{{site.data.alerts.note}} Try to keep the columns to 3 or 4 columns only. If you add 5+ columns, your table may create horizontal scrolling with the theme. Additionally, keep the column heading titles short.{{site.data.alerts.end}}
