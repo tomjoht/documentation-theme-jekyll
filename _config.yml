@@ -11,6 +11,8 @@ topnav_title: Jekyll Documentation Theme
 site_title: Jekyll theme for designers
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 company_name: Your company
+company_url: https://github.com/tomjohnson1492/documentation-theme-jekyll
+#company_logo: http://domain/image.jpg
 # this appears in the footer
 github_editme_path: tomjohnson1492/documentation-theme-jekyll/edit/reviews
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
