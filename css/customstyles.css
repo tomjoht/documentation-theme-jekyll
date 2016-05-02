@@ -934,7 +934,7 @@ a[href^="http://"]:after, a[href^="https://"]:after {
 }
 
 /* Strip the outbound icon when this class is present */
-a[href^="http://own-domain.com"]:after,
+a[href].noCrossRef::after,
 a.no_icon:after {
     content:"" !important;
     padding-left: 0;
@@ -1000,15 +1000,6 @@ span.label.label-primary {
 }
 .col-lg-12 .nav li a {background-color: white}
 
-li.sidebarTitle {
-    margin-top:40px;
-    font-weight:normal;
-    font-size:130%;
-    color: #ED1951;
-    margin-bottom:10px;
-    margin-left: 5px;
-
-}
 
 .nav li.active > a.subfoldersTitle {
     background-color: whitesmoke;
@@ -1027,3 +1018,20 @@ code + a > code {
 table th code {
     color: white;
 }
+
+ol li ul li ol li {
+    list-style: decimal;
+}
+
+ol li ul li ol li ul li{
+    list-style: disc;
+}
+
+.post-content table th {
+    vertical-align: top;
+}
+
+table thead th code.highlighter-rouge {
+    background-color: transparent;
+}
+

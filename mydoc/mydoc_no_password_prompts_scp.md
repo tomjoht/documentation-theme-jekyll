@@ -38,10 +38,10 @@ To remove the password prompts when connecting to servers via SSH:
    Generating public/private rsa key pair.
    Enter passphrase (empty for no passphrase):
    Enter same passphrase again:
-   Your identification has been saved in /Users/tjohnson/.ssh/id_rsa.
-   Your public key has been saved in /Users/tjohnson/.ssh/id_rsa.pub.
+   Your identification has been saved in /Users/yourname/.ssh/id_rsa.
+   Your public key has been saved in /Users/yourname/.ssh/id_rsa.pub.
    The key fingerprint is:
-   9a:8f:b5:495:39:78:t5:dc:19:d6:29:66:02:e8:02:a0 tjohnson@tjohnson-mbpr13.local
+   9a:8f:b5:495:39:78:t5:dc:19:d6:29:66:02:e8:02:a0 yourname@yourname-mbpr99.local
    ```
 
    The key's randomart image is:
