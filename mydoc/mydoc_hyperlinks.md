@@ -131,15 +131,14 @@ Here's how you specify an ID for a heading in Kramdown:
 
 Link to it using this syntax:
 
-
 ```
-[{{site.data.urls.your-page-permalink.title}}]({{site.data.urls.your-page-permalink.url | append: "#myheading"}})
+{%raw%}[{{site.data.urls.your-page-permalink.title}}]({{site.data.urls.your-page-permalink.url | append: "#myheading"}}){%endraw%}
 ```
 
 Or using HTML:
 
 ```
-<a href="{{site.data.urls.your-page-permalink.url | append: "#myheading"}}">{{site.data.urls.your-page-permalink.title}}</a>
+{%raw%}<a href="{{site.data.urls.your-page-permalink.url | append: "#myheading"}}">{{site.data.urls.your-page-permalink.title}}</a>{%endraw%}
 ```
 
 Granted, this is somewhat long, but it's the only way to continue to leverage the automated links from urls.yaml. You want to avoid manually referencing links since they are much more prone to break when you specify them that way. 
