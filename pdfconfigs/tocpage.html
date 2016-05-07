@@ -10,23 +10,22 @@ permalink: /tocpage/
 
     {% include custom/sidebarconfigs.html %}
 
-
     <ul id="mysidebar" class="nav">
         {% for entry in sidebar_pdf %}
-        {% for subcategory in entry.subcategories %}
-        {% if subcategory.output contains "pdf" and subcategory.type != "frontmatter" %}
-        <li class="sectionHead">{{ subcategory.title }}
+        {% for folder in entry.folders %}
+        {% if folder.output contains "pdf" and folder.type != "frontmatter" %}
+        <li class="sectionHead">{{ folder.title }}
             <ul>
-                {% for item in subcategory.items %}
-                {% if item.output contains "pdf" and item.type != "frontmatter"%}
-                <li><a href="{{item.url | prepend: site.baseurl}}">{{item.title}}</a>
-                    {% for thirdlevel in item.thirdlevel %}
-                    {% if thirdlevel.audience contains "pdf" and thirdlevel.type != "frontmatter" %}
-                <li class="sectionHead">{{ thirdlevel.title }}
+                {% for folderitem in folder.folderitems %}
+                {% if folderitem.output contains "pdf" and folderitem.type != "frontmatter"%}
+                <li><a href="{{folderitem.url | prepend: site.baseurl}}">{{folderitem.title}}</a>
+                    {% for subfolders in folderitem.subfolders %}
+                    {% if subfolders.output contains "pdf" and subfolders.type != "frontmatter" %}
+                <li class="sectionHead">{{ subfolders.title }}
                     <ul>
-                        {% for deeplevel in thirdlevel.thirdlevelitems%}
-                        {% if deeplevel.output contains "pdf" and deeplevel.type != "frontmatter"%}
-                        <li><a href="{{deeplevel.url | prepend: site.baseurl}}">{{deeplevel.title}}</a></li>
+                        {% for subfolderitem in subfolders.subfolderitems%}
+                        {% if subfolderitem.output contains "pdf" and subfolderitem.type != "frontmatter"%}
+                        <li><a href="{{subfolderitem.url | prepend: site.baseurl}}">{{subfolderitem.title}}</a></li>
                         {% endif %}
                         {% endfor %}
                     </ul>
