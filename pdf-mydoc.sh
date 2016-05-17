@@ -9,3 +9,4 @@ echo "done";
 echo "Building the PDF ...";
 prince --javascript --input-list=_site/pdfconfigs/prince-list.txt -o pdf/mydoc.pdf;
 echo "done";
+
