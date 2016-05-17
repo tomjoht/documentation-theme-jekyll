@@ -23,6 +23,10 @@ entries:
     output: web, pdf
     folderitems:
 
+    - title: Sample page
+      url: /samplepage
+      output: web, pdf
+
     - title: Get started
       url: /
       type: homepage

@@ -11,6 +11,7 @@ entries:
     - title: Home
       url: /
       output: web
+      type: homepage
     - title: News
       url: /news/
       output: web

@@ -11,7 +11,7 @@ sidebar:
 
 {% for entry in site.data.sidebars[sidebar].entries %}
 {% for folder in entry.folders %}
-{% for folderitem in folder.folderitems %} {% unless folderitem.type == "frontmatter" or folderitem.external_url %}
+{% for folderitem in folder.folderitems %} {% unless folderitem.type == "frontmatter" or folderitem.type == "homepage" or folderitem.external_url %}
 {{folderitem.url | replace: "/", "" }}:
   title: "{{folderitem.title }}"
   url: {{folderitem.url | prepend: site.baseurl }}
