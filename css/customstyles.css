@@ -1,3 +1,8 @@
+.navbar-inverse {
+    background-color: #2d3e4f;
+    border-color: #2d3e4f;
+}
+
 @media (min-width: 0px) {
     .col-md-3 {
         width: 0px;
