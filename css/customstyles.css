@@ -914,6 +914,12 @@ a[href^="http://"]:after, a[href^="https://"]:after {
 }
 
 /* Strip the outbound icon when this class is present */
+h1 a:after,
+h2 a:after,
+h3 a:after,
+h4 a:after,
+h5 a:after,
+h6 a:after,
 a[href].noCrossRef::after,
 a.no_icon:after {
     content:"" !important;
