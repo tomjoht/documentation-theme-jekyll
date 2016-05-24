@@ -44,30 +44,18 @@
                 </li>
                 {% endfor %}
                 {% endfor %}
-                {% if site.feedback_disable == null or site.feedback_disable == false %}
-			{% include feedback.html %}
-		{% endif %}
-                <!--comment out this block if you want to hide search-->
-                <li>
-                    <!--start search-->
-                    <div id="search-demo-container">
-                        <input type="text" id="search-input" placeholder="{{site.data.strings.search_placeholder_text}}">
-                        <ul id="results-container"></ul>
-                    </div>
-                    <script src="{{ "/js/jekyll-search.js" | prepend: site.baseurl }}" type="text/javascript"></script>
-                    <script type="text/javascript">
-                            SimpleJekyllSearch.init({
-                                searchInput: document.getElementById('search-input'),
-                                resultsContainer: document.getElementById('results-container'),
-                                dataSource: '{{ "/search.json" | prepend: site.baseurl }}',
-                                searchResultTemplate: '<li><a href="{url}" title="{{page.title | replace: "'", "\"}}">{title}</a></li>',
-                    noResultsText: '{{site.data.strings.search_no_results_text}}',
-                            limit: 10,
-                            fuzzy: true,
-                    })
-                    </script>
-                    <!--end search-->
-                </li>
+                <!-- entries without drop-downs appear here -->
+                {% for entry in site.data.topnav.topnav_github %}
+                {% for item in entry.items %}
+                {% if item.external_url %}
+                <li><a href="{{item.external_url}}" target="_blank">{{item.title}}</a></li>
+                {% elsif page.url contains item.url %}
+                <li class="active"><a href="{{item.url | prepend: site.baseurl}}">{{item.title}}</a></li>
+                {% else %}
+                <li><a href="{{item.url | prepend: site.baseurl }}">{{item.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %}
             </ul>
         </div>
         </div>

@@ -30,9 +30,9 @@ exclude:
 feedback_email: pivarski@fnal.gov
 # used as a contact email for the Feedback link in the top navigation bar
 
-#feedback_disable: true
-#feedback_text: "Need help?"
-#feedback_link: "http://helpy.io/"
+# feedback_disable: true
+# feedback_text: "Issues?"
+# feedback_link: "http://github.com/diana-hep/histogrammar/issues"
 # change feedback link behaviour if you use a support ticketing system or something else
 
 highlighter: rouge

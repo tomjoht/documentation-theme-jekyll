@@ -1,3 +1,23 @@
+@media (min-width: 0px) {
+    .col-md-3 {
+        width: 0px;
+    }
+
+    .col-md-9 {
+        width: 100%;
+    }
+
+    .container {
+        margin-left: 25px;
+        margin-right: 25px;
+        max-width: none;
+    }
+}
+
+
+
+
+
 body {
     font-size:15px;
 }
@@ -868,26 +888,6 @@ span.soft {
 @media (max-width: 767px) {
     .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
         color: #444;
-    }
-}
-
-@media (max-width: 990px) {
-    #mysidebar {
-        position: relative;
-    }
-}
-
-@media (min-width: 1000px) {
-
-    ul#mysidebar {
-        width: 225px;
-    }
-}
-
-@media (max-width: 900px) {
-
-    ul#mysidebar {
-        max-width: 100%;
     }
 }
 

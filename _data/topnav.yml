@@ -1,35 +1,26 @@
 ## Topnav single links
 ## if you want to list an external url, use external_url instead of url. the theme will apply a different link base.
 topnav:
-- title: Topnav
+- title: Tutorials
   items:
-    - title: News
-      url: /news/
+    - title: Tutorials
+      url: /tutorials/
+
+topnav_github:
+- title: GitHub
+  items:
+    - title: GitHub repo
+      external_url: http://github.com/diana-hep/histogrammar
 
 #Topnav dropdowns
 topnav_dropdowns:
 - title: Topnav dropdowns
   folders:
-    - title: Jekyll Resources
+    - title: References
       folderitems:
-        - title: Github Repo
-          external_url: https://github.com/tomjohnson1492/documentation-theme-jekyll
-        - title: Jekyll Talk
-          external_url: https://talk.jekyllrb.com
-        - title: Jekyll documentation
-          external_url: http://jekyllrb.com/docs/home/
-        - title: Jekyll on Stack Overflow
-          external_url: http://stackoverflow.com/questions/tagged/jekyll
-        - title: Jekyll on my blog
-          external_url: http://idratherbewriting.com/category-jekyll/
-    - title: Products
-      folderitems:
-        - title: Jekyll Documentation Theme
-          url: /mydoc_introduction/
-        - title: Product 1
-          url: /p1_landing_page/
-        - title: Product 2
-          url: /p2_landing_page/
-
-
-
+        - title: Scala function reference
+          external_url: http://histogrammar.org/scala/latest/index.html#org.dianahep.histogrammar.package
+        - title: Python function reference
+          external_url: http://amiconnectedtotheinternet.com
+        - title: C++ function reference
+          external_url: http://amiconnectedtotheinternet.com
