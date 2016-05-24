@@ -1,20 +1,20 @@
 permalink: /:year/:month/:day/:title/
 # this sets the style for permalinks. The date formatting (/:year/:month/:day/) will only apply to blog posts, while the pages will just show the title.
-url: http://idratherbewriting.com
+url: http://histogrammar.org
 # where you plan to publish your site
-baseurl: "/documentation-theme-jekyll"
+baseurl: "/docs"
 # any subdirectory that appears after the domain where you're publishing your site
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
-topnav_title: Jekyll Documentation Theme
+topnav_title: Histogrammar
 # this appears on the top navigation bar next to the home button
-site_title: Jekyll theme for designers
+site_title: Histogrammar
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
-company_name: Your company
+company_name: DIANA-HEP
 # this appears in the footer
-github_editme_path: tomjohnson1492/documentation-theme-jekyll/edit/reviews
+github_editme_path: 
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
-disqus_shortname: idrbwjekyll
+disqus_shortname: 
 # if you're using disqus for comments, add the shortname here. if not, leave this value blank.
 host: 127.0.0.1
 # the preview server used. Leave as is.
@@ -27,7 +27,7 @@ exclude:
   - .idea/
 # these are the files and directories that jekyll will exclude from the build
 
-feedback_email: tomjohnson1492@gmail.com
+feedback_email: pivarski@fnal.gov
 # used as a contact email for the Feedback link in the top navigation bar
 
 #feedback_disable: true
@@ -83,7 +83,6 @@ defaults:
 
 # these are defaults used for the frontmatter for these file types
 
-
-description: "Intended as a documentation theme based on Jekyll for technical writers documenting software and other technical products, this theme has all the elements you would need to handle multiple products with both multi-level sidebar navigation, tags, and other documentation features."
+description: "Documentation for the Histogrammar aggregator suite; includes examples of using Histogrammar with third-party products."
 # the description is used in the feed.xml file
 
