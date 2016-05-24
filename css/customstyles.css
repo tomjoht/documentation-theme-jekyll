@@ -1,28 +1,3 @@
-.navbar-inverse {
-    background-color: #2d3e4f;
-    border-color: #2d3e4f;
-}
-
-@media (min-width: 0px) {
-    .col-md-3 {
-        width: 0px;
-    }
-
-    .col-md-9 {
-        width: 100%;
-    }
-
-    .container {
-        margin-left: 25px;
-        margin-right: 25px;
-        max-width: none;
-    }
-}
-
-
-
-
-
 body {
     font-size:15px;
 }
@@ -1040,3 +1015,31 @@ table thead th code.highlighter-rouge {
     background-color: transparent;
 }
 
+/*************************************************/
+
+body {
+    min-width: 400px;
+}
+
+.navbar-inverse {
+    background-color: #2d3e4f;
+    border-color: #2d3e4f;
+    min-width: 370px;
+}
+
+@media (min-width: 0px) {
+    .col-md-3 {
+        width: 0px;
+    }
+
+    .col-md-9 {
+        width: 100%;
+        float: none;
+    }
+
+    .container {
+        margin-left: 25px;
+        margin-right: 25px;
+        max-width: none;
+    }
+}
