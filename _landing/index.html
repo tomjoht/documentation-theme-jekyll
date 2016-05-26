@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : TwoFold 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20130526
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,600,700" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script>
+function setmargins() {
+    var w = Math.max(10, ($(window).width() - 500) * 0.2);
+    $("#left-screenshot").css("margin-right", w + "px");
+    $("#right-screenshot").css("margin-left", w + "px");
+}
+
+$(document).ready(setmargins);
+$(window).on("resize", setmargins);
+</script>
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body>
+<div id="header" class="container">
+	<div id="logo">
+                <a href="http://diana-hep.org" style="position: relative; top: -10px; padding-top: 0px; padding-bottom: 0px;"><img src="images/diana-hep-logo.png" style="height: 66px;" alt="DIANA-HEP"/></a>
+	</div>
+	<div id="menu">
+		<ul>
+			<li><a href="http://histogrammar.org/docs/" accesskey="1" title="">Documentation</a></li>
+			<li><a href="https://github.com/diana-hep/histogrammar" accesskey="2" title="">GitHub</a></li>
+		</ul>
+	</div>
+</div>
+<div id="wrapper">
+	<div id="welcome" class="wrapper-style1">
+		<div class="title">
+                        <div style="height: 100px; margin-bottom: 50px;"><img src="images/histogrammar-logo.png" style="height: 100px;" alt="Histogrammar"></img></div>
+
+			<span class="byline">Making histograms functional</span> </div>
+
+<p>Histogrammar is a suite of composable data aggregation primitives, for making histograms and much, much more. One interface is implemented across many languages, all with a common JSON format, to make it easy to aggregate data in hard-to-reach places (in a distributed framework like Apache Spark, on a GPU or coprocessor, or through a thin bandwidth connection) and bring it into your favorite plotting framework for visualization.</p>
+	</div>
+
+<div class="title"></div>
+
+	<div id="page" class="container">
+		<div id="content">
+
+<h3>What is this and why might I want it?</h3>
+
+<p>Histogrammar is an experiment in aggregating data with functional primitives. It serves the same need as HBOOK and its descendants&mdash; summarizing a large dataset with discretized distributions&mdash; but it does so using composable aggregators instead of fixed histogram types.</p>
+
+<p>For instance, to book and fill a histogram in <a href="http://root.cern.ch/" target="_blank">ROOT</a>, you would do this:</p>
+
+<pre><code>histogram = ROOT.TH1F("name", "title", 100, 0, 10)
+for muon in muons:
+    if muon.pt > 10:
+        histogram.fill(muon.mass)</code></pre>
+
+<p>But in histogrammar, you could do it like this:</p>
+
+<pre><code>histogram = Select(lambda mu: mu.pt > 10,
+                Bin(100, 0, 10, lambda mu: mu.mass,
+                    Count()))
+for muon in muons:
+    histogram.fill(muon)</code></pre>
+
+<p>because a filtered histogram is just a selection on binned counting. To accumulate means and standard deviations of track quality in each bin instead of counting (a "profile plot" instead of a 1-d histogram), you'd change the <code>Count</code> to <code>Deviate</code> and leave everything else the same:</p>
+
+<pre><code>histogram = Select(lambda mu: mu.pt > 10,
+                Bin(100, 0, 10, lambda mu: mu.mass,
+                    Deviate(lambda mu: mu.trackQuality)))</code></pre>
+
+<p>To make a 2-d histogram of <code>px</code> and <code>py</code> instead of a 1-d histogram, you'd do</p>
+
+<pre><code>histogram = Bin(100, 0, 50, lambda mu: mu.px,
+                Bin(100, 0, 50, lambda mu: mu.py,
+                    Count()))</code></pre>
+
+<p>because now the content of each bin is another histogram (the x slices). And so on. A good set of primitives and the right lambda functions can replace specialized logic in the for loop. All of the above would be filled with exactly the same loop:</p>
+
+<pre><code>for muon in muons:
+    histogram.fill(muon)</code></pre>
+
+<h3 style="margin-top: 20px;">Benefits</h3>
+
+<p>Moving specialized logic out of the for loop allows the physicist to describe an entire analysis declaratively, in subdirectories like:</p>
+
+<pre><code>Label(dir1 = Label(hist1 = Bin(...),
+                   hist2 = Bin(...)),
+      dir2 = ...)</code></pre>
+
+<p>This tree expresses what the physicist wants to aggregate and how they want to cut it up. The actual aggregation can be performed by an automated system that handles indexing, parallelization, and merging partial results. Each primitive has a custom <code>fill</code> method and a <code>+</code> operator for (mutable) aggregating and (immutable) merging, which fits perfectly into Spark's <code>aggregate</code> functional, Hadoop's <code>reduce</code>, an SQL aggregation function, parallel processing on GPUs, etc. It makes analysis code independent of the system where data are analyzed.</p>
+
+<p>In addition, it formalizes the analysis so that it can be inspected algorithmically. At any level, the cuts applied to a particular histogram can be inferred by tracing the primitives from the root of the tree to that histogram. Named functions provide bookkeeping, so that a quantity and its label are defined in one place, allowing units to be changed across a suite of plots with a localized code change, reducing errors.</p>
+
+<h3>Scope</h3>
+
+<p>Histogrammar aggregates data but does not produce plots (much like HBOOK, which had an associated HPLOT for 1970's era line printers). Histogrammar has extensions to pass its aggregated data to many different plotting libraries.</p>
+
+<p>A user can therefore aggregate data in a hard-to-reach place, such as an intermediate value in a GPU calculation or on a remote supercomputer, bring back the aggregated data as JSON, and then plot it in their favorite package. Aggregation and plotting are separate, so that changing the color of axis tickmarks doesn't require re-running the analysis code.</p>
+
+<h3>Status and Documentation</h3>
+
+<h4>For developers</h4>
+
+<p><a href="https://github.com/diana-hep/histogrammar/wiki" target="_blank">See the wiki</a> for communication among the Histogrammar developers, which includes fine-grained status updates and future goals. <a href="http://travis-ci.org/diana-hep/histogrammar" target="_blank">Travis-CI</a> shows the current state of the build and unit tests.</p>
+
+<h4>For users</h4>
+
+<p>The average user should go to <a href="http://histogrammar.org/docs" target="_blank">histogrammar.org/docs</a> for tutorials, examples, and reference documentation.</p>
+
+<p>Developers and users should both report errors on the <a href="http://github.com/diana-hep/histogrammar/issues" target="_blank">GitHub issues tab</a>.</p>
+
+<h4>Installation</h4>
+
+<p>Histogrammar will someday be available in popular repositories, such as Maven Central (for Java/Scala), PyPI (for Python), CRAN (for R), npm (for Javascript), etc. For now, use the <a href="http://github.com/diana-hep/histogrammar/releases" target="_blank">GitHub releases tab</a> to get a fixed release or clone this repository to get the bleeding edge.</p>
+
+<p><a href="http://histogrammar.org/docs/install.html" target="_blank">Installation instructions</a> are available on the user documentation site.</p>
+
+<h3>The last word</h3>
+
+<p>Histogrammar is in an experimental state, with some features working and some basic features still in development. It is not analysis-ready, but will become so faster if users try it out on their pet projects and provide feedback. Please let us know if anything doesn't work or doesn't make sense!</p>
+
+		</div>
+	</div>
+</div>
+<div id="featured-wrapper">
+	<div id="featured" class="container" style="text-align: center;">
+
+<div id="left-screenshot" style="text-align: center; display: inline-block; margin-right: 10px;">
+<h3 style="margin-bottom: 10px;"><a href="http://histogrammar.org/docs/" style="text-decoration: none;">Documentation</a></h3>
+<p><a href="http://histogrammar.org/docs/"><img src="images/documentation.png" alt="Documentation" style="height: 125px; padding: 5px; border: 2px solid #2d3e4f;"></a></p>
+</div>
+
+<div id="right-screenshot" style="text-align: center; display: inline-block; margin-left: 10px;">
+<h3 style="margin-bottom: 10px;"><a href="https://github.com/diana-hep/histogrammar" style="text-decoration: none;">GitHub</a></h3>
+<p><a href="https://github.com/diana-hep/histogrammar"><img src="images/github.png" alt="GitHub" style="height: 125px; padding: 5px; border: 2px solid #2d3e4f;"></a></p>
+</div>
+
+	</div>
+</div>
+<div id="footer" class="container">
+	<p>&copy;2016 DIANA-HEP | Design by <a href="http://templated.co" rel="nofollow" target="_blank">TEMPLATED</a> | Modified by Jim Pivarski.</p>
+</div>
+</body>
+</html>
