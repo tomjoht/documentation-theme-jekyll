@@ -9,47 +9,47 @@
 
 
  
-samplepage:
-  title: "Sample page"
-  url: /mydoc-pdf/samplepage
-  link: <a href="/mydoc-pdf/samplepage">Sample page</a>
-
-
- 
 
  
 mydoc_release_notes_50:
   title: "5.0 Release notes"
-  url: /mydoc-pdf/mydoc_release_notes_50/
-  link: <a href="/mydoc-pdf/mydoc_release_notes_50/">5.0 Release notes</a>
+  url: /documentation-theme-jekyll/mydoc_release_notes_50/
+  link: <a href="/documentation-theme-jekyll/mydoc_release_notes_50/">5.0 Release notes</a>
+
+
+ 
+samplepage:
+  title: "Sample page"
+  url: /documentation-theme-jekyll/samplepage/
+  link: <a href="/documentation-theme-jekyll/samplepage/">Sample page</a>
 
 
  
 mydoc_introduction:
   title: "Introduction"
-  url: /mydoc-pdf/mydoc_introduction/
-  link: <a href="/mydoc-pdf/mydoc_introduction/">Introduction</a>
+  url: /documentation-theme-jekyll/mydoc_introduction/
+  link: <a href="/documentation-theme-jekyll/mydoc_introduction/">Introduction</a>
 
 
  
 mydoc_supported_features:
   title: "Supported features"
-  url: /mydoc-pdf/mydoc_supported_features/
-  link: <a href="/mydoc-pdf/mydoc_supported_features/">Supported features</a>
+  url: /documentation-theme-jekyll/mydoc_supported_features/
+  link: <a href="/documentation-theme-jekyll/mydoc_supported_features/">Supported features</a>
 
 
  
 mydoc_about:
   title: "About the theme author"
-  url: /mydoc-pdf/mydoc_about/
-  link: <a href="/mydoc-pdf/mydoc_about/">About the theme author</a>
+  url: /documentation-theme-jekyll/mydoc_about/
+  link: <a href="/documentation-theme-jekyll/mydoc_about/">About the theme author</a>
 
 
  
 mydoc_support:
   title: "Support"
-  url: /mydoc-pdf/mydoc_support/
-  link: <a href="/mydoc-pdf/mydoc_support/">Support</a>
+  url: /documentation-theme-jekyll/mydoc_support/
+  link: <a href="/documentation-theme-jekyll/mydoc_support/">Support</a>
 
 
 
@@ -57,22 +57,22 @@ mydoc_support:
  
 mydoc_about_ruby_gems_etc:
   title: "About Ruby, Gems, Bundler, etc."
-  url: /mydoc-pdf/mydoc_about_ruby_gems_etc/
-  link: <a href="/mydoc-pdf/mydoc_about_ruby_gems_etc/">About Ruby, Gems, Bundler, etc.</a>
+  url: /documentation-theme-jekyll/mydoc_about_ruby_gems_etc/
+  link: <a href="/documentation-theme-jekyll/mydoc_about_ruby_gems_etc/">About Ruby, Gems, Bundler, etc.</a>
 
 
  
 mydoc_install_jekyll_on_mac:
   title: "Install Jekyll on Mac"
-  url: /mydoc-pdf/mydoc_install_jekyll_on_mac/
-  link: <a href="/mydoc-pdf/mydoc_install_jekyll_on_mac/">Install Jekyll on Mac</a>
+  url: /documentation-theme-jekyll/mydoc_install_jekyll_on_mac/
+  link: <a href="/documentation-theme-jekyll/mydoc_install_jekyll_on_mac/">Install Jekyll on Mac</a>
 
 
  
 mydoc_install_jekyll_on_windows:
   title: "Install Jekyll on Windows"
-  url: /mydoc-pdf/mydoc_install_jekyll_on_windows/
-  link: <a href="/mydoc-pdf/mydoc_install_jekyll_on_windows/">Install Jekyll on Windows</a>
+  url: /documentation-theme-jekyll/mydoc_install_jekyll_on_windows/
+  link: <a href="/documentation-theme-jekyll/mydoc_install_jekyll_on_windows/">Install Jekyll on Windows</a>
 
 
 
@@ -80,43 +80,43 @@ mydoc_install_jekyll_on_windows:
  
 mydoc_pages:
   title: "Pages"
-  url: /mydoc-pdf/mydoc_pages/
-  link: <a href="/mydoc-pdf/mydoc_pages/">Pages</a>
+  url: /documentation-theme-jekyll/mydoc_pages/
+  link: <a href="/documentation-theme-jekyll/mydoc_pages/">Pages</a>
 
 
  
 mydoc_posts:
   title: "Posts"
-  url: /mydoc-pdf/mydoc_posts/
-  link: <a href="/mydoc-pdf/mydoc_posts/">Posts</a>
+  url: /documentation-theme-jekyll/mydoc_posts/
+  link: <a href="/documentation-theme-jekyll/mydoc_posts/">Posts</a>
 
 
  
 mydoc_webstorm_text_editor:
   title: "WebStorm Text Editor"
-  url: /mydoc-pdf/mydoc_webstorm_text_editor/
-  link: <a href="/mydoc-pdf/mydoc_webstorm_text_editor/">WebStorm Text Editor</a>
+  url: /documentation-theme-jekyll/mydoc_webstorm_text_editor/
+  link: <a href="/documentation-theme-jekyll/mydoc_webstorm_text_editor/">WebStorm Text Editor</a>
 
 
  
 mydoc_conditional_logic:
   title: "Conditional logic"
-  url: /mydoc-pdf/mydoc_conditional_logic/
-  link: <a href="/mydoc-pdf/mydoc_conditional_logic/">Conditional logic</a>
+  url: /documentation-theme-jekyll/mydoc_conditional_logic/
+  link: <a href="/documentation-theme-jekyll/mydoc_conditional_logic/">Conditional logic</a>
 
 
  
 mydoc_content_reuse:
   title: "Content reuse"
-  url: /mydoc-pdf/mydoc_content_reuse/
-  link: <a href="/mydoc-pdf/mydoc_content_reuse/">Content reuse</a>
+  url: /documentation-theme-jekyll/mydoc_content_reuse/
+  link: <a href="/documentation-theme-jekyll/mydoc_content_reuse/">Content reuse</a>
 
 
  
 mydoc_collections:
   title: "Collections"
-  url: /mydoc-pdf/mydoc_collections/
-  link: <a href="/mydoc-pdf/mydoc_collections/">Collections</a>
+  url: /documentation-theme-jekyll/mydoc_collections/
+  link: <a href="/documentation-theme-jekyll/mydoc_collections/">Collections</a>
 
 
 
@@ -124,29 +124,29 @@ mydoc_collections:
  
 mydoc_sidebar_navigation:
   title: "Sidebar navigation"
-  url: /mydoc-pdf/mydoc_sidebar_navigation/
-  link: <a href="/mydoc-pdf/mydoc_sidebar_navigation/">Sidebar navigation</a>
+  url: /documentation-theme-jekyll/mydoc_sidebar_navigation/
+  link: <a href="/documentation-theme-jekyll/mydoc_sidebar_navigation/">Sidebar navigation</a>
 
 
  
 mydoc_yaml_tutorial:
   title: "YAML tutorial in the context of Jekyll"
-  url: /mydoc-pdf/mydoc_yaml_tutorial/
-  link: <a href="/mydoc-pdf/mydoc_yaml_tutorial/">YAML tutorial in the context of Jekyll</a>
+  url: /documentation-theme-jekyll/mydoc_yaml_tutorial/
+  link: <a href="/documentation-theme-jekyll/mydoc_yaml_tutorial/">YAML tutorial in the context of Jekyll</a>
 
 
  
 mydoc_tags:
   title: "Tags"
-  url: /mydoc-pdf/mydoc_tags/
-  link: <a href="/mydoc-pdf/mydoc_tags/">Tags</a>
+  url: /documentation-theme-jekyll/mydoc_tags/
+  link: <a href="/documentation-theme-jekyll/mydoc_tags/">Tags</a>
 
 
  
 mydoc_series:
   title: "Series"
-  url: /mydoc-pdf/mydoc_series/
-  link: <a href="/mydoc-pdf/mydoc_series/">Series</a>
+  url: /documentation-theme-jekyll/mydoc_series/
+  link: <a href="/documentation-theme-jekyll/mydoc_series/">Series</a>
 
 
 
@@ -154,64 +154,64 @@ mydoc_series:
  
 mydoc_adding_tooltips:
   title: "Tooltips"
-  url: /mydoc-pdf/mydoc_adding_tooltips/
-  link: <a href="/mydoc-pdf/mydoc_adding_tooltips/">Tooltips</a>
+  url: /documentation-theme-jekyll/mydoc_adding_tooltips/
+  link: <a href="/documentation-theme-jekyll/mydoc_adding_tooltips/">Tooltips</a>
 
 
  
 mydoc_alerts:
   title: "Alerts"
-  url: /mydoc-pdf/mydoc_alerts/
-  link: <a href="/mydoc-pdf/mydoc_alerts/">Alerts</a>
+  url: /documentation-theme-jekyll/mydoc_alerts/
+  link: <a href="/documentation-theme-jekyll/mydoc_alerts/">Alerts</a>
 
 
  
 mydoc_icons:
   title: "Icons"
-  url: /mydoc-pdf/mydoc_icons/
-  link: <a href="/mydoc-pdf/mydoc_icons/">Icons</a>
+  url: /documentation-theme-jekyll/mydoc_icons/
+  link: <a href="/documentation-theme-jekyll/mydoc_icons/">Icons</a>
 
 
  
 mydoc_images:
   title: "Images"
-  url: /mydoc-pdf/mydoc_images/
-  link: <a href="/mydoc-pdf/mydoc_images/">Images</a>
+  url: /documentation-theme-jekyll/mydoc_images/
+  link: <a href="/documentation-theme-jekyll/mydoc_images/">Images</a>
 
 
  
 mydoc_labels:
   title: "Labels"
-  url: /mydoc-pdf/mydoc_labels/
-  link: <a href="/mydoc-pdf/mydoc_labels/">Labels</a>
+  url: /documentation-theme-jekyll/mydoc_labels/
+  link: <a href="/documentation-theme-jekyll/mydoc_labels/">Labels</a>
 
 
  
 mydoc_hyperlinks:
   title: "Links"
-  url: /mydoc-pdf/mydoc_hyperlinks/
-  link: <a href="/mydoc-pdf/mydoc_hyperlinks/">Links</a>
+  url: /documentation-theme-jekyll/mydoc_hyperlinks/
+  link: <a href="/documentation-theme-jekyll/mydoc_hyperlinks/">Links</a>
 
 
  
 mydoc_navtabs:
   title: "Navtabs"
-  url: /mydoc-pdf/mydoc_navtabs/
-  link: <a href="/mydoc-pdf/mydoc_navtabs/">Navtabs</a>
+  url: /documentation-theme-jekyll/mydoc_navtabs/
+  link: <a href="/documentation-theme-jekyll/mydoc_navtabs/">Navtabs</a>
 
 
  
 mydoc_tables:
   title: "Tables"
-  url: /mydoc-pdf/mydoc_tables/
-  link: <a href="/mydoc-pdf/mydoc_tables/">Tables</a>
+  url: /documentation-theme-jekyll/mydoc_tables/
+  link: <a href="/documentation-theme-jekyll/mydoc_tables/">Tables</a>
 
 
  
 mydoc_syntax_highlighting:
   title: "Syntax highlighting"
-  url: /mydoc-pdf/mydoc_syntax_highlighting/
-  link: <a href="/mydoc-pdf/mydoc_syntax_highlighting/">Syntax highlighting</a>
+  url: /documentation-theme-jekyll/mydoc_syntax_highlighting/
+  link: <a href="/documentation-theme-jekyll/mydoc_syntax_highlighting/">Syntax highlighting</a>
 
 
 
@@ -219,8 +219,8 @@ mydoc_syntax_highlighting:
  
 mydoc_commenting_on_files:
   title: "Commenting on files"
-  url: /mydoc-pdf/mydoc_commenting_on_files/
-  link: <a href="/mydoc-pdf/mydoc_commenting_on_files/">Commenting on files</a>
+  url: /documentation-theme-jekyll/mydoc_commenting_on_files/
+  link: <a href="/documentation-theme-jekyll/mydoc_commenting_on_files/">Commenting on files</a>
 
 
 
@@ -228,71 +228,71 @@ mydoc_commenting_on_files:
  
 mydoc_build_arguments:
   title: "Build arguments"
-  url: /mydoc-pdf/mydoc_build_arguments/
-  link: <a href="/mydoc-pdf/mydoc_build_arguments/">Build arguments</a>
+  url: /documentation-theme-jekyll/mydoc_build_arguments/
+  link: <a href="/documentation-theme-jekyll/mydoc_build_arguments/">Build arguments</a>
 
 
  
 mydoc_themes:
   title: "Themes"
-  url: /mydoc-pdf/mydoc_themes/
-  link: <a href="/mydoc-pdf/mydoc_themes/">Themes</a>
+  url: /documentation-theme-jekyll/mydoc_themes/
+  link: <a href="/documentation-theme-jekyll/mydoc_themes/">Themes</a>
 
 
  
 mydoc_title_checker:
   title: "Check page title consistency"
-  url: /mydoc-pdf/mydoc_title_checker/
-  link: <a href="/mydoc-pdf/mydoc_title_checker/">Check page title consistency</a>
+  url: /documentation-theme-jekyll/mydoc_title_checker/
+  link: <a href="/documentation-theme-jekyll/mydoc_title_checker/">Check page title consistency</a>
 
 
  
 mydoc_generating_pdfs:
   title: "Generating PDFs"
-  url: /mydoc-pdf/mydoc_generating_pdfs/
-  link: <a href="/mydoc-pdf/mydoc_generating_pdfs/">Generating PDFs</a>
+  url: /documentation-theme-jekyll/mydoc_generating_pdfs/
+  link: <a href="/documentation-theme-jekyll/mydoc_generating_pdfs/">Generating PDFs</a>
 
 
  
 mydoc_help_api:
   title: "Help APIs and UI tooltips"
-  url: /mydoc-pdf/mydoc_help_api/
-  link: <a href="/mydoc-pdf/mydoc_help_api/">Help APIs and UI tooltips</a>
+  url: /documentation-theme-jekyll/mydoc_help_api/
+  link: <a href="/documentation-theme-jekyll/mydoc_help_api/">Help APIs and UI tooltips</a>
 
 
  
 mydoc_search_configuration:
   title: "Search configuration"
-  url: /mydoc-pdf/mydoc_search_configuration/
-  link: <a href="/mydoc-pdf/mydoc_search_configuration/">Search configuration</a>
+  url: /documentation-theme-jekyll/mydoc_search_configuration/
+  link: <a href="/documentation-theme-jekyll/mydoc_search_configuration/">Search configuration</a>
 
 
  
 mydoc_iterm_profiles:
   title: "iTerm profiles"
-  url: /mydoc-pdf/mydoc_iterm_profiles/
-  link: <a href="/mydoc-pdf/mydoc_iterm_profiles/">iTerm profiles</a>
+  url: /documentation-theme-jekyll/mydoc_iterm_profiles/
+  link: <a href="/documentation-theme-jekyll/mydoc_iterm_profiles/">iTerm profiles</a>
 
 
  
 mydoc_push_build_to_server:
   title: "Pushing builds to server"
-  url: /mydoc-pdf/mydoc_push_build_to_server/
-  link: <a href="/mydoc-pdf/mydoc_push_build_to_server/">Pushing builds to server</a>
+  url: /documentation-theme-jekyll/mydoc_push_build_to_server/
+  link: <a href="/documentation-theme-jekyll/mydoc_push_build_to_server/">Pushing builds to server</a>
 
 
  
 mydoc_no_password_prompts_scp:
   title: "Getting around the password prompts in SCP"
-  url: /mydoc-pdf/mydoc_no_password_prompts_scp/
-  link: <a href="/mydoc-pdf/mydoc_no_password_prompts_scp/">Getting around the password prompts in SCP</a>
+  url: /documentation-theme-jekyll/mydoc_no_password_prompts_scp/
+  link: <a href="/documentation-theme-jekyll/mydoc_no_password_prompts_scp/">Getting around the password prompts in SCP</a>
 
 
  
 mydoc_publishing_github_pages:
   title: "Publishing on Github Pages"
-  url: /mydoc-pdf/mydoc_publishing_github_pages/
-  link: <a href="/mydoc-pdf/mydoc_publishing_github_pages/">Publishing on Github Pages</a>
+  url: /documentation-theme-jekyll/mydoc_publishing_github_pages/
+  link: <a href="/documentation-theme-jekyll/mydoc_publishing_github_pages/">Publishing on Github Pages</a>
 
 
 
@@ -300,22 +300,22 @@ mydoc_publishing_github_pages:
  
 mydoc_kb_layout:
   title: "Knowledge-base layout"
-  url: /mydoc-pdf/mydoc_kb_layout/
-  link: <a href="/mydoc-pdf/mydoc_kb_layout/">Knowledge-base layout</a>
+  url: /documentation-theme-jekyll/mydoc_kb_layout/
+  link: <a href="/documentation-theme-jekyll/mydoc_kb_layout/">Knowledge-base layout</a>
 
 
  
 mydoc_glossary:
   title: "Glossary layout"
-  url: /mydoc-pdf/mydoc_glossary/
-  link: <a href="/mydoc-pdf/mydoc_glossary/">Glossary layout</a>
+  url: /documentation-theme-jekyll/mydoc_glossary/
+  link: <a href="/documentation-theme-jekyll/mydoc_glossary/">Glossary layout</a>
 
 
  
 mydoc_faq_layout:
   title: "FAQ layout"
-  url: /mydoc-pdf/mydoc_faq_layout/
-  link: <a href="/mydoc-pdf/mydoc_faq_layout/">FAQ layout</a>
+  url: /documentation-theme-jekyll/mydoc_faq_layout/
+  link: <a href="/documentation-theme-jekyll/mydoc_faq_layout/">FAQ layout</a>
 
 
 
@@ -323,8 +323,8 @@ mydoc_faq_layout:
  
 mydoc_troubleshooting:
   title: "Troubleshooting"
-  url: /mydoc-pdf/mydoc_troubleshooting/
-  link: <a href="/mydoc-pdf/mydoc_troubleshooting/">Troubleshooting</a>
+  url: /documentation-theme-jekyll/mydoc_troubleshooting/
+  link: <a href="/documentation-theme-jekyll/mydoc_troubleshooting/">Troubleshooting</a>
 
 
 
@@ -332,51 +332,51 @@ mydoc_troubleshooting:
  
 mydoc_tag_archives_overview:
   title: "Tag archives overview"
-  url: /mydoc-pdf/mydoc_tag_archives_overview/
-  link: <a href="/mydoc-pdf/mydoc_tag_archives_overview/">Tag archives overview</a>
+  url: /documentation-theme-jekyll/mydoc_tag_archives_overview/
+  link: <a href="/documentation-theme-jekyll/mydoc_tag_archives_overview/">Tag archives overview</a>
 
 
  
 tag_formatting:
   title: "Formatting pages"
-  url: /mydoc-pdf/tag_formatting/
-  link: <a href="/mydoc-pdf/tag_formatting/">Formatting pages</a>
+  url: /documentation-theme-jekyll/tag_formatting/
+  link: <a href="/documentation-theme-jekyll/tag_formatting/">Formatting pages</a>
 
  
 tag_navigation:
   title: "Navigation pages"
-  url: /mydoc-pdf/tag_navigation/
-  link: <a href="/mydoc-pdf/tag_navigation/">Navigation pages</a>
+  url: /documentation-theme-jekyll/tag_navigation/
+  link: <a href="/documentation-theme-jekyll/tag_navigation/">Navigation pages</a>
 
  
 tag_content_types:
   title: "Content types pages"
-  url: /mydoc-pdf/tag_content_types/
-  link: <a href="/mydoc-pdf/tag_content_types/">Content types pages</a>
+  url: /documentation-theme-jekyll/tag_content_types/
+  link: <a href="/documentation-theme-jekyll/tag_content_types/">Content types pages</a>
 
  
 tag_publishing:
   title: "Publishing pages"
-  url: /mydoc-pdf/tag_publishing/
-  link: <a href="/mydoc-pdf/tag_publishing/">Publishing pages</a>
+  url: /documentation-theme-jekyll/tag_publishing/
+  link: <a href="/documentation-theme-jekyll/tag_publishing/">Publishing pages</a>
 
  
 tag_special_layouts:
   title: "Special layout pages"
-  url: /mydoc-pdf/tag_special_layouts/
-  link: <a href="/mydoc-pdf/tag_special_layouts/">Special layout pages</a>
+  url: /documentation-theme-jekyll/tag_special_layouts/
+  link: <a href="/documentation-theme-jekyll/tag_special_layouts/">Special layout pages</a>
 
  
 tag_collaboration:
   title: "Collaboration pages"
-  url: /mydoc-pdf/tag_collaboration/
-  link: <a href="/mydoc-pdf/tag_collaboration/">Collaboration pages</a>
+  url: /documentation-theme-jekyll/tag_collaboration/
+  link: <a href="/documentation-theme-jekyll/tag_collaboration/">Collaboration pages</a>
 
  
 tag_troubleshooting:
   title: "Troubleshooting pages"
-  url: /mydoc-pdf/tag_troubleshooting/
-  link: <a href="/mydoc-pdf/tag_troubleshooting/">Troubleshooting pages</a>
+  url: /documentation-theme-jekyll/tag_troubleshooting/
+  link: <a href="/documentation-theme-jekyll/tag_troubleshooting/">Troubleshooting pages</a>
 
 
 
@@ -397,29 +397,29 @@ tag_troubleshooting:
  
 p1_landing_page:
   title: "Product 1 home"
-  url: /mydoc-pdf/p1_landing_page/
-  link: <a href="/mydoc-pdf/p1_landing_page/">Product 1 home</a>
+  url: /documentation-theme-jekyll/p1_landing_page/
+  link: <a href="/documentation-theme-jekyll/p1_landing_page/">Product 1 home</a>
 
 
  
 p1_sample1:
   title: "Sample 1"
-  url: /mydoc-pdf/p1_sample1/
-  link: <a href="/mydoc-pdf/p1_sample1/">Sample 1</a>
+  url: /documentation-theme-jekyll/p1_sample1/
+  link: <a href="/documentation-theme-jekyll/p1_sample1/">Sample 1</a>
 
 
  
 p1_sample2:
   title: "Sample 2"
-  url: /mydoc-pdf/p1_sample2/
-  link: <a href="/mydoc-pdf/p1_sample2/">Sample 2</a>
+  url: /documentation-theme-jekyll/p1_sample2/
+  link: <a href="/documentation-theme-jekyll/p1_sample2/">Sample 2</a>
 
 
  
 p1_sample3:
   title: "Sample 3"
-  url: /mydoc-pdf/p1_sample3/
-  link: <a href="/mydoc-pdf/p1_sample3/">Sample 3</a>
+  url: /documentation-theme-jekyll/p1_sample3/
+  link: <a href="/documentation-theme-jekyll/p1_sample3/">Sample 3</a>
 
 
 
@@ -427,29 +427,29 @@ p1_sample3:
  
 p1_sample4:
   title: "Sample 4"
-  url: /mydoc-pdf/p1_sample4/
-  link: <a href="/mydoc-pdf/p1_sample4/">Sample 4</a>
+  url: /documentation-theme-jekyll/p1_sample4/
+  link: <a href="/documentation-theme-jekyll/p1_sample4/">Sample 4</a>
 
 
  
 p1_sample5:
   title: "Sample 5"
-  url: /mydoc-pdf/p1_sample5/
-  link: <a href="/mydoc-pdf/p1_sample5/">Sample 5</a>
+  url: /documentation-theme-jekyll/p1_sample5/
+  link: <a href="/documentation-theme-jekyll/p1_sample5/">Sample 5</a>
 
 
  
 p1_sample6:
   title: "Sample 6"
-  url: /mydoc-pdf/p1_sample6/
-  link: <a href="/mydoc-pdf/p1_sample6/">Sample 6</a>
+  url: /documentation-theme-jekyll/p1_sample6/
+  link: <a href="/documentation-theme-jekyll/p1_sample6/">Sample 6</a>
 
 
  
 p1_sample7:
   title: "Sample 7"
-  url: /mydoc-pdf/p1_sample7/
-  link: <a href="/mydoc-pdf/p1_sample7/">Sample 7</a>
+  url: /documentation-theme-jekyll/p1_sample7/
+  link: <a href="/documentation-theme-jekyll/p1_sample7/">Sample 7</a>
 
 
 
@@ -469,22 +469,22 @@ p1_sample7:
  
 p2_landing_page:
   title: "Product 2 home"
-  url: /mydoc-pdf/p2_landing_page/
-  link: <a href="/mydoc-pdf/p2_landing_page/">Product 2 home</a>
+  url: /documentation-theme-jekyll/p2_landing_page/
+  link: <a href="/documentation-theme-jekyll/p2_landing_page/">Product 2 home</a>
 
 
  
 p2_sample1:
   title: "Sample 1"
-  url: /mydoc-pdf/p2_sample1/
-  link: <a href="/mydoc-pdf/p2_sample1/">Sample 1</a>
+  url: /documentation-theme-jekyll/p2_sample1/
+  link: <a href="/documentation-theme-jekyll/p2_sample1/">Sample 1</a>
 
 
  
 p2_sample2:
   title: "Sample 2"
-  url: /mydoc-pdf/p2_sample2/
-  link: <a href="/mydoc-pdf/p2_sample2/">Sample 2</a>
+  url: /documentation-theme-jekyll/p2_sample2/
+  link: <a href="/documentation-theme-jekyll/p2_sample2/">Sample 2</a>
 
 
 
@@ -492,15 +492,15 @@ p2_sample2:
  
 p2_sample3:
   title: "Sample 3"
-  url: /mydoc-pdf/p2_sample3/
-  link: <a href="/mydoc-pdf/p2_sample3/">Sample 3</a>
+  url: /documentation-theme-jekyll/p2_sample3/
+  link: <a href="/documentation-theme-jekyll/p2_sample3/">Sample 3</a>
 
 
  
 p2_sample4:
   title: "Sample 4"
-  url: /mydoc-pdf/p2_sample4/
-  link: <a href="/mydoc-pdf/p2_sample4/">Sample 4</a>
+  url: /documentation-theme-jekyll/p2_sample4/
+  link: <a href="/documentation-theme-jekyll/p2_sample4/">Sample 4</a>
 
 
 
@@ -508,22 +508,22 @@ p2_sample4:
  
 p2_sample5:
   title: "Sample 5"
-  url: /mydoc-pdf/p2_sample5/
-  link: <a href="/mydoc-pdf/p2_sample5/">Sample 5</a>
+  url: /documentation-theme-jekyll/p2_sample5/
+  link: <a href="/documentation-theme-jekyll/p2_sample5/">Sample 5</a>
 
 
  
 p2_sample6:
   title: "Sample 6"
-  url: /mydoc-pdf/p2_sample6/
-  link: <a href="/mydoc-pdf/p2_sample6/">Sample 6</a>
+  url: /documentation-theme-jekyll/p2_sample6/
+  link: <a href="/documentation-theme-jekyll/p2_sample6/">Sample 6</a>
 
 
  
 p2_sample7:
   title: "Sample 7"
-  url: /mydoc-pdf/p2_sample7/
-  link: <a href="/mydoc-pdf/p2_sample7/">Sample 7</a>
+  url: /documentation-theme-jekyll/p2_sample7/
+  link: <a href="/documentation-theme-jekyll/p2_sample7/">Sample 7</a>
 
 
 

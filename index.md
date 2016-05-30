@@ -5,12 +5,6 @@ sidebar: mydoc_sidebar
 type: homepage
 ---
 
-{% if site.audience == "administrators" %}
-hi admins
-{% elsif site.audience == "analysts" %}
-hi analysts
-{% endif %}
-
 ## Overview 
 
 These brief instructions will help you get started quickly with the theme. The other topics in this help provide additional information and detail about working with other aspects of this theme and Jekyll.

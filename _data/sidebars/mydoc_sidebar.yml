@@ -32,6 +32,10 @@ entries:
       url: /mydoc_release_notes_50/
       output: web, pdf
 
+    - title: Sample page
+      url: /samplepage/
+      output: web, pdf
+
     - title: Introduction
       url: /mydoc_introduction/
       output: web, pdf
