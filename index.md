@@ -11,10 +11,46 @@ These brief instructions will help you get started quickly with the theme. The o
 
 ## Build this theme
 
-If you're used to running Jekyll sites, you can type the normal jekyll command, `jekyll serve`, to run this site. However, if you're a new Jekyll user or if you run into issues, see the following two topics:
+If you're used to running Jekyll sites, you can type the normal jekyll command, `jekyll serve`, to build the Jekyll theme. However, if you're a new Jekyll user or if you run into issues, see the following two topics:
 
 * {{site.data.urls.mydoc_install_jekyll_on_mac.link}}
 * {{site.data.urls.mydoc_install_jekyll_on_windows.link}}
+
+## Customize the Gemfile
+   
+
+
+## 
+Open the Gemfile (in any text editor) in the Jekyll doc theme project:
+
+```
+open Gemfile
+```
+
+The theme's gemfile looks as follows:
+
+```
+# A sample Gemfile
+source "https://rubygems.org"
+
+# gem "rails"
+gem 'github-pages'
+gem 'jekyll'
+```
+
+If you're publishing on Github Pages, leave the `github-pages` gem there. But if not, remove `github-pages` because Github sometimes has dependencies that conflict with the latest versions of the Jekyll gem and Kramdown, which can be frustrating.
+
+Use Bundler to install all the needed Ruby gems:
+
+```
+bundle install
+```
+
+Now run Jekyll serve to build the theme:
+
+```
+jekyll serve
+```
 
 ## Configure the sidebar
 
@@ -135,7 +171,7 @@ For more detail on the sidebar, see {{site.data.urls.mydoc_sidebar_navigation.li
 
 ## Page frontmatter
 
-When you write pages, include this same frontmatter in each page:
+When you write pages, include these same frontmatter keys with each page:
 
 ```yaml
 ---
@@ -149,19 +185,20 @@ permalink: /yoururl/
 ---
 ```
 
-(If you're using [Webstorm]({{site.data.urls.mydoc_webstorm_text_editor.url}}), you can set up a template to auto-populate this code when you create a new file.)
+(You will customize the values for each of these keys, of course.)
 
-For titles, surrounding the title in quotes is optional, but if you have a colon in the title, you must surround the title with quotation marks.
+If you're using [Webstorm]({{site.data.urls.mydoc_webstorm_text_editor.url}}), you can set up a template to auto-populate this code when you create a new file.
 
-Keywords get populated into the metadata of the page for SEO.
+For titles, surrounding the title in quotes is optional, but if you have a colon in the title, you must surround the title with quotation marks. If you have a quotation mark within the title, escape it first with a backlash `\`.
 
-Tags must be defined in your \_data/tags.yml list. You also need a corresponding tag file inside the tags folder that follows the same pattern as the other tag files shown in the tags folder. (Jekyll wont auto-create these tag files.)
+Values for `keywords` get populated into the metadata of the page for SEO.
+
+Values for `tags` must be defined in your \_data/tags.yml list. You also need a corresponding tag file inside the tags folder that follows the same pattern as the other tag files shown in the tags folder. (Jekyll wont auto-create these tag files.)
 ```
 
 If you don't want the mini-TOC to show on a page (such as for the homepage or landing pages), add `toc: false` in the frontmatter.
 
 For more detail, see {{site.data.urls.mydoc_pages.link}}.
-
 
 ## Where to store your documentation topics
 
@@ -178,7 +215,6 @@ The top navigation bar's menu items are set through the _data/topnav.yml file. U
 For external URLs, use `external_url` in the item property, as shown in the example topnav.yml file. For internal links, use `url` as usual.
 
 Note that the topnav has two sections: topnav and topnav_dropdowns. The topnav section contains single links, while the topnav_dropdowns section contains dropdown menus. The two sections are independent of each other.
-
 
 ## Generating PDF
 
@@ -227,7 +263,7 @@ See the topics under "Formatting" in the sidebar for more information.
 
 ## Managing links
 
-If you want to use a simple system for managing links, see the "Managed Links" section in {{site.data.urls.mydoc_hyperlinks.link}}.
+If you want to use a simple system for managing links, see the "Managed Links" section in {{site.data.urls.mydoc_hyperlinks.link | append: "#managed-links"}}.
 
 ## Other instructions
 

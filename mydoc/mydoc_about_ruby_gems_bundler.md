@@ -49,6 +49,7 @@ RedCloth = 4.2.9
 rouge = 1.10.1
 terminal-table ~> 1.
 ```
+
 See how Bundler retrieved version 3.0.3 of the jekyll gem, even though (as of this writing) the latest version of the jekyll gem is 3.1.2? That's because github-pages is only compatible up to jekyll 3.0.3. Bundler handles all of this dependency and version compatibility for you.
  
  Trying to keep track of which gems and versions are appropriate for your project can be a nightmare. This is the problem Bundler solves. As explained on [Bundler.io](http://bundler.io/):

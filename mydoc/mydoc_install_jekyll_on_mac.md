@@ -74,9 +74,23 @@ Now Ruby and Rubygems are installed under your username, so these directories ar
 
 Note that if you don't see these paths, try restarting your computer or try installing rbenv, which is a Ruby version management tool. If you still have issues getting a writeable version of Ruby, you need to resolve them before installing Bundler.
 
-<h2 id="bundler">Install Bundler</h2>
+<h2 id="bundler">Install the Jekyll gem</h2>
 
-At this point you should have a writeable version of Ruby on your machine. Now you need to get all the gems (or Ruby plugins) that you need for your Jekyll project. [Bundler](http://bundler.io/) is a package manager for RubyGems.
+At this point you should have a writeable version of Ruby and Rubygem on your machine. 
+
+Now use `gem` to install Jekyll:
+
+```
+gem install jekyll
+```
+
+You can now use Jekyll to create new Jekyll sites following the quick-start instructions on [Jekyllrb.com](http://jekyllrb.com).
+
+## Installing dependencies through Bundler
+
+Some Jekyll themes will require certain Ruby gem dependencies. These dependencies are stored in something called a Gemfile, which is packaged with the Jekyll theme. You can install these dependencies through Bundler. (Although you don't need to install Bundler for this Documentation theme, it's a good idea to do so.)
+
+[Bundler](http://bundler.io/) is a package manager for RubyGems. You can use it to get all the gems (or Ruby plugins) that you need for your Jekyll project. 
 
 You install Bundler by using the gem command with RubyGems:
 
@@ -86,37 +100,12 @@ gem install bundler
 
 If you're prompted to switch to superuser mode (`sudo`) to get the correct permissions to install Bundler in that directory, avoid doing this. All other applications that need to use Bundler will likely not have the needed permissions to run.
 
-## Customize the Gemfile
+Bundler goes out and retreives all the gems that are specified in a Jekyll project's Gemfile. If you have a gem that depends on other gems to work, Bundler will go out and retrieve all of the dependencies as well. (To learn more about Bundler, see {{site.data.urls.mydoc_about_ruby_gems_etc.link}}.
 
-Bundler goes out and retreives all the gems that are specified in your project's Gemfile. If you have a gem that depends on other gems to work, Bundler will go out and retrieve all of the dependencies as well. (To learn more about Bundler, see {{site.data.urls.mydoc_about_ruby_gems_etc.link}}.
+The vanilla Jekyll site you create through `jekyll new my-awesome-site` doesn't have a Gemfile, but many other themes (including the Documentation theme for Jekyll) do have a Gemfile.
 
-Open the Gemfile (in any text editor) in the Jekyll doc theme project:
+## Serve the Jekyll Documentation theme
 
-```
-open Gemfile
-```
-
-The theme's gemfile looks as follows:
-
-```
-# A sample Gemfile
-source "https://rubygems.org"
-
-# gem "rails"
-gem 'github-pages'
-gem 'jekyll'
-```
-
-If you're publishing on Github Pages, leave the `github-pages` gem there. But if not, remove `github-pages` because Github sometimes has dependencies that conflict with the latest versions of the Jekyll gem and Kramdown, which can be frustrating.
-
-Use Bundler to install all the needed Ruby gems:
-
-```
-bundle install
-```
-
-Now run Jekyll serve to build the theme:
-
-```
-jekyll serve
-```
+1. Browse to the directory where you downloaded the Documentation theme for Jekyll.
+2. Type `jekyll serve`
+3. Go to the preview address in the browser. (Make sure you include the `/` at the end.)

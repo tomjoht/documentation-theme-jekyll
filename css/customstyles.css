@@ -1035,3 +1035,43 @@ table thead th code.highlighter-rouge {
     background-color: transparent;
 }
 
+
+.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10, .box11, .box12  {
+    padding: 15px;
+    border: 1px solid #888;
+    box-shadow: 2px 2px 4px #dedede;
+    margin: 5px 5px;
+    width: 100px;
+    height: 80px;
+    background-color: #f5f5f5;
+    font-family: Arial;
+    font-size: 12px;
+    hyphens: auto;
+
+}
+
+#userMap {
+    max-width: 900px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 20px;
+}
+
+#userMap .active {
+    background-color: #d6f5d6;
+    border:1px solid #555;
+    font-weight: bold;
+}
+
+h2.userMapTitle {
+    font-family: Arial;
+}
+
+#userMap table td {
+    vertical-align: middle;
+    font-size: x-large;
+}
+
+#userMap a:hover {
+    text-decoration: none;
+  }
