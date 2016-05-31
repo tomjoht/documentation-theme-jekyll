@@ -13,6 +13,16 @@
 <link rel="stylesheet" href="{{ "/css/lavish-bootstrap.css" | prepend: site.baseurl }}">
 <link rel="stylesheet" href="{{ "/css/theme-blue.css" | prepend: site.baseurl }}">
 <link rel="stylesheet" href="{{ "/css/customstyles.css" | prepend: site.baseurl }}">
+{% if page.custom_css %}
+  {% for stylesheet in page.custom_css %}
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/{{ stylesheet }}.css" media="screen" type="text/css">
+  {% endfor %}
+{% endif %}
+{% if page.custom_js %}
+  {% for js_file in page.custom_js %}
+  <script src='{{ site.baseurl }}/js/{{ js_file }}.js' type="text/javascript"></script>
+  {% endfor %}
+{% endif %}
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
