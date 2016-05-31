@@ -1036,7 +1036,7 @@ table thead th code.highlighter-rouge {
 }
 
 
-.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10, .box11, .box12  {
+.box, .box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10, .box11, .box12  {
     padding: 15px;
     border: 1px solid #888;
     box-shadow: 2px 2px 4px #dedede;
@@ -1075,3 +1075,8 @@ h2.userMapTitle {
 #userMap a:hover {
     text-decoration: none;
   }
+
+.box: hover {
+    background-color: #444444;
+    color: white;
+}
