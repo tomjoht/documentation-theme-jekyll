@@ -61,7 +61,7 @@ def merge(one, two):
 
 ### JSON format
 
-Simply a JSON number representing the `entries`. This is the only aggregator whose JSON representation is not an object.
+Simply a JSON number (or JSON string "nan", "inf", "-inf" for non-finite values) representing the `entries`. This is the only aggregator whose JSON representation is not an object.
 
 **Example:**
 
@@ -97,11 +97,11 @@ Sum.ed(entries, sum)
 ### Fill and merge algorithms
 
 ```python
-def fill(ING, datum, weight):
+def fill(summing, datum, weight):
     if weight > 0.0:
-        q = quantity(datum)
-        entries += weight
-        sum += q * weight
+        q = summing.quantity(datum)
+        summing.entries += weight
+        summing.sum += q * weight
 
 def merge(one, two):
     return Sum.ed(one.entries + two.entries, one.sum + two.sum)
@@ -111,8 +111,8 @@ def merge(one, two):
 
 JSON object containing
 
-  * `entries` (JSON number)
-  * `sum` (JSON number)
+  * `entries` (JSON number, "nan", "inf", or "-inf")
+  * `sum` (JSON number, "nan", "inf", or "-inf")
   * optional `name` (JSON string), name of the `quantity` function, if provided.
 
 **Example:**
@@ -150,13 +150,13 @@ Average.ed(entries, mean)
 ### Fill and merge algorithms
 
 ```python
-def fill(ING, datum, weight):
+def fill(averaging, datum, weight):
     if weight > 0.0:
-        q = quantity(datum)
-        entries += weight
-        delta = q - mean
-        shift = delta * weight / entries
-        mean += shift
+        q = averaging.quantity(datum)
+        averaging.entries += weight
+        delta = q - averaging.mean
+        shift = delta * weight / averaging.entries
+        averaging.mean += shift
 
 def merge(one, two):
     entries = one.entries + two.entries
@@ -171,8 +171,8 @@ def merge(one, two):
 
 JSON object containing
 
-  * `entries` (JSON number)
-  * `mean` (JSON number)
+  * `entries` (JSON number, "nan", "inf", or "-inf")
+  * `mean` (JSON number, "nan", "inf", or "-inf")
   * optional `name` (JSON string), name of the `quantity` function, if provided.
 
 **Example:**
@@ -186,9 +186,11 @@ JSON object containing
 
 Accumulate the weighted mean and weighted variance of a given quantity.
 
+The variance is computed around the mean, not zero.
+
 Uses the numerically stable weighted mean and weighted variance algorithms described in ["Incremental calculation of weighted mean and variance," Tony Finch, _Univeristy of Cambridge Computing Service,_ 2009.](http://www-uxsup.csx.cam.ac.uk/~fanf2/hermes/doc/antiforgery/stats.pdf)
 
-### ING constructor and required members
+### Deviating constructor and required members
 
 ```python
 Deviate.ing(quantity)
@@ -199,7 +201,7 @@ Deviate.ing(quantity)
   * `mean` (mutable double) is the running mean, initially 0.0. Note that this value contributes to the total mean with weight zero (because `entries` is initially zero), so this arbitrary choice does not bias the final result.
   * `variance` (mutable double) is the running variance, initially 0.0. Note that this also contributes nothing to the final result.
 
-### ED constructor and required members
+### Deviated constructor and required members
 
 ```python
 Deviate.ed(entries, mean, variance)
@@ -212,16 +214,16 @@ Deviate.ed(entries, mean, variance)
 ### Fill and merge algorithms
 
 ```python
-def fill(ING, datum, weight):
+def fill(deviating, datum, weight):
     if weight > 0.0:
-        q = quantity(datum)
-        varianceTimesEntries = variance * entries
-        entries += weight
-        delta = q - mean
-        shift = delta * weight / entries
-        mean += shift
-        varianceTimesEntries += weight * delta * (q - mean)
-        variance = varianceTimesEntries / entries
+        q = deviating.quantity(datum)
+        varianceTimesEntries = deviating.variance * deviating.entries
+        deviating.entries += weight
+        delta = q - deviating.mean
+        shift = delta * weight / deviating.entries
+        deviating.mean += shift
+        varianceTimesEntries += weight * delta * (q - deviating.mean)
+        deviating.variance = varianceTimesEntries / deviating.entries
 
 def merge(one, two):
     entries = one.entries + two.entries
@@ -247,9 +249,9 @@ This is only relevant for `Deviated` objects constructed by hand: `Deviating` ob
 
 JSON object containing
 
-  * `entries` (JSON number)
-  * `mean` (JSON number)
-  * `variance` (JSON number)
+  * `entries` (JSON number, "nan", "inf", or "-inf")
+  * `mean` (JSON number, "nan", "inf", or "-inf")
+  * `variance` (JSON number, "nan", "inf", or "-inf")
   * optional `name` (JSON string), name of the `quantity` function, if provided.
 
 **Example:**
@@ -261,154 +263,261 @@ JSON object containing
 
 ## **AbsoluteErr:** mean-absolute-error
 
-DESCRIPTION
+Accumulate the weighted mean absolute error (MAE) of a quantity around zero.
 
-### ING constructor and required members
+The MAE is sometimes used as a replacement for the standard deviation, associated with medians, rather than means. However, this aggregator makes no attempt to estimate a median. If used as an "error," it should be used on a quantity whose nominal value is zero, such as a residual.
+
+### AbsoluteErring constructor and required members
 
 ```python
-.ing()
+AbsoluteErr.ing(quantity)
 ```
 
+  * `quantity` (function returning double) computes the quantity of interest from the data.
   * `entries` (mutable double) is the number of entries, initially 0.0.
+  * `mae` (mutable double) is the mean absolute error.
 
-### ED constructor and required members
+### AbsoluteErred constructor and required members
 
 ```python
-.ed(entries)
+AbsoluteErr.ed(entries, mae)
 ```
 
   * `entries` (double) is the number of entries.
+  * `mae` (double) is the mean absolute error.
 
 ### Fill and merge algorithms
 
 ```python
-def fill(ING, datum, weight):
+def fill(absoluteerring, datum, weight):
+    if weight > 0.0:
+        q = absoluteerring.quantity(datum)
+        absoluteerring.entries += weight
+        absoluteerring.absoluteSum += weight * abs(q)
 
 def merge(one, two):
+    entries = one.entries + two.entries
+    mae = one.entries*one.mae + two.entries*two.mae
+    return AbsoluteErr.ed(entries, mae)
 ```
+
+**FIXME:** I have no theoretical reason to believe that a weighted mean is the right way to combine mean absolute errors.
 
 ### JSON format
 
-DESCRIPTION
+  * `entries` (JSON number, "nan", "inf", or "-inf")
+  * `mae` (JSON number, "nan", "inf", or "-inf")
+  * optional `name` (JSON string), name of the `quantity` function, if provided.
 
 **Example:**
 
 ```json
-{"type": "XXX", "data": YYY}
+{"type": "AbsoluteErr",
+ "data": {"entries": 123.0, "mae": 3.14, "name": "myfunc"}}
 ```
 
 ## **Minimize:** minimum value
 
-DESCRIPTION
+Find the minimum value of a given quantity. If no data are observed, the result is NaN.
 
-### ING constructor and required members
+Unlike [quantile](#quantile-such-as-median-quartiles-quintiles-etc) with a target of 0, Minimize is exact.
+
+### Minimizing constructor and required members
 
 ```python
-.ing()
+Minimize.ing(quantity)
 ```
 
+  * `quantity` (function returning double) computes the quantity of interest from the data.
   * `entries` (mutable double) is the number of entries, initially 0.0.
+  * `min` (mutable double) is the lowest value of the quantity observed, initially NaN.
 
-### ED constructor and required members
+### Minimized constructor and required members
 
 ```python
-.ed(entries)
+Minimize.ed(entries, min)
 ```
 
   * `entries` (double) is the number of entries.
+  * `min` (double) is the lowest value of the quantity observed or NaN if no data are observed.
 
 ### Fill and merge algorithms
 
 ```python
-def fill(ING, datum, weight):
+def fill(minimizing, datum, weight):
+    if weight > 0.0:
+        q = quantity(datum)
+        entries += weight
+        if math.isnan(minimizing.min) or q < minimizing.min:
+            minimizing.min = q
 
 def merge(one, two):
+    entries = one.entries + two.entries
+    if math.isnan(one.min):
+        min = two.min
+    elif math.isnan(two.min):
+        min = one.min
+    elif one.min < two.min:
+        min = one.min
+    else:
+        min = two.min
+    return Minimize.ed(entries, min)
 ```
 
 ### JSON format
 
-DESCRIPTION
+JSON object containing
+
+  * `entries` (JSON number, "nan", "inf", or "-inf")
+  * `min` (JSON number, "nan", "inf", or "-inf")
+  * optional `name` (JSON string), name of the `quantity` function, if provided.
 
 **Example:**
 
 ```json
-{"type": "XXX", "data": YYY}
+{"type": "Minimize",
+ "data": {"entries": 123.0, "min": 3.14, "name": "myfunc"}}
 ```
 
 ## **Maximize:** maximum value
 
-DESCRIPTION
+Find the maximum value of a given quantity. If no data are observed, the result is NaN.
 
-### ING constructor and required members
+Unlike [quantile](#quantile-such-as-median-quartiles-quintiles-etc) with a target of 1, Maximize is exact.
+
+### Maximizing constructor and required members
 
 ```python
-.ing()
+Maximize.ing(quantity)
 ```
 
+  * `quantity` (function returning double) computes the quantity of interest from the data.
   * `entries` (mutable double) is the number of entries, initially 0.0.
+  * `max` (mutable double) is the highest value of the quantity observed, initially NaN.
 
-### ED constructor and required members
+### Maximized constructor and required members
 
 ```python
-.ed(entries)
+Maximize.ed(entries, min)
 ```
 
   * `entries` (double) is the number of entries.
+  * `max` (double) is the highest value of the quantity observed or NaN if no data are observed.
 
 ### Fill and merge algorithms
 
 ```python
-def fill(ING, datum, weight):
+def fill(maximizing, datum, weight):
+    if weight > 0.0:
+        q = quantity(datum)
+        entries += weight
+        if math.isnan(maximizing.max) or q > maximizing.max:
+            maximizing.max = q
 
 def merge(one, two):
+    entries = one.entries + two.entries
+    if math.isnan(one.max):
+        max = two.max
+    elif math.isnan(two.max):
+        max = one.max
+    elif one.max > two.max:
+        max = one.max
+    else:
+        max = two.max
+    return Maximize.ed(entries, max)
 ```
 
 ### JSON format
 
-DESCRIPTION
+JSON object containing
+
+  * `entries` (JSON number, "nan", "inf", or "-inf")
+  * `max` (JSON number, "nan", "inf", or "-inf")
+  * optional `name` (JSON string), name of the `quantity` function, if provided.
 
 **Example:**
 
 ```json
-{"type": "XXX", "data": YYY}
+{"type": "Maximize",
+ "data": {"entries": 123.0, "max": 3.14, "name": "myfunc"}}
 ```
 
 ## **Quantile:** such as median, quartiles, quintiles, etc.
 
-DESCRIPTION
+Estimate a quantile, such as 0.5 for median, (0.25, 0.75) for quartiles, or (0.2, 0.4, 0.6, 0.8) for quintiles, etc.
 
-### ING constructor and required members
+**Note:** this is an inexact heuristic! In general, it is not possible to derive an exact quantile in a single pass over a dataset (without accumulating a large fraction of the dataset in memory). To interpret this statistic, refer to the fill and merge algorithms below.
+
+This statistic has the best accuracy for quantiles near the middle of the distribution, such as the median (0.5), and the worst accuracy for quantiles near the edges, such as the first or last percentile (0.01 or 0.99). Use the specialized aggregators for the [minimum](#minimize-minimum-value) (0.0) or [maximum](#maximize-maximum-value) (1.0) of a distribution, since those aggregators are exact.
+
+Another alternative is to use [AdaptivelyBin](#adaptivelybin-for-unknown-distributions) to histogram the distribution and then estimate quantiles from the histogram bins.
+
+### Quantiling constructor and required members
 
 ```python
-.ing()
+Quantile.ing(target, quantity)
 ```
 
+  * `target` (double) is a value between 0.0 and 1.0 (inclusive), indicating the quantile to approximate.
+  * `quantity` (function returning double) computes the quantity of interest from the data.
   * `entries` (mutable double) is the number of entries, initially 0.0.
+  * `estimate` (mutable double) is the best estimate of where `target` of the distribution is below this value and `1.0 - target` of the distribution is above. Initially, this value is NaN.
+  * `cumulativeDeviation` (mutable double) is the sum of absolute error between observed values and the current `estimate` (which moves). Initially, this value is 0.0.
 
-### ED constructor and required members
+### Quantiled constructor and required members
 
 ```python
-.ed(entries)
+Quantile.ed(entries, target, estimate)
 ```
 
   * `entries` (double) is the number of entries.
+  * `target` (double) is the value between 0.0 and 1.0 (inclusive), indicating the quantile approximated.
+  * `estimate` (double) is the best estimate of where `target` of the distribution is below this value and `1.0 - target` of the distribution is above.
 
 ### Fill and merge algorithms
 
 ```python
-def fill(ING, datum, weight):
+def fill(quantiling, datum, weight):
+    if weight > 0.0:
+        q = quantiling.quantity(datum)
+        quantiling.entries += weight
+        if math.isnan(quantiling.estimate):
+            quantiling.estimate = q
+        else:
+            quantiling.cumulativeDeviation += abs(q - quantiling.estimate)
+            learningRate = 1.5*quantiling.cumulativeDeviation/quantiling.entries**2
+            quantiling.estimate = weight * learningRate * \
+                (cmp(q, quantiling.estimate) + 2.0*quantiling.target - 1.0)
 
 def merge(one, two):
+    entries = one.entries + two.entries
+    if math.isnan(one.estimate) and math.isnan(two.estimate):
+        estimate = float("nan")
+    elif math.isnan(one.estimate):
+        estimate = two.estimate
+    elif math.isnan(two.estimate):
+        estimate = one.estimate
+    elif entries == 0.0:
+        estimate = (one.estimate + two.estimate) / 2.0
+    else:
+        estimate = (one.entries*one.estimate + two.entries*two.estimate) / entries
+    return Quantile.ed(entries, one.target, estimate)
 ```
 
 ### JSON format
 
-DESCRIPTION
+JSON object containing
+
+  * `entries` (JSON number, "nan", "inf", or "-inf")
+  * `target` (JSON number, "nan", "inf", or "-inf")
+  * `estimate` (JSON number, "nan", "inf", or "-inf")
+  * optional `name` (JSON string), name of the `quantity` function, if provided.
 
 **Example:**
 
 ```json
-{"type": "XXX", "data": YYY}
+{"type": "Qantile",
+ "data": {"entries": 123.0, "target": 0.5, "estimate": 3.14, "name": "myfunc"}}
 ```
 
 # Second kind: group data by a quantity and pass to sub-aggregators
