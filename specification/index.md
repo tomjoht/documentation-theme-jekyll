@@ -55,7 +55,7 @@ def fill(counting, datum, weight):
     if weight > 0.0:
         counting.entries += weight
 
-def merge(one, two):
+def add(one, two):
     return Count.ed(one.entries + two.entries)
 ```
 
@@ -103,7 +103,7 @@ def fill(summing, datum, weight):
         summing.entries += weight
         summing.sum += q * weight
 
-def merge(one, two):
+def add(one, two):
     return Sum.ed(one.entries + two.entries, one.sum + two.sum)
 ```
 
@@ -158,7 +158,7 @@ def fill(averaging, datum, weight):
         shift = delta * weight / averaging.entries
         averaging.mean += shift
 
-def merge(one, two):
+def add(one, two):
     entries = one.entries + two.entries
     if entries == 0.0:
         mean = (one.mean + two.mean) / 2.0
@@ -225,7 +225,7 @@ def fill(deviating, datum, weight):
         varianceTimesEntries += weight * delta * (q - deviating.mean)
         deviating.variance = varianceTimesEntries / deviating.entries
 
-def merge(one, two):
+def add(one, two):
     entries = one.entries + two.entries
     if entries == 0.0:
         mean = (one.mean + two.mean) / entries
@@ -295,7 +295,7 @@ def fill(absoluteerring, datum, weight):
         absoluteerring.entries += weight
         absoluteerring.absoluteSum += weight * abs(q)
 
-def merge(one, two):
+def add(one, two):
     entries = one.entries + two.entries
     mae = one.entries*one.mae + two.entries*two.mae
     return AbsoluteErr.ed(entries, mae)
@@ -351,7 +351,7 @@ def fill(minimizing, datum, weight):
         if math.isnan(minimizing.min) or q < minimizing.min:
             minimizing.min = q
 
-def merge(one, two):
+def add(one, two):
     entries = one.entries + two.entries
     if math.isnan(one.min):
         min = two.min
@@ -414,7 +414,7 @@ def fill(maximizing, datum, weight):
         if math.isnan(maximizing.max) or q > maximizing.max:
             maximizing.max = q
 
-def merge(one, two):
+def add(one, two):
     entries = one.entries + two.entries
     if math.isnan(one.max):
         max = two.max
@@ -489,7 +489,9 @@ def fill(quantiling, datum, weight):
             quantiling.estimate = weight * learningRate * \
                 (cmp(q, quantiling.estimate) + 2.0*quantiling.target - 1.0)
 
-def merge(one, two):
+def add(one, two):
+    if one.target != two.target:
+        raise Exception
     entries = one.entries + two.entries
     if math.isnan(one.estimate) and math.isnan(two.estimate):
         estimate = float("nan")
@@ -504,12 +506,14 @@ def merge(one, two):
     return Quantile.ed(entries, one.target, estimate)
 ```
 
+**FIXME:** I have no theoretical reason to believe that a weighted mean is the right way to combine these estimates.
+
 ### JSON format
 
 JSON object containing
 
   * `entries` (JSON number, "nan", "inf", or "-inf")
-  * `target` (JSON number, "nan", "inf", or "-inf")
+  * `target` (JSON number)
   * `estimate` (JSON number, "nan", "inf", or "-inf")
   * optional `name` (JSON string), name of the `quantity` function, if provided.
 
@@ -524,78 +528,236 @@ JSON object containing
 
 ## **Bin:** regular binning for histograms
 
-DESCRIPTION
+Split a quantity into equally spaced bins between a low and high threshold and fill exactly one bin per datum.
 
-### ING constructor and required members
+When combined with [Count](#count-sum-of-weights), this produces a standard histogram. Two nested Bin aggregators produces a two-dimensional histogram, etc.
+
+### Binning constructor and required members
 
 ```python
-.ing()
+Bin.ing(num, low, high, quantity, value=Count.ing(), underflow=Count.ing(), overflow=Count.ing(), nanflow=Count.ing())
 ```
 
+  * `num` (32-bit integer) is the number of bins; must be at least one.
+  * `low` (double) is the minimum-value edge of the first bin.
+  * `high` (double) is the maximum-value edge of the last bin; must be strictly greater than `low`.
+  * `quantity` (function returning double) computes the quantity of interest from the data.
+  * `value` (present-tense aggregator) generates sub-aggregators to put in each bin.
+  * `underflow` (present-tense aggregator) is a sub-aggregator to use for data whose quantity is less than `low`.
+  * `overflow` (present-tense aggregator) is a sub-aggregator to use for data whose quantity is greater than or equal to `high`.
+  * `nanflow` (present-tense aggregator) is a sub-aggregator to use for data whose quantity is NaN.
   * `entries` (mutable double) is the number of entries, initially 0.0.
 
-### ED constructor and required members
+### Binned constructor and required members
 
 ```python
-.ed(entries)
+Bin.ed(low, high, entries, values, underflow, overflow, nanflow)
 ```
 
+  * `low` (double) is the minimum-value edge of the first bin.
+  * `high` (double) is the maximum-value edge of the last bin; must be strictly greater than `low`.
   * `entries` (double) is the number of entries.
+  * `values` (list of past-tense aggregators) is the filled sub-aggregators, one for each bin.
+  * `underflow` (past-tense aggregator) is the filled underflow bin.
+  * `overflow` (past-tense aggregator) is the filled overflow bin.
+  * `nanflow` (past-tense aggregator) is the filled nanflow bin.
 
 ### Fill and merge algorithms
 
 ```python
-def fill(ING, datum, weight):
+def fill(binning, datum, weight):
+    if weight > 0.0:
+        q = binning.quantity(datum)
+        if math.isnan(q):
+            binning.nanflow.fill(datum, weight)
+        elif q < binning.low:
+            binning.underflow.fill(datum, weight)
+        elif q >= binning.high:
+            binning.overflow.fill(datum, weight)
+        else:
+            bin = int(math.floor(binning.num * \
+                (q - binning.low) / (binning.high - binning.low)))
+            binning.values[bin].fill(datum, weight)
+        binning.entries += weight
 
-def merge(one, two):
+def add(one, two):
+    if one.num != two.num or one.low != two.low or one.high != two.high:
+        raise Exception
+    return Bin.ed(one.low, one.high, \
+                  one.entries + two.entries, \
+                  [x + y for x, y in zip(one.values, two.values)], \
+                  one.underflow + two.underflow, \
+                  one.overflow + two.overflow, \
+                  one.nanflow + two.nanflow)
 ```
 
 ### JSON format
 
-DESCRIPTION
+JSON object containing
 
-**Example:**
+  * `low` (JSON number)
+  * `high` (JSON number)
+  * `entries` (JSON number, "nan", "inf", or "-inf")
+  * `values:type` (JSON string), name of the values sub-aggregator type
+  * `values` (JSON array of sub-aggregators)
+  * `underflow:type` (JSON string), name of the underflow sub-aggregator type
+  * `underflow` sub-aggregator
+  * `overflow:type` (JSON string), name of the overflow sub-aggregator type
+  * `overflow` sub-aggregator
+  * `nanflow:type` (JSON string), name of the nanflow sub-aggregator type
+  * `nanflow` sub-aggregator
+  * optional `name` (JSON string), name of the `quantity` function, if provided.
+  * optional `values:name` (JSON string), name of the `quantity` function used by each value. If specified here, it is _not_ specified in all the values, streamlining the JSON.
+
+**Examples:**
+
+Here is a five bin histogram, whose bin centers are at -4, -2, 0, 2, and 4. It counts the number of measurements made at each position.
 
 ```json
-{"type": "XXX", "data": YYY}
+{"type": "Bin",
+ "data": {
+   "low": -5.0,
+   "high": 5.0,
+   "entries": 123.0,
+   "name": "position [cm]",
+   "values:type": "Count",
+   "values": [23.0, 20.0, 20.0, 30.0, 30.0],
+   "underflow:type": "Count",
+   "underflow": 5.0,
+   "overflow:type": "Count",
+   "overflow": 8.0,
+   "nanflow:type": "Count",
+   "nanflow": 0.0}}
+```
+
+Here is another five bin histogram on the same domain, this one quantifying an average value in each bin. The quantity measured by the average has a name (`"average time [s]"`), which would have been a `"name"` field in the JSON objects representing the averages if it had not been specified once in `"values:name"`.
+
+```json
+{"type": "Bin",
+ "data": {
+   "low": -5.0,
+   "high": 5.0,
+   "entries": 123.0,
+   "name": "position [cm]",
+   "values:type": "Average",
+   "values:name": "average time [s]",
+   "values": [
+     {"entries": 23.0, "mean": 4.25},
+     {"entries": 20.0, "mean": 16.21},
+     {"entries": 20.0, "mean": 20.28},
+     {"entries": 30.0, "mean": 16.19},
+     {"entries": 30.0, "mean": 4.23}],
+   "underflow:type": "Count",
+   "underflow": 5.0,
+   "overflow:type": "Count",
+   "overflow": 8.0,
+   "nanflow:type": "Count",
+   "nanflow": 0.0}}
 ```
 
 ## **SparselyBin:** ignore zeros
 
-DESCRIPTION
+Split a quantity into equally spaced bins, creating them whenever their `entries` would be non-zero. Exactly one sub-aggregator is filled per datum.
 
-### ING constructor and required members
+Use this when you have a distribution of known scale (bin width) but unknown domain (lowest and highest bin index).
+
+Unlike fixed-domain binning, this aggregator has the potential to use unlimited memory. A large number of _distinct_ outliers can generate many unwanted bins.
+
+Like fixed-domain binning, the bins are indexed by integers, though they are 64-bit and may be negative.
+
+### SparselyBinning constructor and required members
 
 ```python
-.ing()
+SparselyBin.ing(binWidth, quantity, value, nanflow, origin=0.0)
 ```
 
+  * `binWidth` (double) is the width of a bin; must be strictly greater than zero.
+  * `quantity` (function returning double) computes the quantity of interest from the data.
+  * `value` (present-tense aggregator) generates sub-aggregators to put in each bin.
+  * `nanflow` (present-tense aggregator) is a sub-aggregator to use for data whose quantity is NaN.
+  * `origin` (double) is the left edge of the bin whose index is 0.
   * `entries` (mutable double) is the number of entries, initially 0.0.
+  * `bins` (mutable map from 64-bit integer to present-tense aggregator) is the map, probably a hashmap, to fill with values when their `entries` become non-zero.
 
-### ED constructor and required members
+### SparselyBinned constructor and required members
 
 ```python
-.ed(entries)
+SparselyBin.ed(binWidth, entries, contentType, bins, nanflow, origin)
 ```
 
+  * `binWidth` (double) is the width of a bin.
   * `entries` (double) is the number of entries.
+  * `contentType` (string) is the value's sub-aggregator type (must be provided to determine type for the case when `bins` is empty).
+  * `bins` (map from 64-bit integer to past-tense aggregator), the non-zero bin indexes and their values.
+  * `nanflow` (past-tense aggregator) is the filled nanflow bin.
+  * `origin` (double) is the left edge of the bin whose index is zero.
 
 ### Fill and merge algorithms
 
 ```python
-def fill(ING, datum, weight):
+def fill(sparselybinning, datum, weight):
+    if weight > 0.0:
+        q = sparselybinning.quantity(datum)
+        if math.isnan(q):
+            sparselybinning.nanflow.fill(datum, weight)
+        else:
+            bin = long(math.floor(binning.num * \
+                (q - binning.low) / (binning.high - binning.low)))
+            if bin in binning.bins:
+                binning.bins[bin] = binning.value.copy()
+            binning.bins[bin].fill(datum, weight)
+            binning.entries += weight
 
-def merge(one, two):
+def add(one, two):
+    if one.binWidth != two.binWidth or one.origin != two.origin:
+        raise Exception
+    entries = one.entries + two.entries
+    if len(one.bins) > 0:
+        contentType = list(one.bins.values())[0].factory.name
+    elif len(two.bins) > 0:
+        contentType = list(two.bins.values())[0].factory.name
+    else:
+        contentType = one.contentType
+    bins = {}
+    for key in set(one.bins.keys()).union(set(two.bins.keys())):
+        if key in one.bins and key in two.bins:
+            bins[key] = one.bins[key] + two.bins[key]
+        elif key in one.bins:
+            bins[key] = one.bins[key].copy()
+        elif key in two.bins:
+            bins[key] = two.bins[key].copy()
+    nanflow = one.nanflow + two.nanflow
+    return SparselyBin.ed(one.binWidth, entries, contentType, \
+                          bins, nanflow, one.origin)
 ```
 
 ### JSON format
 
-DESCRIPTION
+JSON object containing
+
+  * `binWidth` (JSON number)
+  * `entries` (JSON number, "nan", "inf", or "-inf")
+  * `bins:type` (JSON string), name of the values sub-aggregator type
+  * `bins` (JSON object), keys are string representations of the bin indexes (decimal, no leading zeros) and values are sub-aggregators
+  * `nanflow:type` (JSON string), name of the nanflow sub-aggregator type
+  * `nanflow` sub-aggregator
+  * `origin` (JSON number)
+  * optional `name` (JSON string), name of the `quantity` function, if provided.
+  * optional `values:name` (JSON string), name of the `quantity` function used by each value. If specified here, it is _not_ specified in all the values, streamlining the JSON.
 
 **Example:**
 
 ```json
-{"type": "XXX", "data": YYY}
+{"type": "SparselyBin",
+ "data": {
+   "binWidth": 2.0,
+   "entries": 123.0,
+   "name": "myfunc",
+   "bins:type": "Count",
+   "bins": {"-999": 5.0, "-4": 23.0, "-2": 20.0, "0": 20.0, "2": 30.0, "4": 30.0, "12345": 8.0},
+   "nanflow:type": "Count",
+   "nanflow": 0.0,
+   "origin": 0.0}}
 ```
 
 ## **CentrallyBin:** irregular but fully partitioning
@@ -623,7 +785,7 @@ DESCRIPTION
 ```python
 def fill(ING, datum, weight):
 
-def merge(one, two):
+def add(one, two):
 ```
 
 ### JSON format
@@ -661,7 +823,7 @@ DESCRIPTION
 ```python
 def fill(ING, datum, weight):
 
-def merge(one, two):
+def add(one, two):
 ```
 
 ### JSON format
@@ -699,7 +861,7 @@ DESCRIPTION
 ```python
 def fill(ING, datum, weight):
 
-def merge(one, two):
+def add(one, two):
 ```
 
 ### JSON format
@@ -737,7 +899,7 @@ DESCRIPTION
 ```python
 def fill(ING, datum, weight):
 
-def merge(one, two):
+def add(one, two):
 ```
 
 ### JSON format
@@ -775,7 +937,7 @@ DESCRIPTION
 ```python
 def fill(ING, datum, weight):
 
-def merge(one, two):
+def add(one, two):
 ```
 
 ### JSON format
@@ -813,7 +975,7 @@ DESCRIPTION
 ```python
 def fill(ING, datum, weight):
 
-def merge(one, two):
+def add(one, two):
 ```
 
 ### JSON format
@@ -851,7 +1013,7 @@ DESCRIPTION
 ```python
 def fill(ING, datum, weight):
 
-def merge(one, two):
+def add(one, two):
 ```
 
 ### JSON format
@@ -891,7 +1053,7 @@ DESCRIPTION
 ```python
 def fill(ING, datum, weight):
 
-def merge(one, two):
+def add(one, two):
 ```
 
 ### JSON format
@@ -929,7 +1091,7 @@ DESCRIPTION
 ```python
 def fill(ING, datum, weight):
 
-def merge(one, two):
+def add(one, two):
 ```
 
 ### JSON format
@@ -967,7 +1129,7 @@ DESCRIPTION
 ```python
 def fill(ING, datum, weight):
 
-def merge(one, two):
+def add(one, two):
 ```
 
 ### JSON format
@@ -1005,7 +1167,7 @@ DESCRIPTION
 ```python
 def fill(ING, datum, weight):
 
-def merge(one, two):
+def add(one, two):
 ```
 
 ### JSON format
@@ -1043,7 +1205,7 @@ DESCRIPTION
 ```python
 def fill(ING, datum, weight):
 
-def merge(one, two):
+def add(one, two):
 ```
 
 ### JSON format
@@ -1083,7 +1245,7 @@ DESCRIPTION
 ```python
 def fill(ING, datum, weight):
 
-def merge(one, two):
+def add(one, two):
 ```
 
 ### JSON format
@@ -1121,7 +1283,7 @@ DESCRIPTION
 ```python
 def fill(ING, datum, weight):
 
-def merge(one, two):
+def add(one, two):
 ```
 
 ### JSON format
