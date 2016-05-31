@@ -4,16 +4,10 @@ keywords: sample
 summary: "This is just a sample topic..."
 sidebar: product2_sidebar
 permalink: /p2_sample5/
+map: true
+map_name: usermap
+box_number: 5
 ---
-
-<script>
-$(document).ready ( function(){
-    $('.box5').addClass('active');
-});
-</script>
-
-{% include custom/usermap.md %}
-
 
 ## Sample Content
 

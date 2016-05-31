@@ -36,10 +36,6 @@ entries:
       url: /p2_sample2/
       output: web, pdf
 
-  - title: Another heading
-    output: web, pdf
-    folderitems:
-
     - title: Sample 3
       url: /p2_sample3/
       output: web, pdf
@@ -48,13 +44,13 @@ entries:
       url: /p2_sample4/
       output: web, pdf
 
-  - title: Another heading
-    output: web, pdf
-    folderitems:
-
     - title: Sample 5
       url: /p2_sample5/
       output: web, pdf
+
+  - title: Another heading
+    output: web, pdf
+    folderitems:
 
     - title: Sample 6
       url: /p2_sample6/

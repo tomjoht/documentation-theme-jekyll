@@ -6,14 +6,6 @@ sidebar: product2_sidebar
 permalink: /p2_sample7/
 ---
 
-<script>
-$(document).ready ( function(){
-    $('.box7').addClass('active');
-});
-</script>
-
-{% include custom/usermap.md %}
-
 
 ## Sample Content
 

@@ -6,6 +6,18 @@ layout: default
    <h1 class="post-title-main">{% if page.homepage == true %} {{site.homepage_title}} {% else %}{{ page.title }}{% endif %}</h1>
 </div>
 
+{% if page.map == true %}
+
+<script>
+    $(document).ready ( function(){
+        $('.box{{page.box_number}}').addClass('active');
+    });
+</script>
+
+{% include custom/{{page.map_name}}.html %}
+
+{% endif %}
+
 <div class="post-content">
 
    {% if page.summary %}

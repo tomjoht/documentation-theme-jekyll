@@ -17,10 +17,7 @@ If you're used to running Jekyll sites, you can type the normal jekyll command, 
 * {{site.data.urls.mydoc_install_jekyll_on_windows.link}}
 
 ## Customize the Gemfile
-   
 
-
-## 
 Open the Gemfile (in any text editor) in the Jekyll doc theme project:
 
 ```
