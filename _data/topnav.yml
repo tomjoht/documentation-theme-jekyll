@@ -9,6 +9,10 @@ topnav:
   items:
     - title: Tutorials
       url: /tutorials/
+- title: Specification
+  items:
+    - title: Specification
+      url: /specification/
 
 topnav_github:
 - title: GitHub

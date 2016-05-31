@@ -82,7 +82,7 @@ footer {
     }
 }
 
-@media(max-width:767px) {
+@media(max-width:830px) {
     .img-portfolio {
         margin-bottom: 15px;
     }

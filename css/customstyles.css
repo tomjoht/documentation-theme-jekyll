@@ -1049,3 +1049,48 @@ body {
         max-width: none;
     }
 }
+
+.summary {
+    border-left: 5px solid #4e5f70;
+}
+
+div#toc ul li {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+div#toc ul li ul {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+div#toc ul li ul li {
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+h3[id] {
+    color: #2d3e4f;
+    font-weight: bold;
+    font-size:130%;
+    margin-top: -50px;
+}
+
+h4[id] {
+    color: #2d3e4f;
+    font-weight: normal;
+    font-size:120%;
+    font-style: normal;
+    margin-top: -50px;
+}
+
+pre {
+    margin: 10px 0px;
+}
+
