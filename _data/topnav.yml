@@ -26,9 +26,9 @@ topnav_dropdowns:
   folders:
     - title: References
       folderitems:
-        - title: Scala function reference
+        - title: Scala
           external_url: http://histogrammar.org/scala/latest/index.html#org.dianahep.histogrammar.package
-        - title: Python function reference
+        - title: Python
           external_url: http://amiconnectedtotheinternet.com
-        - title: C++ function reference
+        - title: C++
           external_url: http://amiconnectedtotheinternet.com

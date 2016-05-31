@@ -5,7 +5,7 @@ toc: true
 toc.minimumHeaders: 1
 custom_css: specification
 summary: |
-    <p>This page describes Histogrammar detail, but without reference to any particular implementation. It describes the composable primitives, their required functions and argument lists, and their JSON representations.</p>
+    <p>This page describes Histogrammar in detail, but without reference to any particular implementation, including the composable primitives, their required functions and argument lists, and their JSON representations.</p>
     
     <p>This is the normative specification; any implementations that don't adhere to the definitions on this page are wrong and should be corrected.</p>
 ---

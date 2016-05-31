@@ -1094,3 +1094,11 @@ pre {
     margin: 10px 0px;
 }
 
+.dropdown-menu {
+    min-width: 100px;
+}
+
+.dropdown-menu li a {
+    font-size: 16px;
+    line-height: 120%;
+}
