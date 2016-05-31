@@ -1258,7 +1258,7 @@ DESCRIPTION
 {"type": "XXX", "data": YYY}
 ```
 
-## **Sample:** accumulate with reservoir sampling
+## **Sample:** reservoir sampling
 
 DESCRIPTION
 
