@@ -48,14 +48,14 @@ Count.ed(entries)
 
   * `entries` (double) is the number of entries.
 
-### Fill and add algorithms
+### Fill and combine algorithms
 
 ```python
 def fill(counting, datum, weight):
     if weight > 0.0:
         counting.entries += weight
 
-def __add__(one, two):
+def combine(one, two):
     return Count.ed(one.entries + two.entries)
 ```
 
@@ -94,7 +94,7 @@ Sum.ed(entries, sum)
   * `entries` (double) is the number of entries.
   * `sum` (double) is the sum.
 
-### Fill and add algorithms
+### Fill and combine algorithms
 
 ```python
 def fill(summing, datum, weight):
@@ -103,7 +103,7 @@ def fill(summing, datum, weight):
         summing.entries += weight
         summing.sum += q * weight
 
-def __add__(one, two):
+def combine(one, two):
     return Sum.ed(one.entries + two.entries, one.sum + two.sum)
 ```
 
@@ -147,7 +147,7 @@ Average.ed(entries, mean)
   * `entries` (double) is the number of entries.
   * `mean` (double) is the mean.
 
-### Fill and add algorithms
+### Fill and combine algorithms
 
 ```python
 def fill(averaging, datum, weight):
@@ -158,7 +158,7 @@ def fill(averaging, datum, weight):
         shift = delta * weight / averaging.entries
         averaging.mean += shift
 
-def __add__(one, two):
+def combine(one, two):
     entries = one.entries + two.entries
     if entries == 0.0:
         mean = (one.mean + two.mean) / 2.0
@@ -211,7 +211,7 @@ Deviate.ed(entries, mean, variance)
   * `mean` (double) is the mean.
   * `variance` (double) is the variance.
 
-### Fill and add algorithms
+### Fill and combine algorithms
 
 ```python
 def fill(deviating, datum, weight):
@@ -225,7 +225,7 @@ def fill(deviating, datum, weight):
         varianceTimesEntries += weight * delta * (q - deviating.mean)
         deviating.variance = varianceTimesEntries / deviating.entries
 
-def __add__(one, two):
+def combine(one, two):
     entries = one.entries + two.entries
     if entries == 0.0:
         mean = (one.mean + two.mean) / entries
@@ -286,7 +286,7 @@ AbsoluteErr.ed(entries, mae)
   * `entries` (double) is the number of entries.
   * `mae` (double) is the mean absolute error.
 
-### Fill and add algorithms
+### Fill and combine algorithms
 
 ```python
 def fill(absoluteerring, datum, weight):
@@ -295,7 +295,7 @@ def fill(absoluteerring, datum, weight):
         absoluteerring.entries += weight
         absoluteerring.absoluteSum += weight * abs(q)
 
-def __add__(one, two):
+def combine(one, two):
     entries = one.entries + two.entries
     mae = one.entries*one.mae + two.entries*two.mae
     return AbsoluteErr.ed(entries, mae)
@@ -341,7 +341,7 @@ Minimize.ed(entries, min)
   * `entries` (double) is the number of entries.
   * `min` (double) is the lowest value of the quantity observed or NaN if no data were observed.
 
-### Fill and add algorithms
+### Fill and combine algorithms
 
 ```python
 def fill(minimizing, datum, weight):
@@ -351,7 +351,7 @@ def fill(minimizing, datum, weight):
         if math.isnan(minimizing.min) or q < minimizing.min:
             minimizing.min = q
 
-def __add__(one, two):
+def combine(one, two):
     entries = one.entries + two.entries
     if math.isnan(one.min):
         min = two.min
@@ -404,7 +404,7 @@ Maximize.ed(entries, min)
   * `entries` (double) is the number of entries.
   * `max` (double) is the highest value of the quantity observed or NaN if no data were observed.
 
-### Fill and add algorithms
+### Fill and combine algorithms
 
 ```python
 def fill(maximizing, datum, weight):
@@ -414,7 +414,7 @@ def fill(maximizing, datum, weight):
         if math.isnan(maximizing.max) or q > maximizing.max:
             maximizing.max = q
 
-def __add__(one, two):
+def combine(one, two):
     entries = one.entries + two.entries
     if math.isnan(one.max):
         max = two.max
@@ -476,7 +476,7 @@ Quantile.ed(entries, target, estimate)
   * `target` (double) is the value between 0.0 and 1.0 (inclusive), indicating the quantile approximated.
   * `estimate` (double) is the best estimate of where `target` of the distribution is below this value and `1.0 - target` of the distribution is above.
 
-### Fill and add algorithms
+### Fill and combine algorithms
 
 ```python
 def fill(quantiling, datum, weight):
@@ -491,7 +491,7 @@ def fill(quantiling, datum, weight):
             quantiling.estimate = weight * learningRate * \
                 (cmp(q, quantiling.estimate) + 2.0*quantiling.target - 1.0)
 
-def __add__(one, two):
+def combine(one, two):
     if one.target != two.target:
         raise Exception
     entries = one.entries + two.entries
@@ -532,7 +532,7 @@ JSON object containing
 
 Split a quantity into equally spaced bins between a low and high threshold and fill exactly one bin per datum.
 
-When combined with [Count](#count-sum-of-weights), this produces a standard histogram:
+When composed with [Count](#count-sum-of-weights), this produces a standard histogram:
 
 ```python
 Bin.ing(100, 0, 10, fill_x, Count.ing())
@@ -584,33 +584,33 @@ Bin.ed(low, high, entries, values, underflow, overflow, nanflow)
   * `overflow` (past-tense aggregator) is the filled overflow bin.
   * `nanflow` (past-tense aggregator) is the filled nanflow bin.
 
-### Fill and add algorithms
+### Fill and combine algorithms
 
 ```python
 def fill(binning, datum, weight):
     if weight > 0.0:
         q = binning.quantity(datum)
         if math.isnan(q):
-            binning.nanflow.fill(datum, weight)
+            fill(binning.nanflow, datum, weight)
         elif q < binning.low:
-            binning.underflow.fill(datum, weight)
+            fill(binning.underflow, datum, weight)
         elif q >= binning.high:
-            binning.overflow.fill(datum, weight)
+            fill(binning.overflow, datum, weight)
         else:
             bin = int(math.floor(binning.num * \
                 (q - binning.low) / (binning.high - binning.low)))
-            binning.values[bin].fill(datum, weight)
+            fill(binning.values[bin], datum, weight)
         binning.entries += weight
 
-def __add__(one, two):
+def combine(one, two):
     if one.num != two.num or one.low != two.low or one.high != two.high:
         raise Exception
-    return Bin.ed(one.low, one.high, \
-                  one.entries + two.entries, \
-                  [x + y for x, y in zip(one.values, two.values)], \
-                  one.underflow + two.underflow, \
-                  one.overflow + two.overflow, \
-                  one.nanflow + two.nanflow)
+    entries = one.entries + two.entries
+    values = [combine(x, y) for x, y in zip(one.values, two.values)]
+    underflow = combine(one.underflow, two.underflow)
+    overflow = combine(one.overflow, two.overflow)
+    nanflow = combine(one.nanflow, two.nanflow)
+    return Bin.ed(one.low, one.high, entries, values, underflow, overflow, nanflow)
 ```
 
 ### JSON format
@@ -714,23 +714,23 @@ SparselyBin.ed(binWidth, entries, contentType, bins, nanflow, origin)
   * `nanflow` (past-tense aggregator) is the filled nanflow bin.
   * `origin` (double) is the left edge of the bin whose index is zero.
 
-### Fill and add algorithms
+### Fill and combine algorithms
 
 ```python
 def fill(sparselybinning, datum, weight):
     if weight > 0.0:
         q = sparselybinning.quantity(datum)
         if math.isnan(q):
-            sparselybinning.nanflow.fill(datum, weight)
+            fill(sparselybinning.nanflow, datum, weight)
         else:
             bin = long(math.floor(binning.num * \
                 (q - binning.low) / (binning.high - binning.low)))
             if bin in binning.bins:
                 binning.bins[bin] = binning.value.copy()
-            binning.bins[bin].fill(datum, weight)
+            fill(binning.bins[bin], datum, weight)
             binning.entries += weight
 
-def __add__(one, two):
+def combine(one, two):
     if one.binWidth != two.binWidth or one.origin != two.origin:
         raise Exception
     entries = one.entries + two.entries
@@ -743,12 +743,12 @@ def __add__(one, two):
     bins = {}
     for key in set(one.bins.keys()).union(set(two.bins.keys())):
         if key in one.bins and key in two.bins:
-            bins[key] = one.bins[key] + two.bins[key]
+            bins[key] = combine(one.bins[key], two.bins[key])
         elif key in one.bins:
             bins[key] = one.bins[key].copy()
         elif key in two.bins:
             bins[key] = two.bins[key].copy()
-    nanflow = one.nanflow + two.nanflow
+    nanflow = combine(one.nanflow, two.nanflow)
     return SparselyBin.ed(one.binWidth, entries, contentType, \
                           bins, nanflow, one.origin)
 ```
@@ -817,7 +817,7 @@ CentrallyBin.ed(entries, bins, min, max, nanflow)
   * `max` (double) is the highest value of the quantity observed or NaN if no data were observed.
   * `nanflow` (past-tense aggregator) is the filled nanflow bin.
 
-### Fill and add algorithms
+### Fill and combine algorithms
 
 ```python
 def fill(centrallybinning, datum, weight):
@@ -827,21 +827,21 @@ def fill(centrallybinning, datum, weight):
             centrallybinning.nanflow(datum, weight)
         else:
             dist, closest = min((abs(c - q), v) for c, v in centrallybinning.bins)
-            closest.fill(datum, weight)
+            fill(closest, datum, weight)
         centrallybinning.entries += weight
         if math.isnan(centrallybinning.min) or q < centrallybinning.min:
             centrallybinning.min = q
         if math.isnan(centrallybinning.max) or q > centrallybinning.max:
             centrallybinning.max = q
 
-def __add__(one, two):
+def combine(one, two):
     if set(one.centers) != set(two.centers):
         raise Exception
     entries = one.entries + two.entries
     bins = []
     for c1, v1 in one.bins:
         v2 = [v for c2, v in two.bins if c1 == c2][0]
-        bins.append((c1, v1 + v2))
+        bins.append((c1, combine(v1, v2)))
 
     if math.isnan(one.min):
         min = two.min
@@ -861,7 +861,7 @@ def __add__(one, two):
     else:
         max = two.max
 
-    nanflow = one.nanflow + two.nanflow
+    nanflow = combine(one.nanflow, two.nanflow)
     return CentrallyBin.ed(entries, bins, min, max, nanflow)
 ```
 
@@ -979,7 +979,7 @@ AdaptivelyBin.ed(entries, num, tailDetail, contentType, bins, min, max, nanflow)
   * `max` (double) is the highest value of the quantity observed or NaN if no data were observed.
   * `nanflow` (past-tense aggregator) is the filled nanflow bin.
 
-### Fill and add algorithms
+### Fill and combine algorithms
 
 ```python
 def mergeMetric(pos1, pos2, min, max, entries1, entries2, entries, tailDetail):
@@ -994,14 +994,14 @@ def merge(hist):
         q = mergeMetric(c1, c2, hist.min, hist.max, v1.entries, v2.entries, hist.entries, hist.tailDetail)
         if bestMetric is None or q < bestMetric:
             bestMetric = q
-            leftToMerge = i
-            rightToMerge = i + 1
-    c1, v1 = hist.bins[leftToMerge]
-    c2, v2 = hist.bins[rightToMerge]
+            leftToCombine = i
+            rightToCombine = i + 1
+    c1, v1 = hist.bins[leftToCombine]
+    c2, v2 = hist.bins[rightToCombine]
     newc = (c1 * v1.entries + c2 * v2.entries) / (v1.entries + v2.entries)
-    newv = v1 + v2
-    hist.bins[leftToMerge] = newv
-    del hist.bins[rightToMerge]
+    newv = combine(v1, v2)
+    hist.bins[leftToCombine] = newv
+    del hist.bins[rightToCombine]
 
 def fill(adaptivelybinning, datum, weight):
     if weight > 0.0:
@@ -1017,7 +1017,7 @@ def fill(adaptivelybinning, datum, weight):
         if math.isnan(adaptivelybinning.max) or q > adaptivelybinning.max:
             adaptivelybinning.max = q
 
-def __add__(one, two):
+def combine(one, two):
     if one.num != two.num or one.tailDetail != two.tailDetail:
         raise Exception
     entries = one.entries + two.entries
@@ -1027,7 +1027,7 @@ def __add__(one, two):
     bins = []
     for c in set(bins1.keys()).union(set(bins2.keys())):
         if c in bins1 and c in bins2:
-            bins.append((c, bins1[c] + bins2[c]))
+            bins.append((c, combine(bins1[c], bins2[c])))
         elif c in bins1:
             bins.append((c, bins1[c].copy()))
         elif c in bins2:
@@ -1051,12 +1051,21 @@ def __add__(one, two):
     else:
         max = two.max
 
-    nanflow = one.nanflow + two.nanflow
+    nanflow = combine(one.nanflow, two.nanflow)
     out = AdaptivelyBin.ed(entries, num, tailDetail, contentType, bins, min, max, nanflow)
     while len(out.bins) > out.num:
         merge(out)
     return out
 ```
+
+The only difference between this and Yael Ben-Haim and Elad Tom-Tov's algorithm is `mergeMetric`, which is
+
+```python
+def mergeMetric(pos1, pos2, min, max, entries1, entries2, entries, tailDetail):
+    return pos2 - pos1
+```
+
+in the original algorithm.
 
 ### JSON format
 
@@ -1125,7 +1134,7 @@ Categorize.ed(entries, contentType, pairs)
   * `contentType` (string) is the value's sub-aggregator type (must be provided to determine type for the case when `bins` is empty).
   * `pairs` (map from string to past-tense aggregator) is the non-empty bin categories and their values.
 
-### Fill and add algorithms
+### Fill and combine algorithms
 
 ```python
 def fill(categorizing, datum, weight):
@@ -1133,10 +1142,10 @@ def fill(categorizing, datum, weight):
         q = categorizing.quantity(datum)
         if q not in categorizing.pairs:
             categorizing.pairs[q] = value.copy()
-        categorizing.pairs[q].fill(datum, weight)
+        fill(categorizing.pairs[q], datum, weight)
         categorizing.entries += weight
 
-def __add__(one, two):
+def combine(one, two):
     entries = one.entries + two.entries
     if len(one.pairs) > 0:
         contentType = list(one.pairs.values())[0].factory.name
@@ -1147,7 +1156,7 @@ def __add__(one, two):
     pairs = {}
     for key in set(one.pairs.keys()).union(set(two.pairs.keys())):
         if key in one.pairs and key in two.pairs:
-            pairs[key] = one.pairs[key] + two.pairs[key]
+            pairs[key] = combine(one.pairs[key], two.pairs[key])
         elif key in one.pairs:
             pairs[key] = one.pairs[key].copy()
         elif key in two.pairs:
@@ -1206,21 +1215,22 @@ Fraction.ed(entries, numerator, denominator)
   * `numerator` (past-tense aggregator) is the filled numerator.
   * `denominator` (past-tense aggregator) is the filled denominator.
 
-### Fill and add algorithms
+### Fill and combine algorithms
 
 ```python
 def fill(fractioning, datum, weight):
     w = weight * fractioning.quantity(datum)
     if weight > 0.0:
-        fractioning.denominator.fill(datum, weight)
+        fill(fractioning.denominator, datum, weight)
     if w > 0.0:
-        fractioning.numerator.fill(datum, w)
+        fill(fractioning.numerator, datum, w)
     fractioning.entries += weight
 
-def __add__(one, two):
-    return Fraction.ed(one.entries + two.entries,
-                       one.numerator + two.numerator,
-                       one.denominator + two.denominator)
+def combine(one, two):
+    entries = one.entries + two.entries
+    numerator = combine(one.numerator, two.numerator)
+    denominator = combine(one.denominator, two.denominator)
+    return Fraction.ed(entries, numerator, denominator)
 ```
 
 ### JSON format
@@ -1279,7 +1289,7 @@ The thresholds are presented in increasing order and the computed value must be 
 
 Although this aggregation could be visualized as a stack of histograms, stacked histograms usually represent a different thing: data from different sources, rather than different cuts on the same source. For example, it is common to stack Monte Carlo samples from different backgrounds to show that they add up to the observed data. The Stack aggregator does not make plots of this type because aggregation trees in Histogrammar draw data from exactly one source.
 
-To make plots from different sources in Histogrammar, one must perform separate aggregation runs. It may then be convenient to combine the results of those runs as though they were created with a Stack aggregation, so that plotting code can treat both cases uniformly. For this reason, Stack has an alternate constructor to combine aggregators in a Stack object, though they may have come from different aggregation runs.
+To make plots from different sources in Histogrammar, one must perform separate aggregation runs. It may then be convenient to stack the results of those runs as though they were created with a Stack aggregation, so that plotting code can treat both cases uniformly. For this reason, Stack has an alternate constructor to build a Stack manually from distinct aggregators, even if those aggregators came from different aggregation runs.
 
 ### Stacking constructor and required members
 
@@ -1314,36 +1324,36 @@ Stack.build(aggregators)
 
 This constructor will make a past-tense Stacked object with NaN as cut thresholds and `Count.ed(0.0)` as `nanflow`.
 
-### Fill, add, and alternate constructor algorithms
+### Fill, combine, and alternate constructor algorithms
 
 ```python
 def fill(stacking, datum, weight):
     if weight > 0.0:
         q = stacking.quantity(datum)
         if math.isnan(q):
-            stacking.nanflow.fill(datum, weight)
+            fill(stacking.nanflow, datum, weight)
         else:
             for threshold, sub in stacking.cuts:
                 if q >= threshold:
-                    sub.fill(datum, weight)
+                    fill(sub, datum, weight)
         stacking.entries += weight
 
-def __add__(one, two):
+def combine(one, two):
     if [c for c, v in one.cuts] != [c for c, v in two.cuts]:
         raise Exception
     entries = one.entries + two.entries
     cuts = []
     for (c, v1), (_, v2) in zip(one.cuts, two.cuts):
-        cuts.append((c, v1 + v2))
-    nanflow = one.nanflow + two.nanflow
+        cuts.append((c, combine(v1, v2)))
+    nanflow = combine(one.nanflow, two.nanflow)
     return Stack.ed(entries, cuts, nanflow)
 
 def build(aggregators):
     entries = sum(x.entries for x in aggregators)
     cuts = []
     for i in range(len(aggregators)):
-        combined = reduce(lambda a, b: a + b, aggregators[i:])
-        cuts.append((float("nan"), combined))
+        stackedAggregators = reduce(lambda a, b: combine(a, b), aggregators[i:])
+        cuts.append((float("nan"), stackedAggregators))
     return Stack.ed(entries, cuts, Count.ed(0.0))
 ```
 
@@ -1423,29 +1433,29 @@ Partition.ed(entries, cuts, nanflow)
   * `cuts` (list of double, past-tense aggregator pairs) are the `N + 1` thresholds and sub-aggregator pairs.
   * `nanflow` (past-tense aggregator) is the filled nanflow bin.
 
-### Fill and add algorithms
+### Fill and combine algorithms
 
 ```python
 def fill(partitioning, datum, weight):
     if weight > 0.0:
         q = partitioning.quantity(datum)
         if math.isnan(q):
-            partitioning.nanflow.fill(datum, weight)
+            fill(partitioning.nanflow, datum, weight)
         else:
             lowEdges = partitioning.cuts
             highEdges = partitioning.cuts[1:] + [(float("nan"), None)]
             for (low, sub), (high, _) in zip(lowEdges, highEdges):
                 if low <= q < high:
-                    sub.fill(datum, weight)
+                    fill(sub, datum, weight)
                     break
             partitioning.entries += weight
 
-def __add__(one, two):
+def combine(one, two):
     if one.thresholds != two.thresholds:
         raise Exception
     entries = one.entries + two.entries
-    cuts = [(c, v1 + v2) for (c, v1), (_, v2) in zip(one.cuts, two.cuts)]
-    nanflow = one.nanflow + two.nanflow
+    cuts = [(c, combine(v1, v2)) for (c, v1), (_, v2) in zip(one.cuts, two.cuts)]
+    nanflow = combine(one.nanflow, two.nanflow)
     return Partition.ed(entries, cuts, nanflow)
 ```
 
@@ -1523,17 +1533,19 @@ Select.ed(entries, cut)
   * `entries` (double) is the number of entries.
   * `cut` (past-tense aggregator) is the filled sub-aggregator.
 
-### Fill and add algorithms
+### Fill and combine algorithms
 
 ```python
 def fill(selecting, datum, weight):
     w = weight * selecting.quantity(datum)
     if w > 0.0:
-        selecting.cut.fill(datum, w)
+        fill(selecting.cut, datum, w)
     selecting.entries += weight
 
-def __add__(one, two):
-    return Select.ed(one.entries + two.entries, one.cut + two.cut)
+def combine(one, two):
+    entries = one.entries + two.entries
+    cut = combine(one.cut, two.cut)
+    return Select.ed(entries, cut)
 ```
 
 ### JSON format
@@ -1617,23 +1629,23 @@ Limit.ed(entries, limit, contentType, value)
   * `contentType` (string) is the value's sub-aggregator type (must be provided to determine type for the case when `value` has been deleted).
   * `value` (past-tense aggregator or null) is the filled sub-aggregator if unsaturated, null if saturated.
 
-### Fill and add algorithms
+### Fill and combine algorithms
 
 ```python
 def fill(limiting, datum, weight):
     if limiting.entries + weight > limiting.limit:
         limiting.value = None
     else:
-        limiting.value.fill(datum, weight)
+        fill(limiting.value, datum, weight)
 
-def __add__(one, two):
+def combine(one, two):
     if one.limit != two.limit or one.contentType != two.contentType:
         raise Exception
     entries = one.entries + two.entries
     if entries > one.limit:
         value = None
     else:
-        value = one.value + two.value
+        value = combine(one.value, two.value)
     return Limit.ed(entries, one.limit, one.contentType, value)
 ```
 
@@ -1677,128 +1689,265 @@ JSON object containing
 
 ## **Label:** directory with string-based keys
 
-DESCRIPTION
+Accumulate any number of aggregators of the same type and label them with strings. Every sub-aggregator is filled with every input datum.
 
-### ING constructor and required members
+This primitive simulates a directory of aggregators. For sub-directories, nest collections within the Label collection.
+
+Note that all sub-aggregators within a Label must have the _same type_ (e.g. histograms of different binnings, but all histograms). To collect objects of _different types_ with string-based look-up keys, use [UntypedLabel](#untypedlabel-directory-of-different-types).
+
+To collect aggregators of the _same type_ without naming them, use [Index](#index-list-with-integer-keys). To collect aggregators of _different types_ without naming them, use [Branch](#branch-tuple-of-different-types).
+
+In strongly typed languages, the restriction to a single type allows nested objects to be extracted without casting.
+
+### Labeling constructor and required members
 
 ```python
-.ing()
+Label.ing(pairs)
 ```
 
+  * `pairs` (list of string, present-tense aggregator pairs) is the collection of aggregators to fill.
+  * `pairsMap` (map of the above, probably a hashmap) is intended for fast look-ups.
   * `entries` (mutable double) is the number of entries, initially 0.0.
 
-### ED constructor and required members
+### Labeled constructor and required members
 
 ```python
-.ed(entries)
+Label.ed(entries, pairs)
 ```
 
   * `entries` (double) is the number of entries.
+  * `pairs` (list of string, past-tense aggregator pairs) is the collection of filled aggregators.
+  * `pairsMap` (map of the above, probably a hashmap) is intended for fast look-ups.
 
-### Fill and add algorithms
+### Fill and combine algorithms
 
 ```python
-def fill(ING, datum, weight):
+def fill(labeling, datum, weight):
+    for _, v in labeling.pairs:
+        fill(v, datum, weight)
+    labeling.entries += weight
 
-def __add__(one, two):
+def combine(one, two):
+    if set(one.pairsMap.keys()) != set(two.pairsMap.keys()):
+        raise Exception
+    entries = one.entries + two.entries
+    pairs = []
+    for l, v1 in one.pairs:
+        v2 = two.pairsMap[l]
+        pairs.append((l, combine(v1, v2)))
+    return Label.ed(entries, pairs)
 ```
 
 ### JSON format
 
-DESCRIPTION
+JSON object containing
+
+  * `entries` (JSON number, "nan", "inf", or "-inf")
+  * `type` (JSON string), name of the sub-aggregator type
+  * `data` (JSON object), keys are the labels and values are sub-aggregators
+
+The fact that Label requires all contents to have a single type allows the `type` to be specified once here, instead of once for every item in the collection. [UntypedLabel](#untypedlabel-directory-of-different-types) is more verbose.
 
 **Example:**
 
 ```json
-{"type": "XXX", "data": YYY}
+{"type": "Label",
+ "data": {
+   "entries": 123.0,
+   "type": "Average",
+   "data": {
+     "one": {"entries": 123.0, "mean": 3.14},
+     "two": {"entries": 123.0, "mean": 6.28},
+     "three": {"entries": 123.0, "mean": 99.9}}}}
 ```
 
 ## **UntypedLabel:** directory of different types
 
-DESCRIPTION
+Accumulate any number of aggregators of any type and label them with strings. Every sub-aggregator is filled with every input datum.
 
-### ING constructor and required members
+This primitive simulates a directory of aggregators. For sub-directories, nest collections within the UntypedLabel.
+
+Note that sub-aggregators within an UntypedLabel may have _different types_. In strongly typed languages, this flexibility poses a problem: nested objects must be type-cast before they can be used. To collect objects of the _same type_ with string-based look-up keys, use [Label](#label-directory-with-string-based-keys).
+
+To collect aggregators of the _same type_ without naming them, use [Index](#index-list-with-integer-keys). To collect aggregators of _different types_ without naming them, use [Branch](#branch-tuple-of-different-types).
+
+### UntypedLabeling constructor and required members
 
 ```python
-.ing()
+UntypedLabel.ing(pairs)
 ```
 
+  * `pairs` (list of string, present-tense aggregator pairs) is the collection of aggregators to fill.
+  * `pairsMap` (map of the above, probably a hashmap) is intended for fast look-ups.
   * `entries` (mutable double) is the number of entries, initially 0.0.
 
-### ED constructor and required members
+### UntypedLabeled constructor and required members
 
 ```python
-.ed(entries)
+UntypedLabel.ed(entries, pairs)
 ```
 
   * `entries` (double) is the number of entries.
+  * `pairs` (list of string, past-tense aggregator pairs) is the collection of filled aggregators.
+  * `pairsMap` (map of the above, probably a hashmap) is intended for fast look-ups.
 
-### Fill and add algorithms
+### Fill and combine algorithms
 
 ```python
-def fill(ING, datum, weight):
+def fill(untypedlabeling, datum, weight):
+    for _, v in untypedlabeling.pairs:
+        fill(v, datum, weight)
+    untypedlabeling.entries += weight
 
-def __add__(one, two):
+def combine(one, two):
+    if set(one.pairsMap.keys()) != set(two.pairsMap.keys()):
+        raise Exception
+    entries = one.entries + two.entries
+    pairs = []
+    for l, v1 in one.pairs:
+        v2 = two.pairsMap[l]
+        pairs.append((l, combine(v1, v2)))
+    return UntypedLabel.ed(entries, pairs)
 ```
 
 ### JSON format
 
-DESCRIPTION
+JSON object containing
+
+  * `entries` (JSON number, "nan", "inf", or "-inf")
+  * `data` (JSON object mapping labels to JSON objects containing `type` (JSON string), name of sub-aggregator type and `data` (sub-aggregator))
+
+The fact that UntypedLabel allows each element to have a different type forces the `type` annotation to be nested with the sub-aggregator. For collections that actually contain only one type, [Label](#label-directory-with-string-based-keys) avoids this redundancy.
 
 **Example:**
 
 ```json
-{"type": "XXX", "data": YYY}
+{"type": "UntypedLabel",
+ "data": {
+   "entries": 123.0,
+   "data": {
+     "one": {"type": "Count", "data": 123.0},
+     "two": {"type": "Average", "data": {
+       "entries": 123.0,
+       "mean": 3.14}},
+     "three": {"type": "Bin", "data": {
+       "low": -5.0,
+       "high": 5.0,
+       "entries": 123.0,
+       "name": "position [cm]",
+       "values:type": "Count",
+       "values": [10.0, 20.0, 20.0, 30.0, 30.0],
+       "underflow:type": "Count",
+       "underflow": 5.0,
+       "overflow:type": "Count",
+       "overflow": 8.0,
+       "nanflow:type": "Count",
+       "nanflow": 0.0}}}}}
 ```
 
 ## **Index:** list with integer keys
 
-DESCRIPTION
+Accumulate any number of aggregators of the same type in a list. Every sub-aggregator is filled with every input datum.
 
-### ING constructor and required members
+This primitive provides an anonymous collection of aggregators (unless the integer index is taken to have special meaning, but generally such bookkeeping should be encoded in strings). Indexes can be nested to create two-dimensional ordinal grids of aggregators. (Use [Bin](#bin-regular-binning-for-histograms) if the space is to have a metric interpretation.)
+
+Note that all sub-aggregators within an Index must have the _same type_ (e.g. histograms of different binnings, but all histograms). To collect objects of _different types,_ still indexed by integer, use [Branch](#branch-tuple-of-different-types).
+
+To collect aggregators of the _same type_ with string-based labels, use [Label](#label-directory-with-string-based-keys). To collect aggregators of _different types_ with string-based labels, use [UntypedLabel](#untypedlabel-directory-of-different-types).
+
+In strongly typed languages, the restriction to a single type allows nested objects to be extracted without casting.
+
+### Indexing constructor and required members
 
 ```python
-.ing()
+Index.ing(values)
 ```
 
+  * `values` (list of present-tense aggregators) is the collection of aggregators to fill.
   * `entries` (mutable double) is the number of entries, initially 0.0.
 
-### ED constructor and required members
+### Indexed constructor and required members
 
 ```python
-.ed(entries)
+Index.ed(entries, values)
 ```
 
   * `entries` (double) is the number of entries.
+  * `values` (list of past-tense aggregators) is the collection of filled aggregators.
 
-### Fill and add algorithms
+### Fill and combine algorithms
 
 ```python
-def fill(ING, datum, weight):
+def fill(indexing, datum, weight):
+    for v in indexing.values:
+        fill(v, datum, weight)
+    indexing.entries += weight
 
-def __add__(one, two):
+def combine(one, two):
+    if len(one.values) != len(two.values):
+        raise Exception
+    entries = one.entries + two.entries
+    values = []
+    for v1, v2 in zip(one.values, two.values):
+        values.append(combine(v1, v2))
+    return Index.ed(entries, values)
 ```
 
 ### JSON format
 
-DESCRIPTION
+JSON object containing
+
+  * `entries` (JSON number, "nan", "inf", or "-inf")
+  * `type` (JSON string), name of the sub-aggregator type
+  * `data` (JSON array of aggregators)
+
+The fact that Index requires all contents to have a single type allows the `type` to be specified once here, instead of once for every item in the collection. [Branch](#branch-tuple-of-different-types) is more verbose.
 
 **Example:**
 
 ```json
-{"type": "XXX", "data": YYY}
+{"type": "Index",
+ "data": {
+   "entries": 123.0,
+   "type": "Average",
+   "data": [
+     {"entries": 123.0, "mean": 3.14},
+     {"entries": 123.0, "mean": 6.28},
+     {"entries": 123.0, "mean": 99.9}]}}
 ```
 
 ## **Branch:** tuple of different types
 
-DESCRIPTION
+Accumulate aggregators of different types, indexed by i0 through i9. Every sub-aggregator is filled with every input datum.
 
-### ING constructor and required members
+This primitive provides an anonymous collection of aggregators of _different types,_ usually for gluing together various statistics. For instance, if the following associates a sum of weights to every bin in a histogram,
 
 ```python
-.ing()
+Bin.ing(100, 0, 1, lambda d: d.x,
+  Sum.ing(lambda d: d.weight))
 ```
 
+the following would associate the sum of weights and the sum of squared weights to every bin:
+
+```python
+Bin.ing(100, 0, 1, lambda d: d.x,
+  Branch.ing(Sum.ing(lambda d: d.weight),
+             Sum.ing(lambda d: d.weight**2)))
+```
+
+Branch is a basic building block for complex aggregators. The limitation to ten branches, indexed from i0 to i9, is a concession to type inference in statically typed languages. It is not a fundamental limit, but the type-metaprogramming becomes increasingly complex as branches are added. Error messages may be convoluted as the compiler presents internals of the type-metaprogramming in response to a user's simple mistake.
+
+Therefore, individual implementations may allow more than ten branches, but the Histogrammar standard only requires ten.
+
+To collect an unlimited number of aggregators of the _same type_ without naming them, use [Index](#index-list-with-integer-keys). To collect aggregators of the _same type_ with string-based labels, use [Label](#label-directory-with-string-based-keys). To collect aggregators of _different types_ with string-based labels, use [UntypedLabel](#untypedlabel-directory-of-different-types).
+
+### Branching constructor and required members
+
+```python
+Branch.ing(values)
+```
+
+  * `values` (list of present-tense aggregators) is the collection of aggregators to fill.
   * `entries` (mutable double) is the number of entries, initially 0.0.
 
 ### ED constructor and required members
@@ -1809,12 +1958,12 @@ DESCRIPTION
 
   * `entries` (double) is the number of entries.
 
-### Fill and add algorithms
+### Fill and combine algorithms
 
 ```python
 def fill(ING, datum, weight):
 
-def __add__(one, two):
+def combine(one, two):
 ```
 
 ### JSON format
@@ -1849,12 +1998,12 @@ DESCRIPTION
 
   * `entries` (double) is the number of entries.
 
-### Fill and add algorithms
+### Fill and combine algorithms
 
 ```python
 def fill(ING, datum, weight):
 
-def __add__(one, two):
+def combine(one, two):
 ```
 
 ### JSON format
@@ -1887,12 +2036,12 @@ DESCRIPTION
 
   * `entries` (double) is the number of entries.
 
-### Fill and add algorithms
+### Fill and combine algorithms
 
 ```python
 def fill(ING, datum, weight):
 
-def __add__(one, two):
+def combine(one, two):
 ```
 
 ### JSON format
@@ -1905,7 +2054,7 @@ DESCRIPTION
 {"type": "XXX", "data": YYY}
 ```
 
-# Aliases: common combinations
+# Aliases: common compositions
 
 ## Histogram
 
