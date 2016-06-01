@@ -448,9 +448,11 @@ Estimate a quantile, such as 0.5 for median, (0.25, 0.75) for quartiles, or (0.2
 
 **Note:** this is an inexact heuristic! In general, it is not possible to derive an exact quantile in a single pass over a dataset (without accumulating a large fraction of the dataset in memory). To interpret this statistic, refer to the fill and merge algorithms below.
 
+The quantile aggregator dynamically minimizes the mean absolute error between the current estimate and the target quantile, with a learning rate that depends on the cumulative deviations. The algorithm is deterministic: the same data always yields the same final estimate.
+
 This statistic has the best accuracy for quantiles near the middle of the distribution, such as the median (0.5), and the worst accuracy for quantiles near the edges, such as the first or last percentile (0.01 or 0.99). Use the specialized aggregators for the [minimum](#minimize-minimum-value) (0.0) or [maximum](#maximize-maximum-value) (1.0) of a distribution, since those aggregators are exact.
 
-Another alternative is to use [AdaptivelyBin](#adaptivelybin-for-unknown-distributions) to histogram the distribution and then estimate quantiles from the histogram bins.
+Another alternative is to use [AdaptivelyBin](#adaptivelybin-for-unknown-distributions) to histogram the distribution and then estimate quantiles from the histogram bins. AdaptivelyBin with `tailDetail == 1.0` maximizes detail on the tails of the distribution (Yael Ben-Haim and Elad Tom-Tov's original algorithm), providing the best estimates of extreme quantiles like 0.01 and 0.99.
 
 ### Quantiling constructor and required members
 
@@ -904,7 +906,27 @@ Note that the bins type does not apply to `min` and `max` because they quantify 
 
 ## **AdaptivelyBin:** for unknown distributions
 
-DESCRIPTION
+Adaptively partition a domain into bins and fill them at the same time using a clustering algorithm. Each input datum contributes to exactly one final bin.
+
+The algorithm is based on ["A streaming parallel decision tree algorithm," Yael Ben-Haim and Elad Tom-Tov, _J. Machine Learning Research 11,_ 2010.](http://www.jmlr.org/papers/volume11/ben-haim10a/ben-haim10a.pdf) with a small modification for display histograms.
+
+Yael Ben-Haim and Elad Tom-Tov's algorithm adds new data points as new bins containing a single value, then merges the closest bins if the total number of bins exceeds a maximum (hierarchical clustering in one dimension).
+
+This tends to provide the most detail on the tails of a distribution (which have the most widely spaced bins), and is therefore a good alternative to [quantile](#quantile-such-as-median-quartiles-quintiles-etc) for extreme quantiles like 0.01 and 0.99.
+
+However, a histogram binned this way is less interesting for visualizing a distribution. Usually, the least interesting bins are the ones with the fewest entries, so one can consider merging the bins with the fewest entries, giving no detail on the tails.
+
+As a compromise, we introduce a "tail detail" hyperparameter that strikes a balance between the two extremes: the bins that are merged minimize
+
+```
+tailDetail*(pos2 - pos1)/(max - min) + (1.0 - tailDetail)*(entries1 + entries2)/entries
+```
+
+where `pos1` and `pos2` are the (ordered) positions of the two bins, `min` and `max` are the minimum and maximum positions of all entries, `entries1` and `entries2` are the number of entries in the two bins, and `entries` is the total number of entries in all bins. The denominators normalize the scales of domain position and number of entries so that `tailDetail` may be unitless and between 0.0 and 1.0 (inclusive).
+
+A value of `tailDetail = 0.2` is a good default.
+
+This algorithm is deterministic; the same input data yield the same histogram.
 
 ### ING constructor and required members
 
