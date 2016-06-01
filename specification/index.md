@@ -24,7 +24,7 @@ rollback
 
 general strategy for JSON encoding
 
-Algorithms are expressed in Python syntax for concreteness.
+Algorithms are expressed in Python syntax for concreteness (for clarity, not performance).
 
 # Zeroth kind: depend only on weights
     
