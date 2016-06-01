@@ -320,7 +320,7 @@ def __add__(one, two):
 
 Find the minimum value of a given quantity. If no data are observed, the result is NaN.
 
-Unlike [quantile](#quantile-such-as-median-quartiles-quintiles-etc) with a target of 0, Minimize is exact.
+Unlike [Quantile](#quantile-such-as-median-quartiles-quintiles-etc) with a target of 0, Minimize is exact.
 
 ### Minimizing constructor and required members
 
@@ -383,7 +383,7 @@ JSON object containing
 
 Find the maximum value of a given quantity. If no data are observed, the result is NaN.
 
-Unlike [quantile](#quantile-such-as-median-quartiles-quintiles-etc) with a target of 1, Maximize is exact.
+Unlike [Quantile](#quantile-such-as-median-quartiles-quintiles-etc) with a target of 1, Maximize is exact.
 
 ### Maximizing constructor and required members
 
@@ -450,7 +450,7 @@ Estimate a quantile, such as 0.5 for median, (0.25, 0.75) for quartiles, or (0.2
 
 The quantile aggregator dynamically minimizes the mean absolute error between the current estimate and the target quantile, with a learning rate that depends on the cumulative deviations. The algorithm is deterministic: the same data always yields the same final estimate.
 
-This statistic has the best accuracy for quantiles near the middle of the distribution, such as the median (0.5), and the worst accuracy for quantiles near the edges, such as the first or last percentile (0.01 or 0.99). Use the specialized aggregators for the [minimum](#minimize-minimum-value) (0.0) or [maximum](#maximize-maximum-value) (1.0) of a distribution, since those aggregators are exact.
+This statistic has the best accuracy for quantiles near the middle of the distribution, such as the median (0.5), and the worst accuracy for quantiles near the edges, such as the first or last percentile (0.01 or 0.99). Use the specialized aggregators for the [Minimum](#minimize-minimum-value) (0.0) or [Maximum](#maximize-maximum-value) (1.0) of a distribution, since those aggregators are exact.
 
 Another alternative is to use [AdaptivelyBin](#adaptivelybin-for-unknown-distributions) to histogram the distribution and then estimate quantiles from the histogram bins. AdaptivelyBin with `tailDetail == 1.0` maximizes detail on the tails of the distribution (Yael Ben-Haim and Elad Tom-Tov's original algorithm), providing the best estimates of extreme quantiles like 0.01 and 0.99.
 
@@ -913,7 +913,7 @@ The algorithm is based on ["A streaming parallel decision tree algorithm," Yael 
 
 Yael Ben-Haim and Elad Tom-Tov's algorithm adds each new data point as a new bin containing a single value, then merges the closest bins if the total number of bins exceeds a maximum (like hierarchical clustering in one dimension).
 
-This tends to provide the most detail on the tails of a distribution (which have the most widely spaced bins), and is therefore a good alternative to [quantile](#quantile-such-as-median-quartiles-quintiles-etc) for estimating extreme quantiles like 0.01 and 0.99.
+This tends to provide the most detail on the tails of a distribution (which have the most widely spaced bins), and is therefore a good alternative to [Quantile](#quantile-such-as-median-quartiles-quintiles-etc) for estimating extreme quantiles like 0.01 and 0.99.
 
 However, a histogram binned this way is less interesting for visualizing a distribution. Usually, the least interesting bins are the ones with the fewest entries, so one can consider merging the bins with the fewest entries, giving no detail on the tails.
 
