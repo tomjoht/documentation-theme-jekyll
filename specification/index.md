@@ -1950,30 +1950,64 @@ Branch.ing(values)
   * `values` (list of present-tense aggregators) is the collection of aggregators to fill.
   * `entries` (mutable double) is the number of entries, initially 0.0.
 
-### ED constructor and required members
+### Branched constructor and required members
 
 ```python
-.ed(entries)
+Branch.ed(entries, values)
 ```
 
   * `entries` (double) is the number of entries.
+  * `values` (list of past-tense aggregators) is the collection of filled aggregators.
 
 ### Fill and combine algorithms
 
 ```python
-def fill(ING, datum, weight):
+def fill(branching, datum, weight):
+    for v in branching.values:
+        fill(v, datum, weight)
+    branching.entries += weight
 
 def combine(one, two):
+    if len(one.values) != len(two.values):
+        raise Exception
+    entries = one.entries + two.entries
+    values = []
+    for v1, v2 in zip(one.values, two.values):
+        values.append(combine(v1, v2))
+    return Branch.ed(entries, values)
 ```
 
 ### JSON format
 
-DESCRIPTION
+JSON object containing
+
+  * `entries` (JSON number, "nan", "inf", or "-inf")
+  * `data` (JSON array of JSON objects containing `type` (JSON string), name of sub-aggregator type and `data` (sub-aggregator))
 
 **Example:**
 
 ```json
-{"type": "XXX", "data": YYY}
+{"type": "Branch",
+ "data": {
+   "entries": 123.0,
+   "data": [
+     {"type": "Count", "data": 123.0},
+     {"type": "Average", "data": {
+       "entries": 123.0,
+       "mean": 3.14}},
+     {"type": "Bin", "data": {
+       "low": -5.0,
+       "high": 5.0,
+       "entries": 123.0,
+       "name": "position [cm]",
+       "values:type": "Count",
+       "values": [10.0, 20.0, 20.0, 30.0, 30.0],
+       "underflow:type": "Count",
+       "underflow": 5.0,
+       "overflow:type": "Count",
+       "overflow": 8.0,
+       "nanflow:type": "Count",
+       "nanflow": 0.0}}]}}
 ```
 
 # Fourth kind: collect sets of raw data
