@@ -1103,6 +1103,26 @@ div.content {
     margin-left:0px;
 }
 
+button.btn.btn-default.btn-lg.modalButton1 {
+    margin-left: -20px;
+}
+
 div.box.box1 {
     margin-left: -20px;
+}
+
+#userMap .btn-lg {
+    width: 100px;
+    height: 80px;
+
+}
+
+#userMap .complexArrow {
+    font-size: 22px;
+    margin: 0px 10px;
+}
+
+
+#userMap .btn-lg .active {
+    background-color: #d6f5d6;
 }
