@@ -1,5 +1,5 @@
 ---
-title: Specification
+title: Specification 0.7-prerelease
 type: default
 toc: true
 toc.minimumHeaders: 1
@@ -532,7 +532,26 @@ JSON object containing
 
 Split a quantity into equally spaced bins between a low and high threshold and fill exactly one bin per datum.
 
-When combined with [Count](#count-sum-of-weights), this produces a standard histogram. Two nested Bin aggregators produces a two-dimensional histogram, etc.
+When combined with [Count](#count-sum-of-weights), this produces a standard histogram:
+
+```python
+Bin.ing(100, 0, 10, fill_x, Count.ing())
+```
+
+and when nested, it produces a two-dimensional histogram:
+
+```python
+Bin.ing(100, 0, 10, fill_x,
+  Bin.ing(100, 0, 10, fill_y, Count.ing()))
+```
+
+Combining with [Deviate](#deviate-mean-and-variance) produces a physicist's "profile plot:"
+
+```python
+Bin.ing(100, 0, 10, fill_x, Deviate.ing(fill_y))
+```
+
+and so on.
 
 ### Binning constructor and required members
 
@@ -1159,7 +1178,7 @@ JSON object containing
 
 ## **Fraction:** efficiency plots
 
-Accumulate two aggregators, one containing only entries that pass a selection (numerator) and another that contains all entries (denominator).
+Accumulate two aggregators, one containing only entries that pass a given selection (numerator) and another that contains all entries (denominator).
 
 The aggregator may be a simple [Count](#count-sum-of-weights) to measure the efficiency of a cut, a [Bin](#bin-regular-binning-for-histograms) to plot a turn-on curve, or anything else to be tested with and without a cut.
 
@@ -1171,7 +1190,7 @@ As a side effect of NaN values returning false for any comparison, a NaN return 
 Fraction.ing(quantity, value=Count.ing())
 ```
 
-  * `quantity` (function returning double) computes the quantity of interest from the data and interprets it as a selection (multiplicative factor on weight).
+  * `quantity` (function returning boolean or double) computes the quantity of interest from the data and interprets it as a selection (multiplicative factor on weight).
   * `value` (present-tense aggregator) generates sub-aggregators for the numerator and denominator.
   * `entries` (mutable double) is the number of entries, initially 0.0.
   * `numerator` (present-tense aggregator) is the sub-aggregator of entries that pass the selection.
@@ -1268,7 +1287,7 @@ To make plots from different sources in Histogrammar, one must perform separate 
 Stack.ing(thresholds, quantity, value, nanflow)
 ```
 
-  * `thresholds` (list of doubles) specifies `N` cut thresholds, so the Stack will contain `N + 1` aggregators.
+  * `thresholds` (list of doubles) specifies `N` cut thresholds, so the Stack will fill `N + 1` aggregators, each overlapping the last.
   * `quantity` (function returning double) computes the quantity of interest from the data.
   * `value` (present-tense aggregator) generates sub-aggregators for each bin.
   * `nanflow` (present-tense aggregator) is a sub-aggregator to use for data whose quantity is NaN.
@@ -1314,8 +1333,8 @@ def __add__(one, two):
         raise Exception
     entries = one.entries + two.entries
     cuts = []
-    for (c1, v1), (c2, v2) in zip(one.cuts, two.cuts):
-        cuts.append((c1, v1 + v2))
+    for (c, v1), (_, v2) in zip(one.cuts, two.cuts):
+        cuts.append((c, v1 + v2))
     nanflow = one.nanflow + two.nanflow
     return Stack.ed(entries, cuts, nanflow)
 
@@ -1334,7 +1353,7 @@ JSON object containing
 
   * `entries` (JSON number, "nan", "inf", or "-inf")
   * `type` (JSON string), name of the sub-aggregator type
-  * `data` (JSON array of JSON objects containing `atleast` (JSON number) and `data` (sub-aggregator)), collection of cut thresholds and their associated data
+  * `data` (JSON array of JSON objects containing `atleast` (JSON number or "-inf") and `data` (sub-aggregator)), collection of cut thresholds and their associated data
   * `nanflow:type` (JSON string), name of the nanflow sub-aggregator type
   * `nanflow` (sub-aggregator)
   * optional `name` (JSON string), name of the `quantity` function, if provided.
@@ -1375,122 +1394,283 @@ JSON object containing
 
 ## **Partition:** exclusive filling
 
-Accumulate a suite of aggregators, each between two thresholds, filling exactly one per daum.
+Accumulate a suite of aggregators, each between two thresholds, filling exactly one per datum.
 
-This is a variation on [Stack](#stack-cumulative-filling), which fills `N + 1` aggregators with `N` successively tighter cut thresholds. Partition fills `N + 1` aggregators between `N` successively tighter cut thresholds: the domain of each is the interval between the two nearest thresholds or between the first or last threshold and negative or positive infinity.
+This is a variation on [Stack](#stack-cumulative-filling), which fills `N + 1` aggregators with `N` successively tighter cut thresholds. Partition fills `N + 1` aggregators in the non-overlapping intervals between `N` thresholds.
 
-Partition is also similar to [CentrallyBin](#centrallybin-irregular-but-fully-partitioning), in that they both partition a space into irregular subdomains with no gaps and no overlaps. However, CentrallyBin is defined by bin centers and Partition is defined by bin edges.
+Partition is also similar to [CentrallyBin](#centrallybin-irregular-but-fully-partitioning), in that they both partition a space into irregular subdomains with no gaps and no overlaps. However, CentrallyBin is defined by bin centers and Partition is defined by bin edges, the first and last of which are at negative and positive infinity.
 
-HERE
-
-### ING constructor and required members
+### Partitioning constructor and required members
 
 ```python
-.ing()
+Partition.ing(thresholds, quantity, value, nanflow)
 ```
 
+  * `thresholds` (list of doubles) specifies `N` cut thresholds, so the Partition will fill `N + 1` aggregators in distinct intervals.
+  * `quantity` (function returning double) computes the quantity of interest from the data.
+  * `value` (present-tense aggregator) generates sub-aggregators for each bin.
+  * `nanflow` (present-tense aggregator) is a sub-aggregator to use for data whose quantity is NaN.
   * `entries` (mutable double) is the number of entries, initially 0.0.
+  * `cuts` (list of double, present-tense aggregator pairs) are the `N + 1` thresholds and sub-aggregators. (The first threshold is minus infinity; the rest are the ones specified by `thresholds`).
 
-### ED constructor and required members
+### Partitioned constructor and required members
 
 ```python
-.ed(entries)
+Partition.ed(entries, cuts, nanflow)
 ```
 
   * `entries` (double) is the number of entries.
+  * `cuts` (list of double, past-tense aggregator pairs) are the `N + 1` thresholds and sub-aggregator pairs.
+  * `nanflow` (past-tense aggregator) is the filled nanflow bin.
 
 ### Fill and add algorithms
 
 ```python
-def fill(ING, datum, weight):
+def fill(partitioning, datum, weight):
+    if weight > 0.0:
+        q = partitioning.quantity(datum)
+        if math.isnan(q):
+            partitioning.nanflow.fill(datum, weight)
+        else:
+            lowEdges = partitioning.cuts
+            highEdges = partitioning.cuts[1:] + [(float("nan"), None)]
+            for (low, sub), (high, _) in zip(lowEdges, highEdges):
+                if low <= q < high:
+                    sub.fill(datum, weight)
+                    break
+            partitioning.entries += weight
 
 def __add__(one, two):
+    if one.thresholds != two.thresholds:
+        raise Exception
+    entries = one.entries + two.entries
+    cuts = [(c, v1 + v2) for (c, v1), (_, v2) in zip(one.cuts, two.cuts)]
+    nanflow = one.nanflow + two.nanflow
+    return Partition.ed(entries, cuts, nanflow)
 ```
 
 ### JSON format
 
-DESCRIPTION
+JSON object containing
 
-**Example:**
+  * `entries` (JSON number, "nan", "inf", or "-inf")
+  * `type` (JSON string), name of the sub-aggregator type
+  * `data` (JSON array of JSON objects containing `atleast` (JSON number or "-inf") and `data` (sub-aggregator)), collection of cut thresholds and their associated data
+  * `nanflow:type` (JSON string), name of the nanflow sub-aggregator type
+  * `nanflow` (sub-aggregator)
+  * optional `name` (JSON string), name of the `quantity` function, if provided.
+  * optional `data:name` (JSON string), name of the `quantity` function used by the sub-aggregators. If specified here, it is _not_ specified in all the sub-aggregators, thereby streamlining the JSON.
+
+**Examples:**
 
 ```json
-{"type": "XXX", "data": YYY}
+{"type": "Partition",
+ "data": {
+   "entries": 123.0,
+   "type": "Count",
+   "data": [
+     {"atleast": "-inf", "data": 23.0},
+     {"atleast": 1.0, "data": 20.0},
+     {"atleast": 2.0, "data": 20.0},
+     {"atleast": 3.0, "data": 30.0},
+     {"atleast": 4.0, "data": 30.0}],
+   "nanflow:type": "Count",
+   "nanflow": 0.0,
+   "name": "myfunc"}}
+```
+
+```json
+{"type": "Partition",
+ "data": {
+   "entries": 123.0,
+   "type": "Average",
+   "data": [
+     {"atleast": "-inf", "data": {"entries": 23.0, "mean": 3.14}},
+     {"atleast": 1.0, "data": {"entries": 20.0, "mean": 2.28}},
+     {"atleast": 2.0, "data": {"entries": 20.0, "mean": 1.16}},
+     {"atleast": 3.0, "data": {"entries": 30.0, "mean": 8.9}},
+     {"atleast": 4.0, "data": {"entries": 30.0, "mean": 22.7}}],
+   "nanflow:type": "Count",
+   "nanflow": 0.0}}
 ```
 
 ## **Select:** apply a cut
 
-DESCRIPTION
+Filter or weight data according to a given selection.
 
-### ING constructor and required members
+This primitive is a basic building block, intended to be used in conjunction with anything that needs a user-defined cut. In particular, a standard histogram often has a custom selection, and this can be built by nesting Select &rarr; Bin &rarr; Count.
+
+Select also resembles [Fraction](#fraction-efficiency-plots), but without the `denominator`.
+
+The efficiency of a cut in a Select aggregator named `x` is simply `x.cut.entries / x.entries` (because all aggregators have an `entries` member).
+
+### Selecting constructor and required members
 
 ```python
-.ing()
+Select.ing(quantity, cut)
 ```
 
+  * `quantity` (function returning boolean or double) computes the quantity of interest from the data and interprets it as a selection (multiplicative factor on weight).
+  * `cut` (present-tense aggregator) will only be filled with data that pass the cut, and which are weighted by the cut.
   * `entries` (mutable double) is the number of entries, initially 0.0.
 
-### ED constructor and required members
+### Selected constructor and required members
 
 ```python
-.ed(entries)
+Select.ed(entries, cut)
 ```
 
   * `entries` (double) is the number of entries.
+  * `cut` (past-tense aggregator) is the filled sub-aggregator.
 
 ### Fill and add algorithms
 
 ```python
-def fill(ING, datum, weight):
+def fill(selecting, datum, weight):
+    w = weight * selecting.quantity(datum)
+    if w > 0.0:
+        selecting.cut.fill(datum, w)
+    selecting.entries += weight
 
 def __add__(one, two):
+    return Select.ed(one.entries + two.entries, one.cut + two.cut)
 ```
 
 ### JSON format
 
-DESCRIPTION
+JSON object containing
 
-**Example:**
+  * `entries` (JSON number, "nan", "inf", or "-inf")
+  * `type` (JSON string), name of the sub-aggregator type
+  * `data` (sub-aggregator)
+  * optional `name` (JSON string), name of the `quantity` function, if provided.
+
+**Examples:**
 
 ```json
-{"type": "XXX", "data": YYY}
+{"type": "Select",
+ "data": {
+   "entries": 123.0,
+   "name": "trigger",
+   "type": "Count",
+   "data": 98.0}}
+```
+
+```json
+{"type": "Select",
+ "data": {
+   "entries": 123.0,
+   "name": "trigger",
+   "sub:name": "energy [GeV]",
+   "type": "Bin",
+   "data": {
+     "low": -5.0,
+     "high": 5.0,
+     "entries": 98.0,
+     "values:type": "Count",
+     "values": [2.0, 15.0, 18.0, 25.0, 30.0],
+     "underflow:type": "Count",
+     "underflow": 0.0,
+     "overflow:type": "Count",
+     "overflow": 8.0,
+     "nanflow:type": "Count",
+     "nanflow": 0.0}}}
 ```
 
 ## **Limit:** keep detail until entries is large
 
-DESCRIPTION
+Accumulate an aggregator until its number of entries reaches a predefined limit.
 
-### ING constructor and required members
+Limit is intended to roll high-detail descriptions of small datasets over into low-detail descriptions of large datasets. For instance, a scatter plot is useful for small numbers of data points and heatmaps are useful for large ones. The following construction
 
 ```python
-.ing()
+Bin(xbins, xlow, xhigh, lambda d: d.x,
+  Bin(ybins, ylow, yhigh, lambda d: d.y,
+    Limit(10.0, Bag(lambda d: [d.x, d.y]))))
 ```
 
-  * `entries` (mutable double) is the number of entries, initially 0.0.
+fills a scatter plot in all x-y bins that have fewer than 10 entries and only a number of entries above that. Postprocessing code would use the bin-by-bin numbers of entries to color a heatmap and the raw data points to show outliers in the nearly empty bins.
 
-### ED constructor and required members
+Limit can effectively swap between two descriptions if it is embedded in a collection, such as [Branch](#branch-tuple-of-different-types). All elements of the collection would be filled until the Limit saturates, leaving only the low-detail one. For instance, one could aggregate several [SparselyBin](#sparselybin-ignore-zeros) histograms, each with a different `binWidth`, and progressively eliminate them in order of increasing `binWidth`.
+
+Note that Limit saturates when it reaches a specified _total weight,_ not the number of data points in a [Bag](#bag-accumulate-values-for-scatter-plots), so it is not certain to control memory use. However, the total weight is of more use to data analysis. ([Sample](#sample-reservoir-sampling) puts a strict limit on memory use.)
+
+### Limiting constructor and required members
 
 ```python
-.ed(entries)
+Limit.ing(limit, value)
+```
+
+  * `limit` (double) is the maximum number of entries (inclusive) before deleting the `value`.
+  * `value` (present-tense aggregator) will only be filled until its number of entries exceeds the `limit`.
+  * `entries` (mutable double) is the number of entries, initially 0.0.
+  * `contentType` (string) is the value's sub-aggregator type (must be provided to determine type for the case when `value` has been deleted).
+
+### Limited constructor and required members
+
+```python
+Limit.ed(entries, limit, contentType, value)
 ```
 
   * `entries` (double) is the number of entries.
+  * `limit` (double) is the maximum number of entries (inclusive).
+  * `contentType` (string) is the value's sub-aggregator type (must be provided to determine type for the case when `value` has been deleted).
+  * `value` (past-tense aggregator or null) is the filled sub-aggregator if unsaturated, null if saturated.
 
 ### Fill and add algorithms
 
 ```python
-def fill(ING, datum, weight):
+def fill(limiting, datum, weight):
+    if limiting.entries + weight > limiting.limit:
+        limiting.value = None
+    else:
+        limiting.value.fill(datum, weight)
 
 def __add__(one, two):
+    if one.limit != two.limit or one.contentType != two.contentType:
+        raise Exception
+    entries = one.entries + two.entries
+    if entries > one.limit:
+        value = None
+    else:
+        value = one.value + two.value
+    return Limit.ed(entries, one.limit, one.contentType, value)
 ```
 
 ### JSON format
 
-DESCRIPTION
+JSON object containing
 
-**Example:**
+  * `entries` (JSON number, "nan", "inf", or "-inf")
+  * `limit` (JSON number)
+  * `type` (JSON string), name of the sub-aggregator type
+  * `data` (sub-aggregator or JSON null)
+
+**Examples:**
 
 ```json
-{"type": "XXX", "data": YYY}
+{"type": "Limit",
+ "data": {
+   "entries": 98.0,
+   "limit": 100.0,
+   "type": "Bag",
+   "data": {
+     "entries": 98.0,
+     "values": [
+       {"n": 2.0, "v": [1.0, 2.0, 3.0]},
+       {"n": 15.0, "v": [3.14, 3.14, 3.14]},
+       {"n": 18.0, "v": [99.0, 50.0, 1.0]},
+       {"n": 25.0, "v": [7.0, 2.2, 9.8]},
+       {"n": 30.0, "v": [33.3, 66.6, 99.9]}]}}}
+```
+
+```json
+{"type": "Limit",
+ "data": {
+   "entries": 123.0,
+   "limit": 100.0,
+   "type": "Bag",
+   "data": null}}
 ```
 
 # Third kind: pass to all sub-aggregators
