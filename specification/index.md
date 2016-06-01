@@ -614,7 +614,7 @@ JSON object containing
 
 **Examples:**
 
-Here is a five bin histogram, whose bin centers are at -4, -2, 0, 2, and 4. It counts the number of measurements made at each position.
+Here is a five-bin histogram, whose bin centers are at -4, -2, 0, 2, and 4. It counts the number of measurements made at each position.
 
 ```json
 {"type": "Bin",
@@ -633,7 +633,7 @@ Here is a five bin histogram, whose bin centers are at -4, -2, 0, 2, and 4. It c
    "nanflow": 0.0}}
 ```
 
-Here is another five bin histogram on the same domain, this one quantifying an average value in each bin. The quantity measured by the average has a name (`"average time [s]"`), which would have been a `"name"` field in the JSON objects representing the averages if it had not been specified once in `"values:name"`.
+Here is another five-bin histogram on the same domain, this one quantifying an average value in each bin. The quantity measured by the average has a name (`"average time [s]"`), which would have been a `"name"` field in the JSON objects representing the averages if it had not been specified once in `"values:name"`.
 
 ```json
 {"type": "Bin",
@@ -1224,11 +1224,11 @@ JSON object containing
    "numerator": {
      "low": -5.0,
      "high": 5.0,
-     "entries": 90.0,
+     "entries": 98.0,
      "values:type": "Count",
      "values": [2.0, 15.0, 18.0, 25.0, 30.0],
      "underflow:type": "Count",
-     "underflow": 5.0,
+     "underflow": 0.0,
      "overflow:type": "Count",
      "overflow": 8.0,
      "nanflow:type": "Count",
