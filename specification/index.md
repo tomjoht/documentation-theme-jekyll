@@ -339,7 +339,7 @@ Minimize.ed(entries, min)
 ```
 
   * `entries` (double) is the number of entries.
-  * `min` (double) is the lowest value of the quantity observed or NaN if no data are observed.
+  * `min` (double) is the lowest value of the quantity observed or NaN if no data were observed.
 
 ### Fill and merge algorithms
 
@@ -402,7 +402,7 @@ Maximize.ed(entries, min)
 ```
 
   * `entries` (double) is the number of entries.
-  * `max` (double) is the highest value of the quantity observed or NaN if no data are observed.
+  * `max` (double) is the highest value of the quantity observed or NaN if no data were observed.
 
 ### Fill and merge algorithms
 
@@ -547,6 +547,7 @@ Bin.ing(num, low, high, quantity, value=Count.ing(), underflow=Count.ing(), over
   * `overflow` (present-tense aggregator) is a sub-aggregator to use for data whose quantity is greater than or equal to `high`.
   * `nanflow` (present-tense aggregator) is a sub-aggregator to use for data whose quantity is NaN.
   * `entries` (mutable double) is the number of entries, initially 0.0.
+  * `values` (list of present-tense aggregators) are the sub-aggregators in each bin.
 
 ### Binned constructor and required members
 
@@ -607,7 +608,7 @@ JSON object containing
   * `nanflow:type` (JSON string), name of the nanflow sub-aggregator type
   * `nanflow` sub-aggregator
   * optional `name` (JSON string), name of the `quantity` function, if provided.
-  * optional `values:name` (JSON string), name of the `quantity` function used by each value. If specified here, it is _not_ specified in all the values, streamlining the JSON.
+  * optional `values:name` (JSON string), name of the `quantity` function used by each value. If specified here, it is _not_ specified in all the values, thereby streamlining the JSON.
 
 **Examples:**
 
@@ -743,7 +744,7 @@ JSON object containing
   * `nanflow` sub-aggregator
   * `origin` (JSON number)
   * optional `name` (JSON string), name of the `quantity` function, if provided.
-  * optional `values:name` (JSON string), name of the `quantity` function used by each value. If specified here, it is _not_ specified in all the values, streamlining the JSON.
+  * optional `values:name` (JSON string), name of the `quantity` function used by each value. If specified here, it is _not_ specified in all the values, thereby streamlining the JSON.
 
 **Example:**
 
@@ -752,50 +753,153 @@ JSON object containing
  "data": {
    "binWidth": 2.0,
    "entries": 123.0,
-   "name": "myfunc",
    "bins:type": "Count",
    "bins": {"-999": 5.0, "-4": 23.0, "-2": 20.0, "0": 20.0, "2": 30.0, "4": 30.0, "12345": 8.0},
    "nanflow:type": "Count",
    "nanflow": 0.0,
-   "origin": 0.0}}
+   "origin": 0.0,
+   "name": "myfunc"}}
 ```
 
 ## **CentrallyBin:** irregular but fully partitioning
 
-DESCRIPTION
+Split a quantity into bins defined by irregularly spaced bin centers, with exactly one sub-aggregator filled per datum (the closest one).
 
-### ING constructor and required members
+Unlike irregular bins defined by explicit ranges, irregular bins defined by bin centers are guaranteed to fully partition the space with no gaps and no overlaps. It could be viewed as cluster scoring in one dimension.
+
+The first and last bins cover semi-infinite domains, so it is unclear how to interpret them as part of the probability density function (PDF). Finite-width bins approximate the PDF in piecewise steps, but the first and last bins could be taken as zero (an underestimate) or as uniform from the most extreme point to the inner bin edge (an overestimate, but one that is compensated by underestimating the region just beyond the extreme point). For the sake of the latter interpretation, the minimum and maximum values are accumulated along with the bin values.
+
+### CentrallyBinning constructor and required members
 
 ```python
-.ing()
+CentrallyBin.ing(centers, quantity, value, nanflow)
 ```
 
+  * `centers` (list of doubles) is the centers of all bins
+  * `quantity` (function returning double) computes the quantity of interest from the data.
+  * `value` (present-tense aggregator) generates sub-aggregators to put in each bin.
+  * `nanflow` (present-tense aggregator) is a sub-aggregator to use for data whose quantity is NaN.
   * `entries` (mutable double) is the number of entries, initially 0.0.
+  * `bins` (list of double, present-tense aggregator pairs) are the bin centers and sub-aggregators in each bin.
+  * `min` (mutable double) is the lowest value of the quantity observed, initially NaN.
+  * `max` (mutable double) is the highest value of the quantity observed, initially NaN.
 
-### ED constructor and required members
+### CentrallyBinned constructor and required members
 
 ```python
-.ed(entries)
+CentrallyBin.ed(entries, bins, min, max, nanflow)
 ```
 
   * `entries` (double) is the number of entries.
+  * `bins` (list of double, past-tense aggregator pairs) is the list of bin centers and their accumulated data.
+  * `min` (double) is the lowest value of the quantity observed or NaN if no data were observed.
+  * `max` (double) is the highest value of the quantity observed or NaN if no data were observed.
 
 ### Fill and merge algorithms
 
 ```python
-def fill(ING, datum, weight):
+def fill(centrallybinning, datum, weight):
+    if weight > 0.0:
+        q = centrallybinning.quantity(datum)
+        if math.isnan(q):
+            centrallybinning.nanflow(datum, weight)
+        else:
+            dist, closest = min((abs(c - q), v) for c, v in centrallybinning.bins)
+            closest.fill(datum, weight)
+        centrallybinning.entries += weight
+        if math.isnan(centrallybinning.min) or q < centrallybinning.min:
+            centrallybinning.min = q
+        if math.isnan(centrallybinning.max) or q > centrallybinning.max:
+            centrallybinning.max = q
 
 def add(one, two):
+    if set(one.centers) != set(two.centers):
+        raise Exception
+    entries = one.entries + two.entries
+    bins = []
+    for c1, v1 in one.bins:
+        v2 = [v for c2, v in two.bins if c1 == c2][0]
+        bins.append((c1, v1 + v2))
+
+    if math.isnan(one.min):
+        min = two.min
+    elif math.isnan(two.min):
+        min = one.min
+    elif one.min < two.min:
+        min = one.min
+    else:
+        min = two.min
+
+    if math.isnan(one.max):
+        max = two.max
+    elif math.isnan(two.max):
+        max = one.max
+    elif one.max > two.max:
+        max = one.max
+    else:
+        max = two.max
+
+    nanflow = one.nanflow + two.nanflow
+    return CentrallyBin.ed(entries, bins, min, max, nanflow)
 ```
 
 ### JSON format
 
-DESCRIPTION
+JSON object containing
 
-**Example:**
+  * `entries` (JSON number, "nan", "inf", or "-inf")
+  * `bins:type` (JSON string), name of the values sub-aggregator type
+  * `bins` (JSON array of JSON objects containing `center` (JSON number) and `value` (sub-aggregator)), collection of bin centers and their associated data
+  * `min` (JSON number, "nan", "inf", or "-inf")
+  * `max` (JSON number, "nan", "inf", or "-inf")
+  * `nanflow:type` (JSON string), name of the nanflow sub-aggregator type
+  * `nanflow` sub-aggregator
+  * optional `name` (JSON string), name of the `quantity` function, if provided.
+  * optional `bins:name` (JSON string), name of the `quantity` function used by each value. If specified here, it is _not_ specified in all the values, thereby streamlining the JSON.
+
+**Examples:**
 
 ```json
-{"type": "XXX", "data": YYY}
+{"type": "CentrallyBin",
+ "data": {
+   "entries": 123.0,
+   "bins:type": "Count",
+   "bins": [
+     {"center": -999.0, "value": 5.0},
+     {"center": -4.0, "value": 23.0},
+     {"center": -2.0, "value": 20.0},
+     {"center": 0.0, "value": 20.0},
+     {"center": 2.0, "value": 30.0},
+     {"center": 4.0, "value": 30.0},
+     {"center": 12345.0, "value": 8.0}],
+   "min": -999.0,
+   "max": 12345.0,
+   "nanflow:type": "Count",
+   "nanflow": 0.0,
+   "name": "myfunc"}}
+```
+
+Note that the bins type does not apply to `min` and `max` because they quantify the domain, not the range. Here is an example with `Average` sub-aggregators:
+
+```json
+{"type": "CentrallyBin",
+ "data": {
+   "entries": 123.0,
+   "bins:type": "Average",
+   "bins": [
+     {"center": -999.0, "value": 5.0, "mean": -1.0},
+     {"center": -4.0, "value": 23.0, "mean": 4.25},
+     {"center": -2.0, "value": 20.0, "mean": 16.21},
+     {"center": 0.0, "value": 20.0, "mean": 20.28},
+     {"center": 2.0, "value": 20.0, "mean": 16.19},
+     {"center": 4.0, "value": 30.0, "mean": 4.23},
+     {"center": 12345.0, "value": 8.0, "mean": -1.0}],
+   "min": -999.0,
+   "max": 12345.0,
+   "nanflow:type": "Count",
+   "nanflow": 0.0,
+   "name": "myfunc",
+   "bins:name": "myfunc2"}}
 ```
 
 ## **AdaptivelyBin:** for unknown distributions
