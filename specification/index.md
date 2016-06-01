@@ -608,7 +608,7 @@ JSON object containing
   * `overflow:type` (JSON string), name of the overflow sub-aggregator type
   * `overflow` sub-aggregator
   * `nanflow:type` (JSON string), name of the nanflow sub-aggregator type
-  * `nanflow` sub-aggregator
+  * `nanflow` (sub-aggregator)
   * optional `name` (JSON string), name of the `quantity` function, if provided.
   * optional `values:name` (JSON string), name of the `quantity` function used by each value. If specified here, it is _not_ specified in all the values, thereby streamlining the JSON.
 
@@ -624,7 +624,7 @@ Here is a five bin histogram, whose bin centers are at -4, -2, 0, 2, and 4. It c
    "entries": 123.0,
    "name": "position [cm]",
    "values:type": "Count",
-   "values": [23.0, 20.0, 20.0, 30.0, 30.0],
+   "values": [10.0, 20.0, 20.0, 30.0, 30.0],
    "underflow:type": "Count",
    "underflow": 5.0,
    "overflow:type": "Count",
@@ -645,7 +645,7 @@ Here is another five bin histogram on the same domain, this one quantifying an a
    "values:type": "Average",
    "values:name": "average time [s]",
    "values": [
-     {"entries": 23.0, "mean": 4.25},
+     {"entries": 10.0, "mean": 4.25},
      {"entries": 20.0, "mean": 16.21},
      {"entries": 20.0, "mean": 20.28},
      {"entries": 30.0, "mean": 16.19},
@@ -691,7 +691,7 @@ SparselyBin.ed(binWidth, entries, contentType, bins, nanflow, origin)
   * `binWidth` (double) is the width of a bin.
   * `entries` (double) is the number of entries.
   * `contentType` (string) is the value's sub-aggregator type (must be provided to determine type for the case when `bins` is empty).
-  * `bins` (map from 64-bit integer to past-tense aggregator), the non-zero bin indexes and their values.
+  * `bins` (map from 64-bit integer to past-tense aggregator) is the non-empty bin indexes and their values.
   * `nanflow` (past-tense aggregator) is the filled nanflow bin.
   * `origin` (double) is the left edge of the bin whose index is zero.
 
@@ -740,13 +740,13 @@ JSON object containing
 
   * `binWidth` (JSON number)
   * `entries` (JSON number, "nan", "inf", or "-inf")
-  * `bins:type` (JSON string), name of the values sub-aggregator type
+  * `bins:type` (JSON string), name of the bins sub-aggregator type
   * `bins` (JSON object), keys are string representations of the bin indexes (decimal, no leading zeros) and values are sub-aggregators
   * `nanflow:type` (JSON string), name of the nanflow sub-aggregator type
-  * `nanflow` sub-aggregator
+  * `nanflow` (sub-aggregator)
   * `origin` (JSON number)
   * optional `name` (JSON string), name of the `quantity` function, if provided.
-  * optional `values:name` (JSON string), name of the `quantity` function used by each value. If specified here, it is _not_ specified in all the values, thereby streamlining the JSON.
+  * optional `values:name` (JSON string), name of the `quantity` function used by each bin value. If specified here, it is _not_ specified in all the values, thereby streamlining the JSON.
 
 **Example:**
 
@@ -756,7 +756,7 @@ JSON object containing
    "binWidth": 2.0,
    "entries": 123.0,
    "bins:type": "Count",
-   "bins": {"-999": 5.0, "-4": 23.0, "-2": 20.0, "0": 20.0, "2": 30.0, "4": 30.0, "12345": 8.0},
+   "bins": {"-999": 5.0, "-4": 10.0, "-2": 20.0, "0": 20.0, "2": 30.0, "4": 30.0, "12345": 8.0},
    "nanflow:type": "Count",
    "nanflow": 0.0,
    "origin": 0.0,
@@ -851,14 +851,14 @@ def __add__(one, two):
 JSON object containing
 
   * `entries` (JSON number, "nan", "inf", or "-inf")
-  * `bins:type` (JSON string), name of the values sub-aggregator type
+  * `bins:type` (JSON string), name of the bins sub-aggregator type
   * `bins` (JSON array of JSON objects containing `center` (JSON number) and `value` (sub-aggregator)), collection of bin centers and their associated data
   * `min` (JSON number, "nan", "inf", or "-inf")
   * `max` (JSON number, "nan", "inf", or "-inf")
   * `nanflow:type` (JSON string), name of the nanflow sub-aggregator type
-  * `nanflow` sub-aggregator
+  * `nanflow` (sub-aggregator)
   * optional `name` (JSON string), name of the `quantity` function, if provided.
-  * optional `bins:name` (JSON string), name of the `quantity` function used by each value. If specified here, it is _not_ specified in all the values, thereby streamlining the JSON.
+  * optional `bins:name` (JSON string), name of the `quantity` function used by each bin value. If specified here, it is _not_ specified in all the values, thereby streamlining the JSON.
 
 **Examples:**
 
@@ -869,7 +869,7 @@ JSON object containing
    "bins:type": "Count",
    "bins": [
      {"center": -999.0, "value": 5.0},
-     {"center": -4.0, "value": 23.0},
+     {"center": -4.0, "value": 10.0},
      {"center": -2.0, "value": 20.0},
      {"center": 0.0, "value": 20.0},
      {"center": 2.0, "value": 30.0},
@@ -891,7 +891,7 @@ Note that the bins type does not apply to `min` and `max` because they quantify 
    "bins:type": "Average",
    "bins": [
      {"center": -999.0, "value": 5.0, "mean": -1.0},
-     {"center": -4.0, "value": 23.0, "mean": 4.25},
+     {"center": -4.0, "value": 10.0, "mean": 4.25},
      {"center": -2.0, "value": 20.0, "mean": 16.21},
      {"center": 0.0, "value": 20.0, "mean": 20.28},
      {"center": 2.0, "value": 20.0, "mean": 16.19},
@@ -1045,15 +1045,15 @@ JSON object containing
 
   * `entries` (JSON number, "nan", "inf", or "-inf")
   * `num` (JSON number, must be an integer)
-  * `bins:type` (JSON string), name of the values sub-aggregator type
+  * `bins:type` (JSON string), name of the bins sub-aggregator type
   * `bins` (JSON array of JSON objects containing `center` (JSON number) and `value` (sub-aggregator)), collection of bin centers and their associated data
   * `min` (JSON number, "nan", "inf", or "-inf")
   * `max` (JSON number, "nan", "inf", or "-inf")
   * `nanflow:type` (JSON string), name of the nanflow sub-aggregator type
-  * `nanflow` sub-aggregator
+  * `nanflow` (sub-aggregator)
   * `tailDetail` (JSON number)
   * optional `name` (JSON string), name of the `quantity` function, if provided.
-  * optional `bins:name` (JSON string), name of the `quantity` function used by each value. If specified here, it is _not_ specified in all the values, thereby streamlining the JSON.
+  * optional `bins:name` (JSON string), name of the `quantity` function used by each bin value. If specified here, it is _not_ specified in all the values, thereby streamlining the JSON.
 
 **Examples:**
 
@@ -1064,7 +1064,7 @@ JSON object containing
    "num": 5,
    "bins:type": "Count",
    "bins": [
-     {"center": -181.68, "value": 8.0},
+     {"center": -335.67, "value": 15.0},
      {"center": -2.0, "value": 20.0},
      {"center": 0.0, "value": 20.0},
      {"center": 2.0, "value": 30.0},
@@ -1079,78 +1079,172 @@ JSON object containing
 
 ## **Categorize:** string-valued bins, bar charts
 
-DESCRIPTION
+Split a given quantity by its categorical value and fill only one category per datum.
 
-### ING constructor and required members
+A bar chart may be thought of as a histogram with string-valued (categorical) bins, so this is the equivalent of [Bin](#bin-regular-binning-for-histograms) for bar charts. The order of the strings is deferred to the visualization stage.
+
+Unlike [SparselyBin](#sparselybin-ignore-zeros), this aggregator has the potential to use unlimited memory. A large number of _distinct_ categories can generate many unwanted bins.
+
+### Categorizing constructor and required members
 
 ```python
-.ing()
+Categorize.ing(quantity, value=Count.ing())
 ```
 
+  * `quantity` (function returning double) computes the quantity of interest from the data.
+  * `value` (present-tense aggregator) generates sub-aggregators to put in each bin.
   * `entries` (mutable double) is the number of entries, initially 0.0.
+  * `pairs` (mutable map from string to present-tense aggregator) is the map, probably a hashmap, to fill with values when their `entries` become non-zero.
 
-### ED constructor and required members
+### Categorized constructor and required members
 
 ```python
-.ed(entries)
+Categorize.ed(entries, contentType, pairs)
 ```
 
   * `entries` (double) is the number of entries.
+  * `contentType` (string) is the value's sub-aggregator type (must be provided to determine type for the case when `bins` is empty).
+  * `pairs` (map from string to past-tense aggregator) is the non-empty bin categories and their values.
 
 ### Fill and add algorithms
 
 ```python
-def fill(ING, datum, weight):
+def fill(categorizing, datum, weight):
+    if weight > 0.0:
+        q = categorizing.quantity(datum)
+        if q not in categorizing.pairs:
+            categorizing.pairs[q] = value.copy()
+        categorizing.pairs[q].fill(datum, weight)
+        categorizing.entries += weight
 
 def __add__(one, two):
+    entries = one.entries + two.entries
+    if len(one.pairs) > 0:
+        contentType = list(one.pairs.values())[0].factory.name
+    elif len(two.pairs) > 0:
+        contentType = list(two.pairs.values())[0].factory.name
+    else:
+        contentType = one.contentType
+    pairs = {}
+    for key in set(one.pairs.keys()).union(set(two.pairs.keys())):
+        if key in one.pairs and key in two.pairs:
+            pairs[key] = one.pairs[key] + two.pairs[key]
+        elif key in one.pairs:
+            pairs[key] = one.pairs[key].copy()
+        elif key in two.pairs:
+            pairs[key] = two.pairs[key].copy()
+    return Categorize.ed(entries, contentType, pairs)
 ```
 
 ### JSON format
 
-DESCRIPTION
+JSON object containing
+
+  * `entries` (JSON number, "nan", "inf", or "-inf")
+  * `type` (JSON string), name of the sub-aggregator type
+  * `data` (JSON object), keys are the string-valued categories and values are sub-aggregators
+  * optional `name` (JSON string), name of the `quantity` function, if provided.
+  * optional `bins:name` (JSON string), name of the `quantity` function used by each bin value. If specified here, it is _not_ specified in all the values, thereby streamlining the JSON.
 
 **Example:**
 
 ```json
-{"type": "XXX", "data": YYY}
+{"type": "Categorize",
+ "data": {
+   "entries": 123.0,
+   "type": "Count",
+   "data": {"one": 23.0, "two": 20.0, "three": 20.0, "four": 30.0, "five": 30.0},
+   "name": "myfunc"}}
 ```
 
 ## **Fraction:** efficiency plots
 
-DESCRIPTION
+Accumulate two counters, one containing only entries that pass a selection (numerator) and another that contains all entries (denominator).
 
-### ING constructor and required members
+### Fractioning constructor and required members
 
 ```python
-.ing()
+Fraction.ing(quantity, value=Count.ing())
 ```
 
+  * `quantity` (function returning double) computes the quantity of interest from the data and interprets it as a selection (multiplicative factor on weight).
+  * `value` (present-tense aggregator) generates sub-aggregators for the numerator and denominator.
   * `entries` (mutable double) is the number of entries, initially 0.0.
+  * `numerator` (present-tense aggregator) is the sub-aggregator of entries that pass the selection.
+  * `denominator` (present-tense aggregator) is the sub-aggregator of all entries.
 
-### ED constructor and required members
+### Fractioned constructor and required members
 
 ```python
-.ed(entries)
+Fraction.ed(entries, numerator, denominator)
 ```
 
   * `entries` (double) is the number of entries.
+  * `numerator` (past-tense aggregator) is the filled numerator.
+  * `denominator` (past-tense aggregator) is the filled denominator.
 
 ### Fill and add algorithms
 
 ```python
-def fill(ING, datum, weight):
+def fill(fractioning, datum, weight):
+    w = weight * fractioning.quantity(datum)
+    if weight > 0.0:
+        fractioning.denominator.fill(datum, weight)
+    if w > 0.0:
+        fractioning.numerator.fill(datum, w)
+    fractioning.entries += weight
 
 def __add__(one, two):
+    return Fraction.ed(one.entries + two.entries,
+                       one.numerator + two.numerator,
+                       one.denominator + two.denominator)
 ```
 
 ### JSON format
 
-DESCRIPTION
+JSON object containing
+
+  * `entries` (JSON number, "nan", "inf", or "-inf")
+  * `type` (JSON string), name of the numerator/denominator type
+  * `numerator` (sub-aggregator)
+  * `denominator` (sub-aggregator)
+  * optional `name` (JSON string), name of the `quantity` function, if provided.
+  * optional `sub:name` (JSON string), name of the `quantity` function used by the numerator and denominator. If specified here, it is _not_ specified in all the sub-aggregators, thereby streamlining the JSON.
 
 **Example:**
 
 ```json
-{"type": "XXX", "data": YYY}
+{"entries": 
+ "type": "Fraction",
+ "data": {
+   "entries": 123.0,
+   "name": "trigger",
+   "sub:name": "energy [GeV]",
+   "type": "Bin",
+   "numerator": {
+     "low": -5.0,
+     "high": 5.0,
+     "entries": 90.0,
+     "values:type": "Count",
+     "values": [2.0, 15.0, 18.0, 25.0, 30.0],
+     "underflow:type": "Count",
+     "underflow": 5.0,
+     "overflow:type": "Count",
+     "overflow": 8.0,
+     "nanflow:type": "Count",
+     "nanflow": 0.0},
+   "denominator": {
+     "low": -5.0,
+     "high": 5.0,
+     "entries": 123.0,
+     "values:type": "Count",
+     "values": [10.0, 20.0, 20.0, 30.0, 30.0],
+     "underflow:type": "Count",
+     "underflow": 5.0,
+     "overflow:type": "Count",
+     "overflow": 8.0,
+     "nanflow:type": "Count",
+     "nanflow": 0.0}}}
 ```
 
 ## **Stack:** cumulative filling
