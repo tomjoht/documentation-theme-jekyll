@@ -48,14 +48,14 @@ Count.ed(entries)
 
   * `entries` (double) is the number of entries.
 
-### Fill and merge algorithms
+### Fill and add algorithms
 
 ```python
 def fill(counting, datum, weight):
     if weight > 0.0:
         counting.entries += weight
 
-def add(one, two):
+def __add__(one, two):
     return Count.ed(one.entries + two.entries)
 ```
 
@@ -94,7 +94,7 @@ Sum.ed(entries, sum)
   * `entries` (double) is the number of entries.
   * `sum` (double) is the sum.
 
-### Fill and merge algorithms
+### Fill and add algorithms
 
 ```python
 def fill(summing, datum, weight):
@@ -103,7 +103,7 @@ def fill(summing, datum, weight):
         summing.entries += weight
         summing.sum += q * weight
 
-def add(one, two):
+def __add__(one, two):
     return Sum.ed(one.entries + two.entries, one.sum + two.sum)
 ```
 
@@ -147,7 +147,7 @@ Average.ed(entries, mean)
   * `entries` (double) is the number of entries.
   * `mean` (double) is the mean.
 
-### Fill and merge algorithms
+### Fill and add algorithms
 
 ```python
 def fill(averaging, datum, weight):
@@ -158,7 +158,7 @@ def fill(averaging, datum, weight):
         shift = delta * weight / averaging.entries
         averaging.mean += shift
 
-def add(one, two):
+def __add__(one, two):
     entries = one.entries + two.entries
     if entries == 0.0:
         mean = (one.mean + two.mean) / 2.0
@@ -211,7 +211,7 @@ Deviate.ed(entries, mean, variance)
   * `mean` (double) is the mean.
   * `variance` (double) is the variance.
 
-### Fill and merge algorithms
+### Fill and add algorithms
 
 ```python
 def fill(deviating, datum, weight):
@@ -225,7 +225,7 @@ def fill(deviating, datum, weight):
         varianceTimesEntries += weight * delta * (q - deviating.mean)
         deviating.variance = varianceTimesEntries / deviating.entries
 
-def add(one, two):
+def __add__(one, two):
     entries = one.entries + two.entries
     if entries == 0.0:
         mean = (one.mean + two.mean) / entries
@@ -286,7 +286,7 @@ AbsoluteErr.ed(entries, mae)
   * `entries` (double) is the number of entries.
   * `mae` (double) is the mean absolute error.
 
-### Fill and merge algorithms
+### Fill and add algorithms
 
 ```python
 def fill(absoluteerring, datum, weight):
@@ -295,7 +295,7 @@ def fill(absoluteerring, datum, weight):
         absoluteerring.entries += weight
         absoluteerring.absoluteSum += weight * abs(q)
 
-def add(one, two):
+def __add__(one, two):
     entries = one.entries + two.entries
     mae = one.entries*one.mae + two.entries*two.mae
     return AbsoluteErr.ed(entries, mae)
@@ -341,7 +341,7 @@ Minimize.ed(entries, min)
   * `entries` (double) is the number of entries.
   * `min` (double) is the lowest value of the quantity observed or NaN if no data were observed.
 
-### Fill and merge algorithms
+### Fill and add algorithms
 
 ```python
 def fill(minimizing, datum, weight):
@@ -351,7 +351,7 @@ def fill(minimizing, datum, weight):
         if math.isnan(minimizing.min) or q < minimizing.min:
             minimizing.min = q
 
-def add(one, two):
+def __add__(one, two):
     entries = one.entries + two.entries
     if math.isnan(one.min):
         min = two.min
@@ -404,7 +404,7 @@ Maximize.ed(entries, min)
   * `entries` (double) is the number of entries.
   * `max` (double) is the highest value of the quantity observed or NaN if no data were observed.
 
-### Fill and merge algorithms
+### Fill and add algorithms
 
 ```python
 def fill(maximizing, datum, weight):
@@ -414,7 +414,7 @@ def fill(maximizing, datum, weight):
         if math.isnan(maximizing.max) or q > maximizing.max:
             maximizing.max = q
 
-def add(one, two):
+def __add__(one, two):
     entries = one.entries + two.entries
     if math.isnan(one.max):
         max = two.max
@@ -476,7 +476,7 @@ Quantile.ed(entries, target, estimate)
   * `target` (double) is the value between 0.0 and 1.0 (inclusive), indicating the quantile approximated.
   * `estimate` (double) is the best estimate of where `target` of the distribution is below this value and `1.0 - target` of the distribution is above.
 
-### Fill and merge algorithms
+### Fill and add algorithms
 
 ```python
 def fill(quantiling, datum, weight):
@@ -491,7 +491,7 @@ def fill(quantiling, datum, weight):
             quantiling.estimate = weight * learningRate * \
                 (cmp(q, quantiling.estimate) + 2.0*quantiling.target - 1.0)
 
-def add(one, two):
+def __add__(one, two):
     if one.target != two.target:
         raise Exception
     entries = one.entries + two.entries
@@ -565,7 +565,7 @@ Bin.ed(low, high, entries, values, underflow, overflow, nanflow)
   * `overflow` (past-tense aggregator) is the filled overflow bin.
   * `nanflow` (past-tense aggregator) is the filled nanflow bin.
 
-### Fill and merge algorithms
+### Fill and add algorithms
 
 ```python
 def fill(binning, datum, weight):
@@ -583,7 +583,7 @@ def fill(binning, datum, weight):
             binning.values[bin].fill(datum, weight)
         binning.entries += weight
 
-def add(one, two):
+def __add__(one, two):
     if one.num != two.num or one.low != two.low or one.high != two.high:
         raise Exception
     return Bin.ed(one.low, one.high, \
@@ -671,7 +671,7 @@ Like fixed-domain binning, the bins are indexed by integers, though they are 64-
 ### SparselyBinning constructor and required members
 
 ```python
-SparselyBin.ing(binWidth, quantity, value, nanflow, origin=0.0)
+SparselyBin.ing(binWidth, quantity, value=Count.ing(), nanflow=Count.ing(), origin=0.0)
 ```
 
   * `binWidth` (double) is the width of a bin; must be strictly greater than zero.
@@ -695,7 +695,7 @@ SparselyBin.ed(binWidth, entries, contentType, bins, nanflow, origin)
   * `nanflow` (past-tense aggregator) is the filled nanflow bin.
   * `origin` (double) is the left edge of the bin whose index is zero.
 
-### Fill and merge algorithms
+### Fill and add algorithms
 
 ```python
 def fill(sparselybinning, datum, weight):
@@ -711,7 +711,7 @@ def fill(sparselybinning, datum, weight):
             binning.bins[bin].fill(datum, weight)
             binning.entries += weight
 
-def add(one, two):
+def __add__(one, two):
     if one.binWidth != two.binWidth or one.origin != two.origin:
         raise Exception
     entries = one.entries + two.entries
@@ -774,7 +774,7 @@ The first and last bins cover semi-infinite domains, so it is unclear how to int
 ### CentrallyBinning constructor and required members
 
 ```python
-CentrallyBin.ing(centers, quantity, value, nanflow)
+CentrallyBin.ing(centers, quantity, value=Count.ing(), nanflow=Count.ing())
 ```
 
   * `centers` (list of doubles) is the centers of all bins
@@ -796,8 +796,9 @@ CentrallyBin.ed(entries, bins, min, max, nanflow)
   * `bins` (list of double, past-tense aggregator pairs) is the list of bin centers and their accumulated data.
   * `min` (double) is the lowest value of the quantity observed or NaN if no data were observed.
   * `max` (double) is the highest value of the quantity observed or NaN if no data were observed.
+  * `nanflow` (past-tense aggregator) is the filled nanflow bin.
 
-### Fill and merge algorithms
+### Fill and add algorithms
 
 ```python
 def fill(centrallybinning, datum, weight):
@@ -814,7 +815,7 @@ def fill(centrallybinning, datum, weight):
         if math.isnan(centrallybinning.max) or q > centrallybinning.max:
             centrallybinning.max = q
 
-def add(one, two):
+def __add__(one, two):
     if set(one.centers) != set(two.centers):
         raise Exception
     entries = one.entries + two.entries
@@ -910,9 +911,9 @@ Adaptively partition a domain into bins and fill them at the same time using a c
 
 The algorithm is based on ["A streaming parallel decision tree algorithm," Yael Ben-Haim and Elad Tom-Tov, _J. Machine Learning Research 11,_ 2010.](http://www.jmlr.org/papers/volume11/ben-haim10a/ben-haim10a.pdf) with a small modification for display histograms.
 
-Yael Ben-Haim and Elad Tom-Tov's algorithm adds new data points as new bins containing a single value, then merges the closest bins if the total number of bins exceeds a maximum (hierarchical clustering in one dimension).
+Yael Ben-Haim and Elad Tom-Tov's algorithm adds each new data point as a new bin containing a single value, then merges the closest bins if the total number of bins exceeds a maximum (like hierarchical clustering in one dimension).
 
-This tends to provide the most detail on the tails of a distribution (which have the most widely spaced bins), and is therefore a good alternative to [quantile](#quantile-such-as-median-quartiles-quintiles-etc) for extreme quantiles like 0.01 and 0.99.
+This tends to provide the most detail on the tails of a distribution (which have the most widely spaced bins), and is therefore a good alternative to [quantile](#quantile-such-as-median-quartiles-quintiles-etc) for estimating extreme quantiles like 0.01 and 0.99.
 
 However, a histogram binned this way is less interesting for visualizing a distribution. Usually, the least interesting bins are the ones with the fewest entries, so one can consider merging the bins with the fewest entries, giving no detail on the tails.
 
@@ -928,38 +929,152 @@ A value of `tailDetail = 0.2` is a good default.
 
 This algorithm is deterministic; the same input data yield the same histogram.
 
-### ING constructor and required members
+### AdaptivelyBinning constructor and required members
 
 ```python
-.ing()
+AdaptivelyBin.ing(quantity, num=100, tailDetail=0.2, value=Count.ing(), nanflow=Count.ing())
 ```
 
+  * `quantity` (function returning double) computes the quantity of interest from the data.
+  * `num` (32-bit integer) specifies the maximum number of bins before merging.
+  * `tailDetail` (double) is a value between 0.0 and 1.0 (inclusive) for choosing the pair of bins to merge (see above).
+  * `value` (present-tense aggregator) generates sub-aggregators to put in each bin.
+  * `nanflow` (present-tense aggregator) is a sub-aggregator to use for data whose quantity is NaN.
   * `entries` (mutable double) is the number of entries, initially 0.0.
+  * `bins` (mutable list of double, present-tense aggregator pairs) is the list of bin centers and bin contents. The domain of each bin is determined as in [CentrallyBin](http://127.0.0.1:4005/docs/specification/#centrallybin-irregular-but-fully-partitioning).
+  * `min` (mutable double) is the lowest value of the quantity observed, initially NaN.
+  * `max` (mutable double) is the highest value of the quantity observed, initially NaN.
 
-### ED constructor and required members
+### AdaptivelyBinned constructor and required members
 
 ```python
-.ed(entries)
+AdaptivelyBin.ed(entries, num, tailDetail, contentType, bins, min, max, nanflow)
 ```
 
   * `entries` (double) is the number of entries.
+  * `num` (32-bit integer) specifies the maximum number of bins before merging.
+  * `tailDetail` (double) is a value between 0.0 and 1.0 (inclusive) for choosing the pair of bins to merge (see above).
+  * `contentType` (string) is the value's sub-aggregator type (must be provided to determine type for the case when `bins` is empty).
+  * `bins` (list of double, past-tense aggregator pairs) is the list of bin centers and bin contents. The domain of each bin is determined as in [CentrallyBin](http://127.0.0.1:4005/docs/specification/#centrallybin-irregular-but-fully-partitioning).
+  * `min` (double) is the lowest value of the quantity observed or NaN if no data were observed.
+  * `max` (double) is the highest value of the quantity observed or NaN if no data were observed.
+  * `nanflow` (past-tense aggregator) is the filled nanflow bin.
 
-### Fill and merge algorithms
+### Fill and add algorithms
 
 ```python
-def fill(ING, datum, weight):
+def mergeMetric(pos1, pos2, min, max, entries1, entries2, entries, tailDetail):
+    return tailDetail*(pos2 - pos1)/(max - min) + (1.0 - tailDetail)*(entries1 + entries2)/entries
 
-def add(one, two):
+def merge(hist):
+    bestMetric = None
+    hist.bins.sort()
+    for i in range(0, len(hist.bins) - 1):
+        c1, v1 = hist.bins[i]
+        c2, v2 = hist.bins[i + 1]
+        q = mergeMetric(c1, c2, hist.min, hist.max, v1.entries, v2.entries, hist.entries, hist.tailDetail)
+        if bestMetric is None or q < bestMetric:
+            bestMetric = q
+            leftToMerge = i
+            rightToMerge = i + 1
+    c1, v1 = hist.bins[leftToMerge]
+    c2, v2 = hist.bins[rightToMerge]
+    newc = (c1 * v1.entries + c2 * v2.entries) / (v1.entries + v2.entries)
+    newv = v1 + v2
+    hist.bins[leftToMerge] = newv
+    del hist.bins[rightToMerge]
+
+def fill(adaptivelybinning, datum, weight):
+    if weight > 0.0:
+        q = adaptivelybinning.quantity(datum)
+        adaptivelybinning.bins.append((q, weight))
+        while len(adaptivelybinning.bins) > adaptivelybinning.num:
+            merge(adaptivelybinning)
+
+        adaptivelybinning.entries += weight
+
+        if math.isnan(adaptivelybinning.min) or q < adaptivelybinning.min:
+            adaptivelybinning.min = q
+        if math.isnan(adaptivelybinning.max) or q > adaptivelybinning.max:
+            adaptivelybinning.max = q
+
+def __add__(one, two):
+    if one.num != two.num or one.tailDetail != two.tailDetail:
+        raise Exception
+    entries = one.entries + two.entries
+
+    bins1 = dict(one.bins)
+    bins2 = dict(two.bins)
+    bins = []
+    for c in set(bins1.keys()).union(set(bins2.keys())):
+        if c in bins1 and c in bins2:
+            bins.append((c, bins1[c] + bins2[c]))
+        elif c in bins1:
+            bins.append((c, bins1[c].copy()))
+        elif c in bins2:
+            bins.append((c, bins2[c].copy()))
+
+    if math.isnan(one.min):
+        min = two.min
+    elif math.isnan(two.min):
+        min = one.min
+    elif one.min < two.min:
+        min = one.min
+    else:
+        min = two.min
+
+    if math.isnan(one.max):
+        max = two.max
+    elif math.isnan(two.max):
+        max = one.max
+    elif one.max > two.max:
+        max = one.max
+    else:
+        max = two.max
+
+    nanflow = one.nanflow + two.nanflow
+    out = AdaptivelyBin.ed(entries, num, tailDetail, contentType, bins, min, max, nanflow)
+    while len(out.bins) > out.num:
+        merge(out)
+    return out
 ```
 
 ### JSON format
 
-DESCRIPTION
+JSON object containing
 
-**Example:**
+  * `entries` (JSON number, "nan", "inf", or "-inf")
+  * `num` (JSON number, must be an integer)
+  * `bins:type` (JSON string), name of the values sub-aggregator type
+  * `bins` (JSON array of JSON objects containing `center` (JSON number) and `value` (sub-aggregator)), collection of bin centers and their associated data
+  * `min` (JSON number, "nan", "inf", or "-inf")
+  * `max` (JSON number, "nan", "inf", or "-inf")
+  * `nanflow:type` (JSON string), name of the nanflow sub-aggregator type
+  * `nanflow` sub-aggregator
+  * `tailDetail` (JSON number)
+  * optional `name` (JSON string), name of the `quantity` function, if provided.
+  * optional `bins:name` (JSON string), name of the `quantity` function used by each value. If specified here, it is _not_ specified in all the values, thereby streamlining the JSON.
+
+**Examples:**
 
 ```json
-{"type": "XXX", "data": YYY}
+{"type": "AdaptivelyBin",
+ "data": {
+   "entries": 123.0,
+   "num": 5,
+   "bins:type": "Count",
+   "bins": [
+     {"center": -181.68, "value": 8.0},
+     {"center": -2.0, "value": 20.0},
+     {"center": 0.0, "value": 20.0},
+     {"center": 2.0, "value": 30.0},
+     {"center": 2602.11, "value": 38.0}],
+   "min": -999.0,
+   "max": 12345.0,
+   "nanflow:type": "Count",
+   "nanflow": 0.0,
+   "tailDetail": 0.2,
+   "name": "myfunc"}}
 ```
 
 ## **Categorize:** string-valued bins, bar charts
@@ -982,12 +1097,12 @@ DESCRIPTION
 
   * `entries` (double) is the number of entries.
 
-### Fill and merge algorithms
+### Fill and add algorithms
 
 ```python
 def fill(ING, datum, weight):
 
-def add(one, two):
+def __add__(one, two):
 ```
 
 ### JSON format
@@ -1020,12 +1135,12 @@ DESCRIPTION
 
   * `entries` (double) is the number of entries.
 
-### Fill and merge algorithms
+### Fill and add algorithms
 
 ```python
 def fill(ING, datum, weight):
 
-def add(one, two):
+def __add__(one, two):
 ```
 
 ### JSON format
@@ -1058,12 +1173,12 @@ DESCRIPTION
 
   * `entries` (double) is the number of entries.
 
-### Fill and merge algorithms
+### Fill and add algorithms
 
 ```python
 def fill(ING, datum, weight):
 
-def add(one, two):
+def __add__(one, two):
 ```
 
 ### JSON format
@@ -1096,12 +1211,12 @@ DESCRIPTION
 
   * `entries` (double) is the number of entries.
 
-### Fill and merge algorithms
+### Fill and add algorithms
 
 ```python
 def fill(ING, datum, weight):
 
-def add(one, two):
+def __add__(one, two):
 ```
 
 ### JSON format
@@ -1134,12 +1249,12 @@ DESCRIPTION
 
   * `entries` (double) is the number of entries.
 
-### Fill and merge algorithms
+### Fill and add algorithms
 
 ```python
 def fill(ING, datum, weight):
 
-def add(one, two):
+def __add__(one, two):
 ```
 
 ### JSON format
@@ -1151,8 +1266,6 @@ DESCRIPTION
 ```json
 {"type": "XXX", "data": YYY}
 ```
-
-# Third kind: pass to all sub-aggregators
 
 ## **Limit:** keep detail until entries is large
 
@@ -1174,12 +1287,12 @@ DESCRIPTION
 
   * `entries` (double) is the number of entries.
 
-### Fill and merge algorithms
+### Fill and add algorithms
 
 ```python
 def fill(ING, datum, weight):
 
-def add(one, two):
+def __add__(one, two):
 ```
 
 ### JSON format
@@ -1191,6 +1304,8 @@ DESCRIPTION
 ```json
 {"type": "XXX", "data": YYY}
 ```
+
+# Third kind: pass to all sub-aggregators
 
 ## **Label:** directory with string-based keys
 
@@ -1212,12 +1327,12 @@ DESCRIPTION
 
   * `entries` (double) is the number of entries.
 
-### Fill and merge algorithms
+### Fill and add algorithms
 
 ```python
 def fill(ING, datum, weight):
 
-def add(one, two):
+def __add__(one, two):
 ```
 
 ### JSON format
@@ -1250,12 +1365,12 @@ DESCRIPTION
 
   * `entries` (double) is the number of entries.
 
-### Fill and merge algorithms
+### Fill and add algorithms
 
 ```python
 def fill(ING, datum, weight):
 
-def add(one, two):
+def __add__(one, two):
 ```
 
 ### JSON format
@@ -1288,12 +1403,12 @@ DESCRIPTION
 
   * `entries` (double) is the number of entries.
 
-### Fill and merge algorithms
+### Fill and add algorithms
 
 ```python
 def fill(ING, datum, weight):
 
-def add(one, two):
+def __add__(one, two):
 ```
 
 ### JSON format
@@ -1326,12 +1441,12 @@ DESCRIPTION
 
   * `entries` (double) is the number of entries.
 
-### Fill and merge algorithms
+### Fill and add algorithms
 
 ```python
 def fill(ING, datum, weight):
 
-def add(one, two):
+def __add__(one, two):
 ```
 
 ### JSON format
@@ -1366,12 +1481,12 @@ DESCRIPTION
 
   * `entries` (double) is the number of entries.
 
-### Fill and merge algorithms
+### Fill and add algorithms
 
 ```python
 def fill(ING, datum, weight):
 
-def add(one, two):
+def __add__(one, two):
 ```
 
 ### JSON format
@@ -1404,12 +1519,12 @@ DESCRIPTION
 
   * `entries` (double) is the number of entries.
 
-### Fill and merge algorithms
+### Fill and add algorithms
 
 ```python
 def fill(ING, datum, weight):
 
-def add(one, two):
+def __add__(one, two):
 ```
 
 ### JSON format
