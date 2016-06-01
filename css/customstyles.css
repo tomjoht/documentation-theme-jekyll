@@ -865,7 +865,7 @@ span.soft {
     background-color: whitesmoke;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 830px) {
     .navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
         color: #444;
     }
@@ -1098,8 +1098,12 @@ pre {
     min-width: 100px;
 }
 
+@media (min-width: 831px) {
+    .dropdown-menu li a {
+        text-align: right;
+    }
+}
 .dropdown-menu li a {
     font-size: 14px;
     line-height: 120%;
-    text-align: right;
 }
