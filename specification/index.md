@@ -1159,7 +1159,11 @@ JSON object containing
 
 ## **Fraction:** efficiency plots
 
-Accumulate two counters, one containing only entries that pass a selection (numerator) and another that contains all entries (denominator).
+Accumulate two aggregators, one containing only entries that pass a selection (numerator) and another that contains all entries (denominator).
+
+The aggregator may be a simple [Count](#count-sum-of-weights) to measure the efficiency of a cut, a [Bin](#bin-regular-binning-for-histograms) to plot a turn-on curve, or anything else to be tested with and without a cut.
+
+As a side effect of NaN values returning false for any comparison, a NaN return value from the selection is treated as a failed cut (the denominator is filled but the numerator is not).
 
 ### Fractioning constructor and required members
 
@@ -1214,8 +1218,7 @@ JSON object containing
 **Example:**
 
 ```json
-{"entries": 
- "type": "Fraction",
+{"type": "Fraction",
  "data": {
    "entries": 123.0,
    "name": "trigger",
@@ -1249,45 +1252,136 @@ JSON object containing
 
 ## **Stack:** cumulative filling
 
-DESCRIPTION
+Accumulates a suite of aggregators, each filtered with a tighter selection on the same quantity.
 
-### ING constructor and required members
+This is a generalization of [Fraction](#fraction-efficiency-plots), which fills two aggregators, one with a cut, the other without. Stack fills `N + 1` aggregators with `N` successively tighter cut thresholds. The first is always filled (like the denominator of Fraction), the second is filled if the computed quantity exceeds its threshold, the next is filled if the computed quantity exceeds a higher threshold, and so on.
+
+The thresholds are presented in increasing order and the computed value must be greater than or equal to a threshold to fill the corresponding bin, and therefore the number of entries in each filled bin is greatest in the first and least in the last.
+
+Although this aggregation could be visualized as a stack of histograms, stacked histograms usually represent a different thing: data from different sources, rather than different cuts on the same source. For example, it is common to stack Monte Carlo samples from different backgrounds to show that they add up to the observed data. The Stack aggregator does not make plots of this type because aggregation trees in Histogrammar draw data from exactly one source.
+
+To make plots from different sources in Histogrammar, one must perform separate aggregation runs. It may then be convenient to combine the results of those runs as though they were created with a Stack aggregation, so that plotting code can treat both cases uniformly. For this reason, Stack has an alternate constructor to combine aggregators in a Stack object, though they may have come from different aggregation runs.
+
+### Stacking constructor and required members
 
 ```python
-.ing()
+Stack.ing(thresholds, quantity, value, nanflow)
 ```
 
+  * `thresholds` (list of doubles) specifies `N` cut thresholds, so the Stack will contain `N + 1` aggregators.
+  * `quantity` (function returning double) computes the quantity of interest from the data.
+  * `value` (present-tense aggregator) generates sub-aggregators for each bin.
+  * `nanflow` (present-tense aggregator) is a sub-aggregator to use for data whose quantity is NaN.
   * `entries` (mutable double) is the number of entries, initially 0.0.
+  * `cuts` (list of double, present-tense aggregator pairs) are the `N + 1` thresholds and sub-aggregators. (The first threshold is minus infinity; the rest are the ones specified by `thresholds`).
 
-### ED constructor and required members
+### Stacked constructor and required members
 
 ```python
-.ed(entries)
+Stack.ed(entries, cuts, nanflow)
 ```
 
   * `entries` (double) is the number of entries.
+  * `cuts` (list of double, past-tense aggregator pairs) are the `N + 1` thresholds and sub-aggregator pairs.
+  * `nanflow` (past-tense aggregator) is the filled nanflow bin.
 
-### Fill and add algorithms
+### Stacked alternate constructor
 
 ```python
-def fill(ING, datum, weight):
+Stack.build(aggregators)
+```
+
+  * `aggregators` (list of aggregators of the same type from any source); the algorithm will attempt to add them, so they must also have the same binning/bounds/etc.
+
+This constructor will make a past-tense Stacked object with NaN as cut thresholds and `Count.ed(0.0)` as `nanflow`.
+
+### Fill, add, and alternate constructor algorithms
+
+```python
+def fill(stacking, datum, weight):
+    if weight > 0.0:
+        q = stacking.quantity(datum)
+        if math.isnan(q):
+            stacking.nanflow.fill(datum, weight)
+        else:
+            for threshold, sub in stacking.cuts:
+                if q >= threshold:
+                    sub.fill(datum, weight)
+        stacking.entries += weight
 
 def __add__(one, two):
+    if [c for c, v in one.cuts] != [c for c, v in two.cuts]:
+        raise Exception
+    entries = one.entries + two.entries
+    cuts = []
+    for (c1, v1), (c2, v2) in zip(one.cuts, two.cuts):
+        cuts.append((c1, v1 + v2))
+    nanflow = one.nanflow + two.nanflow
+    return Stack.ed(entries, cuts, nanflow)
+
+def build(aggregators):
+    entries = sum(x.entries for x in aggregators)
+    cuts = []
+    for i in range(len(aggregators)):
+        combined = reduce(lambda a, b: a + b, aggregators[i:])
+        cuts.append((float("nan"), combined))
+    return Stack.ed(entries, cuts, Count.ed(0.0))
 ```
 
 ### JSON format
 
-DESCRIPTION
+JSON object containing
 
-**Example:**
+  * `entries` (JSON number, "nan", "inf", or "-inf")
+  * `type` (JSON string), name of the sub-aggregator type
+  * `data` (JSON array of JSON objects containing `atleast` (JSON number) and `data` (sub-aggregator)), collection of cut thresholds and their associated data
+  * `nanflow:type` (JSON string), name of the nanflow sub-aggregator type
+  * `nanflow` (sub-aggregator)
+  * optional `name` (JSON string), name of the `quantity` function, if provided.
+  * optional `data:name` (JSON string), name of the `quantity` function used by the sub-aggregators. If specified here, it is _not_ specified in all the sub-aggregators, thereby streamlining the JSON.
+
+**Examples:**
 
 ```json
-{"type": "XXX", "data": YYY}
+{"type": "Stack",
+ "data": {
+   "entries": 123.0,
+   "type": "Count",
+   "data": [
+     {"atleast": "-inf", "data": 123.0},
+     {"atleast": 1.0, "data": 100.0},
+     {"atleast": 2.0, "data": 82.0},
+     {"atleast": 3.0, "data": 37.0},
+     {"atleast": 4.0, "data": 4.0}],
+   "nanflow:type": "Count",
+   "nanflow": 0.0,
+   "name": "myfunc"}}
+```
+
+```json
+{"type": "Stack",
+ "data": {
+   "entries": 123.0,
+   "type": "Average",
+   "data": [
+     {"atleast": "-inf", "data": {"entries": 123.0, "mean": 3.14}},
+     {"atleast": 1.0, "data": {"entries": 100.0, "mean": 2.28}},
+     {"atleast": 2.0, "data": {"entries": 82.0, "mean": 1.16}},
+     {"atleast": 3.0, "data": {"entries": 37.0, "mean": 8.9}},
+     {"atleast": 4.0, "data": {"entries": 4.0, "mean": 22.7}}],
+   "nanflow:type": "Count",
+   "nanflow": 0.0}}
 ```
 
 ## **Partition:** exclusive filling
 
-DESCRIPTION
+Accumulate a suite of aggregators, each between two thresholds, filling exactly one per daum.
+
+This is a variation on [Stack](#stack-cumulative-filling), which fills `N + 1` aggregators with `N` successively tighter cut thresholds. Partition fills `N + 1` aggregators between `N` successively tighter cut thresholds: the domain of each is the interval between the two nearest thresholds or between the first or last threshold and negative or positive infinity.
+
+Partition is also similar to [CentrallyBin](#centrallybin-irregular-but-fully-partitioning), in that they both partition a space into irregular subdomains with no gaps and no overlaps. However, CentrallyBin is defined by bin centers and Partition is defined by bin edges.
+
+HERE
 
 ### ING constructor and required members
 
