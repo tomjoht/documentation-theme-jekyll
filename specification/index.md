@@ -12,19 +12,84 @@ summary: |
 
 # General features
 
-weighted data
+Histogrammar consists of two dozen aggregation primitives, each performing a simple task, that can be composed to solve complex aggregation problems. These primitives share the following properties.
 
-ing vs ed forms
+### Reducers
 
-methods shared by all primitives
+The aggregators, individually and collectively, are reducers in the map-reduce sense. That is, they reduce a large table of data points to a small data structure that summarizes the whole. For instance, a traditional histogram is an array of counts, produced by incrementing array bins for each data point associated with it, and the resulting data structure approximates the probability density of the original distribution.
 
-named functions
+### Composable
 
-rollback
+A primitive that accepts a sub-aggregator as an argument to its constructor may accept _any_ sub-aggregator. The whole suite of primitives are given to the data analyst as building blocks to compute whatever complex statistics are needed.
 
-general strategy for JSON encoding
+### Commutative Monoids
 
-Algorithms are expressed in Python syntax for concreteness (for clarity, not performance).
+Every primitive has a `combine` method, usually presented as the `+` operator, that allows sub-tallies to be combined into a grand total. This operation is associative and commutative, and has an identity: the aggregator's initial state. (Mathematically, this kind of algebra is known as a _commutative monoid_). Aggregation jobs can easily be distributed: sub-tallies are accumulated in parallel and, being much smaller than the original dataset, can be gathered to one location and combined for analysis.
+
+### Serializable
+
+Every filled aggregator has a language-independent JSON representation, allowing results to be transmitted across networks, co-processors, frameworks, and languages.
+
+### Verbs
+
+Each type of primitive has two forms:
+
+  * the "present tense," which knows how to fill itself;
+  * the "past tense," which has lost this information due to being serialized and reconstituted.
+
+When constructing an aggregator, the data analyst defines functions for extracting the relevant quantities from the data. A present-tense aggregator uses these functions in its `fill` method to update its state. After serializing to and from JSON, an aggregator may have crossed to an entirely new language where the fill functions are no longer valid. It retains its data as a past-tense aggregator that can be combined but not filled.
+
+As a mnemonic, each primitive is named as a verb, with the present-tense "-ing" form for mutable, fillable aggregators and the past-tense "-ed" form for immutable, filled aggregators. The infinitive is reserved for the factory that constructs both forms and interprets JSON.
+
+### Exception-safe
+
+The `fill` methods only update an aggregator's state _after_ the user-defined functions have all been evaluated. An exception in a user-defined function leaves a complex aggregator in its state prior to the fill attempt, not an inconsistent state.
+
+## Data model
+
+The input data for all aggregators is taken to be a stream, possibly an infinite stream, of _entries._ All user-defined functions map an entry to something an aggregator can use, such as a boolean for filtering, a floating point number for computing a mean or a bin, or a string.
+
+A composite aggregator may contain many plotable data structures, such as histograms, profile plots, and scatter plots, but they must all draw from a single data source. For instance, data from one Monte Carlo sample can be plotted hundreds of different ways within a composite aggregator, revealing subtle relationships in that one dataset, but it cannot compare the Monte Carlo sample with another. For that, the data analyst needs to construct independent aggregators and run separate jobs.
+
+It may be possible to merge data from multiple sources with the equivalent of an SQL `JOIN` operation, upstream of Histogrammar, but then Histogrammar's source becomes a single dataset and the same rules apply.
+
+## Data weights
+
+Selection functions in Histogrammar are "fuzzy." They could entirely keep or entirely drop whole entries, or they could keep an entry with partial weight, like 0.5 or 0.1. A weight of 0.0 is equivalent to dropping an entry, a weight of 1.0 is equivalent to not weighting, and a weight of 2.0 is equivalent to filling with two identical events, each with weight 1.0. Negative weights are treated as 0.0 and ignored. All primitives interpret weights this same way.
+
+When two selection functions are nested, their weights multiply. Different parts of a composite aggregator may apply different selections, but all of the selections applied to a particular primitive can be deduced by following the path from the root of the tree to that primitive. Composite aggregators are in this way self-documenting.
+
+Hisogrammar weights are metadata: though they are calculated from the data in user-defined functions, they are passed from one `fill` method to the next separately from the data entries themselves. Therefore, if a statistical procedure needs to make use of "negative weights," it can do so by calculating its own weights, which is simply data from Histogrammar's point of view.
+
+For example, a Count primitive accumulates the sum of Histogrammar weights, which are always non-negative. To accumulate the sum of possibly negative weights, replace Count with Sum, and give the Sum an appropriate lambda function.
+
+## User-defined functions
+
+Each language has its own way of declaring functions; Histogrammar only assumes that functions (of some form) can be passed as arguments. For instance, Java technically does not have first class functions, but it can define objects in place with an `apply` method.
+
+Histogrammar implementations must also be able to assign names to the functions as strings known at runtime. These names may be treated as metadata, carried separately from the functions themselves. When an aggregator is serialized as JSON, the functions are lost but their names are passed through for bookkeeping. For instance, a data analyst may define a function that extracts a distance in centimeters, label it as "x (cm)", and use it in a dozen histograms. After aggregating, serializing, transmitting, and reconstituting the histograms, they are still labeled as "x (cm)" and this label may be used on the axis of a plot.
+
+Moreover, if the analyst ever changes the units, introducing a factor of 10 in the function and changing the label to "x (mm)", this calculation and its label are correctly updated in all the histograms in which it was used. The same would not be true if all histograms that use "x (mm)" were labeled independently.
+
+### Function names in JSON
+
+Aggregators that accept a function have a `"name"` attribute in their JSON representation to carry the function name. Some of these aggregators are copied many times, such as the bins of a histogram. In these situations, the sub-aggregators have no `"name"` attributes, but the parent aggregator has a `"values:name"` to express the name only once. Examples of this are included below.
+
+## Conventions used in this specification
+
+In the rest of this document, constructor arguments, required members, `fill`, `combine` algorithms, and JSON representations are given for each type of aggregator primitive. Histogrammar implementations should reproduce these names, calling structure, and data types exactly, though of course the notational syntax must differ.
+
+The `fill` and `combine` algorithms are expressed in Python syntax for concreteness, with a goal of clarity, not performance. (In many cases, the Python version of Histogrammar is implemented differently for performance). The fact that each primitive has required members does not preclude implementations from defining more member functions and member data, even with semi-standard names and argument lists across implementations. But they are not _required._
+
+Also, some arguments are represented here as being lists of values. If the language allows it, they may be varargs. Histogrammar implementations have a preference for varargs over explicit list types.
+
+Many arguments are declared to be double precision, and that is the standard. In some environments, such as some models of GPUs, double precision is not available, and single-precision arithmetic must be used as a substitute. Even more restricted environments (FPGAs!) are limited to premultiplied integers. Such systems can be expected to yield only approximate results.
+
+All but one of the primitives ([Sample](#sample-reservoir-sampling)) are deterministic. They should always yield the same result on the same data at the level of JSON equality. (JSON equality ignores the order of key-value pairs in maps and may truncate the least significant digits of numbers.) Implementations in different languages should also yield the same results, at the level of JSON equality.
+
+If this document disagrees with the behavior of a Histogrammar implementation, this document should be taken as normative. Ultimately, disagreements would be decided in favor of the specification. For the time being, however, the specification needs to be debugged just as much as the existing implementations, so corrections on both sides are expected.
+
+Happy histogramming!
 
 # Zeroth kind: depend only on weights
     
