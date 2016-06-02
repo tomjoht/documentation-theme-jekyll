@@ -7,7 +7,7 @@ custom_css: specification
 summary: |
     <p>This page describes Histogrammar in detail, but without reference to any particular implementation, including the composable primitives, their required functions and argument lists, and their JSON representations.</p>
     
-    <p>This is the normative specification; any implementations that don't adhere to the definitions on this page are wrong and should be corrected.</p>
+    <p>This is the normative specification; any implementations that don't adhere to the definitions on this page should be corrected.</p>
 ---
 
 # General features
@@ -1669,11 +1669,11 @@ JSON object containing
    "data": {
      "entries": 98.0,
      "values": [
-       {"n": 2.0, "v": [1.0, 2.0, 3.0]},
-       {"n": 15.0, "v": [3.14, 3.14, 3.14]},
-       {"n": 18.0, "v": [99.0, 50.0, 1.0]},
-       {"n": 25.0, "v": [7.0, 2.2, 9.8]},
-       {"n": 30.0, "v": [33.3, 66.6, 99.9]}]}}}
+       {"w": 2.0, "v": [1.0, 2.0, 3.0]},
+       {"w": 15.0, "v": [3.14, 3.14, 3.14]},
+       {"w": 18.0, "v": [99.0, 50.0, 1.0]},
+       {"w": 25.0, "v": [7.0, 2.2, 9.8]},
+       {"w": 30.0, "v": [33.3, 66.6, 99.9]}]}}}
 ```
 
 ```json
@@ -2014,83 +2014,256 @@ JSON object containing
 
 ## **Bag:** accumulate values for scatter plots
 
-DESCRIPTION
+Accumulate raw numbers, vectors of numbers, or strings, with identical values merged.
 
-### ING constructor and required members
+A bag is the appropriate data type for scatter plots: a container that collects raw values, maintaining multiplicity but not order. (A "bag" is also known as a "multiset.") Conceptually, it is a mapping from distinct raw values to the number of observations: when two instances of the same raw value are observed, one key is stored and their weights add.
+
+Although the user-defined function may return scalar numbers, fixed-dimension vectors of numbers, or categorical strings, it may not mix types. Different Bag primitives in an analysis tree may collect different types.
+
+Consider using Bag with [Limit](#limit-keep-detail-until-entries-is-large) for collections that roll over to a mere count when they exceed a limit, or [Sample](#sample-reservoir-sampling) for reservoir sampling.
+
+### Bagging constructor and required members
 
 ```python
-.ing()
+Bag.ing(quantity)
 ```
-
+  * `quantity` (function returning a double, a vector of doubles, or a string) computes the quantity of interest from the data.
   * `entries` (mutable double) is the number of entries, initially 0.0.
+  * `values` (mutable map from quantity return type to double) is the number of entries for each unique item.
 
-### ED constructor and required members
+### Bagged constructor and required members
 
 ```python
-.ed(entries)
+Bag.ed(entries, values)
 ```
 
   * `entries` (double) is the number of entries.
+  * `values` (map from double, vector of doubles, or string to double) is the number of entries for each unique item.
 
 ### Fill and combine algorithms
 
 ```python
-def fill(ING, datum, weight):
+def fill(bagging, datum, weight):
+    if weight > 0.0:
+        q = bagging.quantity(datum)
+        bagging.entries += weight
+        if q in bagging.values:
+            bagging.values[q] += weight
+        else:
+            bagging.values[q] = weight
 
 def combine(one, two):
+    entries = one.entries + two.entries
+    values = {}
+    for v in set(one.values.keys()).union(set(two.values.keys())):
+        if v in one.values and v in two.values:
+            values[v] = combine(one.values[v], two.values[v])
+        elif v in one.values:
+            values[v] = one.values[v].copy()
+        elif v in two.values:
+            values[v] = two.values[v].copy()
+    return Bag.ed(entries, values)
 ```
 
 ### JSON format
 
-DESCRIPTION
+JSON object containing
 
-**Example:**
+  * `entries` (JSON number, "nan", "inf", or "-inf")
+  * `values` (JSON array of JSON objects containing `w` (JSON number), the total weight of entries for a unique value and `v` (JSON number, array of numbers, or string), the value), which should be sorted by `v` (lexicographically)
+
+**Examples:**
 
 ```json
-{"type": "XXX", "data": YYY}
+{"type": "Bag",
+ "data": {
+   "entries": 123.0,
+   "values": [
+     {"w": 23.0, "v": -999.0},
+     {"w": 20.0, "v": -4.0},
+     {"w": 20.0, "v": -2.0},
+     {"w": 30.0, "v": 0.0},
+     {"w": 30.0, "v": 2.0}]}}
+```
+
+```json
+{"type": "Bag",
+ "data": {
+   "entries": 123.0,
+   "values": [
+     {"w": 23.0, "v": [1.0, 2.0, 3.0]},
+     {"w": 20.0, "v": [3.14, 3.14, 3.14]},
+     {"w": 20.0, "v": [99.0, 50.0, 1.0]},
+     {"w": 30.0, "v": [7.0, 2.2, 9.8]},
+     {"w": 30.0, "v": [33.3, 66.6, 99.9]}]}}
+```
+
+```json
+{"type": "Bag",
+ "data": {
+   "entries": 123.0,
+   "values": [
+     {"w": 23.0, "v": "five"},
+     {"w": 20.0, "v": "four"},
+     {"w": 20.0, "v": "one"},
+     {"w": 30.0, "v": "three"},
+     {"w": 30.0, "v": "two"}]}}
 ```
 
 ## **Sample:** reservoir sampling
 
-DESCRIPTION
+Accumulate raw numbers, vectors of numbers, or strings, randomly replacing them with Reservoir Sampling when the number of values exceeds a limit.
 
-### ING constructor and required members
+Sample collects raw values without attempting to group them by distinct value (as [Bag](#bag-accumulate-values-for-scatter-plots) does), up to a given maximum _number_ of entries (unlike [Limit](#limit-keep-detail-until-entries-is-large), which rolls over at a given total weight). The reason for the limit on Sample is purely to conserve memory.
+
+The maximum number of entries and the data type together determine the size of the working set. If new values are added after this set is full, individual values will be randomly chosen for replacement. The probability of replacement is proportional to an entry's weight and it decreases with time, such that the final sample is a representative subset of all observed values, without preference for early values or late values.
+
+This algorithm is known as weighted Reservoir Sampling, and it is non-deterministic. Each evaluation will likely result in a different final set.
+
+Specifically, the algorithm implemented here was described in ["Weighted random sampling with a reservoir," Pavlos S. Efraimidis and Paul G. Spirakis, _Information Processing Letters 97 (5): 181–185,_ 2005 (doi:10.1016/j.ipl.2005.11.003)](http://www.sciencedirect.com/science/article/pii/S002001900500298X).
+
+Although the user-defined function may return scalar numbers, fixed-dimension vectors of numbers, or categorical strings, it may not mix types. Different Sample primitives in an analysis tree may collect different types.
+
+### Sampling constructor and required members
 
 ```python
-.ing()
+Sample.ing(limit, quantity)
 ```
 
+  * `limit` (32-bit integer) is the maximum number of entries to store before replacement. This is a strict _number_ of entries, unaffected by weights.
+  * `quantity` (function returning a double, a vector of doubles, or a string) computes the quantity of interest from the data.
   * `entries` (mutable double) is the number of entries, initially 0.0.
+  * `values` (mutable, sorted list of quantity return type, double, double triplets) is the set of collected values with their weights and a random number (see algorithm below). Its size is at most `limit` and it may contain duplicates.
 
-### ED constructor and required members
+### Sampled constructor and required members
 
 ```python
-.ed(entries)
+Sample.ed(entries, limit, values)
 ```
 
   * `entries` (double) is the number of entries.
+  * `limit` (32-bit integer) is the maximum number of entries to store before replacement. This is a strict _number_ of entries, unaffected by weights.
+  * `values` (sorted list of quantity return type, double, double pairs) is the set of collected values with their weights. Its size is at most `limit` and it may contain duplicates.
 
 ### Fill and combine algorithms
 
 ```python
-def fill(ING, datum, weight):
+def merge(values, datum, weight, limit):
+    r = random.uniform(0.0, 1.0)**(1.0/weight)
+    if len(values) < limit:
+        values.append((r, datum, weight))
+        values.sort()
+    elif values[0][0] < r:
+        values.append((r, datum, weight))
+        values.sort()
+        del values[0]
+
+def fill(sampling, datum, weight):
+    merge(sampling.values, datum, weight, sampling.limit)
+    sampling.entries += weight
 
 def combine(one, two):
+    if one.limit != two.limit:
+        raise Exception
+    entries = one.entries + two.entries
+    values = []
+    for r, datum, weight in one.values:
+        merge(values, datum, weight, one.limit)
+    for r, datum, weight in two.values:
+        merge(values, datum, weight, one.limit)
+    return Sample.ed(entries, one.limit, [(d, w) for r, d, w in values])
 ```
 
 ### JSON format
 
-DESCRIPTION
+JSON object containing
 
-**Example:**
+  * `entries` (JSON number, "nan", "inf", or "-inf")
+  * `limit` (JSON number, must be an integer)
+  * `values` (JSON array of JSON objects containing `w` (JSON number), the weight of a value and `v` (JSON number, array of numbers, or string), the value), which should be sorted by `v` (lexicographically)
+
+**Examples:**
 
 ```json
-{"type": "XXX", "data": YYY}
+{"type": "Sample",
+ "data": {
+   "entries": 123.0,
+   "limit": 5,
+   "values": [
+     {"w": 23.0, "v": -999.0},
+     {"w": 20.0, "v": -4.0},
+     {"w": 20.0, "v": -2.0},
+     {"w": 30.0, "v": 0.0},
+     {"w": 30.0, "v": 2.0}]}}
+```
+
+```json
+{"type": "Sample",
+ "data": {
+   "entries": 123.0,
+   "limit": 5,
+   "values": [
+     {"w": 23.0, "v": [1.0, 2.0, 3.0]},
+     {"w": 20.0, "v": [3.14, 3.14, 3.14]},
+     {"w": 20.0, "v": [99.0, 50.0, 1.0]},
+     {"w": 30.0, "v": [7.0, 2.2, 9.8]},
+     {"w": 30.0, "v": [33.3, 66.6, 99.9]}]}}
+```
+
+```json
+{"type": "Sample",
+ "data": {
+   "entries": 123.0,
+   "limit": 5,
+   "values": [
+     {"w": 23.0, "v": "five"},
+     {"w": 20.0, "v": "four"},
+     {"w": 20.0, "v": "one"},
+     {"w": 30.0, "v": "three"},
+     {"w": 30.0, "v": "two"}]}}
 ```
 
 # Aliases: common compositions
 
+Although the following could be constructed by hand, they are so often used in data analyses that they have their own constructors. They are not distinct types, though: an aggregator created by explicit construction is completely interchangeable with an aggregator created by one of the following convenience functions.
+
+## Unweighted function
+
+A function named `"unweighted"` exists in the Histogrammar namespace with the following definition:
+
+```python
+def unweighted(datum):
+    return 1.0
+```
+
 ## Histogram
+
+```python
+def Histogram(num, low, high, quantity, selection=unweighted):
+    return Select.ing(selection, Bin.ing(num, low, high, quantity,
+      Count.ing(), Count.ing(), Count.ing(), Count.ing()))
+```
 
 ## SparselyHistogram
 
+```python
+def SparselyHistogram(binWidth, quantity, selection=unweighted, origin=0.0):
+    return Select.ing(selection, SparselyBin.ing(binWidth, quantity,
+      Count.ing(), Count.ing(), origin))
+```
+
+## Profile
+
+```python
+def Profile(num, low, high, x, y, selection=unweighted):
+    return Select.ing(selection, Bin.ing(num, low, high, x,
+      Deviate.ing(y), Count.ing(), Count.ing(), Count.ing()))
+```
+
+## SparselyProfile
+
+```python
+def SparselyProfile(binWidth, x, y, selection=unweighted, origin=0.0):
+    return Select.ing(selection, SparselyBin.ing(binWidth, x,
+      Deviate.ing(y), Count.ing(), origin))
+```
