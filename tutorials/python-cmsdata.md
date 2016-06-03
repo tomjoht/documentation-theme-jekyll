@@ -6,7 +6,7 @@ toc: false
 
 ## Rationale
 
-Most of the examples will require _some_ dataset, so I prepared a sample of CMS public data to be read with no dependencies. The data came from the [CERN Open Data portal](http://opendata.cern.ch/record/203); it is 50 fb<sup>-1</sup> of highly processed particle physics data from the [CMS experiment](http://cms.web.cern.ch/), with 469,384 events selected by the 24 GeV/c isolated muon trigger.
+Most of the examples must use _some_ dataset, so I prepared a sample of CMS public data to be read with no dependencies. The data came from the [CERN Open Data portal](http://opendata.cern.ch/record/203); it is 50 fb<sup>-1</sup> of highly processed particle physics data from the [CMS experiment](http://cms.web.cern.ch/), with 469,384 events selected by the 24 GeV/c isolated muon trigger.
 
 For convenience, it has been converted to compressed JSON. The code that reads it into classes is provided below for you to copy-paste.
 
@@ -14,16 +14,16 @@ For convenience, it has been converted to compressed JSON. The code that reads i
 
 Start a Python prompt and copy the code below into your terminal.
 
-If all goes well, you'll have a generator named `events` that pulls data from the web as needed. You get an event by repeatedly calling `events.next()` or by using it in a Python for loop. To restart the iterator at the beginning, re-run the last line to create a new `events` object.
+If all goes well, you'll have a generator named `events` that pulls data from the web as needed. You get an event by repeatedly calling `events.next()` (`events.__next__()` in Python 3) or by using it in a for loop. To restart the iterator from the beginning, re-run the last line to create a new `events` object.
 
-The code to copy-paste:
+The code to copy-paste ([link to raw code](../data/python-cmsdata.py)):
 
 ```python
 import json
 import math
 import zlib
 
-# deal with Python 3
+# handle Python 3
 try:
     import urllib2
 except ImportError:
@@ -153,10 +153,10 @@ class Event(object):
         return "Event({}, {}, {}, {}, {}, {})".format(self.jets, self.muons, self.electrons, self.photons, self.met, self.numPrimaryVertices)
     @staticmethod
     def fromJson(params):
-        return Event(map(Jet.fromJson, params["jets"]),
-                     map(Muon.fromJson, params["muons"]),
-                     map(Electron.fromJson, params["electrons"]),
-                     map(Photon.fromJson, params["photons"]),
+        return Event(list(map(Jet.fromJson, params["jets"])),
+                     list(map(Muon.fromJson, params["muons"])),
+                     list(map(Electron.fromJson, params["electrons"])),
+                     list(map(Photon.fromJson, params["photons"])),
                      MET.fromJson(params["MET"]),
                      params["numPrimaryVertices"])
 
@@ -165,7 +165,7 @@ def EventIterator(location):
     READ_BLOCK_SIZE = 1024*8
     webreader = urllib2.urlopen(location)
     gzipUnzipper = zlib.decompressobj(16 + zlib.MAX_WBITS)
-    remainder = ""
+    remainder = b""
     eventsBatch = []
     while True:
         if len(eventsBatch) == 0:
@@ -173,14 +173,14 @@ def EventIterator(location):
             data = remainder + gzipUnzipper.decompress(compressedData)
             if len(data) == 0:
                 raise StopIteration
-            index = data.rfind("\n")
+            index = data.rfind(b"\n")
             if index >= 0:
                 data, remainder = data[:index + 1], data[index + 1:]
             else:
-                remainder = ""
-            lines = filter(lambda x: len(x) > 0, data.split("\n"))
-            eventsBatchJson = map(json.loads, lines)
-            eventsBatch = map(Event.fromJson, reversed(eventsBatchJson))
+                remainder = b""
+            eventsBatch = [Event.fromJson(json.loads(line.decode()))
+                               for line in reversed(data.split(b"\n"))
+                               if line != b""]
         yield eventsBatch.pop()
 
 events = EventIterator("http://histogrammar.org/docs/data/triggerIsoMu24_50fb-1.json.gz")
