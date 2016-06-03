@@ -24,7 +24,7 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Product 2 home
+    - title: Simple Workflow
       url: /p2_landing_page/
       output: web
 
@@ -48,7 +48,7 @@ entries:
       url: /p2_sample5/
       output: web, pdf
 
-  - title: Another heading
+  - title: Complex Workflow
     output: web, pdf
     folderitems:
 
@@ -74,4 +74,16 @@ entries:
 
     - title: Sample 11
       url: /p2_sample11/
+      output: web, pdf
+
+    - title: Sample 12
+      url: /p2_sample12/
+      output: web, pdf
+
+    - title: Sample 13
+      url: /p2_sample13/
+      output: web, pdf
+
+    - title: Sample 14
+      url: /p2_sample14/
       output: web, pdf

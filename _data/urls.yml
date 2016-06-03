@@ -468,9 +468,9 @@ p1_sample7:
 
  
 p2_landing_page:
-  title: "Product 2 home"
+  title: "Simple Workflow"
   url: /documentation-theme-jekyll/p2_landing_page/
-  link: <a href="/documentation-theme-jekyll/p2_landing_page/">Product 2 home</a>
+  link: <a href="/documentation-theme-jekyll/p2_landing_page/">Simple Workflow</a>
 
 
  
@@ -487,8 +487,6 @@ p2_sample2:
   link: <a href="/documentation-theme-jekyll/p2_sample2/">Sample 2</a>
 
 
-
-
  
 p2_sample3:
   title: "Sample 3"
@@ -503,13 +501,13 @@ p2_sample4:
   link: <a href="/documentation-theme-jekyll/p2_sample4/">Sample 4</a>
 
 
-
-
  
 p2_sample5:
   title: "Sample 5"
   url: /documentation-theme-jekyll/p2_sample5/
   link: <a href="/documentation-theme-jekyll/p2_sample5/">Sample 5</a>
+
+
 
 
  
@@ -524,6 +522,55 @@ p2_sample7:
   title: "Sample 7"
   url: /documentation-theme-jekyll/p2_sample7/
   link: <a href="/documentation-theme-jekyll/p2_sample7/">Sample 7</a>
+
+
+ 
+p2_sample8:
+  title: "Sample 8"
+  url: /documentation-theme-jekyll/p2_sample8/
+  link: <a href="/documentation-theme-jekyll/p2_sample8/">Sample 8</a>
+
+
+ 
+p2_sample9:
+  title: "Sample 9"
+  url: /documentation-theme-jekyll/p2_sample9/
+  link: <a href="/documentation-theme-jekyll/p2_sample9/">Sample 9</a>
+
+
+ 
+p2_sample10:
+  title: "Sample 10"
+  url: /documentation-theme-jekyll/p2_sample10/
+  link: <a href="/documentation-theme-jekyll/p2_sample10/">Sample 10</a>
+
+
+ 
+p2_sample11:
+  title: "Sample 11"
+  url: /documentation-theme-jekyll/p2_sample11/
+  link: <a href="/documentation-theme-jekyll/p2_sample11/">Sample 11</a>
+
+
+ 
+p2_sample12:
+  title: "Sample 12"
+  url: /documentation-theme-jekyll/p2_sample12/
+  link: <a href="/documentation-theme-jekyll/p2_sample12/">Sample 12</a>
+
+
+ 
+p2_sample13:
+  title: "Sample 13"
+  url: /documentation-theme-jekyll/p2_sample13/
+  link: <a href="/documentation-theme-jekyll/p2_sample13/">Sample 13</a>
+
+
+ 
+p2_sample14:
+  title: "Sample 14"
+  url: /documentation-theme-jekyll/p2_sample14/
+  link: <a href="/documentation-theme-jekyll/p2_sample14/">Sample 14</a>
 
 
 

@@ -6,7 +6,8 @@ sidebar: product2_sidebar
 permalink: /p2_sample10/
 map: true
 map_name: usermapcomplex
-box_number: 4
+box_number: 2
+toc: false
 ---
 
 ## Sample Content

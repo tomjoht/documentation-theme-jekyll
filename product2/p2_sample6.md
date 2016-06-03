@@ -5,8 +5,9 @@ summary: "This is just a sample topic..."
 sidebar: product2_sidebar
 permalink: /p2_sample6/
 map: true
-map_name: usermap
-box_number: 6
+map_name: usermapcomplex
+box_number: 1
+toc: false
 ---
 
 
