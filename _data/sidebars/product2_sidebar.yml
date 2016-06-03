@@ -20,13 +20,17 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: Getting Started
+  - title: Introduction
     output: web, pdf
     folderitems:
 
-    - title: Simple Workflow
+    - title: Overview
       url: /p2_landing_page/
       output: web
+
+  - title: Simple Workflow
+    output: web, pdf
+    folderitems:
 
     - title: Sample 1
       url: /p2_sample1/
