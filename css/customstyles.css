@@ -935,7 +935,8 @@ a[href^="http://"]:after, a[href^="https://"]:after {
 
 /* Strip the outbound icon when this class is present */
 a[href].noCrossRef::after,
-a.no_icon:after {
+a.no_icon:after
+ {
     content:"" !important;
     padding-left: 0;
 }
@@ -1136,3 +1137,20 @@ div.box.box1 {
         word-wrap: break-word;       /* Internet Explorer 5.5+ */
         font-size: 14px;
     }
+
+/*
+ * Let's target IE to respect aspect ratios and sizes for img tags containing SVG files
+ *
+ * [1] IE9
+ * [2] IE10+
+ */
+/* 1 */
+.ie9 img[src$=".svg"] {
+    width: 100%;
+}
+/* 2 */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    img[src$=".svg"] {
+        width: 100%;
+    }
+}

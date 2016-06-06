@@ -3,93 +3,73 @@ title: Images
 tags: [formatting]
 keywords: images, screenshots, vectors, svg, markdown syntax
 last_updated: March 20, 2016
-summary: "You embed images using traditional HTML or Markdown syntax for images. Unlike pages, you can store images in subfolders (in this theme). This is because when pages reference the images, the references are always as subpaths, never requiring the reference to move up directories."
+summary: "Store images in the images folder and use the image.html include to insert images. This include has several options, including figcaptions, that extract the content from the formatting."
 sidebar: mydoc_sidebar
 permalink: /mydoc_images/
 ---
 
-You embed an image the same way you embed other files or assets: you put the file into a folder, and then link to that file. 
+## Image Include Template
 
-Put images inside the `images` folder in your root directory. You can create subdirectories inside this directory. Although you could use Markdown syntax for images, the HTML syntax is probably easier:
+Instead of using Markdown or HMTL syntax directly in your page for images, the syntax for images has been extracted out into an image include that allows you to pass the parameters you need. Include the image.html like this:
 
+```liquid
 {% raw %}
-```html
-<img title="my sample page" src="{{ "/images/jekyll.png" | prepend: site.baseurl }}" />
-```
+{% include image.html file="jekyll.png" url="http://jekyllrb.com" alt="Jekyll" caption="This is a sample caption" %"}
 {% endraw %}
-
-And the result:
-
-<img title="my sample image" src="{{ "/images/jekyll.png" | prepend: site.baseurl }}">
-
-Here's the same Markdown syntax:
-
-{% raw %}
 ```
-![My sample page]({{ "/images/jekyll.png" | prepend: site.baseurl }})
-```
-{% endraw %}
 
-And the result:
+The available include properties are as follows:
 
-![My sample page]({{ "/images/jekyll.png" | prepend: site.baseurl }})
+| Property | description |
+|-------|--------|
+| file | The name of the file. Store it in the /images folder. |
+| url | Whether to link the image to a URL |
+| alt | Alternative image text for accessibility and SEO |
+| caption | A caption for the image |
+| max-width | a maximum width for the image (in pixels). Just specify the number, not px.|
 
-{{site.data.alerts.tip}} I recommend storing this format into a shortcut editor such as aText. This way when you want to insert an image, just type something like jimg and the shortcut editor will automatically type the code.{{site.data.alerts.end}}
-
-## Figure captions
-
-If you want to add a figure caption, you can do so using standard `figure` HTML tags:
-
-{% raw %}
-```html
-<figure><img title="my sample page" src="{{ "/images/jekyll.png" | prepend: site.baseurl }}" /><figcaption>Your caption</figcaption></figure>
-```
-{% endraw %}
+The properties of the include get populated into the image.html template.
 
 Here's the result:
 
-<img title="my sample page" src="{{ "/images/jekyll.png" | prepend: site.baseurl }}" />
-<figcaption>Your caption</figcaption></figure>
+{% include image.html file="jekyll.png" url="http://jekyllrb.com" alt="Jekyll" caption="This is a sample caption" %}
 
 ## SVG Images
 
 You can also embed SVG graphics. If you use SVG, you need to use the HTML syntax so that you can define a width/container for the graphic. Here's a sample embed:
 
-```html
-<img src="{{ "/images/helpapi.svg" | prepend: site.baseurl }}" style="max-width: 600px;" />
+```liquid
+{% raw %}{% include image.html file="helpapi.svg" url="http://idratherbewriting.com/documentation-theme-jekyll/mydoc_help_api/" alt="Building a Help API" caption="A help API provides a JSON file at a web URL with content that can be pulled into different targets" max-width="600" %}{% endraw %}
 ```
 
 Here's the result:
 
-<img src="{{ "/images/helpapi.svg" | prepend: site.baseurl }}" style="max-width: 600px;" />
 
-SVG images will expand to the size of their container, so you have to specify it here. The previous syntax isn't well supported in IE, so you would be better off using the `object` element like this:
+{% include image.html file="helpapi.svg" url="http://idratherbewriting.com/documentation-theme-jekyll/mydoc_help_api/" alt="Building a Help API" caption="A help API provides a JSON file at a web URL with content that can be pulled into different targets" max-width="600" %}
 
-{% raw %}
-```html
-<div style="max-width:600px;"><object type="image/svg+xml" data="{{ "/images/helpapi.svg" | prepend: site.baseurl }}">Your browser does not support SVG</object>
-</div>
+The stylesheet even handles SVG display in IE 9 and earlier through the following style (based on this [gist](https://gist.github.com/larrybotha/7881691)):
+
+```css
+/*
+ * Let's target IE to respect aspect ratios and sizes for img tags containing SVG files
+ *
+ * [1] IE9
+ * [2] IE10+
+ */
+/* 1 */
+.ie9 img[src$=".svg"] {
+    width: 100%;
+}
+/* 2 */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    img[src$=".svg"] {
+        width: 100%;
+    }
+}
 ```
-{% endraw %}
-
-Here's the same code with `figure` elements:
-
-{% raw %}
-```html
-<div style="max-width:600px;"><figure><object type="image/svg+xml" data="{{ "/images/helpapi.svg" | prepend: site.baseurl }}">Your browser does not support SVG</object><figcaption>This is your caption</figcaption></figure>
-</div>
-```
-{% endraw %}
-
-And the result: 
-
-<div style="max-width:400px;"><figure><object type="image/svg+xml" data="{{ "/images/helpapi.svg" | prepend: site.baseurl }}">Your browser does not support SVG</object><figcaption>This is your caption</figcaption></figure></div>
 
 Also, if you're working with SVG graphics, note that Firefox does not support SVG fonts. In Illustrator, when you do a Save As with your AI file and choose SVG, to preserve your fonts, in the Font section, select "Convert to outline" as the Type (don't choose SVG in the Font section).
 
 Also, remove the check box for "Use textpath element for text on a path". And select "Embed" rather than "Link." The following screenshot shows the settings I use. Your graphics will look great in Firefox.
 
 ![Essential options for SVG with Illustrator]({{ "/images/illustratoroptions.png" | prepend: site.baseurl }})
-
-
-
