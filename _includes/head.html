@@ -1,14 +1,25 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="{% if page.summary %}{{ page.summary | strip_html | strip_newlines | truncate: 160 }}{% endif %}">
-<meta name="keywords" content="{{page.tags}}{% if page.tags %}, {% endif %} {{page.keywords}}">
-<title>{% if page.homepage == true %} {{site.homepage_title}} {% elsif page.title %}{{ page.title }}{% endif %}  | {{ site.site_title }}</title>
+
+{% if page.summary %}
+	<meta name="description" content="{{ page.summary | strip_html | strip_newlines | truncate: 160 }}">
+{% endif %}
+
+<meta name="keywords" content="{{ page.tags }}{% if page.tags %}, {% endif %} {{ page.keywords }}">
+
+<title>
+	{% if page.homepage %}
+		{{ site.homepage_title }}
+	{% elsif page.title %}
+		{{ page.title }}
+	{% endif %}
+	| {{ site.site_title }}
+</title>
+
 <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}">
 
-
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
 <link rel="stylesheet" href="{{ "/css/modern-business.css" | prepend: site.baseurl }}">
 <link rel="stylesheet" href="{{ "/css/lavish-bootstrap.css" | prepend: site.baseurl }}">
 <link rel="stylesheet" href="{{ "/css/customstyles.css" | prepend: site.baseurl }}">
@@ -24,7 +35,7 @@
 <script src="{{ "/js/toc.js" | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/customscripts.js" | prepend: site.baseurl }}"></script>
 
-<link rel="shortcut icon" href="{{ "/images/favicon.ico" | prepend: site.baseurl  }}">
+<link rel="shortcut icon" href="{{ "/images/favicon.ico" | prepend: site.baseurl	}}">
 
 <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,8 +45,3 @@
 <![endif]-->
 
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
-
-
-
-
- 
