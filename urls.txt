@@ -1,5 +1,5 @@
 ---
-layout: null
+layout: none
 search: exclude
 sidebar:
 - mydoc_sidebar

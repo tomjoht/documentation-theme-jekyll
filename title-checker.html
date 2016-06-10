@@ -1,0 +1,244 @@
+---
+layout: none
+search: exclude
+---
+<html>
+<head>
+    <title>Title checker</title>
+</head>
+<body>
+<h2>Title Checker Report</h2>
+
+{% comment %}
+                     _
+ _ __ ___  _   _  __| | ___   ___
+| '_ ` _ \| | | |/ _` |/ _ \ / __|
+| | | | | | |_| | (_| | (_) | (__
+|_| |_| |_|\__, |\__,_|\___/ \___|
+|___/
+{% endcomment %}
+
+## Mydoc sidebar
+
+{% for entry in site.data.sidebars.mydoc_sidebar.entries %}
+{% for subcategory in entry.subcategories %}
+{% for item in subcategory.items %}
+{% unless item.frontmatter == true %}
+{% assign itemTitle = item.title | replace: '"', '' %}
+{% assign itemUrl = item.url %}
+{% for page in site.pages %}
+{% if page.url == item.url %}
+{% assign pageTitle = page.title | replace: '"', '' %}
+{% assign pageUrl = page.url %}
+{% if pageTitle != itemTitle %}
+<hr/>
+<p>Problem: The sidebar item title "{{itemTitle}}" does not match the page title "{{pageTitle}}".</p>
+{% if pageUrl != itemUrl %}
+<p>Problem: The sidebar item URL "{{itemUrl}}" does not match the page title URL "{{pageUrl}}".</p>
+{% endif %}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% endunless %}
+{% for thirdlevel in item.thirdlevel %}
+{% for deeplevel in thirdlevel.thirdlevelitems %}
+{% unless deeplevel.frontmatter == true %}
+
+{% assign deeplevelTitle = deeplevel.title | replace: '"', '' %}
+{% assign deeplevelUrl = deeplevel.url %}
+{% for page in site.pages %}
+{% if page.url == deeplevel.url %}
+{% assign pageTitle = page.title | replace: '"', '' %}
+{% assign pageUrl = page.url %}
+{% if pageTitle != deeplevelTitle %}
+<hr/>
+<p>Problem: The sidebar deeplevel title "{{deeplevelTitle}}" does not match the page title "{{pageTitle}}".</p>
+{% if pageUrl != deeplevelUrl %}
+<p>Problem: The sidebar deeplevel URL "{{deeplevelUrl}}" does not match the page title URL "{{pageUrl}}".</p>
+
+{% endif %}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% endunless %}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+
+
+{% comment %}
+                    _            _   _
+_ __  _ __ ___   __| |_   _  ___| |_/ |
+| '_ \| '__/ _ \ / _` | | | |/ __| __| |
+| |_) | | | (_) | (_| | |_| | (__| |_| |
+| .__/|_|  \___/ \__,_|\__,_|\___|\__|_|
+|_|
+{% endcomment %}
+## Mydoc sidebar
+
+{% for entry in site.data.sidebars.product1_sidebar.entries %}
+{% for subcategory in entry.subcategories %}
+{% for item in subcategory.items %}
+{% unless item.frontmatter == true %}
+{% assign itemTitle = item.title | replace: '"', '' %}
+{% assign itemUrl = item.url %}
+{% for page in site.pages %}
+{% if page.url == item.url %}
+{% assign pageTitle = page.title | replace: '"', '' %}
+{% assign pageUrl = page.url %}
+{% if pageTitle != itemTitle %}
+<hr/>
+<p>Problem: The sidebar item title "{{itemTitle}}" does not match the page title "{{pageTitle}}".</p>
+{% if pageUrl != itemUrl %}
+<p>Problem: The sidebar item URL "{{itemUrl}}" does not match the page title URL "{{pageUrl}}".</p>
+{% endif %}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% endunless %}
+{% for thirdlevel in item.thirdlevel %}
+{% for deeplevel in thirdlevel.thirdlevelitems %}
+{% unless deeplevel.frontmatter == true %}
+
+{% assign deeplevelTitle = deeplevel.title | replace: '"', '' %}
+{% assign deeplevelUrl = deeplevel.url %}
+{% for page in site.pages %}
+{% if page.url == deeplevel.url %}
+{% assign pageTitle = page.title | replace: '"', '' %}
+{% assign pageUrl = page.url %}
+{% if pageTitle != deeplevelTitle %}
+<hr/>
+<p>Problem: The sidebar deeplevel title "{{deeplevelTitle}}" does not match the page title "{{pageTitle}}".</p>
+{% if pageUrl != deeplevelUrl %}
+<p>Problem: The sidebar deeplevel URL "{{deeplevelUrl}}" does not match the page title URL "{{pageUrl}}".</p>
+
+{% endif %}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% endunless %}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+
+
+{% comment %}
+_            _   ____
+_ __  _ __ ___   __| |_   _  ___| |_|___ \
+| '_ \| '__/ _ \ / _` | | | |/ __| __| __) |
+| |_) | | | (_) | (_| | |_| | (__| |_ / __/
+| .__/|_|  \___/ \__,_|\__,_|\___|\__|_____|
+|_|
+{% endcomment %}
+
+## Mydoc sidebar
+
+{% for entry in site.data.sidebars.product2_sidebar.entries %}
+{% for subcategory in entry.subcategories %}
+{% for item in subcategory.items %}
+{% unless item.frontmatter == true %}
+{% assign itemTitle = item.title | replace: '"', '' %}
+{% assign itemUrl = item.url %}
+{% for page in site.pages %}
+{% if page.url == item.url %}
+{% assign pageTitle = page.title | replace: '"', '' %}
+{% assign pageUrl = page.url %}
+{% if pageTitle != itemTitle %}
+<hr/>
+<p>Problem: The sidebar item title "{{itemTitle}}" does not match the page title "{{pageTitle}}".</p>
+{% if pageUrl != itemUrl %}
+<p>Problem: The sidebar item URL "{{itemUrl}}" does not match the page title URL "{{pageUrl}}".</p>
+{% endif %}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% endunless %}
+{% for thirdlevel in item.thirdlevel %}
+{% for deeplevel in thirdlevel.thirdlevelitems %}
+{% unless deeplevel.frontmatter == true %}
+
+{% assign deeplevelTitle = deeplevel.title | replace: '"', '' %}
+{% assign deeplevelUrl = deeplevel.url %}
+{% for page in site.pages %}
+{% if page.url == deeplevel.url %}
+{% assign pageTitle = page.title | replace: '"', '' %}
+{% assign pageUrl = page.url %}
+{% if pageTitle != deeplevelTitle %}
+<hr/>
+<p>Problem: The sidebar deeplevel title "{{deeplevelTitle}}" does not match the page title "{{pageTitle}}".</p>
+{% if pageUrl != deeplevelUrl %}
+<p>Problem: The sidebar deeplevel URL "{{deeplevelUrl}}" does not match the page title URL "{{pageUrl}}".</p>
+
+{% endif %}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% endunless %}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+
+{% comment %}
+_
+| |_ ___  _ __  _ __   __ ___   __
+| __/ _ \| '_ \| '_ \ / _` \ \ / /
+| || (_) | |_) | | | | (_| |\ V /
+\__\___/| .__/|_| |_|\__,_| \_/
+|_|
+{% endcomment %}
+
+{% for entry in site.data.topnav.topnav %}
+{% for subcategory in entry.subcategories %}
+{% unless subcategory.external_url or subcategory.frontmatter %}
+<hr/>
+{% assign subcategoryTitle = subcategory.title | replace: '"', '' %}
+{% assign subcategoryUrl = subcategory.url %}
+{% for page in site.pages %}
+{% if page.url == subcategory.url %}
+{% assign pageTitle = page.title | replace: '"', '' %}
+{% assign pageUrl = page.url %}
+{% if pageTitle != subcategoryTitle %}
+<p>Problem: The top navigation item title "{{subcategoryTitle}}" does not match the page title "{{pageTitle}}".</p>
+{% if pageUrl != subcategoryUrl %}
+<p>Problem: The top navigation item URL "{{subcategoryUrl}}" does not match the page title URL "{{pageUrl}}".</p>
+
+{% endif %}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% endunless %}
+{% endfor %}
+{% endfor %}
+
+{% for entry in site.data.topnav.topnav_dropdowns %}
+{% for subcategory in entry.subcategories %}
+{% for subitem in subcategory.items %}
+{% unless subitem.external_url or subitem.frontmatter %}
+
+{% assign subitemTitle = subitem.title | replace: '"', '' %}
+{% assign subitemUrl = subitem.url %}
+{% for page in site.pages %}
+{% if page.url == subitem.url %}
+{% assign pageTitle = page.title | replace: '"', '' %}
+{% assign pageUrl = page.url %}
+{% if pageTitle != subitemTitle %}
+Problem: The top drop-down navigation item title "{{subitemTitle}}" does not match the page title "{{pageTitle}}".
+{% if pageUrl != subitemUrl %}
+Problem: The top drop-down navigation item URL "{{subitemUrl}}" does not match the page title URL "{{pageUrl}}".
+
+{% endif %}
+{% endif %}
+{% endif %}
+{% endfor %}
+{% endunless %}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+</body>
+</html>

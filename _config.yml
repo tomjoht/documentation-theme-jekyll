@@ -49,18 +49,6 @@ kramdown:
 collections:
   tooltips:
     output: false
-  my_docs:
-    title: Jekyll Doc Theme
-    version: 5.0
-    output: true
-  product1:
-    title: Product1
-    version: 1.0
-    output: true
-  product2:
-    title: Product2
-    version: 1.0
-    output: true
 # collection declared here. this renders the content in _tooltips and processes it, but doesn't output it as actual files in the output.
 
 defaults:
@@ -82,36 +70,6 @@ defaults:
       comments: true
       search: true
       tooltip: true
-  -
-    scope:
-      path: ""
-      type: "my_docs"
-    values:
-      layout: "page"
-      comments: true
-      search: true
-      tooltip: true
-      collection: "my_docs"
-  -
-    scope:
-      path: ""
-      type: "product1"
-    values:
-      layout: "page"
-      comments: true
-      search: true
-      tooltip: true
-      collection: "product1"
-  -
-    scope:
-      path: ""
-      type: "product2"
-    values:
-      layout: "page"
-      comments: true
-      search: true
-      tooltip: true
-      collection: "product2"
 
   -
     scope:
@@ -128,3 +86,4 @@ defaults:
 
 description: "Intended as a documentation theme based on Jekyll for technical writers documenting software and other technical products, this theme has all the elements you would need to handle multiple products with both multi-level sidebar navigation, tags, and other documentation features."
 # the description is used in the feed.xml file
+

@@ -1,17 +1,23 @@
-{% case page.sidebar %}
-	{% when "home_sidebar" %}
-		{% assign sidebar = site.data.sidebars.home_sidebar.entries %}
-	{% when "product1_sidebar" %}
-		{% assign sidebar = site.data.sidebars.product1_sidebar.entries %}
-	{% when "product2_sidebar" %}
-		{% assign sidebar = site.data.sidebars.product2_sidebar.entries %}
-	{% when "mydoc_sidebar" %}
-		{% assign sidebar = site.data.sidebars.mydoc_sidebar.entries %}
-	{% when "tags_sidebar" %}
-		{% assign sidebar = site.data.sidebars.tags_sidebar.entries %}
-	{% else %}
-		{% assign sidebar = site.data.sidebars.home_sidebar.entries %}
-{% endcase %}
+{% if page.sidebar == "home_sidebar" %}
+{% assign sidebar = site.data.sidebars.home_sidebar.entries %}
+
+{% elsif page.sidebar == "product1_sidebar" %}
+{% assign sidebar = site.data.sidebars.product1_sidebar.entries %}
+
+{% elsif page.sidebar == "product2_sidebar" %}
+{% assign sidebar = site.data.sidebars.product2_sidebar.entries %}
+
+{% elsif page.sidebar == "mydoc_sidebar" %}
+{% assign sidebar = site.data.sidebars.mydoc_sidebar.entries %}
+
+{% elsif page.sidebar == "tags_sidebar" %}
+{% assign sidebar = site.data.sidebars.tags_sidebar.entries %}
+
+{% else %}
+{% assign sidebar = site.data.sidebars.home_sidebar.entries %}
+{% endif %}
+
+
 
 {% comment %}
 sidebar configuration for print files

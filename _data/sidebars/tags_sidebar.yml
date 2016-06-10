@@ -1,0 +1,54 @@
+
+entries:
+- title: Tags Sidebar
+  product: Tags
+  version: all products
+  levels: one
+  output: web
+  folders:
+
+  - title: News
+    output: web
+    folderitems:
+    - title: News
+      url: /news/
+      output: web
+    - title: News archive
+      url: /news_archive/
+      output: web
+  - title: Tags
+    output: web
+    folderitems:
+    - title: Collaboration
+      url: /tag_collaboration/
+      output: web
+    - title: Content Types
+      url: /tag_content_types/
+      output: web
+    - title: Formatting
+      url: /tag_formatting/
+      output: web
+    - title: Getting started
+      url: /tag_getting_started/
+      output: web
+    - title: Mobile
+      url: /tag_mobile/
+      output: web
+    - title: Navigation
+      url: /tag_navigation/
+      output: web
+    - title: News
+      url: /tag_news/
+      output: web
+    - title: Publishing
+      url: /tag_publishing/
+      output: web
+    - title: Single sourcing
+      url: /tag_single_sourcing/
+      output: web
+    - title: Special layouts
+      url: /tag_special_layouts/
+      output: web
+    - title: Troubleshooting
+      url: /tag_troubleshooting/
+      output: web
