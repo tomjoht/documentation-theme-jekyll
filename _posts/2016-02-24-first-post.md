@@ -1,8 +1,11 @@
 ---
 title:  "Welcome to Jekyll!"
-categories: jekyll update
+categories:
+  - jekyll
+  - update
 permalink: /myupdate/
-tags: [news]
+tags:
+  - news
 ---
 
 
