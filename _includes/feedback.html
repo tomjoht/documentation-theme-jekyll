@@ -13,4 +13,4 @@ window.location.href = uri;
 }
 </script>
 
-<li><a href="{% if site.feedback_link %}{{site.feedback_link}}{% else %}javascript:(function()%7BSendLinkByMail()%3B%7D)()%3B{% endif %}" target="_blank">{% if site.feedback_link == null %}<i class="fa fa-envelope-o"></i>{% endif %} {% if site.feedback_text %}{{site.feedback_text}}{% else %}Feedback{% endif %}</a></li>
+<li><a href="{% if site.feedback_link %}{{site.feedback_link}}{% else %}javascript:(function()%7BSendLinkByMail()%3B%7D)()%3B{% endif %}">{% if site.feedback_link == null %}<i class="fa fa-envelope-o"></i>{% endif %} {% if site.feedback_text %}{{site.feedback_text}}{% else %}Feedback{% endif %}</a></li>

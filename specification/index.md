@@ -2,7 +2,6 @@
 title: Specification 0.7-prerelease
 type: default
 toc: true
-custom_css: specification
 summary: |
     <p>This page describes Histogrammar in detail, but without reference to any particular implementation, including the composable primitives, their required functions and argument lists, and their JSON representations.</p>
     

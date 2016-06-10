@@ -2,11 +2,16 @@
 title: Documentation
 type: default
 toc: false
+custom_css: mainpage
 ---
 
 ## [Introduction](introduction)
 
 What is Histogrammar? What is it for?
+
+## [Installation](install)
+
+Getting it.
 
 ## [Tutorials](tutorials)
 

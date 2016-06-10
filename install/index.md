@@ -2,7 +2,6 @@
 title: Installation instructions
 type: default
 toc: true
-custom_css: specification
 summary: |
     <p>This page explains how to install Histogrammar or Histogrammar components in different ways. Use only the instructions relevant to your use-case.</p>
 ---

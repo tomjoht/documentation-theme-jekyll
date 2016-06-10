@@ -16,7 +16,7 @@
                 {% for entry in site.data.topnav.topnav %}
                 {% for item in entry.items %}
                 {% if item.external_url %}
-                <li><a href="{{item.external_url}}" target="_blank">{{item.title}}</a></li>
+                <li><a href="{{item.external_url}}">{{item.title}}</a></li>
                 {% elsif page.url contains item.url %}
                 <li class="active"><a href="{{item.url | prepend: site.baseurl}}">{{item.title}}</a></li>
                 {% else %}
@@ -33,7 +33,7 @@
                     <ul class="dropdown-menu">
                         {% for folderitem in folder.folderitems %}
                         {% if folderitem.external_url %}
-                        <li><a href="{{folderitem.external_url}}" target="_blank">{{folderitem.title}}</a></li>
+                        <li><a href="{{folderitem.external_url}}">{{folderitem.title}}</a></li>
                         {% elsif page.url contains folderitem.url %}
                         <li class="dropdownActive"><a href="{{folderitem.url | prepend: site.baseurl}}">{{folderitem.title}}</a></li>
                         {% else %}
@@ -48,7 +48,7 @@
                 {% for entry in site.data.topnav.topnav_github %}
                 {% for item in entry.items %}
                 {% if item.external_url %}
-                <li><a href="{{item.external_url}}" target="_blank">{{item.title}}</a></li>
+                <li><a href="{{item.external_url}}">{{item.title}}</a></li>
                 {% elsif page.url contains item.url %}
                 <li class="active"><a href="{{item.url | prepend: site.baseurl}}">{{item.title}}</a></li>
                 {% else %}
