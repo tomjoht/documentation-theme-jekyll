@@ -6,13 +6,14 @@ last_updated: March 20, 2016
 summary: "Version 5.0 of the Documentation theme for Jekyll changes some fundamental ways the theme works to provide product-specific sidebars, intended to accommodate a site where multiple products are grouped together on the same site rather than generated out as separate outputs."
 sidebar: mydoc_sidebar
 permalink: /mydoc_release_notes_50/
+folder: mydoc
 ---
 
 ## Unique sidebars for each product
 
-In previous versions of the theme, I built the theme to generate different outputs for different scenarios based on various filtering attributes that might include product, version, platform, and audience variants. 
+In previous versions of the theme, I built the theme to generate different outputs for different scenarios based on various filtering attributes that might include product, version, platform, and audience variants.
 
-However, this model results in siloed outputs and lots of separate file directories to manage. Instead of having 30 separate sites for your content (or however many variants you might have been producing), in this version of the theme I've moved towards a strategy of having one site with multiple products. 
+However, this model results in siloed outputs and lots of separate file directories to manage. Instead of having 30 separate sites for your content (or however many variants you might have been producing), in this version of the theme I've moved towards a strategy of having one site with multiple products.
 
 For each product, you can associate a unique sidebar with each of the product's pages. This allows you to have all your documentation on one site, but with separate navigation that is tailored to a view of that product.
 
@@ -28,13 +29,13 @@ I also switched from redcarpet and Pygments to Kramdown and Rouge to align with 
 
 ## Blog feature
 
-I included a blog feature with this version of the theme. You can write posts and view them through the News link. There's also an archive for blog posts that sorts posts by year. 
+I included a blog feature with this version of the theme. You can write posts and view them through the News link. There's also an archive for blog posts that sorts posts by year.
 
 Additionally, the tagging system works across both the blog and pages, so your tags allow users to move laterally across the site based on topics they're interested in. When you view a tag archive, the sidebar shows a list of tags.
 
 ## Updated documentation
 
-I updated the documentation for  the theme. The switch from the multi-site outputs to the single-site with multiple sidebars required updating a lot of different parts of the documentation and code. 
+I updated the documentation for  the theme. The switch from the multi-site outputs to the single-site with multiple sidebars required updating a lot of different parts of the documentation and code.
 
 ## Fixed errors
 
@@ -42,4 +43,4 @@ Previously I had some errors with the HTML that showed up in w3c HTML validator 
 
 ## Accessing the old theme
 
-If you want to access the old theme, you can still find it [here](https://github.com/tomjohnson1492/jekylldoctheme-separate-outputs). 
+If you want to access the old theme, you can still find it [here](https://github.com/tomjohnson1492/jekylldoctheme-separate-outputs).

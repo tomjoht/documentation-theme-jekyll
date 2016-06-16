@@ -6,6 +6,7 @@ keywords: API, content API, UI text, inline help, context-sensitive help, popove
 summary: "You can loop through files and generate a JSON file that developers can consume like a help API. Developers can pull in values from the JSON into interface elements, styling them as popovers for user interface text, for example. The beauty of this method is that the UI text remains in the help system (or at least in a single JSON file delivered to the dev team) and isn't hard-coded into the UI."
 sidebar: mydoc_sidebar
 permalink: /mydoc_help_api/
+folder: mydoc
 ---
 
 ## Full code demo of content API
@@ -22,7 +23,7 @@ Additionally, instead of tooltip popovers, you could also print content directly
 
 ## Diagram overview
 
-Here's a diagram showing the basic idea of the help API: 
+Here's a diagram showing the basic idea of the help API:
 
 <img src="{{ "/images/helpapi.svg" | prepend: site.baseurl }}" style="width: 650px;"/>
 
@@ -34,7 +35,7 @@ To deliver help this way using Jekyll, follow the steps in each of the sections 
 
 ## 1. Create a "collection" for the help content
 
-A collection is another content type that extends Jekyll beyond the use of pages and posts. Call the collection "tooltips." 
+A collection is another content type that extends Jekyll beyond the use of pages and posts. Call the collection "tooltips."
 
 Add the following information to your configuration file to declare your collection:
 
@@ -110,7 +111,7 @@ search: exclude
 
 Change "mydoc" to the product name you used in each of the tooltip files. The template here will only include content in the JSON file if it meets the `product` attribute requirements. We need this `if` statement to prevent tooltips from other products from being included in the JSON file.
 
-This code will loop through all pages in the tooltips collection and insert the `id` and `body` into key-value pairs for the JSON code. Here's an example of what that looks like after it's processed by Jekyll in the site build: 
+This code will loop through all pages in the tooltips collection and insert the `id` and `body` into key-value pairs for the JSON code. Here's an example of what that looks like after it's processed by Jekyll in the site build:
 
 ```
 {
@@ -151,13 +152,13 @@ When you build your site, Jekyll will iterate through every page in your \_toolt
 
 ## 6. Allow CORS access to your help if stored on a remote server
 
-You can simply deliver the JSON file to devs to add to the project. But if you have the option, it's best to keep the JSON file stored in your own help system. Assuming you have the ability to update your content on the fly, this will give you completely control over the tooltips without being tied to a specific release window. 
+You can simply deliver the JSON file to devs to add to the project. But if you have the option, it's best to keep the JSON file stored in your own help system. Assuming you have the ability to update your content on the fly, this will give you completely control over the tooltips without being tied to a specific release window.
 
-When people make calls to your site *from other domains*, you must allow them access to get the content. To do this, you have to enable something called CORS (cross origin resource sharing) within the server where your help resides. 
+When people make calls to your site *from other domains*, you must allow them access to get the content. To do this, you have to enable something called CORS (cross origin resource sharing) within the server where your help resides.
 
-In other words, people are going to be executing calls to reach into your site and grab your content. Just like the door on your house, you have to unlock it so people can get in. Enabling CORS is unlocking it. 
+In other words, people are going to be executing calls to reach into your site and grab your content. Just like the door on your house, you have to unlock it so people can get in. Enabling CORS is unlocking it.
 
-How you enable CORS depends on the type of server. 
+How you enable CORS depends on the type of server.
 
 If your server setup allows htaccess files to override general server permissions, create an .htaccess file and add the following:
 
@@ -165,7 +166,7 @@ If your server setup allows htaccess files to override general server permission
 Header set Access-Control-Allow-Origin "*"
 ```
 
-Store this in the same directory as your project. This is what I've done in a directory on my web host (bluehost.com). Inside http://idratherassets.com/wp-content/apidemos/, I uploaded a file called ".htaccess" with the preceding code. 
+Store this in the same directory as your project. This is what I've done in a directory on my web host (bluehost.com). Inside http://idratherassets.com/wp-content/apidemos/, I uploaded a file called ".htaccess" with the preceding code.
 
 After I uploaded it, I renamed it to .htaccess, right-clicked the file and set the permissions to 774.
 
@@ -175,7 +176,7 @@ To test whether your server permissions are set correctly, open a terminal and r
 curl -I http://idratherassets.com/wp-content/apidemos/tooltips.json
 ```
 
-The `-I` command tells cURL to return the request header only. 
+The `-I` command tells cURL to return the request header only.
 
 If the server permissions are set correctly, you should see the following line somewhere in the response:
 
@@ -183,7 +184,7 @@ If the server permissions are set correctly, you should see the following line s
 Access-Control-Allow-Origin: *
 ```
 
-If you don't see this response, CORS isn't allowed for the file. 
+If you don't see this response, CORS isn't allowed for the file.
 
 If you have an AWS S3 bucket, you can supposedly add a CORS configuration to the bucket permissions. Log into AWS S3 and click your bucket. On the right, in the Permissions section, click **Add CORS Configuration**. In that space, add the following policy:
 
@@ -200,7 +201,7 @@ If you have an AWS S3 bucket, you can supposedly add a CORS configuration to the
 
 In other server setups, you may need to edit one of your Apache configuration files. See [Enable CORS](http://enable-cors.org/server.html) or search online for ways to allow CORS for your server.
 
-If you don't have CORS enabled, users will see a CORS error/warning message in the console of the page making the request. 
+If you don't have CORS enabled, users will see a CORS error/warning message in the console of the page making the request.
 
 {{site.data.alerts.tip}} If enabling CORS is problematic, you could always just send developers the tooltips.json file and ask them to place it on their own server. {{site.data.alerts.end}}
 
@@ -224,14 +225,14 @@ $.get( url, function( data ) {
 
         });
     });
- 
+
 });
 </script>{% endraw %}
 ```
 
 View the <a target="_blank" href="{{ "/tooltips" | prepend: site.baseurl}}" class="noCrossRef">tooltip demo</a> for a demo.
 
-The `url` in the demo is relative, but you could equally point it to an absolute path on a remote host assuming CORS is enabled on the host. 
+The `url` in the demo is relative, but you could equally point it to an absolute path on a remote host assuming CORS is enabled on the host.
 
 The `each` method looks through all the JSON content to find the item whose `page.id` is equal to `basketball`. It then looks for an element on the page named `#basketball` and adds a `data-content` attribute to that element.
 
@@ -247,7 +248,7 @@ Here's the section on the page where the popover is inserted:
 
 Notice that I just have `id="basketball"` added to this popover element. Developers merely need to add a unique ID to each tooltip they want to pull in the help content. Either you tell developers the unique ID they should add, or ask them what IDs they added (or just tell them to use an ID that matches the field's name).
 
-In order to use jQuery and Bootstrap, you'll need to add the appropriate references in the head tags of your page: 
+In order to use jQuery and Bootstrap, you'll need to add the appropriate references in the head tags of your page:
 
 ```js
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
@@ -267,13 +268,13 @@ Again, see the <a class="noCrossRef" href="/tooltips">Tooltip Demo</a> for a dem
 
 Note that even though you reference a Bootstrap JS script, Bootstrap's popovers require you to initialize them using the above code as well &mdash; they aren't turned on by default.
 
-View the source code of the <a target="_blank" href="{{ "/tooltips" | prepend: site.baseurl}}" class="noCrossRef">tooltip demo</a> for the full comments. 
+View the source code of the <a target="_blank" href="{{ "/tooltips" | prepend: site.baseurl}}" class="noCrossRef">tooltip demo</a> for the full comments.
 
 ## 8. Create easy links to embed the help in your help site
 
-You might also want to insert the same content into different parts of your help site. For example, if you have tooltips providing definitions for fields, you'll probably want to create a page in your help that lists those same definitions. 
+You might also want to insert the same content into different parts of your help site. For example, if you have tooltips providing definitions for fields, you'll probably want to create a page in your help that lists those same definitions.
 
-You could use the same method developers use to pull help content into their applications. But it will probably be easier to simply use Jekyll's tags for doing it. 
+You could use the same method developers use to pull help content into their applications. But it will probably be easier to simply use Jekyll's tags for doing it.
 
 Here's how you would reuse the content:
 
@@ -314,7 +315,7 @@ Here's how you would reuse the content:
 </table>{% endraw %}
 ```
 
-And here's the code: 
+And here's the code:
 
 <h2>Reuse Demo</h2>
 

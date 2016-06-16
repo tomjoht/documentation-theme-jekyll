@@ -5,7 +5,7 @@ sidebar: mydoc_sidebar
 type: homepage
 ---
 
-## Overview 
+## Overview
 
 These brief instructions will help you get started quickly with the theme. The other topics in this help provide additional information and detail about working with other aspects of this theme and Jekyll.
 
@@ -114,7 +114,7 @@ entries:
   product: Jekyll Doc Theme
   version: 5.0
   folders:
-  - title: Overview 
+  - title: Overview
     output: web, pdf
     folderitems:
     - title: Some page
@@ -123,7 +123,7 @@ entries:
     - title: Another page
       url: /another-doc-page/
       output: web, pdf
-      
+
   - title: Configuration
     output: web
     folderitems:
@@ -243,15 +243,15 @@ When you want to insert paragraphs, notes, code snippets, or other matter in bet
 
 ```
 1.  First item
-    
+
     ```
     alert("hello");
     ```
-    
+
 2.  Second item
-    
+
     Some pig!
-    
+
 3.  Third item
 ```
 
@@ -265,6 +265,3 @@ If you want to use a simple system for managing links, see the "Managed Links" s
 ## Other instructions
 
 For other details in working with the theme, see the various sections in the sidebar.
-
-
-

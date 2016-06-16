@@ -6,22 +6,23 @@ last_updated: March 20, 2016
 summary: "You can implement advanced conditional logic that includes if statements, or statements, unless, and more. This conditional logic facilitates single sourcing scenarios in which you're outputting the same content for different audiences."
 sidebar: mydoc_sidebar
 permalink: /mydoc_conditional_logic/
+folder: mydoc
 ---
 
 ## About Liquid and conditional statements
 If you want to create different outputs for different audiences, you can do all of this using a combination of Jekyll's Liquid markup and values in your configuration file. This is how I previously configured the theme. I had different configuration files for each output. Each configuration file specified different values for product, audience, version, and so on. Then I had different build processes that would leverage the different configuration files. It seemed like a perfect implementation of DITA-like techniques with Jekyll.
 
-But I soon found that having lots of separate outputs for a project was undesirable. If you have 10 different outputs that have different nuances for different audiences, it's hard to manage and maintain. In this latest version of the theme, I consolidated all information into the same output to explicitly do away with the multi-output approach. 
+But I soon found that having lots of separate outputs for a project was undesirable. If you have 10 different outputs that have different nuances for different audiences, it's hard to manage and maintain. In this latest version of the theme, I consolidated all information into the same output to explicitly do away with the multi-output approach.
 
 As such, the conditional logic won't have as much play as it previously did. Instead of conditions, you'll probably want to incorporate [navtabs](mydoc_navtabs) to split up the information.
 
-However, you can still of course use conditional logic as needed. 
+However, you can still of course use conditional logic as needed.
 
 {{site.data.alerts.tip}} Definitely check out <a href="http://docs.shopify.com/themes/liquid-documentation/basics">Liquid's documentation</a> for more details about how to use operators and other liquid markup. The notes here are a small, somewhat superficial sample from the site.{{site.data.alerts.end}}
 
 ## Where to store filtering values
 
-You can filter content based on values that you have set either in your page's frontmatter, a config file, or in a file in your \_data folder. If you set the attribute in your config file, you need to restart the Jekyll server to see the changes. If you set the value in a file in your \_data folder or page frontmatter, you don't need to restart the server when you make changes. 
+You can filter content based on values that you have set either in your page's frontmatter, a config file, or in a file in your \_data folder. If you set the attribute in your config file, you need to restart the Jekyll server to see the changes. If you set the value in a file in your \_data folder or page frontmatter, you don't need to restart the server when you make changes.
 
 ## Conditional logic based on config file value
 
@@ -43,7 +44,7 @@ Here's some info about Windows ...
 ```
 {% endraw %}
 
-This uses simple `if-elsif` logic to determine what is shown (note the spelling of `elsif`). The `else` statement handles all other conditions not handled by the `if` statements. 
+This uses simple `if-elsif` logic to determine what is shown (note the spelling of `elsif`). The `else` statement handles all other conditions not handled by the `if` statements.
 
 Here's an example of `if-else` logic inside a list:
 
@@ -65,7 +66,7 @@ You don't need the `elsif` or `else`. You could just use an `if` (but be sure to
 
 ## Or operator
 
-You can use more advanced Liquid markup for conditional logic, such as an `or` command. See [Shopify's Liquid documentation](http://docs.shopify.com/themes/liquid-documentation/basics/operators) for more details. 
+You can use more advanced Liquid markup for conditional logic, such as an `or` command. See [Shopify's Liquid documentation](http://docs.shopify.com/themes/liquid-documentation/basics/operators) for more details.
 
 For example, here's an example using `or`:
 
@@ -148,7 +149,6 @@ Then create a folder called \_data_beta.
 
 ## Conditions versus includes
 
-If you have a lot of conditions in your text, it can get confusing. As a best practice, whenever you insert an `if` condition, add the `endif` at the same time. This will reduce the chances of forgetting to close the if statement. Jekyll won't build if there are problems with the liquid logic. 
+If you have a lot of conditions in your text, it can get confusing. As a best practice, whenever you insert an `if` condition, add the `endif` at the same time. This will reduce the chances of forgetting to close the if statement. Jekyll won't build if there are problems with the liquid logic.
 
 If your text is getting busy with a lot of conditional statements, consider putting a lot of content into includes so that you can more easily see where the conditions begin and end.
-

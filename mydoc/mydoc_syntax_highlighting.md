@@ -6,6 +6,7 @@ last_updated: March 20, 2016
 summary: "You can apply syntax highlighting to your code. This theme uses pygments and applies color coding based on the lexer you specify."
 sidebar: mydoc_sidebar
 permalink: /mydoc_syntax_highlighting/
+folder: mydoc
 ---
 
 ## About syntax highlighting
@@ -41,7 +42,7 @@ If you're using an HTML file, you can also use the `highlight` command with Liqu
 </pre>
 {% endraw %}
 
-It renders the same: 
+It renders the same:
 
 {% highlight ruby %}
     def foo
@@ -73,4 +74,3 @@ The keywords you must add to specify the highlighting (in the previous example, 
 * dotnet
 * xml
 * http
-

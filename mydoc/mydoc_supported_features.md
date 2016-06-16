@@ -1,6 +1,6 @@
 ---
 title: Supported features
-tags: 
+tags:
   - getting_started
 keywords: "features, capabilities, scalability, multichannel output, dita, hats, comparison, benefits"
 last_updated: "November 30, 2016"
@@ -8,6 +8,7 @@ summary: "If you're not sure whether Jekyll and this theme will support your req
 published: true
 sidebar: mydoc_sidebar
 permalink: /mydoc_supported_features/
+folder: mydoc
 ---
 
 Before you get into exploring Jekyll as a potential platform for help content, you may be wondering if it supports some basic features needed to fulfill your tech doc requirements. The following table shows what is supported in Jekyll and this theme.
@@ -18,12 +19,12 @@ Features | Supported | Notes
 --------|-----------|-----------
 Content re-use | Yes | Supports re-use through Liquid. You can re-use variables, snippets of code, entire pages, and more. In DITA speak, this includes conref and keyref.
 Markdown | Yes | You can author content using Markdown syntax. This is a wiki-like syntax for HTML that you can probably pick up in 10 minutes. Where Markdown falls short, you can use HTML. Where HTML falls short, you use Liquid, which is a scripting that allows you to incorporate more advanced logic.
-Responsive design | Yes | Uses Bootstrap framework for responsive design. 
+Responsive design | Yes | Uses Bootstrap framework for responsive design.
 Translation | Yes | I haven't done a translation project yet (just a pilot test). Here's the basic approach: Export the HTML pages and send them to a translation agency. Then create a new project for that language and insert the translated pages. Everything will be translated.
-Collaboration |  Yes | You collaborate with Jekyll projects the same way that developers collaborate with software projects. (You don't need a CMS.) Because you're working with text file formats, you can use any version control software (Git, Mercurial, Perforce, Bitbucket, etc.) as a CMS for your files. 
+Collaboration |  Yes | You collaborate with Jekyll projects the same way that developers collaborate with software projects. (You don't need a CMS.) Because you're working with text file formats, you can use any version control software (Git, Mercurial, Perforce, Bitbucket, etc.) as a CMS for your files.
 Scalability | Yes | Your site can scale to any size. It's up to you to determine how you will design the information architecture for your thousands of pages. You can choose what you display at first, second, third, fourth, and more levels, etc. Note that when your project has thousands of pages, the build time will be longer (maybe 1 minute per thousand pages?). It really depends on how many for loops you have iterating through the pages.
 Lightweight architecture | Yes | You don't need a LAMP stack (Linux, Apache, MySQL, PHP) architecture to get your site running. All of the building is done on your own machine, and you then push the static HTML files onto a server.
-Skinnability | Yes | You can skin your Jekyll site to look identical to pretty much any other site online. If you have a UX team, they can really skin and design the site using all the tools familiar to the modern designer -- JavaScript, HTML5, CSS, jQuery, and more. Jekyll is built on the modern web development stack rather than the XML stack (XSLT, XPath, XQuery). 
+Skinnability | Yes | You can skin your Jekyll site to look identical to pretty much any other site online. If you have a UX team, they can really skin and design the site using all the tools familiar to the modern designer -- JavaScript, HTML5, CSS, jQuery, and more. Jekyll is built on the modern web development stack rather than the XML stack (XSLT, XPath, XQuery).
 Support | Yes | The community for your Jekyll site isn't so much other tech writers (as is the case with DITA) but rather the wider web development community. [Jekyll Talk](http://talk.jekyllrb.com) is a great resource. So is Stack Overflow.
 Blogging features | Yes | There is a simple blogging feature. This appears as "news" and is intended to promote news that applies across products.
 Versioning | Yes | Jekyll doesn't version your files. You upload your files to a version control system such as Github. Your files are versioned there.
@@ -37,7 +38,7 @@ Open source | Yes | This theme is entirely open source. Every piece of code is o
 
 ## Features not available
 
-The following features are not available. 
+The following features are not available.
 
 Features | Supported | Notes
 --------|-----------|-----------
@@ -49,5 +50,3 @@ Standardized templates | No | You can create pages with any structure you want. 
 Integration with Swagger | No | You can link to a SwaggerUI output, but there is no built-in integration of SwaggerUI into this documentation theme.
 Templates for endpoints | No | Although static site generators work well with API documentation, there aren't any built-in templates specific to endpoints in this theme. You could construct your own, though.
 eBook output | No | There isn't an eBook output for the content.
-
-

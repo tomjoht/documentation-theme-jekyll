@@ -1,11 +1,12 @@
 ---
-title: iTerm profiles 
+title: iTerm profiles
 tags: [publishing]
 keywords: iterm, terminal, build shortcuts, mac
 last_updated: March 20, 2016
 summary: "You can set up profiles in iTerm to facilitate the build process with just a few clicks. This can make it a lot easier to quickly build multiple outputs."
 sidebar: mydoc_sidebar
 permalink: /mydoc_iterm_profiles/
+folder: mydoc
 ---
 
 ## About iTerm profiles
@@ -24,7 +25,7 @@ When you're working with tech docs, a lot of times you have builds that push fil
    JEKYLL_ENV=production jekyll serve
    ```
     Leave the Login shell option selected.
-   
+
 6. In the Working Directory section, select **Directory** and enter the directory for your project, such as **/Users/tjohnson/projects/documentation-theme-jekyll**.
 7. Close the profiles panel.
 

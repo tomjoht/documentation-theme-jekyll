@@ -6,6 +6,7 @@ last_updated: March 20, 2016
 summary: "Store images in the images folder and use the image.html include to insert images. This include has several options, including figcaptions, that extract the content from the formatting."
 sidebar: mydoc_sidebar
 permalink: /mydoc_images/
+folder: mydoc
 ---
 
 ## Image Include Template

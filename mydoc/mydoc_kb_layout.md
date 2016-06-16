@@ -7,6 +7,7 @@ summary: "This shows a sample layout for a knowledge base. Each square could lin
 sidebar: mydoc_sidebar
 permalink: /mydoc_kb_layout/
 toc: false
+folder: mydoc
 ---
 
 Here's the sample knowledge-base style layout:
@@ -76,8 +77,8 @@ Here's the sample knowledge-base style layout:
              </div>
          </div>
 </div>
-     
-    
+
+
 ## Generating a list of all pages with a certain tag
 
 If you don't want to link to a tag archive index, but instead want to list all pages that have a certain tag, you could use this code:
@@ -92,7 +93,7 @@ If you don't want to link to a tag archive index, but instead want to list all p
 <li><a href="{{ page.url | prepend: site.baseurl}}">{{page.title}}</a></li>
 {% endif %}
 {% endfor %}
-{% endfor %} 
+{% endfor %}
 </ul>{% endraw %}
 ```
 
@@ -108,5 +109,5 @@ Getting started pages:
 <li><a href="{{page.url | prepend: site.baseurl }}">{{page.title}}</a></li>
 {% endif %}
 {% endfor %}
-{% endfor %} 
+{% endfor %}
 </ul>

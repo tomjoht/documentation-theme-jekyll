@@ -6,6 +6,7 @@ keywords: exclusion, separating outputs, removing files from outputs
 summary: "By default, all the files in your Jekyll project are included in the output (this differs from DITA projects, which don't include files unless noted on the map). If you're single sourcing, you'll need to exclude the files that shouldn't be included in the output. The sidebar doesn't control inclusion or exclusion."
 sidebar: mydoc_sidebar
 permalink: /mydoc_exluding_files/
+folder: mydoc
 ---
 
 
@@ -14,7 +15,7 @@ By default, all files in your project are included in your output (regardless of
 
 ```
 
-exclude: 
+exclude:
   - mydoc_writers_*
   - bower_components
   - Gemfile
@@ -31,7 +32,7 @@ Here's the process I recommend. Put all files in the root directory of your proj
 In your exclude list for your beta project, specify it as follows:
 
 ```
-exclude: 
+exclude:
 - alpha_*
 ```
 
@@ -50,7 +51,7 @@ If you have more sophisticated exclusion, add another level to your file names. 
 Then you exclude files for your Alpha C++ project as follows:
 
 ```
-exclude: 
+exclude:
 
 - alpha_java_*
 - beta_*
@@ -76,7 +77,7 @@ There isn't a way to automatically exclude anything. By default, everything is i
 
 ## Excluding draft content
 
-If you're working on a draft, put it inside the \_drafts folder or add `published: false` in the frontmatter. The \_drafts folder is excluded by default, so you don't have to specify it in your exclude list. 
+If you're working on a draft, put it inside the \_drafts folder or add `published: false` in the frontmatter. The \_drafts folder is excluded by default, so you don't have to specify it in your exclude list.
 
 ## Limitations
 

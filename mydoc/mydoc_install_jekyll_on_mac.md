@@ -5,33 +5,34 @@ keywords:
 summary: "Installation of Jekyll on Mac is usually less problematic than on Windows. However, you may run into permissions issues with Ruby that you must overcome. You should also use Bundler to be sure that you have all the required gems and other utilities on your computer to make the project run. "
 sidebar: mydoc_sidebar
 permalink: /mydoc_install_jekyll_on_mac/
+folder: mydoc
 ---
 
 ## Ruby and RubyGems
 
 Ruby and [RubyGems](https://rubygems.org/pages/download) are usually installed by default on Macs. Open your Terminal and type `which ruby` and  `which gem` to confirm that you have Ruby and Rubygems. You should get a response indicating the location of Ruby and Rubygems.
- 
+
 If you get responses that look like this:
 
 ```
 /usr/local/bin/ruby
 ```
 
-and 
+and
 
 ```
 /usr/local/bin/gem
 ```
 
 Great! Skip down to the [Bundler](#bundler) section.
- 
+
 However, if your location is something like `/Users/MacBookPro/.rvm/rubies/ruby-2.2.1/bin/gem`, which points to your system location of Rubygems, you will likely run into permissions errors when trying to get a gem. A sample permissions error (triggered when you try to install the jekyll gem such as `gem install jekyll`) might look like this for Rubygems:
- 
+
 ```
  >ERROR:  While executing gem ... (Gem::FilePermissionError)
   You don't have write permissions for the /Library/Ruby/Gems/2.0.0 directory.
 ```  
-  
+
 Instead of changing the write permissions on your operating system's version of Ruby and Rubygems (which could pose security issues), you can install another instance of Ruby (one that is writable) to get around this.
 
 ## Install Homebrew
@@ -56,7 +57,7 @@ Now use Homebrew to install Ruby:
 brew install ruby
 ```
 
-Log out of terminal, and then then log back in. 
+Log out of terminal, and then then log back in.
 
 When you type `which ruby` and `which gem`, you should get responses like this:
 
@@ -76,7 +77,7 @@ Note that if you don't see these paths, try restarting your computer or try inst
 
 <h2 id="bundler">Install the Jekyll gem</h2>
 
-At this point you should have a writeable version of Ruby and Rubygem on your machine. 
+At this point you should have a writeable version of Ruby and Rubygem on your machine.
 
 Now use `gem` to install Jekyll:
 
@@ -90,7 +91,7 @@ You can now use Jekyll to create new Jekyll sites following the quick-start inst
 
 Some Jekyll themes will require certain Ruby gem dependencies. These dependencies are stored in something called a Gemfile, which is packaged with the Jekyll theme. You can install these dependencies through Bundler. (Although you don't need to install Bundler for this Documentation theme, it's a good idea to do so.)
 
-[Bundler](http://bundler.io/) is a package manager for RubyGems. You can use it to get all the gems (or Ruby plugins) that you need for your Jekyll project. 
+[Bundler](http://bundler.io/) is a package manager for RubyGems. You can use it to get all the gems (or Ruby plugins) that you need for your Jekyll project.
 
 You install Bundler by using the gem command with RubyGems:
 

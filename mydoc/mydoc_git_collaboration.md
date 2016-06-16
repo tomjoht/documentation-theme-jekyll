@@ -6,6 +6,7 @@ keywords: git, github, collaboration, interaction, file sharing, push
 published: false
 sidebar: mydoc_sidebar
 permalink: /mydoc_git_collaboration/
+folder: mydoc
 ---
 
 
@@ -25,7 +26,7 @@ hg diff
 hg revert
 hg remove
 hg update
-You have seen that it is possible to switch revision using hg update. 
+You have seen that it is possible to switch revision using hg update.
 clone
 
 commit
@@ -39,7 +40,7 @@ $ hg annotate [FILE] or $ hg blame [FILE]
 To search for a pattern in version controlled files, use hg grep; it will search this pattern in every version of the file and it will print the first one in which it appears, such as hg annotate. For example:
 $ hg grep new apache2.conf
 
-You can also print the content of a file at a given revision even without changing the current working directory using hg cat -r REVISION. 
+You can also print the content of a file at a given revision even without changing the current working directory using hg cat -r REVISION.
 
 Whenever changes have been committed but not yet pushed, the outgoing command lists all the changesets that are present in the current repository but not yet found in the destination (the ones that are candidates to be pushed), whereas the incoming command shows you the changesets that are found in the source repository but have not been pulled yet. So here, if you use the outgoing command, you will see
 
@@ -64,7 +65,7 @@ hg fetch. This extension acts as a combination of hg pull -u, hg merge and hg co
 
 
 
-i like 
+i like
 
 hg fetch does a pull and update at the same time
 you're prompted about any conflicts
@@ -82,7 +83,7 @@ hg diff
 hg revert
 hg remove
 hg update
-You have seen that it is possible to switch revision using hg update. 
+You have seen that it is possible to switch revision using hg update.
 clone
 addremove, which allows you to automatically add all new files and remove (from version control) files that have been deleted.
 log
@@ -97,7 +98,7 @@ $ hg annotate [FILE] or $ hg blame [FILE]
 To search for a pattern in version controlled files, use hg grep; it will search this pattern in every version of the file and it will print the first one in which it appears, such as hg annotate. For example:
 $ hg grep new apache2.conf
 
-You can also print the content of a file at a given revision even without changing the current working directory using hg cat -r REVISION. 
+You can also print the content of a file at a given revision even without changing the current working directory using hg cat -r REVISION.
 
 Whenever changes have been committed but not yet pushed, the outgoing command lists all the changesets that are present in the current repository but not yet found in the destination (the ones that are candidates to be pushed), whereas the incoming command shows you the changesets that are found in the source repository but have not been pulled yet. So here, if you use the outgoing command, you will see
 
@@ -117,7 +118,7 @@ Bookmarks are tags that move forward automatically to subsequent changes, leavin
 
 The default branch name in Mercurial is “default”.
 
-The slowest, safest way to create a branch with Mercurial is to make a new clone of the repository. this is really fascinating -- a clone is merely a branch. 
+The slowest, safest way to create a branch with Mercurial is to make a new clone of the repository. this is really fascinating -- a clone is merely a branch.
 
 Discarding a branch you don’t want any more is very easy with cloned branches. It’s as simple as rm -rf test-project-feature-branch. There’s no need to mess around with editing repository history, you just delete the damn thing.
 
@@ -150,7 +151,7 @@ This is a good tutorial: https://www.digitalocean.com/community/tutorials/how-to
 git lg
 
 git checkout master
-git merge search | git merge --no-ff search 
+git merge search | git merge --no-ff search
 
 the latter (--no-ff) keeps the additional information that these commits were made on a branch.
 then type a commit message (:wq)
@@ -159,7 +160,7 @@ git branch -d search
 git add . (works same as add --all)
 git commit am "my commit message" (this performs both adding and commit message at same time)
 
-with merge conflicts: 
+with merge conflicts:
 
 git status (shows you all the files that can't be added due to merge conflicts)
 fix the conflicts
@@ -179,4 +180,3 @@ From the interface, you can also create a pull request to merge all of the chang
 | see what has changed since last commit | `git diff` |
 | commit changes | `git commit` |
 | | |
-

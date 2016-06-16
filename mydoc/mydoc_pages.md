@@ -6,10 +6,11 @@ last_updated: March 20, 2016
 summary: "This theme primarily uses pages. You need to make sure your pages have the appropriate frontmatter. One frontmatter tag your users might find helpful is the summary tag. This functions similar in purpose to the shortdesc element in DITA."
 sidebar: mydoc_sidebar
 permalink: /mydoc_pages/
+folder: mydoc
 ---
 
 ## Where to author content
-Use a text editor such as Sublime Text, WebStorm, IntelliJ, or Atom to create pages. 
+Use a text editor such as Sublime Text, WebStorm, IntelliJ, or Atom to create pages.
 
 My preference is IntelliJ/WebStorm, since it will treat all files in your theme as belonging to a project. This allows you to easily search for instances of keywords, do find-and-replace operations, or do other actions that apply across the whole project.
 
@@ -17,7 +18,7 @@ My preference is IntelliJ/WebStorm, since it will treat all files in your theme 
 
 By default, everything in your project is included in the output. You can exclude all files that don't belong to that project by specifying the file name, the folder name, or by using wildcards in your configuration file:
 
-exclude: 
+exclude:
 
 - filename.md
 - subfolder_name/
@@ -59,7 +60,7 @@ The following table describes each of the frontmatter that you can use with this
 | **datatable** | Optional | 'true'. If you add `datatable: true` in the frontmatter, scripts for the [jQuery Datatables plugin](https://www.datatables.net/) get included on the page. You can see the scripts that conditionally appear by looking in the \_layouts/default.html page. |
 | toc | Optional | If you specify `toc: false` in the frontmatter, the page won't have the table of contents that appears below the title. The toc refers to the list of jump links below the page title, not the sidebar navigation. You probably want to hide the TOC on the homepage and product landing pages.|
 
-## Colons in page titles 
+## Colons in page titles
 
 If you want to use a colon in your page title, you must enclose the title's value in quotation marks.
 
@@ -72,7 +73,7 @@ If you add `published: false` in the frontmatter, your page won't be published. 
 ## Markdown or HTML format
 
 Pages can be either Markdown or HTML format (specified through either an .md or .html file extension).
- 
+
 If you use Markdown, you can also include HTML formatting where needed. But not vice versa &mdash; if you use HTML (as your file extension), you can't insert Markdown content in the file.
 
 Also, if you use HTML inside a Markdown file, you cannot use Markdown inside of HTML. But you can use HTML inside of Markdown.
@@ -83,11 +84,11 @@ If you have a lot of HTML, as long as the top and bottom tags of the HTML are fl
 
 ## Where to save pages
 
-You can store your pages in any folder structures you want, with any level of folder nesting. The site output will pull all of those pages out of their folders and put them into the root directory. Check out the \_site folder, which is where Jekyll is generated, to see the difference between your project's structure and the resulting site output. 
- 
+You can store your pages in any folder structures you want, with any level of folder nesting. The site output will pull all of those pages out of their folders and put them into the root directory. Check out the \_site folder, which is where Jekyll is generated, to see the difference between your project's structure and the resulting site output.
+
 ## Page names
 
-I recommend prefixing your page names with the product, such as "mydoc_pages" instead of just "pages." This way if you have other products that also hae topics with generic names such as "pages," there won't be naming conflicts. 
+I recommend prefixing your page names with the product, such as "mydoc_pages" instead of just "pages." This way if you have other products that also hae topics with generic names such as "pages," there won't be naming conflicts.
 
 Additionally, consider adding the product name in parentheses after the title, such as "Pages (Mydoc)" so that users can clearly navigate different topics for each product.
 
@@ -121,12 +122,12 @@ You can create other layouts inside the layouts folder. If you create a new layo
 
 ## Comments
 
-Disqus, a commenting system, is integrated into the theme. In the configuration file, specify the Disqus code for the universal code, and Disqus will appear. If you don't add a Disqus value, the Disqus form isn't included. 
+Disqus, a commenting system, is integrated into the theme. In the configuration file, specify the Disqus code for the universal code, and Disqus will appear. If you don't add a Disqus value, the Disqus form isn't included.
 
 ## Custom keyboard shortcuts
 Some of the Jekyll syntax can be slow to create. Using a utility such as [aText](https://www.trankynam.com/atext/) can make creating content a lot of faster.
 
-For example, with my aText configuration, when I type `jlink`, aText replaces it with {% raw %}`<a href="{{ "/page" | prepend: site.baseurl }}">page</a>`{% endraw %}. 
+For example, with my aText configuration, when I type `jlink`, aText replaces it with {% raw %}`<a href="{{ "/page" | prepend: site.baseurl }}">page</a>`{% endraw %}.
 
 You get aText from the App Store on a Mac for about $5. However, the Mac Store version of aText won't work on Mac OSX El Capitan due to sandbox security restrictions, so you need to download the app outside of the App Store to make it work.
 

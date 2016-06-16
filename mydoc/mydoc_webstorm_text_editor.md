@@ -5,6 +5,7 @@ last_updated: March 20, 2016
 summary: "You can use a variety of text editors when working with a Jekyll project. WebStorm from IntelliJ offers a lot of project-specific features, such as find and replace, that make it ideal for working with tech comm projects."
 sidebar: mydoc_sidebar
 permalink: /mydoc_webstorm_text_editor/
+folder: mydoc
 ---
 
 ## About text editors and WebStorm
@@ -20,7 +21,7 @@ By default, WebStorm comes packaged with a lot more functionality than you proba
 
 You can set the way the tab works, and whether it uses spaces or a tab character. For details, see [Code Style. JavaScript](https://www.jetbrains.com/help/webstorm/2016.1/code-style-javascript.html?origin=old_help#d658997e132) in WebStorm's help.
 
-On a Mac, go to **WebStorm | Preferences | Editor | Code Style | Other File Types**. Don't select the "Use tab character" check box. Set **3** for the **Tab size** and **Indent** check boxes. 
+On a Mac, go to **WebStorm | Preferences | Editor | Code Style | Other File Types**. Don't select the "Use tab character" check box. Set **3** for the **Tab size** and **Indent** check boxes.
 
 On Windows, go to **File | Settings | Editor | Code Style | Other File Types** to access the same menu.
 
@@ -38,7 +39,7 @@ When you're searching for content, you don't want to edit any file that appears 
 
 ## Set tabs to 3 spaces
 
-You can set the default number of spaces a tab sets, including whether Webstorm uses a tab character or spaces. You want spaces, and you want to set this to default number of spaces to ```3``` spaces instead of 4. Note that this is due to the way Kramdown handles the continuation of lists. 
+You can set the default number of spaces a tab sets, including whether Webstorm uses a tab character or spaces. You want spaces, and you want to set this to default number of spaces to ```3``` spaces instead of 4. Note that this is due to the way Kramdown handles the continuation of lists.
 
 When you intercept a list with a paragraph or code sample, the indentation of the intercepting paragraph or list must align with the beginning of the first character after the space in the list item numbering. This is typically 3 spaces, not 4. Note that this style differs from the Github-flavored Markdown style. (Welcome to the world of subtle and infuriating discrepancies between Markdown flavors.)
 

@@ -6,13 +6,14 @@ last_updated: March 20, 2016
 summary: "You can automatically link together topics belonging to the same series. This helps users know the context within a particular process."
 sidebar: mydoc_sidebar
 permalink: /mydoc_series/
+folder: mydoc
 ---
 
 ## Using series for pages
 
 You create a series by looking for all pages within a tag namespace that contain certain frontmatter. Here's a <a href="{{ "/mydoc_seriesdemo1" | prepend: site.baseurl }}" class="noCrossRef">demo</a>.
 
-## 1. Create the series button 
+## 1. Create the series button
 
 First create an include that contains your series button:
 
@@ -40,7 +41,7 @@ First create an include that contains your series button:
 ```
 {% endraw %}
 
-Change "ACME series" to the name of your series. 
+Change "ACME series" to the name of your series.
 
 Save this in your \_includes/custom folder as something like series\_acme.html.
 
@@ -48,7 +49,7 @@ Save this in your \_includes/custom folder as something like series\_acme.html.
 
 ## 2. Create the "next" include
 
-Now create another include for the Next button at the bottom of the page. Copy the following code, changing the series name to your series'name: 
+Now create another include for the Next button at the bottom of the page. Copy the following code, changing the series name to your series'name:
 
 {% raw %}
 ```html
@@ -65,9 +66,9 @@ Now create another include for the Next button at the bottom of the page. Copy t
 ```
 {% endraw %}
 
-Change "acme" to the name of your series. 
+Change "acme" to the name of your series.
 
-Save this in your \_includes/custom/mydoc folder as series\_acme\_next.html. 
+Save this in your \_includes/custom/mydoc folder as series\_acme\_next.html.
 
 ## 3. Add the correct frontmatter to each of your series pages
 
@@ -85,7 +86,7 @@ Additionally, if your page names are prefaced with numbers, such as "1. Download
 ## 4. Add links to the series button and next button on each page.
 
 On each series page, add a link to the series button at the top and a link to the next button at the bottom.
- 
+
 {% raw %}
 ```liquid
 <!-- your frontmatter goes here -->

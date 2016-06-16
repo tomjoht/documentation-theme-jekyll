@@ -6,10 +6,11 @@ last_updated: March 20, 2016
 summary: "You can insert notes, tips, warnings, and important alerts in your content. These notes make use of Bootstrap styling and are available through data references such as site.data.alerts.note."
 sidebar: mydoc_sidebar
 permalink: /mydoc_alerts/
+folder: mydoc
 ---
 
 ## About alerts
-Alerts are little warnings, info, or other messages that you have called out in special formatting. In order to use these alerts or callouts, just reference the appropriate value stored in the alerts.yml file as described in the following sections.
+Alerts are little warnings, info, or other messages that you have called out in special formatting. In order to use these alerts or callouts, reference the appropriate value stored in the alerts.yml file as described in the following sections.
 
 ## Alerts
 
@@ -64,11 +65,11 @@ These alerts leverage includes stored in the \_include folder. The `content` opt
 {% raw %}<div markdown="span" class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> {{include.content}}{% endraw %}</div>
 ```
 
-The content in `content="This is my note."` gets inserted into the `{% raw %}{{include.content}}}{% endraw %}` part of the template. You can follow this same pattern to build additional includes. See this [Jekyll screencast on includes](http://jekyll.tips/jekyll-casts/includes/) for more information.
+The content in `content="This is my note."` gets inserted into the `{% raw %}{{include.content}}}{% endraw %}` part of the template. You can follow this same pattern to build additional includes. See this [Jekyll screencast on includes](http://jekyll.tips/jekyll-casts/includes/) or [this screencast](https://www.youtube.com/watch?v=TJcn_PJ2100) for more information.
 
 ## Callouts
 
-There's another type of callout available called callouts. This format is typically used for longer callout that spans mreo than one or two paragraphs, but really it's just a stylistic preference whether to use an alert or callout.
+There's another type of callout available called callouts. This format is typically used for longer callout that spans more than one or two paragraphs, but really it's just a stylistic preference whether to use an alert or callout.
 
 Here's the syntax for a callout:
 
@@ -103,7 +104,7 @@ Here's an example of each different type of callout:
 
 {% include callout.html content="This is my **warning** type callout. It has a border on the left whose color you define by passing a type parameter." type="warning" %}
 
-Now that in contrast to alerts, callouts don't include the alert word (note, tip, warning, or important).
+Now that in contrast to alerts, callouts don't include the alert word (note, tip, warning, or important). You have to manually include it inside `content` if you want it.
 
 To include paragraph breaks, use `<br/><br/>` inside the callout:
 
@@ -114,6 +115,51 @@ To include paragraph breaks, use `<br/><br/>` inside the callout:
 Here's the result:
 
 {% include callout.html content="**Important information**: This is my callout. It has a border on the left whose color you define by passing a type parameter. I typically use this style of callout when I have more information that I want to share, often spanning multiple paragraphs. <br/><br/>Here I am starting a new paragraph, because I have lots of information to share. You may wonder why I'm using line breaks instead of paragraph tags. This is because Kramdown processes the Markdown here as a span rather than a div (for whatever reason). Be grateful that you can be using Markdown at all inside of HTML. That's usually not allowed in Markdown syntax, but it's allowed here." type="primary" %}
+
+## Use Liquid variables inside parameters with includes
+
+Suppose you have a product name or some other property that you're storing as a variable in your configuration file (\_congfig.yml), and you want to use this variable in the `content` parameter for your alert or callout. You will get an error if you use Liquid syntax inside a include parameter. For example, this syntax will produce an error:
+
+```
+{%raw%}{% include note.html content="The {{site.company}} is pleased to announce an upcoming release." %}{%endraw%}
+```
+
+The error will say something like this:
+
+```
+Liquid Exception: Invalid syntax for include tag. File contains invalid characters or sequences: ... Valid syntax: {%raw%}{% include file.ext param='value' param2='value' %}{%endraw%}
+```
+
+To use variables in your include parameters, you must use the "variable parameter" approach. First you use a `capture` tag to capture some content. Then you reference this captured tag in your include. Here's an example.
+
+In my site configuration file (\_congfig.yml), I have a property called `company_name`.
+
+```yaml
+company_name: Your company
+```
+
+I want to use this variable in my note include.
+
+First, before the note I capture the content for my note's include like this:
+
+```liquid
+{%raw%}{% capture company_note %}The {{site.company_name}} company is pleased to announce an upcoming release.{% endcapture %}{%endraw%}
+```
+
+Now reference the `company_note` in your `include` parameter like this:
+
+```
+{%raw%}{% include note.html content=company_note}{%endraw%}
+```
+
+Here's the result:
+
+{% capture company_note %}The {{site.company_name}} is pleased to announce an upcoming release.{% endcapture %}
+{% include note.html content=company_note %}
+
+Note the omission of quotation marks with variable parameters.
+
+Also note that instead of storing the variable in your site's configuration file, you could also put the variable in your page's frontmatter. Then instead of using `{%raw%}{{site.company_name}}{%endraw%}` you would use `{%raw%}{{page.company_name}}{%endraw%}`.
 
 ## Markdown inside of callouts and alerts
 

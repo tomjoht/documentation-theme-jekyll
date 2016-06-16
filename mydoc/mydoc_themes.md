@@ -6,6 +6,7 @@ last_updated: March 20, 2016
 summary: "You can choose between two different themes (one green, the other blue) for your projects. The theme CSS is stored in the CSS folder and configured in the configuration file for each project."
 sidebar: mydoc_sidebar
 permalink: /mydoc_themes/
+folder: mydoc
 ---
 
 
@@ -19,6 +20,6 @@ In the \_includes/head.html file, specify the theme file you want the output to 
 ```
 
 ## Theme differences
-The differences between the themes is fairly minimal. The main navigation bar, sidebar, buttons, and heading colors change color. That's about it. 
+The differences between the themes is fairly minimal. The main navigation bar, sidebar, buttons, and heading colors change color. That's about it.
 
 In a more sophisticated theming approach, you could use Sass files to generate rules based on options set in a data file, but I kept things simple here.

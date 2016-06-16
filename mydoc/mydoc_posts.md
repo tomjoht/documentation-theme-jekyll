@@ -6,15 +6,16 @@ last_updated: Feb 25, 2016
 summary: "You can use posts when you want to create blogs or news type of content."
 sidebar: mydoc_sidebar
 permalink: /mydoc_posts/
+folder: mydoc
 ---
 
 ## About posts
- 
-Posts are typically used for blogs or other news information because they contain a date and are sorted in reverse chronological order. 
+
+Posts are typically used for blogs or other news information because they contain a date and are sorted in reverse chronological order.
 
 You create a post by adding a file in the \_posts folder that is named yyyy-mm-dddd-permalink.md, which might be 2016-02-25-my-latest-updates.md. You can use any number of subfolders here that you want.
 
-Posts use the post.html layout in the \_layouts folder when you are viewing the post. 
+Posts use the post.html layout in the \_layouts folder when you are viewing the post.
 
 The news.html file in the root directory shows a reverse chronological listing of the 10 latest posts
 
@@ -39,6 +40,3 @@ tags: content_types
 | **keywords** | Optional | Synonyms and other keywords for the page. This information gets stuffed into the page's metadata to increase SEO. The user won't see the keywords, but if you search for one of the keywords, it will be picked up by the search engine.  |
 | **summary** | Optional | A 1-2 word sentence summarizing the content on the page. This gets formatted into the summary section in the page layout. Adding summaries is a key way to make your content more scannable by users (check out [Jakob Nielsen's site](http://www.nngroup.com/articles/corporate-blogs-front-page-structure/) for a great example of page summaries.) The only drawback with summaries is that you can't use variables in them. |
 | **permalink**| Required | This theme uses permalinks to facilitate the linking. You specify the permalink want for the page, and the \_site output will put the page into the root directory when you publish. The page will appear inside a folder by the same name, with the actual page being index.html. Browsers will automatically show the index.html file inside of any folder, so permalinks avoid the .html extension with file names. Permalink names don't have to match your file names, but it might be easier to keep them in sync. |
-
-
-

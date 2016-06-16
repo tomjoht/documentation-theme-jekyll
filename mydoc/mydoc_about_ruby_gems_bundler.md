@@ -5,23 +5,24 @@ keywords:
 summary: "Ruby is a programming language you must have on your computer in order to build Jekyll locally. Ruby has various gems (or plugins) that provide various functionality. Each Jekyll project usually requires certain gems."
 sidebar: mydoc_sidebar
 permalink: /mydoc_about_ruby_gems_etc/
+folder: mydoc
 ---
 
 ## About Ruby
 
-Jekyll runs on Ruby, a programming language. You have to have Ruby on your computer in order to run Ruby-based programs like Jekyll. Ruby is installed on the Mac by default, but you must add it to Windows. 
+Jekyll runs on Ruby, a programming language. You have to have Ruby on your computer in order to run Ruby-based programs like Jekyll. Ruby is installed on the Mac by default, but you must add it to Windows.
 
 ## About Ruby Gems
 
 Ruby has a number of plugins referred to as "gems." Just because you have Ruby doesn't mean you have all the necessary Ruby gems that your program needs to run. Gems provide additional functionality for Ruby programs. There are thousands of [Rubygems](https://rubygems.org/) available for you to use.
 
-Some gems depend on other gems for functionality. For example, the Jekyll gem might depend on 20 other gems that must also be installed. 
+Some gems depend on other gems for functionality. For example, the Jekyll gem might depend on 20 other gems that must also be installed.
 
-Each gem has a version associated with it, and not all gem versions are compatible with each other. 
+Each gem has a version associated with it, and not all gem versions are compatible with each other.
 
 ## Rubygem package managers
- 
-[Bundler](http://bundler.io/) is a gem package manager for Ruby, which means it goes out and gets all the gems you need for your Ruby programs. If you tell Bundler you need the [jekyll gem](https://rubygems.org/gems/jekyll), it will retrieve all the dependencies on the jekyll gem as well -- automatically. 
+
+[Bundler](http://bundler.io/) is a gem package manager for Ruby, which means it goes out and gets all the gems you need for your Ruby programs. If you tell Bundler you need the [jekyll gem](https://rubygems.org/gems/jekyll), it will retrieve all the dependencies on the jekyll gem as well -- automatically.
 
 Not only does Bundler retrieve the right gem dependencies, but it's smart enough to retrieve the right versions of each gem. For example, if you get the [github-pages](https://rubygems.org/gems/github-pages) gem, it will retrieve all of these other gems:
 
@@ -51,17 +52,17 @@ terminal-table ~> 1.
 ```
 
 See how Bundler retrieved version 3.0.3 of the jekyll gem, even though (as of this writing) the latest version of the jekyll gem is 3.1.2? That's because github-pages is only compatible up to jekyll 3.0.3. Bundler handles all of this dependency and version compatibility for you.
- 
+
  Trying to keep track of which gems and versions are appropriate for your project can be a nightmare. This is the problem Bundler solves. As explained on [Bundler.io](http://bundler.io/):
- 
-> Bundler provides a consistent environment for Ruby projects by tracking and installing the exact gems and versions that are needed. 
+
+> Bundler provides a consistent environment for Ruby projects by tracking and installing the exact gems and versions that are needed.
 >
 > Bundler is an exit from dependency hell, and ensures that the gems you need are present in development, staging, and production. Starting work on a project is as simple as bundle install.
 
 ## Gemfiles
 
 Bundler looks in a project's "Gemfile" (no file extension) to see which gems are required by the project. The Gemfile lists the source and then any gems, like this:
- 
+
 ```
 source "https://rubygems.org"
 
@@ -71,7 +72,7 @@ gem 'jekyll'
 
 The source indicates the site where Bundler will retrieve the gems: [https://rubygems.org](https://rubygems.org).
 
-The gems it retrieves are listed separately on each line. 
+The gems it retrieves are listed separately on each line.
 
 Here no versions are specified. Sometimes gemfiles will specify the versions like this:
 
@@ -86,7 +87,7 @@ To specify a subset of versions, the Gemfile looks like this:
 ```
 gem 'jekyll', '~> 2.3'
 ```
-The `~>` sign means greater than or equal to the *last digit before the last period in the number*. 
+The `~>` sign means greater than or equal to the *last digit before the last period in the number*.
 
 Here it will get any gem equal to 2.3 but less than 3.0.
 
@@ -249,4 +250,3 @@ BUNDLED WITH
 You can always delete the Gemlock file and run Bundle install again to get the latest versions. You can also run `bundle update`, which will ignore the Gemlock file to get the latest versions of each gem.
 
 To learn more about Bundler, see [Bundler's Purpose and Rationale](http://bundler.io/rationale.html).
-

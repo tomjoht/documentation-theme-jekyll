@@ -6,6 +6,7 @@ last_updated: March 20, 2016
 summary: "You use various build arguments with your Jekyll project. You can also create shell scripts to act as shortcuts for long build commands. You can store the commands in iTerm as profiles as well."
 sidebar: mydoc_sidebar
 permalink: /mydoc_build_arguments/
+folder: mydoc
 ---
 
 ## How to build Jekyll sites
@@ -63,7 +64,3 @@ kill -9 $(ps aux | grep '[j]ekyll' | awk '{print $2}')
 I recommend creating a profile in iTerm that stores this command. Here's what the iTerm settings look like:
 
 ![iTerm profile settings to kill all Jekyll]({{ "/images/killalljekyll.png" | prepend: site.baseurl }})
-
-
-
-

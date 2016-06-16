@@ -2,6 +2,7 @@
 title: Introduction
 sidebar: mydoc_sidebar
 permalink: /mydoc_introduction/
+folder: mydoc
 ---
 
 ## Overview

@@ -6,6 +6,7 @@ last_updated: March 20, 2016
 summary: "You can integrate font icons through the Font Awesome and Glyphical Halflings libraries. These libraries allow you to embed icons through their libraries delivered as a link reference. You don't need any image libraries downloaded in your project."
 sidebar: mydoc_sidebar
 permalink: /mydoc_icons/
+folder: mydoc
 ---
 
 ## Font icon options
@@ -132,7 +133,7 @@ Then any element with the attribute `fa-10x` will be enlarged 1700%.
 
 ## Glyphicon icons available
 
-Glyphicons work similarly to Font Awesome. Go to the [Glyphicons library](http://getbootstrap.com/components/#glyphicons) to see the icons available. 
+Glyphicons work similarly to Font Awesome. Go to the [Glyphicons library](http://getbootstrap.com/components/#glyphicons) to see the icons available.
 
 Although the Glyphicon Halflings library doesn't provide the scalable classes like Font Awesome, there's a [StackOverflow trick](http://stackoverflow.com/questions/24960201/how-do-i-make-glyphicons-bigger-change-size)  to make the icons behave in a similar way. This theme's stylesheet (customstyles.css) includes the following to the stylesheet:
 
@@ -153,7 +154,7 @@ And here's the result:
 
 <span class="glyphicon glyphicon-globe gi-5x"></span>
 
-Glypicons use the `span` element instead of `i` to attach their classes. 
+Glypicons use the `span` element instead of `i` to attach their classes.
 
 Here's another example:
 
@@ -211,15 +212,14 @@ Here's the result:
 You can use any of the following:
 {% raw %}
 ```
-{{site.data.alerts.callout_default}} 
-{{site.data.alerts.callout_primary}} 
-{{site.data.alerts.callout_success}} 
-{{site.data.alerts.callout_info}} 
-{{site.data.alerts.callout_warning}} 
+{{site.data.alerts.callout_default}}
+{{site.data.alerts.callout_primary}}
+{{site.data.alerts.callout_success}}
+{{site.data.alerts.callout_info}}
+{{site.data.alerts.callout_warning}}
 ```
 {% endraw %}
 
-The only difference is the color of the left bar. 
+The only difference is the color of the left bar.
 
 Callouts are explained in a bit more detail in <a href="{{ "/mydoc_alerts" | prepend: site.baseurl }}">Alerts</a>.
-

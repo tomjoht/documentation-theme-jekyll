@@ -6,6 +6,7 @@ keywords: sidebar, accordion, yaml, iteration, for loop, navigation, attributes,
 summary: "The sidebar navigation uses a jQuery component called Navgoco. The sidebar is a somewhat complex part of the theme that remembers your current page, highlights the active item, stays in a fixed position on the page, and more. This page explains a bit about how the sidebar was put together."
 sidebar: mydoc_sidebar
 permalink: /mydoc_sidebar_navigation/
+folder: mydoc
 ---
 
 ## Navgoco foundation
@@ -20,11 +21,11 @@ In short, the sidebar has some complex logic here. I've integrated Navgoco's fea
 
 ## Accordion sidebar feature
 
-The sidebar.html file (inside the _includes folder) contains the `.navgoco` method called on the `#mysidebar` element. 
+The sidebar.html file (inside the _includes folder) contains the `.navgoco` method called on the `#mysidebar` element.
 
-There are some options to set within the `.navgoco` method. The only noteworthy option is `accordion`. This option makes it so when you expand a section, the other sections collapse. It's a way of keeping your navigation controls condensed. 
+There are some options to set within the `.navgoco` method. The only noteworthy option is `accordion`. This option makes it so when you expand a section, the other sections collapse. It's a way of keeping your navigation controls condensed.
 
-The value for `accordion` is a Boolean (`true` or `false`). By default, the `accordion` option is set as `true`. If you don't want the accordion, set it to `false`. Note that there's also a block of code near the bottom of sidebar.html that is commented out. Uncomment out that section to have the Collapse all and Expand All buttons appear. 
+The value for `accordion` is a Boolean (`true` or `false`). By default, the `accordion` option is set as `true`. If you don't want the accordion, set it to `false`. Note that there's also a block of code near the bottom of sidebar.html that is commented out. Uncomment out that section to have the Collapse all and Expand All buttons appear.
 
 There's a danger with setting the accordion to `false`. If you click Expand All and the sidebar expands beyond the dimensions of the browser, users will be stuck. When that happens, it's hard to collapse it. As a best practice, leave the sidebar's accordion option set to `true`.
 
@@ -38,7 +39,7 @@ Depending on your content, you may need to adjust `800` pixel number. If your si
 
 ## Opening sidebar links into external pages
 
-In the attributes for each sidebar item, if you use `external_url` instead of `url`, the theme will insert the link into an `a href` element that opens in a blank target. 
+In the attributes for each sidebar item, if you use `external_url` instead of `url`, the theme will insert the link into an `a href` element that opens in a blank target.
 
 For example, the sidebar.html file contains the following code:
 
@@ -49,11 +50,11 @@ For example, the sidebar.html file contains the following code:
 ```
 {% endraw %}
 
-You can see that the `external_url` is a condition that applies a different formatting. Although this feature is available, I recommend putting any external navigation links in the top navigation bar instead of the side navigation bar. 
+You can see that the `external_url` is a condition that applies a different formatting. Although this feature is available, I recommend putting any external navigation links in the top navigation bar instead of the side navigation bar.
 
 ## Sidebar item highlighting
 
-The sidebar.html file inserts an `active` class into the sidebar element when the `url` attribute in the sidebar data file matches the page URL. 
+The sidebar.html file inserts an `active` class into the sidebar element when the `url` attribute in the sidebar data file matches the page URL.
 
 For example, the sidebar.html file contains the following code:
 
@@ -64,15 +65,15 @@ For example, the sidebar.html file contains the following code:
 ```
 {% endraw %}
 
-If the `page.url` matches the `subfolderitem.url`, then an `active` class gets applied. If not, the `active` class does not get applied. 
+If the `page.url` matches the `subfolderitem.url`, then an `active` class gets applied. If not, the `active` class does not get applied.
 
-The `page.url` in Jekyll is a site-wide variable. If you insert {% raw %}`{{page.url}}`{% endraw %} on a page, it will render as follows: {{page.url}}. The `url` attribute in the sidebar item must match the page URL in order to get the `active` class applied. 
+The `page.url` in Jekyll is a site-wide variable. If you insert {% raw %}`{{page.url}}`{% endraw %} on a page, it will render as follows: {{page.url}}. The `url` attribute in the sidebar item must match the page URL in order to get the `active` class applied.
 
 This is why the `url` value in the sidebar data file looks something like this:
 
 ```yaml
     - title: Understanding how the sidebar works
-      url: /mydoc_understand_sidebar/ 
+      url: /mydoc_understand_sidebar/
       output: web, pdf
 ```
 

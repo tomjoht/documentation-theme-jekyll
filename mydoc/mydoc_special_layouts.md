@@ -6,6 +6,7 @@ last_updated: March 20, 2016
 summary: "This theme has a few special layouts. Special layouts include the JS files they need directly in the page. The JavaScript for each special layout does not load by default for every page in the site."
 sidebar: mydoc_sidebar
 permalink: /mydoc_special_layouts/
+folder: mydoc
 ---
 
 
@@ -26,5 +27,3 @@ If you have a long JSON message you're documenting, see the {{site.data.mydoc_ur
 ## Shuffle layout
 
 If you want a dynamic card layout that allows you to filter the cards, see {{site.data.mydoc_urls.mydoc_shuffle.link}}. This uses the Shuffle JS library.
-
-

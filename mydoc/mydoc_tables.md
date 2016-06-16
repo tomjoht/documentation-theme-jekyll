@@ -7,6 +7,7 @@ datatable: true
 summary: "You can format tables using either multimarkdown syntax or HTML. You can also use jQuery datatables (a plugin) if you need more robust tables."
 sidebar: mydoc_sidebar
 permalink: /mydoc_tables/
+folder: mydoc
 ---
 
 {% unless site.output == "pdf" %}
@@ -25,7 +26,7 @@ $(document).ready(function(){
 
 ## Multimarkdown Tables
 
-You can use Multimarkdown syntax for tables. The following shows a sample: 
+You can use Multimarkdown syntax for tables. The following shows a sample:
 
 ```
 Column 1 | Column 2
@@ -65,7 +66,7 @@ The available options for the datable are described in the [datatable documentat
 
 Additionally, you must add a class of `display` to your tables. (You can change the class, but then you'll need to change the trigger above from `table.display` to whatever class you want to you. You might have different triggers with different options for different tables.)
 
-Since Markdown doesn't allow you to add classes to tables, you'll need to use HTML for any datatables. Here's an example: 
+Since Markdown doesn't allow you to add classes to tables, you'll need to use HTML for any datatables. Here's an example:
 
 ```html
 <table id="sampleTable" class="display">
@@ -124,7 +125,7 @@ This renders to the following:
    <tbody>
       <tr>
          <td>Apples</td>
-         <td>A small, somewhat round and often red-colored, crispy fruit grown on trees. 
+         <td>A small, somewhat round and often red-colored, crispy fruit grown on trees.
          </td>
          <td>Fruit</td>
          <td>Fuji</td>

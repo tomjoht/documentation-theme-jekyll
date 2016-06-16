@@ -6,6 +6,7 @@ last_updated: March 20, 2016
 summary: "The search feature uses JavaScript to look for keyword matches in a JSON file. The results show instant matches, but it doesn't provide a search results page like Google. Also, sometimes invalid formatting can break the JSON file."
 sidebar: mydoc_sidebar
 permalink: /mydoc_search_configuration/
+folder: mydoc
 ---
 
 ## About search
@@ -27,9 +28,9 @@ If any formatting in the search.json file is invalid (in the build), search won'
 
 If this happens, go directly to the search.json file in your browser, and then copy the content. Go to a [JSON validator](http://jsonlint.com/) and paste in the content. Look for the line causing trouble. Edit the file to either exclude the page from search or fix the syntax so that it doesn't invalidate the JSON. (Note that tabs in the body will invalidate JSON.)
 
-The search.json file already tries to strip out content that would otherwise make the JSON invalid. 
+The search.json file already tries to strip out content that would otherwise make the JSON invalid.
 
-## Including the body field in search 
+## Including the body field in search
 I've found that include the `body` field in the search creates too many problems, and so I've removed `body` from the search. You can see the results of including the `body` by adding this along with the other fields in search.json:
 
 {% raw %}
@@ -108,7 +109,7 @@ The \_includes/topnav.html file then makes use of these values:
 </li>
 ```
 
-Where you see `{url}` and `{title}`, the search is retrieving the values for these as specified in the search.json file. 
+Where you see `{url}` and `{title}`, the search is retrieving the values for these as specified in the search.json file.
 
 ## More robust search
 

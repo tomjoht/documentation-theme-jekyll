@@ -7,6 +7,7 @@ summary: "When creating links, you can use standard HTML or Markdown formatting.
 last_updated: March 20, 2016
 sidebar: mydoc_sidebar
 permalink: /mydoc_hyperlinks/
+folder: mydoc
 ---
 
 ## Create an external link
@@ -40,10 +41,10 @@ OR
 ## Managed Links
 
 You can also adopt an indirect-reference systems for managing links. This "managed links" approach involves storing the link text in YAML syntax.
- 
-Look at the urls.txt file in the root directory. The urls.txt file contains more or less the same code as the table of contents (but without the conditional qualifiers). A `for` loop runs each of the product sidebars listed in the frontmatter through the url generator. 
 
-The code iterates through every page listed in the table of contents sidebars (as well as the top navigation menus) and creates an output that looks like this for each link: 
+Look at the urls.txt file in the root directory. The urls.txt file contains more or less the same code as the table of contents (but without the conditional qualifiers). A `for` loop runs each of the product sidebars listed in the frontmatter through the url generator.
+
+The code iterates through every page listed in the table of contents sidebars (as well as the top navigation menus) and creates an output that looks like this for each link:
 
 ```yaml
 mydoc_introduction:
@@ -73,8 +74,8 @@ From the site output folder (in \_site), open urls.txt and observe that it is pr
 
 This will move and rename the file through a script.
 
-Because the urls.txt is produced from the table of contents, you ensure that the same titles and URLs used in your table of contents and top navigation will also be used in your inline links. 
- 
+Because the urls.txt is produced from the table of contents, you ensure that the same titles and URLs used in your table of contents and top navigation will also be used in your inline links.
+
 To create a link in a topic, just reference the appropriate value in the urls.yml file, like this:
 
 {% raw %}
@@ -89,7 +90,7 @@ This will insert the following into your topic:
 <a href='/mydoc_getting_started/'>Getting started</a>
 ```
 
-You don't need to worry whether you can use Markdown syntax when inserting a link this way, because the code that gets inserted is HTML. 
+You don't need to worry whether you can use Markdown syntax when inserting a link this way, because the code that gets inserted is HTML.
 
 To insert a link in the context of a phrase, you can use this syntax:
 
@@ -101,7 +102,7 @@ After downloading the theme, you can [get started in building the theme]({{site.
 
 Note that `.url` is used instead of `.link` when using customized text links like this.
 
-If you're in HTML and can't use Markdown, then use the following code: 
+If you're in HTML and can't use Markdown, then use the following code:
 
 {% raw %}
 ```html
@@ -112,7 +113,7 @@ If you're in HTML and can't use Markdown, then use the following code:
 The `url` value accesses the URL for the page only, whereas `link` gets the title and url in a link format.
 
 You shouldn't have to transfer the contents from the urls.txt file into your YAML data source too often &mdash; only when you're creating new pages.
- 
+
 I also added a simple script called "run.sh" that performs the urls-update.sh command prior to running Jekyll serve, so you can kill two birds with one stone.
 
 Note that for the index.html file, which doesn't have a permalink, this file is not included in the urls.txt generation. The frontmatter in the index.md file (`type: homepage`) triggers an exclusion from urls.txt because the empty name makes the yaml file invalid. To link to the homepage, just refer users to the root url of your site {% raw %}(`{{site.url}}` or `{{site.url}}{{site.baseurl}}`{% endraw %}).
@@ -141,7 +142,7 @@ Or using HTML:
 {%raw%}<a href="{{site.data.urls.your-page-permalink.url | append: "#myheading"}}">{{site.data.urls.your-page-permalink.title}}</a>{%endraw%}
 ```
 
-Granted, this is somewhat long, but it's the only way to continue to leverage the automated links from urls.yaml. You want to avoid manually referencing links since they are much more prone to break when you specify them that way. 
+Granted, this is somewhat long, but it's the only way to continue to leverage the automated links from urls.yaml. You want to avoid manually referencing links since they are much more prone to break when you specify them that way.
 
 However, I'm not too worried about this lengthy syntax because I think linking to sections on pages is somewhat fragile anyway. When you're editing sections, you generally don't know what URLs you have pointing to that section. The custom ID tag on that section is the best reminder that you are linking to the section.
 
@@ -155,7 +156,7 @@ If you're just linking to a section on the same page, the syntax is simple:
 
 ## How to tell what links point to a page
 
-There's no automated way to tell what links you have pointing to a page. This is one of the shortcomings of static site generators. The only way is to search your project for the page title. This is simple in Webstorm (Cmd + Shift + F), and it's one of the reasons I like Webstorm. 
+There's no automated way to tell what links you have pointing to a page. This is one of the shortcomings of static site generators. The only way is to search your project for the page title. This is simple in Webstorm (Cmd + Shift + F), and it's one of the reasons I like Webstorm.
 
 If you change a page title, you generally want to search in your project and update all references to the page to the new page name. You can do this easily through the Global Replace command (Cmd + Shift + R).
 
@@ -165,7 +166,7 @@ If you change a page title, you generally want to search in your project and upd
 You should treat your sidebar data files (in /_data/sidebars) with a lot of care. Every time you add a page to your site, make sure it's listed in your sidebar file (or in your top navigation). If you don't have pages listed in your sidebar file, they won't be included in the urls.txt file, and as your site grows, it will be harder to recognize pages that are absent from the TOC.
 
 Because all the pages are stored in the root directory, the list of files can grow really long. I typically find pages by navigating to the page in the preview server, copying the page name (e.g., mydoc_hyperlinks), and then pressing **Shift + Shift** in WebStorm to locate the page.
- 
+
 This is the only sane way to locate your pages when you have hundreds of pages in your root directory. If the page isn't listed in your TOC, it will be difficult to navigate to it and find it.
 
 ## Checking for broken links
@@ -177,7 +178,7 @@ One way to ensure you don't have any broken links in your output is to [generate
 
 Both instances indicate a broken link. The "page 0" indicates that Prince XML couldn't find the page that the link points to, and so it can't create a cross reference. This may be because the page doesn't exist, or because the anchor is pointing to a missing location.
 
-If you see "see ." it means that the reference (for example, {% raw %}`{{mylink...}}`{% endraw %} doesn't actually refer to anything. As a result, it's simply blank in the output. 
+If you see "see ." it means that the reference (for example, {% raw %}`{{mylink...}}`{% endraw %} doesn't actually refer to anything. As a result, it's simply blank in the output.
 
 {{site.data.alerts.note}} To keep Prince XML from trying to insert a cross reference into a link, add <code>class="noCrossRef"</code> to the link. {{site.data.alerts.end}}
 
