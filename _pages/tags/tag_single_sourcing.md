@@ -3,7 +3,7 @@ title: "Single sourcing pages"
 tagName: single_sourcing
 search: exclude
 permalink: tag_single_sourcing
-sidebar: tags_sidebar
+sidebar: mydoc_sidebar
 folder: tags
 ---
 {% include taglogic.html %}

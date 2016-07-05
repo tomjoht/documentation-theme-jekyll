@@ -6,7 +6,7 @@
     {% for tag in page.tags %}
         {% if tag == thisTag %}
 
-        <tr><td><a href="{{ page.url | remove: "/"}}">{{page.title}}</a></td>
+        <tr><td><a href="{{ page.url | remove: "/" | append: ".html" }}">{{page.title}}</a></td>
             <td><span class="label label-default">Page</span></td>
           <td>{% if page.summary %} {{ page.summary | strip_html | strip_newlines | truncate: 160 }} {% else %} {{ page.content | truncatewords: 50 | strip_html }} {% endif %}</td>
         </tr>
@@ -19,7 +19,7 @@
         {% for tag in post.tags %}
         {% if tag == thisTag %}
 
-        <tr><td><a href="{{ post.url | remove: "/"}}">{{post.title}}</a></td>
+        <tr><td><a href="{{ post.url | remove: "/" | append: ".html" }}">{{post.title}}</a></td>
             <td><span class="label label-primary">Post</span></td>
             <td>{% if post.summary %} {{ post.summary | strip_html | strip_newlines | truncate: 160 }} {% else %} {{ post.content | truncatewords: 50 | strip_html }} {% endif %}</td>
         </tr>

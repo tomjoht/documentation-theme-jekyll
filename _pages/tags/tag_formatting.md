@@ -3,7 +3,7 @@ title: "Formatting pages"
 tagName: formatting
 search: exclude
 permalink: tag_formatting
-sidebar: tags_sidebar
+sidebar: mydoc_sidebar
 folder: tags
 ---
 {% include taglogic.html %}

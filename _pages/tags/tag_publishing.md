@@ -3,7 +3,7 @@ title: "Publishing pages"
 tagName: publishing
 search: exclude
 permalink: tag_publishing
-sidebar: tags_sidebar
+sidebar: mydoc_sidebar
 folder: tags
 ---
 {% include taglogic.html %}

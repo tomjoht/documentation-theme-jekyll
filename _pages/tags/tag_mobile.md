@@ -3,8 +3,7 @@ title: "Mobile Pages"
 search: exclude
 tagName: mobile
 permalink: tag_mobile
-sidebar: tags_sidebar
-sidebar: tags_sidebar
+sidebar: mydoc_sidebar
 folder: tags
 ---
 {% include taglogic.html %}

@@ -64,7 +64,7 @@ title: "Collaboration pages"
 tagName: collaboration
 search: exclude
 permalink: tag_collaboration/
-sidebar: tags_sidebar
+sidebar: mydoc_sidebar
 ---
 {% include taglogic.html %}
    ```

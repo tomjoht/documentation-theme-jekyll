@@ -3,7 +3,7 @@ title: "Content types pages"
 tagName: content_types
 search: exclude
 permalink: tag_content_types
-sidebar: tags_sidebar
+sidebar: mydoc_sidebar
 folder: tags
 ---
 {% include taglogic.html %}

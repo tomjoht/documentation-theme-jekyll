@@ -29,7 +29,7 @@
                     {% elsif page.url == subfolderitem.url %}
                     <li class="active"><a href="{{subfolderitem.url | remove: "/" | append: ".html"}}">{{subfolderitem.title}}</a></li>
                     {% else %}
-                    <li><a href="{{subfolderitem.url | remove: "/" | append: ".html"}}">{{subfolderitem.title}}"</a></li>
+                    <li><a href="{{subfolderitem.url | remove: "/" | append: ".html"}}">{{subfolderitem.title}}</a></li>
                     {% endif %}
                     {% endif %}
                     {% endfor %}

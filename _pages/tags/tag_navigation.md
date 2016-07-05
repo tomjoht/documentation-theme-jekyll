@@ -3,7 +3,7 @@ title: "Navigation pages"
 tagName: navigation
 search: exclude
 permalink: tag_navigation
-sidebar: tags_sidebar
+sidebar: mydoc_sidebar
 folder: tags
 ---
 {% include taglogic.html %}
