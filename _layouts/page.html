@@ -3,14 +3,23 @@ layout: default
 ---
 
 <div class="post-header">
-   <h1 class="post-title-main">{% if page.homepage == true %} {{site.homepage_title}} {% else %}{{ page.title }}{% endif %}</h1>
+   <h1 class="post-title-main">{{ page.title }}</h1>
 </div>
 
-{% if page.map == true %}
+{% if page.simple_map == true %}
 
 <script>
     $(document).ready ( function(){
         $('.box{{page.box_number}}').addClass('active');
+    });
+</script>
+
+{% include custom/{{page.map_name}}.html %}
+
+{% elsif page.complex_map == true %}
+
+<script>
+    $(document).ready ( function(){
         $('.modalButton{{page.box_number}}').addClass('active');
     });
 </script>
@@ -33,7 +42,7 @@ layout: default
 
     {% if site.github_editme_path %}
 
-    <a target="_blank" href="https://github.com/{{site.github_editme_path}}/{{page.folder}}/{{page.url | remove: "/" | append: ".md"}}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    <a target="_blank" href="https://github.com/{{site.github_editme_path}}/_pages/{{page.folder}}/{{page.url | remove: "/" | append: ".md"}}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
     {% endif %}
 
     {% endunless %}
@@ -46,7 +55,7 @@ layout: default
     {% assign projectTags = site.data.tags.allowed-tags %}
     {% for tag in page.tags %}
     {% if projectTags contains tag %}
-    <a href="{{ "/tag_" | prepend: site.baseurl | append: tag }}" class="btn btn-default navbar-btn cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
+    <a href="{{ "tag_" | append: tag }}" class="btn btn-default navbar-btn cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
     {% endif %}
     {% endfor %}
     {% endif %}

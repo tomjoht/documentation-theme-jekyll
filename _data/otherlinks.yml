@@ -1,0 +1,21 @@
+
+# Follow the pattern here for the URLs -- no slash at the beginning, and include the .html. The link here is rendered exactly as is in the Markdown references.
+
+entries:
+- title: other
+  folders:
+
+  - title: Other Links
+    folderitems:
+
+    - title: Automated links bookmark
+      exact_url: mydoc_hyperlinks.html#automatedlinks
+      ref: mydoc_hyperlinks-automatedlinks
+
+    - title: Bookmark links
+      exact_url: mydoc_hyperlinks.html#bookmarklinks
+      ref: mydoc_hyperlinks-bookmarklinks
+
+    - title: Some link bookmark
+      exact_url: mydoc_pages.html#someIdTag
+      ref: someIdTag

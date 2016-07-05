@@ -12,11 +12,11 @@ entries:
 
     folderitems:
     - title:
-      url: /titlepage/
+      url: titlepage
       output: pdf
       type: frontmatter
     - title:
-      url: /tocpage/
+      url: tocpage
       output: pdf
       type: frontmatter
 
@@ -25,7 +25,7 @@ entries:
     folderitems:
 
     - title: Overview
-      url: /p2_landing_page/
+      url: /p2_landing_page
       output: web
 
   - title: Simple Workflow
@@ -33,23 +33,23 @@ entries:
     folderitems:
 
     - title: Sample 1
-      url: /p2_sample1/
+      url: /p2_sample1
       output: web, pdf
 
     - title: Sample 2
-      url: /p2_sample2/
+      url: /p2_sample2
       output: web, pdf
 
     - title: Sample 3
-      url: /p2_sample3/
+      url: /p2_sample3
       output: web, pdf
 
     - title: Sample 4
-      url: /p2_sample4/
+      url: /p2_sample4
       output: web, pdf
 
     - title: Sample 5
-      url: /p2_sample5/
+      url: /p2_sample5
       output: web, pdf
 
   - title: Complex Workflow
@@ -57,37 +57,37 @@ entries:
     folderitems:
 
     - title: Sample 6
-      url: /p2_sample6/
+      url: /p2_sample6
       output: web, pdf
 
     - title: Sample 7
-      url: /p2_sample7/
+      url: /p2_sample7
       output: web, pdf
 
     - title: Sample 8
-      url: /p2_sample8/
+      url: /p2_sample8
       output: web, pdf
 
     - title: Sample 9
-      url: /p2_sample9/
+      url: /p2_sample9
       output: web, pdf
 
     - title: Sample 10
-      url: /p2_sample10/
+      url: /p2_sample10
       output: web, pdf
 
     - title: Sample 11
-      url: /p2_sample11/
+      url: /p2_sample11
       output: web, pdf
 
     - title: Sample 12
-      url: /p2_sample12/
+      url: /p2_sample12
       output: web, pdf
 
     - title: Sample 13
-      url: /p2_sample13/
+      url: /p2_sample13
       output: web, pdf
 
     - title: Sample 14
-      url: /p2_sample14/
+      url: /p2_sample14
       output: web, pdf

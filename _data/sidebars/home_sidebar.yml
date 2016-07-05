@@ -8,20 +8,15 @@ entries:
   - title: Products
     output: web
     folderitems:
-    - title: Home
-      url: /
-      output: web
-      type: homepage
     - title: News
-      url: /news/
+      url: /news
       output: web
     - title: Theme instructions
-      url: /mydoc_introduction/
+      url: /mydoc_introduction
       output: web
     - title: Product 1
-      url: /p1_landing_page/
+      url: /p1_landing_page
       output: web
     - title: Product 2
-      url: /p2_landing_page/
+      url: /p2_landing_page
       output: web
-

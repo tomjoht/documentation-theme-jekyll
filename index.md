@@ -1,20 +1,18 @@
 ---
-title: Getting started overview
+title: Getting started with the Documentation Theme for Jekyll
+keywords: sample homepage
 tags: [getting_started]
 sidebar: mydoc_sidebar
-type: homepage
+permalink: index
+summary: These brief instructions will help you get started quickly with the theme. The other topics in this help provide additional information and detail about working with other aspects of this theme and Jekyll.
 ---
-
-## Overview
-
-These brief instructions will help you get started quickly with the theme. The other topics in this help provide additional information and detail about working with other aspects of this theme and Jekyll.
 
 ## Build this theme
 
 If you're used to running Jekyll sites, you can type the normal jekyll command, `jekyll serve`, to build the Jekyll theme. However, if you're a new Jekyll user or if you run into issues, see the following two topics:
 
-* {{site.data.urls.mydoc_install_jekyll_on_mac.link}}
-* {{site.data.urls.mydoc_install_jekyll_on_windows.link}}
+* [Install Jekyll on Mac][mydoc_install_jekyll_on_mac]
+* [Install Jekyll on Windows][mydoc_install_jekyll_on_windows]
 
 ## Customize the Gemfile
 
@@ -73,9 +71,6 @@ The sidebarconfigs.html file uses simple `if elsif` logic to set a variable that
 {% elsif page.sidebar == "mydoc_sidebar" %}
 {% assign sidebar = site.data.sidebars.mydoc_sidebar.entries %}
 
-{% elsif page.sidebar == "tags_sidebar" %}
-{% assign sidebar = site.data.sidebars.tags_sidebar.entries %}
-
 {% else %}
 {% assign sidebar = site.data.sidebars.home_sidebar.entries %}
 {% endif %}
@@ -89,86 +84,110 @@ In each page's frontmatter, you must specify the sidebar you want that page to u
 title: Alerts
 tags: [formatting]
 keywords: notes, tips, cautions, warnings, admonitions
-last_updated: March 20, 2016
+last_updated: July 3, 2016
 summary: "You can insert notes, tips, warnings, and important alerts in your content. These notes are stored as shortcodes made available through the linksrefs.hmtl include."
 sidebar: mydoc_sidebar
-permalink: /mydoc_alerts/
+permalink: mydoc_alerts
 ---
 ```
 
-The `sidebar: mydoc_sidebar` refers to the \_data/sidebars/mydoc_sidebar.yml file.
+The `sidebar: mydoc_sidebar` refers to the \_data/sidebars/mydoc_sidebar.yml file (meaning, the mydoc_sidebar.yml file inside the sidebars subfolder inside the \data folder).
 
 If no sidebar assignment is found in the page frontmatter, the default sidebar (specified by the `else` statement) will be shown: `site.data.sidebars.home_sidebar.entries`.
 
 Note that your sidebar can only have 2 levels. Given that each product has its own sidebar, this depth should be sufficient (it's really like 3 levels). Deeper nesting goes against usability recommendations.
 
-For more detail on the sidebar, see {{site.data.urls.mydoc_sidebar_navigation.link}}.
+Additionally, each level must have at least one topic before the next level starts. You can't have a second level that contains multiple third levels without having at least one standalone topic in the second level.
+
+For more detail on the sidebar, see [Sidebar navigation][mydoc_sidebar_navigation].
 
 ## Sidebar syntax
 
-The sidebar data file uses a specific YAML syntax that you must follow. Follow the sample pattern shown. For example:
+The sidebar data file uses a specific YAML syntax that you must follow. Follow the sample pattern shown in the theme. For example:
 
 ```yaml
 entries:
 - title: sidebar
   product: Jekyll Doc Theme
-  version: 5.0
+  version: 6.0
   folders:
+
   - title: Overview
     output: web, pdf
     folderitems:
-    - title: Some page
-      url: /some-doc-page/
-      output: web, pdf
-    - title: Another page
-      url: /another-doc-page/
+
+    - title: Get started
+      url: /index
       output: web, pdf
 
-  - title: Configuration
-    output: web
-    folderitems:
-    - title: How to configure the system
-      url: /configure-system/
+    - title: Introduction
+      url: /mydoc_introduction
       output: web, pdf
-      subfolders:
-      - title: Config process
-        output: web, pdf
-        subfolderitems:
-        - title: Creating the config file
-          url: /config-file-how-to/
-          output: web, pdf
+
+    - title: Supported features
+      url: /mydoc_supported_features
+      output: web, pdf
+
+    - title: About the theme author
+      url: /mydoc_about
+      output: web, pdf
+
+    - title: Support
+      url: /mydoc_support
+      output: web, pdf
+
+  - title: Release Notes
+    output: web, pdf
+    folderitems:
+
+    - title: 6.0 Release notes
+      url: /mydoc_release_notes_60
+      output: web, pdf
+
+    - title: 5.0 Release notes
+      url: /mydoc_release_notes_50
+      output: web, pdf
+
 ```
 
-Each folder or subfolder must contain a title and output property. Each `folderitem` or `subfolderitem` must contain a `title`, `url`, and `output` property.
+Each `folder` or `subfolder` must contain a `title` and `output` property. Each `folderitem` or `subfolderitem` must contain a `title`, `url`, and `output` property.
 
-The two outputs available are `web` and `pd`f. (Even if you aren't publishing PDF, you still need to specify `output: web`).
+The two outputs available are `web` and `pdf`. (Even if you aren't publishing PDF, you still need to specify `output: web`).
 
 The YAML syntax depends on exact spacing, so make sure you follow the pattern shown in the sample sidebars. See my [YAML tutorial](mydoc_yaml_tutorial) for more details about how YAML works.
 
 To accommodate the title page and table of contents in PDF outputs, each product sidebar must list these pages before any other:
 
 ```yaml
+- title:
+  output: pdf
+  type: frontmatter
+  folderitems:
   - title:
+    url: /titlepage
     output: pdf
     type: frontmatter
-    folderitems:
-    - title:
-      url: /titlepage/
-      output: pdf
-      type: frontmatter
-    - title:
-      url: /tocpage/
-      output: pdf
-      type: frontmatter
+  - title:
+    url: /tocpage
+    output: pdf
+    type: frontmatter
 ```
 
 Leave the output as `output: pdf` for these frontmatter pages so that they don't appear in the web output.
 
-For more detail on the sidebar, see {{site.data.urls.mydoc_sidebar_navigation.link}} and {{site.data.urls.mydoc_yaml_tutorial.link}}.
+For more detail on the sidebar, see [Sidebar navigation][mydoc_sidebar_navigation] and [YAML tutorial][mydoc_yaml_tutorial].
+
+## Relative links and offline viewing
+
+This theme uses relative links throughout so that you can view the site offline and not worry about which server or directory you're hosting it. It's common with tech docs to push content to an internal server for review prior to pushing the content to an external server for publication. Because of the need for seamless transferrence from one host to another, the site has to use relative links.
+
+To view pages locally on your machine, they need to have the `.html` extension. However, if you prefer not to have this extension, you can simply remove the `.html` from the sidebar entries, and the pages will still work when you view content on a preview server or web server.
+
+The `permalink` property in the page's frontmatter combined with the `include: ['pages']` property in the configuration file is what pushes the files into the root directory when the site builds.
 
 ## Page frontmatter
 
-When you write pages, include these same frontmatter keys with each page:
+When you write pages, include these same frontmatter properties with each page:
 
 ```yaml
 ---
@@ -178,48 +197,49 @@ keywords: keyword1, keyword2, keyword3
 last_updated: Month day, year
 summary: "optional summary here"
 sidebar: sidebar name
-permalink: /yoururl/
+permalink: filename
 ---
 ```
 
-(You will customize the values for each of these keys, of course.)
-
-If you're using [Webstorm]({{site.data.urls.mydoc_webstorm_text_editor.url}}), you can set up a template to auto-populate this code when you create a new file.
+(You will customize the values for each of these properties, of course.)
 
 For titles, surrounding the title in quotes is optional, but if you have a colon in the title, you must surround the title with quotation marks. If you have a quotation mark within the title, escape it first with a backlash `\`.
 
 Values for `keywords` get populated into the metadata of the page for SEO.
 
 Values for `tags` must be defined in your \_data/tags.yml list. You also need a corresponding tag file inside the tags folder that follows the same pattern as the other tag files shown in the tags folder. (Jekyll wont auto-create these tag files.)
-```
 
 If you don't want the mini-TOC to show on a page (such as for the homepage or landing pages), add `toc: false` in the frontmatter.
 
-For more detail, see {{site.data.urls.mydoc_pages.link}}.
+The `permalink` value should be the same as your filename but without the file extension.
+
+For more detail, see [Pages][mydoc_pages].
 
 ## Where to store your documentation topics
 
-Store your files for each product inside subfolders following the pattern shown in the theme. For example, product1, product2, etc. You can store your topics inside sub-subfolders or sub-sub-folders to your heart's content. When Jekyll builds your site, it will pull the topics into the root directory and use the permalink for the URL.
+You can store your files for each product inside subfolders following the pattern shown in the theme. For example, product1, product2, etc, can be stored in their own subfolders inside the \_pages directory. Inside \_pages, you can store your topics inside sub-subfolders or sub-sub-folders to your heart's content. When Jekyll builds your site, it will pull the topics into the root directory and use the permalink for the URL.
 
 Note that product1, product2, and mydoc are all just sample content to demonstrate how to add multiple products into the theme. You can freely delete that content.
 
-For more information, see {{site.data.urls.mydoc_pages.link}} and {{site.data.urls.mydoc_posts.link}}.
+For more information, see [Pages][mydoc_pages] and [Posts][mydoc_posts].
 
 ## Configure the top navigation
 
-The top navigation bar's menu items are set through the _data/topnav.yml file. Use the top navigation bar to provide links for navigating from one product to another, or to navigate to external resources.
+The top navigation bar's menu items are set through the \_data/topnav.yml file. Use the top navigation bar to provide links for navigating from one product to another, or to navigate to external resources.
 
 For external URLs, use `external_url` in the item property, as shown in the example topnav.yml file. For internal links, use `url` as usual.
 
-Note that the topnav has two sections: topnav and topnav_dropdowns. The topnav section contains single links, while the topnav_dropdowns section contains dropdown menus. The two sections are independent of each other.
+Note that the topnav has two sections: `topnav` and `topnav_dropdowns`. The topnav section contains single links, while the `topnav_dropdowns` section contains dropdown menus. The two sections are independent of each other.
 
 ## Generating PDF
 
-If you want to generate PDF, you'll need a license for [Prince XML](http://www.princexml.com/). You will also need to [install Prince](http://www.princexml.com/doc/installing/).  You can generate PDFs by product (but not for every product on the site combined together into one massive PDF). Prince will work even without a license, but it will imprint a small Prince image on the first page.
+If you want to generate PDF, you'll need a license for [Prince XML](http://www.princexml.com/). You will also need to [install Prince](http://www.princexml.com/doc/installing/).  You can generate PDFs by product (but not for every product on the site combined together into one massive PDF). Prince will work even without a license, but it will imprint a small Prince image on the first page, and you're supposed to buy the license to use it.
+
+If you're on Windows, install [Git Bash client](https://git-for-windows.github.io/) rather than using the default Windows command prompt.
 
 Open up the css/printstyles.css file and customize the email address (`youremail@domain.com`) that is listed there. This email address appears in the bottom left footer of the PDF output. You'll also need to create a PDF configuration file following the examples shown in the pdfconfigs folder, and also customize some build scripts following the same pattern shown in the root: pdf-product1.sh
 
-See the section on {{site.data.urls.mydoc_generating_pdfs.link}} for more details about setting the theme up for this output.
+See the section on [Generating PDFs][mydoc_generating_pdfs] for more details about setting the theme up for this output.
 
 ## Blogs / News
 
@@ -227,11 +247,11 @@ For blog posts, create your markdown files in the \_posts folder following the s
 
 The news/news.html file displays the posts, and the news_archive.html file shows a yearly history of posts. In documentation, you might use the news to highlight product features outside of your documentation, or to provide release notes and other updates.
 
-See {{site.data.urls.mydoc_posts.link}} for more information.
+See [Posts][mydoc_posts] for more information.
 
 ## Markdown
 
-This theme uses Kramdown markdown. Kramdown is similar to Github-flavored Markdown, except that when you have text that intercepts list items, the spacing of the intercepting text must align with the spacing of the first character after the space of a numbered list item. Basically, with your list item numbering, use two spaces after the dot in the number, like this:
+This theme uses [kramdown markdown](http://kramdown.gettalong.org/). kramdown is similar to Github-flavored Markdown, except that when you have text that intercepts list items, the spacing of the intercepting text must align with the spacing of the first character after the space of a numbered list item. Basically, with your list item numbering, use two spaces after the dot in the number, like this:
 
 ```
 1.  First item
@@ -239,7 +259,7 @@ This theme uses Kramdown markdown. Kramdown is similar to Github-flavored Markdo
 3.  Third item
 ```
 
-When you want to insert paragraphs, notes, code snippets, or other matter in between the list items, use four spaces to indent. The four spaces will line up with the first letter of the list item (the **F**irst or **S**econd or **T**hird).
+When you want to insert paragraphs, notes, code snippets, or other matter in between the list items, use four spaces to indent. The four spaces will line up with the first letter of the list item (the <b>F</b>irst or <b>S</b>econd or <b>T</b>hird).
 
 ```
 1.  First item
@@ -255,13 +275,14 @@ When you want to insert paragraphs, notes, code snippets, or other matter in bet
 3.  Third item
 ```
 
-
 See the topics under "Formatting" in the sidebar for more information.
 
-## Managing links
+## Automated links
 
-If you want to use a simple system for managing links, see the "Managed Links" section in {{site.data.urls.mydoc_hyperlinks.link | append: "#managed-links"}}.
+If you want to use an automated system for managing links, see [Automated Links][mydoc_hyperlinks-automatedlinks]. This approach automatically creates a list of Markdown references to simplify linking.
 
 ## Other instructions
 
-For other details in working with the theme, see the various sections in the sidebar.
+The content here is just a getting started guide only. For other details in working with the theme, see the various sections in the sidebar.
+
+{% include links.html %}

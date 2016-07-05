@@ -4,7 +4,7 @@ topnav:
 - title: Topnav
   items:
     - title: News
-      url: /news/
+      url: /news
 
 #Topnav dropdowns
 topnav_dropdowns:
@@ -25,11 +25,8 @@ topnav_dropdowns:
     - title: Products
       folderitems:
         - title: Jekyll Documentation Theme
-          url: /mydoc_introduction/
+          url: /mydoc_introduction
         - title: Product 1
-          url: /p1_landing_page/
+          url: /p1_landing_page
         - title: Product 2
-          url: /p2_landing_page/
-
-
-
+          url: /p2_landing_page

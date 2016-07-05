@@ -1,3 +1,5 @@
+/* This license pertains to the Navgoco jQuery component used for the sidebar. */
+
 Copyright (c) 2013, Christodoulos Tsoulloftas, http://www.komposta.net
 All rights reserved.
 

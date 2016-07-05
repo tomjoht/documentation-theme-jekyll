@@ -1,7 +1,7 @@
 ---
 title:  "Welcome to Jekyll!"
 categories: jekyll update
-permalink: /myupdate/
+permalink: myupdate/
 tags: [news]
 ---
 
@@ -15,3 +15,5 @@ Theme updates:
 - removed some of the alternative layouts
 - added blog feature
 - sidebars configurable per page
+
+{% include links.html %}

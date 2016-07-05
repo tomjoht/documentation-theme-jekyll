@@ -9,7 +9,7 @@ layout: default
             {% assign projectTags = site.data.tags.allowed-tags %}
             {% for tag in page.tags %}
             {% if projectTags contains tag %}
-            <a href="{{ "/tag_" | prepend: site.baseurl | append: tag }}">{{tag}}</a>{% unless forloop.last %}, {% endunless%}
+            <a href="{{ "../tag_" | append: tag }}">{{tag}}</a>{% unless forloop.last %}, {% endunless%}
             {% endif %}
             {% endfor %}
             {% endif %}
@@ -39,7 +39,3 @@ layout: default
 {{site.data.alerts.hr_shaded}}
 
 {% include footer.html %}
-
-
-
-
