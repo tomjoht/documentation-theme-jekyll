@@ -9,14 +9,13 @@ entries:
   - title:
     output: pdf
     type: frontmatter
-
     folderitems:
     - title:
-      url: titlepage
+      url: /titlepage
       output: pdf
       type: frontmatter
     - title:
-      url: tocpage
+      url: /tocpage
       output: pdf
       type: frontmatter
 
