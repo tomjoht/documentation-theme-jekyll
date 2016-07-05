@@ -199,10 +199,6 @@ entries:
       url: /mydoc_themes
       output: web, pdf
 
-    - title: Check page title consistency
-      url: /mydoc_title_checker
-      output: web, pdf
-
     - title: Generating PDFs
       url: /mydoc_generating_pdfs
       output: web, pdf

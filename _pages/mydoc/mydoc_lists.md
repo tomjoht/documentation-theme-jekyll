@@ -128,6 +128,6 @@ Here's a list with some intercepting text:
 
 The key principle is to line up the first character after the dot following the number:
 
-{% include image.html file="liningup" type="png" caption="Lining up the left edge ensures the list stays in tact." %}
+{% include image.html file="liningup.png" caption="Lining up the left edge ensures the list stays in tact." %}
 
 For the sake of simplicity, use two spaces after the dot for numbers 1 through 9. Use one space for numbers 10 and up. If any part of your list doesn't align symmetrically on this left edge, the list will not render correctly. Also note that this is characteristic of kramdown-flavored Markdown and may not yield the same results in other Markdown flavors.

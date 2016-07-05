@@ -41,10 +41,10 @@ For inline images, such as with a button that you want to appear inline with tex
 
 ```liquid
 Click the **Android SDK Manager** button {%raw%}{% include inline_image.html
-file="androidsdkmanagericon" type="png" alt="SDK button" %}{%endraw%}
+file="androidsdkmanagericon.png" alt="SDK button" %}{%endraw%}
 ```
 
-Click the **Android SDK Manager** button {% include inline_image.html file="androidsdkmanagericon" type="png" alt="SDK button" %}
+Click the **Android SDK Manager** button {% include inline_image.html file="androidsdkmanagericon.png" alt="SDK button" %}
 
 The inline_image.html include properties are as follows:
 
