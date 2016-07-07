@@ -1,7 +1,7 @@
 ---
 title:  "Test post from last year"
 categories: jekyll update
-permalink: test-post-from-last-year
+permalink: test-post-from-last-year.html
 tags: [news]
 ---
 

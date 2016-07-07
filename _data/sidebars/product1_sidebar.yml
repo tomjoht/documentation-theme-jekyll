@@ -12,11 +12,11 @@ entries:
     type: frontmatter
     folderitems:
     - title:
-      url: /titlepage
+      url: /titlepage.html
       output: pdf
       type: frontmatter
     - title:
-      url: /tocpage
+      url: /tocpage.html
       output: pdf
       type: frontmatter
 
@@ -24,19 +24,19 @@ entries:
     output: web, pdf
     folderitems:
     - title: Product 1 home
-      url: /p1_landing_page
+      url: /p1_landing_page.html
       output: web
 
     - title: Sample 1
-      url: /p1_sample1
+      url: /p1_sample1.html
       output: web, pdf
 
     - title: Sample 2
-      url: /p1_sample2
+      url: /p1_sample2.html
       output: web, pdf
 
     - title: Sample 3
-      url: /p1_sample3
+      url: /p1_sample3.html
       output: web, pdf
 
   - title: Another heading
@@ -44,17 +44,17 @@ entries:
 
     folderitems:
     - title: Sample 4
-      url: /p1_sample4
+      url: /p1_sample4.html
       output: web, pdf
 
     - title: Sample 5
-      url: /p1_sample5
+      url: /p1_sample5.html
       output: web, pdf
 
     - title: Sample 6
-      url: /p1_sample6
+      url: /p1_sample6.html
       output: web, pdf
 
     - title: Sample 7
-      url: /p1_sample7
+      url: /p1_sample7.html
       output: web, pdf

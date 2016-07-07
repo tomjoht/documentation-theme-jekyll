@@ -6,7 +6,7 @@ keywords: links, hyperlinks, cross references, related links, relationship table
 summary: "When creating links, you can use standard HTML or Markdown formatting. Note that this approach is susceptible to errors and broken links, so check your outputs for broken links."
 last_updated: July 3, 2016
 sidebar: mydoc_sidebar
-permalink: mydoc_hyperlinks
+permalink: mydoc_hyperlinks.html
 folder: mydoc
 ---
 

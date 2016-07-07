@@ -5,7 +5,7 @@ keywords: rouge, pygments, prettify, color coding,
 last_updated: July 3, 2016
 summary: "You can apply syntax highlighting to your code. This theme uses pygments and applies color coding based on the lexer you specify."
 sidebar: mydoc_sidebar
-permalink: mydoc_syntax_highlighting
+permalink: mydoc_syntax_highlighting.html
 folder: mydoc
 ---
 

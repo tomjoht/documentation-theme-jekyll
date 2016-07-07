@@ -1,7 +1,7 @@
 ---
 title:  "Sample post"
 published: true
-permalink: samplepost
+permalink: samplepost.html
 summary: "This is some summary frontmatter for my sample post."
 tags: [news, getting_started]
 ---

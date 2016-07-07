@@ -4,10 +4,10 @@
 {% for entry in site.data.sidebars[sidebar].entries %}
 {% for folder in entry.folders %}
 {% for folderitem in folder.folderitems %}
-[{{folderitem.url | remove: "/" }}]: {{folderitem.url | remove: "/" | append: ".html"}}
+[{{folderitem.url | remove: "/"  | remove: ".html"}}]: {{folderitem.url | remove: "/"}}
 {% for subfolders in folderitem.subfolders %}
 {% for subfolderitem in subfolders.subfolderitems %}
-[{{subfolderitem.url | remove: "/" }}]: {{subfolderitem.url | remove: "/" | append: ".html"}}
+[{{subfolderitem.url | remove: "/"  | remove: ".html"}}]: {{subfolderitem.url | remove: "/"}}
 {% endfor %}
 {% endfor %}
 {% endfor %}
@@ -21,7 +21,7 @@
 {% for entry in site.data.topnav.topnav %}
 {% for item in entry.items %}
 {% if item.external_url == null %}
-[{{item.url | remove: "/" }}]: {{item.url | remove: "/" | append: ".html"}}
+[{{item.url | remove: "/" | remove: ".html"}}]: {{item.url | remove: "/"}}
 {% endif %}
 {% endfor %}
 {% endfor %}
@@ -32,23 +32,9 @@
 {% for folder in entry.folders %}
 {% for folderitem in folder.folderitems %}
 {% if folderitem.external_url == null %}
-[{{folderitem.url | remove: "/" }}]: {{folderitem.url | remove: "/" | append: ".html"}}
+[{{folderitem.url | remove: "/"  | remove: ".html"}}]: {{folderitem.url | remove: "/"}}
 {% endif %}
 {% endfor %}
 {% endfor %}
 {% endfor %}
 
-{% comment %}Get links for otherlinks.yml file {% endcomment %}
-
-{% for entry in site.data.otherlinks.entries %}
-{% for folder in entry.folders %}
-{% for folderitem in folder.folderitems %}
-[{{folderitem.ref}}]: {{folderitem.exact_url}}
-{% for subfolders in folderitem.subfolders %}
-{% for subfolderitem in subfolders.subfolderitems %}
-[{{subfolderitem.ref}}]: {{subfolderitem.exact_url}}
-{% endfor %}
-{% endfor %}
-{% endfor %}
-{% endfor %}
-{% endfor %}

@@ -5,7 +5,7 @@ keywords: pages, authoring, exclusion, frontmatter
 last_updated: July 3, 2016
 summary: "This theme primarily uses pages. You need to make sure your pages have the appropriate frontmatter. One frontmatter tag your users might find helpful is the summary tag. This functions similar in purpose to the shortdesc element in DITA."
 sidebar: mydoc_sidebar
-permalink: mydoc_pages
+permalink: mydoc_pages.html
 folder: mydoc
 ---
 
@@ -29,7 +29,9 @@ exclude:
 Wildcards will exclude every match after the `*`.
 
 ## Frontmatter
+
 Make sure each page has frontmatter at the top like this:
+
 
 ```yaml
 ---
@@ -41,6 +43,7 @@ summary: "You can insert notes, tips, warnings, and important alerts in your con
 sidebar: mydoc_sidebar
 permalink: mydoc_alerts
 ---
+```
 
 Frontmatter is always formatted with three hyphens at the top and bottom. Your frontmatter must have a `title` and `permalink` value. All the other values are optional.
 
@@ -168,7 +171,7 @@ Then you can reference it with a link like this on the same page:
 
 [Some link](#someIdTag)
 
-For details about linking to headings on pages using automated links, see [Automated links to headings on pages][mydoc_hyperlinks-bookmarklinks].
+For details about linking to headings on pages using automated links, see [Automated links to headings on pages][mydoc_hyperlinks.html#bookmarklinks].
 
 ## Specify a particular page layout
 

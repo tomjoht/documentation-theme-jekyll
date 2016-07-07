@@ -25,8 +25,8 @@ topnav_dropdowns:
     - title: Products
       folderitems:
         - title: Jekyll Documentation Theme
-          url: /mydoc_introduction
+          url: /mydoc_introduction.html
         - title: Product 1
-          url: /p1_landing_page
+          url: /p1_landing_page.html
         - title: Product 2
-          url: /p2_landing_page
+          url: /p2_landing_page.html

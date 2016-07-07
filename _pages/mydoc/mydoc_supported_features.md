@@ -7,7 +7,7 @@ last_updated: "November 30, 2016"
 summary: "If you're not sure whether Jekyll and this theme will support your requirements, this list provides a semi-comprehensive overview of available features."
 published: true
 sidebar: mydoc_sidebar
-permalink: mydoc_supported_features
+permalink: mydoc_supported_features.html
 folder: mydoc
 ---
 

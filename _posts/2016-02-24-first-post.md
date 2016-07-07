@@ -1,7 +1,7 @@
 ---
 title:  "Welcome to Jekyll!"
 categories: jekyll update
-permalink: myupdate
+permalink: myupdate.html
 tags: [news]
 ---
 

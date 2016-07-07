@@ -5,7 +5,7 @@ keywords: layouts, information design, presentation
 last_updated: July 3, 2016
 summary: "This theme has a few special layouts. Special layouts include the JS files they need directly in the page. The JavaScript for each special layout does not load by default for every page in the site."
 sidebar: mydoc_sidebar
-permalink: mydoc_special_layouts
+permalink: mydoc_special_layouts.html
 folder: mydoc
 ---
 

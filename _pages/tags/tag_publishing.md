@@ -2,7 +2,7 @@
 title: "Publishing pages"
 tagName: publishing
 search: exclude
-permalink: tag_publishing
+permalink: tag_publishing.html
 sidebar: mydoc_sidebar
 folder: tags
 ---

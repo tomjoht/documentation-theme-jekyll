@@ -9,13 +9,13 @@ entries:
     folderitems:
 
     - title: Automated links bookmark
-      exact_url: mydoc_hyperlinks.html#automatedlinks
+      url: mydoc_hyperlinks.html#automatedlinks
       ref: mydoc_hyperlinks-automatedlinks
 
     - title: Bookmark links
-      exact_url: mydoc_hyperlinks.html#bookmarklinks
+      url: mydoc_hyperlinks.html#bookmarklinks
       ref: mydoc_hyperlinks-bookmarklinks
 
     - title: Some link bookmark
-      exact_url: mydoc_pages.html#someIdTag
+      url: mydoc_pages.html#someIdTag
       ref: someIdTag

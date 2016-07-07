@@ -1,7 +1,7 @@
 ---
 title: Introduction
 sidebar: mydoc_sidebar
-permalink: mydoc_introduction
+permalink: mydoc_introduction.html
 folder: mydoc
 ---
 

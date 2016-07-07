@@ -3,7 +3,7 @@ title: Sample 12 Topic
 keywords: sample
 summary: "This is just a sample topic..."
 sidebar: product2_sidebar
-permalink: p2_sample12
+permalink: p2_sample12.html
 complex_map: true
 map_name: usermapcomplex
 box_number: 3

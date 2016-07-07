@@ -5,7 +5,7 @@ tags: collaboration
 keywords: git, github, collaboration, interaction, file sharing, push
 published: false
 sidebar: mydoc_sidebar
-permalink: mydoc_git_collaboration
+permalink: mydoc_git_collaboration.html
 folder: mydoc
 ---
 

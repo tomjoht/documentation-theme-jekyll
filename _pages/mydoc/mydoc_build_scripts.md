@@ -8,7 +8,7 @@ summary: "You need to customize the build scripts. These script automate the pub
 series: "Getting Started"
 weight: 10
 sidebar: mydoc_sidebar
-permalink: mydoc_build_scripts
+permalink: mydoc_build_scripts.html
 folder: mydoc
 ---
 
