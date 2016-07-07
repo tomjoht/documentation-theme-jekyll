@@ -1,7 +1,4 @@
 
-include: ['_pages']
-# this tag includes all pages from the pages directory and puts them into the root directory
-
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
@@ -14,7 +11,7 @@ site_title: Jekyll theme for documentation
 company_name: Your company
 # this appears in the footer
 
-github_editme_path: tomjohnson1492/documentation-theme-jekyll/blob/gh-pages/_pages/
+github_editme_path: tomjohnson1492/documentation-theme-jekyll/blob/gh-pages/pages/
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
 disqus_shortname: idrbwjekyll
