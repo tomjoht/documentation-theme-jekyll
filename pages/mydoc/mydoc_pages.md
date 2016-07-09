@@ -41,7 +41,7 @@ keywords: notes, tips, cautions, warnings, admonitions
 last_updated: July 3, 2016
 summary: "You can insert notes, tips, warnings, and important alerts in your content."
 sidebar: mydoc_sidebar
-permalink: mydoc_alerts
+permalink: mydoc_alerts.html
 ---
 ```
 
@@ -58,7 +58,7 @@ The following table describes each of the frontmatter that you can use with this
 | **keywords** | Optional | Synonyms and other keywords for the page. This information gets stuffed into the page's metadata to increase SEO. The user won't see the keywords, but if you search for one of the keywords, it will be picked up by the search engine.  |
 | **last_updated**  | Optional | The date the page was last updated. This information could helpful for readers trying to evaluate how current and authoritative information is. If included, the last_updated date appears in the footer of the page in rather small font.|
 | **summary** | Optional | A 1-2 word sentence summarizing the content on the page. This gets formatted into the summary section in the page layout. Adding summaries is a key way to make your content more scannable by users (check out [Jakob Nielsen's site](http://www.nngroup.com/articles/corporate-blogs-front-page-structure/) for a great example of page summaries.) The only drawback with summaries is that you can't use variables in them. |
-| **permalink**| Required | Make the permalink match the file name for the sake of simplicity. You specify the permalink you want for the page, and the \_site output will put the page into the root directory when you publish. Permalink names don't have to match your file names, but it might be easier to keep them in sync. If you don't use permalinks, Jekyll automatically uses the file name and folder path as the link.|
+| **permalink**| Required | The permalink *must* match the filename in order for automated links to work. Additionally, you must include the ".html" in the filename. Do not put forward slashes around the permalink (this makes Jekyll put the file inside a folder in the output). When Jekyll builds the site, it will put the page into the root directory rather than leaving it in a subdirectory or putting it inside a folder and naming the file index.html. Having all files flattened in the root directory is essential for relative linking to work and for all paths to JS and CSS files to be valid. |
 | **datatable** | Optional | 'true'. If you add `datatable: true` in the frontmatter, scripts for the [jQuery Datatables plugin](https://www.datatables.net/) get included on the page. You can see the scripts that conditionally appear by looking in the \_layouts/default.html page. |
 | toc | Optional | If you specify `toc: false` in the frontmatter, the page won't have the table of contents that appears below the title. The toc refers to the list of jump links below the page title, not the sidebar navigation. You probably want to hide the TOC on the homepage and product landing pages.|
 
@@ -74,7 +74,7 @@ If you add `published: false` in the frontmatter, your page won't be published. 
 
 Pages can be either Markdown or HTML format (specified through either an .md or .html file extension).
 
-If you use Markdown, you can also include HTML formatting where needed. But if you're format is HTML, you must add a `markdown="1"` attribute to the element:
+If you use Markdown, you can also include HTML formatting where needed. But if you're format is HTML, you must add a `markdown="1"` attribute to the element in order to use Markdown inside that HTML element:
 
 ```
 <div markdown="1">This is a [link](http://exmaple.com).</div>
@@ -82,21 +82,13 @@ If you use Markdown, you can also include HTML formatting where needed. But if y
 
 For your Markdown files, note that a space or two indent will set text off as code or blocks, so avoid spacing indents unless intentional.
 
-If you have a lot of HTML, as long as the top and bottom tags of the HTML are flesh left in a Markdown file, all the tags inside those bookend HTML tags will render as HTML, regardless of their indentation.
+If you have a lot of HTML, as long as the top and bottom tags of the HTML are flush left in a Markdown file, all the tags inside those bookend HTML tags will render as HTML, regardless of their indentation. (This can be especially useful for tables.)
 
 ## Where to save pages
 
 You can store your pages in any folder structures you want, with any level of folder nesting. The site output will pull all of those pages out of their folders and put them into the root directory. Check out the \_site folder, which is where Jekyll is generated, to see the difference between your project's structure and the resulting site output.
 
 The listing of all pages in the root directory is what allows the relative linking and offline viewing of the site to work.
-
-## Site suffixes
-
-By default, URLs won't show the ".html" in the page name. However, if you want this, add the following in your configuration file:
-
-```
-suffix: .html
-```
 
 ## Page names
 
@@ -126,14 +118,15 @@ By default, a TOC appears at the top of your pages and posts. If you don't want 
 
 The mini-TOC requires you to use the `##` Markdown syntax for headings. If you use `<h2>` elements, you must add an ID attribute for the heading element in order for it to appear in the mini-TOC (for example, `<h2 id="mysampleid">Heading</h2>`.
 
-
 ## Headings
 
-Use pound signs before the heading title to designate the level. Note that kramdown requires headings to  have one space before and after the heading.
+Use pound signs before the heading title to designate the level. Note that kramdown requires headings to have one space before and after the heading. Without this space above and below, the heading won't render into HTML.
 
 ```
 ## Second-level heading
 ```
+
+**Result:** 
 
 ## Second-level heading
 
@@ -142,6 +135,7 @@ Use pound signs before the heading title to designate the level. Note that kramd
 ```
 ### Third-level heading
 ```
+**Result:** 
 
 ### Third-level heading
 
@@ -150,6 +144,8 @@ Use pound signs before the heading title to designate the level. Note that kramd
 ```
 #### Fourth-level heading
 ```
+
+**Result:** 
 
 #### Fourth-level heading
 
@@ -171,7 +167,7 @@ Then you can reference it with a link like this on the same page:
 
 [Some link](#someIdTag)
 
-For details about linking to headings on pages using automated links, see [Automated links to headings on pages][mydoc_hyperlinks.html#bookmarklinks].
+For details about linking to headings on different pages, see [Automated links to headings on pages][mydoc_hyperlinks.html#bookmarklinks].
 
 ## Specify a particular page layout
 
