@@ -220,6 +220,6 @@ You can use any of the following:
 
 The only difference is the color of the left bar.
 
-Callouts are explained in a bit more detail in <a href="{{ "/mydoc_alerts" | prepend: site.baseurl }}">Alerts</a>.
+Callouts are explained in a bit more detail in [Alerts][mydoc_alerts].
 
 {% include links.html %}

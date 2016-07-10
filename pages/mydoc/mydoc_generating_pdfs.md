@@ -23,7 +23,7 @@ Also, creating a PDF this way gives you a lot more control and customization cap
 
 You can see an example of the finished product here:
 
-<a target="_blank" class="noCrossRef" href="{{ "/pdf/mydoc.pdf" | prepend: site.baseurl }}"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> PDF Download</button></a>
+<a target="_blank" class="noCrossRef" href="{{ "pdf/mydoc.pdf"}}"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> PDF Download</button></a>
 
 ## 1. Set up Prince
 
@@ -348,7 +348,7 @@ You can add a download button for your PDF using some Bootstrap button code:
 
 Here's what that looks like:
 
-<a target="_blank" class="noCrossRef" href={{ "/pdf/mydoc.pdf" | prepend: site.baseurl}}"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> PDF Download</button></a>
+<a target="_blank" class="noCrossRef" href={{ "pdf/mydoc.pdf"}}"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> PDF Download</button></a>
 
 ## JavaScript conflicts
 

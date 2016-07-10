@@ -92,6 +92,6 @@ Also, if you're working with SVG graphics, note that Firefox does not support SV
 
 Also, remove the check box for "Use textpath element for text on a path". And select "Embed" rather than "Link." The following screenshot shows the settings I use. Your graphics will look great in Firefox.
 
-![Essential options for SVG with Illustrator]({{ "/images/illustratoroptions.png" | prepend: site.baseurl }})
+{% include image.html file="illustratoroptions.png" caption="Essential options for SVG with Illustrator" %}
 
 {% include links.html %}

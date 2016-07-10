@@ -61,7 +61,7 @@ For example, the sidebar.html file contains the following code:
 {% raw %}
 ```liquid
 {% elsif page.url == subfolderitem.url %}
-  <li class="active"><a href="{{subfolderitem.url | prepend: site.baseurl}}">{{subfolderitem.title}}</a></li>
+  <li class="active"><a href="{{subfolderitem.url }}">{{subfolderitem.title}}</a></li>
 ```
 {% endraw %}
 

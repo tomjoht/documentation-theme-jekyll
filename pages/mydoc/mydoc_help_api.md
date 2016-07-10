@@ -13,9 +13,9 @@ folder: mydoc
 
 You can create a help API that developers can use to pull in content.
 
-For the full code demo, see the notes in the <a target="_blank" href="{{ "/tooltips" | prepend: site.baseurl}}" class="noCrossRef">tooltip demo</a>.
+For the full code demo, see the notes in the [Tooltips file](tooltips.html).
 
-In this demo, the popovers pull in and display content from the information in a <a target="_blank" href="{{ "/tooltips.json" | prepend: site.baseurl}}">tooltips.json</a> file located in the same directory.
+In this demo, the popovers pull in and display content from the information in a <a target="_blank" href="tooltips.json">tooltips.json</a> file located in the same directory.
 
 Instead of placing the JSON source in the same directory, you could also host the JSON file on another site.
 
@@ -25,7 +25,7 @@ Additionally, instead of tooltip popovers, you could also print content directly
 
 Here's a diagram showing the basic idea of the help API:
 
-<img src="{{ "/images/helpapi.svg" | prepend: site.baseurl }}" style="width: 650px;"/>
+<img src="images/helpapi.svg" style="width: 650px;"/>
 
 Is this really an API? Well, sort of. The help content is pushed out into a JSON file that other websites and applications can easily consume. The endpoints don't deliver different data based on parameters added to a URL. But the overall concept is similar to an API: you have a client requesting resources from a server.
 
@@ -136,7 +136,7 @@ This code will loop through all pages in the tooltips collection and insert the 
 }
 ```
 
-You can also view the same JSON file here: <a target="_blank" href="{{ "/tooltips.json" | prepend: site.baseurl}}">tooltips.json</a>.
+You can also view the same JSON file here: <a target="_blank" href="tooltips.json">tooltips.json</a>.
 
 You can add different fields depending on how you want the JSON to be structured. Here we just have to fields: `id` and `body`. And the JSON is looking just in the tooltips collection that we created.
 
@@ -230,7 +230,7 @@ $.get( url, function( data ) {
 </script>{% endraw %}
 ```
 
-View the <a target="_blank" href="{{ "/tooltips" | prepend: site.baseurl}}" class="noCrossRef">tooltip demo</a> for a demo.
+View the <a target="_blank" href="tooltips.html" class="noCrossRef">tooltip demo</a> for a demonstration.
 
 The `url` in the demo is relative, but you could equally point it to an absolute path on a remote host assuming CORS is enabled on the host.
 
@@ -268,7 +268,7 @@ Again, see the <a class="noCrossRef" href="/tooltips">Tooltip Demo</a> for a dem
 
 Note that even though you reference a Bootstrap JS script, Bootstrap's popovers require you to initialize them using the above code as well &mdash; they aren't turned on by default.
 
-View the source code of the <a target="_blank" href="{{ "/tooltips" | prepend: site.baseurl}}" class="noCrossRef">tooltip demo</a> for the full comments.
+View the source code of the <a target="_blank" href="tooltips.html" class="noCrossRef">tooltip demo</a> for the full comments.
 
 ## 8. Create easy links to embed the help in your help site
 

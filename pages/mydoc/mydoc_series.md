@@ -11,7 +11,7 @@ folder: mydoc
 
 ## Using series for pages
 
-You create a series by looking for all pages within a tag namespace that contain certain frontmatter. Here's a <a href="{{ "/mydoc_seriesdemo1" | prepend: site.baseurl }}" class="noCrossRef">demo</a>.
+You create a series by looking for all pages within a tag namespace that contain certain frontmatter. Here's a [demo][mydoc_seriesdemo1]</a>.
 
 ## 1. Create the series button
 
@@ -101,10 +101,10 @@ On each series page, add a link to the series button at the top and a link to th
 
 ## Changing the series drop-down color
 
-The Bootstrap menu uses the `primary` class for styling. If you change this class in your theme, the Bootstrap menu should automatically change color as well. You can also just use another Bootstrap class in your button code. Instead of `btn-primary`, use `btn-info` or `btn-warning`. See <a href="{{ "/mydoc_labels" | prepend: site.baseurl }}">Labels</a>for more Bootstrap button classes.
+The Bootstrap menu uses the `primary` class for styling. If you change this class in your theme, the Bootstrap menu should automatically change color as well. You can also just use another Bootstrap class in your button code. Instead of `btn-primary`, use `btn-info` or `btn-warning`. See [Labels][mydoc_labels] for more Bootstrap button classes.
 
 ## Using a collection with your series
 
-Instead of copying and pasting the button includes on each of your series, you could also create a collection and define a layout for the collection that has the include code. For more information on creating collections, see <a href="{{ "/mydoc_collections" | prepend: site.baseurl }}">Collections</a>.
+Instead of copying and pasting the button includes on each of your series, you could also create a collection and define a layout for the collection that has the include code. For more information on creating collections, see [Collections][mydoc_collections] for more details.
 
 {% include links.html %}

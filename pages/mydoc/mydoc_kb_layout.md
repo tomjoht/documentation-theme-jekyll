@@ -27,7 +27,7 @@ Here's the sample knowledge-base style layout:
                  <div class="panel-body">
                      <h4>Getting started</h4>
                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                     <a href="{{ '/tag_getting_started' | prepend: site.baseurl }}" class="btn btn-primary">Learn More</a>
+                     <a href="tag_getting_started.html" class="btn btn-primary">Learn More</a>
                  </div>
              </div>
          </div>
@@ -42,7 +42,7 @@ Here's the sample knowledge-base style layout:
                  <div class="panel-body">
                      <h4>Navigation</h4>
                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                     <a href="{{ '/tag_navigation' | prepend: site.baseurl }}" class="btn btn-primary">Learn More</a>
+                     <a href="tag_navigation.html" class="btn btn-primary">Learn More</a>
                  </div>
              </div>
          </div>
@@ -57,7 +57,7 @@ Here's the sample knowledge-base style layout:
                  <div class="panel-body">
                      <h4>Single sourcing</h4>
                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                     <a href="{{ '/tag_single_sourcing' | prepend: site.baseurl }}" class="btn btn-primary">Learn More</a>
+                     <a href="tag_single_sourcing.html" class="btn btn-primary">Learn More</a>
                  </div>
              </div>
          </div>
@@ -72,7 +72,7 @@ Here's the sample knowledge-base style layout:
                  <div class="panel-body">
                      <h4>Formatting</h4>
                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                     <a href="{{ '/tag_formatting' | prepend: site.baseurl }}" class="btn btn-primary">Learn More</a>
+                     <a href="tag_formatting.html" class="btn btn-primary">Learn More</a>
                  </div>
              </div>
          </div>
@@ -90,7 +90,7 @@ If you don't want to link to a tag archive index, but instead want to list all p
 {% for page in sorted_pages %}
 {% for tag in page.tags %}
 {% if tag == "getting_started" %}
-<li><a href="{{ page.url | prepend: site.baseurl}}">{{page.title}}</a></li>
+<li><a href="{{ page.url }}">{{page.title}}</a></li>
 {% endif %}
 {% endfor %}
 {% endfor %}
@@ -106,7 +106,7 @@ Getting started pages:
 {% for page in sorted_pages %}
 {% for tag in page.tags %}
 {% if tag == "getting_started" %}
-<li><a href="{{page.url | prepend: site.baseurl }}">{{page.title}}</a></li>
+<li><a href="{{ page.url }}">{{page.title}}</a></li>
 {% endif %}
 {% endfor %}
 {% endfor %}

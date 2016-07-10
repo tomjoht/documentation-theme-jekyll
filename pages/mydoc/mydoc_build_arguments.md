@@ -63,6 +63,6 @@ kill -9 $(ps aux | grep '[j]ekyll' | awk '{print $2}')
 
 I recommend creating a profile in iTerm that stores this command. Here's what the iTerm settings look like:
 
-![iTerm profile settings to kill all Jekyll]({{ "/images/killalljekyll.png" | prepend: site.baseurl }})
+{% include image.html file="killalljekyll.png" caption="iTerm profile settings to kill all Jekyll" %}
 
 {% include links.html %}

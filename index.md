@@ -10,7 +10,7 @@ summary: These brief instructions will help you get started quickly with the the
 
 ## Download or clone the theme
 
-First download or clone the theme from the [Github repo](https://github.com/tomjohnson1492/documentation-theme-jekyll). Most likely you won't be pulling in updates once you start customizing the theme, so downloading theme probably makes the most sense.
+First download or clone the theme from the [Github repo](https://github.com/tomjohnson1492/documentation-theme-jekyll). Most likely you won't be pulling in updates once you start customizing the theme, so downloading the theme (instead of cloning it) probably makes the most sense.
 
 ## Build this theme
 
@@ -21,7 +21,9 @@ If you're used to running Jekyll sites, you can type the normal jekyll command, 
 
 ## Customize the Gemfile
 
-Open the Gemfile (in any text editor) in the Jekyll doc theme project:
+The Gemfile is how project dependencies are managed. This project doesn't have any dependencies beyond core Jekyll. 
+
+Open the Gemfile (in any text editor) in the Jekyll doc theme project with the following command:
 
 ```
 open Gemfile
@@ -58,7 +60,7 @@ There are several products in this theme. Each product uses a different sidebar.
 
 The top navigation remains the same, because it allows users to navigate across products. But the sidebar navigation adapts to the product.
 
-Because each product uses a different sidebar, you'll need to set up your sidebars. There's a file inside \_includes/custom called "sidebarconfigs.html". This file controls which sidebar gets associated with which product. Open up this file to see its contents.
+Because each product uses a different sidebar, you'll need to set up your sidebars. There's a file inside \_includes/custom called "sidebarconfigs.html." This file controls which sidebar gets associated with which product. Open up this file to see its contents.
 
 The sidebarconfigs.html file uses simple `if elsif` logic to set a variable that the sidebar.html file uses to read the sidebar data file. The code in sidebarconfigs.html looks like this:
 
@@ -84,17 +86,17 @@ The sidebarconfigs.html file uses simple `if elsif` logic to set a variable that
 
 In each page's frontmatter, you must specify the sidebar you want that page to use. Here's an example of the page frontmatter showing the sidebar property:
 
-```yaml
+<pre>
 ---
 title: Alerts
 tags: [formatting]
 keywords: notes, tips, cautions, warnings, admonitions
 last_updated: July 3, 2016
 summary: "You can insert notes, tips, warnings, and important alerts in your content. These notes are stored as shortcodes made available through the linksrefs.hmtl include."
-sidebar: mydoc_sidebar
+<span class="red">sidebar: mydoc_sidebar</span>
 permalink: mydoc_alerts
 ---
-```
+</pre>
 
 The `sidebar: mydoc_sidebar` refers to the \_data/sidebars/mydoc_sidebar.yml file (meaning, the mydoc_sidebar.yml file inside the sidebars subfolder inside the \data folder).
 
@@ -102,7 +104,7 @@ If no sidebar assignment is found in the page frontmatter, the default sidebar (
 
 Note that your sidebar can only have 2 levels. Given that each product has its own sidebar, this depth should be sufficient (it's really like 3 levels). Deeper nesting goes against usability recommendations.
 
-Additionally, each level must have at least one topic before the next level starts. You can't have a second level that contains multiple third levels without having at least one standalone topic in the second level.
+{% include note.html content="Note that each level must have at least one topic before the next level starts. You can't have a second level that contains multiple third levels without having at least one standalone topic in the second level." %}
 
 For more detail on the sidebar, see [Sidebar navigation][mydoc_sidebar_navigation].
 
@@ -186,9 +188,7 @@ For more detail on the sidebar, see [Sidebar navigation][mydoc_sidebar_navigatio
 
 This theme uses relative links throughout so that you can view the site offline and not worry about which server or directory you're hosting it. It's common with tech docs to push content to an internal server for review prior to pushing the content to an external server for publication. Because of the need for seamless transferrence from one host to another, the site has to use relative links.
 
-To view pages locally on your machine, they need to have the `.html` extension. However, if you prefer not to have this extension, you can simply remove the `.html` from the sidebar entries, and the pages will still work when you view content on a preview server or web server.
-
-The `permalink` property in the page's frontmatter combined with the `include: ['pages']` property in the configuration file is what pushes the files into the root directory when the site builds.
+To view pages locally on your machine (without the Jekyll preview server), they need to have the `.html` extension. The `permalink` property in the page's frontmatter (without surrounding slashes) is what pushes the files into the root directory when the site builds.
 
 ## Page frontmatter
 
@@ -201,22 +201,22 @@ tags: [sample1, sample2]
 keywords: keyword1, keyword2, keyword3
 last_updated: Month day, year
 summary: "optional summary here"
-sidebar: sidebar name
-permalink: filename
+sidebar: sidebarname
+permalink: filename.html
 ---
 ```
 
 (You will customize the values for each of these properties, of course.)
 
-For titles, surrounding the title in quotes is optional, but if you have a colon in the title, you must surround the title with quotation marks. If you have a quotation mark within the title, escape it first with a backlash `\`.
+For titles, surrounding the title in quotes is optional, but if you have a colon in the title, you must surround the title with quotation marks. If you have a quotation mark inside the title, escape it first with a backlash `\`.
 
 Values for `keywords` get populated into the metadata of the page for SEO.
 
-Values for `tags` must be defined in your \_data/tags.yml list. You also need a corresponding tag file inside the tags folder that follows the same pattern as the other tag files shown in the tags folder. (Jekyll wont auto-create these tag files.)
+Values for `tags` must be defined in your \_data/tags.yml list. You also need a corresponding tag file inside the tags folder that follows the same pattern as the other tag files shown in the tags folder. (Jekyll won't auto-create these tag files.)
 
 If you don't want the mini-TOC to show on a page (such as for the homepage or landing pages), add `toc: false` in the frontmatter.
 
-The `permalink` value should be the same as your filename but without the file extension.
+The `permalink` value should be the same as your filename and include the ".html" file extension.
 
 For more detail, see [Pages][mydoc_pages].
 
@@ -232,7 +232,7 @@ For more information, see [Pages][mydoc_pages] and [Posts][mydoc_posts].
 
 The top navigation bar's menu items are set through the \_data/topnav.yml file. Use the top navigation bar to provide links for navigating from one product to another, or to navigate to external resources.
 
-For external URLs, use `external_url` in the item property, as shown in the example topnav.yml file. For internal links, use `url` as usual.
+For external URLs, use `external_url` in the item property, as shown in the example topnav.yml file. For internal links, use `url` the same was you do in the sidebar data files.
 
 Note that the topnav has two sections: `topnav` and `topnav_dropdowns`. The topnav section contains single links, while the `topnav_dropdowns` section contains dropdown menus. The two sections are independent of each other.
 
