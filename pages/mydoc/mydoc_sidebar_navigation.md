@@ -45,9 +45,8 @@ For example, the sidebar.html file contains the following code:
 
 {% raw %}
 ```liquid
- {% if subfolderitem.external_url %}
-<li><a href="{{subfolderitem.external_url}}" target="_blank">{{deeplevel.title}}</a></li>
-```
+{% if folderitem.external_url %}
+    <li><a href="{{folderitem.external_url}}" target="_blank">{{folderitem.title}}</a></li>```
 {% endraw %}
 
 You can see that the `external_url` is a condition that applies a different formatting. Although this feature is available, I recommend putting any external navigation links in the top navigation bar instead of the side navigation bar.
@@ -60,8 +59,8 @@ For example, the sidebar.html file contains the following code:
 
 {% raw %}
 ```liquid
-{% elsif page.url == subfolderitem.url %}
-  <li class="active"><a href="{{subfolderitem.url }}">{{subfolderitem.title}}</a></li>
+{% elsif page.url == folderitem.url %}
+   <li class="active"><a href="{{folderitem.url | remove: "/"}}">{{folderitem.title}}</a></li>
 ```
 {% endraw %}
 
@@ -73,7 +72,7 @@ This is why the `url` value in the sidebar data file looks something like this:
 
 ```yaml
     - title: Understanding how the sidebar works
-      url: /mydoc_understand_sidebar/
+      permalink: mydoc_understand_sidebar.html
       output: web, pdf
 ```
 

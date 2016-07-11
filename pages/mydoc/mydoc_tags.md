@@ -15,8 +15,8 @@ You can add tags to pages by adding `tags` in the frontmatter with values inside
 
 ```
 ---
-title: 2.0 Release Notes
-permalink: release_notes_2_0/
+title: 5.0 Release Notes
+permalink: release_notes_5_0.html
 tags: [formatting, single_sourcing]
 ---
 ```
@@ -30,7 +30,6 @@ To prevent tags from getting out of control and inconsistent, first make sure th
 
 
 {% include note.html content="In contrast to WordPress, with Jekyll to get tags on pages you have to build out the functionality for tags so that clicking a tag name shows you all pages with that tag. Tags in Jekyll are much more manual." %}
-
 
 Additionally, you must create a tag archive page similar to the other pages named tag_{tagname}.html folder. This theme doesn't auto-create tag archive pages.
 
@@ -63,7 +62,7 @@ Tags have a few components.
 title: "Collaboration pages"
 tagName: collaboration
 search: exclude
-permalink: tag_collaboration/
+permalink: tag_collaboration.html
 sidebar: mydoc_sidebar
 ---
 {% include taglogic.html %}
@@ -76,21 +75,21 @@ sidebar: mydoc_sidebar
 
    By default, the \_layouts/page.html file will look for any tags on a page and insert them at the bottom of the page using this code:
 
-   {% raw %}
-   ```
-   <div class="tags">
-    {% if page.tags != null %}
-    <b>Tags: </b>
-    {% assign projectTags = site.data.tags.allowed-tags %}
-    {% for tag in page.tags %}
-    {% if projectTags contains tag %}
-    <a href="{{ "tag_" | append: "tag.html" }}" class="btn btn-default navbar-btn cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
-    {% endif %}
-    {% endfor %}
-    {% endif %}
-   </div>
-   ```
-   {% endraw %}
+
+```liquid
+{% raw %}<div class="tags">
+{% if page.tags != null %}
+<b>Tags: </b>
+{% assign projectTags = site.data.tags.allowed-tags %}
+{% for tag in page.tags %}
+{% if projectTags contains tag %}
+<a href="{{ "tag_" | append: tag | append: ".html" }}" class="btn btn-default navbar-btn cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
+{% endif %}
+{% endfor %}
+{% endif %}
+</div>{% endraw %}
+```
+
 
 Because this code appears on the \_layouts/page.html file by default, you don't need to do anything in your page to get the tags to appear. However, if you want to alter the placement or change the button color, you can do so within the \_includes/taglogic.html file.
 
@@ -107,7 +106,7 @@ Getting started pages:
 {% for page in site.pages %}
 {% for tag in page.tags %}
 {% if tag == "getting_started" %}
-<li><a href="{{page.url }}">{{page.title}}</a></li>
+<li><a href="{{page.url | remove: "/" }}">{{page.title}}</a></li>
 {% endif %}
 {% endfor %}
 {% endfor %}
@@ -122,7 +121,7 @@ Getting started pages:
 {% for page in site.pages %}
 {% for tag in page.tags %}
 {% if tag == "getting_started" %}
-<li><a href="{{page.url | prepend: '..'}}">{{page.title}}</a></li>
+<li><a href="{{page.url | remove: "/" }}">{{page.title}}</a></li>
 {% endif %}
 {% endfor %}
 {% endfor %}
@@ -138,7 +137,7 @@ Getting started pages:
 {% for page in sorted_pages %}
 {% for tag in page.tags %}
 {% if tag == "getting_started" %}
-<li><a href="{{page.url | prepend: '..'}}">{{page.title}}</a></li>
+<li><a href="{{page.url | remove: "/" }}">{{page.title}}</a></li>
 {% endif %}
 {% endfor %}
 {% endfor %}
@@ -154,7 +153,7 @@ Getting started pages:
 {% for page in sorted_pages %}
 {% for tag in page.tags %}
 {% if tag == "getting_started" %}
-<li><a href="{{page.url | prepend: '..'}}">{{page.title}}</a></li>
+<li><a href="{{page.url | remove: "/"}}">{{page.title}}</a></li>
 {% endif %}
 {% endfor %}
 {% endfor %}

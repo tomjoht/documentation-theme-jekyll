@@ -90,7 +90,7 @@ If you don't want to link to a tag archive index, but instead want to list all p
 {% for page in sorted_pages %}
 {% for tag in page.tags %}
 {% if tag == "getting_started" %}
-<li><a href="{{ page.url }}">{{page.title}}</a></li>
+<li><a href="{{ page.url | remove: "/" }}">{{page.title}}</a></li>
 {% endif %}
 {% endfor %}
 {% endfor %}
@@ -106,7 +106,7 @@ Getting started pages:
 {% for page in sorted_pages %}
 {% for tag in page.tags %}
 {% if tag == "getting_started" %}
-<li><a href="{{ page.url }}">{{page.title}}</a></li>
+<li><a href="{{ page.url | remove: "/"}}">{{page.title}}</a></li>
 {% endif %}
 {% endfor %}
 {% endfor %}

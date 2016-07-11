@@ -23,7 +23,7 @@ The available include properties are as follows:
 
 | Property | description |
 |-------|--------|
-| file | The name of the file. Store it in the /images folder. |
+| file | The name of the file. Store it in the /images folder. If you want to organize your images in subfolders, reference the subfolder path here, like this: `mysubfolder/jekyllrb.png` |
 | url | Whether to link the image to a URL |
 | alt | Alternative image text for accessibility and SEO |
 | caption | A caption for the image |
@@ -34,6 +34,8 @@ The properties of the include get populated into the image.html template.
 Here's the result:
 
 {% include image.html file="jekyll.png" url="http://jekyllrb.com" alt="Jekyll" caption="This is a sample caption" %}
+
+
 
 ## Inline image includes
 

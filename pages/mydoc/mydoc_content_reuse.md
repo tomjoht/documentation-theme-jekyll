@@ -10,7 +10,7 @@ folder: mydoc
 ---
 
 ## About content reuse
-You can embed content from one file inside another using includes. Put the file containing content you want to reuse (e.g., mypage.html) inside the \_includes/custom folder and then use a tag like this:
+You can embed content from one file inside another using includes. Put the file containing content you want to reuse (e.g., mypage.html) inside the \_includes/custom folder and then use a tag like this: 
 
 {% raw %}
 ```

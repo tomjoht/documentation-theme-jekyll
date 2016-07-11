@@ -34,6 +34,7 @@ Bootstrap integration | Yes | This theme is built on [Bootstrap](http://getboots
 Fast-loading pages| Yes | This is one of the Jekyll's strengths. Because the files are static, they loading extremely fast, approximately 0.5 seconds per page. You can't beat this for performance. (A typically database-driven site like WordPress averages about 2.5 + seconds loading time per page.) Because the pages are all static, it means they are also extremely secure. You won't get hacked like you might with a WordPress site.
 Themes | Yes | You can have different themes for different outputs. If you know CSS, theming both the web and print outputs is pretty easy.
 Open source | Yes | This theme is entirely open source. Every piece of code is open, viewable, and editable. Note that this openness comes at a price &mdash; it's easy to make changes that break the theme or otherwise cause errors.
+Offline viewing | Yes | This theme uses relative linking throughout, so you can view the content offline and on any webserver without configuring urls and baseurls in your configuration file.
 
 
 ## Features not available
@@ -44,7 +45,7 @@ Features | Supported | Notes
 --------|-----------|-----------
 CMS interface | No | Unlike with WordPress, you don't log into an interface and navigate to your files. You work with text files and preview the site dynamically in your browser. Don't worry -- this is part of the simplicy that makes Jekyll awesome. I recommend using WebStorm as your text editor.
 WYSIWYG interface | No | I use WebStorm to author content, because I like working in text file formats. But you can use any Markdown editor you want (e.g., Lightpaper for Mac, Marked) to author your content.
-Different outputs | No | This theme provides a single website output that contains documentation for multiple products. Unlike previous iterations of the theme, it's not intended to support different outputs from the same content.
+Different outputs | No | This theme provides a single website output that contains documentation for multiple products. Unlike previous iterations of the theme, it's not intended to support different outputs from the same content. However, you can easily set things up to do this by simply creating multiple configuration files and running different builds for each configuration file.
 Robust search | No | The search feature is a simplistic JSON search. For more robust search, you should integrate Swiftype or Algolia. However, those services aren't currently integrated into the theme.
 Standardized templates | No | You can create pages with any structure you want. The theme does not enforce topic types such as a task or concept as the DITA specification does.
 Integration with Swagger | No | You can link to a SwaggerUI output, but there is no built-in integration of SwaggerUI into this documentation theme.

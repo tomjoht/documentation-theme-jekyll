@@ -63,7 +63,7 @@ search: exclude
 "title": "{{ page.title | escape }}",
 "tags": "{{ page.tags }}",
 "keywords": "{{page.keywords}}",
-"url": "{{ page.url | prepend: site.baseurl }}",
+"url": "{{ page.url | remove: "/"}}",
 "summary": "{{page.summary | strip }}"
 },
 {% endunless %}
@@ -75,7 +75,7 @@ search: exclude
 "title": "{{ post.title | escape }}",
 "tags": "{{ post.tags }}",
 "keywords": "{{post.keywords}}",
-"url": "{{ post.url | prepend: site.baseurl }}",
+"url": "{{ post.url }}",
 "summary": "{{post.summary | strip }}"
 }
 {% unless forloop.last %},{% endunless %}

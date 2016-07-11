@@ -30,7 +30,7 @@ First create an include that contains your series button:
             <li class="active"> → {{p.weight}}. {{p.title}}</li>
             {% else %}
             <li>
-                <a href="{{p.url | prepend: '..'}}">{{p.weight}}. {{p.title}}</a>
+                <a href="{{p.url}}">{{p.weight}}. {{p.title}}</a>
             </li>
             {% endif %}
             {% endif %}
@@ -58,7 +58,7 @@ Now create another include for the Next button at the bottom of the page. Copy t
     {% if p.series == "ACME series" %}
     {% assign nextTopic = page.weight | plus: "1"  %}
     {% if p.weight == nextTopic  %}
-    <a href="{{p.url | prepend: '..'}}"><button type="button" class="btn btn-primary">Next: {{p.weight}}  {{p.title}}</button></a>
+    <a href="{{p.url}}"><button type="button" class="btn btn-primary">Next: {{p.weight}}  {{p.title}}</button></a>
     {% endif %}
     {% endif %}
     {% endfor %}

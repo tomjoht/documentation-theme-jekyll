@@ -3,7 +3,7 @@
     {% if p.series == "ACME series" %}
     {% assign nextTopic = page.weight | plus: "1"  %}
     {% if p.weight == nextTopic  %}
-    <a href="{{p.url | prepend: '..'}}"><button type="button" class="btn btn-primary">Next: {{p.weight}}  {{p.title}}</button></a>
+    <a href="{{p.url}}"><button type="button" class="btn btn-primary">Next: {{p.weight}}  {{p.title}}</button></a>
     {% endif %}
     {% endif %}
     {% endfor %}
