@@ -124,23 +124,23 @@ entries:
     folderitems:
 
     - title: Get started
-      url: /index
+      url: /index.html
       output: web, pdf
 
     - title: Introduction
-      url: /mydoc_introduction
+      url: /mydoc_introduction.html
       output: web, pdf
 
     - title: Supported features
-      url: /mydoc_supported_features
+      url: /mydoc_supported_features.html
       output: web, pdf
 
     - title: About the theme author
-      url: /mydoc_about
+      url: /mydoc_about.html
       output: web, pdf
 
     - title: Support
-      url: /mydoc_support
+      url: /mydoc_support.html
       output: web, pdf
 
   - title: Release Notes
@@ -148,11 +148,11 @@ entries:
     folderitems:
 
     - title: 6.0 Release notes
-      url: /mydoc_release_notes_60
+      url: /mydoc_release_notes_60.html
       output: web, pdf
 
     - title: 5.0 Release notes
-      url: /mydoc_release_notes_50
+      url: /mydoc_release_notes_50.html
       output: web, pdf
 
 ```
