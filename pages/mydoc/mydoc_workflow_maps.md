@@ -2,7 +2,7 @@
 title: Workflow maps
 tags: [formatting]
 keywords: release notes, announcements, what's new, new features
-last_updated: July 3, 2016
+last_updated: July 16, 2016
 summary: "Version 6.0 of the Documentation theme for Jekyll reverts back to relative links so you can view the files offline. Additionally, you can store pages in subdirectories. Templates for alerts and images are available."
 sidebar: mydoc_sidebar
 permalink: mydoc_workflow_maps.html
