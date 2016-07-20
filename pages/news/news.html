@@ -13,7 +13,7 @@ folder: news
         {% for post in site.posts limit:10 %}
 
 
-    <h2><a class="post-link" href="{{ post.url }}">{{ post.title }}</a></h2>
+    <h2><a class="post-link" href="{{ post.url | remove: "/" }}">{{ post.title }}</a></h2>
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }} /
             {% for tag in post.tags %}
                 <a href="{{ "tag_" | append: {{tag}}.html">{{tag}}</a>{% unless forloop.last %}, {% endunless%}
