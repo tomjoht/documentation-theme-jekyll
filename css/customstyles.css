@@ -1154,3 +1154,8 @@ div.box.box1 {
         width: 100%;
     }
 }
+
+h4.panel-title {
+    padding-top: 0px;
+    margin-top: 0px;
+}
