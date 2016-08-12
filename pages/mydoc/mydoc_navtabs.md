@@ -28,9 +28,17 @@ The following is a demo of a navtab. Refresh your page to see the tab you select
     <li><a class="noCrossRef" href="#match" data-toggle="tab">Match</a></li>
 </ul>
   <div class="tab-content">
-<div role="tabpanel" class="tab-pane active" id="profile">
-    <h2>Profile</h2>
-<p>Praesent sit amet fermentum leo. Aliquam feugiat, nibh in u ltrices mattis, felis ipsum venenatis metus, vel vehicula libero mauris a enim. Sed placerat est ac lectus vestibulum tempor. Quisque ut condimentum massa. Proin venenatis leo id urna cursus blandit. Vivamus sit amet hendrerit metus.</p>
+<div role="tabpanel" class="tab-pane active" id="profile" markdown="1">
+## Profile
+
+Praesent sit amet fermentum leo. Aliquam feugiat, 
+
+1.  nibh in u ltrices mattis
+2.  felis ipsum venenatis metus, vel vehicula libero mauris a enim. Sed placerat est ac lectus vestibulum tempor. 
+    * Quisque ut condimentum massa. 
+    * ut condimentum massa. 
+
+> Proin venenatis leo id urna cursus blandit. Vivamus sit amet hendrerit metus.
 </div>
 
 <div role="tabpanel" class="tab-pane" id="about">

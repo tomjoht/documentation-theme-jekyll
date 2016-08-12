@@ -30,7 +30,7 @@ First create an include that contains your series button:
             <li class="active"> → {{p.weight}}. {{p.title}}</li>
             {% else %}
             <li>
-                <a href="{{p.url}}">{{p.weight}}. {{p.title}}</a>
+                <a href="{{p.url | remove: "/"}}">{{p.weight}}. {{p.title}}</a>
             </li>
             {% endif %}
             {% endif %}
