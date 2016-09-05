@@ -2,16 +2,16 @@
 layout: none
 search: exclude
 ---
+
+        hello
 {
 "entries":
 [
 {% for page in site.tooltips %}
-{% if page.product == "mydoc" %}
 {
 "id"    : "{{ page.id }}",
 "body": "{{ page.content | strip_newlines | replace: '\', '\\\\' | replace: '"', '\\"' }}"
 } {% unless forloop.last %},{% endunless %}
-{% endif %}
 {% endfor %}
 ]
 }
