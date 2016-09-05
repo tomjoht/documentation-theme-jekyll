@@ -133,12 +133,12 @@ For example, suppose you have 2 projects: alpha and beta. You might store all th
 In your alpha configuration file, specify the data source like this:
 
 ```
-data_source: data_amydoc_content_reuselpha
+data_source: data_alpha
 ```
 
 Then create a folder called \_data_alpha.
 
-For your beta configuratoin file, specify the data source like this:
+For your beta configuration file, specify the data source like this:
 
 ```
 data_source: data_beta
