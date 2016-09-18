@@ -1,10 +1,11 @@
 ---
-title: Getting started with the Documentation Theme for Jekyll
-keywords: sample homepage
-tags: [getting_started]
-sidebar: mydoc_sidebar
-permalink: index.html
-summary: These brief instructions will help you get started quickly with the theme. The other topics in this help provide additional information and detail about working with other aspects of this theme and Jekyll.
+title: I'm Getting started with the Documentation Theme for Jekyll
+keywords: sample homepage # get populated into the metadata of the page for SEO
+tags: [getting_started] # must be defined in your _data/tags.yml list
+last_update: Sep. 18, 2016
+sidebar: mydoc_sidebar # 
+permalink: index.html # same as your filename and include the “.html” file extension.
+summary: I'll edit this page from now. 
 ---
 
 ## Download or clone the theme
