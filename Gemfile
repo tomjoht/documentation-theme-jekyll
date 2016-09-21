@@ -1,9 +1,8 @@
 source "https://rubygems.org"
 
-
-
-# gem "rails"
 ruby '2.2.2'
-gem 'bundler'
+
+gem 'rake'
 gem 'jekyll'
-gem 'rack-jekyll'
+gem 'kramdown'
+gem 'html-proofer'
