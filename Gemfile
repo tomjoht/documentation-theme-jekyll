@@ -1,5 +1,8 @@
 source "https://rubygems.org"
 
-# gem "rails"
-gem 'github-pages'
+ruby '2.2.2'
+
+gem 'rake'
 gem 'jekyll'
+gem 'kramdown'
+gem 'html-proofer'
