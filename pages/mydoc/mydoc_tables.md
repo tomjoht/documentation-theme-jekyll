@@ -48,7 +48,7 @@ You can use Multimarkdown syntax for tables. The following shows a sample:
 
 ## HTML Tables {#htmltables}
 
-If you need a more sophisticated table syntax, use HTML syntax for the table. Although you're using HTML, you can use Markdown inside the table cells by adding `markdown="1"` as an attribute for the `td` tag, as shown in the following table. You can also control the column widths.
+If you need a more sophisticated table syntax, use HTML syntax for the table. Although you're using HTML, you can use Markdown inside the table cells by adding `markdown="span"` as an attribute for the `td` tag, as shown in the following table. You can also control the column widths.
 
 ```html
 <table>
@@ -58,27 +58,24 @@ If you need a more sophisticated table syntax, use HTML syntax for the table. Al
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Field</th>
-<th align="left">Description</th>
+<th>Field</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left" markdown="1">First column **fields**</td>
-<td align="left" markdown="1">Some descriptive text. This is a markdown link to [Google](http://google.com). Or see [some link][mydoc_tags].</td>
+<td markdown="span">First column **fields**</td>
+<td markdown="span">Some descriptive text. This is a markdown link to [Google](http://google.com). Or see [some link][mydoc_tags].</td>
 </tr>
 <tr>
-<td align="left" markdown="1">Second column **fields**</td>
-<td align="left" markdown="1">Some more descriptive text. Here we have a Markdown-formatted list:
-
-* first item
-* second item
-* third item
+<td markdown="span">Second column **fields**</td>
+<td markdown="span">Some more descriptive text.
 </td>
 </tr>
 </tbody>
 </table>
 ```
+
 **Result:**
 <table>
 <colgroup>
@@ -87,22 +84,18 @@ If you need a more sophisticated table syntax, use HTML syntax for the table. Al
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">Field</th>
-<th align="left">Description</th>
+<th>Field</th>
+<th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left" markdown="1">First column **fields**</td>
-<td align="left" markdown="1">Some descriptive text. This is a markdown link to [Google](http://google.com). Or see [some link][mydoc_tags].</td>
+<td markdown="span">First column **fields**</td>
+<td markdown="span">Some descriptive text. This is a markdown link to [Google](http://google.com). Or see [some link][mydoc_tags].</td>
 </tr>
 <tr>
-<td align="left" markdown="1">Second column **fields**</td>
-<td align="left" markdown="1">Some more descriptive text. Here we have a Markdown-formatted list:
-
-* first item
-* second item
-* third item
+<td markdown="span">Second column **fields**</td>
+<td markdown="span">Some more descriptive text. 
 </td>
 </tr>
 </tbody>

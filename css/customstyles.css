@@ -665,8 +665,6 @@ div.tags {padding: 10px 5px;}
 }
 
 hr {
-    border: 0;
-    border-bottom: 1px dashed #ccc;
     background: #999;
     margin: 30px 0px;
     width: 90%;
