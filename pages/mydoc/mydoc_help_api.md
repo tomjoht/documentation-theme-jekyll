@@ -264,7 +264,7 @@ $(document).ready(function(){
     });
 ```
 
-Again, see the <a class="noCrossRef" href="/tooltips">Tooltip Demo</a> for a demo of the full code.
+Again, see the <a class="noCrossRef" href="tooltips.html">Tooltip Demo</a> for a demo of the full code.
 
 Note that even though you reference a Bootstrap JS script, Bootstrap's popovers require you to initialize them using the above code as well &mdash; they aren't turned on by default.
 
