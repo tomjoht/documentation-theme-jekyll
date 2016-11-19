@@ -245,7 +245,6 @@ ul#results-container a: hover {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     float: right;
-    margin-top:10px;
 }
 /* end search */
 
@@ -345,12 +344,23 @@ a.accordion-toggle, a.accordion-collapsed {
     margin: 1px 0;
 }
 
-.nav > li li {
-    margin: 2px 0;
+.nav li.active {
+    margin-bottom: 15px;
 }
 
+.nav > li li, .nav > li li.active {
+    margin: 2px 10px;
+}
+
+.dropdown-menu > li 
+{
+    margin: 0px !important;
+    padding: 2px 0px;
+}
+
+
 .nav a {
-    color: #333;
+    color: #595959;
     display: block;
     outline: none;
     /*-webkit-border-radius: 4px;
@@ -359,6 +369,8 @@ a.accordion-toggle, a.accordion-collapsed {
     text-decoration: none;
 }
 
+
+
 .nav li > a > span {
     float: right;
     font-size: 19px;
@@ -366,31 +378,35 @@ a.accordion-toggle, a.accordion-collapsed {
 }
 
 
-.nav li > a > span:after {
-    content: '\25be';
-}
-.nav li.open > a > span:after {
-    content: '\25b4';
+.nav li.active > a > span:after {
+     position: absolute;
+     top: 2px;
+     left: 90%;
+     content : url('https://developer.apple.com/ios/human-interface-guidelines/images/menu-chevron.png');
 }
 
-.nav a:hover, .nav li.active > a {
-    background-color: #8D8D8D;
-    color: #f5f5f5;
+
+.nav li.active > a {
+    background-color: white;
+    font-weight: 700;
 }
 
 .nav > li.active > a  {
-background-color: #347DBE;
+    background-color: white;
+    color: black;
+    font-weight: 700;
 }
 
 .nav li a {
-    font-size: 12px;
+    font-size: 15px;
     line-height: 18px;
-    padding: 2px 10px;
-    background-color: #f1f1f1;
+    padding: 4px 10px;
 }
 
+
+
 .nav > li > a {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 20px;
     padding: 4px 10px;
 }
@@ -411,20 +427,18 @@ ul#mysidebar {
 }
 
 
-.nav ul li a {
-    background-color: #FAFAFA;
-}
-
 .nav li a {
     padding-right:10px;
+    padding-bottom: 8px;
 }
 
-.nav li a:hover {
-    background-color: #8D8D8D;
+.nav li a:hover,  .nav > li > a:focus {
+    background-color: #f2f2f2;
+    text-decoration: none;
+    color: #333;
 }
 
 .nav ul li a {
-    border-top:1px solid whitesmoke;
     padding-left:10px;
 }
 /* end sidebar */
