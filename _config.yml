@@ -2,10 +2,10 @@
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: Jekyll Documentation Theme
+topnav_title: esri app design
 # this appears on the top navigation bar next to the home button
 
-site_title: Jekyll theme for documentation
+site_title: esri app design
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
 company_name: Your company
@@ -28,12 +28,12 @@ exclude:
   - .gitignore
 # these are the files and directories that jekyll will exclude from the build
 
-feedback_subject_line: Jekyll documentation theme
+feedback_subject_line: app design
 
 feedback_email: tomjohnson1492@gmail.com
 # used as a contact email for the Feedback link in the top navigation bar
 
-# feedback_disable: true
+feedback_disable: true
 # if you uncomment the previous line, the Feedback link gets removed
 
 # feedback_text: "Need help?"
@@ -66,7 +66,7 @@ defaults:
     values:
       layout: "page"
       comments: true
-      search: true
+      search: false
       sidebar: home_sidebar
   -
     scope:
@@ -75,7 +75,7 @@ defaults:
     values:
       layout: "page"
       comments: true
-      search: true
+      search: false
       tooltip: true
 
   -
@@ -85,7 +85,7 @@ defaults:
     values:
       layout: "post"
       comments: true
-      search: true
+      search: false
       sidebar: home_sidebar
 
 # these are defaults used for the frontmatter for these file types
