@@ -50,4 +50,38 @@ Fenced code blocks require a blank line before and after.
 
 If you're using an HTML file, you can also use the `highlight` command with Liquid markup.
 
+<pre>
+{% raw %}{% highlight java %}
+import java.util.Scanner;
+
+public class ScannerAndKeyboard
+{
+
+	public static void main(String[] args)
+	{	Scanner s = new Scanner(System.in);
+		System.out.print( "Enter your name: "  );
+		String name = s.nextLine();
+		System.out.println( "Hello " + name + "!" );
+	}
+}
+{% endhighlight %}{% endraw %}
+</pre> 
+
+Result: 
+
+{% highlight java %}
+import java.util.Scanner;
+
+public class ScannerAndKeyboard
+{
+
+	public static void main(String[] args)
+	{	Scanner s = new Scanner(System.in);
+		System.out.print( "Enter your name: "  );
+		String name = s.nextLine();
+		System.out.println( "Hello " + name + "!" );
+	}
+}
+{% endhighlight %}
+
 {% include links.html %}
