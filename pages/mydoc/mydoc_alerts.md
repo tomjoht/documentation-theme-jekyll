@@ -10,6 +10,7 @@ folder: mydoc
 ---
 
 ## About alerts
+
 Alerts are little warnings, info, or other messages that you have called out in special formatting. In order to use these alerts or callouts, reference the appropriate value stored in the alerts.yml file as described in the following sections.
 
 ## Alerts
