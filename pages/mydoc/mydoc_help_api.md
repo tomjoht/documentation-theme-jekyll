@@ -39,7 +39,7 @@ A collection is another content type that extends Jekyll beyond the use of pages
 
 Add the following information to your configuration file to declare your collection:
 
-```liquid
+```
 collections:
   tooltips:
     output: false
@@ -65,8 +65,8 @@ Create pages inside your new tooltips collection (that is, inside the \_tooltips
 
 Here's an example:
 
-{% highlight yaml %}
-{% raw %}```liquid
+```yaml
+{% raw %}
 ---
 id: basketball
 product: mydoc
@@ -74,8 +74,6 @@ product: mydoc
 
 {{site.data.definitions.basketball}}{% endraw %}
 ```
-{% endhighlight %}
-
 
 You need to create a separate page for each tooltip you want to deliver.  
 
@@ -113,7 +111,7 @@ Change "mydoc" to the product name you used in each of the tooltip files. The te
 
 This code will loop through all pages in the tooltips collection and insert the `id` and `body` into key-value pairs for the JSON code. Here's an example of what that looks like after it's processed by Jekyll in the site build:
 
-```
+```json
 {
   "entries": [
     {
