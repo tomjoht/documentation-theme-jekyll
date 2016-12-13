@@ -84,4 +84,28 @@ public class ScannerAndKeyboard
 }
 {% endhighlight %}
 
+The theme has syntax highlighting specified in the configuration file as follows:
+
+```
+highlighter: rouge
+```
+
+The syntax highlighting is done via the css/syntax.css file.
+
+## Available lexers
+
+The keywords you must add to specify the highlighting (in the previous example, `ruby`) are called "lexers." You can search for "lexers." Here are some common ones I use:
+
+* js
+* html
+* yaml
+* css
+* json
+* php
+* java
+* cpp
+* dotnet
+* xml
+* http
+
 {% include links.html %}

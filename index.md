@@ -35,7 +35,7 @@ You'll want [Bundler](http://bundler.io/) to make sure all the Ruby gems needed 
 ### 4. Option 1: Build the Theme (*without* the github-pages gem) {#option1}
 
 Use this option if you're not planning to publish your Jekyll site using [Github Pages](https://pages.github.com/).
- 
+
 Bundler's Gemfile is how it specifies and manages project dependencies are managed. Although this project includes a Gemfile, this theme doesn't have any dependencies beyond core Jekyll. The Gemfile is used to specify gems needed for publishing on Github Pages. **If you're not planning to have Github Pages build your Jekyll project, delete these two files from the theme's root directory:**
 
 * Gemfile
@@ -70,6 +70,21 @@ bundle exec jekyll serve
 ```
 
 If you want to shorten this long command, you can put this code in a file such as jekyll.sh (on a Mac) and then simply type `. jekyll.sh` to build Jekyll.
+
+## Running the site in Docker
+
+You can also use Docker to directly build and run the site on your local machine. Just clone the repo and run the following from your working dir:
+
+```
+docker build --no-cache -t mydocs .
+```
+
+Once the build is complete, you can mount and run the whole site as follows:
+
+```
+docker run -v "$PWD:/src" -p 4000:4000 mydocs serve -H 0.0.0.0
+```
+This is perhaps the easiest way to see how your site would actually look.
 
 ## Configure the sidebar
 
