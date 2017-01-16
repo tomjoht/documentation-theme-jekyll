@@ -23,10 +23,10 @@ If you are having issues that are not addressed in the User's Guide or FAQs chec
 
 ### 4. OnlyKey Apps
 
-[OnlyKey Firmware](https://github.com/trustcrypto/OnlyKey-Firmware) - This is the software that runs on the OnlyKey itself. 
+[OnlyKey Firmware](https://docs.crp.to/firmware.html) - This is the software that runs on the OnlyKey itself. 
 
-[OnlyKey Chrome App](https://github.com/trustcrypto/OnlyKey-Chrome-App) - This is the app used to set up and configure OnlyKey.
+[OnlyKey Chrome App](https://docs.crp.to/app.html) - This is the app used to set up and configure OnlyKey.
 
-[OnlyKey Python Command-Line Utility](https://github.com/trustcrypto/python-onlykey) - This is a command line tool targeted towards more advanced users. This can be used for configuration and testing.
+[OnlyKey Python Command-Line Utility](https://docs.crp.to/command-line.html) - This is a command line tool targeted towards more advanced users. This can be used for configuration and testing.
 
 {% include links.html %}
