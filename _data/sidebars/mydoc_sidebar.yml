@@ -16,7 +16,7 @@ entries:
       type: homepage
 
     - title: FAQs
-      url: /faqs.html
+      url: /faq.html
       output: web, pdf
 
   - title: Apps and Software
