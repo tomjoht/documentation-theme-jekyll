@@ -1,5 +1,5 @@
 ---
-title: CryptoTrust Documentation
+title: CryptoTrust Docs
 keywords: homepage
 tags: [getting_started]
 sidebar: mydoc_sidebar
