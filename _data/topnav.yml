@@ -4,7 +4,7 @@ topnav:
 - title: Topnav
   items:
     - title: Home
-      url: /
+      url: https://crp.to
 
 #Topnav dropdowns
 topnav_dropdowns:
