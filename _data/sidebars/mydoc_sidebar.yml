@@ -2,11 +2,11 @@
 
 entries:
 - title: sidebar
-  product: 
+  product: OnlyKey Documentation
   version: 
   folders:
 
-  - title: OnlyKey Documentation
+  - title: General Information
     output: web, pdf
     folderitems:
 
@@ -19,7 +19,7 @@ entries:
       url: /faqs.html
       output: web, pdf
 
-  - title: OnlyKey Apps
+  - title: Apps and Software
     output: web, pdf
     folderitems:
 
