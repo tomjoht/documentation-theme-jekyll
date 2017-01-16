@@ -7,6 +7,8 @@ permalink: index.html
 summary: Documentation for CryptoTrust products includes the following:
 ---
 
+## Projects
+
 ### 1. OnlyKey Firmware
 
 ### 2. OnlyKey App
