@@ -4,7 +4,7 @@ topnav:
 - title: Topnav
   items:
     - title: Home
-      url: https://crp.to
+      url: /
 
 #Topnav dropdowns
 topnav_dropdowns:
@@ -13,4 +13,4 @@ topnav_dropdowns:
     - title: Products
       folderitems:
         - title: OnlyKey
-          url: /https://docs.crp.to/index.html
+          url: /index.html
