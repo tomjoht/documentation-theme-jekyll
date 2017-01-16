@@ -4,7 +4,7 @@ keywords: homepage
 tags: [getting_started]
 sidebar: mydoc_sidebar
 permalink: index.html
-summary: Documentation includes:
+summary: Documentation includes -
 ---
 
 ## OnlyKey Project
