@@ -15,7 +15,7 @@ Alerts are little warnings, info, or other messages that you have called out in 
 
 ## Alerts
 
-Similar to [inserting images][mydoc_images]), you insert alerts through various includes that have been developed. These includes provide templates through which you pass parameters to easily populate the right HTML code.
+Similar to [inserting images][mydoc_images], you insert alerts through various includes that have been developed. These includes provide templates through which you pass parameters to easily populate the right HTML code.
 
 ```
 {%raw%}{% include note.html content="This is my note. All the content I type here is treated as a single paragraph." %}{% endraw%}
