@@ -369,7 +369,7 @@ a.accordion-toggle, a.accordion-collapsed {
 .nav li > a > span:after {
     content: '\25be';
 }
-.nav li.open > a > span:after {
+.nav li.active > a > span:after {
     content: '\25b4';
 }
 
