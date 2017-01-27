@@ -97,7 +97,7 @@ Although you can use the default command prompt with Windows, it's recommended t
 After making an edit, Jekyll auto-rebuilds the site. If you have the Gemfile in the theme with the github-pages gem, you may see the following error:
 
 ```
- GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.
+GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.
 ```
 
 If so, you will need to take some additional steps to resolve it. (Note that this error only appears if you have the github-pages gem in your gemfile.) The resolution involves adding a Github token and a cert file.
