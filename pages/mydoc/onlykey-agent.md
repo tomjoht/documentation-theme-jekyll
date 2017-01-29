@@ -1,11 +1,11 @@
 ---
-title: OnlyKey Python Command-Line Utility 
-tags: [OnlyKey, Command line, Python]
-keywords: OnlyKey, Command line
-last_updated: Jan, 16, 2017
-summary: The OnlyKey Python Command-Line Utility is a command line tool targeted towards more advanced users. This can be used for configuration and testing.
+title: OnlyKey SSH/GPG agent
+tags: [OnlyKey, Agent, Python]
+keywords: OnlyKey, Agent
+last_updated: Jan, 28, 2017
+summary: The OnlyKey agent is essentially middleware that lets you use OnlyKey as a hardware SSH/GPG device (GPG not supported yet).
 sidebar: mydoc_sidebar
-permalink: command-line.html
+permalink: onlykey-agent.html
 folder: mydoc
 ---
 
@@ -19,6 +19,6 @@ Coming soon
 
 ## Source
 
-[OnlyKey Python Command-Line Utility on Github](https://github.com/trustcrypto/python-onlykey)
+[OnlyKey Agent on Github](https://github.com/trustcrypto/onlykey-agent)
 
 {% include links.html %}
