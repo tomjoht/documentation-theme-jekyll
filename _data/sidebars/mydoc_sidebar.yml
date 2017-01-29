@@ -34,3 +34,7 @@ entries:
     - title: OnlyKey Python Command-Line Utility
       url: /command-line.html
       output: web, pdf
+      
+    - title: OnlyKey SSH/GPG Agent
+      url: /onlykey-agent.html
+      output: web, pdf
