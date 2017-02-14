@@ -97,93 +97,36 @@ You also must add a class of `display` to your tables.  You can change the class
 
 You can also add page-specific triggers (by copying the `<script></script>` block from the default layout into the page) and classes, which lets you use different options on different tables.
 
-Markdown doesn't allow you to add classes to tables, so you'll need to use HTML for any DataTables. Here's an example:
+If you use an HTML table, adding `class="display"` to the `<table>` tag is sufficient.
 
-```html
-<table id="sampleTable" class="display">
-   <thead>
-      <tr>
-         <th>Parameter</th>
-         <th>Description</th>
-         <th>Type</th>
-         <th>Default Value</th>
-      </tr>
-   </thead>
-   <tbody>
-      <tr>
-         <td>Parameter 1</td>
-         <td>Sample description
-         </td>
-         <td>Sample type</td>
-         <td>Sample default value</td>
-      </tr>
-      <tr>
-         <td>Parameter 2</td>
-         <td>Sample description
-         </td>
-         <td>Sample type</td>
-         <td>Sample default value</td>
-      </tr>
-    <tr>
-       <td>Parameter 3</td>
-       <td>Sample description
-       </td>
-       <td>Sample type</td>
-       <td>Sample default value</td>
-    </tr>
-      <tr>
-         <td>Parameter 4</td>
-         <td>Sample description
-         </td>
-         <td>Sample type</td>
-         <td>Sample default value</td>
-      </tr>
-   </tbody>
-</table>
+Markdown, however, doesn't allow you to add classes to tables, so you'll need to use a trick: add `<div class="datatable-begin"></div>` before the table and `<div class="datatable-end"></div>` after the table.  The default layout includes a jQuery snippet that automagically adds the `display` class to any table it finds between those two markers.  So you can start with this (we've trimmed the descriptions for display):
+
+```markdown
+<div class="datatable-begin"></div>
+
+Food    | Description                           | Category | Sample type
+------- | ------------------------------------- | -------- | -----------
+Apples  | A small, somewhat round ...           | Fruit    | Fuji
+Bananas | A long and curved, often-yellow ...    | Fruit    | Snow
+Kiwis   | A small, hairy-skinned sweet ...      | Fruit    | Golden
+Oranges | A spherical, orange-colored sweet ... | Fruit    | Navel
+
+<div class="datatable-end"></div>
 ```
 
-This renders to the following:
+and get this:
 
-<table id="sampleTable" class="display">
-   <thead>
-      <tr>
-         <th>Food</th>
-         <th>Description</th>
-         <th>Category</th>
-         <th>Sample type</th>
-      </tr>
-   </thead>
-   <tbody>
-      <tr>
-         <td>Apples</td>
-         <td>A small, somewhat round and often red-colored, crispy fruit grown on trees.
-         </td>
-         <td>Fruit</td>
-         <td>Fuji</td>
-      </tr>
-      <tr>
-         <td>Bananas</td>
-         <td>A long and curved, often-yellow, sweet and soft fruit that grows in bunches in tropical climates.
-         </td>
-         <td>Fruit</td>
-         <td>Snow</td>
-      </tr>
-      <tr>
-         <td>Kiwis</td>
-         <td>A small, hairy-skinned sweet fruit with green-colored insides and seeds.
-         </td>
-         <td>Fruit</td>
-         <td>Golden</td>
-      </tr>
-        <tr>
-           <td>Oranges</td>
-           <td>A spherical, orange-colored sweet fruit commonly grown in Florida and California.
-           </td>
-           <td>Fruit</td>
-           <td>Navel</td>
-        </tr>
-   </tbody>
-</table>
+<div class="datatable-begin"></div>
+
+Food    | Description                                                                                       | Category | Sample type
+------- | ------------------------------------------------------------------------------------------------- | -------- | -----------
+Apples  | A small, somewhat round and often red-colored, crispy fruit grown on trees.                       | Fruit    | Fuji
+Bananas | A long and curved, often-yellow, sweet and soft fruit that grows in bunches in tropical climates. | Fruit    | Snow
+Kiwis   | A small, hairy-skinned sweet fruit with green-colored insides and seeds.                          | Fruit    | Golden
+Oranges | A spherical, orange-colored sweet fruit commonly grown in Florida and California.                 | Fruit    | Navel
+
+<div class="datatable-end"></div>
+
 
 Notice a few features:
 
