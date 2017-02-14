@@ -107,7 +107,7 @@ Markdown, however, doesn't allow you to add classes to tables, so you'll need to
 Food    | Description                           | Category | Sample type
 ------- | ------------------------------------- | -------- | -----------
 Apples  | A small, somewhat round ...           | Fruit    | Fuji
-Bananas | A long and curved, often-yellow ...    | Fruit    | Snow
+Bananas | A long and curved, often-yellow ...   | Fruit    | Snow
 Kiwis   | A small, hairy-skinned sweet ...      | Fruit    | Golden
 Oranges | A spherical, orange-colored sweet ... | Fruit    | Navel
 
