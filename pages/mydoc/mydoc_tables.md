@@ -87,31 +87,17 @@ If you need a more sophisticated table syntax, use HTML syntax for the table. Al
 </tbody>
 </table>
 
-## jQuery datables
+## jQuery DataTables
 
-You also have the option of using a [jQuery datatable](https://www.datatables.net/), which gives you some more options. If you want to use a jQuery datatable, then add `datatable: true` in a page's frontmatter. This will load the right jQuery datatable scripts for the table on that page only (rather than loading the scripts on every page of the site.)
+You also have the option of using a [jQuery DataTable](https://www.datatables.net/), which gives you some additional capabilities. To use a jQuery DataTable in a page, include `datatable: true` in a page's frontmatter. This tells the default layout to load the necessary CSS and javascript bits and to include a `$(document).ready()` function that initializes the DataTables library.
 
-Also, you need to add this script to trigger the jQuery table on your page:
+You can change the options used to initialize the DataTables library by editing the call to `$('table.display').DataTable()` in the default layout.  The available options for Datatables are described in the [DataTable documentation](https://www.datatables.net/manual/options), which is excellent.
 
-```js
-<script>
-$(document).ready(function(){
+You also must add a class of `display` to your tables.  You can change the class, but then you'll need to change the trigger defined in the `$(document).ready()` function in the default layout from `table.display` to the class you prefer.
 
-    $('table.display').DataTable( {
-        paging: true,
-        stateSave: true,
-        searching: true
-    }
-        );
-});
-</script>
-```
+You can also add page-specific triggers (by copying the `<script></script>` block from the default layout into the page) and classes, which lets you use different options on different tables.
 
-The available options for the datable are described in the [datatable documentation](https://www.datatables.net/manual/options), which is excellent.
-
-Additionally, you must add a class of `display` to your tables. (You can change the class, but then you'll need to change the trigger above from `table.display` to whatever class you want to you. You might have different triggers with different options for different tables.)
-
-Since Markdown doesn't allow you to add classes to tables, you'll need to use HTML for any datatables. Here's an example:
+Markdown doesn't allow you to add classes to tables, so you'll need to use HTML for any DataTables. Here's an example:
 
 ```html
 <table id="sampleTable" class="display">
@@ -205,7 +191,7 @@ Notice a few features:
 * You can sort the column order.
 * You can page the results so that you show only a certain number of values on the first page and then require users to click next to see more entries.
 
-Read more of the [datatable documentation](https://www.datatables.net/manual/options) to get a sense of the options you can configure. You should probably only use datatables when you have long, massive tables full of information.
+Read more of the [DataTable documentation](https://www.datatables.net/manual/options) to get a sense of the options you can configure. You should probably only use DataTables when you have long, massive tables full of information.
 
 {% include note.html content=" Try to keep the columns to 3 or 4 columns only. If you add 5+ columns, your table may create horizontal scrolling with the theme. Additionally, keep the column heading titles short." %}
 
