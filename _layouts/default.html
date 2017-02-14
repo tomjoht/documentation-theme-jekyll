@@ -43,9 +43,10 @@
     <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
     <script>
         $(document).ready(function(){
-            $('table.datatable').DataTable( {
-                        paging: false,
-                        stateSave: true
+            $('table.display').DataTable( {
+                        paging: true,
+                        stateSave: true,
+                        searching: true
                     }
             );
         });

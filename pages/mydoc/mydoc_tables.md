@@ -10,20 +10,6 @@ permalink: mydoc_tables.html
 folder: mydoc
 ---
 
-{% unless site.output == "pdf" %}
-<script>
-$(document).ready(function(){
-
-    $('table.display').DataTable( {
-        paging: true,
-        stateSave: true,
-        searching: true
-    }
-        );
-});
-</script>
-{% endunless %}
-
 ## Multimarkdown Tables
 
 You can use Multimarkdown syntax for tables. The following shows a sample:
