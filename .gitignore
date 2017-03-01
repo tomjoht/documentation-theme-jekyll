@@ -4,3 +4,4 @@ _site/
 _pdf
 .idea/
 .DS_Store
+Gemfile.lock
