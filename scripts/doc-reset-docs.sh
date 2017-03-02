@@ -56,6 +56,14 @@ do
 
   DOC_TOPNAV_CONTENT="$DOC_TOPNAV_CONTENT\n        - title: $DOC_NAME\n          url: /$DOC_PERMALINK"
   DOC_HOME_SIDEBAR="$DOC_HOME_SIDEBAR\n    - title: $DOC_NAME\n      url: /$DOC_PERMALINK\n      output: web"
+
+  #   (re)create link to sidebar
+  DOC_SIDEBAR_IN_ROOT=$DOC_ROOT_PATH/_data/sidebars/$DOC_ID\_sidebar.yml
+  if [ -e $DOC_SIDEBAR_IN_ROOT ]; then
+    rm -f $DOC_SIDEBAR_IN_ROOT
+  fi
+  ln $DOC_SIDEBAR $DOC_SIDEBAR_IN_ROOT
+
 done <<< "$MODULES_LIST"
 
 echo -e "$DOC_TOPNAV_CONTENT" > $DOC_ROOT_PATH/_data/topnav.yml
