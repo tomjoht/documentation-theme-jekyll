@@ -1,7 +1,10 @@
 module Jekyll
 	module ExpandNestedVariableFilter
 		def flatify(input)
-			Liquid::Template.parse(input).render(@context)
+			if (!input.nil?) then
+				input = input.to_s
+				Liquid::Template.parse(input).render(@context)
+			end
 		end
 	end
 end
