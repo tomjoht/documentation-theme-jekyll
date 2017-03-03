@@ -50,8 +50,9 @@ do
   DOC_SIDEBAR=$DOC_ROOT_PATH/$DOC_RELATIVE_PATH/sidebar.yml
   if [ -f "$DOC_SIDEBAR" ]; then
     DOC_NAME=$(grep 'product:' $DOC_SIDEBAR | awk '{print $2}')
+    DOC_PREFIX=$(grep 'product_prefix:' $DOC_SIDEBAR | awk '{print $2}')
 
-    DOC_INDEX=$DOC_ROOT_PATH/$DOC_RELATIVE_PATH/$DOC_ID\_index.md
+    DOC_INDEX=$DOC_ROOT_PATH/$DOC_RELATIVE_PATH/$DOC_PREFIX\_index.md
     DOC_PERMALINK=$(grep 'permalink:' $DOC_INDEX | awk '{print $2}')
 
     DOC_TOPNAV_CONTENT="$DOC_TOPNAV_CONTENT\n        - title: $DOC_NAME\n          url: /$DOC_PERMALINK"

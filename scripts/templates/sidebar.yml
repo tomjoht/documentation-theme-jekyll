@@ -2,6 +2,7 @@ entries:
 - title: Sidebar
   product: Product
   version: 1.0
+  product_prefix: p
   folders:
 
   # this title is for PDF : do not edit

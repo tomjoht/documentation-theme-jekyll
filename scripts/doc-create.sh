@@ -32,7 +32,8 @@ git submodule -q add $DOC_GIT_REPOSITORY_URL $DOC_RELATIVE_PATH
 DOC_SIDEBAR=$DOC_RELATIVE_PATH/sidebar.yml
 
 cp $TEMPLATE_DIR/sidebar.yml $DOC_SIDEBAR
-sed -i -e "s/product_prefix/$DOC_PREFIX/" $DOC_SIDEBAR
+sed -i -e "s/product_prefix: (.*)/product_prefix: $DOC_PREFIX/" $DOC_SIDEBAR
+sed -i -e "s/product_prefix_/$DOC_PREFIX\_/" $DOC_SIDEBAR
 sed -i -e "s/product[^:]/$DOC_NAME/" $DOC_SIDEBAR
 sed -i -e "s/Product/$DOC_NAME_CAP/" $DOC_SIDEBAR
 
@@ -43,7 +44,7 @@ fi
 ln $DOC_RELATIVE_PATH/sidebar.yml _data/sidebars/$DOC_NAME\_sidebar.yml
 
 # 3. index
-DOC_INDEX_PAGE=$DOC_RELATIVE_PATH/$DOC_NAME\_index.md
+DOC_INDEX_PAGE=$DOC_RELATIVE_PATH/$DOC_PREFIX\_index.md
 
 cp $TEMPLATE_DIR/pages/index.md $DOC_INDEX_PAGE
 sed -i -e "s/product_prefix/$DOC_PREFIX/" $DOC_INDEX_PAGE
@@ -51,12 +52,13 @@ sed -i -e "s/product/$DOC_NAME/" $DOC_INDEX_PAGE
 sed -i -e "s/Product/$DOC_NAME_CAP/" $DOC_INDEX_PAGE
 
 # 4. sample
-DOC_INDEX_PAGE=$DOC_RELATIVE_PATH/$DOC_NAME\_sample1.md
+mkdir $DOC_RELATIVE_PATH/pages
+DOC_SAMPLE_PAGE=$DOC_RELATIVE_PATH/pages/$DOC_PREFIX\_sample1.md
 
-cp $TEMPLATE_DIR/pages/sample1.md $DOC_INDEX_PAGE
-sed -i -e "s/product_prefix/$DOC_PREFIX/" $DOC_INDEX_PAGE
-sed -i -e "s/product/$DOC_NAME/" $DOC_INDEX_PAGE
-sed -i -e "s/Product/$DOC_NAME_CAP/" $DOC_INDEX_PAGE
+cp $TEMPLATE_DIR/pages/sample1.md $DOC_SAMPLE_PAGE
+sed -i -e "s/product_prefix/$DOC_PREFIX/" $DOC_SAMPLE_PAGE
+sed -i -e "s/product/$DOC_NAME/" $DOC_SAMPLE_PAGE
+sed -i -e "s/Product/$DOC_NAME_CAP/" $DOC_SAMPLE_PAGE
 
 # success
 echo "Successfully created $DOC_NAME documentation"
