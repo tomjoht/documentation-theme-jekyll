@@ -1,12 +1,12 @@
 ---
-title: Product
+title: =Product=
 keywords: 
-sidebar: product_sidebar
+sidebar: =product=_sidebar
 toc: false
-permalink: product_prefix_index.html
-folder: product
+permalink: =product_prefix=_index.html
+folder: =product=
 ---
 
 ## Introduction
 
-This documentation has one [sample page](product_prefix_sample1.html)
+This documentation has one [sample page](=product_prefix=_sample1.html)

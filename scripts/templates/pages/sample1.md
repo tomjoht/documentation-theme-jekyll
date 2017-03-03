@@ -1,10 +1,10 @@
 ---
-title: Sample 1 Topic (Product)
+title: Sample 1 Topic (=Product=)
 keywords: sample
 summary: "This is just a sample topic..."
-sidebar: product_sidebar
-permalink: product_prefix_sample1.html
-folder: product
+sidebar: =product=_sidebar
+permalink: =product_prefix=_sample1.html
+folder: =product=
 ---
 
 ## Sample Content

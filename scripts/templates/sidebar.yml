@@ -1,8 +1,8 @@
 entries:
 - title: Sidebar
-  product: Product
-  version: 1.0
-  product_prefix: p
+  product: "{{ site.data.docs.product_data.name }}"
+  version: "{{ site.data.docs.product_data.version }}"
+  product_prefix: =product_prefix=
   folders:
 
   # this title is for PDF : do not edit
@@ -24,9 +24,9 @@ entries:
     output: web, pdf
     folderitems:
     - title: Product home
-      url: /product_prefix_index.html
+      url: /=product_prefix=_index.html
       output: web
 
     - title: Sample 1
-      url: /product_prefix_sample1.html
+      url: /=product_prefix=_sample1.html
       output: web, pdf
