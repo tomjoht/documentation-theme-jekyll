@@ -1,6 +1,10 @@
 #!/bin/sh
 
-DOC_ROOT_PATH=`pwd`/..
+# retrieve location of this script
+SCRIPT=$(readlink -f "$0")
+SCRIPTPATH=$(dirname "$SCRIPT")
+
+DOC_ROOT_PATH=$SCRIPTPATH/..
 DOC_GIT_MODULES_PATH=$DOC_ROOT_PATH/.gitmodules
 
 DOC_TOPNAV_CONTENT=$(cat << 'DOC_TOPNAV_CONTENT'

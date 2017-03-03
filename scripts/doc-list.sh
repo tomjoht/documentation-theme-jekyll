@@ -16,4 +16,3 @@ do
   DOC_ID=$(echo $line | sed -rn "s|pages/(.*)|\1|p")
   echo $DOC_ID
 done <<< "$MODULES_LIST"
-
