@@ -1,6 +1,5 @@
 #!/bin/sh
 
-
 DOC_ROOT_PATH=`pwd`/..
 DOC_GIT_MODULES_PATH=$DOC_ROOT_PATH/.gitmodules
 
@@ -49,20 +48,22 @@ do
   DOC_ID=$(echo $line | sed -rn "s|pages/(.*)|\1|p")
 
   DOC_SIDEBAR=$DOC_ROOT_PATH/$DOC_RELATIVE_PATH/sidebar.yml
-  DOC_NAME=$(grep 'product:' $DOC_SIDEBAR | awk '{print $2}')    
+  if [ -f "$DOC_SIDEBAR" ]; then
+    DOC_NAME=$(grep 'product:' $DOC_SIDEBAR | awk '{print $2}')
 
-  DOC_INDEX=$DOC_ROOT_PATH/$DOC_RELATIVE_PATH/$DOC_ID\_index.md
-  DOC_PERMALINK=$(grep 'permalink:' $DOC_INDEX | awk '{print $2}')    
+    DOC_INDEX=$DOC_ROOT_PATH/$DOC_RELATIVE_PATH/$DOC_ID\_index.md
+    DOC_PERMALINK=$(grep 'permalink:' $DOC_INDEX | awk '{print $2}')
 
-  DOC_TOPNAV_CONTENT="$DOC_TOPNAV_CONTENT\n        - title: $DOC_NAME\n          url: /$DOC_PERMALINK"
-  DOC_HOME_SIDEBAR="$DOC_HOME_SIDEBAR\n    - title: $DOC_NAME\n      url: /$DOC_PERMALINK\n      output: web"
+    DOC_TOPNAV_CONTENT="$DOC_TOPNAV_CONTENT\n        - title: $DOC_NAME\n          url: /$DOC_PERMALINK"
+    DOC_HOME_SIDEBAR="$DOC_HOME_SIDEBAR\n    - title: $DOC_NAME\n      url: /$DOC_PERMALINK\n      output: web"
 
-  #   (re)create link to sidebar
-  DOC_SIDEBAR_IN_ROOT=$DOC_ROOT_PATH/_data/sidebars/$DOC_ID\_sidebar.yml
-  if [ -e $DOC_SIDEBAR_IN_ROOT ]; then
-    rm -f $DOC_SIDEBAR_IN_ROOT
+    #   (re)create link to sidebar
+    DOC_SIDEBAR_IN_ROOT=$DOC_ROOT_PATH/_data/sidebars/$DOC_ID\_sidebar.yml
+    if [ -e $DOC_SIDEBAR_IN_ROOT ]; then
+      rm -f $DOC_SIDEBAR_IN_ROOT
+    fi
+    ln $DOC_SIDEBAR $DOC_SIDEBAR_IN_ROOT
   fi
-  ln $DOC_SIDEBAR $DOC_SIDEBAR_IN_ROOT
 
 done <<< "$MODULES_LIST"
 
