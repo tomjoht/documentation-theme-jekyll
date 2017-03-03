@@ -32,7 +32,7 @@ git submodule -q add $DOC_GIT_REPOSITORY_URL $DOC_RELATIVE_PATH
 DOC_SIDEBAR=$DOC_RELATIVE_PATH/sidebar.yml
 
 cp $TEMPLATE_DIR/sidebar.yml $DOC_SIDEBAR
-sed -i -e "s/product_prefix: (.*)/product_prefix: $DOC_PREFIX/" $DOC_SIDEBAR
+sed -i -e "s/product_prefix: .*/product_prefix: $DOC_PREFIX/" $DOC_SIDEBAR
 sed -i -e "s/product_prefix_/$DOC_PREFIX\_/" $DOC_SIDEBAR
 sed -i -e "s/product[^:_]/$DOC_NAME/" $DOC_SIDEBAR
 sed -i -e "s/Product/$DOC_NAME_CAP/" $DOC_SIDEBAR
