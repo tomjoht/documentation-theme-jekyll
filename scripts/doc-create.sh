@@ -33,6 +33,7 @@ git submodule -q add $DOC_GIT_REPOSITORY_URL $DOC_RELATIVE_PATH
 # 2. sidebar
 DOC_SIDEBAR=$DOC_PATH/sidebar.yml
 DOC_SIDEBAR_IN_ROOT=$DOC_ROOT_PATH/_data/sidebars/$DOC_NAME\_sidebar.yml
+mkdir $DOC_ROOT_PATH/_data/sidebars
 
 cp $TEMPLATE_DIR/sidebar.yml $DOC_SIDEBAR
 sed -i -e "s/product_prefix: .*/product_prefix: $DOC_PREFIX/" $DOC_SIDEBAR
@@ -49,6 +50,7 @@ ln $DOC_SIDEBAR $DOC_SIDEBAR_IN_ROOT
 # 3. data
 DOC_DATA=$DOC_PATH/data.yml
 DOC_DATA_IN_ROOT=$DOC_ROOT_PATH/_data/docs/$DOC_NAME\_data.yml
+mkdir $DOC_ROOT_PATH/_data/docs
 
 cp $TEMPLATE_DIR/data.yml $DOC_DATA
 sed -i -e "s/=product_prefix=/$DOC_PREFIX/" $DOC_DATA
