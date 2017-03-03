@@ -1,16 +1,16 @@
 #!/bin/sh
 
-DOC_ROOT_PATH=`pwd`/..
+# retrieve location of this script
+SCRIPT=$(readlink -f "$0")
+SCRIPTPATH=$(dirname "$SCRIPT")
 
-cd $DOC_ROOT_PATH
+DOC_ROOT_PATH=$SCRIPTPATH/..
 
-rm _data/sidebars/*.yml
-rm _posts/*.md
-rm -rf pages/mydoc
-rm -rf pages/product1
-rm -rf pages/product2
-rm pdf-*.sh
-rm pdf/*.pdf
-rm pdfconfigs/config_*.yml
-
-cd $OLDPWD
+rm $DOC_ROOT_PATH/_data/sidebars/*.yml
+rm $DOC_ROOT_PATH/_posts/*.md
+rm -rf $DOC_ROOT_PATH/pages/mydoc
+rm -rf $DOC_ROOT_PATH/pages/product1
+rm -rf $DOC_ROOT_PATH/pages/product2
+rm $DOC_ROOT_PATH/pdf-*.sh
+rm $DOC_ROOT_PATH/pdf/*.pdf
+rm $DOC_ROOT_PATH/pdfconfigs/config_*.yml

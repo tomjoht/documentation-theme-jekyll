@@ -18,7 +18,11 @@ DOC_NAME=$2
 DOC_NAME_CAP=$(echo "$DOC_NAME" | sed 's/.*/\u&/') # capitalize first letter
 DOC_PREFIX=$3
 
-DOC_ROOT_PATH=`pwd`/..
+# retrieve location of this script
+SCRIPT=$(readlink -f "$0")
+SCRIPTPATH=$(dirname "$SCRIPT")
+
+DOC_ROOT_PATH=$SCRIPTPATH/..
 DOC_RELATIVE_PATH=pages/$DOC_NAME
 
 TEMPLATE_DIR=`pwd`/templates

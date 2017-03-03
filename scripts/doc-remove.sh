@@ -8,7 +8,11 @@ fi
 
 DOC_NAME=$1
 
-DOC_ROOT_PATH=`pwd`/..
+# retrieve location of this script
+SCRIPT=$(readlink -f "$0")
+SCRIPTPATH=$(dirname "$SCRIPT")
+
+DOC_ROOT_PATH=$SCRIPTPATH/..
 DOC_RELATIVE_PATH=pages/$DOC_NAME
 
 cd $DOC_ROOT_PATH
