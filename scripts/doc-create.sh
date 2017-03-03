@@ -36,10 +36,9 @@ DOC_SIDEBAR_IN_ROOT=$DOC_ROOT_PATH/_data/sidebars/$DOC_NAME\_sidebar.yml
 mkdir -p $DOC_ROOT_PATH/_data/sidebars
 
 cp $TEMPLATE_DIR/sidebar.yml $DOC_SIDEBAR
-sed -i -e "s/product_prefix: .*/product_prefix: $DOC_PREFIX/" $DOC_SIDEBAR
-sed -i -e "s/product_prefix_/$DOC_PREFIX\_/" $DOC_SIDEBAR
-sed -i -e "s/product[^:_]/$DOC_NAME/" $DOC_SIDEBAR
-sed -i -e "s/Product/$DOC_NAME_CAP/" $DOC_SIDEBAR
+sed -i -e "s/=product_prefix=/$DOC_PREFIX/" $DOC_SIDEBAR
+sed -i -e "s/=product=/$DOC_NAME/" $DOC_SIDEBAR
+sed -i -e "s/=Product=/$DOC_NAME_CAP/" $DOC_SIDEBAR
 
 #   make a link to sidebar
 if [ -e $DOC_SIDEBAR_IN_ROOT ]; then
