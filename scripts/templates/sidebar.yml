@@ -1,7 +1,7 @@
 entries:
 - title: Sidebar
-  product: "{{ site.data.docs.product_data.name }}"
-  version: "{{ site.data.docs.product_data.version }}"
+  product: =product=
+  version: "{{site.data.docs.product_data.version}}"
   product_prefix: =product_prefix=
   folders:
 
