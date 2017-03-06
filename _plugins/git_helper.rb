@@ -58,7 +58,6 @@ module Jekyll
       end
 
       def git_repo?
-	    puts @gitDir
         File.exists?(@gitDir) and system_wrapper.git_repo?(@gitDir)
       end
 
