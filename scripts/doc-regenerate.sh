@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # retrieve location of this script
 SCRIPT=$(readlink -f "$0")
