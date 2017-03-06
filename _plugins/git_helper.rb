@@ -25,11 +25,19 @@ module Jekyll
       end
 
       def render(context)
-		product = context.registers[:page]['product']
-		return unless (!product.nil? and !product.to_s.strip.empty?)
+        sidebarName = context.registers[:page]['sidebar']
+        if !sidebarName.nil? then
+          sidebar = context.registers[:site].data['sidebars'][sidebarName]
+          if !sidebar.nil? then
+            relativePath = sidebar['entries'][0]['relative_path']
+          end
+        end
 
-	    rootPath = context.registers[:site].config['source']
-	    @gitDir = rootPath + "/pages/" + product + "/.git"
+		# product = context.registers[:page]['product']
+        return unless (!relativePath.nil? and !relativePath.to_s.strip.empty?)
+
+        rootPath = context.registers[:site].config['source']
+        @gitDir = rootPath + "/pages/" + relativePath + "/.git"
 
         if git_repo?
           current_branch

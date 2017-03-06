@@ -8,11 +8,14 @@ layout: default
 			<h1 class="post-title-main">{{ page.title | flatify }}</h1>
         </div>
         <div class="col-xs-6 col-md-2">
-	{% unless jekyll.environment == "production" or page.url == "/index.html" or page.url == "/news.html" or page.url == "/news_archive.html" %}
-		{% if site.gitlab_editme_path %}
-			<div class="git-improve"><a target="_blank" href="{{site.gitlab_editme_path}}/soft-doc-{{page.product}}/edit/{% git_current_branch %}/{{page.folder}}/{{page.url | remove: "/" | remove: ".html" | append: ".md"}}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-gitlab fa-lg"></i> Improve this page ({% git_current_branch %})</a></div>
+{% unless jekyll.environment == "production" or page.url == "/index.html" or page.url == "/news.html" or page.url == "/news_archive.html" %}
+	{% if site.gitlab_editme_path %}
+		{% capture current_branch %}{% git_current_branch %}{% endcapture %}
+		{% if current_branch %}
+			<div class="git-improve"><a target="_blank" href="{{site.gitlab_editme_path}}/soft-doc-{{page.product}}/edit/{{current_branch}}/{{page.folder}}/{{page.url | remove: "/" | remove: ".html" | append: ".md"}}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-gitlab fa-lg"></i> Improve this page ({{current_branch}})</a></div>
 		{% endif %}
-	{% endunless %}
+	{% endif %}
+{% endunless %}
         </div>
     </div>  
 </div>

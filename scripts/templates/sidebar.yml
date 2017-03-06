@@ -3,6 +3,7 @@ entries:
   product: =product=
   version: "{{site.data.docs.product_data.version}}"
   product_prefix: =product_prefix=
+  relative_path: =product_prefix=
   folders:
 
   # this title is for PDF : do not edit
