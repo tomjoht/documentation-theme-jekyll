@@ -4,7 +4,8 @@ keywords: sample
 summary: "This is just a sample topic..."
 sidebar: =product=_sidebar
 permalink: =product_prefix=_sample1.html
-folder: =product=
+folder: pages
+product: =product=
 ---
 
 ## Sample Content
