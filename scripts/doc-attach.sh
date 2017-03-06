@@ -11,15 +11,14 @@ if [ "$#" -lt 2 ]; then
 fi
 
 DOC_GIT_REPOSITORY_URL=$1
-DOC_NAME=$2
-DOC_NAME_CAP=$(echo "$DOC_NAME" | sed 's/.*/\u&/') # capitalize first letter
+DOC_ATTACH_POINT=$2
 
 # retrieve location of this script
 SCRIPT=$(readlink -f "$0")
 SCRIPTPATH=$(dirname "$SCRIPT")
 
 DOC_ROOT_PATH=$SCRIPTPATH/..
-DOC_RELATIVE_PATH=pages/$DOC_NAME
+DOC_RELATIVE_PATH=pages/$DOC_ATTACH_POINT
 DOC_PATH=$DOC_ROOT_PATH/$DOC_RELATIVE_PATH
 
 # 1. clone existing repository and add it as submodule
@@ -27,6 +26,9 @@ git submodule -q add $DOC_GIT_REPOSITORY_URL $DOC_RELATIVE_PATH
 
 # 2. sidebar
 DOC_SIDEBAR=$DOC_PATH/sidebar.yml
+if [ -f "$DOC_SIDEBAR" ]; then
+  DOC_NAME=$(grep 'product:' $DOC_SIDEBAR | awk '{print $2}')
+fi
 DOC_SIDEBAR_IN_ROOT=$DOC_ROOT_PATH/_data/sidebars/$DOC_NAME\_sidebar.yml
 mkdir -p $DOC_ROOT_PATH/_data/sidebars
 
@@ -48,4 +50,4 @@ fi
 ln $DOC_DATA $DOC_DATA_IN_ROOT
 
 # success
-echo "Successfully attached existing $DOC_NAME documentation"
+echo "Successfully attached existing documentation $DOC_NAME into $DOC_ATTACH_POINT"
