@@ -28,7 +28,7 @@ git submodule -q add $DOC_GIT_REPOSITORY_URL $DOC_RELATIVE_PATH
 DOC_SIDEBAR=$DOC_PATH/sidebar.yml
 if [ -f "$DOC_SIDEBAR" ]; then
   DOC_NAME=$(grep 'product:' $DOC_SIDEBAR | awk '{print $2}')
-  sed -i -e "s/relative_path: .*/relative_path: $DOC_RELATIVE_PATH/" $DOC_SIDEBAR
+  sed -i -e "s|relative_path: .*|relative_path: $DOC_RELATIVE_PATH|" $DOC_SIDEBAR
 fi
 DOC_SIDEBAR_IN_ROOT=$DOC_ROOT_PATH/_data/sidebars/$DOC_NAME\_sidebar.yml
 mkdir -p $DOC_ROOT_PATH/_data/sidebars
