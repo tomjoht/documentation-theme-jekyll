@@ -1,0 +1,18 @@
+destination: _site/
+url: "http://127.0.0.1:4011"
+baseurl: "/pdf"
+port: 4011
+output: pdf
+product: =Product=
+print_title: =Product= documentation
+print_subtitle: "version {{site.data.docs.product_data.version}}"
+output: pdf
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page_print"
+      comments: true
+      search: true

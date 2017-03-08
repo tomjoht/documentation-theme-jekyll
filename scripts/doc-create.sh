@@ -80,5 +80,20 @@ sed -i -e "s/=product_prefix=/$DOC_PREFIX/" $DOC_SAMPLE_PAGE
 sed -i -e "s/=product=/$DOC_NAME/" $DOC_SAMPLE_PAGE
 sed -i -e "s/=Product=/$DOC_NAME_CAP/" $DOC_SAMPLE_PAGE
 
+# 6. PDF
+DOC_PDF_SCRIPT=$DOC_PATH/pdf.sh
+
+cp $TEMPLATE_DIR/pdf.sh $DOC_PDF_SCRIPT
+sed -i -e "s/=product_prefix=/$DOC_PREFIX/" $DOC_PDF_SCRIPT
+sed -i -e "s/=product=/$DOC_NAME/" $DOC_PDF_SCRIPT
+sed -i -e "s/=Product=/$DOC_NAME_CAP/" $DOC_PDF_SCRIPT
+
+DOC_PDF_CONF=$DOC_PATH/pdf.yml
+
+cp $TEMPLATE_DIR/pdf.yml $DOC_PDF_CONF
+sed -i -e "s/=product_prefix=/$DOC_PREFIX/" $DOC_PDF_CONF
+sed -i -e "s/=product=/$DOC_NAME/" $DOC_PDF_CONF
+sed -i -e "s/=Product=/$DOC_NAME_CAP/" $DOC_PDF_CONF
+
 # success
 echo "Successfully created $DOC_NAME documentation"
