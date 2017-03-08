@@ -37,7 +37,7 @@ module Jekyll
         return unless (!relativePath.nil? and !relativePath.to_s.strip.empty?)
 
         rootPath = context.registers[:site].config['source']
-        @gitDir = rootPath + "/pages/" + relativePath + "/.git"
+        @gitDir = rootPath + "/" + relativePath + "/.git"
 
         if git_repo?
           current_branch
