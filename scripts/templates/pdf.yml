@@ -3,7 +3,7 @@ url: "http://127.0.0.1:4011"
 baseurl: "/pdf"
 port: 4011
 output: pdf
-product: =Product=
+product: =product=
 print_title: =Product= documentation
 print_subtitle: "version {{site.data.docs.product_data.version}}"
 output: pdf
