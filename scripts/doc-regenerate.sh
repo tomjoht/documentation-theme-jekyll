@@ -51,7 +51,7 @@ do
 
   DOC_ID=$(echo $line | sed -rn "s|pages/(.*)|\1|p")
 
-  DOC_SIDEBAR=$DOC_ROOT_PATH/$DOC_RELATIVE_PATH/sidebar.yml
+  DOC_SIDEBAR=$DOC_ROOT_PATH/$DOC_RELATIVE_PATH/data/sidebar.yml
   if [ -f "$DOC_SIDEBAR" ]; then
     DOC_NAME=$(grep 'product:' $DOC_SIDEBAR | awk '{print $2}')
     DOC_PREFIX=$(grep 'product_prefix:' $DOC_SIDEBAR | awk '{print $2}')

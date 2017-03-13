@@ -19,7 +19,7 @@ DOC_RELATIVE_PATH=pages/$DOC_ID
 
 DOC_PATH=$DOC_ROOT_PATH/$DOC_RELATIVE_PATH
 
-if [ ! -f $DOC_PATH/sidebar.yml ]; then
+if [ ! -f $DOC_PATH/data/sidebar.yml ]; then
   echo "Documentation with ID '$DOC_ID' is already disabled. Skipping."
   exit 0
 fi
