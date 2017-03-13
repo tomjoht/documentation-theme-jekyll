@@ -1,0 +1,9 @@
+  <tr>
+    <td class="tg-yw4l tg-step">{{ action.step_number }}</td>
+    <td class="tg-yw4l">{{ include.user }}</td>
+    <td class="tg-yw4l">{{ include.desc | strip | newline_to_br }}</td>
+    <td class="tg-yw4l tg-status"></td>
+  </tr>
+  <tr>
+    <td class="tg-yw4l" colspan="4">{% highlight shell %}{{ include.cmd_line }}{% endhighlight %}</td>
+  </tr>
