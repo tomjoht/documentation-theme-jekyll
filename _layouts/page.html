@@ -14,8 +14,8 @@ layout: default
 		{% capture remote_url %}{% git_remote_url %}{% endcapture %}
 		{% assign remote_url_size = remote_url | size | minus: 4 %}
 		{% assign remote_url = remote_url | slice: 0, remote_url_size %}
-		{% if current_branch and remote_url %}
-			<div class="git-improve"><a target="_blank" href="{{remote_url}}/edit/{{current_branch}}/{{page.folder}}/{{page.url | remove: "/" | remove: ".html" | append: ".md"}}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-gitlab fa-lg"></i> Improve this page ({{current_branch}})</a></div>
+		{% if current_branch and remote_url and page.page %}
+			<div class="git-improve"><a target="_blank" href="{{remote_url}}/edit/{{current_branch}}/{{page.folder}}/{{page.page}}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-gitlab fa-lg"></i> Improve this page ({{current_branch}})</a></div>
 		{% endif %}
 	{% endif %}
 {% endunless %}
