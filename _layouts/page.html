@@ -11,8 +11,11 @@ layout: default
 {% unless jekyll.environment == "production" or page.url == "/index.html" or page.url == "/news.html" or page.url == "/news_archive.html" %}
 	{% if site.gitlab_editme_path %}
 		{% capture current_branch %}{% git_current_branch %}{% endcapture %}
-		{% if current_branch %}
-			<div class="git-improve"><a target="_blank" href="{{site.gitlab_editme_path}}/soft-doc-{{page.product}}/edit/{{current_branch}}/{{page.folder}}/{{page.url | remove: "/" | remove: ".html" | append: ".md"}}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-gitlab fa-lg"></i> Improve this page ({{current_branch}})</a></div>
+		{% capture remote_url %}{% git_remote_url %}{% endcapture %}
+		{% assign remote_url_size = remote_url | size | minus: 4 %}
+		{% assign remote_url = remote_url | slice: 0, remote_url_size %}
+		{% if current_branch and remote_url %}
+			<div class="git-improve"><a target="_blank" href="{{remote_url}}/edit/{{current_branch}}/{{page.folder}}/{{page.url | remove: "/" | remove: ".html" | append: ".md"}}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-gitlab fa-lg"></i> Improve this page ({{current_branch}})</a></div>
 		{% endif %}
 	{% endif %}
 {% endunless %}
