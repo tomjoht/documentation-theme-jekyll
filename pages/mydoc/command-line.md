@@ -9,13 +9,8 @@ permalink: command-line.html
 folder: mydoc
 ---
 
-## Introduction
-
-Coming soon
-
-## Features
-
-Coming soon
+<!-- load remote readme file from github -->
+{% remote_markdown https://raw.githubusercontent.com/trustcrypto/python-onlykey/master/README.md %}
 
 ## Source
 
