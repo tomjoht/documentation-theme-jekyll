@@ -1,0 +1,33 @@
+entries:
+- title: Sidebar
+  product: =product=
+  version: "{{site.data.docs.product_data.version}}"
+  product_prefix: =product_prefix=
+  relative_path: =product_relative_path=
+  folders:
+
+  # this title is for PDF : do not edit
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage
+      output: pdf
+      type: frontmatter
+
+  # the actual pages to include in documentation
+  - title: Getting Started
+    output: web, pdf
+    folderitems:
+    - title: Product home
+      url: /=product_prefix=_index.html
+      output: web
+
+    - title: Sample 1
+      url: /=product_prefix=_sample1.html
+      output: web, pdf

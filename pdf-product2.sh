@@ -3,7 +3,7 @@ kill -9 $(ps aux | grep '[j]ekyll' | awk '{print $2}')
 clear
 
 echo "Building PDF-friendly HTML site for Product2 ...";
-jekyll serve --detach --config _config.yml,pdfconfigs/config_product2_pdf.yml;
+bundle exec jekyll serve --detach --config _config.yml,pdfconfigs/config_product2_pdf.yml;
 echo "done";
 
 echo "Building the PDF ...";

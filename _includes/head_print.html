@@ -24,7 +24,7 @@
 
 <script>
     Prince.addScriptFunc("guideName", function() {
-        return "{{site.print_title}} User Guide";
+        return "{{site.print_title | flatify}}";
     });
 </script>
 

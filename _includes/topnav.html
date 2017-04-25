@@ -35,11 +35,11 @@
                     <ul class="dropdown-menu">
                         {% for folderitem in folder.folderitems %}
                         {% if folderitem.external_url %}
-                        <li><a href="{{folderitem.external_url}}" target="_blank">{{folderitem.title}}</a></li>
+                        <li><a href="{{folderitem.external_url}}" target="_blank">{{folderitem.title | flatify}}</a></li>
                         {% elsif page.url contains folderitem.url %}
-                        <li class="dropdownActive"><a href="{{folderitem.url |  remove: "/"}}">{{folderitem.title}}</a></li>
+                        <li class="dropdownActive"><a href="{{folderitem.url |  remove: "/"}}">{{folderitem.title | flatify}}</a></li>
                         {% else %}
-                        <li><a href="{{folderitem.url | remove: "/"}}">{{folderitem.title}}</a></li>
+                        <li><a href="{{folderitem.url | remove: "/"}}">{{folderitem.title | flatify}}</a></li>
                         {% endif %}
                         {% endfor %}
                     </ul>
