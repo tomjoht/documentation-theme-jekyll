@@ -138,6 +138,8 @@ Note that your sidebar can only have 2 levels. Given that each product has its o
 
 {% include note.html content="Note that each level must have at least one topic before the next level starts. You can't have a second level that contains multiple third levels without having at least one standalone topic in the second level." %}
 
+You can optionally turn off the sidebar on any page (e.g. landing pages). To turn off the sidebar for a page, you should set the page frontmatter tag as `hide_sidebar: true`.
+
 For more detail on the sidebar, see [Sidebar navigation][mydoc_sidebar_navigation].
 
 ## Sidebar syntax

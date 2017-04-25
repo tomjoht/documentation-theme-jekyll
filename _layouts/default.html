@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
     {% include head.html %}
     <script>
@@ -78,14 +79,19 @@
     <div class="col-lg-12">&nbsp;</div>
     <!-- Content Row -->
     <div class="row">
-        <!-- Sidebar Column -->
-        <div class="col-md-3" id="tg-sb-sidebar">
+        {% assign content_col_size = "col-md-12" %}
+        {% unless page.hide_sidebar %}
+            <!-- Sidebar Column -->
+            <div class="col-md-3" id="tg-sb-sidebar">
+                {% include sidebar.html %}
+            </div>
+            {% assign content_col_size = "col-md-9" %}
+        {% endunless %}
 
-          {% include sidebar.html %}
-    <!-- Content Column -->
-    <div class="col-md-9" id="tg-sb-content">
-        {{content}}
-    </div>
+        <!-- Content Column -->
+        <div class="{{content_col_size}}" id="tg-sb-content">
+            {{content}}
+        </div>
     <!-- /.row -->
 </div>
 <!-- /.container -->
