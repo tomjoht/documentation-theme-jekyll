@@ -24,7 +24,7 @@ Here's the code for that button on the page.html layout:
 
 <a target="_blank" href="https://github.com/{{site.github_editme_path}}/{{page.folder}}{{page.url | append: ".md"}}{% endif %}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
 
-{% endraw %}{% endif %}
+{% endif %}{% endraw %}
 ```
 
 In your configuration file, edit the value for `github_editme_path`. For example, you might create a branch called "reviews" on your Github repo. Then you would add something like this in your configuration file for the 'github_editme_path': tomjohnson1492/documentation-theme-jekyll/edit/reviews. Here "tomjohnson1492" is my github account name. The repo name is "documentation-theme-jekyll". The "reviews" name is the branch.
