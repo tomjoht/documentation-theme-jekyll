@@ -79,7 +79,7 @@ If you add `published: false` in the frontmatter, your page won't be published. 
 
 Pages can be either Markdown or HTML format (specified through either an .md or .html file extension).
 
-If you use Markdown, you can also include HTML formatting where needed. But if you're format is HTML, you must add a `markdown="1"` attribute to the element in order to use Markdown inside that HTML element:
+If you use Markdown, you can also include HTML formatting where needed. But if your format is HTML, you must add a `markdown="1"` attribute to the element in order to use Markdown inside that HTML element:
 
 ```
 <div markdown="1">This is a [link](http://exmaple.com).</div>
