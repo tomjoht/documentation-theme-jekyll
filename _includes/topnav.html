@@ -19,7 +19,7 @@
 {% assign topnav = site.data[page.topnav] %}
 {% assign topnav_dropdowns = site.data[page.topnav].topnav_dropdowns %}
 
-                {% for entry in topnav %}
+                {% for entry in topnav.topnav %}
                 {% for item in entry.items %}
                 {% if item.external_url %}
                 <li><a href="{{item.external_url}}" target="_blank">{{item.title}}</a></li>
