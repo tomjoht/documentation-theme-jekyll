@@ -23,7 +23,7 @@ Also, creating a PDF this way gives you a lot more control and customization cap
 
 You can see an example of the finished product here:
 
-<a target="_blank" class="noCrossRef" href="{{ "pdf/mydoc.pdf"}}"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> PDF Download</button></a>
+<a target="\_blank" class="noCrossRef" href="{{ "pdf/mydoc.pdf"}}"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> PDF Download</button></a>
 
 ## 1. Set up Prince
 
@@ -316,27 +316,19 @@ Make sure that the path to the prince-list.txt is correct. For the output direct
 
 {% include note.html content="You might not want to include the PDF in your project files, since you're likely committing the PDF to Github and as a result saving the changes from one PDF version to another with each save." %}
 
-## 6. Add conditions for your new builds in the sidebarconfigs.html file
+## 6. Add conditions for your new builds in the PDF config file
 
-In the \_includes/custom/sidebarconfigs.html file, there's a section that looks like this:
+In the PDF configuration file, there's a section that looks like this:
 
 ```
 {% raw %}{% if site.product == "mydoc" %}
-{% assign sidebar_pdf = site.data.sidebars.mydoc_sidebar.entries %}
+pdf_sidebar: product2_sidebar
 {% endif %}
-
-{% if site.product == "product1" %}
-{% assign sidebar_pdf = site.data.sidebars.product1_sidebar.entries %}
-{% endif %}
-
-{% if site.product == "product2" %}
-{% assign sidebar_pdf = site.data.sidebars.product2_sidebar.entries %}
-{% endif %}{% endraw %}
 ```
 
-Add your own condition here that points to your sidebar.
+Point to the sidebar you want here.
 
-What this does is allow the prince-list.txt and toc.html files to use a variable for the sidebar (called `sidebar_pdf`) when iterating through the sidebar. Otherwise, you would need to create a unique prince-list.txt and toc.html file for each separate PDF output you have.
+What this does is allow the prince-list.txt and toc.html files to iterate through the right sidebar.  Otherwise, you would need to create a unique prince-list.txt and toc.html file for each separate PDF output you have.
 
 ## 7. Add a download button for the PDF
 

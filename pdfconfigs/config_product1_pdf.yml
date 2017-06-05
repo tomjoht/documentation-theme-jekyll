@@ -16,3 +16,5 @@ defaults:
       layout: "page_print"
       comments: true
       search: true
+
+pdf_sidebar: product1_sidebar

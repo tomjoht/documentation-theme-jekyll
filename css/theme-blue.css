@@ -41,6 +41,17 @@ a[data-toggle="tooltip"] {
     background-color: #347DBE;
     border-color: #015CAE;
 }
+.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand {
+    color: white;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, a.fa.fa-home.fa-lg.navbar-brand:hover {
+     color: #f0f0f0;
+}
+
+a.navbar-brand:hover {
+  color: #f0f0f0;
+}
 
 .navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
     color: #015CAE;
@@ -51,7 +62,6 @@ a[data-toggle="tooltip"] {
     color: #ffffff;
 }
 
-/* not sure if using this ...*/
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
     border-color: #248ec2 !important;
 }

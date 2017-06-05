@@ -8,7 +8,7 @@ permalink: /tocpage/
 <div id="navig">
     <h1>Table of Contents</h1>
 
-    {% include custom/sidebarconfigs.html %}
+      {% assign sidebar = site.pdf_sidebar %}
 
     <ul id="mysidebar" class="nav">
         {% for entry in sidebar_pdf %}

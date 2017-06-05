@@ -60,7 +60,11 @@ Check the prince-list.txt file in the output to see if it contains links. If not
 
 If you build your site but the sidebar doesn't appear, check the following:
 
-Look in \_includes/custom/sidebarconfigs.html and make sure the conditional values there match up with values you're using in each page's frontmatter.
+Look in your PDF config file and make sure you have a sidebar property, such as this:
+
+```
+pdf_sidebar: product2_sidebar
+```
 
 Make sure each TOC item has an output property that specifies web or pdf.
 

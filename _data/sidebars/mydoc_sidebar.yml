@@ -244,10 +244,6 @@ entries:
       url: /mydoc_faq_layout.html
       output: web, pdf
 
-    - title: Scroll layout
-      url: /mydoc_scroll.html
-      output: web, pdf
-
     - title: Shuffle layout
       url: /mydoc_shuffle.html
       output: web, pdf

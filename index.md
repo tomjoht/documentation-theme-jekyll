@@ -90,31 +90,7 @@ This is perhaps the easiest way to see how your site would actually look.
 
 There are several products in this theme. Each product uses a different sidebar. This is the essence of what makes this theme unique -- different sidebars for different product documentation. The idea is that when users are reading documentation for a specific product, the sidebar navigation should be specific to that product. (You can read more of my thoughts on why multiple sidebars are important in this [blog post](http://idratherbewriting.com/2016/03/23/release-of-documentation-theme-for-jekyll-50/).)
 
-The top navigation remains the same, because it allows users to navigate across products. But the sidebar navigation adapts to the product.
-
-Because each product uses a different sidebar, you'll need to set up your sidebars. There's a file inside \_includes/custom called "sidebarconfigs.html." This file controls which sidebar gets associated with which product. Open up this file to see its contents.
-
-The sidebarconfigs.html file uses simple `if elsif` logic to set a variable that the sidebar.html file uses to read the sidebar data file. The code in sidebarconfigs.html looks like this:
-
-{% raw %}
-```liquid
-{% if page.sidebar == "home_sidebar" %}
-{% assign sidebar = site.data.sidebars.home_sidebar.entries %}
-
-{% elsif page.sidebar == "product1_sidebar" %}
-{% assign sidebar = site.data.sidebars.product1_sidebar.entries %}
-
-{% elsif page.sidebar == "product2_sidebar" %}
-{% assign sidebar = site.data.sidebars.product2_sidebar.entries %}
-
-{% elsif page.sidebar == "mydoc_sidebar" %}
-{% assign sidebar = site.data.sidebars.mydoc_sidebar.entries %}
-
-{% else %}
-{% assign sidebar = site.data.sidebars.home_sidebar.entries %}
-{% endif %}
-```
-{% endraw %}
+The top navigation usually remains the same, because it allows users to navigate across products. But the sidebar navigation adapts to the product.
 
 In each page's frontmatter, you must specify the sidebar you want that page to use. Here's an example of the page frontmatter showing the sidebar property:
 
@@ -132,15 +108,70 @@ permalink: mydoc_alerts
 
 The `sidebar: mydoc_sidebar` refers to the \_data/sidebars/mydoc_sidebar.yml file (meaning, the mydoc_sidebar.yml file inside the sidebars subfolder inside the \data folder).
 
-If no sidebar assignment is found in the page frontmatter, the default sidebar (specified by the `else` statement) will be shown: `site.data.sidebars.home_sidebar.entries`.
-
 Note that your sidebar can only have 2 levels. Given that each product has its own sidebar, this depth should be sufficient (it's really like 3 levels). Deeper nesting goes against usability recommendations.
 
 {% include note.html content="Note that each level must have at least one topic before the next level starts. You can't have a second level that contains multiple third levels without having at least one standalone topic in the second level." %}
 
 You can optionally turn off the sidebar on any page (e.g. landing pages). To turn off the sidebar for a page, you should set the page frontmatter tag as `hide_sidebar: true`.
 
+If you don't declare a sidebar, the `home_sidebar` file gets used as the default. This is the default specified in the config file:
+
+```
+-
+  scope:
+    path: ""
+    type: "pages"
+  values:
+    layout: "page"
+    comments: true
+    search: true
+    sidebar: home_sidebar
+    topnav: topnav
+```
+
+If you wanted to load different sidebars based on how pages are organized, you could specify that like this:
+
+```
+-
+  scope:
+    path: "pages/mydoc"
+    type: "pages"
+  values:
+    layout: "page"
+    comments: true
+    search: true
+    sidebar: mydoc_sidebar
+    topnav: topnav
+```
+
+This would load the `mydoc_sidebar` for each file in pages/mydoc. 
+
 For more detail on the sidebar, see [Sidebar navigation][mydoc_sidebar_navigation].
+
+## Top navigation
+
+The top navigation works just like the sidebar. You can specify which topnav data file should load by adding a `topnav` property in your page, like this:
+
+```
+topnav: topnav
+```
+
+Here the topnav refers to the \_data/topnav.yml file.
+
+Because most topnav options will be the same, the \_config.yml file specifies this as a default:
+
+```
+-
+  scope:
+    path: ""
+    type: "pages"
+  values:
+    layout: "page"
+    comments: true
+    search: true
+    sidebar: home_sidebar
+    topnav: topnav
+```
 
 ## Sidebar syntax
 

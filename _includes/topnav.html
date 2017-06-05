@@ -15,7 +15,11 @@
                 <!-- toggle sidebar button -->
                 <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
                 <!-- entries without drop-downs appear here -->
-                {% for entry in site.data.topnav.topnav %}
+
+{% assign topnav = site.data[page.topnav] %}
+{% assign topnav_dropdowns = site.data[page.topnav].topnav_dropdowns %}
+
+                {% for entry in topnav %}
                 {% for item in entry.items %}
                 {% if item.external_url %}
                 <li><a href="{{item.external_url}}" target="_blank">{{item.title}}</a></li>
@@ -28,7 +32,7 @@
                 {% endfor %}
                 <!-- entries with drop-downs appear here -->
                 <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
-                {% for entry in site.data.topnav.topnav_dropdowns %}
+                {% for entry in topnav_dropdowns %}
                 {% for folder in entry.folders %}
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ folder.title }}<b class="caret"></b></a>

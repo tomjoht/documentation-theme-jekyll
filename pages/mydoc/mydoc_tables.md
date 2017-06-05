@@ -81,7 +81,7 @@ If you need a more sophisticated table syntax, use HTML syntax for the table. Al
 </tr>
 <tr>
 <td markdown="span">Second column **fields**</td>
-<td markdown="span">Some more descriptive text. 
+<td markdown="span">Some more descriptive text.
 </td>
 </tr>
 </tbody>

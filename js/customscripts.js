@@ -1,4 +1,3 @@
-
 $('#mysidebar').height($(".nav").height());
 
 

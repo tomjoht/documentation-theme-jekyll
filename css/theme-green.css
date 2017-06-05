@@ -25,6 +25,14 @@ div.navbar-collapse .dropdown-menu > li > a:hover {
     background-color: #72ac4a;
 }
 
+.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand {
+    color: white;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, a.fa.fa-home.fa-lg.navbar-brand:hover {
+     color: #f0f0f0;
+}
+
 .nav li.thirdlevel > a {
     background-color: #FAFAFA !important;
     color: #72ac4a;

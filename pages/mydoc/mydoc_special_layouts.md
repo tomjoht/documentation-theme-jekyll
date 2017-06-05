@@ -10,7 +10,7 @@ folder: mydoc
 ---
 
 
-{% include note.html content="By \"layout,\" I'm not referring to the layouts in \_layouts in the project files. I'm referring to special ways of presenting information on the same \"page\" layout." %} 
+{% include note.html content="By \"layout,\" I'm not referring to the layouts in \_layouts in the project files. I'm referring to special ways of presenting information on the same \"page\" layout." %}
 
 ## FAQ layout
 
@@ -19,10 +19,6 @@ See {{site.data.mydoc_urls.mydoc_faq.link}} for an example of the FAQ format, wh
 ## Knowledgebase layout
 
 See {{site.data.mydoc_urls.mydoc_kb_layout.link}} for a possible layout for knowledge base articles. This layout looks for pages containing specific tags.
-
-## Scroll layout
-
-If you have a long JSON message you're documenting, see the {{site.data.mydoc_urls.mydoc_scroll.link}}. This layout adds a side pane showing links to pointers in the left pane.
 
 ## Shuffle layout
 
