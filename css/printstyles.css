@@ -18,7 +18,7 @@ a[href]::after {
 }
 
 a[href^="http:"]::after, a[href^="https:"]::after {
-    content: " (" attr(href) ")";
+    content: "";
 }
 
 a[href] {
@@ -157,4 +157,3 @@ h1 { string-set: doctitle content() }
 pre {
     background-color: #fafafa;
 }
-
