@@ -1,15 +1,15 @@
 ---
-title: Getting started with the Documentation Theme for Jekyll
-keywords: sample homepage
-tags: [getting_started]
+title: 社区基金会知识库
+keywords: what
+tags: [what]
 sidebar: mydoc_sidebar
 permalink: index.html
-summary: These brief instructions will help you get started quickly with the theme. The other topics in this help provide additional information and detail about working with other aspects of this theme and Jekyll.
+summary: About the community foundation , you need to know what?
 ---
 
-## Build the Theme
+## Definition 
 
-Follow these instructions to build the theme.
+What's community foundation in many culture. What's the history of community foundation?
 
 ### 1. Download the theme
 
@@ -93,6 +93,7 @@ There are several products in this theme. Each product uses a different sidebar.
 The top navigation usually remains the same, because it allows users to navigate across products. But the sidebar navigation adapts to the product.
 
 In each page's frontmatter, you must specify the sidebar you want that page to use. Here's an example of the page frontmatter showing the sidebar property:
+
 
 <pre>
 ---
@@ -389,15 +390,15 @@ When you want to insert paragraphs, notes, code snippets, or other matter in bet
 ```
 1.  First item
 
-    ```
+```
     alert("hello");
-    ```
+    ​```
 
-2.  Second item
+1. Second item
 
     Some pig!
 
-3.  Third item
+2. Third item
 ```
 
 See the topics under "Formatting" in the sidebar for more information.
@@ -411,3 +412,5 @@ If you want to use an automated system for managing links, see [Automated Links]
 The content here is just a getting started guide only. For other details in working with the theme, see the various sections in the sidebar.
 
 {% include links.html %}
+
+```
