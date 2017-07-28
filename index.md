@@ -7,11 +7,11 @@ permalink: index.html
 summary: About the community foundation , you need to know what?
 ---
 
-## Definition 
+## History 
 
 What's community foundation in many culture. What's the history of community foundation?
 
-### 1. Download the theme
+### 1. In USA
 
 First download or clone the theme from the [Github repo](https://github.com/tomjohnson1492/documentation-theme-jekyll). Most likely you won't be pulling in updates once you start customizing the theme, so downloading the theme (instead of cloning it) probably makes the most sense. In Github, click the **Clone or download** button, and then click **Download ZIP**.
 
@@ -412,5 +412,4 @@ If you want to use an automated system for managing links, see [Automated Links]
 The content here is just a getting started guide only. For other details in working with the theme, see the various sections in the sidebar.
 
 {% include links.html %}
-
 ```
