@@ -22,10 +22,12 @@ if [ -d "${TAGDIR}" ]; then
   echo "Creating tag(s) for ${tags}"
 
   for tag in ${tags}; do
+    echo "Title for $tag:"
+    read title
   # Cannot indent here string.
 cat <<EOF >"${TAGDIR}/tag_${tag}.md"
 ---
-title: "${tag} Posts"
+title: "${title}"
 tagName: ${tag}
 search: exclude
 permalink: tag_${tag}.html
@@ -38,6 +40,8 @@ folder: tags
 
 {% include links.html %}
 EOF
+
+echo "  - ${tag}" >> _data/tags.yml
 
   done
 
