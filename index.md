@@ -75,7 +75,7 @@ If you want to shorten this long command, you can put this code in a file such a
 
 You can also use Docker to directly build and run the site on your local machine. Just clone the repo and run the following from your working dir:
 ```
-docker-compose up -d
+docker-compose build --no-cache && docker-compose up
 ```
 The site should now be running at [http://localhost:4000/](http://localhost:4000/).
 
