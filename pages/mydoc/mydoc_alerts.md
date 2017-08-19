@@ -31,6 +31,8 @@ With alerts, there's just one include property:
 |-------|--------|
 | content | The content for the alert. |
 
+## Using block level tags inside the alerts {#blockleveltags}
+
 If you need multiple paragraphs, enter `<br/><br/>` tags. This is because block level tags aren't allowed here, as Kramdown is processing the content as Markdown despite the fact that the content is surrounded by HTML tags. Here's an example with a break:
 
 ```
@@ -39,7 +41,31 @@ If you need multiple paragraphs, enter `<br/><br/>` tags. This is because block 
 
 Here's the result:
 
-{% include note.html content="This is my note. All the content I type here is treated as a single paragraph. <br/><br/> Now I'm typing on a  new line." %}
+{% include note.html content="This is my note. All the content I type here is treated as a single paragraph. <br/><br/> Now I'm typing on a new line." %}
+
+The include uses `markdown="span"` as an attribute, which means kramdown will process the entire `content` as a span. You can't use block elements such as `p` or `div` or `pre`. If you need these elements, you can either manually surround the content with the HTML from the include, or you can use these tags:
+
+```
+{% raw %}{{site.data.alerts.note}}
+<p>This is my note.</p>
+<pre>
+def foo(x):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return x+1
+</pre>
+{{site.data.alerts.end}}{% endraw %}
+```
+
+**Result:**
+
+{{site.data.alerts.note}}
+<p>This is my note.</p>
+<pre>
+def foo(x):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;return x+1
+</pre>
+{{site.data.alerts.end}}
+
+The same Bootstrap code from the alert is stored in yaml files inside the \_data folder. (This was how I previously implemented this code, but since this method was prone to error and didn't trigger any build warnings or failures when incorrectly coded, I changed the approach to use includes instead.)
 
 ## Types of alerts available
 
