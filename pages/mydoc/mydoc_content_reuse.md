@@ -10,7 +10,7 @@ folder: mydoc
 ---
 
 ## About content reuse
-You can embed content from one file inside another using includes. Put the file containing content you want to reuse (e.g., mypage.html) inside the \_includes/custom folder and then use a tag like this: 
+You can embed content from one file inside another using includes. Put the file containing content you want to reuse (e.g., mypage.html) inside the \_includes/custom folder and then use a tag like this:
 
 {% raw %}
 ```
@@ -20,9 +20,13 @@ You can embed content from one file inside another using includes. Put the file 
 
 With content in your \_includes folder, you don't add any frontmatter to these pages because they will be included on other pages already containing frontmatter.
 
-Also, when you include a file, all of the file's contents get included. You can't specify that you only want a specific part of the file included. However, you can use parameters with includes. See the following Jekyll cast for more info about using parameters with includes:
+Also, when you include a file, all of the file's contents get included. You can't specify that you only want a specific part of the file included. However, you can use parameters with includes.
+
+{% unless site.output == "pdf" %}
+See the following Jekyll cast for more info about using parameters with includes:
 
 <iframe width="640" height="480" src="https://www.youtube.com/embed/kzpGqdEMbIs" frameborder="0" allowfullscreen></iframe>
+{% endunless %}
 
 ## Page-level variables
 

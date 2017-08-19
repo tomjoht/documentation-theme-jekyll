@@ -14,6 +14,9 @@
           <li><a href="{{folderitem.external_url}}" target="_blank">{{folderitem.title}}</a></li>
           {% elsif page.url == folderitem.url %}
           <li class="active"><a href="{{folderitem.url | remove: "/"}}">{{folderitem.title}}</a></li>
+          {% elsif folderitem.type == "empty" %}
+          <li><a href="{{folderitem.url | remove: "/"}}">{{folderitem.title}}</a></li>
+
           {% else %}
           <li><a href="{{folderitem.url | remove: "/"}}">{{folderitem.title}}</a></li>
           {% endif %}

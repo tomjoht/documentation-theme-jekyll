@@ -11,11 +11,11 @@ entries:
     type: frontmatter
     folderitems:
     - title:
-      url: /titlepage
+      url: /titlepage.html
       output: pdf
       type: frontmatter
     - title:
-      url: /tocpage
+      url: /tocpage.html
       output: pdf
       type: frontmatter
 
