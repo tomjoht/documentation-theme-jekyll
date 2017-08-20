@@ -3,3 +3,4 @@ _site/
 .jekyll-metadata
 _pdf
 .DS_Store
+.idea
