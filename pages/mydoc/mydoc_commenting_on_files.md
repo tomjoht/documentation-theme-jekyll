@@ -27,7 +27,7 @@ Here's the code for that button on the page.html layout:
 {% endif %}{% endraw %}
 ```
 
-In your configuration file, edit the value for `github_editme_path`. For example, you might create a branch called "reviews" on your Github repo. Then you would add something like this in your configuration file for the 'github_editme_path': tomjohnson1492/documentation-theme-jekyll/edit/reviews. Here "tomjohnson1492" is my github account name. The repo name is "documentation-theme-jekyll". The "reviews" name is the branch.
+In your configuration file, edit the value for `github_editme_path`. For example, you might create a branch called "reviews" on your Github repo. Then you would add something like this in your configuration file for the 'github_editme_path': tomjoht/documentation-theme-jekyll/edit/reviews. Here "tomjoht" is my github account name. The repo name is "documentation-theme-jekyll". The "reviews" name is the branch.
 
 To suppress this button, comment out the `github_editme_path` in the \_config.yml file.
 

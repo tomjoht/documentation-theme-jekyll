@@ -43,6 +43,6 @@ Previously I had some errors with the HTML that showed up in w3c HTML validator 
 
 ## Accessing the old theme
 
-If you want to access the old theme, you can still find it [here](https://github.com/tomjohnson1492/jekylldoctheme-separate-outputs).
+If you want to access the old theme, you can still find it [here](https://github.com/tomjoht/jekylldoctheme-separate-outputs).
 
 {% include links.html %}

@@ -21,12 +21,12 @@ folder: mydoc
 10. Create a new branch called **gh-pages**.  
 11. Click **Settings** and change the default branch to **gh-pages**.
 11. Go back to your repository's homepage. With the gh-pages branch selected, copy the **https clone url**:
-12. Open a terminal, browse to a convenient location for your project, and type `git clone https://github.com/tomjohnson1492/myreponame.git`, replacing the `https://github.com/tomjohnson1492/myreponame.git` with your repository's https clone URL that you copied.
+12. Open a terminal, browse to a convenient location for your project, and type `git clone https://github.com/tomjoht/myreponame.git`, replacing the `https://github.com/tomjoht/myreponame.git` with your repository's https clone URL that you copied.
 13. Move the jekyll theme files into this new folder that you just created in the previous step.
 14. Open the \_config.yml file and add the following:
 
    ```
-   url: tomjohnson1492.github.io
+   url: tomjoht.github.io
    baseurl: /myreponame
    ```
 
@@ -65,7 +65,7 @@ Bundler is a package manager for Ruby that will install all dependencies you mig
 15. Commit the files: `git commit -m "committing my jekyll theme"`.
 16. Push the files up to your github repo: `git push`.
 
-Github Pages will now automatically build your site. Wait a minute or two, and then visit tomjohnson1492.github.io/yourreponame, replacing this path with your github account and branch.
+Github Pages will now automatically build your site. Wait a minute or two, and then visit tomjoht.github.io/yourreponame, replacing this path with your github account and branch.
 
 ## Customize your URL
 
