@@ -86,7 +86,7 @@ If you don't want to link to a tag archive index, but instead want to list all p
 ```html
 {% raw %}Getting started pages:
 <ul>
-{% assign sorted_pages = (site.pages | sort: 'title') %}
+{% assign sorted_pages = site.pages | sort: 'title' %}
 {% for page in sorted_pages %}
 {% for tag in page.tags %}
 {% if tag == "getting_started" %}
@@ -102,7 +102,7 @@ Here's the result:
 Getting started pages:
 
 <ul>
-{% assign sorted_pages = (site.pages | sort: 'title') %}
+{% assign sorted_pages = site.pages | sort: 'title' %}
 {% for page in sorted_pages %}
 {% for tag in page.tags %}
 {% if tag == "getting_started" %}
