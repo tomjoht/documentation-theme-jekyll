@@ -45,6 +45,13 @@ layout: default
 
     {% endif %}
 
+
+    {% if site.gitlab_editme_path %}
+
+    <a target="_blank" href="https://github.com/{{site.gitlab_editme_path}}{% unless page.url contains "index.html" %}pages/{% endunless %}{{page.folder}}{{page.url | remove: ".html" | append: ".md"}}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-gitlab fa-lg"></i> Edit me</a>
+
+    {% endif %}
+
   {{content}}
 
     <div class="tags">
