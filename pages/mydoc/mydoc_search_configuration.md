@@ -31,7 +31,8 @@ If this happens, go directly to the search.json file in your browser, and then c
 The search.json file already tries to strip out content that would otherwise make the JSON invalid.
 
 ## Including the body field in search
-I've found that include the `body` field in the search creates too many problems, and so I've removed `body` from the search. You can see the results of including the `body` by adding this along with the other fields in search.json:
+
+I've found that including the `body` field in the search creates too many problems, and so I've removed `body` from the search. You can see the results of including the `body` by adding this along with the other fields in search.json:
 
 {% raw %}
 ```json
@@ -114,6 +115,6 @@ Where you see `{url}` and `{title}`, the search is retrieving the values for the
 
 ## More robust search
 
-For more robust search, consider integrating either [Algolia](http://algolia.com) or [Swifttype](http://swiftype.com).
+Overall, the built-in search only works for small documentation projects. If you have more robust search needs, consider integrating [Google Custom Search](https://cse.google.com/cse/), [Algolia](http://algolia.com), or [Swifttype](http://swiftype.com).
 
 {% include links.html %}
