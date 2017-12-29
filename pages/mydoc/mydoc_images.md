@@ -15,7 +15,7 @@ Instead of using Markdown or HTML syntax directly in your page for images, the s
 
 ```liquid
 {% raw %}
-{% include image.html file="jekyll.png" url="http://jekyllrb.com" alt="Jekyll" caption="This is a sample caption" %"}
+{% include image.html file="jekyll.png" url="http://jekyllrb.com" alt="Jekyll" caption="This is a sample caption" %}
 {% endraw %}
 ```
 
