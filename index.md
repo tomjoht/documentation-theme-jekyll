@@ -7,7 +7,7 @@ permalink: index.html
 summary: These brief instructions will help you get started quickly with the theme. The other topics in this help provide additional information and detail about working with other aspects of this theme and Jekyll.
 ---
 
-{% include note.html content="If you'd like to keep up on best practices for documentation, see my <a alt='technical writing blog' href='http://idratherbewriting.com'>technical writing blog: I'd Rather Be Writing</a>." %}
+{% include note.html content="If you're cloning this theme, you're probably writing documentation of some kind. I have a blog on technical writing here called <a alt='technical writing blog' href='http://idratherbewriting.com'>I'd Rather Be Writing</a>. If you'd like to stay updated with the latest trends, best practices, and other methods for writing documentation, consider <a href='https://tinyletter.com/tomjoht'>subscribing</a>. I also have a site on <a href='http://idratherbewriting.com/learnapidoc'>writing API documentation</a>. Also, if you want a slightly different Jekyll documentation theme, see my <a href='https://github.com/amzn/jekyll-doc-project'>Jekyll doc project theme</a>." %}
 
 ## Build the Theme
 
