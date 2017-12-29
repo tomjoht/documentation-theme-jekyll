@@ -1,6 +1,6 @@
 # Note that .sh scripts work only on Mac. If you're on Windows, install Git Bash and use that as your client.
 
-echo 'Killing all Jekyll instances'
+echo 'Kill all Jekyll instances'
 kill -9 $(ps aux | grep '[j]ekyll' | awk '{print $2}')
 clear
 

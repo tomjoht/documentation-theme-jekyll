@@ -12,6 +12,23 @@ folder: mydoc
 ## Font icon options
 The theme has two font icon sets integrated: Font Awesome and Glyphicons Halflings. The latter is part of Bootstrap, while the former is independent. Font icons allow you to insert icons drawn as vectors from a CDN (so you don't have any local images on your own site).
 
+## External icons
+
+When you link to an external site, like [Jekyll](http://jekyllrb.com), an icon appears after the link. If you want to remove this icon, comment out this style in css/customstyles.css.
+
+```css
+/* this part adds an icon after external links, using FontAwesome*/
+a[href^="http://"]:after, a[href^="https://"]:after {
+    content: "\f08e";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    text-decoration: none;
+    padding-left: 3px;
+}
+```
+
 ## See Font Awesome icons available
 
 Go to the [Font Awesome library](http://fortawesome.github.io/Font-Awesome/icons/) to see the available icons.

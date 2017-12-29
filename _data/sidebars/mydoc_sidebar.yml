@@ -220,10 +220,6 @@ entries:
       url: /mydoc_push_build_to_server.html
       output: web, pdf
 
-    - title: Getting around the password prompts in SCP
-      url: /mydoc_no_password_prompts_scp.html
-      output: web, pdf
-
     - title: Publishing on Github Pages
       url: /mydoc_publishing_github_pages.html
       output: web, pdf
