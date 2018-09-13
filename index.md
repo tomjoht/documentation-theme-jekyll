@@ -239,7 +239,7 @@ The YAML syntax depends on exact spacing, so make sure you follow the pattern sh
 
 Each level must have at least one topic before the next level starts. You can't have a second level that contains multiple third levels without having at least one standalone topic in the second level. If you need a hierarchy that has a folder that contains other folders and no loose topics, use a blank `-` item like this:
 
-```yamll
+```yaml
 entries:
 - title: sidebar
   product: Jekyll Doc Theme
