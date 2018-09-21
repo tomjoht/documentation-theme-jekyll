@@ -209,29 +209,29 @@ Developers can access the help using the `.get` method from jQuery, among other 
 
 ```js
 {% raw %}var url = "tooltips.json";
-         
+
          $.get( url, function( data ) {
-         
-          /* Bootstrap popover text is defined inside a data-content attribute inside an element. That's 
+
+          /* Bootstrap popover text is defined inside a data-content attribute inside an element. That's
           why I'm using attr here. If you just want to insert content on the page, use append and remove the data-content argument from the parentheses.*/
-         
+
              $.each(data.entries, function(i, page) {
                  if (page.doc_id == "basketball") {
                      $( "#basketball" ).attr( "data-content", page.body );
                  }
-         
+
                  if (page.doc_id == "baseball") {
                      $( "#baseball" ).attr( "data-content", page.body );
                  }
                  if (page.doc_id == "football") {
                      $( "#football" ).attr( "data-content", page.body );
                  }
-         
+
                  if (page.doc_id == "soccer") {
                      $( "#soccer" ).attr( "data-content", page.body );
                  }
-         
-         
+
+
                  });
              });{% endraw %}
 ```
@@ -268,6 +268,7 @@ $(document).ready(function(){
         trigger: 'hover',
         html: true
     });
+</script>
 ```
 
 Again, see the <a class="noCrossRef" href="tooltips.html">Tooltip Demo</a> for a demo of the full code.
