@@ -10,7 +10,7 @@ folder: mydoc
 ---
 
 ## What are collections
-Collections are custom content types different from pages and posts. You might create a collection if you want to treat a specific set of articles in a unique way, such as with a custom layout or listing. For more detail on collections, see [Ben Balter's explanation of collections here](http://ben.balter.com/2016/02/20/jekyll-collections/).
+Collections are custom content types different from pages and posts. You might create a collection if you want to treat a specific set of articles in a unique way, such as with a custom layout or listing. For more detail on collections, see [Ben Balter's explanation of collections here](https://ben.balter.com/2015/02/20/jekyll-collections/).
 
 ## Create a collection
 To create a collection, add the following in your configuration file:
