@@ -46,7 +46,8 @@ For example, the sidebar.html file contains the following code:
 {% raw %}
 ```liquid
 {% if folderitem.external_url %}
-    <li><a href="{{folderitem.external_url}}" target="_blank">{{folderitem.title}}</a></li>```
+    <li><a href="{{folderitem.external_url}}" target="_blank">{{folderitem.title}}</a></li>
+```
 {% endraw %}
 
 You can see that the `external_url` is a condition that applies a different formatting. Although this feature is available, I recommend putting any external navigation links in the top navigation bar instead of the side navigation bar.
