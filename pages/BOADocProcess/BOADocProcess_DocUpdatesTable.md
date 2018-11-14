@@ -2,173 +2,72 @@
 title: Documentation Updates by Release Type for the DSP/WebApps
 keywords: BOADocProcess
 sidebar: BOADocProcess_sidebar
-toc: false
+summary: "This page includes a table that lists all major releases of the different BOA components."
 permalink: BOADocProcess_DocUpdatesTable.html
 folder: BOADocProcess
 ---
-Documentation Updates by Release Type for the DSP/WebApps
-=========================================================
+<table>
+    <colgroup>
+        <col width="25%" />
+        <col width="25%" />
+        <col width="25%" />
+        <col width="25%" />
+    </colgroup>
+    <thead>
+        <tr class="header">
+            <th>Type of release</th>
+            <th>Online Help Updated</th>
+            <th>Release Notes Created</th>
+            <th>Installation Manuals Created</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Major release (e.g., 6.0)
+            </td>
+            <td>Yes. <br/><br/>The What’s New topic content should include:<br/><br/>
+                <ul>
+                    <li>New Features and updates since the immediate prior version (as in, the updates to the What’s New topic for 6.0 should only contain updates implemented in 6.0).</li>
+                    <li>A description of every enhancement request included in the version.</li>
+                    <li>A description of every Online Help feedback request from the field included in the version.</li>
+                    <li>All Support issues</li>
+                    <li>All Jira tickets that describe changes to behavior, the UI, or the help that were made to previously released versions. These may be bugs internally reported by PM, task tickets, defect tickets or others.</li>
+                </ul>
+            </td>
+            <td>
+            Yes. <br/><br/> Release notes should contain identical content to the What’s New topic in help.
+            </td>
+            <td>
+            Yes.
+            </td>
+        </tr>
+        <tr>
+        </tr>
+        <tr>
+        </tr>
+        <tr>
+        </tr>
+        <tr>
+        </tr>
+        <tr>
+        </tr>
+        <tr>
+        </tr>
+        <tr>
+        </tr>
+        <tr>
+        </tr>
+        <tr>
+        </tr>
+    </tbody>
+</table>
 
-+-----------------+-----------------+-----------------+-----------------+
-| > **Type of     | > **Online help | > **Release     | > **Installatio |
-| > release**     | > updated**     | > Notes         | n               |
-|                 |                 | > created**     | > Manuals       |
-|                 |                 |                 | > created**     |
-+-----------------+-----------------+-----------------+-----------------+
-| > Major release | Yes.            | Yes.            | Yes.            |
-| > (e.g., 6.0)   |                 |                 |                 |
-|                 | The What's New  | Release notes   |                 |
-|                 | topic content   | should contain  |                 |
-|                 | should include: | identical       |                 |
-|                 |                 | content to the  |                 |
-|                 | -   New         | What's New      |                 |
-|                 |     Features    | topic in help.  |                 |
-|                 |     and updates |                 |                 |
-|                 |     since the   |                 |                 |
-|                 |     immediate   |                 |                 |
-|                 |     prior       |                 |                 |
-|                 |     version (as |                 |                 |
-|                 |     in, the     |                 |                 |
-|                 |     updates to  |                 |                 |
-|                 |     the What's  |                 |                 |
-|                 |     New topic   |                 |                 |
-|                 |     for 6.0     |                 |                 |
-|                 |     should only |                 |                 |
-|                 |     contain     |                 |                 |
-|                 |     updates     |                 |                 |
-|                 |     implemented |                 |                 |
-|                 |     in 6.0).    |                 |                 |
-|                 |                 |                 |                 |
-|                 | -   A           |                 |                 |
-|                 |     description |                 |                 |
-|                 |     of every    |                 |                 |
-|                 |     enhancement |                 |                 |
-|                 |     request     |                 |                 |
-|                 |     included in |                 |                 |
-|                 |     the         |                 |                 |
-|                 |     version.    |                 |                 |
-|                 |                 |                 |                 |
-|                 | -   A           |                 |                 |
-|                 |     description |                 |                 |
-|                 |     of every    |                 |                 |
-|                 |     Online Help |                 |                 |
-|                 |     feedback    |                 |                 |
-|                 |     request     |                 |                 |
-|                 |     from the    |                 |                 |
-|                 |     field       |                 |                 |
-|                 |     included in |                 |                 |
-|                 |     the         |                 |                 |
-|                 |     version.    |                 |                 |
-|                 |                 |                 |                 |
-|                 | -   All Support |                 |                 |
-|                 |     issues      |                 |                 |
-|                 |                 |                 |                 |
-|                 | -   All Jira    |                 |                 |
-|                 |     tickets     |                 |                 |
-|                 |     that        |                 |                 |
-|                 |     describe    |                 |                 |
-|                 |     changes to  |                 |                 |
-|                 |     behavior,   |                 |                 |
-|                 |     the UI, or  |                 |                 |
-|                 |     the help    |                 |                 |
-|                 |     that were   |                 |                 |
-|                 |     made to     |                 |                 |
-|                 |     previously  |                 |                 |
-|                 |     released    |                 |                 |
-|                 |     versions.   |                 |                 |
-|                 |     These may   |                 |                 |
-|                 |     be bugs     |                 |                 |
-|                 |     internally  |                 |                 |
-|                 |     reported by |                 |                 |
-|                 |     PM, task    |                 |                 |
-|                 |     tickets,    |                 |                 |
-|                 |     defect      |                 |                 |
-|                 |     tickets or  |                 |                 |
-|                 |     others.     |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| > Minor release | Yes.            | Yes.            | Yes.            |
-| > (as in, 6.3)  |                 |                 |                 |
-|                 | Same as for     |                 |                 |
-|                 | Major release,  |                 |                 |
-|                 | but should also |                 |                 |
-|                 | include SP      |                 |                 |
-|                 | changes.        |                 |                 |
-|                 |                 |                 |                 |
-|                 | For example,    |                 |                 |
-|                 | the 6.3 release |                 |                 |
-|                 | notes should    |                 |                 |
-|                 | contain the     |                 |                 |
-|                 | release notes   |                 |                 |
-|                 | content for the |                 |                 |
-|                 | 6.2.1 SP, and   |                 |                 |
-|                 | 6.2.2 SP, etc.  |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| > Service Pack  | Yes.            | Yes.            | yes.            |
-| > release (as   |                 |                 |                 |
-| > in, 6.2.1 SP) | The What's New  | This document   |                 |
-|                 | topic should    | should include  |                 |
-|                 | contain only    | any changes     |                 |
-|                 | the changes     | since the last  |                 |
-|                 | included with   | minor version   |                 |
-|                 | the SP.         | release. If     |                 |
-|                 |                 | multiple        |                 |
-|                 | **NOTE**: If    | Service Packs   |                 |
-|                 | the changes in  | are released    |                 |
-|                 | the Service     | for a Minor     |                 |
-|                 | Pack are for    | release, the    |                 |
-|                 | the Full        | release notes   |                 |
-|                 | Version only,   | for each        |                 |
-|                 | the SAP         | Service Pack    |                 |
-|                 | Accelerators    | should contain  |                 |
-|                 | version of the  | changes from    |                 |
-|                 | help will not   | the previous    |                 |
-|                 | be created. If  | Service Pack.   |                 |
-|                 | the changes     |                 |                 |
-|                 | apply to the    | For example,    |                 |
-|                 | SAP             | the 6.2.2 SP    |                 |
-|                 | Accelerators    | release notes   |                 |
-|                 | version only, a | should contain  |                 |
-|                 | BackOffice      | the content     |                 |
-|                 | Solutions       | from the 6.2.1  |                 |
-|                 | (Full) version  | SP release      |                 |
-|                 | of help will    | notes.          |                 |
-|                 | still be        |                 |                 |
-|                 | created.        | **NOTE**: If    |                 |
-|                 |                 | the changes in  |                 |
-|                 |                 | the Service     |                 |
-|                 |                 | Pack are for    |                 |
-|                 |                 | the Full        |                 |
-|                 |                 | Version only,   |                 |
-|                 |                 | the SAP         |                 |
-|                 |                 | Accelerators    |                 |
-|                 |                 | version of the  |                 |
-|                 |                 | release notes   |                 |
-|                 |                 | will not be     |                 |
-|                 |                 | created.        |                 |
-|                 |                 |                 |                 |
-|                 |                 | If the changes  |                 |
-|                 |                 | in the Service  |                 |
-|                 |                 | Pack are for    |                 |
-|                 |                 | the SAP         |                 |
-|                 |                 | Accelerators    |                 |
-|                 |                 | version only,   |                 |
-|                 |                 | the BackOffice  |                 |
-|                 |                 | Solutions       |                 |
-|                 |                 | (Full) version  |                 |
-|                 |                 | of the release  |                 |
-|                 |                 | notes will      |                 |
-|                 |                 | still be        |                 |
-|                 |                 | created.        |                 |
-+-----------------+-----------------+-----------------+-----------------+
-| > Patch release | No (Developers  | No              | No              |
-| > (as in,       | include in the  |                 |                 |
-| > 6.0.3.1       | zipped patch    |                 |                 |
-| > Patch)        | file a          |                 |                 |
-|                 | readme.txt file |                 |                 |
-|                 | describing the  |                 |                 |
-|                 | content of the  |                 |                 |
-|                 | patch).         |                 |                 |
-+-----------------+-----------------+-----------------+-----------------+
+
+
+
+
+
+
 
 Summary of DSP Release Versions and Full/Solex Content
 ======================================================

@@ -80,7 +80,7 @@ To convert a Word document to PDF:
 
 Once the file has been created as a PDF, it has to be secured according to BackOffice policy. Refer to [BackOffice Associates® Security Settings for Adobe][BOADocProcess_DevManConfigGuides.html#securitysettings] for instructions on creating security policy.
 
-{% include note.html content="The password to remove security settings is triangle." %}
+{% include note.html content="See your manager to get the password to remove security settings." %}
 
 To secure a PDF file:
 
