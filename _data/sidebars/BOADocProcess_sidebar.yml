@@ -1,0 +1,148 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: BOA Doc Process
+  version:
+  folders:
+
+  - title: Overview
+    output: web
+    folderitems:
+
+    - title: Purpose
+      url: /index.html
+      output: web
+      type: homepage
+
+    - title: Documentation Updates by Release Type for the DSP/WebApps
+      url: /BOADocProcess_DocUpdatesTable.html
+      output: web
+
+    - title: MadCap Flare Licensing and Upgrade Proess
+      url: /BOADocProcess_FlareLicenseUpgradeProcess.html
+      output: web
+
+    - title: Project Documentation Roles for DSP
+      url: /BOADocProcess_ProjDocRoles.html
+      output: web
+
+  - title: Online Help Documentation Process (DSP)
+    output: web
+    folderitems:
+
+    - title: Sources for Online Help Content
+      url: /BOADocProcess_SrcsOnlineHelp.html
+      output: web
+
+    - title: DSP Documentation Workflow
+      url: /BOADocProcess_DSPDocWorkflow.html
+      output: web
+
+    - title: Update Online Help in Flare
+      url: /BOADocProcess_UpdateOnlineHelp.html
+      output: web
+
+    - title: Build Help Targets
+      url: /BOADocProcess_BuildHelpTargets.html
+      output: web
+
+    - title: Unifying Support KB Articles and Online Help
+      url: /BOADocProcess_UnifyKBArticles.html
+      output: web
+
+    - title: Prepare What's New Topic/Release Notes Content
+      url: /BOADocProcess_PrepareWhatsNew.html
+      output: web
+
+    - title: Checklist for Generating Online Help for Release
+      url: /BOADocProcess_ChecklistGenOnlineHelp.html
+      output: web
+
+    - title: Incorporate Feedback into the Online Help
+      url: /BOADocProcess_IncorpFeedback.html
+      output: web
+
+    - title: Source Files for Manuals and Online Help
+      url: /BOADocProcess_SrcFiles.html
+      output: web
+
+  - title: Print Documentation Process (DSP)
+    output: web
+    folderitems:
+
+    - title: Templates for Print Documentation
+      url: /BOADocProcess_PrintTemplates.html
+      output: web
+
+    - title: Installation Manual Process
+      url: /BOADocProcess_InstallManualProcess.html
+      output: web
+
+    - title: For Developer Manuals
+      url: /BOADocProcess_DevManuals.html
+      output: web
+
+    - title: Maintain Developer Manuals and Technical Configuration Guides
+      url: /BOADocProcess_DevManConfigGuides.html
+      output: web
+
+  - title: Articles
+    output: web
+    folderitems:
+
+    - title: Add Articles to the Knowledge Base
+      url: /BOADocProcess_KnowledgeBaseArt.html
+      output: web
+
+    - title: Add Posts to the Data Insiders DSP Questions and Answers Community
+      url: /BOADocProcess_DIPosts.html
+      output: web
+
+  - title: Flare Extras
+    output: web
+    folderitems:
+
+    - title: Condition Tags Used in the Project File
+      url: /BOADocProcess_CondTags.html
+      output: web
+
+    - title: Alias File Value Range
+      url: /BOADocProcess_AliasValueRange.html
+      output: web
+
+    - title: Preparing Documents for Importatation into Flare
+      url: /BOADocProcess_PrepareFlareImport.html
+      output: web
+
+    - title: Importing Manuals into Flare
+      url: /BOADocProcess_FlareImport.html
+      output: web
+
+  - title: Source Control
+    output: web
+    folderitems:
+
+    - title: Git Resources
+      url: /BOADocProcess_GitResources.html
+      output: web
+
+    - title: Git Intitial Setup
+      url: /BOADocProcess_GitInitSetup.html
+      output: web
+
+  - title: Checklists
+    output: web
+    folderitems:
+
+    - title: Checklist for Adding a New Component
+      url: /BOADocProcess_CLAddNewComponent.html
+      output: web
+
+    - title: Checklist for DSP Documentation Workflow
+      url: /BOADocProcess_CLDSPWorkflow.html
+      output: web
+
+    - title: Checklist for DSP Standards
+      url: /BOADocProcess_CLDSPStandards.html
+      output: web

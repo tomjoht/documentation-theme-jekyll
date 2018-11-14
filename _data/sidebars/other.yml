@@ -16,3 +16,9 @@ entries:
 
     - title: Some link bookmark
       url: /mydoc_pages.html#someIdTag
+
+    - title: Use Condition Tags bookmark
+      url: /BOADocProcess_UpdateOnlineHelp.html#usecondtags
+
+    - title: BackOffice Associates® Security Settings for Adobe
+      url: /BOADocProcess_DevManConfigGuides.html#securitysettings
