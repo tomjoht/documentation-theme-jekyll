@@ -584,7 +584,7 @@ Restyling. You can set the terms to display as a popup or a tooltip. The
 user clicks the term to open the popup. The user hovers over a term to
 display a tooltip.
 
-### Add Context-sensitive Help Links
+### Add Context-sensitive Help Links {#addcslinks}
 
 When a user clicks the **?** icon on any page in the product, the help
 system opens and displays the field description topic for that page.

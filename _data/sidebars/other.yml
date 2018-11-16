@@ -22,3 +22,6 @@ entries:
 
     - title: BackOffice Associates® Security Settings for Adobe
       url: /BOADocProcess_DevManConfigGuides.html#securitysettings
+
+    - title: Add Context-sensitive Help Links bookmark
+      url: /BOADocProcess_UpdateOnlineHelp.html#addcslinks
