@@ -151,9 +151,9 @@ The top navigation works just like the sidebar. You can specify which topnav dat
 topnav: topnav
 ```
 
-Here the topnav refers to the \_data/topnav.yml file.
+Here the topnav refers to the `_data/topnav.yml` file.
 
-Because most topnav options will be the same, the \_config.yml file specifies the topnav file as a default:
+Because most topnav options will be the same, the `_config.yml` file specifies the topnav file as a default:
 
 ```yaml
 -
@@ -170,7 +170,7 @@ Because most topnav options will be the same, the \_config.yml file specifies th
 
 ## Sidebar syntax
 
-The sidebar data file uses a specific YAML syntax that you must follow. Follow the sample pattern shown in the theme, specically looking at mydoc_sidebar.yml as an example: Here's a code sample showing all levels:
+The sidebar data file uses a specific YAML syntax that you must follow. Follow the sample pattern shown in the theme, specically looking at `mydoc_sidebar.yml` as an example: Here's a code sample showing all levels:
 
 ```yaml
 entries:
