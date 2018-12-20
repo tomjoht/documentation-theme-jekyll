@@ -25,3 +25,18 @@ entries:
 
     - title: Add Context-sensitive Help Links bookmark
       url: /BOADocProcess_UpdateOnlineHelp.html#addcslinks
+
+    - title: Technical Writer Drafts content in Flare bookmark
+      url: /BOADocProcess_DSPDocWorkflow.html#draftcontent
+
+    - title: Commit updates locally bookmark
+      url: /BOADocProcess_DSPDocWorkflow.html#commitlocally
+
+    - title: Open a pull request for a peer reviewer to review your work bookmark
+      url: /BOADocProcess_DSPDocWorkflow.html#openPR
+
+    - title: Peer Reviews Content in Flare bookmark
+      url: /BOADocProcess_DSPDocWorkflow.html#peerreview
+
+    - title: Update Document Properties bookmark
+      url: /BOADocProcess_DevManuals.html#updatedocprop

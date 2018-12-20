@@ -2,72 +2,54 @@
 title: Git Resources
 keywords: BOADocProcess
 sidebar: BOADocProcess_sidebar
-toc: false
+summary: "This page provides the docteam with resources for learning about Git and how it works."
 permalink: BOADocProcess_GitResources.html
 folder: BOADocProcess
 ---
-Git Resources
-===========================
-Git & GitHub
-------------
-Series by Briana Marie Swift -- who works for GitHub.
 
-**URL:**
-<https://www.youtube.com/watch?list=PLWKjhJtqVAbkFiqHnNaxpOPhh9tSWMXIF&v=vR-y_2zWrIE>
+## Git & GitHub
+
+[Git and GitHub Series by Briana Marie Swift on Free Code Camp](https://www.youtube.com/watch?list=PLWKjhJtqVAbkFiqHnNaxpOPhh9tSWMXIF&v=vR-y_2zWrIE)
 
 Focus on these videos from the series for a basic background on Git:
 
-1.  Introduction to Git & GitHub
+1.  [Introduction to Git & GitHub](https://www.youtube.com/watch?v=vR-y_2zWrIE&index=2&list=PLWKjhJtqVAbkFiqHnNaxpOPhh9tSWMXIF&t=0s)
 
-2.  Branching and the GitHub Workflow
+2.  [Branching and the GitHub Workflow](https://www.youtube.com/watch?v=2GO1a1vgNrc&list=PLWKjhJtqVAbkFiqHnNaxpOPhh9tSWMXIF&index=2)
 
-3.  Cloning and Working Locally
+3.  [Cloning and Working Locally](https://www.youtube.com/watch?v=09wR8kYT3t8&index=4&list=PLWKjhJtqVAbkFiqHnNaxpOPhh9tSWMXIF)
 
-4.  How Commits Work
+4.  [How Commits Work](https://www.youtube.com/watch?v=JXM7MO2GgGg&list=PLWKjhJtqVAbkFiqHnNaxpOPhh9tSWMXIF&index=6)
 
-5.  Merging
+5.  [Merging](https://www.youtube.com/watch?v=tYOl25gyuvk&index=8&list=PLWKjhJtqVAbkFiqHnNaxpOPhh9tSWMXIF)
 
-6.  Merge Conflicts
+6.  [Merge Conflicts](https://www.youtube.com/watch?v=sfT0WrChMrM&list=PLWKjhJtqVAbkFiqHnNaxpOPhh9tSWMXIF&index=9)
 
-7.  Undoing Commits
+7.  [Undoing Commits](https://www.youtube.com/watch?v=XiFYShmnI4k&list=PLWKjhJtqVAbkFiqHnNaxpOPhh9tSWMXIF&index=11)
 
-GitHub for Noobs
-----------------
+## GitHub for Noobs
 
-Series from DevTips, a YouTube channel devoted to web development from a noob's perspective.
-
-**URL:**
-<https://www.youtube.com/watch?v=1h9_cB9mPT8&list=PLqGj3iMvMa4LFz8DZ0t-89twnelpT4Ilw>
+[GitHub for Noobs Series from DevTips](https://www.youtube.com/playlist?list=PLqGj3iMvMa4LFz8DZ0t-89twnelpT4Ilw): a YouTube channel devoted to web development from a noob's perspective.
 
 Focus on these videos from the series:
 
-1.  A Short History
+1.  [A Short History](https://www.youtube.com/watch?v=1h9_cB9mPT8&list=PLqGj3iMvMa4LFz8DZ0t-89twnelpT4Ilw&index=2&t=0s)
 
-2.  Common Workflows
+2.  [Common Workflows](https://www.youtube.com/watch?v=_ALeswWzpBo&list=PLqGj3iMvMa4LFz8DZ0t-89twnelpT4Ilw&index=2)
 
-Microsoft Virtual Academy
--------------------------
+## Microsoft Virtual Academy
 
-GitHub for Windows Users
+{% include tip.html content="If you don't have a Microsoft account, you will need to make a free one to access these videos." %}
 
-**URL:**
-<https://mva.microsoft.com/en-US/training-courses/github-for-windows-users-16749?l=8MGXzodxC_5206218965>
+[GitHub for Windows Users](https://mva.microsoft.com/en-US/training-courses/github-for-windows-users-16749?l=8MGXzodxC_5206218965)
 
-If you don't have a Microsoft account, you can make a free one just to access this content.
+Focus on these videos from the series: Basic Concepts and GitHub Workflow -- Part 1 -- 4
 
-Focus on these videos from the series:
+## BackOffice Associates Sandbox file on GitHub
 
-Basic Concepts and GitHub Workflow -- Part 1 -- 4
+[Sandbox Repo README](https://github.com/BackOfficeAssoc/sandbox/blob/master/git.md): This is information for the developers to understand how BOA does git. It provides some good content about git and the GitHub flow.
 
-BackOffice Associates Sandbox file on GitHub
---------------------------------------------
-
-**URL:** <https://github.com/BackOfficeAssoc/sandbox/blob/master/git.md>
-
-This is information for the developers to understand how BOA does git. It provides some good content about git and the GitHub flow.
-
-Git Terminology and Background
-------------------------------
+## Git Terminology and Background
 
 ### Terminology
 
@@ -89,4 +71,4 @@ Git is a distributed version control system. Git is known as a "distributed" (ra
 
 GitHub facilitates teams working on the same project by providing a web interface to the Git code repository and management tools for collaboration. GitHub allows team members to change, adapt and improve a project from its repositories. Each public or private repository contains all of a project\'s files, as well as each file\'s revision history. Repositories can have multiple collaborators and can be either public or private.
 
-For our use of Git and GitHub, we have opted to use the Git Bash command line as well as the [GitHub online GUI interface](https://github.com/). The following steps will alternate between the two interfaces.
+For our use of Git and GitHub, we have opted to use the [Git Bash](https://gitforwindows.org/) command line.

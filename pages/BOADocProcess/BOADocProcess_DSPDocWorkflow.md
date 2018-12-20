@@ -62,7 +62,7 @@ Either:
 -   PM/Dev/QE enter the ticket manually in Jira, or
 -   JIRA users may also enter documentation-only issues with an Issue Type of **Document** on the DSP board.
 
-## In Process: Technical Writer Drafts content in Flare
+## In Process: Technical Writer Drafts content in Flare {#draftcontent}
 
 Technical Writers begin work on tickets as soon as possible after the ticket has made it past User Story review and completes the draft content in Flare.
 
@@ -72,7 +72,7 @@ To add content to the help:
 
 1.  [Synchronize your release branch with the BackOfficeAssoc GitHub Repo](#synchronize-your-release-branch-with-the-backofficeassoc-github-repo)
 2.  [Create a branch for your updates based on the release branch](#create-a-branch-for-your-updates-based-on-the-release-branch)
-3.  [Commit updates locally and push them to the BackOfficeAssoc GitHub Repo](#commit-updates-locally-and-push-them-to-the-backofficeassoc-github-repo- sp-docs)
+3.  [Commit updates locally and push them to the BackOfficeAssoc GitHub Repo](#commitlocally)
 4.  [Open a pull request for a peer reviewer to review your work](#open-a-pull-request-for-a-peer-reviewer-to-review-your-work)
 
 {% include important.html content="Always use Git Bash. Do not use the **GitHub Desktop** application." %}
@@ -91,12 +91,12 @@ To add content to the help:
 ### Create a branch for your updates based on the release branch
 
 1.  Navigate to the release branch in Git Bash if you are not already in it.
-2.  Enter the command git checkout -b \<new branch name\>
+2.  Enter the command `git checkout -b \<new branch name\>`
     {% include note.html content="Name the branch after the JIRA ticket number if applicable. Use the naming convention DSP-NNNN. If changes are not related to a Jira ticket, give the branch a meaningful name, such as 'releasenotesupdates'." %}
 3.  Open the project in Flare and make your updates and your updates are saved on the correct branch.
 4.  When you finish your updates, save your changes and **close Flare**.
 
-### Commit updates locally and push them to the BackOfficeAssoc GitHub Repo dsp-docs
+### Commit updates locally and push them to the BackOfficeAssoc GitHub Repo dsp-docs {#commitlocally}
 
 1.  Return to Git Bash or open a new session.
 2.  Navigate to your repo, and make sure you are in the correct branch. It is in parenthesis after your prompt.
@@ -110,7 +110,7 @@ To add content to the help:
 6.  Push your changes to the remote by entering the command `git push origin <new branch name>`
     {% include tip.html content="Now your new branch is visible on GitHub and available for others to access for review." %}
 
-### Open a pull request for a peer reviewer to review your work
+### Open a pull request for a peer reviewer to review your work {#openPR}
 
 1.  Go to GitHub.com and click the **Compare and pull request** button next to your recently pushed branch.
 2.  Make sure the **base** is the current release branch you are working in and **compare** is your new branch name.
@@ -120,7 +120,7 @@ To add content to the help:
 4.  Add the PR URL to the Jira ticket.
 5.  Update the **Documentation Status** on the JIRA ticket to **Peer Review**.
 
-## Peer Review: Peer Reviews Content in Flare
+## Peer Review: Peer Reviews Content in Flare {#peerreview}
 
 1.  In Windows-Explorer, right-click on your dsp-docs local file and select **Git Bash Here**.
     {% include image.html file="gitBashHere.png" alt="Right-click menu with Git Bash Here option" caption="Right-click menu with Git Bash Here option" %}

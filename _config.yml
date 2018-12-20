@@ -3,10 +3,10 @@ repository: heathercloward/process-standards
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: BOA DocTeam Process/Standards
+topnav_title: BOA DocTeam
 # this appears on the top navigation bar next to the home button
 
-site_title: BOA DocTeam Process/Standards
+site_title: BOA DocTeam
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
 company_name: BackOffice Associates
@@ -35,12 +35,12 @@ exclude:
   - .gitignore
 # these are the files and directories that jekyll will exclude from the build
 
-feedback_subject_line: BOA DocTeam Process/Standards
+## feedback_subject_line: BOA DocTeam Process/Standards
 
-feedback_email: heathercloward@boaweb.com
+# feedback_email: heathercloward@boaweb.com
 # used as a contact email for the Feedback link in the top navigation bar
 
-# feedback_disable: true
+feedback_disable: true
 # if you uncomment the previous line, the Feedback link gets removed
 
 # feedback_text: "Need help?"
@@ -102,11 +102,7 @@ defaults:
 
 sidebars:
 - BOADocProcess_sidebar
-- home_sidebar
-- mydoc_sidebar
-- product1_sidebar
-- product2_sidebar
-- other
+- BOADocStandards_sidebar
 
 description: "Intended as a reference for the BOA documentation team."
 # the description is used in the feed.xml file

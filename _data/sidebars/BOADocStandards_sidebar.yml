@@ -1,0 +1,87 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: BOA Doc Standards
+  version:
+  folders:
+
+  - title: Overview
+    output: web
+    folderitems:
+
+    - title: Purpose
+      url: /BOADocStandards_Overview.html
+      output: web
+
+  - title: Online Help Standards
+    output: web
+    folderitems:
+
+    - title: General Guidelines
+      url: /BOADocStandards_OnlineGenGuidelines.html
+      output: web
+
+    - title: Use Case Guidelines
+      url: /BOADocStandards_UCGuidelines.html
+      output: web
+
+    - title: Page Description Guidelines
+      url: /BOADocStandards_PDGuidelines.html
+      output: web
+
+    - title: Dashboard Guidelines
+      url: /BOADocStandards_DashGuidelines.html
+      output: web
+
+    - title: Graphics Guidelines
+      url: /BOADocStandards_Graphics.html
+      output: web
+
+  - title: Knowledge Base Article Standards
+    output: web
+    folderitems:
+
+    - title: General Guidelines
+      url: /BOADocStandards_KBGenGuidelines.html
+      output: web
+
+  - title: Print Documentation Standards
+    output: web
+    folderitems:
+
+    - title: Overview
+      url: /BOADocStandards_PDOverview.html
+      output: web
+
+    - title: Document Structure
+      url: /BOADocStandards_DocStructure.html
+      output: web
+
+    - title: Screenshots & Captions
+      url: /BOADocStandards_ScreenCaptions.html
+      output: web
+
+    - title: Styles
+      url: /BOADocStandards_PrintStyles.html
+      output: web
+
+  - title: General Standards
+    output: web
+    folderitems:
+
+    - title: Writing Guidelines & Terminology
+      url: /BOADocStandards_GuidelinesTerms.html
+      output: web
+
+    - title: UI Terms for the DSP
+      url: /BOADocStandards_UITerms.html
+      output: web
+
+    - title: Usage Dictionary
+      url: /BOADocStandards_UsageDictionary.html
+      output: web
+
+    - title: Component Names and DSP-Specific Terms
+      url: /BOADocStandards_CompNamesTerms.html
+      output: web

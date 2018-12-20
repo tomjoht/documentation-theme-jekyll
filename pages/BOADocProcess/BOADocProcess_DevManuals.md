@@ -24,7 +24,7 @@ To verify the Style Gallery has the correct styles:
 3. Confirm the styles in the picture below display.
    {% include image.html file="wordStyleGallery.png" caption="Verify the styles." %}
 
-#### Update Document Properties
+#### Update Document Properties {#updatedocprop}
 
 The template uses Document Properties, a feature that automatically includes text entered in fields in the Document Properties window in the template where field codes have been inserted (headers, footers and the title page).
 

@@ -1,0 +1,679 @@
+---
+title: Online Page Description Guidelines
+keywords: BOADocStandards
+summary: "This page describes page description guidelines for the online help."
+sidebar: BOADocStandards_sidebar
+permalink: BOADocStandards_PDGuidelines.html
+folder: BOADocStandards
+---
+### Application of Styles
+
+When applying a style, it may be necessary to clear a style or remove
+attributes from a style so that text is formatted correctly. Clear the
+style by highlighting the text (click the style block in the XML
+Editor), and then on the Home tab, in the Font group, click the
+**Unformat** icon.
+
+#### h1
+
+All page description topics start with h1.
+
+#### h2
+
+If the topic has *Horizontal* and *Vertical* views, format the page name
+V in h2..
+
+####
+
+#### \<p\>
+
+Use the \<p\> (paragraph style) for text that is not in a table, is not
+bulleted, and is not a note. Use the paragraph style for bookmark links
+to the *Vertical* and *Horizontal* View pages.
+
+div.use
+
+Apply the div.use to the text Use this page to section. Select either
+the single line, or the line with the bullets if the page is used in
+multiple use cases. On the home tab, in the Paragraph group, click the
+Group icon and select div.use from the list.
+
+![](media/image9.png)
+
+![](media/image10.png)
+
+#### Bullets
+
+When describing a list of options, such as values in a list box, use
+bullets and bold the option name. Bold only the first word when the
+bulleted items are followed by an explanation.
+
+For example:
+
+Options are:
+
+-   **First option**--- Description
+
+-   **Second option** --- Description
+
+-   **Third option** --- Description
+
+#### Numbered Steps
+
+Numbered steps are used in the navigation section of FD topics. Begin
+the section with "To access this page:" and add the steps from the use
+case to navigate to the page. Use the same numbered list formatting as
+in a Use Case.
+
+#### Tables
+
+The fielddescription.css table stylesheet is used for format tables. The
+left column is 200px and the right column is 550px. Refer to section
+"Format Tables in Topics" in the *[[BackOffice Associates Documentation
+Process]{.underline}](http://drive.google.com/open?id=1fDr3vB5D8QSK3lfXPBqVae140lDKzchlRWqRDq-LQJk)*
+document for more information.
+
+Use the p.TableColumn style for the first row and the left column in the
+table. Use p.TableText for other rows.
+
+Use the p.TableNote style for adding notes to tables.
+
+On the Home tab, in the Paragraph group, use the Bulleted List option to
+format all bullets.
+
+In the Help topic, include the collapsible section headings from the DSP
+page's *Vertical* View in a merged cell in the FD table (do not make the
+headings collapsible in the Help topic). Format the heading in bold and
+merge the cells. See the Basic Data row below for an example.
+
+![](media/image11.png)
+
+#### Character Styles
+
+##### Italics
+
+Use italics for:
+
+-   Page names (e.g., the *Targets* page)
+
+-   *Vertical* View
+
+-   *Horizontal* View
+
+-   *Navigation* pane
+
+-   The title of a manual (e.g., *BackOffice Associates Solutions
+    installation and Upgrade Manual*)
+
+##### Bold
+
+Use bold for:
+
+-   The word **NOTE**.
+
+-   The name of an option in a bulleted list. Refer to
+    [[Bullets]{.underline}](#bullets-1) for more information.
+
+-   UI elements included in an imperative sentence
+
+### References to Use Cases
+
+Every field descriptions topic must reference a use case and provide a
+link to it.
+
+In rare cases where no use case is needed, include information about how
+a page is used. For example, the Process Area Launch page in Map does
+not require a use case. It contains the text: Use this page to access
+the pages as described below.
+
+**NOTE**: When adding a use case, add a link to that new use case from
+the field description topic.
+
+### Field Description topics in the Table of Contents
+
+-   All field description topics must be listed under the topic
+    \[Component Name\] Field Descriptions in the Table of Contents.
+
+-   Alphabetize topics
+
+-   A page with a *Horizontal* and a *Vertical* View must have the
+    *Horizontal* View formatted as a book and the *Vertical* View
+    formatted as a page beneath it, as in the following example of the
+    Request Mass Change page.
+
+> ![](media/image12.png)
+
+*Link the Vertical View* *in the TOC to a bookmark in the topic for the
+Vertical View*
+
+### Field Descriptions Topics with One View Structure
+
+If a page does not have a *Vertical* View, organize the field
+descriptions topic in this order:
+
+1.  Name of page (h1)
+
+2.  References to use cases that use the page. Use the standard text:
+    "Use this page to" (p) (apply div.use to this line and any bullets
+    that follow it)
+
+3.  Use case one (Bullet)
+
+4.  Use case two (Bullet)
+
+5.  Navigation to page using numbered steps. Use the standard text (To
+    access this page. . . "(p)
+
+6.  Table
+
+    ![](media/image13.png)
+
+### Field Descriptions Topics with *Horizontal* and *Vertical* View Structure
+
+If a page has a *Horizontal* and *Vertical* View, the topic contains the
+descriptions for both the *Horizontal* and *Vertical* views.
+
+Present content in this order:
+
+1.  Name of page H (h1)
+
+<!-- -->
+
+7.  Page name V (p) (hyperlink to page name V bookmark)
+
+8.  Use this page to (p) (apply div.use to this line and any bullets
+    that follow it)
+
+9.  Use case one (Bullet)
+
+10. Use case two (Bullet)
+
+11. Navigation to page using numbered steps Use the standard text (To
+    access this page. . . "(p)
+
+12. Table
+
+13. Page Name V (h2) (bookmark linked to Page Name V at top of topic and
+    to TOC page for Page Name V
+
+14. Page name H (p) (hyperlink to page name H bookmark)
+
+15. Use this page to (p) (apply div.use)
+
+16. Use case one (Bullet) Include only if VV is specifically used in use
+    case.
+
+17. Use case two (Bullet) Include only if VV is specifically used in use
+    case.
+
+18. Table
+
+> ![](media/image14.png)
+>
+> ![](media/image15.png)
+
+#### References to use cases for *Vertical* View
+
+Include references to use cases that mention the *Vertical* View
+specifically. Do not duplicate the list of use cases from the
+*Horizontal* View (unless the same use cases use both views).
+
+### Field Descriptions with a Tabbed Vertical Layout
+
+Some *Vertical* Views contain tabs to separate content. Use the
+following guidelines when formatting field descriptions for a tabbed
+vertical layout in Flare.
+
+Include the field descriptions for all tabs in one topic under the
+*Vertical* View.
+
+Present content in this format:
+
+1.  Page Name V (All tabs) (h2)
+
+<!-- -->
+
+19. Page Name H (p) (link to top of page)
+
+20. This page contains the following tabs: (p) (apply div.use to this
+    and following bullets)
+
+21. General tab (Bullet, include the word tab)
+
+22. Advanced tab (Bullet, include the word tab)
+
+23. General tab (h2)
+
+24. Use this tab to: (p) (div.use)
+
+25. Use case one (Bullet) Include only if the tab is specifically used
+    in use case.
+
+26. Use case one (Bullet) Include only if the tab is specifically used
+    in use case.
+
+27. Table
+
+28. Advanced tab(h2)
+
+29. Use this tab to: (p) (div.use)
+
+30. Use case one (Bullet) Include only if the tab is specifically used
+    in use case.
+
+31. Use case one (Bullet) Include only if the tab is specifically used
+    in use case.
+
+32. Table
+
+The following image includes a tabbed vertical layout screen shot and an
+example of how to format the content:
+
+![](media/image16.png)
+
+![](media/image17.png)
+
+References to use cases for Tabbed Layouts in Vertical View
+
+Include references to use cases that mention the tab specifically. Do
+not duplicate the list of use cases from the *Horizontal* View (unless
+the same use cases use both views).
+
+#### Tables
+
+Include a two-column table for field descriptions
+
+-   Name the column headings: **Field** and **Description**.
+
+-   Apply the fielddescription.css table style to all tables.
+
+-   Do not include standard fields such as edit, status, and delete in
+    field descriptions.
+
+Refer to the section "Format Tables in Topics" in the [*[BackOffice
+Associates Solutions Documentation
+Process]{.underline}*](http://drive.google.com/open?id=1fDr3vB5D8QSK3lfXPBqVae140lDKzchlRWqRDq-LQJk)
+document for more information.
+
+### Field Descriptions Content
+
+-   Verify the accuracy and completeness of field names in the product.
+    When verifying names, review the labels on the fields. The field
+    name must match the label name exactly, including capitalization and
+    spacing.
+
+-   Alert Development if any spelling errors and inconsistencies are
+    found.
+
+-   Ideally, a field that appears on multiple pages in the product has
+    the same basic description on each page. If possible, reuse the
+    description of a field.
+
+-   The description of a field never contains numbered steps.
+
+-   When possible, include where (include the page name if on a page
+    other than the current page) and when (during which task) the data
+    in a field is entered for display fields.\
+    For example:\
+    Integrate \> template page: Template name field\
+    Displays the unique name of the template entered when the template
+    was added.
+
+-   Descriptions explain each field in "Display" mode, not when a user
+    adds or edits information. Include information specific to adding
+    and editing in the use case, not in the field description. If
+    information essential to adding and editing must be included,
+    clarify it with "When adding..." or "When editing. . ."
+
+-   Begin the description of a button or icon that opens a page with
+    "Click to open the X page to add, edit and delete Y"
+
+    For example
+
+    Integrate \> template page: Template name field
+
+    Displays the unique name of the template entered when the template
+    was added.
+
+-   Begin the description of a text box with "Displays. . . "
+
+-   Begin a description of a check box with the words "If checked, . . "
+    and describe the setting. Follow by a sentence that begins "If
+    unchecked, . . " if this functionality merits clarification.
+
+-   In most cases, it is unnecessary to include that a field is required
+    because required fields are indicated in the user interface. Include
+    a note in the description if a special circumstance requires that a
+    field be completed.
+
+-   When describing a list box, include the source of the values, if
+    applicable.
+
+-   When describing a list box or check box on the HV, confirm that
+    selections from those elements do not affect the fields that display
+    on the VV. Those fields must also be documented.
+
+-   Every field on a page must have a description, even if the field is
+    not used in the product for the current release.
+
+    There are two reasons why a field/page is not used:
+
+<!-- -->
+
+-   It is no longer used in the product but has not yet been hidden from
+    the UI. In this case, use the standard "This field/page is not
+    used."
+
+-   It is under development, and the feature will be used in an upcoming
+    release. In this case, use "This field/page is not currently used,
+    but will be activated in a future release."
+
+### Guidelines for Improving Field Descriptions
+
+-   Describe where data in a field comes from and why/how it is used
+
+-   Indicate if the field is not used or deprecated
+
+-   Whenever possible, add links to use cases in descriptions to provide
+    more information on how and when fields are used.
+
+-   Whenever a page is mentioned, hyperlink the page name to the
+    corresponding field description topic.
+
+-   Review the use case describing the page. Content from the use case
+    can be used to clarify the descriptions of the field (and vice
+    versa).
+
+-   The descriptions of the same field in *Horizontal* and *Vertical*
+    View have the same descriptions (except in rare cases).
+
+<!-- -->
+
+-   Avoid providing a field description that repeats the field name and
+    nothing else. For example, include more information in a description
+    of the Target field then "Displays the name of the target." For
+    example, you can write for Name (as in the Target's Name)
+
++-----------------------------------+-----------------------------------+
+| > **NAME**                        | > Displays the Target name, which |
+|                                   | > is the table name with tt       |
+|                                   | > appended to the front.          |
++-----------------------------------+-----------------------------------+
+
++-------------+-------------+-------------+-------------+-------------+
+| > **Field   | > **Example | > **Guideli | > **Snippet | > **Example |
+| > Type**    | > in UI**   | nes**       | **          | **          |
++-------------+-------------+-------------+-------------+-------------+
+| **List box: | Admin \>    | Include a   |             |             |
+| Value       | Data        | list of     |             |             |
+| stored in   | Sources \>  | each        |             |             |
+| database    | DATA SOURCE | delivered   |             |             |
+| and cannot  | TYPE        | option, and |             |             |
+| be updated  |             | description |             |             |
+| by the      |             | of          |             |             |
+| user.**     |             | when/why/ho |             |             |
+|             |             | w           |             |             |
+|             |             | to use each |             |             |
+|             |             | option if   |             |             |
+|             |             | relevant.   |             |             |
++-------------+-------------+-------------+-------------+-------------+
+| **Any check |             |             | If checked, |             |
+| box that is |             |             | this        |             |
+| named "DSP  |             |             | content is  |             |
+| Supplied"** |             |             | installed   |             |
+|             |             |             | with the    |             |
+| **ALWAYS    |             |             | platform    |             |
+| USE THE     |             |             | and cannot  |             |
+| SNIPPET     |             |             | be edited.  |             |
+| HERE FOR    |             |             |             |             |
+| THIS CHECK  |             |             | If          |             |
+| BOX. It is  |             |             | unchecked,  |             |
+| available   |             |             | the content |             |
+| as a        |             |             | was added   |             |
+| snippet in  |             |             | by a user   |             |
+| Flare.**    |             |             | or process. |             |
+|             |             |             |             |             |
+|             |             |             | NOTE: This  |             |
+|             |             |             | is a        |             |
+|             |             |             | display-onl |             |
+|             |             |             | y           |             |
+|             |             |             | check box.  |             |
+|             |             |             | It cannot   |             |
+|             |             |             | be updated. |             |
++-------------+-------------+-------------+-------------+-------------+
+| **List box: | Transform   | State that  |             | Target      |
+| Value       | \> Targets  | the options |             | source      |
+| created in  | \> Reports  | are a       |             | reports are |
+| SQL server  | \> TARGET   | result of   |             | managed in  |
+| as a        | REPORT      | views/store |             | SQL.        |
+| view/rule/r |             | d           |             |             |
+| eport       |             | procedures/ |             |             |
+| etc.**      |             | etc         |             |             |
+|             |             | added in    |             |             |
+|             |             | SQL         |             |             |
++-------------+-------------+-------------+-------------+-------------+
+| **Combo     | Console \>  | Include a   | N/A         | Select an   |
+| box**       | Process     | link to the |             | option in   |
+|             | Areas \>    | use case    |             | the PROCESS |
+|             | PROCESS     | that        |             | AREA ID     |
+|             | AREA ID     | describes   |             | combo box,  |
+|             |             | adding the  |             | or click    |
+|             |             | object      |             | the + sign  |
+|             |             | displayed   |             | to add an   |
+|             |             | in the      |             | option.     |
+|             |             | combo box.  |             | Refer to    |
+|             |             |             |             | Add a       |
+|             |             |             |             | Process     |
+|             |             |             |             | Area for    |
+|             |             |             |             | more        |
+|             |             |             |             | information |
+|             |             |             |             | .           |
++-------------+-------------+-------------+-------------+-------------+
+| **Icon that | Transform   | Describe    | N/A         | Click the   |
+| performs an | \> Targets  | scenarios   |             | Process     |
+| action when | \> Process  | that cause  |             | icon to     |
+| clicked     |             | the icon to |             | process the |
+| (executes a |             | be disabled |             | report in   |
+| process,    |             | if any.     |             | the         |
+| generates a |             |             |             | background. |
+| report      |             | State the   |             |             |
+| etc.)**     |             | action      |             | NOTE: This  |
+|             |             | performed   |             | icon is     |
+|             |             | and/or why  |             | dimmed if   |
+|             |             | it is       |             | the         |
+|             |             | performed.  |             | report's    |
+|             |             |             |             | status is   |
+|             |             |             |             | Inactive.   |
++-------------+-------------+-------------+-------------+-------------+
+| **Icon that | Collect \>  | Describe    | N/A         | Click to    |
+| opens a     | Tables \>   | scenarios   |             | open the    |
+| page when   | Indices     | that cause  |             | Table       |
+| clicked**   |             | the icon to |             | (Indices)   |
+|             |             | be          |             | page to     |
+|             |             | disabled,   |             | register    |
+|             |             | if any.     |             | indices to  |
+|             |             |             |             | table. The  |
+|             |             | Describe    |             | count on    |
+|             |             | the purpose |             | the icon is |
+|             |             | of the      |             | the total   |
+|             |             | count shown |             | number of   |
+|             |             | on the      |             | indices     |
+|             |             | icon.       |             | registered  |
+|             |             |             |             | to the      |
+|             |             | State the   |             | selected    |
+|             |             | page name   |             | table.      |
+|             |             | that opens  |             |             |
+|             |             | and what    |             |             |
+|             |             | can be done |             |             |
+|             |             | on the      |             |             |
+|             |             | page.       |             |             |
++-------------+-------------+-------------+-------------+-------------+
+| **Check box | Console \>  | Explain     |             | If checked, |
+| that can be | Advanced    | what effect |             | the Objects |
+| selected.** | Configurati | checked     |             | icon        |
+|             | on          | /unchecked  |             | displays on |
+|             | \>          | has,        |             | the Process |
+|             | Parameters  | including   |             | Area Launch |
+|             | \> Map \>   | the name of |             | page in Map |
+|             | Objects     | the page    |             | and a user  |
+|             | Required    | affected.   |             | can perform |
+|             |             |             |             | Object      |
+|             |             |             |             | Design. The |
+|             |             |             |             | Object      |
+|             |             |             |             | Design      |
+|             |             |             |             | phase is    |
+|             |             |             |             | not         |
+|             |             |             |             | required.   |
+|             |             |             |             | (Object     |
+|             |             |             |             | Design is   |
+|             |             |             |             | used when   |
+|             |             |             |             | the target  |
+|             |             |             |             | system is   |
+|             |             |             |             | SAP only.)  |
+|             |             |             |             | If          |
+|             |             |             |             | unchecked,  |
+|             |             |             |             | the Objects |
+|             |             |             |             | icon does   |
+|             |             |             |             | not display |
+|             |             |             |             | on the      |
+|             |             |             |             | Process     |
+|             |             |             |             | Area Launch |
+|             |             |             |             | page in     |
+|             |             |             |             | Map. This   |
+|             |             |             |             | setting is  |
+|             |             |             |             | checked or  |
+|             |             |             |             | unchecked   |
+|             |             |             |             | for the     |
+|             |             |             |             | entire      |
+|             |             |             |             | site, and   |
+|             |             |             |             | cannot be   |
+|             |             |             |             | set for a   |
+|             |             |             |             | specific    |
+|             |             |             |             | data        |
+|             |             |             |             | migration   |
+|             |             |             |             | project.    |
+|             |             |             |             |             |
+|             |             |             |             | It is       |
+|             |             |             |             | checked by  |
+|             |             |             |             | default.    |
++-------------+-------------+-------------+-------------+-------------+
+| **Text      | Console \>  | Make it     | This field  | Displays    |
+| field with  | Waves \>    | clear that  | contains    | user-entere |
+| user        | Process     | information | user-entere | d           |
+| entered     | Areas \>    | in this     | d           | comments    |
+| text (such  | Objects \>  | field is    | text for    | about the   |
+| as Comment  | Vertical    | entered by  | documentati | target that |
+| fields)**   | View \>     | a user.     | on          | were        |
+|             | Comment     |             | purposes    | entered on  |
+|             |             |             | and is not  | the         |
+|             |             |             | validated.  | *Object:    |
+|             |             |             |             | Target*     |
+|             |             |             |             | page's      |
+|             |             |             |             | *Vertical*  |
+|             |             |             |             | View in the |
+|             |             |             |             | Comment     |
+|             |             |             |             | field.      |
+|             |             |             |             |             |
+|             |             |             |             | This field  |
+|             |             |             |             | stores      |
+|             |             |             |             | free-form   |
+|             |             |             |             | text and is |
+|             |             |             |             | not         |
+|             |             |             |             | validated.  |
++-------------+-------------+-------------+-------------+-------------+
+| **Display   | Common \>   | Include     | These       | Displays    |
+| only field: | Analyze \>  | whether     | values are  | unique ID   |
+| Field       | DATA SOURCE | this data   | stored in   | for the     |
+| cannot be   | ID          | is stored   | the         | data source |
+| edited on   |             | in the      | database    | being       |
+| the page**  |             | database    | and cannot  | analyzed.   |
+|             |             | and can't   | be updated  | Data        |
+|             |             | be updated  | through the | Sources are |
+|             |             | OR include  | UI.         | registered  |
+|             |             | page this   |             | in the      |
+|             |             | data is     |             | platform in |
+|             |             | entered on. |             | Admin \>    |
+|             |             |             |             | Data        |
+|             |             | Use "This   |             | Sources.    |
+|             |             | field is    |             |             |
+|             |             | populated   |             |             |
+|             |             | by the      |             |             |
+|             |             | system" to  |             |             |
+|             |             | describe    |             |             |
+|             |             | fields of   |             |             |
+|             |             | this type.  |             |             |
+|             |             | If          |             |             |
+|             |             | applicable, |             |             |
+|             |             | add the     |             |             |
+|             |             | condition   |             |             |
+|             |             | under which |             |             |
+|             |             | the field   |             |             |
+|             |             | is          |             |             |
+|             |             | populated.  |             |             |
+|             |             | Example     |             |             |
+|             |             | from the    |             |             |
+|             |             | field       |             |             |
+|             |             | description |             |             |
+|             |             | s           |             |             |
+|             |             | for the     |             |             |
+|             |             | AutoGen     |             |             |
+|             |             | BODS        |             |             |
+|             |             | Requests    |             |             |
+|             |             | page for    |             |             |
+|             |             | the field   |             |             |
+|             |             | REQUEST     |             |             |
+|             |             | CREATE      |             |             |
+|             |             | DATE: "     |             |             |
+|             |             | Displays    |             |             |
+|             |             | the date    |             |             |
+|             |             | the AutoGen |             |             |
+|             |             | request was |             |             |
+|             |             | created.    |             |             |
+|             |             | This field  |             |             |
+|             |             | is          |             |             |
+|             |             | populated   |             |             |
+|             |             | by the      |             |             |
+|             |             | system when |             |             |
+|             |             | an AutoGen  |             |             |
+|             |             | request is  |             |             |
+|             |             | created and |             |             |
+|             |             | indicates   |             |             |
+|             |             | that the    |             |             |
+|             |             | request     |             |             |
+|             |             | package is  |             |             |
+|             |             | ready to be |             |             |
+|             |             | automatical |             |             |
+|             |             | ly          |             |             |
+|             |             | or manually |             |             |
+|             |             | uploaded to |             |             |
+|             |             | the IGC™."  |             |             |
++-------------+-------------+-------------+-------------+-------------+
+| **Text      | Console \>  | Include     | This field  | Displays    |
+| field that  | Advanced    | how/why the | must be     | the email   |
+| must be     | Configurati | field is    | updated at  | address     |
+| updated at  | on          | used and    | the         | that sends  |
+| client      | \>          | that it     | client's    | workflow    |
+| site**      | Parameters  | must be     | site.       | emails from |
+|             | \> General  | updated.    |             | dspMigrate™ |
+|             | tab \>      |             |             | .           |
+|             | Email From  |             |             | This field  |
+|             | field       |             |             | must be     |
+|             |             |             |             | updated at  |
+|             |             |             |             | the         |
+|             |             |             |             | client's    |
+|             |             |             |             | site.       |
++-------------+-------------+-------------+-------------+-------------+
+| **Field     | Integrate   | Page that   | N/A         | Click the   |
+| with text   | \>          | opens when  |             | template    |
+| that        | Categories  | a user      |             | name to     |
+| displays as | \>          | clicks the  |             | open the    |
+| a link**    | Processes   | link. What  |             | Template    |
+|             | \>          | action can  |             | page to     |
+|             | Templates   | be          |             | view or     |
+|             | \> Template | performed   |             | edit        |
+|             | ID          | on that     |             | information |
+|             |             | page when   |             | about the   |
+|             |             | it is       |             | selected    |
+|             |             | accessed    |             | template    |
+|             |             | that way.   |             |             |
++-------------+-------------+-------------+-------------+-------------+
