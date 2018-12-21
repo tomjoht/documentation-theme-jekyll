@@ -230,7 +230,7 @@ help.
 
 To apply the master page in Flare on the **Topic Properties** window, go the **Topic Properties** tab, in the **Masterpage** list box.
 
-### Format Tables in Topics
+## Format Tables in Topics {#formattables}
 
 Use the following steps to format tables in Flare topics when copying
 and pasting from Word:

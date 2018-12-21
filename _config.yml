@@ -103,6 +103,7 @@ defaults:
 sidebars:
 - BOADocProcess_sidebar
 - BOADocStandards_sidebar
+- other
 
 description: "Intended as a reference for the BOA documentation team."
 # the description is used in the feed.xml file

@@ -40,3 +40,6 @@ entries:
 
     - title: Update Document Properties bookmark
       url: /BOADocProcess_DevManuals.html#updatedocprop
+
+    - title: Format Tables in Topics bookmark
+      url: /BOADocProcess_UpdateOnlineHelp.html#formattables
