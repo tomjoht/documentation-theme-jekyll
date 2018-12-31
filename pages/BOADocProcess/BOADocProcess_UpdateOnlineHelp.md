@@ -246,7 +246,7 @@ and pasting from Word:
 4. To format the table text, click in a cell in the table and select the appropriate style from the **Style** drop-down.
    {% include note.html content="To format multiple cells at once, select and click the cells, right-click, then select **Cell Content Style**." %}
 
-## Add Popups for Frequently Referenced Content
+## Add Popups for Frequently Referenced Content {#addpopups}
 
 Some fields that have multiple options are referenced throughout the online help, such as Report Type. To maintain content in one location rather than repeating it every time the field is mentioned, add the content to the popups object in the custom.js file and add a link with the"popUpLink" class and appropriate id (the title of the content inserted as the key in the key value pair).
 
@@ -304,7 +304,7 @@ To add a popup using Visual Studio Code and Flare:
 
 17. Save your work in Flare.
 
-### Add and Insert Snippets for Static Content
+## Add and Insert Snippets for Static Content {#addsnippets}
 
 The component name for a topic is included as a snippet in the upper right of the topic file.
 
@@ -317,7 +317,7 @@ To add the component name snippet to a topic:
 4. Select the snippet file you want to add.
 5. Click **OK**.
 
-### Add Glossary Terms
+## Add Glossary Terms
 
 Glossary terms are added to the glossary file in the Help project as new terms and concepts are added to the Help content. The glossary defines BOA specific terms that those new to the DSP® might not be familiar with. The terms must be relevant to **customers who are using the DSP® in the field. Terms specific to internal development processes do not need to be defined.**
 {% include note.html content="Do not define terms that are well defined elsewhere, for example by SAP or other industry standards, unless they have a very specific use or implementation in the DSP®." %}

@@ -8,7 +8,7 @@ permalink: BOADocProcess_KnowledgeBaseArt.html
 folder: BOADocProcess
 ---
 
-{% include note.html content="Refer to 'Standards for Knowledge Base Articles in Zendesk' in the BackOfffice Associates Documentation Standards document for more information on writing standards for ZenDesk Knowledge Base articles." %}
+{% include note.html content="Refer to [Knowledge Base General Guidelines][BOADocStandards_KBGenGuidelines] in the BackOffice Associates Documentation Standards document for more information on writing standards for ZenDesk Knowledge Base articles." %}
 
 1.  Support adds a ticket to the DocTeam ToDos Jira Kanban board with [ Support KB ] in the title.
 
@@ -26,3 +26,4 @@ folder: BOADocProcess
 6.  The TW updates the comments in the Jira issue to note that Chris Alberts is reviewing the article.
 
 7.  The TW closes the ticket when the article has been published.
+{% include links.html %}

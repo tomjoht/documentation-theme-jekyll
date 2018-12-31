@@ -43,3 +43,9 @@ entries:
 
     - title: Format Tables in Topics bookmark
       url: /BOADocProcess_UpdateOnlineHelp.html#formattables
+
+    - title: Add Popups bookmark
+      url: /BOADocProcess_UpdateOnlineHelp.html#addpopups
+
+    - title: Add Snippets bookmark
+      url: /BOADocProcess_UpdateOnlineHelp.html#addsnippets
