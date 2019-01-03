@@ -1,0 +1,59 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: IGC Doc Standards
+  version:
+  folders:
+
+  - title: Overview
+    output: web
+    folderitems:
+
+    - title: General Writing Style
+      url: /IGCDocStandards_genWritingStyle.html
+      output: web
+
+    - title: Styles
+      url: /IGCDocStandards_styles.html
+      output: web
+
+    - title: Word Choice and Terminology
+      url: /IGCDocStandards_wordChoice.html
+      output: web
+
+    - title: Welcome Topic
+      url: /IGCDocStandards_welcome.html
+      output: web
+
+    - title: UI Terms
+      url: /IGCDocStandards_uiTerms.html
+      output: web
+
+  - title: Multimedia
+    output: web
+    folderitems:
+
+    - title: Screen Shots
+      url: /IGCDocStandards_screenShots.html
+      output: web
+
+    - title: GIFs
+      url: /IGCDocStandards_gifs.html
+      output: web
+
+    - title: Video
+      url: /IGCDocStandards_video.html
+      output: web
+
+  - title: What's New
+    output: web
+    folderitems:
+
+    - title: Enhancements and New Features
+      url: /IGCDocStandards_enhancements.html
+      output: web
+
+    - title: Bug Fixes
+      url: /IGCDocStandards_bugFixes.html
+      output: web

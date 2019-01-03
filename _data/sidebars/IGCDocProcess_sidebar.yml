@@ -1,0 +1,103 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: IGC Doc Process
+  version:
+  folders:
+
+  - title: Overview
+    output: web
+    folderitems:
+
+    - title: Access Links Location
+      url: /IGCDocProcess_links.html
+      output: web
+
+    - title: Information Sources
+      url: /IGCDocProcess_sources.html
+      output: web
+
+  - title: Project Details
+    output: web
+    folderitems:
+
+    - title: Master Page
+      url: /IGCDocProcess_masterPage.html
+      output: web
+
+    - title: Hyperlinks
+      url: /IGCDocProcess_hyperlinks.html
+      output: web
+
+    - title: Condition Tags
+      url: /IGCDocProcess_condTags.html
+      output: web
+
+  - title: Workflow and Process
+    output: web
+    folderitems:
+
+    - title: JIRA Workflow
+      url: /IGCDocProcess_jiraWorkflow.html
+      output: web
+
+    - title: Process Overview
+      url: /IGCDocProcess_overview.html
+      output: web
+
+    - title: Publish IGC Help
+      url: /IGCDocProcess_publishHelp.html
+      output: web
+
+    - title: Publish IGC Release Notes
+      url: /IGCDocProcess_publishRN.html
+      output: web
+
+  - title: Source Control
+    output: web
+    folderitems:
+
+    - title: Git Bash Setup
+      url: /IGCDocProcess_gitBashSetup.html
+      output: web
+
+    - title: Clone Repo to Local
+      url: /IGCDocProcess_cloneRepo.html
+      output: web
+
+  - title: Run the IGC Locally
+    output: web
+    folderitems:
+
+    - title: Prerequisites
+      url: /IGCDocProcess_prereqs.html
+      output: web
+
+    - title: Initial Connection
+      url: /IGCDocProcess_initialConnect.html
+      output: web
+
+    - title: Fetch a Branch
+      url: /IGCDocProcess_fetchBranch.html
+      output: web
+
+  - title: IGC Video Process
+    output: web
+    folderitems:
+
+    - title: Planning and Considerations
+      url: /IGCDocProcess_vidPlan.html
+      output: web
+
+    - title: Recording
+      url: /IGCDocProcess_vidRecord.html
+      output: web
+
+    - title: Polishing Production
+      url: /IGCDocProcess_vidProd.html
+      output: web
+
+    - title: Additional Information
+      url: /IGCDocProcess_vidAddInfo.html
+      output: web

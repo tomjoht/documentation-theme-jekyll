@@ -103,6 +103,8 @@ defaults:
 sidebars:
 - BOADocProcess_sidebar
 - BOADocStandards_sidebar
+- IGCDocProcess_sidebar
+- IGCDocStandards_sidebar
 - other
 
 description: "Intended as a reference for the BOA documentation team."

@@ -28,3 +28,7 @@ topnav_dropdowns:
           url: /index.html
         - title: BOA Doc Standards
           url: /BOADocStandards_Overview.html
+        - title: IGC Doc Process
+          url: /IGCDocProcess_links.html
+        - title: IGC Doc Standards
+          url: /IGCDocStandards_genWritingStyle.html
