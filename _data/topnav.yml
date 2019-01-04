@@ -22,13 +22,15 @@ topnav_dropdowns:
 ##          external_url: http://stackoverflow.com/questions/tagged/jekyll
 ##        - title: Jekyll on TJ's blog
 ##          external_url: http://idratherbewriting.com/category-jekyll/
-    - title: Process/Standards Docs
+    - title: Process Docs
       folderitems:
         - title: BOA Doc Process
           url: /index.html
-        - title: BOA Doc Standards
-          url: /BOADocStandards_Overview.html
         - title: IGC Doc Process
           url: /IGCDocProcess_links.html
+    - title: Standards Docs
+      folderitems:
+        - title: BOA Doc Standards
+          url: /BOADocStandards_Overview.html
         - title: IGC Doc Standards
           url: /IGCDocStandards_genWritingStyle.html
