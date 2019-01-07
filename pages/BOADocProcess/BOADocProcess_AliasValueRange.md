@@ -26,5 +26,6 @@ Component | Value Range
 | Automation      | 1600-1699      |
 | dspConduct      | 1800-1899 <br/> 2000-2099      |
 | Assemble        | 1900-1999      |
-| Agent Interface | 2400-2499      |
+| Agent Interface | 2400-2499     
+| Automate        | 2500-2599      |
 |---------------+------------------|

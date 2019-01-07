@@ -43,7 +43,7 @@ folder: BOADocProcess
             </td>
         </tr>
             <td>Monor release (as in, 6.3)</td>
-            <td>Yes. <br/> Same as for Major release, but should also include SP changes. <br/> For example, the 6.3 release notes should contain the release notes content for the 6.2.1 SP, and 6.2.2 SP, etc.</td>
+            <td>Yes. <br/> Same as for Major release.</td>
             <td>Yes.</td>
             <td>Yes.</td>
         <tr>
@@ -77,6 +77,12 @@ folder: BOADocProcess
         </tr>
     </thead>
     <tbody>
+    <tr>
+        <td>7.0.2</td>
+        <td>Yes released 1/14/19</td>
+        <td>Yes</td>
+        <td>N/A</td>
+    </tr>
         <tr>
             <td>7.0.1<br/>Agent Interface added</td>
             <td>Not yet active as of 11/07/18<br/>SAP PQ for 7.0 ongoing</td>

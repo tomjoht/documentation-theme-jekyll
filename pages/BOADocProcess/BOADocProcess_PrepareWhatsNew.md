@@ -102,10 +102,10 @@ Each new feature contains a link to the help topic(s) that describe it.
 
 ### Enhancements
 
-This section contains minor updates (often described in a JIRA issue type of Improvement).
+This section contains minor updates (often described in a JIRA issue type of Story).
 
 If a component has multiple enhancements, use a bulleted list. If there
-is only one new feature, do not use a bulleted list.
+is only one enhancement, do not use a bulleted list.
 
 Each new enhancement contains a link to the help topic(s) that describe it.
 
@@ -130,12 +130,12 @@ Each issue description contains this information:
 - How the product functions with the fix
 - At the end of the description add a reference to the JIRA issue number enclosed in brackets for example, \[DSP-1234\]
 
-### Enhancement Requests from the User Base
+### Enhancement Requests Users
 
-Enhancement Requests from the User Base are described in JIRA issues that:
+Enhancement Requests from Users are described in JIRA issues that:
 -   Have the label DSP Enhancement Request
+-   Have the label IdeasPortal
 -   Are the result of online help feedback
--   Are an issue type of Improvement that mentions a customer
 
 Each Enhancement Request contains a link to the help topic(s) that describe it.
 

@@ -103,7 +103,7 @@ To create a topic:
      * Ensure the reference to a topic that uses this page is formatted with div.use.
      * Ensure the table style is fielddescription.css.
 
-9. **Confirm Use this page to section:** Make sure a reference to a topic that uses this page is included.
+9. **Confirm Use this page to section:** Make sure a reference to a topic that uses this page is included and is formatted with the div div.use.
 
 10. **Add the Map ID:** Indicate in the peer review that the link to the page needs to be checked on the test site. Refer to [Add Context-sensitive Help Links](#addcslinks).
      {% include note.html content="When adding the Map ID, update the Alias File Value field to the appropriate range for the component. Refer to [Alias Value Range][BOADocProcess_AliasValueRange] for the alias file value ranges by component." %}
@@ -267,7 +267,7 @@ To add a popup using Visual Studio Code and Flare:
 2.  Right-click the custom.js file in the Content Explorer in Flare.
 
 3.  Select **Open with** and then **Code.exe**.
-    {% include note.html content="For code.exe to display in the list, assocate the file type .js with Visual Studio Code in your Control Panel." %}
+    {% include note.html content="For code.exe to display in the list, associate the file type .js with Visual Studio Code in your Control Panel." %}
     {% include image.html file="codeExe.png" alt="Open with Menu with Code.exe displayed" caption="Open with Menu with Code.exe displayed" %}
 
 4.  In Visual Studio Code, find the popups object at the bottom of the custom.js file.

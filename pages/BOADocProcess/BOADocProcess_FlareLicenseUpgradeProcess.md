@@ -23,3 +23,5 @@ the upgrade performs the following checks:
 For the DSP Help project if everything checks out, commit a build to source control and make sure that the Context Sensitive Help is working as expected in a test DSP environment.
 
 Once the build is confirmed working in the DSP test environment, notify the Documentation Team that they can upgrade.
+
+Inform the team maintaining the build server that the version of Flare that builds the online help needs to be upgraded to the new version of Flare. (As of 110718 this is Cory) If necessary, ask that the paste versions of help be regenerated manually (as of 1/0718 this is Aleks). 
