@@ -143,6 +143,8 @@ entries:
       url: /BOADocProcess_CLDSPWorkflow.html
       output: web
 
-    - title: Checklist for DSP Standards
-      url: /BOADocProcess_CLDSPStandards.html
+    - title: Update Flare Project for New DSP Version
+      url: /BOADocProcess_UpdateFlareProjectNewVersion.html
       output: web
+
+      
