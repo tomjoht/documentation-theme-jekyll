@@ -198,9 +198,11 @@ Enter a unique name in the **Customer Name** field.
 
 ## Check Boxes in Use Cases
 
-Write a step describing a check box as "Click the \[check box name\] to enable it. . ." then provide additional information about what enabling the feature does. Provide information about what disabling the feature does too, if necessary.
+Write a step describing a check box as "Click the \[check box name\] to check it. . ." then provide additional information about what enabling the feature does. Provide information about what disabling the feature does too, if necessary.
 
 Do not bold check box names outside of steps, unless used in an imperative statement. Follow the check box name with the words "check box."
+
+Use "check" and "uncheck" not "enable" and "disable."
 
 ## Menu Navigation in Use Cases
 

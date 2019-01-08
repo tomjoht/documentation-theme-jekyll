@@ -82,6 +82,8 @@ When Flare compiles file names, it embeds the entire file path string in the fil
         <tr>
             <td>HTML5- Top Navigation
             <br>Search Results
+            <br>Tripane Favicon
+            <br>ContextMenu
             </td>
             <td>Skins in Flare used to style the Help system output by Flare.</td>
         </tr>
@@ -95,10 +97,7 @@ When Flare compiles file names, it embeds the entire file path string in the fil
             <td>BSSCDefault.h</td>
             <td>Header file in Flare that is included in the Help output to allow Context-sensitive help to work.</td>
         </tr>
-        <tr>
-            <td>Popup[topicname].htm</td>
-            <td>If adding a pop-up in Flare, affix “Popup” to the file name.</td>
-        </tr>
+        
         <tr>
             <td></td>
             <td></td>

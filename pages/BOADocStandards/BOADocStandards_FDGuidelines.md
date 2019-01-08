@@ -92,7 +92,7 @@ In rare cases where no use case is needed, include information about how a page 
 
 ## Page Description topics in the Table of Contents
 
--   All page description topics must be listed under the topic \[Component Name\] Page Descriptions in the Table of Contents.
+-   All page description topics must be listed under the topic \[Component Name\] Page Descriptions in the PageDescriptions Table of Contents.
 -   Alphabetize topics
 -   A page with a *Horizontal* and a *Vertical* View must have the *Horizontal* View formatted as a book and the *Vertical* View formatted as a page beneath it.
 {% include note.html content="Link the Vertical View in the TOC to a bookmark in the topic for the Vertical View" %}
