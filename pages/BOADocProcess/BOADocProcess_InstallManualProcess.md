@@ -14,16 +14,16 @@ folder: BOADocProcess
 ## The Install Manual Process
 
 Follow these steps to update the install manuals:
-1. [The Tech Writer synchronizes her local master branch with the BackOfficeAssoc dsp-install-manuals master branch](synchronize-your-master-branch-with-the-backofficeassoc-github-repo).
-   {% include note.html content="If you do not have a local copy of the install manuals on your laptop, see [Clone the dsp-install-manuals repo](clone-the-dsp-install-manuals-repo)." %}
-2. [The TW creates a new Staging branch based on the Master branch in the dsp-install-manuals repo](create-a-branch-for-your-updates-based-on-the-master branch).
-3. [The TW creates a release folder in OneDrive for the current release, copies the current Word files of the manuals into the new release folder, and updates the file titles](create-a-release-folder-on-onedrive).
+1. [The Tech Writer synchronizes her local master branch with the BackOfficeAssoc dsp-install-manuals master branch](#synchronize-your-master-branch-with-the-backofficeassoc-github-repo).
+   {% include note.html content="If you do not have a local copy of the install manuals on your laptop, see [Clone the dsp-install-manuals repo](#clone-the-dsp-install-manuals-repo)." %}
+2. [The TW creates a new Staging branch based on the Master branch in the dsp-install-manuals repo](#create-a-branch-for-your-updates-based-on-the-master-branch).
+3. [The TW creates a release folder in OneDrive for the current release, copies the current Word files of the manuals into the new release folder, and updates the file titles](#create-a-release-folder-on-onedrive).
    {% include note.html content="The TW will include a link to this folder in the next step when they create the JIRA epic/subtasks." %}
-4. [The TW creates a Jira epic for updating the manuals for this release](create-a-jira-epic-for-the-release).
-5. [The TW adds subtasks for each manual that will require updates to the release epic to track the updates](add-subtasks-for-manuals-in-jira-epic).
+4. [The TW creates a Jira epic for updating the manuals for this release](#create-a-jira-epic-for-the-release).
+5. [The TW adds subtasks for each manual that will require updates to the release epic to track the updates](#add-subtasks-for-manuals-in-jira-epic).
 5. The TW and contributors review and update the manuals in OneDrive and Flare as needed.
 6.  Once the collaboration is complete and the content is final, the approver sets the **Documentation Status** field to of the installation manual epic Jira issue to **Approved**.
-7.  [The TW makes the required changes in Flare and updates the **Appendix A -- Version History** section to reflect the updates made to the current version](make-updates-in-flare).
+7.  [The TW makes the required changes in Flare and updates the **Appendix A -- Version History** section to reflect the updates made to the current version](#make-updates-in-flare).
 8.  The TW sets the **Documentation Status** field of the installation manual epic Jira issue to **Peer Review** and requests a peer review from another tech writer on the team.
     {% include note.html content="See the 'Open a pull request for a peer reviewer to review your work' section of the [DSP Documentation Workflow][BOADocProcess_DSPDocWorkflow] page for more information on this process. The process for the Install Manuals is identical, except that for the install manuals the **base** branch will be the **master** branch and the **compare** branch will be the **staging** branch you are making your updates on." %}
 9.  The Peer reviewer makes any necessary edits in Flare and merges the Staging branch with the Master branch.
@@ -41,7 +41,7 @@ To clone the dsp-install-manuals repo, follow the instructions for [cloning the 
 
 1.  In Windows-Explorer, right-click on your dsp-install-manuals local folder and select **Git Bash Here**.
     {% include image.html file="gitBashHere.png" alt="Right-click menu with Git Bash Here option" caption="Right-click menu with Git Bash Here option" %}
-    {% include note.html content="If you do not have a local dsp-install-manuals repo, see [Clone the dsp-install-manuals repo](clone-the-dsp-install-manuals-repo) for instructions." %}
+    {% include note.html content="If you do not have a local dsp-install-manuals repo, see [Clone the dsp-install-manuals repo](#clone-the-dsp-install-manuals-repo) for instructions." %}
 2.  Switch to the master branch.
     <div markdown="span" class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> The git command to switch to the master branch is <code class="highlighter-rouge">git checkout master</code>.</div>
 3.  Enter the git command, `git pull origin master`
