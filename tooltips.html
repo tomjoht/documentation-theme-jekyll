@@ -6,9 +6,9 @@ search: exclude
 <html>
 <head>
 <title> Tooltip Demo</title>
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
 $(document).ready(function(){
@@ -26,7 +26,7 @@ var url = "tooltips.json";
 
 $.get( url, function( data ) {
 
- /* Bootstrap popover text is defined inside a data-content attribute inside an element. That's 
+ /* Bootstrap popover text is defined inside a data-content attribute inside an element. That's
  why I'm using attr here. If you just want to insert content on the page, use append and remove the data-content argument from the parentheses.*/
 
     $.each(data.entries, function(i, page) {
@@ -49,7 +49,7 @@ $.get( url, function( data ) {
         });
     });
 
- 
+
 });
 </script>
 
@@ -77,4 +77,3 @@ body {padding-left:50px;}
 <p>Football <span class="glyphicon glyphicon-info-sign" id="football" data-toggle="popover"></span></p>
 
 <p>Soccer <span class="glyphicon glyphicon-info-sign" id="soccer" data-toggle="popover"></span></p>
-
