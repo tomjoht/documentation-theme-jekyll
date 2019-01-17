@@ -19,28 +19,28 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: Overview
+  - title: Foundation
     output: web, pdf
     folderitems:
 
-    - title: Get started
+    - title: About
       url: /index.html
       output: web, pdf
       type: homepage
 
-    - title: Introduction
+    - title: Advocacy
       url: /mydoc_introduction.html
       output: web, pdf
 
-    - title: Supported features
+    - title: Governance
       url: /mydoc_supported_features.html
       output: web, pdf
 
-    - title: About the theme author
+    - title: People
       url: /mydoc_about.html
       output: web, pdf
 
-    - title: Support
+    - title: Connect
       url: /mydoc_support.html
       output: web, pdf
 
