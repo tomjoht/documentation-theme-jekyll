@@ -65,7 +65,7 @@ entries:
 
     folderitems:
     - title: About
-      url: /mydoc_pages.html
+      url: /corps.html
       output: web, pdf
 
     - title: Advocacy
