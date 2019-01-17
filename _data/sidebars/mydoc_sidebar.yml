@@ -56,12 +56,12 @@ entries:
       url: /mydoc_release_notes_50.html
       output: web, pdf
 
-  - title: Installation
+  - title: 21CU
     output: web, pdf
     folderitems:
 
-    - title: About Ruby, Gems, Bundler, etc.
-      url: /mydoc_about_ruby_gems_etc.html
+    - title: Home
+      url: /21cu.html
       output: web, pdf
 
     - title: Install Jekyll on Mac
