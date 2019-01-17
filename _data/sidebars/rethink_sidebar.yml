@@ -109,12 +109,10 @@ entries:
       url: /mydoc_adding_tooltips.html
       output: web, pdf
       
-    folderitems:
     - title: Tutorials
       url: /mydoc_adding_tooltips.html
       output: web, pdf
 
-    folderitems:
     - title: Interviews
       url: /mydoc_adding_tooltips.html
       output: web, pdf
