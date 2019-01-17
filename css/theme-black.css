@@ -1,11 +1,11 @@
 .summary {
     color: #808080; /* grey*/
-    border-left: 5px solid #374048; /*red*/
+    border-left: 5px solid #102f4c; /*red*/
     font-size:16px;
 }
 
 
-h3 {color: #ED1951; } /*red*/
+h3 {color: #102f4c; } /*red*/
 h4 {color: #808080; } /*grey*/
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
@@ -14,7 +14,7 @@ h4 {color: #808080; } /*grey*/
 }
 
 .nav > li.active > a {
-    background-color: #374048; /*darker blue*/
+    background-color: #102f4c; /*darker blue*/
 }
 
 .nav > li > a:hover {
