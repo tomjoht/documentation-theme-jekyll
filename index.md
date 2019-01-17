@@ -2,7 +2,7 @@
 title: "Rethink Foundation"
 keywords: rethink
 tags: [Rethink]
-sidebar: mydoc_sidebar
+sidebar: rethink_sidebar
 permalink: index.html
 summary: Rethink Foundation Summary 
 ---
