@@ -112,41 +112,7 @@ entries:
     - title: Code references
       url: /mydoc_alerts.html
       output: web, pdf
-
-
-  - title: Handling reviews
-    output: web, pdf
-
-    folderitems:
-    - title: Commenting on files
-      url: /mydoc_commenting_on_files.html
-      output: web, pdf
-
-#    - title: Git collaboration
-#      url: /mydoc_git_collaboration
-#      output: web, pdf
-
-
-
-  - title: Special layouts
-    output: web, pdf
-
-    folderitems:
-    - title: Knowledge-base layout
-      url: /mydoc_kb_layout.html
-      output: web, pdf
-
-    - title: Glossary layout
-      url: /mydoc_glossary.html
-      output: web, pdf
-
-    - title: FAQ layout
-      url: /mydoc_faq_layout.html
-      output: web, pdf
-
-    - title: Shuffle layout
-      url: /mydoc_shuffle.html
-      output: web, pdf
+  
 
   - title: Navigating Rethink
     output: web, pdf
