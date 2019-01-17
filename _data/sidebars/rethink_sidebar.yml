@@ -253,43 +253,33 @@ entries:
       url: /mydoc_troubleshooting.html
       output: web, pdf
 
-  - title: Tag archives
+  - title: Projects
     output: web
     folderitems:
 
-    - title: Tag archives overview
+    - title: Opportunity Project
       url: /mydoc_tag_archives_overview.html
       output: web
 
       subfolders:
-      - title: Tag archive pages
+      - title: Sub projects
         output: web
         subfolderitems:
 
-        - title: Formatting pages
+        - title: Email project
           url: /tag_formatting.html
           output: web
 
-        - title: Navigation pages
+        - title: Alumni project
           url: /tag_navigation.html
           output: web
 
-        - title: Content types pages
+        - title: Career project
           url: /tag_content_types.html
           output: web
 
-        - title: Publishing pages
+        - title: Knowledge project
           url: /tag_publishing.html
           output: web
 
-        - title: Special layout pages
-          url: /tag_special_layouts.html
-          output: web
-
-        - title: Collaboration pages
-          url: /tag_collaboration.html
-          output: web
-
-        - title: Troubleshooting pages
-          url: /tag_troubleshooting.html
-          output: web
+     
