@@ -19,11 +19,11 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: Foundation
+  - title: About
     output: web, pdf
     folderitems:
 
-    - title: About
+    - title: Foundation
       url: /index.html
       output: web, pdf
       type: homepage
