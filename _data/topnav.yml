@@ -7,6 +7,10 @@ topnav:
       external_url: https://github.com/rethinkfoundation/rethink-site
     - title: News
       url: /news
+    - title: Blog
+      external_url: https://blog.rethinkfoundation.in/
+    - title: Q2
+      external_url: http://discourse.rethinkfoundation.in/
 
 #Topnav dropdowns
 topnav_dropdowns:
