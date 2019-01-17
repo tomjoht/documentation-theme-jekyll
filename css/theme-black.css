@@ -32,7 +32,7 @@ div.navbar-collapse .dropdown-menu > li > a:hover {
 }
 
 a[data-toggle="tooltip"] {
-    color: #649345; /*green*/
+    color: #2b4154; /*green*/
     font-style: italic;
     cursor: default;
 }
@@ -63,7 +63,7 @@ a.navbar-brand:hover {
 }
 
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-    border-color: #248ec2 !important; /*teal*/
+    border-color: #2b4154 !important; /*teal*/
 }
 
 .btn-primary {
@@ -92,7 +92,7 @@ a.navbar-brand:hover {
 body.print h1 {color: #374048 !important; font-size:28px !important;} /*blue*/
 body.print h2 {color: #595959 !important; font-size:20px !important;} /*dark grey*/
 body.print h3 {color: #102f4c !important; font-size:14px !important;} /*red*/
-body.print h4 {color: #4c1034 !important; font-size:14px; font-style: italic !important;} /*pale blue*/
+body.print h4 {color: #2b4154 !important; font-size:14px; font-style: italic !important;} /*pale blue*/
 
 .anchorjs-link:hover {
     color: #102f4c; /*darker blue*/
@@ -106,7 +106,7 @@ li.sidebarTitle {
   margin-top:20px;
     font-weight:normal;
     font-size:130%;
-    color: #ED1951;
+    color: #102f4c;
     margin-bottom:10px;
     margin-left: 5px;
 
