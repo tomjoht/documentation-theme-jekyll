@@ -12,12 +12,12 @@ topnav:
 topnav_dropdowns:
 - title: Topnav dropdowns
   folders:
-    - title: Jekyll Help
+    - title: WIT
       folderitems:
-        - title: Jekyll Talk
-          external_url: https://talk.jekyllrb.com
-        - title: Jekyll documentation
-          external_url: http://jekyllrb.com/docs/home/
+        - title: Homepage
+          external_url: http://wit.rethinkfoundation.in 
+        - title: Cohort 1 Wiki
+          external_url: https://wiki.rethinkfoundation.in/WIT_Learning_Program:_Cohort_1
         - title: Jekyll on Stack Overflow
           external_url: http://stackoverflow.com/questions/tagged/jekyll
         - title: Jekyll on my blog
