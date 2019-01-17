@@ -1,11 +1,11 @@
 .summary {
     color: #808080; /* grey*/
-    border-left: 5px solid #102f4c; /*red*/
+    border-left: 5px solid #4f1731; /*red*/
     font-size:16px;
 }
 
 
-h3 {color: #102f4c; } /*red*/
+h3 {color: #4f1731; } /*red*/
 h4 {color: #808080; } /*grey*/
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
@@ -91,7 +91,7 @@ a.navbar-brand:hover {
 
 body.print h1 {color: #374048 !important; font-size:28px !important;} /*blue*/
 body.print h2 {color: #595959 !important; font-size:20px !important;} /*dark grey*/
-body.print h3 {color: #102f4c !important; font-size:14px !important;} /*red*/
+body.print h3 {color: #4f1731 !important; font-size:14px !important;} /* red */
 body.print h4 {color: #2b4154 !important; font-size:14px; font-style: italic !important;} /*pale blue*/
 
 .anchorjs-link:hover {
