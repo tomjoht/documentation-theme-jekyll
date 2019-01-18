@@ -19,7 +19,7 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: About
+  - title: Rethink
     output: web, pdf
     folderitems:
 
@@ -32,19 +32,19 @@ entries:
       url: /mydoc_introduction.html
       output: web, pdf
 
-    - title: Governance
+    - title: Guidance
       url: /mydoc_supported_features.html
       output: web, pdf
 
-    - title: People
+    - title: Governance
       url: /mydoc_about.html
       output: web, pdf
 
-    - title: Connect
+    - title: People
       url: /mydoc_support.html
       output: web, pdf
 
-  - title: 21CU
+  - title: Learning Program
     output: web, pdf
     folderitems:
 
@@ -58,6 +58,22 @@ entries:
 
     - title: Learning Programs
       url: /mydoc_install_jekyll_on_windows.html
+      output: web, pdf
+
+  - title: 21CU
+    output: web, pdf
+
+    folderitems:
+    - title: About
+      url: /21cu.html
+      output: web, pdf
+
+    - title: Advocacy
+      url: /mydoc_posts.html
+      output: web, pdf
+
+    - title: Contributions
+      url: /mydoc_lists.html
       output: web, pdf
 
   - title: Corps
@@ -77,7 +93,7 @@ entries:
       output: web, pdf
 
 
-  - title: CGPU / IIC
+  - title: Office of Professional Development
     output: web, pdf
 
     folderitems:
