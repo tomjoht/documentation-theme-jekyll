@@ -56,6 +56,10 @@ entries:
       url: /mydoc_install_jekyll_on_windows.html
       output: web, pdf
       
+    - title: Guidance
+      url: /mydoc_adding_tooltips.html
+      output: web, pdf
+      
 
   - title: Library
     output: web, pdf
