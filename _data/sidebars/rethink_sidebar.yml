@@ -44,71 +44,37 @@ entries:
       url: /mydoc_support.html
       output: web, pdf
 
-  - title: Foundation Learning Program
+  - title: 21CU
     output: web, pdf
     folderitems:
 
-    - title: About
+    - title: Advocacy
       url: /21cu.html
       output: web, pdf
 
-    - title: Advocacy
+    - title: Guidance
       url: /mydoc_install_jekyll_on_mac.html
       output: web, pdf
 
-    - title: Learning Programs
+    - title: Foundation Learning Program
       url: /mydoc_install_jekyll_on_windows.html
       output: web, pdf
-
-  - title: 21C Learning Program
-    output: web, pdf
-
-    folderitems:
-    - title: About
-      url: /21cu.html
-      output: web, pdf
-
-    - title: Advocacy
-      url: /mydoc_posts.html
-      output: web, pdf
-
-    - title: Contributions
-      url: /mydoc_lists.html
-      output: web, pdf
-
-  - title: Office of Professional Development
-    output: web, pdf
-
-    folderitems:
-    - title: About
-      url: /mydoc_sidebar_navigation.html
-      output: web, pdf
-
-    - title: Advoacy
-      url: /mydoc_yaml_tutorial.html
-      output: web, pdf
-
-    - title: Office hours
-      url: /mydoc_tags.html
-      output: web, pdf
-
-    - title: Scholarships
-      url: /mydoc_series.html
+      
+    - title: Graduation program
+      url: /mydoc_install_jekyll_on_windows.html
       output: web, pdf
       
-    - title: Opportunities
-      url: /mydoc_series.html
+    - title: Office of Professional Development
+      url: /mydoc_install_jekyll_on_windows.html
       output: web, pdf
+      
 
   - title: Library
     output: web, pdf
 
     folderitems:
-    - title: Information & Guidance
-      url: /mydoc_adding_tooltips.html
-      output: web, pdf
-
-    - title: Perspectives / Column
+    
+    - title: Information
       url: /mydoc_adding_tooltips.html
       output: web, pdf
     
@@ -119,9 +85,7 @@ entries:
     - title: Tutorials
       url: /mydoc_adding_tooltips.html
       output: web, pdf    
-  
-
-
+ 
 
   - title: Corps
     output: web
