@@ -10,7 +10,7 @@ topnav:
     - title: Blog
       external_url: https://blog.rethinkfoundation.in/
     - title: Q2
-      external_url: http://discourse.rethinkfoundation.in/
+      external_url: http://q2.rethinkfoundation.in/
 
 #Topnav dropdowns
 topnav_dropdowns:
