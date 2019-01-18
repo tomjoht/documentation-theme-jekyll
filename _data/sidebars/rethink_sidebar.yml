@@ -31,6 +31,10 @@ entries:
     - title: Advocacy 
       url: /mydoc_introduction.html
       output: web, pdf
+      
+    - title: Guidance
+      url: /mydoc_adding_tooltips.html
+      output: web, pdf
 
 
   - title: 21CU
