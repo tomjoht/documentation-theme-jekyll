@@ -23,26 +23,24 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Foundation
+    - title: About
       url: /index.html
       output: web, pdf
       type: homepage
 
-    - title: Advocacy
+    - title: Advocacy 
       url: /mydoc_introduction.html
       output: web, pdf
 
-    - title: Governance
-      url: /mydoc_about.html
-      output: web, pdf
-
-    - title: People
-      url: /mydoc_support.html
-      output: web, pdf
 
   - title: 21CU
     output: web, pdf
     folderitems:
+    
+    - title: About
+      url: /index.html
+      output: web, pdf
+      type: homepage
 
     - title: Foundation Learning Program
       url: /mydoc_install_jekyll_on_windows.html
@@ -54,10 +52,6 @@ entries:
       
     - title: Office of Professional Development
       url: /mydoc_install_jekyll_on_windows.html
-      output: web, pdf
-      
-    - title: Guidance
-      url: /mydoc_adding_tooltips.html
       output: web, pdf
       
 
