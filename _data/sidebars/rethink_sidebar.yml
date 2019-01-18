@@ -147,13 +147,23 @@ entries:
       url: /mydoc_troubleshooting.html
       output: web, pdf
 
-  - title: Projects
+  - title: Corps
     output: web
     folderitems:
 
-    - title: Opportunity Project
+    - title: Library
       url: /mydoc_tag_archives_overview.html
       output: web
+      
+      subfolders:
+      
+        - title: Interviews
+          output: web
+          subfolderitems:
+
+        - title: Tutorials
+          url: /tag_formatting.html
+          output: web
 
       subfolders:
       - title: Sub projects
