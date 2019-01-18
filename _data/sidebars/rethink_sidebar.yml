@@ -44,7 +44,7 @@ entries:
       url: /mydoc_support.html
       output: web, pdf
 
-  - title: Learning Program
+  - title: Foundation Learning Program
     output: web, pdf
     folderitems:
 
@@ -60,7 +60,7 @@ entries:
       url: /mydoc_install_jekyll_on_windows.html
       output: web, pdf
 
-  - title: 21CU
+  - title: 21C Learning Program
     output: web, pdf
 
     folderitems:
@@ -75,23 +75,6 @@ entries:
     - title: Contributions
       url: /mydoc_lists.html
       output: web, pdf
-
-  - title: Corps
-    output: web, pdf
-
-    folderitems:
-    - title: About
-      url: /corps.html
-      output: web, pdf
-
-    - title: Advocacy
-      url: /mydoc_posts.html
-      output: web, pdf
-
-    - title: Contributions
-      url: /mydoc_lists.html
-      output: web, pdf
-
 
   - title: Office of Professional Development
     output: web, pdf
@@ -151,25 +134,19 @@ entries:
     output: web
     folderitems:
 
-    - title: Library
+    - title: Projects
       url: /mydoc_tag_archives_overview.html
       output: web
-      
-      subfolders:
-      
-        - title: Interviews
-          output: web
-          subfolderitems:
-
-        - title: Tutorials
-          url: /tag_formatting.html
-          output: web
 
       subfolders:
       - title: Sub projects
         output: web
         subfolderitems:
 
+        - title: Opportunity project
+          url: /tag_formatting.html
+          output: web
+        
         - title: Email project
           url: /tag_formatting.html
           output: web
