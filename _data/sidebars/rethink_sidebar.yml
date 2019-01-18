@@ -32,10 +32,6 @@ entries:
       url: /mydoc_introduction.html
       output: web, pdf
 
-    - title: Guidance
-      url: /mydoc_supported_features.html
-      output: web, pdf
-
     - title: Governance
       url: /mydoc_about.html
       output: web, pdf
@@ -47,14 +43,6 @@ entries:
   - title: 21CU
     output: web, pdf
     folderitems:
-
-    - title: Advocacy
-      url: /21cu.html
-      output: web, pdf
-
-    - title: Guidance
-      url: /mydoc_install_jekyll_on_mac.html
-      output: web, pdf
 
     - title: Foundation Learning Program
       url: /mydoc_install_jekyll_on_windows.html
