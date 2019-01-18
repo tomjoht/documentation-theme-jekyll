@@ -121,25 +121,18 @@ entries:
       output: web, pdf    
   
 
-  - title: Navigating Rethink
-    output: web, pdf
 
-    folderitems:
-
-    - title: Connect
-      url: /mydoc_troubleshooting.html
-      output: web, pdf
 
   - title: Corps
     output: web
     folderitems:
 
-    - title: Projects
+    - title: About
       url: /mydoc_tag_archives_overview.html
       output: web
 
       subfolders:
-      - title: Sub projects
+      - title: Projects
         output: web
         subfolderitems:
 
@@ -163,4 +156,10 @@ entries:
           url: /tag_publishing.html
           output: web
 
-     
+    - title: Navigating Rethink
+    output: web, pdf
+    folderitems:
+
+       - title: Connect
+         url: /mydoc_troubleshooting.html
+         output: web, pdf
