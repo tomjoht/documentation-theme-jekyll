@@ -156,10 +156,4 @@ entries:
           url: /tag_publishing.html
           output: web
 
-    - title: Navigating Rethink
-    output: web, pdf
-    folderitems:
 
-       - title: Connect
-         url: /mydoc_troubleshooting.html
-         output: web, pdf
