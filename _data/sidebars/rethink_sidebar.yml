@@ -77,7 +77,7 @@ entries:
       output: web, pdf
 
 
-  - title: Opportunity Project
+  - title: CGPU / IIC
     output: web, pdf
 
     folderitems:
@@ -89,15 +89,15 @@ entries:
       url: /mydoc_yaml_tutorial.html
       output: web, pdf
 
-    - title: Scholarships
+    - title: Office hours
       url: /mydoc_tags.html
       output: web, pdf
 
-    - title: Jobs
+    - title: Scholarships
       url: /mydoc_series.html
       output: web, pdf
       
-    - title: Volunteering
+    - title: Opportunities
       url: /mydoc_series.html
       output: web, pdf
 
