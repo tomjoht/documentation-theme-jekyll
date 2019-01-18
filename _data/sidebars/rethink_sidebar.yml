@@ -105,18 +105,21 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: Guidance
+    - title: Information & Guidance
+      url: /mydoc_adding_tooltips.html
+      output: web, pdf
+
+    - title: Perspectives / Column
+      url: /mydoc_adding_tooltips.html
+      output: web, pdf
+    
+    - title: Interviews
       url: /mydoc_adding_tooltips.html
       output: web, pdf
       
     - title: Tutorials
       url: /mydoc_adding_tooltips.html
-      output: web, pdf
-
-    - title: Interviews
-      url: /mydoc_adding_tooltips.html
-      output: web, pdf
-    
+      output: web, pdf    
   
 
   - title: Navigating Rethink
