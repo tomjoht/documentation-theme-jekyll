@@ -76,7 +76,6 @@ We expect our learning program students to be willing and able to make knowledge
 We are currently inviting applications for our 21CU Flagship Learning Program. All applicants applying to the program will go through a selection process and all those who successfully complete the selection process will make it to the program.
 
 ## Program Anchor
-|<p align="center"> <img src="/images/aryawit.png"></p>|Arya is a 2015 WeTech Qualcomm Global Scholar and a 2016 GHCI Scholar. 
-Since 2017, she has been leading the Opportunity Project at Rethink where she facilitates guidance and support to students and help them avail various opportunities at their disposal.So far, the Opportunity Project has touched over 7000+ students who have collectively applied to opportunities worth INR 6 Crores and secured opportunities worth INR 1 Crore.|
+|<p align="center"> <img src="/images/aryawit.png"></p>| Arya is a 2015 WeTech Qualcomm Global Scholar and a 2016 GHCI Scholar. Since 2017, she has been leading the Opportunity Project at Rethink where she facilitates guidance and support to students and help them avail various opportunities at their disposal. So far, the Opportunity Project has touched over 7000+ students who have collectively applied to opportunities worth INR 6 Crores and secured opportunities worth INR 1 Crore.|
 |------------|
 
