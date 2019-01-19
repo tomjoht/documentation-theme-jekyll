@@ -35,9 +35,9 @@ This program aims to equip learners with the
 
 Civic Literacy - Contribution
 
-### Program Details
+## Program Details
 
-#### Program Pre-requisites
+### Program Pre-requisites
 It is mandatory that you have:
 * Access to a laptop/desktop
 * Access to reliable internet connection
@@ -46,7 +46,7 @@ It is mandatory that you have:
 
 Our learning program will be conducted online. All our key communication will be facilitated over email and our discussions will happen on telegram and discourse, which is why it is imperative that you regularly check your email inbox and also have a telegram account.
 
-#### Feel free to apply if,
+### Feel free to apply if,
 * You're interested in impacting your career outcomes
 * You're committed to your professional development
 * You're open and willing to share your learning and experiences
@@ -74,3 +74,11 @@ We expect our learning program students to be willing and able to make knowledge
 
 ### Selections
 We are currently inviting applications for our 21CU Flagship Learning Program. All applicants applying to the program will go through a selection process and all those who successfully complete the selection process will make it to the program.
+
+## Program Anchor
+
+|![Arya](arya.png)|Arya is a 2015 WeTech Qualcomm Global Scholar and a 2016 GHCI Scholar.
+
+Since 2017, she has been leading the Opportunity Project at Rethink where she facilitates guidance and support to students and help them avail various opportunities at their disposal.
+
+So far, the Opportunity Project has touched over 7000+ students who have collectively applied to opportunities worth INR 6 Crores and secured opportunities worth INR 1 Crore.|
