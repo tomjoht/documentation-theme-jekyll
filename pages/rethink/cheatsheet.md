@@ -1,3 +1,12 @@
+---
+title: "Cheatsheet"
+keywords: rethink
+tags: [Rethink]
+sidebar: rethink_sidebar
+permalink: cheatsheet.html
+summary: Cheatsheet
+---
+
 
 Notes
 
