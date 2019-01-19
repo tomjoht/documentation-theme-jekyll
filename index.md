@@ -77,9 +77,5 @@ We are currently inviting applications for our 21CU Flagship Learning Program. A
 
 ## Program Anchor
 
-|![Arya](arya.png)|Arya is a 2015 WeTech Qualcomm Global Scholar and a 2016 GHCI Scholar.
-
-Since 2017, she has been leading the Opportunity Project at Rethink where she facilitates guidance and support to students and help them avail various opportunities at their disposal.
-
-So far, the Opportunity Project has touched over 7000+ students who have collectively applied to opportunities worth INR 6 Crores and secured opportunities worth INR 1 Crore.|
+|Arya |Arya is a 2015 WeTech Qualcomm Global Scholar and a 2016 GHCI Scholar. Since 2017, she has been leading the Opportunity Project at Rethink where she facilitates guidance and support to students and help them avail various opportunities at their disposal.So far, the Opportunity Project has touched over 7000+ students who have collectively applied to opportunities worth INR 6 Crores and secured opportunities worth INR 1 Crore.|
 |--|--|
