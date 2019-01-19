@@ -29,11 +29,11 @@ entries:
       type: homepage
 
     - title: Advocacy 
-      url: /mydoc_introduction.html
+      url: /wip.html
       output: web, pdf
       
     - title: Guidance
-      url: /mydoc_adding_tooltips.html
+      url: /wip.html
       output: web, pdf
 
 
@@ -42,20 +42,20 @@ entries:
     folderitems:
     
     - title: About
-      url: /index.html
+      url: /wip.html
       output: web, pdf
       type: homepage
 
     - title: Foundation Learning Program
-      url: /mydoc_install_jekyll_on_windows.html
+      url: /wip.html
       output: web, pdf
       
     - title: Graduation program
-      url: /mydoc_install_jekyll_on_windows.html
+      url: /wip.html
       output: web, pdf
       
     - title: Office of Professional Development
-      url: /mydoc_install_jekyll_on_windows.html
+      url: /wip.html
       output: web, pdf
       
 
@@ -65,15 +65,15 @@ entries:
     folderitems:
     
     - title: Information
-      url: /mydoc_adding_tooltips.html
+      url: /wip.html
       output: web, pdf
     
     - title: Interviews
-      url: /mydoc_adding_tooltips.html
+      url: /wip.html
       output: web, pdf
       
     - title: Tutorials
-      url: /mydoc_adding_tooltips.html
+      url: /wip.html
       output: web, pdf    
  
 
@@ -82,7 +82,7 @@ entries:
     folderitems:
 
     - title: About
-      url: /mydoc_tag_archives_overview.html
+      url: /wip.html
       output: web
 
       subfolders:
@@ -91,23 +91,23 @@ entries:
         subfolderitems:
 
         - title: Opportunity project
-          url: /tag_formatting.html
+          url: /wip.html
           output: web
         
         - title: Email project
-          url: /tag_formatting.html
+          url: /wip.html
           output: web
 
         - title: Alumni project
-          url: /tag_navigation.html
+          url: /wip.html
           output: web
 
         - title: Career project
-          url: /tag_content_types.html
+          url: /wip.html
           output: web
 
         - title: Knowledge project
-          url: /tag_publishing.html
+          url: /wip.html
           output: web
 
 
