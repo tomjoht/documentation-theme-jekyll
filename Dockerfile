@@ -11,4 +11,4 @@ VOLUME /src
 EXPOSE 4000
 
 WORKDIR /src
-ENTRYPOINT ["jekyll", "serve", "-H", "0.0.0.0"]
+ENTRYPOINT ["jekyll", "serve", "--livereload", "-H", "0.0.0.0"]
