@@ -46,7 +46,7 @@ For example, the sidebar.html file contains the following code:
 {% raw %}
 ```liquid
 {% if folderitem.external_url %}
-    <li><a href="{{folderitem.external_url}}" target="_blank">{{folderitem.title}}</a></li>
+    <li><a href="{{folderitem.external_url}}" target="_blank" rel="noopener">{{folderitem.title}}</a></li>
 ```
 {% endraw %}
 
