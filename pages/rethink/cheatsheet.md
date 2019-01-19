@@ -38,10 +38,10 @@ In case you haven't installed Bundler, install it:
 gem install bundler
 ```
 
-# 21CU
+## 21CU
 
-## Learning Programs
+### Learning Programs
 
-## Office of professional development
+### Office of professional development
 
-### Office hours
+#### Office hours
