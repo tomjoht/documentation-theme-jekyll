@@ -243,9 +243,9 @@ Or
 
 Once approved, the Author moves the **Documentation** Status to **DocDone**. Open a PR to merge the changes to the production site. Refer to Update the Production Site when Documentation is Approved.
 
-### Understanding How Updates to the Hosted Help Sites Work
+### Update the Help on the Dev and Prod Sites
 
-Each release has a branch in the dsp-docs repo with the naming convention develop\_nnn, where nnn is the release number (develop\_701, for example). When a pull request is merged to that branch, Jenkins builds the help, and copies the files to the dev site for the hosted help for that version.
+Each release has a branch in the dsp-docs repo with the naming convention develop\_nnn, where nnn is the release number (develop\_701, for example). When a pull request is merged to that branch, a Technical Writer logs in to Jenkins and builds the helpn.
 
 The URL for the full version is:
 
@@ -254,15 +254,6 @@ The URL for the full version is:
 The URL for the Solex version is:
 
 > https://dsphelpdev.boaweb.com/nnn/solex/Home.htm
-
-The nnn corresponds to the release number, and is updated by the PRs
-from the branch with the corresponding release number.
-
-### Update the Production Site when Documentation is Approved
-
-To update the prod sites where the users access the help, open a PR to merge to the develop branch. When this happens, Jenkins reads the develop merge, and the branch name that pushed to develop for the PR, and updates the version of help on the correct site.
-
-For example, when we merge from develop\_70 to develop, the prod 70 sites are updated.
 
 The URL for the prod full help is:
 
@@ -273,3 +264,15 @@ For Solex:
 > https://dsphelp.boaweb.com/nnn/solex/Home.htm
 
 {% include links.html %}
+
+To update the help on the sites:
+1.  Log in to Jenkins.
+2.  In the Name column, click DSPDocs.
+3.  Click  the Schedule a Build icon for either DSPDocDev or DSPDocProd.
+4.  Enter the version number in the VERSION field.
+5.  Click Build. 
+The build status displays in the left column under Build History. 
+
+
+
+
