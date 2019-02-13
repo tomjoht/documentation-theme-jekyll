@@ -21,7 +21,7 @@ The following Installation Manuals are updated for each release _if there are ch
 * SAP Accelerators by BackOffice Associates Operations Guide
 * SAP Accelerators by BackOffice Associates Software Requirements and Hardware Sizing Guide
  
-For instructions on updating Release Notes, refer to [Prepare What's New topic/Release Notes.] (#prepare-what-’-s-new-topic-/-release-notes-content).
+For instructions on updating Release Notes, refer to [Prepare What's New topic/Release Notes.] (#prepare-whats-new-topic-release-notes-content).
 
 ### Source of Content
 Changes to the Installation Manuals are tracked in jira. Source of changes include:
