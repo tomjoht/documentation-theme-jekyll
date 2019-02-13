@@ -12,6 +12,15 @@ folder: BOADocProcess
 {% include important.html content="The master branch must be updated with the latest changes at the close of each release, and a new Staging branch must be created at the beginning of every release cycle from the master branch by the Tech Writer who is handling the manuals that release cycle. Sometimes customers need manuals specific to the version of DSP that they are running, so the Staging branches must not be updated or deleted once they have been merged into the master branch." %}
 
 ## The Install Manual Process
+### Manuals to Update
+The following Installation Manuals are updated for each release _if there are changes to be made._
+*BackOffice Associates Solutions Installation and Upgrade Manual
+*BackOffice Associates Solutions Software Requirements and Hardware Sizing Guide
+*SAP Accelerators by BackOffice Associates Implementation Quick Start Guide
+*SAP Accelerators by BackOffice Associates Installation and Upgrade Manual
+*SAP Accelerators by BackOffice Associates Operations Guide
+*SAP Accelerators by BackOffice Associates Software Requirements and Hardware Sizing Guide
+
 
 Follow these steps to update the install manuals:
 1. [The Tech Writer synchronizes her local master branch with the BackOfficeAssoc dsp-install-manuals master branch](#synchronize-your-master-branch-with-the-backofficeassoc-github-repo).
