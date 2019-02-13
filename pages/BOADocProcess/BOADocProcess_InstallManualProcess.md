@@ -34,6 +34,11 @@ Pay attention to conversations and tickets to pick up on what needs to change in
 The project is organized by manual. Several sections are used across multiple manuals, with conditional tags applied. 
 The Version History topic (located towards the bottom of the Content Explorer, beneath all the folders) is updated in one location and used across all manuals with the most recent entry at the top.
 
+### Update the Installation Manuals
+The following steps describe the collaboration, review, approval and final formatting process to get the Installation Manuals ready for publish for each software release. 
+
+Members of the Documentation Team rotate, taking turns to be in charge of updating the Installation Manuals for each release. 
+
 
 Follow these steps to update the install manuals:
 1. [The Tech Writer synchronizes her local master branch with the BackOfficeAssoc dsp-install-manuals master branch](#synchronize-your-master-branch-with-the-backofficeassoc-github-repo).
