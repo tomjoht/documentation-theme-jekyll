@@ -14,12 +14,25 @@ folder: BOADocProcess
 ## The Install Manual Process
 ### Manuals to Update
 The following Installation Manuals are updated for each release _if there are changes to be made._
-*BackOffice Associates Solutions Installation and Upgrade Manual
-*BackOffice Associates Solutions Software Requirements and Hardware Sizing Guide
-*SAP Accelerators by BackOffice Associates Implementation Quick Start Guide
-*SAP Accelerators by BackOffice Associates Installation and Upgrade Manual
-*SAP Accelerators by BackOffice Associates Operations Guide
-*SAP Accelerators by BackOffice Associates Software Requirements and Hardware Sizing Guide
+* BackOffice Associates Solutions Installation and Upgrade Manual
+* BackOffice Associates Solutions Software Requirements and Hardware Sizing Guide
+* SAP Accelerators by BackOffice Associates Implementation Quick Start Guide
+* SAP Accelerators by BackOffice Associates Installation and Upgrade Manual
+* SAP Accelerators by BackOffice Associates Operations Guide
+* SAP Accelerators by BackOffice Associates Software Requirements and Hardware Sizing Guide
+ 
+For instructions on updating Release Notes, refer to [Prepare What's New topic/Release Notes.] (
+
+### Source of Content
+Changes to the Installation Manuals are tracked in jira. Source of changes include:
+* Other Jira tickets
+* Slack 
+* Chris Alberts
+Pay attention to conversations and tickets to pick up on what needs to change in the Installation Manuals. It may be helpful to create the Jira ticket at the start of the release schedule as a location to store installation manual changes. 
+
+### Organization of the InstallManuals Flare Project
+The project is organized by manual. Several sections are used across multiple manuals, with conditional tags applied. 
+The Version History topic (located towards the bottom of the Content Explorer, beneath all the folders) is updated in one location and used across all manuals with the most recent entry at the top.
 
 
 Follow these steps to update the install manuals:
