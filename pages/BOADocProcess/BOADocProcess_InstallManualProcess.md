@@ -48,9 +48,13 @@ Follow these steps to update the install manuals:
    {% include note.html content="The TW will include a link to this folder in the next step when they create the JIRA epic/subtasks." %}
 4. [The TW creates a Jira epic for updating the manuals for this release](#create-a-jira-epic-for-the-release).
 5. [The TW adds subtasks for each manual that will require updates to the release epic to track the updates](#add-subtasks-for-manuals-in-jira-epic).
-5. The TW and contributors review and update the manuals in OneDrive and Flare as needed.
+5. The TW and contributors review and update the manuals in OneDrive and Flare as needed. If major changes have been made to the Installation Manuals, they must be reviewed by QE. 
 6.  Once the collaboration is complete and the content is final, the approver sets the **Documentation Status** field to of the installation manual epic Jira issue to **Approved**.
-7.  [The TW makes the required changes in Flare and updates the **Appendix A -- Version History** section to reflect the updates made to the current version](#make-updates-in-flare).
+7.  [The TW makes the required changes in Flare and updates the **Appendix A -- Version History** section to reflect the updates made to the current version](#make-updates-in-flare). Update the Version History as follows:
+* **Revision Release Date -** the GA date
+* **Associated Release Version -** the version for which the manual is created
+* **Revision Description -** the description of the changes made. Includ elinks to topics where applicable
+* **Associated JIRA Tickets -** a list of the JIRA tickets that contain changes reflected in the manual, if applicable
 8.  The TW sets the **Documentation Status** field of the installation manual epic Jira issue to **Peer Review** and requests a peer review from another tech writer on the team.
     {% include note.html content="See the 'Open a pull request for a peer reviewer to review your work' section of the [DSP Documentation Workflow][BOADocProcess_DSPDocWorkflow] page for more information on this process. The process for the Install Manuals is identical, except that for the install manuals the **base** branch will be the **master** branch and the **compare** branch will be the **staging** branch you are making your updates on." %}
 9.  The Peer reviewer makes any necessary edits in Flare and merges the Staging branch with the Master branch.
