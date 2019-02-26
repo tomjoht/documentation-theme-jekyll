@@ -96,9 +96,9 @@ To clone the dsp-install-manuals repo, follow the instructions for [cloning the 
 1. In JIRA click the plus sign on the left side of the **System Dashboard**.
 2. Select the correct project from the **Project** dropdown.
 3. Select **Epic** from the **Issue Type** dropdown.
-4. Enter an epic name in the **Epic Name** field. Ex. "Documentation for 7.0.1 Release (\Installation Manuals and Release Notes)\".
-5. Enter a summary in the **Summary** field. Ex. "Update manuals with changes for 7.0.1."
-6. Enter a description in the **Description** text box. Ex. "Each subtask has a Word document link to the manuals with 7.0 updates. Link to OneDrive folder."
+4. Enter an epic name in the **Epic Name** field. E.g. "Documentation for 7.0.1 Release (\Installation Manuals and Release Notes)\".
+5. Enter a summary in the **Summary** field. E.g. "Update manuals with changes for 7.0.1."
+6. Enter a description in the **Description** text box. E.g. "Each subtask has a Word document link to the manuals with 7.0 updates. Link to OneDrive folder."
    {% include note.html content="Make sure to include a link to the OneDrive folder that you created for this release." %}
 7. Add the **Fix Version**, as the release number.
 8. Add the **Assignee**, as yourself.
@@ -109,9 +109,9 @@ To clone the dsp-install-manuals repo, follow the instructions for [cloning the 
 1. Click on the manual updates JIRA Epic for the release.
 2. Click the plus button to add Subtasks.
 3. Create a subtask for each manual that needs updating.
-4. Enter a summary in the **Summary** field. Ex. BackOffice Associates Installation and Upgrade Manual 7.0.
+4. Enter a summary in the **Summary** field. E.g. BackOffice Associates Installation and Upgrade Manual 7.0.
 5. Add the **Assignee**, as yourself.
-6. Enter the description in the **Description** field. Ex. "The document is located on OneDrive, which is part of Microsoft Office 365. To edit the document, click the following Edit Document link, which opens the document in Word Online. You may have to enter your Outlook username and password to log in to OneDrive. You can edit the document in Word if you wish by clicking on \'Edit Document\' and selecting \'Edit in Word\'. However, DO NOT Save As and create a new version of the document.
+6. Enter the description in the **Description** field. E.g. "The document is located on OneDrive, which is part of Microsoft Office 365. To edit the document, click the following Edit Document link, which opens the document in Word Online. You may have to enter your Outlook username and password to log in to OneDrive. You can edit the document in Word if you wish by clicking on \'Edit Document\' and selecting \'Edit in Word\'. However, DO NOT Save As and create a new version of the document.
  **NOTE:** If you choose to update the document in Word Online, all marked changes, including yours, are not displayed though they are tracked. However, when the document is reviewed in Word (by clicking Edit in Word) the changes are marked by Track Changes."
    {% include note.html content="Include a link to the OneDrive folder at the bottom of the desciption so that reviewers who do not have access to Flare can see the content and provide comments and edits." %}
 
