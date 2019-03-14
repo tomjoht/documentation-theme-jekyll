@@ -4,3 +4,5 @@ _site/
 _pdf
 .DS_Store
 .idea
+vendor/
+.bundle/
