@@ -1,5 +1,5 @@
 ---
-title: "University of Colorado Educational Resources"
+title: "University of Colorado Educational Resources Updated"
 keywords: sample homepage
 tags: [getting_started]
 sidebar: mydoc_sidebar
