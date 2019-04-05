@@ -12,7 +12,7 @@ site_title: Computer Science Educational Resources
 company_name: Department of Computer Science, University of Colorado, Boulder.
 # this appears in the footer
 
-github_editme_path: Colorado-CompSci-Ugrad/Colorado-CompSci-Ugrad.github.io/blob/master
+github_editme_path: Colorado-CompSci-Ugrad/Colorado-CompSci-Ugrad.github.io/blob/master/
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
 # gitlab_editme_path: tomjoht/documentation-theme-jekyll/blob/gh-pages/
