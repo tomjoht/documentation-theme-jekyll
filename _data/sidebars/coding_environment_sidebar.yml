@@ -1,0 +1,61 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+
+entries:
+- title: Sidebar
+  product: Coding Environment
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage.html
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage.html
+      output: pdf
+      type: frontmatter
+
+  - title: Getting Started
+    output: web, pdf
+    folderitems:
+    - title: Coding Environment home
+      url: /coding_environment_landing_page.html
+      output: web
+
+    - title: Text Editor
+      url: /coding_environment_text_editor.md
+      output: web, pdf
+
+    - title: Terminal
+      url: coding_environment_terminal.md
+      output: web, pdf
+
+    - title: Diagram
+      url: /coding_environment_diagram.html
+      output: web, pdf
+
+  - title: Jupyter Notebook
+    output: web, pdf
+    folderitems:
+        - title: Jupyter Notebook home
+          url: /coding_environment_jupyter_notebook.html
+          output: web, pdf
+
+        - title: Resources
+          url: /coding_environment_jupyter_notebook_resources.md
+          output: web, pdf
+
+  - title: Visual Studio (VS) Code
+    output: web, pdf
+    folderitems:
+      - title: Visual Studio Code home
+        url: /coding_environment_vs_code.html
+        output: web, pdf
+
+      - title: Tutorials
+        url: coding_environment_vs_code_tutorials.md
+        output: web, pdf
