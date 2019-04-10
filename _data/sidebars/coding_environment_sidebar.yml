@@ -26,8 +26,8 @@ entries:
       url: /coding_environment_landing_page.html
       output: web
 
-    - title: Text Editor
-      url: /coding_environment_text_editor.md
+    - title: Logging In
+      url: /coding_environment_login.md
       output: web, pdf
 
     - title: Terminal

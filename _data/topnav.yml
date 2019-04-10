@@ -14,6 +14,8 @@ topnav_dropdowns:
   folders:
     - title: Services
       folderitems:
+        - title: Resources
+          url: /index.html
         - title: Coding Environment
           url: /coding_environment_landing_page.html
         - title: Moodle

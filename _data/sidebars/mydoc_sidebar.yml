@@ -22,89 +22,47 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Get started
+    - title: Introduction
       url: /index.html
       output: web, pdf
       type: homepage
-
-    - title: Introduction
-      url: /mydoc_introduction.html
-      output: web, pdf
-
-    - title: Supported features
-      url: /mydoc_supported_features.html
-      output: web, pdf
-
-    - title: About the theme author
-      url: /mydoc_about.html
-      output: web, pdf
-
-    - title: Support
-      url: /mydoc_support.html
-      output: web, pdf
 
   - title: Services
     output: web, pdf
     folderitems:
 
-    - title: 6.0 Release notes
-      url: /mydoc_release_notes_60.html
+    - title: Coding Environment
+      url: /coding_environment_landing_page.html
       output: web, pdf
 
-    - title: 5.0 Release notes
-      url: /mydoc_release_notes_50.html
+    - title: Moodle
+      url: /moodle_landing_page.html
       output: web, pdf
 
   - title: Software
     output: web, pdf
     folderitems:
 
-    - title: About Ruby, Gems, Bundler, etc.
-      url: /mydoc_about_ruby_gems_etc.html
+    - title: VMware
+      url: /cser_vmware.html
       output: web, pdf
 
-    - title: Install Jekyll on Mac
-      url: /mydoc_install_jekyll_on_mac.html
+    - title: CS VM
+      url: /cser_cs_vm.html
       output: web, pdf
 
-    - title: Install Jekyll on Windows
-      url: /mydoc_install_jekyll_on_windows.html
+    - title: Campus Offerings
+      url: /cser_campus_offerings.html
       output: web, pdf
 
-  - title: Training
-    output: web, pdf
-
-    folderitems:
-    - title: Pages
-      url: /mydoc_pages.html
+    - title: OIT Licensed
+      url: https://oit.colorado.edu\/software-hardware\/software-downloads-and-licensing
       output: web, pdf
 
-    - title: Posts
-      url: /mydoc_posts.html
+    - title: Microsoft
+      url: https://oit.colorado.edu\/software-hardware\/microsoft
       output: web, pdf
 
-    - title: Lists
-      url: /mydoc_lists.html
+    - title: Apple
+      url: https://oit.colorado.edu\/software-hardware\/software-downloads-and-licensing\/apple-software
       output: web, pdf
-
-    - title: Conditional logic
-      url: /mydoc_conditional_logic.html
-      output: web, pdf
-
-    - title: Content reuse
-      url: /mydoc_content_reuse.html
-      output: web, pdf
-
-    - title: Collections
-      url: /mydoc_collections.html
-      output: web, pdf
-
-    - title: WebStorm editor tips
-      url: /mydoc_webstorm_text_editor.html
-      output: web, pdf
-
-    - title: Atom editor tips
-      url: /mydoc_atom_text_editor.html
-      output: web, pdf
-
-  
