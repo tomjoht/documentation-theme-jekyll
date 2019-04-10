@@ -39,17 +39,13 @@ entries:
       url: /moodle_landing_page.html
       output: web, pdf
 
+    - title: Help@CS
+      url: /helpatcs_landing_page.html
+      output: web, pdf
+
   - title: Software
     output: web, pdf
     folderitems:
-
-    - title: VMware
-      url: /cser_vmware.html
-      output: web, pdf
-
-    - title: CS VM
-      url: /cser_cs_vm.html
-      output: web, pdf
 
     - title: Campus Offerings
       url: /cser_campus_offerings.html
@@ -65,4 +61,12 @@ entries:
 
     - title: Apple
       url: https://oit.colorado.edu\/software-hardware\/software-downloads-and-licensing\/apple-software
+      output: web, pdf
+
+    - title: VMware
+      url: /cser_vmware.html
+      output: web, pdf
+
+    - title: CS VM
+      url: /cser_cs_vm.html
       output: web, pdf

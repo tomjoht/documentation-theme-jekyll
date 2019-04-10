@@ -1,0 +1,65 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+
+entries:
+- title: Sidebar
+  product: Help@CS
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage.html
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage.html
+      output: pdf
+      type: frontmatter
+
+  - title: Getting Started
+    output: web, pdf
+    folderitems:
+    - title: Help@CS home
+      url: /helpatcs_landing_page.html
+      output: web
+
+  - title: Documents
+    output: web, pdf
+    folderitems:
+        - title: Service Level Agreement (SLA)
+          url: /helpatcs_sla.html
+          output: web, pdf
+
+        - title: Processes
+          url: /helpatcs_processes.html
+          output: web, pdf
+
+        - title: Procedures
+          url: /helpatcs_procedures.html
+
+  - title: Projects
+    output: web, pdf
+    folderitems:
+      - title: CS Shares
+        url: /helpatcs_cs_shares.html
+        output: web, pdf
+
+      - title: Combined Cloud
+        url: /helpatcs_combined_cloud.html
+        output: web, pdf
+
+      - title: GitHub Enterprise
+        url: /helpatcs_github_enterprise.html
+        output: web, pdf
+
+      - title: CU-SIS Enrollment
+        url: /helpatcs_cu_sis_enrollment.html
+        output: web, pdf
+
+      - title: GitHub Classroom CI Grader
+        url: /helpatcs_github_classroom_ci_grader.html
+        output: web, pdf
+        
