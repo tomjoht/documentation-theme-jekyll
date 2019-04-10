@@ -103,9 +103,11 @@ defaults:
 sidebars:
 - home_sidebar
 - mydoc_sidebar
-- product1_sidebar
-- product2_sidebar
-- other
+- moodle_sidebar
+- coding_envrionment_sidebar
+- helpatcs_sidebar
+- runestone_sidebar
+
 
 description: "Documentation and FAQ for educational resources the Computer Science department at the University of Colorado, Boulder"
 # the description is used in the feed.xml file

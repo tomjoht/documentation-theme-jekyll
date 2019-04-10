@@ -26,27 +26,11 @@ entries:
       url: /coding_environment_landing_page.html
       output: web
 
-    - title: Logging In
-      url: /coding_environment_login.md
-      output: web, pdf
-
-    - title: Terminal
-      url: coding_environment_terminal.md
-      output: web, pdf
-
-    - title: Diagram
-      url: /coding_environment_diagram.html
-      output: web, pdf
-
   - title: Jupyter Notebook
     output: web, pdf
     folderitems:
         - title: Jupyter Notebook home
           url: /coding_environment_jupyter_notebook.html
-          output: web, pdf
-
-        - title: Resources
-          url: /coding_environment_jupyter_notebook_resources.md
           output: web, pdf
 
   - title: Visual Studio (VS) Code
@@ -56,6 +40,9 @@ entries:
         url: /coding_environment_vs_code.html
         output: web, pdf
 
-      - title: Tutorials
-        url: coding_environment_vs_code_tutorials.md
+  - title: Diagram
+    output: web, pdf
+    folderitems:
+      - title: Diagram home
+        url: /coding_environment_diagram.html
         output: web, pdf
