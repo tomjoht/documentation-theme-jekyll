@@ -39,6 +39,10 @@ entries:
       url: /moodle_landing_page.html
       output: web, pdf
 
+    - title: Runestone eBooks
+      url: /runestone_landing_page.html
+      output: web, pdf
+
     - title: Help@CS
       url: /helpatcs_landing_page.html
       output: web, pdf

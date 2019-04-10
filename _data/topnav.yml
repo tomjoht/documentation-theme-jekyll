@@ -20,5 +20,7 @@ topnav_dropdowns:
           url: /coding_environment_landing_page.html
         - title: Moodle
           url: /moodle_landing_page.html
+        - title: Runestone eBooks
+          url: /runestone_landing_page.html
         - title: Help@CS
           url: /helpatcs_landing_page.html
