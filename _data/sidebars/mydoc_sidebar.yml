@@ -43,6 +43,10 @@ entries:
       url: /runestone_landing_page.html
       output: web, pdf
 
+    - title: Cloud Resources
+      url: /cloud_resources_landing_page.html
+      output: web, pdf
+
     - title: Help@CS
       url: /helpatcs_landing_page.html
       output: web, pdf

@@ -22,5 +22,7 @@ topnav_dropdowns:
           url: /moodle_landing_page.html
         - title: Runestone eBooks
           url: /runestone_landing_page.html
+        - title: Cloud Resources
+          url: /cloud_resources_landing_page.html
         - title: Help@CS
           url: /helpatcs_landing_page.html

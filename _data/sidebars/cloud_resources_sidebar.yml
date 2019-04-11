@@ -1,0 +1,55 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+
+entries:
+- title: Sidebar
+  product: Cloud Resources
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage.html
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage.html
+      output: pdf
+      type: frontmatter
+
+  - title: Getting Started
+    output: web, pdf
+    folderitems:
+    - title: Cloud Resources home
+      url: /cloud_resources_landing_page.html
+      output: web
+
+    - title: Google Cloud
+      url: /cloud_resources_google.html
+      output: web, pdf
+
+    - title: Amazon Web Services
+      url: /cloud_resources_amazon.html
+      output: web, pdf
+
+    - title: Microsoft Azure
+      url: /cloud_resources_microsoft.html
+      output: web, pdf
+
+    - title: ChameleonCloud
+      url: /cloud_resources_chameleoncloud.html
+      output: web, pdf
+
+    - title: CloudLab
+      url: /cloud_resources_cloudlab.html
+      output: web, pdf
+
+    - title: XSEDE
+      url: /cloud_resources_xsede.html
+      output: web, pdf
+
+    - title: Jetstream
+      url: /cloud_resources_jetstream.html
+      output: web, pdf
