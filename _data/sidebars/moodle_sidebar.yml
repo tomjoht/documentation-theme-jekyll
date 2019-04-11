@@ -30,12 +30,24 @@ entries:
       url: /moodle_code_runner.html
       output: web, pdf
 
+    - title: Qengine
+      url: /moodle_qengine.html
+      output: web, pdf
+
     - title: INGInious
       url: /moodle_inginious.html
       output: web, pdf
 
-    - title: Turnitin
+    - title: Stack
+      url: /moodle_stack.html
+      output: web, pdf
+
+    - title: TurnItIn
       url: /moodle_turnitin.html
+      output: web, pdf
+
+    - title: Moss
+      url: /moodle_moss.html
       output: web, pdf
 
     - title: H5P
