@@ -8,3 +8,11 @@ folder: helpatcs
 ---
 
 ## Introduction
+
+The purpose of this project is to create a framework for faculty to deploy GitHub Classrooms that leverage continuous integration for auto-grading.
+
+## Deliverables
+
+* GitHub Classroom setup guide
+* GitHub Organization setup guide
+* Template repository with auto-grading functions
