@@ -8,30 +8,14 @@ folder: mydoc
 
 {% include tip.html content="For a better terminal emulator on Windows, use [Git Bash](https://git-for-windows.github.io/). Git Bash gives you Linux-like control on Windows." %}
 
-## Install Ruby
+## Install Ruby and Ruby Development Kit
 
 First you must install Ruby because Jekyll is a Ruby-based program and needs Ruby to run.
 
 1. Go to [RubyInstaller for Windows](http://rubyinstaller.org/downloads/).
-2. Under **RubyInstallers**, download and install one of the Ruby installers (usually one of the first two options).
-3. Double-click the downloaded file and proceed through the wizard to install it.
-
-## Install Ruby Development Kit
-
-Some extensions Jekyll uses require you to natively build the code using the Ruby Development Kit.
-
-1. Go to [RubyInstaller for Windows](http://rubyinstaller.org/downloads/).
-2. Under the **Development Kit** section near the bottom, download one of the **For use with Ruby 2.0 and above...** options (either the 32-bit or 64-bit version).
-3. Move your downloaded file onto your **C** drive in a folder called something like **RubyDevKit**.
-4. Extract the compressed folder's contents into the folder.
-5. Browse to the **RubyDevKit** location on your C drive using your Command Line Prompt.
-
-   To see the contents of your current directory, type <code>dir</code>. To move into a directory, type <code>cd foldername</code>, where "foldername" is the name of the folder you want to enter. To move up a directory, type <code>cd ../</code> one or more times depending on how many levels you want to move up. To move into your user's directory, type <code>/users</code>. The <code>/</code> at the beginning of the path automatically starts you at the root.
-
-6. Type `ruby dk.rb init`
-7. Type `ruby dk.rb install`
-
-If you get stuck, see the [official instructions for installing Ruby Dev Kit](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit).
+2. Under **RubyInstallers**, download and install one of the Ruby installers under the **WITH DEVKIT** list (usually the recommended/highlighted option).
+3. Double-click the downloaded file and proceed through the wizard to install it. Run the `ridk install` step on the last stage of the installation wizard. 
+4. Open a new command prompt window or Git Bash session.
 
 <h2 id="bundler">Install the Jekyll gem</h2>
 
@@ -56,8 +40,10 @@ You install Bundler by using the gem command with RubyGems:
 
 ## Install Bundler
 
-1. Install Bundler: `gem install bundler`
-2. Initialize Bundler: `bundle init`
+1. Browse to the directory where you downloaded the Documentation theme for Jekyll.
+2. Delete or rename the existing `Gemfile` and `Gemfile.lock` files.
+3. Install Bundler: `gem install bundler`
+4. Initialize Bundler: `bundle init`
 
    This will create a new Gemfile.
 
@@ -75,8 +61,8 @@ You install Bundler by using the gem command with RubyGems:
    ```
    The [wdm gem](https://rubygems.org/gems/wdm/versions/0.1.1) allows for the polling of the directory and rebuilding of the Jekyll site when you make changes. This gem is needed for Windows users, not Mac users.
 
-6. Save and close the file.
-7. Type `bundle install`.
+5. Save and close the file.
+6. Type `bundle install`.
 
    Bundle retrieves all the needed gems and gem dependencies and downloads them to your computer. At this time, Bundle also takes a snapshot of all the gems used in your project and creates a Gemfile.lock file to store this information.
 
