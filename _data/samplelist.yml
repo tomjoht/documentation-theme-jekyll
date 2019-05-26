@@ -7,7 +7,7 @@ entries:
     - title: Bananas
       url: bananas.html
 
-      subfolder:
+      subfolders:
       - title: Apples
 
         subfolderitems:
@@ -59,14 +59,14 @@ about:
  - zero
  - one
  - two
- - three 
+ - three
 
 numbercolors:
  - zero:
    properties: red
  - one:
    properties: yellow
- - two: 
+ - two:
    properties: green
  - three:
    properties: blue
@@ -93,15 +93,15 @@ mypages:
   product: acme
   url: microsoft.com
 
-feedback: > 
+feedback: >
   This is my feedback to you.
   Even if I include linebreaks here,
   all of the linebreaks will be removed when the value is inserted.
-    
+
 block: |
-    This pipe does something a little different. 
+    This pipe does something a little different.
     It preserves the breaks.
-    This is really helpful for code samples, 
+    This is really helpful for code samples,
     since you can format the code samples with
        the appropriate
        white spacing.
