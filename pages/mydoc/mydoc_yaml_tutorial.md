@@ -48,7 +48,7 @@ You can read about YAML from a lot of different sources. Here are some basic cha
 
 I realize a lot of this vague and general; however, it will become a lot more clear as we go through some concrete examples.
 
-In the \_data/mydoc folder, there's a file called samplelist.yml. All of these examples come from that file.
+In the \_data folder, there's a file called samplelist.yml. All of these examples come from that file.
 
 ## Example 1: Simple mapping
 
@@ -67,7 +67,7 @@ name:
 <p>Wife's name: {{site.data.samplelist.name.wife}}</p>{% endraw %}
 ```
 
-Notice that in order to access the data file, you use `site.data.samplelist`. `mydoc` is the folder, and `samplelist` is the name of the YAML file.
+Notice that in order to access the data file, you use `site.data.samplelist` where as `samplelist` is the name of the YAML file.
 
 **Result:**
 
@@ -172,7 +172,7 @@ salesteams:
 {% for item in site.data.samplelist.salesteams %}
 <h3>{{item.title}}</h3>
 <ul>
-{% for entry in item.subitems %}
+{% for entry in item.subfolderitems %}
 <li>{{entry.location}}</li>
 {% endfor %}
 </ul>
@@ -193,7 +193,7 @@ salesteams:
 {% endfor %}
 </div>
 
-Hopefully you can start to see how to wrap more complex formatting around the YAML content. When you use a "for" loop, you choose the variable of what to call the list items. The variable you choose to use becomes how you access the properties of each list item. In this case, I decided to use the variable `item`. In order to get each property of the list item, I used `item.subitems`.
+Hopefully you can start to see how to wrap more complex formatting around the YAML content. When you use a "for" loop, you choose the variable of what to call the list items. The variable you choose to use becomes how you access the properties of each list item. In this case, I decided to use the variable `item`. In order to get each property of the list item, I used `item.subfolderitems`.
 
 Each list item starts with the hyphen `–`.  You cannot directly access the list item by referring to a mapping. You only loop through the list items. If you wanted to access the list item, you would have to use something like `[1]`, which is how you access the position in an array. You cannot access a list item like you can access a mapping key.
 
