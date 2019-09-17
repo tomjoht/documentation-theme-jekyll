@@ -33,6 +33,7 @@ port: 4000
 exclude:
   - .idea/
   - .gitignore
+  - vendor
 # these are the files and directories that jekyll will exclude from the build
 
 feedback_subject_line: Jekyll documentation theme
@@ -113,3 +114,6 @@ description: "Intended as a documentation theme based on Jekyll for technical wr
 # needed for sitemap.xml file only
 # url: http://idratherbewriting.com
 # baseurl: /documentation-theme-jekyll
+
+
+github: [metadata]

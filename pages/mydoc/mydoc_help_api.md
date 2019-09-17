@@ -15,7 +15,7 @@ You can create a help API that developers can use to pull in content.
 
 For the full code demo, see the notes in the [Tooltips file](tooltips.html).
 
-In this demo, the popovers pull in and display content from the information in a <a target="_blank" href="tooltips.json">tooltips.json</a> file located in the same directory.
+In this demo, the popovers pull in and display content from the information in a <a target="_blank" rel="noopener" href="tooltips.json">tooltips.json</a> file located in the same directory.
 
 Instead of placing the JSON source in the same directory, you could also host the JSON file on another site.
 
@@ -134,11 +134,11 @@ This code will loop through all pages in the tooltips collection and insert the 
 }
 ```
 
-You can also view the same JSON file here: <a target="_blank" href="tooltips.json">tooltips.json</a>.
+You can also view the same JSON file here: <a target="_blank" rel="noopener" href="tooltips.json">tooltips.json</a>.
 
 You can add different fields depending on how you want the JSON to be structured. Here we just have to fields: `doc_id` and `body`. And the JSON is looking just in the tooltips collection that we created.
 
-{% include tip.html content="Check out [Google's style guide](https://google-styleguide.googlecode.com/svn/trunk/jsoncstyleguide.xml) for JSON. These best practices can help you keep your JSON file valid." %}
+{% include tip.html content="Check out [Google's style guide](https://google.github.io/styleguide/jsoncstyleguide.xml) for JSON. These best practices can help you keep your JSON file valid." %}
 
 Note that you can create different JSON files that specialize in different content. For example, suppose you have some getting started information. You could put that into a different JSON file. Using the same structure, you might add an `if` tag that checks whether the page has frontmatter that says `type: getting_started` or something. Or you could put the content into separate collection entirely (different from tooltips).
 
@@ -236,7 +236,7 @@ Developers can access the help using the `.get` method from jQuery, among other 
              });{% endraw %}
 ```
 
-View the <a target="_blank" href="tooltips.html" class="noCrossRef">tooltip demo</a> for a demonstration. See the source code for full code details.
+View the <a target="_blank" rel="noopener" href="tooltips.html" class="noCrossRef">tooltip demo</a> for a demonstration. See the source code for full code details.
 
 The `url` in the demo is relative, but you could equally point it to an absolute path on a remote host assuming CORS is enabled on the host.
 
@@ -275,7 +275,7 @@ Again, see the <a class="noCrossRef" href="tooltips.html">Tooltip Demo</a> for a
 
 Note that even though you reference a Bootstrap JS script, Bootstrap's popovers require you to initialize them using the above code as well &mdash; they aren't turned on by default.
 
-View the source code of the <a target="_blank" href="tooltips.html" class="noCrossRef">tooltip demo</a> for the full comments.
+View the source code of the <a target="_blank" rel="noopener" href="tooltips.html" class="noCrossRef">tooltip demo</a> for the full comments.
 
 ## 8. Create easy links to embed the help in your help site
 
