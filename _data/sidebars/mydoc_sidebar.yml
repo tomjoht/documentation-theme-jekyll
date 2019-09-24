@@ -56,6 +56,10 @@ entries:
       url: /mydoc_release_notes_50.html
       output: web, pdf
 
+    - title: 2019_09_17 Release notes
+      url: /mydoc_release_notes_2019_09_17.html
+      output: web, pdf
+
   - title: Installation
     output: web, pdf
     folderitems:
