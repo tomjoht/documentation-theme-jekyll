@@ -19,11 +19,11 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: WOW Shuffles
+  - title: WOW Vanilla Shuffles
     output: web, pdf
     folderitems:
 
-    - title: WOW Shuff explaination
+    - title: WOW Vanilla Shuffles explainations
       url: /index.html
       output: web, pdf
       type: homepage
@@ -61,7 +61,7 @@ entries:
               url: /tag_troubleshooting.html
               output: web
 
-  - title: Release Notes
+  - title: WOW Burning Cru Shuffles
     output: web, pdf
     folderitems:
 
@@ -73,7 +73,40 @@ entries:
       url: /mydoc_release_notes_50.html
       output: web, pdf
 
-  - title: Installation
+      subfolders:
+        - title: Burning Cru Shuffles
+          output: web
+          subfolderitems:
+
+            - title: First One
+              url: /tag_formatting.html
+              output: web
+
+            - title: Second One
+              url: /tag_navigation.html
+              output: web
+
+            - title: Third One
+              url: /tag_content_types.html
+              output: web
+
+            - title: Fourth One
+              url: /tag_publishing.html
+              output: web
+
+            - title: Fifth One
+              url: /tag_special_layouts.html
+              output: web
+
+            - title: Sixth One
+              url: /tag_collaboration.html
+              output: web
+
+            - title: Seventh One
+              url: /tag_troubleshooting.html
+              output: web
+
+  - title: WOW WOTLK Shuffles
     output: web, pdf
     folderitems:
 
@@ -89,7 +122,41 @@ entries:
       url: /mydoc_install_jekyll_on_windows.html
       output: web, pdf
 
-  - title: Authoring
+      subfolders:
+        - title: WOTLK Shuffles
+          output: web
+          subfolderitems:
+
+            - title: First One
+              url: /tag_formatting.html
+              output: web
+
+            - title: Second One
+              url: /tag_navigation.html
+              output: web
+
+            - title: Third One
+              url: /tag_content_types.html
+              output: web
+
+            - title: Fourth One
+              url: /tag_publishing.html
+              output: web
+
+            - title: Fifth One
+              url: /tag_special_layouts.html
+              output: web
+
+            - title: Sixth One
+              url: /tag_collaboration.html
+              output: web
+
+            - title: Seventh One
+              url: /tag_troubleshooting.html
+              output: web
+
+
+  - title: WOW MOP Shuffles
     output: web, pdf
 
     folderitems:
@@ -124,6 +191,39 @@ entries:
     - title: Atom editor tips
       url: /mydoc_atom_text_editor.html
       output: web, pdf
+
+      subfolders:
+        - title: WOW MOP Shuffles
+          output: web
+          subfolderitems:
+
+            - title: First One
+              url: /tag_formatting.html
+              output: web
+
+            - title: Second One
+              url: /tag_navigation.html
+              output: web
+
+            - title: Third One
+              url: /tag_content_types.html
+              output: web
+
+            - title: Fourth One
+              url: /tag_publishing.html
+              output: web
+
+            - title: Fifth One
+              url: /tag_special_layouts.html
+              output: web
+
+            - title: Sixth One
+              url: /tag_collaboration.html
+              output: web
+
+            - title: Seventh One
+              url: /tag_troubleshooting.html
+              output: web
 
   - title: Navigation
     output: web, pdf
