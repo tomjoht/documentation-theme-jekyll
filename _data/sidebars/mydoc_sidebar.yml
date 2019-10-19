@@ -2,8 +2,8 @@
 
 entries:
 - title: sidebar
-  product: Jekyll Doc Theme
-  version: 6.0
+  product: Gold Farming Guides
+  version: 1.0
   folders:
 
   - title:
@@ -61,7 +61,7 @@ entries:
               url: /tag_troubleshooting.html
               output: web
 
-  - title: WOW Burning Cru Shuffles
+  - title: WOW BC Shuffles
     output: web, pdf
     folderitems:
 
@@ -74,7 +74,7 @@ entries:
       output: web, pdf
 
       subfolders:
-        - title: Burning Cru Shuffles
+        - title: BC Shuffles
           output: web
           subfolderitems:
 
@@ -193,7 +193,7 @@ entries:
       output: web, pdf
 
       subfolders:
-        - title: WOW MOP Shuffles
+        - title: MOP Shuffles
           output: web
           subfolderitems:
 
@@ -225,7 +225,7 @@ entries:
               url: /tag_troubleshooting.html
               output: web
 
-  - title: Navigation
+  - title: WOW WOD Shuffles
     output: web, pdf
 
     folderitems:
@@ -245,7 +245,40 @@ entries:
       url: /mydoc_series.html
       output: web, pdf
 
-  - title: Formatting
+      subfolders:
+        - title: WOD Shuffles
+          output: web
+          subfolderitems:
+
+            - title: First One
+              url: /tag_formatting.html
+              output: web
+
+            - title: Second One
+              url: /tag_navigation.html
+              output: web
+
+            - title: Third One
+              url: /tag_content_types.html
+              output: web
+
+            - title: Fourth One
+              url: /tag_publishing.html
+              output: web
+
+            - title: Fifth One
+              url: /tag_special_layouts.html
+              output: web
+
+            - title: Sixth One
+              url: /tag_collaboration.html
+              output: web
+
+            - title: Seventh One
+              url: /tag_troubleshooting.html
+              output: web
+
+  - title: WOW Legion Shuffles
     output: web, pdf
 
     folderitems:
@@ -293,7 +326,40 @@ entries:
       url: /mydoc_workflow_maps.html
       output: web, pdf
 
-  - title: Handling reviews
+      subfolders:
+        - title: Legion Shuffles
+          output: web
+          subfolderitems:
+
+            - title: First One
+              url: /tag_formatting.html
+              output: web
+
+            - title: Second One
+              url: /tag_navigation.html
+              output: web
+
+            - title: Third One
+              url: /tag_content_types.html
+              output: web
+
+            - title: Fourth One
+              url: /tag_publishing.html
+              output: web
+
+            - title: Fifth One
+              url: /tag_special_layouts.html
+              output: web
+
+            - title: Sixth One
+              url: /tag_collaboration.html
+              output: web
+
+            - title: Seventh One
+              url: /tag_troubleshooting.html
+              output: web
+
+  - title: WOW BFA Shuffles
     output: web, pdf
 
     folderitems:
@@ -305,7 +371,40 @@ entries:
 #      url: /mydoc_git_collaboration
 #      output: web, pdf
 
-  - title: Publishing
+      subfolders:
+        - title: BFA Shuffles
+          output: web
+          subfolderitems:
+
+            - title: First One
+              url: /tag_formatting.html
+              output: web
+
+            - title: Second One
+              url: /tag_navigation.html
+              output: web
+
+            - title: Third One
+              url: /tag_content_types.html
+              output: web
+
+            - title: Fourth One
+              url: /tag_publishing.html
+              output: web
+
+            - title: Fifth One
+              url: /tag_special_layouts.html
+              output: web
+
+            - title: Sixth One
+              url: /tag_collaboration.html
+              output: web
+
+            - title: Seventh One
+              url: /tag_troubleshooting.html
+              output: web
+
+  - title: TSM 3 Group & Op's
     output: web, pdf
 
     folderitems:
@@ -341,7 +440,7 @@ entries:
       url: /mydoc_publishing_github_pages.html
       output: web, pdf
 
-  - title: Special layouts
+  - title: TSM 4 Groups & OP's
     output: web, pdf
 
     folderitems:
@@ -361,7 +460,7 @@ entries:
       url: /mydoc_shuffle.html
       output: web, pdf
 
-  - title: Troubleshooting
+  - title: About Me
     output: web, pdf
 
     folderitems:
@@ -370,7 +469,7 @@ entries:
       url: /mydoc_troubleshooting.html
       output: web, pdf
 
-  - title: Tag archives
+  - title: Mozzle Social Medias
     output: web
     folderitems:
 
