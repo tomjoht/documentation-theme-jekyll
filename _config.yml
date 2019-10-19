@@ -1,9 +1,9 @@
-repository: tomjoht/documentation-theme-jekyll
+repository: Gunnydelight/mozzletoff-wow-goldfarm-site
 
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: Jekyll Documentation Theme
+topnav_title: Jekyll Documentation
 # this appears on the top navigation bar next to the home button
 
 site_title: Jekyll theme for documentation
@@ -38,7 +38,7 @@ exclude:
 
 feedback_subject_line: Jekyll documentation theme
 
-feedback_email: tomjoht@gmail.com
+feedback_email: mozzletoffgaming@gmail.com
 # used as a contact email for the Feedback link in the top navigation bar
 
 # feedback_disable: true
