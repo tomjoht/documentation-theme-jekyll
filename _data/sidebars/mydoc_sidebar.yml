@@ -460,7 +460,7 @@ entries:
       url: /mydoc_shuffle.html
       output: web, pdf
 
-  - title: Raw Mats Farming Routes
+  - title: Herb | Mining Farming Routes
     output: web, pdf
 
     folderitems:
@@ -469,7 +469,7 @@ entries:
       url: /mydoc_troubleshooting.html
       output: web, pdf
 
-  - title: Mozzle Social Medias
+  - title: Multibox | Group Goldfarms
     output: web
     folderitems:
 
@@ -509,3 +509,4 @@ entries:
         - title: Troubleshooting pages
           url: /tag_troubleshooting.html
           output: web
+
