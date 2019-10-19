@@ -23,7 +23,7 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Get started
+    - title: WOW Shuff explaination
       url: /index.html
       output: web, pdf
       type: homepage
@@ -33,31 +33,31 @@ entries:
           output: web
           subfolderitems:
 
-            - title: Formatting pages
+            - title: First One
               url: /tag_formatting.html
               output: web
 
-            - title: Navigation pages
+            - title: Second One
               url: /tag_navigation.html
               output: web
 
-            - title: Content types pages
+            - title: Third One
               url: /tag_content_types.html
               output: web
 
-            - title: Publishing pages
+            - title: Fourth One
               url: /tag_publishing.html
               output: web
 
-            - title: Special layout pages
+            - title: Fifth One
               url: /tag_special_layouts.html
               output: web
 
-            - title: Collaboration pages
+            - title: Sixth One
               url: /tag_collaboration.html
               output: web
 
-            - title: Troubleshooting pages
+            - title: Seventh One
               url: /tag_troubleshooting.html
               output: web
 
