@@ -23,43 +23,33 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: WOW Vanilla Shuffles explainations
+    - title: Vanilla - BFA Shuffles explaination
       url: /index.html
       output: web, pdf
       type: homepage
+# Mozz, Update the URL above to create a new HTML file & point away from index doc
 
       subfolders:
-        - title: Vanilla (Retail) Shuffles
+        - title: Popular Vanilla (Retail) Shuffles
           output: web
           subfolderitems:
 
-            - title: First One
-              url: /tag_formatting.html
+            - title:
+              url:
               output: web
 
-            - title: Second One
-              url: /tag_navigation.html
+            - title:
+              url:
               output: web
 
-            - title: Third One
-              url: /tag_content_types.html
+            - title:
+              url:
               output: web
 
-            - title: Fourth One
-              url: /tag_publishing.html
+            - title:
+              url:
               output: web
 
-            - title: Fifth One
-              url: /tag_special_layouts.html
-              output: web
-
-            - title: Sixth One
-              url: /tag_collaboration.html
-              output: web
-
-            - title: Seventh One
-              url: /tag_troubleshooting.html
-              output: web
 
   - title: WOW BC Shuffles
     output: web, pdf
@@ -74,36 +64,28 @@ entries:
       output: web, pdf
 
       subfolders:
-        - title: BC Shuffles
+        - title: Popular BC Shuffles
           output: web
           subfolderitems:
 
-            - title: First One
-              url: /tag_formatting.html
+            - title:
+              url:
               output: web
 
-            - title: Second One
-              url: /tag_navigation.html
+            - title:
+              url:
               output: web
 
-            - title: Third One
-              url: /tag_content_types.html
+            - title:
+              url:
               output: web
 
-            - title: Fourth One
-              url: /tag_publishing.html
+            - title:
+              url:
               output: web
 
-            - title: Fifth One
-              url: /tag_special_layouts.html
-              output: web
-
-            - title: Sixth One
-              url: /tag_collaboration.html
-              output: web
-
-            - title: Seventh One
-              url: /tag_troubleshooting.html
+            - title:
+              url:
               output: web
 
   - title: WOW WOTLK Shuffles
@@ -123,38 +105,29 @@ entries:
       output: web, pdf
 
       subfolders:
-        - title: WOTLK Shuffles
+        - title: Popular WOTLK Shuffles
           output: web
           subfolderitems:
 
-            - title: First One
-              url: /tag_formatting.html
+            - title:
+              url:
               output: web
 
-            - title: Second One
-              url: /tag_navigation.html
+            - title:
+              url:
               output: web
 
-            - title: Third One
-              url: /tag_content_types.html
+            - title:
+              url:
               output: web
 
-            - title: Fourth One
-              url: /tag_publishing.html
+            - title:
+              url:
               output: web
 
-            - title: Fifth One
-              url: /tag_special_layouts.html
+            - title:
+              url:
               output: web
-
-            - title: Sixth One
-              url: /tag_collaboration.html
-              output: web
-
-            - title: Seventh One
-              url: /tag_troubleshooting.html
-              output: web
-
 
   - title: WOW MOP Shuffles
     output: web, pdf
@@ -193,37 +166,30 @@ entries:
       output: web, pdf
 
       subfolders:
-        - title: MOP Shuffles
+        - title: Popular MOP Shuffles
           output: web
           subfolderitems:
 
-            - title: First One
-              url: /tag_formatting.html
+            - title:
+              url:
               output: web
 
-            - title: Second One
-              url: /tag_navigation.html
+            - title:
+              url:
               output: web
 
-            - title: Third One
-              url: /tag_content_types.html
+            - title:
+              url:
               output: web
 
-            - title: Fourth One
-              url: /tag_publishing.html
+            - title:
+              url:
               output: web
 
-            - title: Fifth One
-              url: /tag_special_layouts.html
+            - title:
+              url:
               output: web
 
-            - title: Sixth One
-              url: /tag_collaboration.html
-              output: web
-
-            - title: Seventh One
-              url: /tag_troubleshooting.html
-              output: web
 
   - title: WOW WOD Shuffles
     output: web, pdf
@@ -246,36 +212,28 @@ entries:
       output: web, pdf
 
       subfolders:
-        - title: WOD Shuffles
+        - title: Popular WOD Shuffles
           output: web
           subfolderitems:
 
-            - title: First One
-              url: /tag_formatting.html
+            - title:
+              url:
               output: web
 
-            - title: Second One
-              url: /tag_navigation.html
+            - title:
+              url:
               output: web
 
-            - title: Third One
-              url: /tag_content_types.html
+            - title:
+              url:
               output: web
 
-            - title: Fourth One
-              url: /tag_publishing.html
+            - title:
+              url:
               output: web
 
-            - title: Fifth One
-              url: /tag_special_layouts.html
-              output: web
-
-            - title: Sixth One
-              url: /tag_collaboration.html
-              output: web
-
-            - title: Seventh One
-              url: /tag_troubleshooting.html
+            - title:
+              url:
               output: web
 
   - title: WOW Legion Shuffles
@@ -327,36 +285,28 @@ entries:
       output: web, pdf
 
       subfolders:
-        - title: Legion Shuffles
+        - title: Popular Legion Shuffles
           output: web
           subfolderitems:
 
-            - title: First One
-              url: /tag_formatting.html
+            - title:
+              url:
               output: web
 
-            - title: Second One
-              url: /tag_navigation.html
+            - title:
+              url:
               output: web
 
-            - title: Third One
-              url: /tag_content_types.html
+            - title:
+              url:
               output: web
 
-            - title: Fourth One
-              url: /tag_publishing.html
+            - title:
+              url:
               output: web
 
-            - title: Fifth One
-              url: /tag_special_layouts.html
-              output: web
-
-            - title: Sixth One
-              url: /tag_collaboration.html
-              output: web
-
-            - title: Seventh One
-              url: /tag_troubleshooting.html
+            - title:
+              url:
               output: web
 
   - title: WOW BFA Shuffles
@@ -372,36 +322,28 @@ entries:
 #      output: web, pdf
 
       subfolders:
-        - title: BFA Shuffles
+        - title: Popular BFA Shuffles
           output: web
           subfolderitems:
 
-            - title: First One
-              url: /tag_formatting.html
+            - title:
+              url:
               output: web
 
-            - title: Second One
-              url: /tag_navigation.html
+            - title:
+              url:
               output: web
 
-            - title: Third One
-              url: /tag_content_types.html
+            - title:
+              url:
               output: web
 
-            - title: Fourth One
-              url: /tag_publishing.html
+            - title:
+              url:
               output: web
 
-            - title: Fifth One
-              url: /tag_special_layouts.html
-              output: web
-
-            - title: Sixth One
-              url: /tag_collaboration.html
-              output: web
-
-            - title: Seventh One
-              url: /tag_troubleshooting.html
+            - title:
+              url:
               output: web
 
   - title: TSM 3 Group & Op's
@@ -478,7 +420,7 @@ entries:
       output: web
 
       subfolders:
-      - title: Tag archive pages
+      - title: Current Popular Retail MB Farms
         output: web
         subfolderitems:
 
