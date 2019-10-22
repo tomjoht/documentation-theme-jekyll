@@ -46,6 +46,8 @@ I dont know... Warcraft/Gold Farming! Multiboxing x4 Diablo 3.
 ### What games do you play offline?
 Blizzard & Activision suite of games, Fornite, and Steam Library. Top 2 steam games? Divinity II & DOTA.
 
+[Here](https://drive.google.com/file/d/0B_KWu4K9rqXESTQwdEJROFlTa0k/view?usp=sharing) is a list of all the games available to Mozzle this very moment.
+
 ## How do I navigate this website?
 Rely on the **Navigation improvements** on the site & the site **Tagging** at the bottom of each article for finding similiar liked articles. Use the top bar, side bar and tags at the bottom of relatable articles.
 
