@@ -2,9 +2,9 @@
 title: About the theme's author
 keywords: documentation theme, jekyll, technical writers, help authoring tools, hat replacements
 last_updated: October 21, 2019
-tags: []
+tags: [example]
 summary: "This WOW shuffle is to explain how to get... from doing the ... shuffle"
-sidebar: 
+sidebar: mydoc_sidebar
 permalink: example.html
 folder: wow-shuffles
 ---
