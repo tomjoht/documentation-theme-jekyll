@@ -12,7 +12,7 @@ topnav:
 topnav_dropdowns:
 - title: Topnav dropdowns
   folders:
-    - title: Social Medias
+    - title: Mozzle's Social Medias
       folderitems:
         - title: Twitch TV
           external_url: https://www.twitch.tv/mozzletoff
@@ -36,3 +36,28 @@ topnav_dropdowns:
           external_url: https://streamlabs.com/mozzletoff/tip
         - title: Ms Katelynn NICU support
           external_url: https://www.gofundme.com/f/katelynn-joy-nicu-fund
+    - title: TTV Creators
+      folderitems:
+        - title: person 1
+          external_url: https://gunnydelight.github.io/mozzletoff-wow-goldfarm-site/example.html
+        - title: person 2
+          external_url: https://gunnydelight.github.io/mozzletoff-wow-goldfarm-site/example.html
+        - title: person 3
+          external_url: https://gunnydelight.github.io/mozzletoff-wow-goldfarm-site/example.html
+        - title: person 4
+          external_url: https://gunnydelight.github.io/mozzletoff-wow-goldfarm-site/example.html
+        - title: person 5
+          external_url: https://gunnydelight.github.io/mozzletoff-wow-goldfarm-site/example.html
+
+    - title: YT Creators
+      folderitems:
+        - title: person 1
+          external_url: https://gunnydelight.github.io/mozzletoff-wow-goldfarm-site/example.html
+        - title: person 2
+          external_url: https://gunnydelight.github.io/mozzletoff-wow-goldfarm-site/example.html
+        - title: person 3
+          external_url: https://gunnydelight.github.io/mozzletoff-wow-goldfarm-site/example.html
+        - title: person 4
+          external_url: https://gunnydelight.github.io/mozzletoff-wow-goldfarm-site/example.html
+        - title: person 5
+          external_url: https://gunnydelight.github.io/mozzletoff-wow-goldfarm-site/example.html
