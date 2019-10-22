@@ -326,9 +326,9 @@ entries:
           output: web
           subfolderitems:
 
-            - title:
-              url:
-              output: web
+            - title: Example
+              url: /example.html
+              output: web, pdf
 
             - title:
               url:
