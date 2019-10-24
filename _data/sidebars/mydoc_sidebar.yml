@@ -313,8 +313,8 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: Commenting on files
-      url: /mydoc_commenting_on_files.html
+    - title: Samadan's Super Bracer Shuffle
+      url: /bfa-bracer-shuffle.html
       output: web, pdf
 
 #    - title: Git collaboration
