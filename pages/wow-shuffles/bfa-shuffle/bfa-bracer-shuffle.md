@@ -11,7 +11,9 @@ folder: wow-shuffles
 
 # Overview
 {% include image.html file="bfa-samadan-bracer-shuffle.png" caption="" %}
-By [TTV/SamadanPlaysWOW](https://www.twitch.tv/SamadanPlaysWoW)
+
+ By [TTV/SamadanPlaysWOW](https://www.twitch.tv/SamadanPlaysWoW)
+
 [Samadan's Video walkthrough](https://www.youtube.com/watch?v=AlKEatvXuFM)
 
 ## Google Sheets calculator
@@ -42,7 +44,7 @@ Various items required in the shuffle for either plate, leather or cloth bracers
 | Cragscale|[Direct WOWHEAD Link](https://www.wowhead.com/item=168650/cragscale).|
 | Blood-Stained Bone|[Direct WOWHEAD Link](https://www.wowhead.com/item=154164/blood-stained-bone).|
 | Tempest Hide|[Direct WOWHEAD Link](https://www.wowhead.com/item=154722/tempest-hide).|
-| Calcified Bone|[Direct WOWHEAD Link](https://www.wowhead.com/spell=139192/sky-golem).|
+| Calcified Bone|[Direct WOWHEAD Link](https://www.wowhead.com/item=154165/calcified-bone).|
 | Coarse Leather|[Direct WOWHEAD Link](https://www.wowhead.com/item=152541/coarse-leather).|
 
 ## Prerequisites for the Shuffle
@@ -61,22 +63,20 @@ In order to be able to do this shuffle, you must do the following:
 3. Get the required mats in order to do the tailor, bs or lw shuffle
 ```
 
-
 ## Tips and Tricks
 When doing this shuffle:
 
 ```
-1. Look for oppurtunuties to buy in buly. Trade Channel advertise macros for items involved in the shuffle will help increase profit
+1. Look for opportunities to buy in bulk. Trade Channel advertise macros for items involved in the shuffle will help increase profit
 2. R3, R3, R3, R3 for the bracer shuffle
 3. Get the required mats in order to do the tailor, bs or lw shuffle
 ```
 
-
-
 ## Reference Links
 [WoW Economy thread](https://www.reddit.com/r/woweconomy/comments/aqk37l/the_bracer_super_shuffle/)
 
-[Samadan's Shopping & Sniping Operation](https://pastebin.com/Au7M4vmB)
+[SamadanPlaysWOW's Pastebin: Shopping & Sniping Operation](https://pastebin.com/Au7M4vmB)
 
-[Samadan's Video walkthrough](https://www.youtube.com/watch?v=AlKEatvXuFM)
+[SamadanPlaysWOW's Video walkthrough](https://www.youtube.com/watch?v=AlKEatvXuFM)
 
+[SamadanPlaysWOW Twitter](https://www.twitter.com/SamadanPlaysWOW)
