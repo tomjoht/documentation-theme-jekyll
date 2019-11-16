@@ -30,7 +30,7 @@ Here is a list of the item's that you can earn:
 
 ## Items involved in the Shuffle
 
-Here is a list of the item's that you can earn:
+Here is a list of the item's needed in the shuffle:
 
 |Item|URL|
 |-------|--------|
@@ -56,9 +56,10 @@ In order to be able to do this shuffle, you must do the following:
 3.  Third Step...
 ```
 
-
-
 ## Tips and Tricks
 When doing this farms, be aware of
+
+## Reference Links
+
 
 {% include links.html %}

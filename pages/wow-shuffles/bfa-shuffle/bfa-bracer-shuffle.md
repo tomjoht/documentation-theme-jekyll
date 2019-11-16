@@ -3,7 +3,7 @@ title: SamadanPlaysWOW's Bracer Super Shuffle
 keywords: documentation theme, jekyll, technical writers, help authoring tools, hat replacements
 last_updated: October 24, 2019
 tags: [shuffles, bfa]
-summary: "This WOW shuffle is to explain how to get... from doing the ... shuffle"
+summary: "This WOW shuffle by SamadanPlaysWOW is to explain how to get Expulsom, Umbra Shard & Veiled Crystal from doing the tailoring bracer shuffle"
 sidebar: mydoc_sidebar
 permalink: bfa-bracer-shuffle.html
 folder: wow-shuffles
@@ -59,7 +59,7 @@ In order to be able to do this shuffle, you must do the following:
 
 ```
 1. Use Samadan's YouTube video explanation: https://www.youtube.com/watch?v=AlKEatvXuFM
-2. Understand your profit margins for the shuffle as it varies server to serve
+2. Understand your profit margins for the shuffle as it varies server to server
 3. Get the required mats in order to do the tailor, bs or lw shuffle
 ```
 
