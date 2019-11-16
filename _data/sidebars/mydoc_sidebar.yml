@@ -317,8 +317,8 @@ entries:
       url: /bfa-bracer-shuffle.html
       output: web, pdf
 
-    - title: BFA Flask Shuffle
-      url: /bfa-flask-shuffle.html
+    - title: Anchor Weed shuffle
+      url: /bfa-anchor-weed-shuffle.html
       output: web, pdf
 
 
