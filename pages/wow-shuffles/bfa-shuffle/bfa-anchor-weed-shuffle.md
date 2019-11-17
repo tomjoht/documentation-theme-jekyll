@@ -13,9 +13,13 @@ folder: wow-shuffles
 {% include tip.html content="ALT ARMIES UNITE! This gold farming method utilizes Alts and Alchemy Daily cooldowns to get at a fraction of the cost Anchor Weed which unlocks a consistent reliable soucrce of gold for BFA."%}
 
 ## Google Sheets calculator
-I am sharing my **Google Sheets** _(Excel.xls)_ to allow users to manipulate and pivot data as it varies server to server here:
+I am sharing my **Google Sheets** _(Excel.xls)_ to allow users to manipulate Anchor Weed Transmute & usage in order to pivot data as it varies server to server here:
 
-[Google Sheets calculator](https://docs.google.com/spreadsheets/d/18t0sfZT_I6rNKFZAHyigGiRvboeDdYX4-L9R5BvPq7w/edit#gid=0)
+[Anchor Weed Transmute](https://docs.google.com/spreadsheets/d/18t0sfZT_I6rNKFZAHyigGiRvboeDdYX4-L9R5BvPq7w/edit#gid=0)
+
+[8.1.5. Flask & Potion Spreadsheet](https://docs.google.com/spreadsheets/d/18t0sfZT_I6rNKFZAHyigGiRvboeDdYX4-L9R5BvPq7w/edit#gid=611133645)
+
+[8.2. Flask & Potion Spreadsheet](https://docs.google.com/spreadsheets/d/18t0sfZT_I6rNKFZAHyigGiRvboeDdYX4-L9R5BvPq7w/edit#gid=957494526)
 
 ## What can you earn
 
@@ -103,4 +107,9 @@ Ensure you possess and leverage Sila's Potion of Prosperity with Rank 3 Flask co
 
 [Daily Profession Cooldown Macro](https://www.reddit.com/r/woweconomy/comments/8mx4y9/wod_cds_shortcuts_this_will_make_your_daily_wow/)
 
+[Anchor Weed Transmute](https://docs.google.com/spreadsheets/d/18t0sfZT_I6rNKFZAHyigGiRvboeDdYX4-L9R5BvPq7w/edit#gid=0)
+
+[8.1.5. Flask & Potion Spreadsheet](https://docs.google.com/spreadsheets/d/18t0sfZT_I6rNKFZAHyigGiRvboeDdYX4-L9R5BvPq7w/edit#gid=611133645)
+
+[8.2. Flask & Potion Spreadsheet](https://docs.google.com/spreadsheets/d/18t0sfZT_I6rNKFZAHyigGiRvboeDdYX4-L9R5BvPq7w/edit#gid=957494526)
 
