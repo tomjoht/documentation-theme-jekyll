@@ -29,5 +29,3 @@ Some of the more prominent features of this theme include the following:
 
 
 To get started, see our [Goldfarm Guides section][index].
-
-{% include links.html %}

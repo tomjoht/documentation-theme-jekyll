@@ -14,5 +14,3 @@ My name is Derric Bartholomew aka Mozzletoff. I am a Husband and Father first, W
 I decided to create this website _(via Github, Github Pages, Ruby & Jekyll)_ to solve a simple problem. There is mountains... of Warcraft data... everywhere just for Gold Farming.
 
 So I am building this page with the focus in mind, easier... ways... to... navigate. Feedback along the top right is always encouraged and welcomed.
-
-{% include links.html %}

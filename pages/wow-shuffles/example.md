@@ -61,5 +61,3 @@ When doing this farms, be aware of
 
 ## Reference Links
 
-
-{% include links.html %}
