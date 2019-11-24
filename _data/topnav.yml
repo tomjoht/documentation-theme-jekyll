@@ -6,7 +6,7 @@ topnav:
     - title: GitHub
       external_url: https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site
     - title: About Me
-      url: /news
+      url: /mydoc_about.html
 
 #Topnav dropdowns
 topnav_dropdowns:
