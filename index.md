@@ -7,49 +7,40 @@ permalink: index.html
 summary: These brief instructions will help you get started quickly with the Website. Where do you get started? How do you navigate? What type of Content? How can I give you feedback? The list of questions go on... I touch base on those below!
 ---
 
-{% include note.html content="Please support the website by following the [Social Medias](https://linktr.ee/mozzletoffwow) above! If this is content you're looking for & like to be built upon & continued for current content, consider [Supporting](https://streamlabs.com/mozzletoff/tip) the content - **ONLY** if in a position to" %}
 
-## ANOTHER Goldfarm website?
+{% include note.html content="Please support the website by following the [Social Medias](https://linktr.ee/mozzletoffwow) above! If this is content you're looking for & like to be built upon & continued for current content, consider [Supporting](https://streamlabs.com/mozzletoff/tip) the content - **ONLY** if in a position to." %}
 
-Yes... sort of? The amount of information that is out there for WOW Goldfarm is wide & vast.
+## Overview
 
-I, like some of you, find myself going to 5+ multiple sites to gather information. What I'm looking to do is to "melting pot" WOW Goldfarming resources _while crediting original Content creators sources_ together for Users to just find in a single spot.
+Welcome! This site is for World of Warcraft gold farmers to find gold farming related material in a single location in an easy to navigate using the top & side nav bars.
 
-## Whats the difference from the other Gold farm sites?
+## What is different about your site than the other 100 out there?
+I, like some of you, find myself going to 5+ multiple sites to gather information.
+This website's purpose is to pool together content creators relevant & usable content to a single website. When dealing with content creators, they tend to put out content differently over time. Here the information will be presented the same consistent _(as Jekyll helps with that here through various commands)_ feel across the various Expansions.
 
-The farm is the farm. The shuffle is the shuffle. That isn't changing _(obviously)_. So whats the point?
+What I’m looking to do is to “melting pot” WOW Goldfarming resources while crediting original Content creators sources together for Users to just find in a single spot.
 
-The navigation for the amount information here allows the large amount of data to start to become digestible for you, the Gold Farmer. This happens with the:
 
-* easy to use **side nav bar**
-**sub menus** inside the side nav bar
-* each to use **top nav bar**
-* **On** and **Off** choise for side nav bar
-* **Tags** to link article content together (like AWS Instance tagging)
+## Table of Contents - How the Shuffles will be displayed
 
-With the my mind set above, it is an attempt to collapse & bring together relevant gold farm information to a single source & improve the navigation experience for folks.
+This website will highlight various relevant shuffles through each expansion. You can see the Example layout [here](https://gunnydelight.github.io/mozzletoff-wow-goldfarm-site/example.html).
 
-## Who are you Mozzletoff?
+It highlights the following:
 
-I am a Husband to 1 _(Kappa)_, a father to 3 _(two boys and a girl)_ and always a gamer.
+- Overview (Visualization Guide)
+- Google Sheet calculator
+- What can you earn
+- Items involved in the shuffle
+- Prerequisites to Shuffle
+- Steps by Steps exlanation
+- Tips and Tricks
+- Reference Links
 
-We currently living in Richmond, VA. I have a full-time career in Application Support/Production support operations that fills out my day.
 
-### What kicked off gaming for you Mozz?
-First game played was Super Mario 3 on NES when I was 5. I got to watch my Mom and Dad play while my brother and I sat there for what was probably only 10 minutes but at the time felt like hours...
+# Getting started
 
-Second with Final Fantasy with my brother a dad.
-
-### What games do you play online?
-I dont know... Warcraft/Gold Farming! Multiboxing x4 Diablo 3.
-
-### What games do you play offline?
-Blizzard & Activision suite of games, Fornite, and Steam Library. Top 2 steam games? Divinity II & DOTA.
-
-[Here](https://drive.google.com/file/d/0B_KWu4K9rqXESTQwdEJROFlTa0k/view?usp=sharing) is a list of all the games available to Mozzle this very moment.
-
-## How do I navigate this website?
-Rely on the **Navigation improvements** on the site & the site **Tagging** at the bottom of each article for finding similiar liked articles. Use the top bar, side bar and tags at the bottom of relatable articles.
+## Where do I begin?
+To get started, see our [Goldfarm Guides section](https://gunnydelight.github.io/mozzletoff-wow-goldfarm-site/index.html).
 
 ## What type of Gold farm content?
 I personally am a casual gold farmer. I try to make the most amount of gold with the limited time available to play. I have over 90+ level 110-120 alts leveraging daily CDs/professions and TSM Sniping/flipping. Type of gold farming content you can expect to find here:
@@ -63,11 +54,24 @@ I personally am a casual gold farmer. I try to make the most amount of gold with
 * **TSM 4** groups & Operations
 * Showcase other current/active WOW Gold Farm Content  Creators
 
-## How can I provide feedback for the site?
+## Top Navigation Bar
+You will see a top navigation bar at the top. This is where I host external relevant content which includes the following:
 
-Scroll to the top navigation bar and select feedback. It'll open your local machine's default Mailbox option to send me your feedback.
+- disabling Nav side bar (website real estate is a must IMO)
+- GitHub repo for the raw files
+- About Me!
+- My Social Medias for Gold Farm content
+- Support the content (if you cant financially support, follow is support!)
+- Twitch TV Content Creators that are Active (Gold Farm content, actively streaming)
+- YouTube Content creators that are Active (not click bait, library/source of reliable & relevant Gold Farm guides, walkthroughs, explanations.
+- Feedback - way to get in touch with me!
 
-Please include any erroneous and/or outdated content _(provide the URL)_, improvements suggestions. I will check this infrequeny/bi-weekly to **GitHub's Issue tracker** valid issues with the site to improve.
+## Side Navigation Bar
+Here is where you will go to the collapsible and expandable navigation bar to find the relevant content you want. You can click on each Expansion release to see the various shuffles under that expansion.
 
-_Social media's_ above is a better method if you're looking to just get in contact via _Discord_ or _Twitter_.
+> Note: If you see any missing shuffles, please get in contact with my ont he social media along the top to add or click feedback to send me an email. Both will work for me!
 
+## Feedback
+Scroll to the top navigation bar and select feedback. It’ll open your local machine’s default Mailbox option to send me your feedback.
+
+Please include any erroneous and/or outdated content (provide the URL), improvements suggestions. I will check this infrequently/bi-weekly to GitHub’s Issue tracker valid issues with the site to improve.
