@@ -1,5 +1,5 @@
 ---
-title: Introduction
+title: Introduction to the Website
 sidebar: mydoc_sidebar
 permalink: mydoc_introduction.html
 folder: mydoc
