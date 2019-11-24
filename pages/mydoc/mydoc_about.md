@@ -3,7 +3,7 @@ title: About the theme's author
 keywords: documentation theme, jekyll, technical writers, help authoring tools, hat replacements
 last_updated: November 23, 2019
 tags: [getting_started]
-summary: "Who am I and Whats this sit about?."
+summary: "Who am I and Whats this site about?"
 sidebar: mydoc_sidebar
 permalink: mydoc_about.html
 folder: mydoc
