@@ -38,7 +38,7 @@ I went to college for a BS in Criminal Justice with a minor in Business while wo
 <br>
 
 ## Current Career
-I now have a full time career working for an Enterprise in big banking working in Operations as a Production Support/AWS Engineer.
+I now have a full time career working for an Enterprise in big banking working in Operations as a Production Support/AWS Engineer. I am a people manager for a medium sized team and currently a Product Owner for that team #Busy
 <br>
 <br>
 
