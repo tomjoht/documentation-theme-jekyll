@@ -71,4 +71,3 @@ Please include any erroneous and/or outdated content _(provide the URL)_, improv
 
 _Social media's_ above is a better method if you're looking to just get in contact via _Discord_ or _Twitter_.
 
-{% include links.html %}

@@ -19,6 +19,26 @@ entries:
       output: pdf
       type: frontmatter
 
+  - title: Introduction
+    output: web, pdf
+    folderitems:
+
+      - title: Introduction to the website
+        url: /mydoc_introduction.html
+        output: web, pdf
+        type:
+
+      - title: About the Website creator
+        url: /mydoc_about.html
+        output: web, pdf
+        type:
+
+      - title: Home Page
+        url: /index.html
+        output: web, pdf
+        type:
+
+
   - title: WOW Vanilla Shuffles
     output: web, pdf
     folderitems:
