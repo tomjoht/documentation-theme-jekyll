@@ -1,5 +1,5 @@
 ---
-title: About the theme's author
+title: Expansion - Name of Shuffle
 keywords: documentation theme, jekyll, technical writers, help authoring tools, hat replacements
 last_updated: October 21, 2019
 tags: [example]
