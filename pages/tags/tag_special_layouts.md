@@ -9,4 +9,3 @@ folder: tags
 
 {% include taglogic.html %}
 
-{% include links.html %}

@@ -28,4 +28,4 @@ Some of the more prominent features of this theme include the following:
 ## Getting started
 
 
-To get started, see our [Goldfarm Guides section][index].
+To get started, see our [Goldfarm Guides section](https://gunnydelight.github.io/mozzletoff-wow-goldfarm-site/index.html).
