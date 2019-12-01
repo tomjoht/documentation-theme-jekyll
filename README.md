@@ -1,6 +1,8 @@
 # Mozzletoff WOW Goldfarm site
 
-This page is used by [Mozzletoff](https://www.twitch.tv/mozzletoff) to display various gold making process, shuffles and TSM3/4 Groups & Operations Data
+This page is used by [Mozzletoff](https://www.twitch.tv/mozzletoff) to display various gold making process, shuffles and TSM3/4 Groups & Operations Data.
+
+You can visit the more formal website displayed on GitHub Pages via Jekyll [here](https://gunnydelight.github.io/mozzletoff-wow-goldfarm-site/)
 
 ## Social Medias
 
