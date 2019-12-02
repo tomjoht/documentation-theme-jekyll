@@ -43,12 +43,12 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: 1
-      url:
+    - title: Soon - Arcanite Bar shuffle
+      url: example.html
       output: web, pdf
       type:
 
-    - title: 2
+    - title:
       url:
       output: web, pdf
       type:
@@ -66,21 +66,13 @@ entries:
               url:
               output: web
 
-            - title:
-              url:
-              output: web
-
-            - title:
-              url:
-              output: web
-
 
   - title: WOW BC Shuffles
     output: web, pdf
     folderitems:
 
-    - title: 1
-      url:
+    - title: Soon - Primal Might shuffle
+      url: example.html
       output: web, pdf
 
     - title: 2
@@ -104,19 +96,42 @@ entries:
               url:
               output: web
 
-            - title: 4
-              url:
-              output: web
 
-            - title: 5
-              url:
-              output: web
+  - title: WOW Cataclysm Shuffles
+    output: web, pdf
+    folderitems:
+
+      - title: Soon - Truegold shuffle
+        url: example.html
+        output: web, pdf
+
+      - title: Soon - Vial of the Sands shuffle
+        url: example.html
+        output: web, pdf
+
+        subfolders:
+          - title: Popular Cataclsym Shuffles
+            output: web
+            subfolderitems:
+
+              - title: 1
+                url:
+                output: web
+
+              - title: 2
+                url:
+                output: web
+
+              - title: 3
+                url:
+                output: web
+
 
   - title: WOW WOTLK Shuffles
     output: web, pdf
     folderitems:
 
-    - title: 1
+    - title: Titanium Bar shuffle
       url:
       output: web, pdf
 
@@ -145,48 +160,28 @@ entries:
               url:
               output: web
 
-            - title:
-              url:
-              output: web
-
-            - title:
-              url:
-              output: web
-
   - title: WOW MOP Shuffles
     output: web, pdf
 
     folderitems:
-    - title: 1
-      url:
+    - title: Living Steel shuffle
+      url: example.html
       output: web, pdf
 
-    - title: 2
-      url:
+    - title: Sky Golem shuffle
+      url: example.html
       output: web, pdf
 
-    - title: 3
-      url:
+    - title: Panther Mounts shuffle
+      url: example.html
       output: web, pdf
 
-    - title: 4
-      url:
+    - title: MOP Gems shuffle
+      url: example.html
       output: web, pdf
 
-    - title:
-      url:
-      output: web, pdf
-
-    - title:
-      url:
-      output: web, pdf
-
-    - title:
-      url:
-      output: web, pdf
-
-    - title:
-      url:
+    - title: Trillium Bar shuffle
+      url: example.html
       output: web, pdf
 
       subfolders:
@@ -206,33 +201,44 @@ entries:
               url:
               output: web
 
-            - title:
-              url:
-              output: web
-
-            - title:
-              url:
-              output: web
-
-
   - title: WOW WOD Shuffles
     output: web, pdf
 
     folderitems:
-    - title: 1
-      url:
+    - title: Soon - WOD Alchemy shuffle
+      url: example.html
       output: web, pdf
 
-    - title: 2
-      url:
+    - title: Soon - WOD Blacksmithing shuffle
+      url: example.html
       output: web, pdf
 
-    - title: 3
-      url:
+    - title: Soon - WOD Enchanting shuffle
+      url: example.html
       output: web, pdf
 
-    - title: 4
-      url:
+    - title: Soon - WOD Engineering shuffle
+      url: example.html
+      output: web, pdf
+
+    - title: Soon - WOD Inscription shuffle
+      url: example.html
+      output: web, pdf
+
+    - title: Soon - WOD Jewelcrafting shuffle
+      url: example.html
+      output: web, pdf
+
+    - title: Soon - WOD Leatherworking shuffle
+      url: example.html
+      output: web, pdf
+
+    - title: Soon - WOD Tailoring shuffle
+      url: example.html
+      output: web, pdf
+
+    - title: Soon - WOD Cooking shuffle
+      url: example.html
       output: web, pdf
 
       subfolders:
@@ -240,72 +246,52 @@ entries:
           output: web
           subfolderitems:
 
-            - title: 1
-              url:
+            - title: Sorcerous Earth shuffle
+              url: example.html
               output: web
 
-            - title: 2
-              url:
+            - title: Soon - Card of Omens shuffle
+              url: example.html
               output: web
 
-            - title: 3
-              url:
-              output: web
-
-            - title: 4
-              url:
-              output: web
-
-            - title:
-              url:
+            - title: Soon - WOD Alchemy Trinket vendor shuffle
+              url: example.html
               output: web
 
   - title: WOW Legion Shuffles
     output: web, pdf
 
     folderitems:
-    - title: 1
-      url:
+    - title: Soon - Legion Alchemy shuffle
+      url: example.html
       output: web, pdf
 
-    - title: 2
-      url:
+    - title: Soon - Legion Blacksmith shuffle
+      url: example.html
       output: web, pdf
 
-    - title: 3
-      url:
+    - title: Soon - Legion Enchanting shuffle
+      url: example.html
       output: web, pdf
 
-    - title: 4
-      url:
+    - title: Soon - Legion Engineering shuffle
+      url: example.html
       output: web, pdf
 
-    - title: 5
-      url:
+    - title: Soon - Legion Inscription shuffle
+      url: example.html
       output: web, pdf
 
-    - title:
-      url:
+    - title: Soon - Legion Leatherworking shuffle
+      url: example.html
       output: web, pdf
 
-    - title:
-      url:
+    - title: Soon - Legion Tailoring shuffle
+      url: example.html
       output: web, pdf
 
-    - title:
-      url:
-      output: web, pdf
-
-    - title:
-      url:
-      output: web, pdf
-
-    - title:
-      url:
-      output: web, pdf
-
-    - title:
-      url:
+    - title: Soon - Legion Cooking shuffle
+      url: example.html
       output: web, pdf
 
       subfolders:
@@ -325,28 +311,52 @@ entries:
               url:
               output: web
 
-            - title: 4
-              url:
-              output: web
-
-            - title:
-              url:
-              output: web
-
   - title: WOW BFA Shuffles
     output: web, pdf
 
     folderitems:
-    - title: Samadan's Super Bracer Shuffle
-      url: /bfa-bracer-shuffle.html
+    - title: Soon - BFA Alchemy shuffle
+      url: example.html
       output: web, pdf
 
-    - title: Anchor Weed shuffle
-      url: /bfa-anchor-weed-shuffle.html
+    - title: Soon - BFA Blacksmith shuffle
+      url: example.html
       output: web, pdf
 
-    - title: Veiled Crysals via Inscription shuffle
-      url: bfa-inscription-veiled-shuffle.html
+    - title: Soon - BFA Cooking shuffle
+      url: example.html
+      output: web, pdf
+
+    - title: Soon - BFA Enchanting shuffle
+      url: example.html
+      output: web, pdf
+
+    - title: Soon - BFA Engineering shuffle
+      url: example.html
+      output: web, pdf
+
+    - title: Soon - BFA Engineering shuffle
+      url: example.html
+      output: web, pdf
+
+    - title: Soon - BFA Inscription shuffle
+      url: example.html
+      output: web, pdf
+
+    - title: Soon - BFA Tailoring shuffle
+      url: example.html
+      output: web, pdf
+
+    - title: Soon - BFA Leatherworking shuffle
+      url: example.html
+      output: web, pdf
+
+    - title: Soon - BFA Jewelcrafting shuffle
+      url: example.html
+      output: web, pdf
+
+    - title: Soon - BFA Expulsom shuffle
+      url: example.html
       output: web, pdf
 
       #    - title: Git collaboration
@@ -358,31 +368,23 @@ entries:
           output: web
           subfolderitems:
 
-            - title: 1
-              url:
+            - title: Samadan's Super Bracer Shuffle
+              url: /bfa-bracer-shuffle.html
               output: web, pdf
 
-            - title: 2
-              url:
+            - title: Anchor Weed shuffle
+              url: /bfa-anchor-weed-shuffle.html
               output: web
 
-            - title: 3
-              url:
-              output: web
-
-            - title: 4
-              url:
-              output: web
-
-            - title:
-              url:
+            - title: Veiled Crystals via Inscription
+              url: /bfa-inscription-veiled-shuffle.html
               output: web
 
   - title: TSM 3 Group & Op's
     output: web, pdf
 
     folderitems:
-    - title: 1
+    - title: Introduction to TSM 3 Groups & Operations
       url:
       output: web, pdf
 
@@ -418,7 +420,7 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: 1
+    - title: Introduction to TSM 4 Groups & Operations
       url:
       output: web, pdf
 
@@ -439,7 +441,7 @@ entries:
 
     folderitems:
 
-    - title: 1
+    - title: Introduction to Herbing and Mining Routes
       url:
       output: web, pdf
 
@@ -459,7 +461,7 @@ entries:
     output: web
     folderitems:
 
-    - title: 1
+    - title: Introduction for Multibox x5 and x8 | Group farms
       url:
       output: web
 
