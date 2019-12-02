@@ -345,6 +345,10 @@ entries:
       url: /bfa-anchor-weed-shuffle.html
       output: web, pdf
 
+    - title: Veiled Crysals via Inscription shuffle
+      url: bfa-inscription-veiled-shuffle.html
+      output: web, pdf
+
       #    - title: Git collaboration
 #      url: /mydoc_git_collaboration
 #      output: web, pdf
