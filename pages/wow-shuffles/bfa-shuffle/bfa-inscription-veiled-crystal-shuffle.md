@@ -1,7 +1,7 @@
 ---
 title: BFA Inscription Shuffle for Veiled Crystals
 keywords: documentation theme, jekyll, technical writers, help authoring tools, hat replacements
-last_updated: October 21, 2019
+last_updated: Dec 1, 2019
 tags: [shuffles, bfa]
 summary: "This WOW shuffle is to explain how to get Veiled Crystals from doing this Inscription shuffle from Tr4xGaming"
 sidebar: mydoc_sidebar
@@ -10,7 +10,7 @@ folder: wow-shuffles
 ---
 
 # Overview
-{% include tip.html content="This shuffle leverages Inscription mats to earn Enchanting mats. You can earn a reliable source of veiled crystals for enchanting through Tr4xgaming's shuffle. The profits vary server to server so feel free to use the spreadsheet to get an understanding of what you can do on your server!2"%}
+{% include tip.html content="This shuffle leverages Inscription mats to earn Enchanting mats. You can earn a reliable source of veiled crystals for enchanting through Tr4xgaming's shuffle. The profits vary server to server so feel free to use the spreadsheet to get an understanding of what you can do on your server!"%}
 
 ## Google Sheets calculator
 I am sharing Tr4xgaming's [Google Sheets](https://docs.google.com/spreadsheets/d/1WCk3Yw5MGbkQ_XyRVRYSt594nnFrKJxFPSqM2Mw0h4A/edit#gid=172477708) to allow users to manipulate and pivot AH cost data data as it varies server to server here.
