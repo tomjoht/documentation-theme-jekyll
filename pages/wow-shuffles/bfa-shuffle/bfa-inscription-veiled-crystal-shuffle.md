@@ -35,7 +35,8 @@ Here is a list of the item's needed in the shuffle:
 |Crimson Ink|[Direct WOWHEAD Link](https://www.wowhead.com/spell=264777/crimson-ink).|
 |Ultramarine Ink|[Direct WOWHEAD Link](https://www.wowhead.com/item=158187/ultramarine-ink).|
 |Viridescent Ink|[Direct WOWHEAD Link](https://www.wowhead.com/item=158189/viridescent-ink).|
-|ITEM NAME HERE|[Direct WOWHEAD Link](https://www.wowhead.com/spell=139192/sky-golem).|
+|Honorable Combatants Etched Vessel|[Direct WOWHEAD Link](https://www.wowhead.com/item=159940/honorable-combatants-etched-vessel).|
+|Sinister  Combatants Etched Vessel|[Direct WOWHEAD Link](https://www.wowhead.com/item=164682/sinister-combatants-etched-vessel&bonus=0).|
 
 ## Prerequisites for the Shuffle
 In order to do this shuffle you must:
