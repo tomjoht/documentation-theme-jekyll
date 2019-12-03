@@ -43,8 +43,8 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Soon - Arcanite Bar shuffle
-      url: example.html
+    - title: Arcanite Bar shuffle
+      url: /vanilla-arcanite-bar-shuffle.html
       output: web, pdf
       type:
 
