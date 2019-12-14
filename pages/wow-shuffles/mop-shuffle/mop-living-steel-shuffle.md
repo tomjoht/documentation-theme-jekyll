@@ -47,14 +47,12 @@ In order to be able to do this shuffle, you must do the following:
 
 ```
 1.  Use the spread sheet to understand if this is profitable or not.
-2.  If the area of profit for this is acceptable, than it is time to shuffle! Go to **next step**. If not
-
-profitable than revisit this shuffle at a later date.
+2.  If the area of profit for this is acceptable, than it is time to shuffle! Go to **next step**. If not profitable than revisit this shuffle at a later date.
 3.  Buy the **exact** required mats for the shuffle. Do the cooldown, post on the Auction House & profit!
 ```
 
 ## Tips and Tricks
-To change your Alchemy specialization (e.g., from Elixir or Potions to Transmutation), open the professions window and click the small red circle to the left of the specialization (NOT the profession skill level). Then do the applicable quest for the specialization you want.
+To change your Alchemy specialization (_e.g., from Elixir or Potions to Transmutation_), open the professions window and click the small red circle to the left of the specialization (_NOT the profession skill level_). Then do the applicable quest for the specialization you want.
 
 The more alts you stack, the more daily CDs you have. There is a snow ball effect component that allows you to separate yourself from the competition.
 

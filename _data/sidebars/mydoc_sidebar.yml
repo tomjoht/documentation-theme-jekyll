@@ -165,7 +165,7 @@ entries:
 
     folderitems:
     - title: Living Steel shuffle
-      url: example.html
+      url: mop-living-steel-shuffle.html
       output: web, pdf
 
     - title: Sky Golem shuffle
