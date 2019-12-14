@@ -52,7 +52,7 @@ In order to be able to do this shuffle, you must do the following:
 ```
 
 ## Tips and Tricks
-N/A
+The more alts you stack, the more daily CDs you have. There is a snow ball effect component that allows you to separate yourself from the competition.
 
 ## Reference Links
 [Arcanite shuffle Spreadsheet by Mozzletoff](https://docs.google.com/spreadsheets/d/1EX9yDrzNjS3ifxrR7VoW6P9kgmO_b62hBN5aroInymI/edit?usp=sharing)
