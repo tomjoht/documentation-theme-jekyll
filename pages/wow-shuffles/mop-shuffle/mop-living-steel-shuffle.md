@@ -1,5 +1,5 @@
 ---
-title: MOP - Living Steel Shuffle
+title: MOP - Living Steel Shuffles (Riddle + Daily Xmute)
 keywords: documentation theme, jekyll, technical writers, help authoring tools, hat replacements
 last_updated: December 13, 2019
 tags: [shuffles, mop]
@@ -10,7 +10,7 @@ folder: wow-shuffles
 ---
 
 # Overview
-{% include tip.html content="You can earn roughly _(dependant on region & server)_ between X and Y amount of profit each flip."%}
+{% include tip.html content="The idea of Daily Xmutes is a consistent way to make gold and set yourself apart from competition who has single charges or single alts. This spread sheet shows the snowball method to applying this simple daily Cooldown and the rare high value expensive items you can make with Living Steel bars"%}
 
 ## Google Sheets calculator
 I am sharing my **Google Sheets** _(Excel.xls)_ to allow users to manipulate and pivot data as it varies server to server here:
@@ -55,6 +55,7 @@ profitable than revisit this shuffle at a later date.
 
 ## Tips and Tricks
 To change your Alchemy specialization (e.g., from Elixir or Potions to Transmutation), open the professions window and click the small red circle to the left of the specialization (NOT the profession skill level). Then do the applicable quest for the specialization you want.
+
 The more alts you stack, the more daily CDs you have. There is a snow ball effect component that allows you to separate yourself from the competition.
 
 ## Reference Links
