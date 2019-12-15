@@ -104,6 +104,38 @@ entries:
       url: /mydoc_series.html
       output: web, pdf
 
+  - title: Java
+    output: web, pdf
+
+    folderitems:
+    - title: Sidebar navigation
+      url: /mydoc_sidebar_navigation.html
+      output: web, pdf
+
+  - title: Protobuffer
+    output: web, pdf
+
+    folderitems:
+    - title: Sidebar navigation
+      url: /mydoc_sidebar_navigation.html
+      output: web, pdf
+
+  - title: TCP/IP
+    output: web, pdf
+
+    folderitems:
+    - title: Sidebar navigation
+      url: /mydoc_sidebar_navigation.html
+      output: web, pdf
+
+  - title: http
+    output: web, pdf
+
+    folderitems:
+    - title: Sidebar navigation
+      url: /mydoc_sidebar_navigation.html
+      output: web, pdf
+
   - title: Tag archives
     output: web
     folderitems:
