@@ -2,8 +2,8 @@
 
 entries:
 - title: sidebar
-  product: Jekyll Doc Theme
-  version: 6.0
+  product: 个人博客
+  version: 
   folders:
 
   - title:
@@ -19,7 +19,7 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: Overview
+  - title: c++
     output: web, pdf
     folderitems:
 
@@ -44,7 +44,7 @@ entries:
       url: /mydoc_support.html
       output: web, pdf
 
-  - title: Release Notes
+  - title: Qt
     output: web, pdf
     folderitems:
 
@@ -56,7 +56,7 @@ entries:
       url: /mydoc_release_notes_50.html
       output: web, pdf
 
-  - title: Installation
+  - title: 设计模式
     output: web, pdf
     folderitems:
 
