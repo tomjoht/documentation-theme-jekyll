@@ -178,6 +178,10 @@ entries:
           url: /tag_formatting.html
           output: web
 
+    - title: Tag archives overview
+      url: /mydoc_tag_archives_overview.html
+      output: web
+
       subfolders:
       - title: 结构型模式
         output: web
