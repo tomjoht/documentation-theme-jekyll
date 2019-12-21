@@ -72,17 +72,40 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: About Ruby, Gems, Bundler, etc.
-      url: /mydoc_about_ruby_gems_etc.html
-      output: web, pdf
+      subfolders:
+      - title: 创建型模式
+        output: web
+        subfolderitems:
 
-    - title: Install Jekyll on Mac
-      url: /mydoc_install_jekyll_on_mac.html
-      output: web, pdf
+        - title: 抽象工厂(abstract factory)
+          url: /tag_formatting.html
+          output: web
 
-    - title: Install Jekyll on Windows
-      url: /mydoc_install_jekyll_on_windows.html
-      output: web, pdf
+        - title: 生成器(builder)
+          url: /tag_formatting.html
+          output: web
+
+        - title: 工厂方法(factory method)
+          url: /tag_formatting.html
+          output: web
+
+      subfolders:
+      - title: 结构型模式
+        output: web
+        subfolderitems:
+
+        - title: Formatting pages
+          url: /tag_formatting.html
+          output: web
+
+      subfolders:
+      - title: 行为模式
+        output: web
+        subfolderitems:
+
+        - title: Formatting pages
+          url: /tag_formatting.html
+          output: web
 
   - title: Go
     output: web, pdf
@@ -136,7 +159,7 @@ entries:
       url: /mydoc_sidebar_navigation.html
       output: web, pdf
 
-  - title: Tag archives
+  - title: Tag archiv器
     output: web
     folderitems:
 
