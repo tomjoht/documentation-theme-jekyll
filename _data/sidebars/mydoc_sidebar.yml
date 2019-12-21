@@ -98,8 +98,6 @@ entries:
           url: /tag_formatting.html
           output: web
 
-
-
   - title: Go
     output: web, pdf
 
