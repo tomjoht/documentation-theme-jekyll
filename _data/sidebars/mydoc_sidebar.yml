@@ -177,8 +177,7 @@ entries:
         - title: 抽象工厂
           url: 
           output: web
-
-      subfolders:
+      
       - title: 结构型模式
         output: web
         subfolderitems:
