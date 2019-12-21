@@ -72,6 +72,10 @@ entries:
     output: web, pdf
     folderitems:
 
+    - title: Tag archives overvi
+      url: /mydoc_tag_archives_overview.html
+      output: web
+
     subfolders:
     - title: 创建型模式
       output: web
