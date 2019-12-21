@@ -72,40 +72,40 @@ entries:
     output: web, pdf
     folderitems:
 
-      subfolders:
-      - title: 创建型模式
+    subfolders:
+    - title: 创建型模式
+      output: web
+      subfolderitems:
+
+      - title: 抽象工厂(abstract factory)
+        url: /tag_formatting.html
         output: web
-        subfolderitems:
 
-        - title: 抽象工厂(abstract factory)
-          url: /tag_formatting.html
-          output: web
-
-        - title: 生成器(builder)
-          url: /tag_formatting.html
-          output: web
-
-        - title: 工厂方法(factory method)
-          url: /tag_formatting.html
-          output: web
-
-      subfolders:
-      - title: 结构型模式
+      - title: 生成器(builder)
+        url: /tag_formatting.html
         output: web
-        subfolderitems:
+
+      - title: 工厂方法(factory method)
+        url: /tag_formatting.html
+        output: web
+
+    subfolders:
+    - title: 结构型模式
+      output: web
+      subfolderitems:
 
         - title: Formatting pages
           url: /tag_formatting.html
           output: web
 
-      subfolders:
+    subfolders:
       - title: 行为模式
         output: web
         subfolderitems:
 
         - title: Formatting pages
           url: /tag_formatting.html
-          output: web
+          output: web 
 
   - title: Go
     output: web, pdf
@@ -159,7 +159,7 @@ entries:
       url: /mydoc_sidebar_navigation.html
       output: web, pdf
 
-  - title: Tag archiv器
+  - title: Tag archive
     output: web
     folderitems:
 
