@@ -165,10 +165,6 @@ entries:
     output: web
     folderitems:
 
-    - title: Tag archives overview
-      url: /mydoc_tag_archives_overview.html
-      output: web
-
       subfolders:
       - title: 创建型模式
         output: web
@@ -177,10 +173,6 @@ entries:
         - title: 抽象工厂
           url: /tag_formatting.html
           output: web
-
-    - title: Tag archives overview
-      url: /mydoc_tag_archives_overview.html
-      output: web
 
       subfolders:
       - title: 结构型模式
