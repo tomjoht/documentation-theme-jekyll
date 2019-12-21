@@ -72,7 +72,7 @@ entries:
     output: web, pdf
     folderitems:
 
-   - title: 设计模式2
+  - title: 设计模式2
     output: web
     folderitems:
 
