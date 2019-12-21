@@ -44,6 +44,10 @@ topnav_dropdowns:
           external_url: https://www.twitch.tv/arnota42
         - title: WTBGold (MB)
           external_url: https://www.twitch.tv/WTBGold
+        - title: CanadianTV (MB)
+          external_url: https://www.twitch.tv/canadia_tv
+        - title: Persephonae (MB)
+          external_url: https://www.twitch.tv/persephonae
         - title: Ridosaw (MB)
           external_url: https://www.twitch.tv/ibabypowder
         - title: BabyPowder (MB)
@@ -56,9 +60,9 @@ topnav_dropdowns:
           external_url: https://www.twitch.tv/speity
         - title: SkitzYoTV (MB)
           external_url: https://www.twitch.tv/skitzyotv
-        - title: SamadanPlaysWOW
+        - title: SamadanPlaysWOW (Not RIP)
           external_url: https://www.twitch.tv/SamadanPlaysWOW
-        - title: GumdropsTSM
+        - title: GumdropsTSM (RIP)
           external_url: https://www.twitch.tv/GumdropsTSM
         - title: StudenAlbatroz
           external_url: https://www.twitch.tv/studenalbatroz
@@ -72,9 +76,9 @@ topnav_dropdowns:
           external_url: https://twitch.tv/alfredgg
         - title: HelloOctoberly
           external_url: https://www.twitch.tv/helloOctoberly
-        - title: ProfitzTV
+        - title: ProfitzTV (LAC creator)
           external_url: https://www.twitch.tv/profitztv
-        - title: SeaThrift
+        - title: SeaThrift (LAC Queen)
           external_url: https://www.twitch.tv/seathrift
         - title: Brozerian
           external_url: https://www.twitch.tv/Brozerian
@@ -82,17 +86,14 @@ topnav_dropdowns:
           external_url: https://www.twitch.tv/Melann
         - title: BaconBits
           external_url: https://www.twitch.tv/baconbits078
-        - title: Xionik&Sheyrah
+        - title: Xionik&Sheyrah (OG)
           external_url: https://www.twitch.tv/xionikandsheyrah
-        - title: Peelyon
+        - title: Peelyon (Pets!)
           external_url: https://www.twitch.tv/peelyon
         - title: Goblin Academy
           external_url: https://www.twitch.tv/GoblinAcademy
-        - title: Hikons
+        - title: Hikons 
           external_url: https://www.twitch.tv/Hokins
-        - title: CanadianTV
-          external_url: https://www.twitch.tv/CanadianTV
-
 
 
     - title: YT Creators

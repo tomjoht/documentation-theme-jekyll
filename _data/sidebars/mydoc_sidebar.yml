@@ -71,8 +71,8 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Soon - Primal Might shuffle
-      url: example.html
+    - title: Primal Might shuffle
+      url: primal-might-shuffle.html
       output: web, pdf
 
     - title: 2
