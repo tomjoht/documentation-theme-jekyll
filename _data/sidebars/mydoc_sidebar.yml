@@ -68,10 +68,6 @@ entries:
       url: /mydoc_release_notes_50.html
       output: web, pdf
 
-  - title: 设计模式
-    output: web, pdf
-    folderitems:
-
   - title: Go
     output: web, pdf
 
@@ -165,7 +161,7 @@ entries:
           url: /tag_troubleshooting.html
           output: web
 
-  - title: 设计模式2
+  - title: 设计模式
     output: web
     folderitems:
 
@@ -179,7 +175,7 @@ entries:
         subfolderitems:
 
         - title: 抽象工厂
-          url: /tag_formatting.html
+          url: 
           output: web
 
       subfolders:
@@ -187,6 +183,6 @@ entries:
         output: web
         subfolderitems:
 
-        - title: 抽象工厂
+        - title: 组合模式
           url: /tag_formatting.html
           output: web          
