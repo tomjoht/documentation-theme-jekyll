@@ -120,6 +120,18 @@ entries:
       url: /mydoc_sidebar_navigation.html
       output: web, pdf
 
+  - title: 设计模式
+    output: web
+    folderitems:
+
+    - title: 创建型模式
+      url: /mydoc_tag_archives_overview.html
+      output: web
+     
+    - title: 结构型模式
+      url: /mydoc_tag_archives_overview.html
+      output: web
+
   - title: Tag archive
     output: web
     folderitems:
@@ -161,16 +173,6 @@ entries:
           url: /tag_troubleshooting.html
           output: web
 
-  - title: 设计模式
-    output: web
-    folderitems:
 
-    - title: 创建型模式
-      url: /mydoc_tag_archives_overview.html
-      output: web
-     
-    - title: 结构型模式
-      url: /mydoc_tag_archives_overview.html
-      output: web
 
          
