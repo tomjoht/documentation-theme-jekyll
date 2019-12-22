@@ -226,11 +226,11 @@ entries:
           output: web
 
       subfolders:
-      - title: Tag archive pages
+      - title: Tag archive pages2
         output: web
         subfolderitems:
 
-        - title: Formatting pages
+        - title: Formatting pages2
           url: /tag_formatting.html
           output: web
 
