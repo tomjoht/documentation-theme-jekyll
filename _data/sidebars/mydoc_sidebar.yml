@@ -28,6 +28,10 @@ entries:
           url: /tag_formatting.html
           output: web
 
+    - title:
+      url: /mydoc_supported_features.html
+      output: web, pdf
+
       subfolders:
       - title: 软件调试方法
         output: web
@@ -40,10 +44,6 @@ entries:
         - title: 远程调试
           url: /tag_formatting.html
           output: web
-
-    - title: 
-      url: /mydoc_supported_features.html
-      output: web, pdf
 
     - title: 字符编码
       url: /mydoc_about.html
