@@ -21,15 +21,15 @@ entries:
         subfolderitems:
 
         - title: PE结构
-          url: /tag_formatting.html
+          url: /tag_formatting2.html
           output: web
 
         - title: 进程内存布局
           url: /tag_formatting.html
           output: web
 
-    - title:
-      url: /mydoc_supported_features.html
+    - title: 111
+      url: /mydoc_supported_features3.html
       output: web, pdf
 
       subfolders:
