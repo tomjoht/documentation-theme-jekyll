@@ -203,7 +203,7 @@ entries:
       url: /mydoc_tag_archives_overview.html
       output: web
 
-    - subfolders:
+      subfolders:
       - title: Tag archive pages
         output: web
         subfolderitems:
@@ -212,7 +212,7 @@ entries:
           url: /tag_formatting.html
           output: web
 
-    - subfolders:
+      subfolders:
       - title: Tag archive pages2
         output: web
         subfolderitems:
