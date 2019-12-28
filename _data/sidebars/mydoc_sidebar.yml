@@ -15,34 +15,39 @@ entries:
       output: web, pdf
       type: homepage
 
-    - title: 进程内存结构
-      url: /mydoc_introduction.html
-      output: web, pdf
-
       subfolders:
-      - title: PE结构
+      - title: 进程内存结构
         output: web
         subfolderitems:
+
+        - title: PE结构
+          url: /tag_formatting.html
+          output: web
 
         - title: 进程内存布局
           url: /tag_formatting.html
           output: web
 
-    - title: 软件调试方法
+      subfolders:
+      - title: 软件调试方法
+        output: web
+        subfolderitems:
+
+        - title: 单机
+          url: /tag_formatting.html
+          output: web
+
+        - title: 远程调试
+          url: /tag_formatting.html
+          output: web
+
+    - title: 
       url: /mydoc_supported_features.html
       output: web, pdf
 
     - title: 字符编码
       url: /mydoc_about.html
       output: web, pdf
-
-    - title: Qt2
-      output: web, pdf
-      folderitems:
-
-      - title: 元数据系统
-        url: /mydoc_release_notes_60.html
-        output: web, pdf
 
     - title: Support
       url: /mydoc_support.html
