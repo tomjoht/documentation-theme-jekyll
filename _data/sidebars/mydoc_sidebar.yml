@@ -3,10 +3,10 @@
 entries:
 - title: sidebar
   product: 个人博客
-  version: 
+  version:
   folders:
 
-  - title:
+  - title:test
     output: pdf
     type: frontmatter
     folderitems:
@@ -127,7 +127,7 @@ entries:
     - title: 抽象工厂(abstract factory)
       url: /mydoc_tag_archives_overview.html
       output: web
-     
+
     - title: 生成器(builder)
       url: /mydoc_tag_archives_overview.html
       output: web
@@ -216,23 +216,23 @@ entries:
       url: /mydoc_tag_archives_overview.html
       output: web
 
-      subfolders:
-      - title: Tag archive pages
-        output: web
-        subfolderitems:
-
-        - title: Formatting pages
-          url: /tag_formatting.html
+      - subfolders:
+        - title: Tag archive pages
           output: web
+          subfolderitems:
 
-      subfolders:
-      - title: Tag archive pages2
-        output: web
-        subfolderitems:
+          - title: Formatting pages
+            url: /tag_formatting.html
+            output: web
 
-        - title: Formatting pages2
-          url: /tag_formatting.html
+      - subfolders:
+        - title: Tag archive pages2
           output: web
+          subfolderitems:
+
+          - title: Formatting pages2
+            url: /tag_formatting.html
+            output: web
 
   - title: Tag archive
     output: web
@@ -274,7 +274,3 @@ entries:
         - title: Troubleshooting pages
           url: /tag_troubleshooting.html
           output: web
-
-
-
-         
