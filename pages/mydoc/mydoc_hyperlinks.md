@@ -26,4 +26,4 @@ When linking to internal pages, you can manually link to the pages like this:
 [Icons](mydoc_icons.html)
 ```
 
-However, if you change the file name, you'll have to update all of your links. 
+If you change the file name, you'll have to update all of your links.
