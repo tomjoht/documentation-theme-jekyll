@@ -7,7 +7,6 @@ permalink: index.html
 summary: These brief instructions will help you get started quickly with the Website. Where do you get started? How do you navigate? What type of Content? How can I give you feedback? The list of questions go on... I touch base on those below!
 ---
 
-
 {% include note.html content="Please support the website by following the [Social Medias](https://linktr.ee/mozzletoffwow) above! If this is content you're looking for & like to be built upon & continued for current content, consider [Supporting](https://streamlabs.com/mozzletoff/tip) the content - **ONLY** if in a position to." %}
 
 ## Overview
