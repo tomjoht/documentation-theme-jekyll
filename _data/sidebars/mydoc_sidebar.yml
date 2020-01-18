@@ -380,43 +380,7 @@ entries:
               url: /bfa-inscription-veiled-shuffle.html
               output: web
 
-  - title: TSM 3 Group & Op's
-    output: web, pdf
-
-    folderitems:
-    - title: Introduction to TSM 3 Groups & Operations
-      url:
-      output: web, pdf
-
-    - title: 2
-      url:
-      output: web, pdf
-
-    - title: 3
-      url:
-      output: web, pdf
-
-    - title: 4
-      url:
-      output: web, pdf
-
-    - title: 5
-      url:
-      output: web, pdf
-
-    - title:
-      url:
-      output: web, pdf
-
-    - title:
-      url:
-      output: web, pdf
-
-    - title:
-      url:
-      output: web, pdf
-
-  - title: TSM 4 Groups & OP's
+  - title: TSM 4 Groups and OP's
     output: web, pdf
 
     folderitems:
