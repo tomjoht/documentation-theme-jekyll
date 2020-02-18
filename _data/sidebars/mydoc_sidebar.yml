@@ -385,11 +385,11 @@ entries:
 
     folderitems:
     - title: Introduction to TSM 4 Groups & Operations
-      url:
+      url: /introduction-to-mozzles-tsm.html
       output: web, pdf
 
-    - title: 2
-      url:
+    - title: Mozzletoff's TSM Groups & Operations
+      url: /tsm-four-groups-and-operations.html
       output: web, pdf
 
     - title: 3
