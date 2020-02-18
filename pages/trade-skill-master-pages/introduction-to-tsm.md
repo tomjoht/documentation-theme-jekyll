@@ -49,6 +49,9 @@ TSM Errors out at times when importing back to back when dealing with heavier it
 ## Your group is missing items. Why?
 These groups are customized to my needs. Please send item suggestions [here](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/issues). 100% open to get stuff added to the **official repo** here.
 
+## Can I combine your groups?
+Absolutely. I made the groups smaller and more targetted so people can flex how and where they want to make main group and sub-groups in their tsm operations. this allows imports to fail less.
+
 # Getting started
 
 ## Where do I begin?
