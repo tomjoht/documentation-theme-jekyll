@@ -11,61 +11,88 @@ It is worth the time investment if you are serious about making gold. TSM mangin
 
 # Overview
 
-This is a *melting pot* of various **public-facing** Gold Farmer's pastebins from the following people:
+[battle-pets-base](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/battle-pets-base)
 
-- [BilisOnyxia](https://pastebin.com/u/BilisOnyxia)
-- [Torack](https://pastebin.com/u/torack)
-- [Muffins](https://github.com/tehmufifnman/tsm_imports)
-- [Xionik&Sheyra](https://pastebin.com/u/Sheyrah)
-- [Mozzletoff](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups)
+[battle-pets-lvl-one](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/battle-pets-lvl-one)
 
-**They've been modified for my own general purpose, server, etc.** Thank you goldfarm kings and queens for sharing!
+[battle-pets-lvl-twentyfive](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/battle-pets-lvl-twentyfive)
 
-## What is included in this TSM Group w/ Operations?
+[battle-pets-pre-caged](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/battle-pets-pre-caged)
 
-This is what available TSM Groups & Operation are available:
+[battle-pets-pre-caged-vendor](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/battle-pets-pre-caged-vendor)
 
-- All TSM content up to 8.3 content available - all expansions
-- Basic TSM Auction Operations for available groups:
-    - Current Content has %dbmarket operations
-    - Rarer items with dbregionalmarket operations
-    - Unique item markets with their own individual Auction house operation that bounce around in the market but sell well
-- Crafting Operations kept low to restock around once a week on high pop servers
-> REMOVE MAILING OPERATIONS
+[bfa-dazar-alor](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-dazar-alor)
 
-## Why only Auction, Crafting, and Mailing Operations?
-*Because they work first off!* Some of the other services like TSM Destroy & Warehouse are buggy at the moment with shuffling items back and forth so not including them until they're patched and working consistently.
+[bfa-epic-boes](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-epic-boes)
 
-## Why are you including YOUR mailing Operation Mozzletoff? Are you trying to rip us off?
-Yes.
+[bfa-green-boes](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-green-boes)
 
-(obviously JK) But I'd like for your to see how to divide up and mainly focused for the bigger Operational/Infrastructure Goldfarm folks who are alt heavy (like myself with 70+ 120 toons). Micromaning bags is an absolute trash panda experience without TSM Mailing. TSM makes this experience 100% manageable now.
+[bfa-p-alchemy](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-alchemy)
 
-## How do I remove YOUR Mailing Operations Mozzletoff?
-What you need to do is going into /tsm > Select Operations > Expand Mailing > Select any non-#default Mailing Operation to see which group items go where. change the name of the Operation & the name of the character.
+[bfa-p-blacksmithing](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-blacksmithing)
 
-## Do a /ReloadUI on each Import!
-TSM Errors out at times when importing back to back when dealing with heavier item heavy tsm groups. To avoid imprts missing items or subgroups, ensure to do a /reloadui after each import.
+[bfa-p-cooking](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-cooking)
 
-## Your group is missing items. Why?
-These groups are customized to my needs. Please send item suggestions [here](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/issues). 100% open to get stuff added to the **official repo** here.
+[bfa-p-enchanting](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-enchanting)
 
-# Getting started
+[bfa-p-engineering](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-engineering)
 
-## Where do I begin to use your TSM4 (8.3v) Groups & Operations?
-1. You can see the individual tsm group w/ operations listed [here](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups)
+[bfa-p-inscription](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-inscription)
 
-2. I've named the groups to understand what is what. Can direct message me on [twitter](https://twitter.com/mozzletoffWOW) or [discord](https://discord.me/mozzletoff) for any Questions.
+[bfa-p-jewelcrafting](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-jewelcrafting)
 
-3. **Remove the MAILING OPERATIONS** unless you want to understand how a more larger / alt heavy account(s) manage the micromanaging of items to get to the right various toons!
+[bfa-p-leatherworking](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-leatherworking)
 
-4. Do a /reloadui or log out and back in after each TSM import.
+[bfa-p-tailoring](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-tailoring)
 
-5. don't skip over 4. Do a /reloadui or log out and back in after team TSM import.
+[bfa-raw-mats](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-raw-mats)
 
-## Feedback
-Scroll to the top navigation bar and select feedback. It’ll open your local machine’s default Mailbox option to send me your feedback.
+[bfa-sellable-items](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-sellable-items)
 
-Please include any erroneous and/or outdated content (provide the URL), improvements suggestions. I will check this infrequently/bi-weekly to GitHub’s Issue tracker valid issues with the site to improve.
+[bfa-uldir](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-uldir)
 
-You may also open a GitHub issue [here](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/issues) for any tsm errors you identify. Click that link and click on the green button *New issue* or suggestions which will be responded to. Thank you little goblins!
+[bfa-world-drops-weapons](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-uldir)
+
+[boas-mailing-convenience](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/boas-mailing-convenience)
+
+[legion-inscription](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/legion-inscription)
+
+[no-longer-available-gear](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/no-longer-available-gear)
+
+[non-profession-mounts](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/non-profession-mounts)
+
+[oc-alchemy](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-alchemy)
+
+[oc-blacksmithing](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-blacksmithing)
+
+[oc-cooking](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-cooking)
+
+[oc-enchanting](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-enchanting)
+
+[oc-engineering](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-engineering)
+
+[oc-inscription-established-market](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-inscription-established-inscription-market)
+
+[oc-inscription-old-world](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-inscription-old-world-inscription)
+
+[oc-jewelcrafting](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-jewelcrafting)
+
+[oc-leatherworking](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-leatherworking)
+
+[oc-tailoring](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-tailoring)
+
+[old-content-legion-raw-mats](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/old-content-legion-raw-mats)
+
+[old-content-raw-mats](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/old-content-raw-mats)
+
+[random-old-items](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/random-old-items)
+
+[recipes](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/recipes)
+
+[toys](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/toys)
+
+[transmog](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/transmog)
+
+[transmog-legion](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/transmog-legion)
+
+[transmog-wod](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/transmog-wod)
