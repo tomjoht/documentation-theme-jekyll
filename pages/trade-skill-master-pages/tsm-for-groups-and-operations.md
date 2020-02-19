@@ -5,94 +5,99 @@ permalink: tsm-four-groups-and-operations.html
 folder: trade-skill-master-pages
 ---
 
-{% include note.html content="! * ! * ! READ THIS PAGE FIRST ! * ! * ! before proceeding to use my TSM Groups & Operations. Use at your own risk.
+{% include note.html content="! * ! * ! READ THIS [PAGE FIRST](https://gunnydelight.github.io/mozzletoff-wow-goldfarm-site/introduction-to-mozzles-tsm.html) ! * ! * ! before proceeding to use my TSM Groups & Operations. Use at your own risk.
 You should have an understanding of TSM Auction Operations, Crafting and Mailing before using anyone else's Groups & Ops so that you understand what it is doing.
 It is worth the time investment if you are serious about making gold. TSM manging is a daily or weekly activity to ensure youre doing the needful as markets change from time to time. No Failsafe Operations included yet for this currently. There is a plan to add that net in the future." %}
 
+{% include note.html content="Remove TSM Mail Operations" %}
+
 # Overview
+Mozzletoff's personal **TSM Groups and Settings**:
 
-[battle-pets-base](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/battle-pets-base)
+<br>
 
-[battle-pets-lvl-one](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/battle-pets-lvl-one)
+[battle-pets-base](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/battle-pets-base) **Descr:** *Battle Pets*
 
-[battle-pets-lvl-twentyfive](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/battle-pets-lvl-twentyfive)
+[battle-pets-lvl-one](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/battle-pets-lvl-one) **Descr:** *Lvl 1 Battle Pets*
 
-[battle-pets-pre-caged](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/battle-pets-pre-caged)
+[battle-pets-lvl-twentyfive](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/battle-pets-lvl-twentyfive) **Descr:** *Lvl 25 Battle Pets*
 
-[battle-pets-pre-caged-vendor](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/battle-pets-pre-caged-vendor)
+[battle-pets-pre-caged](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/battle-pets-pre-caged) **Descr:** *Battle Pet drops*
 
-[bfa-dazar-alor](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-dazar-alor)
+[battle-pets-pre-caged-vendor](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/battle-pets-pre-caged-vendor) **Descr:** *Battle Pets from Vendor*
 
-[bfa-epic-boes](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-epic-boes)
+[bfa-dazar-alor](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-dazar-alor) **Descr:** *Dazar'Alor BOE Drops*
 
-[bfa-green-boes](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-green-boes)
+[bfa-epic-boes](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-epic-boes) **Descr:** *BFA BOE Epics*
 
-[bfa-p-alchemy](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-alchemy)
+[bfa-green-boes](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-green-boes) **Descr:** *BFA BOE Greens*
 
-[bfa-p-blacksmithing](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-blacksmithing)
+[bfa-p-alchemy](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-alchemy) **Descr:** *BFA Alchemy craftables*
 
-[bfa-p-cooking](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-cooking)
+[bfa-p-blacksmithing](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-blacksmithing) **Descr:** *BFA BS craftables*
 
-[bfa-p-enchanting](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-enchanting)
+[bfa-p-cooking](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-cooking) **Descr:** *BFA Cooking craftables*
 
-[bfa-p-engineering](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-engineering)
+[bfa-p-enchanting](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-enchanting) **Descr:** *BFA Enchanting craftables*
 
-[bfa-p-inscription](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-inscription)
+[bfa-p-engineering](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-engineering) **Descr:** *BFA Engineer craftables*
 
-[bfa-p-jewelcrafting](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-jewelcrafting)
+[bfa-p-inscription](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-inscription) **Descr:** *BFA Inscription craftables*
 
-[bfa-p-leatherworking](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-leatherworking)
+[bfa-p-jewelcrafting](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-jewelcrafting) **Descr:** *BFA JC craftables*
 
-[bfa-p-tailoring](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-tailoring)
+[bfa-p-leatherworking](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-leatherworking) **Descr:** *BFA LW craftables*
 
-[bfa-raw-mats](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-raw-mats)
+[bfa-p-tailoring](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-p-tailoring) **Descr:** *BFA Tailor craftables*
 
-[bfa-sellable-items](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-sellable-items)
+[bfa-raw-mats](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-raw-mats) **Descr:** *BFA Rats Mats*
 
-[bfa-uldir](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-uldir)
+[bfa-sellable-items](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-sellable-items) **Descr:** *BFA Sellables Items*
 
-[bfa-world-drops-weapons](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-uldir)
+[bfa-uldir](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-uldir) **Descr:** *Uldir BOE Drops*
 
-[boas-mailing-convenience](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/boas-mailing-convenience)
+[bfa-world-drops-weapons](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/bfa-world-drops-weapons) **Descr:** *BFA World Drop BOES*
 
-[legion-inscription](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/legion-inscription)
+[boas-mailing-convenience](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/boas-mailing-convenience) **Descr:** *Bind On Account + Mailing Convenience Items*
 
-[no-longer-available-gear](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/no-longer-available-gear)
+[legion-inscription](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/legion-inscription) **Descr:** *Legion Inscription Items only*
 
-[non-profession-mounts](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/non-profession-mounts)
+[no-longer-available-gear](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/no-longer-available-gear) **Descr:** *No Longer Available items (NLA)*
 
-[oc-alchemy](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-alchemy)
+[non-profession-mounts](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/non-profession-mounts) **Descr:** *Non-Profession / Bind on Use Mounts*
 
-[oc-blacksmithing](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-blacksmithing)
+[oc-alchemy](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-alchemy) **Descr:** *Old Content Alchemy craftables*
 
-[oc-cooking](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-cooking)
+[oc-blacksmithing](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-blacksmithing) **Descr:** *Old Content BS craftables*
 
-[oc-enchanting](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-enchanting)
+[oc-cooking](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-cooking) **Descr:** *Old Content Cooking craftables*
 
-[oc-engineering](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-engineering)
+[oc-enchanting](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-enchanting) **Descr:** *Old Content Enchanting craftables*
 
-[oc-inscription-established-market](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-inscription-established-inscription-market)
+[oc-engineering](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-engineering) **Descr:** *Old Content Engineering craftables*
 
-[oc-inscription-old-world](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-inscription-old-world-inscription)
+[oc-inscription-established-market](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-inscription-established-inscription-market) **Descr:** *Old Content Inscription Established Market*
 
-[oc-jewelcrafting](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-jewelcrafting)
+[oc-inscription-old-world](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-inscription-old-world-inscription) **Descr:** *Old Content Inscription craftables*
 
-[oc-leatherworking](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-leatherworking)
+[oc-jewelcrafting](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-jewelcrafting) **Descr:** *Old Content JC craftables*
 
-[oc-tailoring](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-tailoring)
+[oc-leatherworking](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-leatherworking) **Descr:** *Old Content LW craftables*
 
-[old-content-legion-raw-mats](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/old-content-legion-raw-mats)
+[oc-tailoring](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/oc-tailoring) **Descr:** *Old Content Tailor craftables*
 
-[old-content-raw-mats](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/old-content-raw-mats)
+[old-content-legion-raw-mats](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/old-content-legion-raw-mats) **Descr:** *Old Content Legion Raw Mats*
 
-[random-old-items](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/random-old-items)
+[old-content-raw-mats](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/old-content-raw-mats) **Descr:** *Old Content Pre-Legion Raw mats*
 
-[recipes](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/recipes)
+[random-old-items](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/random-old-items) **Descr:** *Random Old Items*
 
-[toys](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/toys)
+[recipes](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/recipes) **Descr:** *Recipe Patterns*
 
-[transmog](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/transmog)
+[toys](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/toys) **Descr:** *Toys4Sales*
 
-[transmog-legion](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/transmog-legion)
+[transmog](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/transmog) **Descr:** *Transmog*
 
-[transmog-wod](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/transmog-wod)
+[transmog-legion](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/transmog-legion) **Descr:** *Legion Transmog*
+
+[transmog-wod](https://github.com/Gunnydelight/mozzletoff-wow-goldfarm-site/tree/gh-pages/tsm-groups/transmog-wod) **Descr:** *Transmog from Warlords of Draenor WOD*

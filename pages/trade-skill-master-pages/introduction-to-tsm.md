@@ -9,6 +9,8 @@ folder: trade-skill-master-pages
 You should have an understanding of TSM Auction Operations, Crafting and Mailing before using anyone else's Groups & Ops so that you understand what it is doing.
 It is worth the time investment if you are serious about making gold. No Failsafe Operations included yet for this currently. There is a plan to add that net in the future." %}
 
+{% include note.html content="Remove TSM Mail Operations" %}
+
 # Overview
 
 This is a melting pot of various **public-facing** Gold Farmer's pastebins from the following people:
