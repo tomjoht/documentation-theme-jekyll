@@ -392,14 +392,6 @@ entries:
       url: /tsm-four-groups-and-operations.html
       output: web, pdf
 
-    - title: 3
-      url:
-      output: web, pdf
-
-    - title:
-      url:
-      output: web, pdf
-
   - title: Herb | Mining Farming Routes
     output: web, pdf
 
