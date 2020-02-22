@@ -93,8 +93,8 @@ entries:
       url: /go_const_variable.html
       output: web, pdf
 
-    - title: Series
-      url: /go_variable.html
+    - title: 条件语句
+      url: /go_conditional_statement.html
       output: web, pdf
 
   - title: Java
