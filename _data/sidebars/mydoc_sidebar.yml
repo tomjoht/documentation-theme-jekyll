@@ -81,15 +81,15 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: Sidebar navigation
+    - title: 数据类型
       url: /mydoc_sidebar_navigation.html
       output: web, pdf
 
-    - title: YAML tutorial in the context of Jekyll
+    - title: 变量
       url: /mydoc_yaml_tutorial.html
       output: web, pdf
 
-    - title: Tags
+    - title: 常量
       url: /mydoc_tags.html
       output: web, pdf
 
