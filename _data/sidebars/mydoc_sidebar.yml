@@ -90,7 +90,7 @@ entries:
       output: web, pdf
 
     - title: 常量
-      url: /go_variable.html
+      url: /go_const_variable.html
       output: web, pdf
 
     - title: Series
