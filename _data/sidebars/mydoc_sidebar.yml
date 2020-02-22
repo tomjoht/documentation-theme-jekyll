@@ -90,11 +90,11 @@ entries:
       output: web, pdf
 
     - title: 常量
-      url: /mydoc_tags.html
+      url: /go_variable.html
       output: web, pdf
 
     - title: Series
-      url: /mydoc_series.html
+      url: /go_variable.html
       output: web, pdf
 
   - title: Java
