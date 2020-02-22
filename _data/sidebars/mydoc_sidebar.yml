@@ -3,40 +3,49 @@
 entries:
 - title: sidebar
   product: 个人博客
-  version: 
+  version:
   folders:
-
-  - title:
-    output: pdf
-    type: frontmatter
-    folderitems:
-    - title:
-      url: /titlepage.html
-      output: pdf
-      type: frontmatter
-    - title:
-      url: /tocpage.html
-      output: pdf
-      type: frontmatter
 
   - title: c++
     output: web, pdf
     folderitems:
 
-    - title: Get started
+    - title: 冯诺伊曼结构
       url: /index.html
       output: web, pdf
       type: homepage
 
-    - title: Introduction
-      url: /mydoc_introduction.html
+      subfolders:
+      - title: 进程内存结构
+        output: web
+        subfolderitems:
+
+        - title: PE结构
+          url: /tag_formatting2.html
+          output: web
+
+        - title: 进程内存布局
+          url: /tag_formatting.html
+          output: web
+
+    - title: 111
+      url: /mydoc_supported_features3.html
       output: web, pdf
 
-    - title: Supported features
-      url: /mydoc_supported_features.html
-      output: web, pdf
+      subfolders:
+      - title: 软件调试方法
+        output: web
+        subfolderitems:
 
-    - title: About the theme author
+        - title: 单机
+          url: /tag_formatting.html
+          output: web
+
+        - title: 远程调试
+          url: /tag_formatting.html
+          output: web
+
+    - title: 字符编码
       url: /mydoc_about.html
       output: web, pdf
 
@@ -127,7 +136,7 @@ entries:
     - title: 抽象工厂(abstract factory)
       url: /mydoc_tag_archives_overview.html
       output: web
-     
+
     - title: 生成器(builder)
       url: /mydoc_tag_archives_overview.html
       output: web
@@ -216,23 +225,24 @@ entries:
       url: /mydoc_tag_archives_overview.html
       output: web
 
-      subfolders:
-      - title: Tag archive pages
-        output: web
-        subfolderitems:
+    -
+     - subfolders:
+       - title: Tag archive pages
+         output: web
+         subfolderitems:
 
-        - title: Formatting pages
-          url: /tag_formatting.html
-          output: web
+         - title: Formatting pages
+           url: /tag_formatting2.html
+           output: web
 
-      subfolders:
-      - title: Tag archive pages2
-        output: web
-        subfolderitems:
+     - subfolders:
+       - title: Tag archive pages2
+         output: web
+         subfolderitems:
 
-        - title: Formatting pages2
-          url: /tag_formatting.html
-          output: web
+         - title: Formatting pages2
+           url: /tag_formatting.html
+           output: web
 
   - title: Tag archive
     output: web
@@ -274,7 +284,3 @@ entries:
         - title: Troubleshooting pages
           url: /tag_troubleshooting.html
           output: web
-
-
-
-         
