@@ -3,7 +3,7 @@ repository: tomjoht/documentation-theme-jekyll
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: Forest 个人博客 
+topnav_title: forest 个人博客 
 # this appears on the top navigation bar next to the home button
 
 site_title: forest blog
@@ -102,11 +102,11 @@ defaults:
 # these are defaults used for the frontmatter for these file types
 
 sidebars:
-- home_sidebar
+#- home_sidebar
 - mydoc_sidebar
-- product1_sidebar
-- product2_sidebar
-- other
+#- product1_sidebar
+#- product2_sidebar
+#- other
 
 description: "Intended as a documentation theme based on Jekyll for technical writers documenting software and other technical products, this theme has all the elements you would need to handle multiple products with both multi-level sidebar navigation, tags, and other documentation features."
 # the description is used in the feed.xml file
