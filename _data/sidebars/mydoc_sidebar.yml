@@ -82,7 +82,7 @@ entries:
 
     folderitems:
     - title: 数据类型
-      url: /go/go_types.html
+      url: /go_types.html
       output: web, pdf
 
     - title: 变量
