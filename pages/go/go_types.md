@@ -6,7 +6,7 @@ tags: [getting_started]
 summary: "I have used this theme for projects that I've worked on as a professional technical writer."
 sidebar: mydoc_sidebar
 permalink: go_types.html
-folder: mydoc/go
+folder: /go
 ---
 
 My name is Tom Johnson, and I'm a technical writer, blogger, and podcaster based in San Jose, California. For more details, see my [technical writing blog](http://idratherbewriting.com) and my [course on API documentation](http://idratherbewriting.com/learnapidoc/).  See [my blog's about page](http://idratherbewriting.com/aboutme/) for more details about me.
