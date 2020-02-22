@@ -86,7 +86,7 @@ entries:
       output: web, pdf
 
     - title: 变量
-      url: /go_test.html
+      url: /go_varible.html
       output: web, pdf
 
     - title: 常量
