@@ -28,7 +28,7 @@ My name is Tom Johnson, and I'm a technical writer, blogger, and podcaster based
 | float64    | ０      |                              |            |  |
 | complex64  | ０      |                              |            |  |
 | complex128 | ０      |                              |            |  |
-| byte       | ０      |    ０～２５５                  | 同uint8    |  |
+| byte       | ０      | 0~255                        | 同uint8    |  |
 | rune       | ０      |                              | 同int32    |  |
 | uint       | ０      |                              | 32位或64位  |  |
 | int        | ０      |                              |            |  |
