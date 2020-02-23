@@ -60,9 +60,11 @@ topnav_dropdowns:
           external_url: https://www.twitch.tv/speity
         - title: SkitzYoTV (MB)
           external_url: https://www.twitch.tv/skitzyotv
-        - title: SamadanPlaysWOW (Not RIP)
+        - title: SamadanPlaysWOW
           external_url: https://www.twitch.tv/SamadanPlaysWOW
-        - title: GumdropsTSM (RIP)
+        - title: SenzasAdventures
+          external_url: https://www.twitch.tv/senzasadventures
+        - title: GumdropsTSM
           external_url: https://www.twitch.tv/GumdropsTSM
         - title: StudenAlbatroz
           external_url: https://www.twitch.tv/studenalbatroz
