@@ -113,6 +113,9 @@ entries:
       url: /go_slice.html
       output: web, pdf
 
+    - title: 范围
+      url: /go_range.html
+      output: web, pdf      
 
   - title: Java
     output: web, pdf
