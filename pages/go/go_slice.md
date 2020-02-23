@@ -12,19 +12,16 @@ folder: /go
 Go切片是变长数组
 
 1. 定义切片
-  
-    语法: 
+      
+    语法:
+
         var 变量名 [] 变量类型
-
         var 变量名 [] 变量类型 = make([]变量类型, 数组长度[, 数组容量])
-
             变量名 := make([]变量类型, 数组长度[, 数组容量])
 
     例子:
         var arr [] int
-
         var s1 [] int = make([]int, 10, 20)
-
             sl := make([]int, 10)
 
 
@@ -46,7 +43,7 @@ Go切片是变长数组
 
      //追加多个元素
      num = append(num, 1, 2, 3)
-     
+
      //复制元素
      num1 := make([]int, 20)
      copy(num1, num)
