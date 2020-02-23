@@ -56,6 +56,8 @@ To change your Alchemy specialization (_e.g., from Elixir or Potions to Transmut
 
 The more alts you stack, the more daily CDs you have. There is a snow ball effect component that allows you to separate yourself from the competition.
 
+Ensure to check the price of [Spirit of Harmony](https://www.wowhead.com/item=76061/spirit-of-harmony) to understand if Riddle of Steel or Daily CD is the better option here. Usually Riddle of Steel is cheaper cost. Check the prices first before doing!
+
 ## Reference Links
 [Google Sheet Spreadsheet](https://docs.google.com/spreadsheets/d/1B5kob9knNn89wM7z9xbWvcxG3zqfbYPeficE7hA3gVo/edit?usp=sharing)
 
