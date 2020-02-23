@@ -9,9 +9,9 @@ permalink: go_map.html
 folder: /go
 ---
 
-map类型是一种无序键值对的集合，map是使用hash表来实现的。
+   map类型是一种无序键值对的集合，map是使用hash表来实现的。
 
-1. 定义map
+1.定义map
   
     语法: 
         var 变量名　map[key变量类型]value变量类型
@@ -21,7 +21,7 @@ map类型是一种无序键值对的集合，map是使用hash表来实现的。
         var mp map[string]string
         mp := make(map[string]string)
 
-2. 添加和修改元素
+2.添加和修改元素
 
     var mp = map[int]string{
         1:"001",
@@ -31,7 +31,7 @@ map类型是一种无序键值对的集合，map是使用hash表来实现的。
     mp[1] = "100"
 
 
-3. 查找元素
+3.查找元素
 
     var mp = map[int]string{
         1:"001",
@@ -44,7 +44,7 @@ map类型是一种无序键值对的集合，map是使用hash表来实现的。
     v2, exist2 := mp[３]
     //exist为false,表示不存在该元素
 
-4. 删除元素
+4.删除元素
 
     var mp = map[int]string{
         1:"001",
@@ -53,7 +53,7 @@ map类型是一种无序键值对的集合，map是使用hash表来实现的。
 
     delete(mp, 1)
 
-5. map是引用类型
+5.map是引用类型
     
     package main
 
