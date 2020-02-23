@@ -121,6 +121,10 @@ entries:
       url: /go_map.html
       output: web, pdf   
 
+    - title: 并发
+      url: /go_goroutine.html
+      output: web, pdf 
+
   - title: Java
     output: web, pdf
 
