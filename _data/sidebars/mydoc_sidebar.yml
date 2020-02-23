@@ -117,6 +117,10 @@ entries:
       url: /go_range.html
       output: web, pdf      
 
+    - title: map
+      url: /go_map.html
+      output: web, pdf   
+
   - title: Java
     output: web, pdf
 
