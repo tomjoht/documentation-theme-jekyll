@@ -5,13 +5,19 @@ permalink: tsm-four-groups-and-operations.html
 folder: trade-skill-master-pages
 ---
 
-{% include note.html content="! * ! * ! READ THIS [PAGE FIRST](https://gunnydelight.github.io/mozzletoff-wow-goldfarm-site/introduction-to-mozzles-tsm.html) ! * ! * ! before proceeding to use my TSM Groups & Operations. Use at your own risk.
-You should have an understanding of TSM Auction Operations, Crafting and Mailing before using anyone else's Groups & Ops so that you understand what it is doing.
-It is worth the time investment if you are serious about making gold. TSM manging is a daily or weekly activity to ensure youre doing the needful as markets change from time to time. No Failsafe Operations included yet for this currently. There is a plan to add that net in the future." %}
+{% include note.html content="! * ! * ! READ THIS [PAGE FIRST](https://gunnydelight.github.io/mozzletoff-wow-goldfarm-site/introduction-to-mozzles-tsm.html) ! * ! * ! " %}
 
-{% include note.html content="Remove TSM Mail Operations" %}
+{% include note.html content="Before proceeding to use my TSM Groups & Operations. Use at your own risk. You should have an understanding of **TSM Auction Operations**, **Crafting** and **Mailing** before using anyone else's Groups & Ops so that you understand what it is doing. It is worth the time investment if you are serious about making gold. TSM manging is a daily or weekly activity to ensure youre doing the needful as markets change from time to time. No Failsafe Operations included yet for this currently. There is a plan to add that net in the future." %}
+
+
+{% include note.html content="Remove my TSM Mail Operations" %}
 
 # Overview
+
+[Read this first being importing](https://gunnydelight.github.io/mozzletoff-wow-goldfarm-site/introduction-to-mozzles-tsm.html)
+
+<br>
+
 Mozzletoff's personal **TSM Groups and Settings**:
 
 <br>
