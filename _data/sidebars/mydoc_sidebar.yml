@@ -97,6 +97,11 @@ entries:
       url: /go_conditional_statement.html
       output: web, pdf
 
+    - title: 循环语句
+      url: /go_loop.html
+      output: web, pdf
+
+
   - title: Java
     output: web, pdf
 
