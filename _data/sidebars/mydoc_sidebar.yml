@@ -105,6 +105,10 @@ entries:
       url: /go_function.html
       output: web, pdf      
 
+    - title: 数组
+      url: /go_array.html
+      output: web, pdf
+
   - title: Java
     output: web, pdf
 
