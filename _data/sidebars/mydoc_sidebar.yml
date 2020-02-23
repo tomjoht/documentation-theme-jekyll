@@ -125,6 +125,10 @@ entries:
       url: /go_goroutine.html
       output: web, pdf 
 
+    - title: 通道
+      url: /go_channel.html
+      output: web, pdf 
+
   - title: Java
     output: web, pdf
 
