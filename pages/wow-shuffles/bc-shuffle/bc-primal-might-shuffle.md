@@ -24,7 +24,7 @@ Here is a list of the item's that you can earn:
 |Item|URL|
 |-------|--------|
 |Primal Might|[Direct WOWHEAD Link](https://www.wowhead.com/item=23571/primal-might).|
-
+|Primal Might is used for... |[Direct WOWHEAD Link](https://www.wowhead.com/item=23571/primal-might#reagent-for).|
 
 ## Items involved in the Shuffle
 
@@ -67,10 +67,10 @@ When doing this farms, be aware of:
 ## Reference Links
 [Google Sheets spreadsheet for Primal Might shuffle](https://docs.google.com/spreadsheets/d/1o9O1t3oiAVF_MxJvWQfQa2yLoidoUISJJtKcZeOEHbQ/edit#gid=254497402)
 
-[Canadia TV Twitch](http://twitch.tv/canadia_tv)
+[Canadia_TV's Twitch](http://twitch.tv/canadia_tv)
 
-[Canadia_TV' Twitter](https://twitter.com/canadia_tv)
+[Canadia_TV's Twitter](https://twitter.com/canadia_tv)
 
-[Canadia TV's Pastebin for Alchemy Group](https://pastebin.com/ypPV7XuH)
+[Canadia_TV's Pastebin for Alchemy Group](https://pastebin.com/ypPV7XuH)
 
-[Canadia TV’s Video walkthrough](https://www.youtube.com/watch?v=bahNtN-Z0yY&feature=youtu.be)
+[Canadia_TV's Video walk-through](https://www.youtube.com/watch?v=bahNtN-Z0yY&feature=youtu.be)
