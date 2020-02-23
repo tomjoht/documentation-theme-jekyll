@@ -94,6 +94,8 @@ topnav_dropdowns:
           external_url: https://www.twitch.tv/senzasadventures
         - title: StudenAlbatroz
           external_url: https://www.twitch.tv/studenalbatroz
+        - title: Tr4xindus
+          external_url: https://www.twitch.tv/tr4xindus
         - title: Xionik&Sheyrah (OG)
           external_url: https://www.twitch.tv/xionikandsheyrah
 
@@ -129,5 +131,7 @@ topnav_dropdowns:
           external_url: https://www.youtube.com/seathrift
         - title: StudenAlbatroz
           external_url: https://www.youtube.com/channel/UCdstOzMVSXEjpBrNYyG_D0A
+        - title: Tr4xindus
+          external_url: https://www.youtube.com/c/tr4xgaming
         - title: WTB Gold
           external_url: https://www.youtube.com/channel/UCTUo98NJmvkyP4ltv5W3D9g
