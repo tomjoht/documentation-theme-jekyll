@@ -42,99 +42,92 @@ topnav_dropdowns:
           external_url: https://www.twitch.tv/Mozzletoff
         - title: Arnota42 (MB)
           external_url: https://www.twitch.tv/arnota42
-        - title: WTBGold (MB)
-          external_url: https://www.twitch.tv/WTBGold
-        - title: CanadianTV (MB)
-          external_url: https://www.twitch.tv/canadia_tv
-        - title: Persephonae (MB)
-          external_url: https://www.twitch.tv/persephonae
-        - title: Ridosaw (MB)
-          external_url: https://www.twitch.tv/Ridosaw
         - title: BabyPowder (MB)
           external_url: https://www.twitch.tv/ibabypowder
+        - title: Canadia_TV (MB)
+          external_url: https://www.twitch.tv/canadia_tv
         - title: FarmerTru (MB)
           external_url: https://www.twitch.tv/farmertru
         - title: HipsterVegeta (MB)
           external_url: https://www.twitch.tv/hipstervegeta
-        - title: Spiety (MB)
-          external_url: https://www.twitch.tv/speity
+        - title: Persephonae (MB)
+          external_url: https://www.twitch.tv/persephonae
+        - title: Ridosaw (MB)
+          external_url: https://www.twitch.tv/Ridosaw
         - title: SkitzYoTV (MB)
           external_url: https://www.twitch.tv/skitzyotv
-        - title: SamadanPlaysWOW
-          external_url: https://www.twitch.tv/SamadanPlaysWOW
-        - title: SenzasAdventures
-          external_url: https://www.twitch.tv/senzasadventures
-        - title: GumdropsTSM
-          external_url: https://www.twitch.tv/GumdropsTSM
-        - title: StudenAlbatroz
-          external_url: https://www.twitch.tv/studenalbatroz
-        - title: DozyGames
-          external_url: https://www.twitch.tv/dozygame
-        - title: BregsVids
-          external_url: https://www.twitch.tv/BregVids
-        - title: The Lazy Goldfarmer
-          external_url: https://www.twitch.tv/lazygoldmaker
+        - title: Spiety (MB)
+          external_url: https://www.twitch.tv/speity
+        - title: WTBGold (MB)
+          external_url: https://www.twitch.tv/WTBGold
         - title: AlfredGG
           external_url: https://twitch.tv/alfredgg
-        - title: HelloOctoberly
-          external_url: https://www.twitch.tv/helloOctoberly
-        - title: ProfitzTV (LAC creator)
-          external_url: https://www.twitch.tv/profitztv
-        - title: SeaThrift (LAC Queen)
-          external_url: https://www.twitch.tv/seathrift
-        - title: Brozerian
-          external_url: https://www.twitch.tv/Brozerian
-        - title: Melann
-          external_url: https://www.twitch.tv/Melann
         - title: BaconBits
           external_url: https://www.twitch.tv/baconbits078
-        - title: Xionik&Sheyrah (OG)
-          external_url: https://www.twitch.tv/xionikandsheyrah
-        - title: Peelyon (Pets!)
-          external_url: https://www.twitch.tv/peelyon
+        - title: BregsVids
+          external_url: https://www.twitch.tv/BregVids
+        - title: Brozerian
+          external_url: https://www.twitch.tv/Brozerian
+        - title: DozyGames
+          external_url: https://www.twitch.tv/dozygame
         - title: Goblin Academy
           external_url: https://www.twitch.tv/GoblinAcademy
-        - title: Hikons 
-          external_url: https://www.twitch.tv/Hokins
+        - title: GumdropsTSM
+          external_url: https://www.twitch.tv/GumdropsTSM
+        - title: HelloOctoberly
+          external_url: https://www.twitch.tv/helloOctoberly
+        - title: Hikons
+          external_url: https://www.twitch.tv/Hikons
+        - title: The Lazy Goldfarmer
+          external_url: https://www.twitch.tv/lazygoldmaker
+        - title: Melann
+          external_url: https://www.twitch.tv/Melann
+        - title: Peelyon (Pets!)
+          external_url: https://www.twitch.tv/peelyon
+        - title: ProfitzTV (LAC creator)
+          external_url: https://www.twitch.tv/profitztv
+        - title: SamadanPlaysWOW
+          external_url: https://www.twitch.tv/SamadanPlaysWOW
+        - title: SeaThrift (LAC Queen)
+          external_url: https://www.twitch.tv/seathrift
+        - title: SenzasAdventures
+          external_url: https://www.twitch.tv/senzasadventures
+        - title: StudenAlbatroz
+          external_url: https://www.twitch.tv/studenalbatroz
+        - title: Xionik&Sheyrah (OG)
+          external_url: https://www.twitch.tv/xionikandsheyrah
+
 
 
     - title: YT Creators
       folderitems:
         - title: Mozzletoff
           external_url: https://www.youtube.com/c/MozzletoffWoW
-        - title: WTB Gold
-          external_url: https://www.youtube.com/channel/UCTUo98NJmvkyP4ltv5W3D9g
-        - title: StudenAlbatroz
-          external_url: https://www.youtube.com/channel/UCdstOzMVSXEjpBrNYyG_D0A
-        - title: Dozy Game
-          external_url: https://www.youtube.com/channel/UC-3q4-UIT4eHEqBE1GSGoIQ
-        - title: SamadanPlaysWOW
-          external_url: https://www.youtube.com/channel/UC1jxWx5pF12P-BV-62x0HRQ
+        - title: AlfredGG
+          external_url: https://www.youtube.com/channel/UCUZrUI1EePag3Ts8Doc-ydw
+        - title: BabyPowder
+          external_url: https://www.youtube.com/c/babypowdersguides
+        - title: BregVids
+          external_url: https://www.youtube.com/bregvids
         - title: CanadianTV
           external_url: https://www.youtube.com/channel/UCxgzYGsphDNNMQd0KfKGnHA
-        - title: Meraki's Method
-          external_url: https://www.youtube.com/channel/UCGDZxZz258ayHGXSmmaZ51Q
+        - title: Dozy Game
+          external_url: https://www.youtube.com/channel/UC-3q4-UIT4eHEqBE1GSGoIQ
         - title: GumDrops
           external_url: https://www.youtube.com/channel/UC5ny_PUo9noFxxFBXeFaXhg
         - title: Hikons
           external_url: https://www.youtube.com/channel/UCg-zFvILTJJGDyx2PDCSmKw
-        - title: AlfredGG
-          external_url: https://www.youtube.com/channel/UCUZrUI1EePag3Ts8Doc-ydw
-        - title: BregVids
-          external_url: https://www.youtube.com/bregvids
         - title: KomLit
           external_url: https://www.youtube.com/user/KomLit
-        - title: Seathrift
-          external_url: https://www.youtube.com/seathrift
-        - title: BabyPowder
-          external_url: https://www.youtube.com/c/babypowdersguides
         - title: LonMeasley
           external_url: https://youtube.com/channel/UCjThCEnBRpZUfmG6zmJS12A
-
-
-
-
-
-
-
-
+        - title: Meraki's Method
+          external_url: https://www.youtube.com/channel/UCGDZxZz258ayHGXSmmaZ51Q
+        - title: SamadanPlaysWOW
+          external_url: https://www.youtube.com/channel/UC1jxWx5pF12P-BV-62x0HRQ
+        - title: Seathrift
+          external_url: https://www.youtube.com/seathrift
+        - title: StudenAlbatroz
+          external_url: https://www.youtube.com/channel/UCdstOzMVSXEjpBrNYyG_D0A
+        - title: WTB Gold
+          external_url: https://www.youtube.com/channel/UCTUo98NJmvkyP4ltv5W3D9g
