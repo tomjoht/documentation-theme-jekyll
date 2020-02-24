@@ -16,7 +16,7 @@ folder: wow-shuffles
 ## Google Sheets calculator
 I am sharing my **Google Sheets** _(Excel.xls)_ to allow users to manipulate and pivot data as it varies server to server here:
 
-[Canadia's Primal Might Google Sheet shuffle](https://docs.google.com/spreadsheets/d/1o9O1t3oiAVF_MxJvWQfQa2yLoidoUISJJtKcZeOEHbQ/edit?usp=sharing)
+[Canadia's Primal Might Google Sheet shuffle](https://docs.google.com/spreadsheets/d/1o9O1t3oiAVF_MxJvWQfQa2yLoidoUISJJtKcZeOEHbQ/edit#gid=1711023391)
 
 ## What can you earn
 
