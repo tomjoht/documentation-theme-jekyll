@@ -72,7 +72,7 @@ entries:
     folderitems:
 
     - title: Primal Might shuffle
-      url: primal-might-shuffle.html
+      url: /primal-might-shuffle.html
       output: web, pdf
 
       subfolders:
