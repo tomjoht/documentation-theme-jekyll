@@ -6,7 +6,7 @@ entries:
   version:
   folders:
 
-  - title: c++
+  - title: C++
     output: web, pdf
     folderitems:
 
@@ -133,6 +133,17 @@ entries:
       url: /go_interface.html
       output: web, pdf 
 
+  - title: Git
+    output: web, pdf
+
+    folderitems:
+    - title: 数据类型
+      url: /go_types.html
+      output: web, pdf
+
+    - title: 变量
+      url: /go_variable.html
+      output: web, pdf
 
   - title: Java
     output: web, pdf
