@@ -181,108 +181,36 @@ entries:
     output: web
     folderitems:
 
-    - title: 抽象工厂(abstract factory)
-      url: /mydoc_tag_archives_overview.html
-      output: web
-
-    - title: 生成器(builder)
-      url: /mydoc_tag_archives_overview.html
-      output: web
-
-    - title: 工厂方法(factory method)
-      url: /mydoc_tag_archives_overview.html
-      output: web
-
-    - title: 生成器(builder)
-      url: /mydoc_tag_archives_overview.html
-      output: web
-
-    - title: 原型(prototype)
-      url: /mydoc_tag_archives_overview.html
-      output: web
-
-    - title: 单例(singleton)
-      url: /mydoc_tag_archives_overview.html
-      output: web
-
-    - title: 适配器(adapter)
-      url: /mydoc_tag_archives_overview.html
-      output: web
-
-    - title: 桥接(bridge)
-      url: /mydoc_tag_archives_overview.html
-      output: web
-
-    - title: 组合(compose)
-      url: /mydoc_tag_archives_overview.html
-      output: web
-
-    - title: 装饰(decorator)
-      url: /mydoc_tag_archives_overview.html
-      output: web
-
-    - title: 外观(facade)
-      url: /mydoc_tag_archives_overview.html
-      output: web
-
-    - title: 亨元(fly weight)
-      url: /mydoc_tag_archives_overview.html
-      output: web
-
-    - title: 代理(proxy)
-      url: /mydoc_tag_archives_overview.html
-      output: web
-
-    - title: 责任链(chain of responsibility)
-      url: /mydoc_tag_archives_overview.html
-      output: web
-
-    - title: 命令(command)
-      url: /mydoc_tag_archives_overview.html
-      output: web
-
-    - title: 解释器(interpreter)
-      url: /mydoc_tag_archives_overview.html
-      output: web
-
-    - title: 迭代器(iterator)
-      url: /mydoc_tag_archives_overview.html
-      output: web
-
-    - title: 中介者(mediator)
-      url: /mydoc_tag_archives_overview.html
-      output: web
-
-    - title: 备忘录(memento)
-      url: /mydoc_tag_archives_overview.html
-      output: web
-
-    - title: 观察者(observer)
-      url: /mydoc_tag_archives_overview.html
-      output: web
-
-    - title: 状态(state)
-      url: /mydoc_tag_archives_overview.html
-      output: web
-
-    - title: 策略(strategy)
-      url: /mydoc_tag_archives_overview.html
-      output: web
-
-    - title: 访问者(visitor)
-      url: /mydoc_tag_archives_overview.html
-      output: web   
-
       subfolders:
       - title: 创建型模式
         output: web
         subfolderitems:
 
-        - title: Formatting pages
-          url: /tag_formatting.html
-          output: web 
+        - title: 抽象工厂(abstract factory)
+          url: /mydoc_tag_archives_overview.html
+          output: web
 
-    - title: 访问者１(visitor)
+        - title: 生成器(builder)
+          url: /mydoc_tag_archives_overview.html
+          output: web
+
+        - title: 工厂方法(factory method)
+          url: /mydoc_tag_archives_overview.html
+          output: web
+
+        - title: 生成器(builder)
+          url: /mydoc_tag_archives_overview.html
+          output: web
+
+        - title: 原型(prototype)
+          url: /mydoc_tag_archives_overview.html
+          output: web
+
+        - title: 单例(singleton)
+          url: /mydoc_tag_archives_overview.html
+          output: web
+
+    - title: 
       url: /mydoc_tag_archives_overview.html
       output: web  
 
@@ -291,11 +219,35 @@ entries:
         output: web
         subfolderitems:
 
-        - title: Formatting pages
-          url: /tag_formatting.html
-          output: web 
+      - title: 适配器(adapter)
+        url: /mydoc_tag_archives_overview.html
+        output: web
 
-    - title: 访问者２(visitor)
+      - title: 桥接(bridge)
+        url: /mydoc_tag_archives_overview.html
+        output: web
+
+      - title: 组合(compose)
+        url: /mydoc_tag_archives_overview.html
+        output: web
+
+      - title: 装饰(decorator)
+        url: /mydoc_tag_archives_overview.html
+        output: web
+
+      - title: 外观(facade)
+        url: /mydoc_tag_archives_overview.html
+        output: web
+
+      - title: 亨元(fly weight)
+        url: /mydoc_tag_archives_overview.html
+        output: web
+
+      - title: 代理(proxy)
+        url: /mydoc_tag_archives_overview.html
+        output: web
+
+    - title: 
       url: /mydoc_tag_archives_overview.html
       output: web  
 
@@ -304,9 +256,45 @@ entries:
         output: web
         subfolderitems:
 
-        - title: Formatting pages
-          url: /tag_formatting.html
-          output: web 
+      - title: 责任链(chain of responsibility)
+        url: /mydoc_tag_archives_overview.html
+        output: web
+
+      - title: 命令(command)
+        url: /mydoc_tag_archives_overview.html
+        output: web
+
+      - title: 解释器(interpreter)
+        url: /mydoc_tag_archives_overview.html
+        output: web
+
+      - title: 迭代器(iterator)
+        url: /mydoc_tag_archives_overview.html
+        output: web
+
+      - title: 中介者(mediator)
+        url: /mydoc_tag_archives_overview.html
+        output: web
+
+      - title: 备忘录(memento)
+        url: /mydoc_tag_archives_overview.html
+        output: web
+
+      - title: 观察者(observer)
+        url: /mydoc_tag_archives_overview.html
+        output: web
+
+      - title: 状态(state)
+        url: /mydoc_tag_archives_overview.html
+        output: web
+
+      - title: 策略(strategy)
+        url: /mydoc_tag_archives_overview.html
+        output: web
+
+      - title: 访问者(visitor)
+        url: /mydoc_tag_archives_overview.html
+        output: web 
 
   - title: Tag archive
     output: web
