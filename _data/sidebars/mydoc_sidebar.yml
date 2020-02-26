@@ -271,26 +271,42 @@ entries:
 
     - title: 访问者(visitor)
       url: /mydoc_tag_archives_overview.html
-      output: web
+      output: web   
 
-    -
-     - subfolders:
-       - title: Tag archive pages
-         output: web
-         subfolderitems:
+      subfolders:
+      - title: 创建型模式
+        output: web
+        subfolderitems:
 
-         - title: Formatting pages
-           url: /tag_formatting2.html
-           output: web
+        - title: Formatting pages
+          url: /tag_formatting.html
+          output: web 
 
-     - subfolders:
-       - title: Tag archive pages2
-         output: web
-         subfolderitems:
+    - title: 访问者１(visitor)
+      url: /mydoc_tag_archives_overview.html
+      output: web  
 
-         - title: Formatting pages2
-           url: /tag_formatting.html
-           output: web
+      subfolders:
+      - title: 结构型模式
+        output: web
+        subfolderitems:
+
+        - title: Formatting pages
+          url: /tag_formatting.html
+          output: web 
+
+    - title: 访问者２(visitor)
+      url: /mydoc_tag_archives_overview.html
+      output: web  
+
+      subfolders:
+      - title: 行为模式
+        output: web
+        subfolderitems:
+
+        - title: Formatting pages
+          url: /tag_formatting.html
+          output: web 
 
   - title: Tag archive
     output: web
