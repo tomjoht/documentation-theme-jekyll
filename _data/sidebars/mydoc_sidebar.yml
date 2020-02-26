@@ -181,10 +181,6 @@ entries:
     output: web
     folderitems:
 
-    - title: Tag archives overview２
-      url: /mydoc_tag_archives_overview.html
-      output: web
-
       subfolders:
       - title: 创建型模式
         output: web
@@ -215,7 +211,7 @@ entries:
           output: web
 
     - title: 
-      url: /mydoc_tag_archives_overview.html
+      url: 
       output: web  
 
       subfolders:
@@ -252,7 +248,7 @@ entries:
           output: web
 
     - title: 
-      url: /mydoc_tag_archives_overview.html
+      url: 
       output: web  
 
       subfolders:
