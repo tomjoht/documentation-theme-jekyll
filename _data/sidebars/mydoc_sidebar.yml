@@ -211,7 +211,7 @@ entries:
           output: web
 
     - title: 
-      url: /test.html
+      url: /mydoc_tag_archives_overview.html
       output: web  
 
       subfolders:
@@ -248,7 +248,7 @@ entries:
           output: web
 
     - title: 
-      url: ／test.html
+      url: /mydoc_tag_archives_overview.html
       output: web  
 
       subfolders:
@@ -295,6 +295,14 @@ entries:
         - title: 访问者(visitor)
           url: /mydoc_tag_archives_overview.html
           output: web 
+
+  - title: Linux命令
+    output: web
+    folderitems:
+
+    - title: find
+      url: /mydoc_tag_archives_overview.html
+      output: web
 
   - title: Tag archive
     output: web
