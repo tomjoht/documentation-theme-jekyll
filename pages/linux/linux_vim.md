@@ -14,6 +14,7 @@ folder: /linux
 1.创建文件
   
   $ sudo vim 
+  '
 
 * 查看全局环境    
   $ env  
