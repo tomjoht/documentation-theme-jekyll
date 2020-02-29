@@ -9,10 +9,12 @@ permalink: linux_env.html
 folder: /linux
 ---
 
-Linux环境变量分为全局环境变量和局部环境变量；全局变量不仅对shell会话可见，对所有shell创建的子进程也可见；局部环境变量仅对创建它们的shell可见。
 
-1.查看环境变量
+
+1.创建文件
   
+  $ sudo vim 
+
 * 查看全局环境    
   $ env  
   或  
