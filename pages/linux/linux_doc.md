@@ -29,23 +29,23 @@ folder: /linux
 
 2. cd　遍历目录
 
-　语法：  
-    　cd [option] [dir]
+语法：  
+    cd [option] [dir]
 
 3. ls　列表  
 
-　语法：  
-    　　ls [option]... [file]...
+语法：  
+    ls [option]... [file]...
 
-  * -a, --all 显示所有文件  
-  * -A 显示所有文件，但不包括.和..  
-  * -l 用长列表模式  
-  * -R, --recursive 递归遍历子文件夹  
+* -a, --all 显示所有文件  
+* -A 显示所有文件，但不包括.和..  
+* -l 用长列表模式  
+* -R, --recursive 递归遍历子文件夹  
   
 4. touch　创建文件
 
-　语法：  
-    　　touch [option]... [file]...  
+  语法：  
+      　touch [option]... [file]...  
 
 5. touch　创建文件
 
