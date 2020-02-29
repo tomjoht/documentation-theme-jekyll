@@ -9,7 +9,7 @@ permalink: linux_doc.html
 folder: /linux
 ---
 
-1.Linux常用目录
+1. Linux常用目录
   
 * /        虚拟目录的根目录，通常不会在这里存储文件　　    
 * /bin     二进制目录，存放许多GNU用户级的工具　　
@@ -27,20 +27,20 @@ folder: /linux
 * /usr     用户安装软件的目录
 * /var     可变目录，用以存放经常变化的文件，比如日志文件　　
 
-2.cd　遍历目录
+2. cd　遍历目录
 
-　　　 语法：  
-      　　　cd [option] [dir]
+　　语法：  
+    　　cd [option] [dir]
 
-3.ls　列表
+3. ls　列表  
 
-　　　 语法：  
-      　　　ls [option]... [file]...
+　　语法：  
+    　　ls [option]... [file]...
 
-      * -a, --all 显示所有文件  
-      * -A 显示所有文件，但不包括.和..  
-      * -l 用长列表模式  
-      * -R, --recursive 递归遍历子文件夹  
+  * -a, --all 显示所有文件  
+  * -A 显示所有文件，但不包括.和..  
+  * -l 用长列表模式  
+  * -R, --recursive 递归遍历子文件夹  
   
 
 
