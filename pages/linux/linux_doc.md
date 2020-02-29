@@ -54,14 +54,35 @@ folder: /linux
    复制SOURCE到DEST，或复制多个SOURCE(s)到DIRECTORY　　
 
 　　语法：    
-      cp [OPTION]... [-T] SOURCE DEST
-      cp [OPTION]... SOURCE... DIRECTORY
-      cp [OPTION]... -t DIRECTORY SOURCE...
+      cp [OPTION]... [-T] SOURCE DEST  
+      cp [OPTION]... SOURCE... DIRECTORY  
+      cp [OPTION]... -t DIRECTORY SOURCE...  
  
-6. mv重命名文件
+6. mv 重命名文件
   
     语法:   
         mv [OPTION]... [-T] SOURCE DEST  
-   or:  mv [OPTION]... SOURCE... DIRECTORY  
-   or:  mv [OPTION]... -t DIRECTORY SOURCE...  
+        mv [OPTION]... SOURCE... DIRECTORY  
+        mv [OPTION]... -t DIRECTORY SOURCE...  
 
+7. rm　删除文件
+  
+    语法:   
+        rm [OPTION]... [FILE]...   
+
+8. mkdir　创建目录
+  
+    语法:   
+        mkdir [OPTION]... DIRECTORY...  
+
+9. rmdir　删除文件夹
+  
+    语法:   
+        rmdir [OPTION]... DIRECTORY...  
+
+    rmdir只能删除空目录，－r可以删除非空目录
+
+10. rm　删除文件
+  
+    语法:   
+        rm [OPTION]... [FILE]...                 
