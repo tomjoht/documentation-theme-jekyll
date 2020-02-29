@@ -304,6 +304,10 @@ entries:
     output: web
     folderitems:
 
+    - title: Linux环境变量
+      url: /linux_env.html
+      output: web
+
     - title: find
       url: /mydoc_tag_archives_overview.html
       output: web
