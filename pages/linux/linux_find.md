@@ -1,5 +1,5 @@
 ---
-title: Linux 环境变量
+title: Linux find
 keywords: documentation theme, jekyll, technical writers, help authoring tools, hat replacements
 last_updated: July 3, 2016
 tags: [getting_started]
@@ -9,7 +9,7 @@ permalink: linux_find.html
 folder: /linux
 ---
 
-Linux环境变量分为全局环境变量和局部环境变量；全局变量不仅对shell会话可见，对所有shell创建的子进程也可见；局部环境变量仅对创建它们的shell可见。
+Linux环境变量分为全局环境变量和局部环境变量；
 
 1. find
   
