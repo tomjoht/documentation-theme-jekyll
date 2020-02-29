@@ -9,7 +9,7 @@ permalink: linux_doc.html
 folder: /linux
 ---
 
-　　本文主要介绍Linux文件相关问题。　　
+本文主要介绍Linux文件相关问题。　　
 
 1. Linux常用目录
   
@@ -58,3 +58,10 @@ folder: /linux
       cp [OPTION]... SOURCE... DIRECTORY
       cp [OPTION]... -t DIRECTORY SOURCE...
  
+6. mv重命名文件
+  
+    语法:   
+        mv [OPTION]... [-T] SOURCE DEST  
+   or:  mv [OPTION]... SOURCE... DIRECTORY  
+   or:  mv [OPTION]... -t DIRECTORY SOURCE...  
+
