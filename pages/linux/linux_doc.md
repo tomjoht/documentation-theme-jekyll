@@ -80,7 +80,7 @@ folder: /linux
     语法:   
         rmdir [OPTION]... DIRECTORY...  
 
-    rmdir只能删除空目录，－r可以删除非空目录
+    rmdir只能删除空目录，－r可以删除非空目录  
 
 10. rm　删除文件
   
