@@ -44,10 +44,13 @@ folder: /linux
   
 4.touch　创建文件
 
-  语法：  
-      　touch [option]... [file]...  
+  语法：    
+  　  touch [option]... [file]...  
 
-5.touch　创建文件
+5.cp　复制文件
 
-　　语法：  
-    　　touch [option]... [file]...  
+　　语法：    
+      cp [OPTION]... [-T] SOURCE DEST
+      cp [OPTION]... SOURCE... DIRECTORY
+      cp [OPTION]... -t DIRECTORY SOURCE...
+ 
