@@ -312,6 +312,14 @@ entries:
       url: /mydoc_tag_archives_overview.html
       output: web
 
+    - title: Vim
+      url: /linux_vim.html
+      output: web
+
+    - title: Linux文件
+      url: /linux_doc.html
+      output: web      
+
   - title: Tag archive
     output: web
     folderitems:
