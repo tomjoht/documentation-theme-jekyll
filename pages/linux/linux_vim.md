@@ -1,73 +1,83 @@
 ---
-title: Linux 环境变量
+title: Vim常用命令
 keywords: documentation theme, jekyll, technical writers, help authoring tools, hat replacements
 last_updated: July 3, 2016
 tags: [getting_started]
 summary: "I have used this theme for projects that I've worked on as a professional technical writer."
 sidebar: mydoc_sidebar
-permalink: linux_env.html
+permalink: linux_vim.html
 folder: /linux
 ---
 
+vim常用命令　　
 
+1. vim两种操作模式  
+   vim有两种操作模式：命令模式和编辑模式。命令模式下输入i转换成编辑模式；编辑模式下输入esc转换成命令模式。
 
-1.创建文件
+2. 创建文件  
   
-  $ sudo vim 
-  '
+  $ sudo vim test.txt
 
-* 查看全局环境    
-  $ env  
-  或  
-  $ printenv  
+3. 保存文件　　
+   命令模式下输入以下命令退出  
+* q  如果未修改缓存区数据，退出
+* q! 取消所有对缓存区的修改并退出
+* w filename 将文件保存到另一个文件名下
+* wq 将缓冲区数据保存到文件并退出
 
-* 查看局部环境  
-  Linux没有一个命令只显示局部环境变量，set命令会显示为某个特定进程设置的所有环境变量。    
-  $ set
+4. 编辑数据　　
+    
+* x   删除当前光标所在位置的字符
+* dd  删除当前光标所在行
+* dw  删除光标处的单词
+* d$  删除当前光标至行尾的内容
+* u   撤销前一编辑命令
+* ndd 删除以当前行开始的n行
 
-* 查看具体环境变量    
-  用echo命令可以查看单个环境变量的值。   
-  $ echo $HOME
+5. 复制　　
+    
+* [range]co[py] {address}   
+  示例:  
+     //复制9到16行内容到20  
+     9,16 copy 20  
+    
+* [range]mo[ve] {address}   
+  示例:  
+     //移动9到16行内容到20
+     9,16 copy 20     
 
-2.设置环境变量
+* yy  复制当前行
+* nyy 复制光标所在的向下n行
+* 
 
-* 设置全局环境变量     
-  
-  创建全局变量环境变量的方法是先创建一个局部环境变量，然后再把它导出到全局环境变量中。这个过程用export命令来完成，这种方式修改的变量是临时的。   
-  $ test=testing  
-  $ export echo    
-  
-* 设置局部环境
-  
-  局部环境变量推荐使用小写字母；  
-  如果要给变量赋一个含有空格的字符串值，必须用单引号界定字符串的开始和末尾；  
-  在环境变量名、等号和值之间没有空格。
-  
-  示例：  
-  　　　$ test=testing  
-       $ echo $test  
-         testing  
-       $ test='testing is a long string'    
+6. 粘贴　　
+    
+* p  将数据粘贴到当前行的下一行
+* P  将数据粘贴到当前行的上一行  
 
-3.永久修改环境变量
+7. 查找　　
+    
+* /待查找内容
+然后输入  
+n 向下查找下一个
+N 向上查找下一个
 
-当你登录Linux系统时，bash shell会作为登录shell启动。登录shell会从４个不同的启动文件里读取命令。  
+8. 替换　　
+    
+* [range]s/目标字符串/替换字符串/[option]  
+  range字段值１,10表示从第１行到第10行
+  %表示整个文件
+  option表示操作类型，默认只对第一个匹配的字符进行替换
+  option字段值g(global)表示全局替换
+　　          c(confirm)表示操作时需要确认
+             i(ignorecase)表示不区分大小写
 
-  * /etc/profile 
-  * $HOME/.bash_profile
-  * $HOME/.bash_login
-  * $HOME/.profile 
-  
-/etc/profile文件是系统上默认的bash shell的主启动文件。系统上的每个用户登录时都会执行这个启动文件。另外３个启动文件是用户专有的，所以可根据每个用户的具体需求定制。
-
-* 永久修改系统全局环境变量  
-  这种方式对所有用户有效  
-  $ sudo vim /etc/profile  
-    在文件末尾添加 export GOPATH=/home/simple/go  
-    然后保存文件  
-    立即生效，输入以下命令；需要系统重启后才能永久生效  
-  $ source /etc/profile 
-
-* 永久修改用户全局环境变量      
-  其他３个文件只对某个用户有效。  
-
+9. 其他命令　　
+    
+* 0或home 移动到当前行行首
+* $或end  移动到当前行行尾
+* G       移动到当前文档最后一行
+* nG      移动到当前文档的第n行
+* gg      移动到当前文档的第一行，相当于1G
+* n<Enter>光标向下移动n行   
+      
