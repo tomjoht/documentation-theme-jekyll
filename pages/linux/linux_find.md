@@ -5,7 +5,7 @@ last_updated: July 3, 2016
 tags: [getting_started]
 summary: "I have used this theme for projects that I've worked on as a professional technical writer."
 sidebar: mydoc_sidebar
-permalink: linux_env.html
+permalink: linux_find.html
 folder: /linux
 ---
 
