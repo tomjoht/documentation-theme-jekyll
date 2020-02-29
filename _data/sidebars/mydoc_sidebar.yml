@@ -309,7 +309,7 @@ entries:
       output: web
 
     - title: find
-      url: /mydoc_tag_archives_overview.html
+      url: /linux_find.html
       output: web
 
     - title: Vim

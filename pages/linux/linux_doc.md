@@ -54,9 +54,9 @@ folder: /linux
    复制SOURCE到DEST，或复制多个SOURCE(s)到DIRECTORY　　
 
 　　语法：    
-      cp [OPTION]... [-T] SOURCE DEST  
-      cp [OPTION]... SOURCE... DIRECTORY  
-      cp [OPTION]... -t DIRECTORY SOURCE...  
+       cp [OPTION]... [-T] SOURCE DEST  
+       cp [OPTION]... SOURCE... DIRECTORY  
+       cp [OPTION]... -t DIRECTORY SOURCE...  
  
 6. mv 重命名文件
   
