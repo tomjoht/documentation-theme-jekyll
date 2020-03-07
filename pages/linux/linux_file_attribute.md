@@ -14,13 +14,13 @@ Linux环境变量分为全局环境变量和局部环境变量；全局变量不
 1.查看文件权限　　
   
 　$ ls -l　　
-    total 2356　　　　　
-    -rw-r--r-- 1 simple simple  45945 11月 26 09:21 aclocal.m4　　
-    -rwxr-xr-- 1 simple simple   5827 11月 26 09:21 ar-lib　　
-    -rwxr-xr-- 1 simple simple   1007 11月 26 07:15 autogen.sh　　
-    drwxr-xr-x 7 simple simple   4096 3月   7 11:22 benchmarks
+  total 2356　　　　　
+  -rw-r--r-- 1 simple simple  45945 11月 26 09:21 aclocal.m4　　
+  -rwxr-xr-- 1 simple simple   5827 11月 26 09:21 ar-lib　　
+  -rwxr-xr-- 1 simple simple   1007 11月 26 07:15 autogen.sh　　
+  drwxr-xr-x 7 simple simple   4096 3月   7 11:22 benchmarks  
      
-![md md图片](jekyll.png)
+![md md图片](../../images/jekyll.png)
 
 　　输出结果的第一个字段是描述文件和目录权限的码。这个字段的第一个字符代表了对象的类型：　　
    * -代表文件
@@ -60,7 +60,7 @@ Linux环境变量分为全局环境变量和局部环境变量；全局变量不
 
 3.修改文件权限
 
-   chmod options mode file
+   chmod options mode file　　
    chmod [ugoa...][+-=][rwxXstugo...]
 
   第一组字符定义了权限作用的对象:  
