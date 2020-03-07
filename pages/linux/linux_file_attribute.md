@@ -20,7 +20,7 @@ total 2356　　　　　
 -rwxr-xr-- 1 simple simple   1007 11月 26 07:15 autogen.sh　　
 drwxr-xr-x 7 simple simple   4096 3月   7 11:22 benchmarks  
      
-![md md图片](file_attribute.png)
+![md md图片](jekyll.png)
 
 　　输出结果的第一个字段是描述文件和目录权限的码。这个字段的第一个字符代表了对象的类型：　　
    * -代表文件
