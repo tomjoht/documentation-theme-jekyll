@@ -157,7 +157,15 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: Sidebar navigation
+    - title: Protobuffer概述
+      url: /protobuffer.html
+      output: web, pdf
+    
+    - title: HelloWorld
+      url: /pb_helloworld.html
+      output: web, pdf
+
+    - title: 原理
       url: /mydoc_sidebar_navigation.html
       output: web, pdf
 
@@ -319,6 +327,10 @@ entries:
     - title: Linux文件
       url: /linux_doc.html
       output: web      
+
+    - title: Linux文件权限
+      url: /linux_file_attribute.html
+      output: web    
 
   - title: Tag archive
     output: web
