@@ -332,6 +332,10 @@ entries:
       url: /linux_file_attribute.html
       output: web    
 
+    - title: GCC
+      url: /gcc.html
+      output: web 
+
   - title: Tag archive
     output: web
     folderitems:
