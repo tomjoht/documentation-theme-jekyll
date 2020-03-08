@@ -169,6 +169,10 @@ entries:
       url: /mydoc_sidebar_navigation.html
       output: web, pdf
 
+    - title: Language Guide(proto3)
+      url: /proto3.html
+      output: web, pdf
+
   - title: TCP/IP
     output: web, pdf
 
