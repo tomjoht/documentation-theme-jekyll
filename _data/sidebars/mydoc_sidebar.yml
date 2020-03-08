@@ -164,11 +164,7 @@ entries:
     - title: HelloWorld
       url: /pb_helloworld.html
       output: web, pdf
-
-    - title: 原理
-      url: /mydoc_sidebar_navigation.html
-      output: web, pdf
-
+      
     - title: Language Guide(proto3)
       url: /proto3.html
       output: web, pdf
