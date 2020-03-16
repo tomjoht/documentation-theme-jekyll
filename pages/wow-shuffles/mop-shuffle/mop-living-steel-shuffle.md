@@ -1,6 +1,6 @@
 ---
 title: MOP - Living Steel Shuffles (Riddle + Daily Xmute)
-keywords: documentation theme, jekyll, technical writers, help authoring tools, hat replacements
+keywords:
 last_updated: December 13, 2019
 tags: [shuffles, mop]
 summary: "This WOW shuffle is to answer Yes or No to this question... is it worth buying the mats off the Auction House to make Transmute: Living Steel Bars or Riddle Of Steel CD? If so, at what cost and what profit?"

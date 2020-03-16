@@ -1,6 +1,6 @@
 ---
 title: Vanilla - Arcanite Bar Shuffle
-keywords: documentation theme, jekyll, technical writers, help authoring tools, hat replacements
+keywords:
 last_updated: December 2, 2019
 tags: [shuffles, vanilla]
 summary: "This WOW shuffle is to answer Yes or No to this question... is it worth buying the mats off the Auction House to make Arcanite Bars? If so, at what cost and what profit?"
