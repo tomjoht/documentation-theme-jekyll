@@ -11,7 +11,7 @@ folder: wow-shuffles
 
 
 # Overview
-{% include tip.html content="You can earn a regular profit doing this shuffle if you farm the expensive mats yourself or find them on the AH cheap. It is of course dependant on region & server. between X and Y amount of profit each flip."%}
+{% include tip.html content="You can earn a regular profit doing this shuffle if you farm the expensive mats yourself or find them on the AH cheap. It is of course dependant on region & server."%}
 
 ## Google Sheets calculator
 I am sharing my **Google Sheets** _(Excel.xls)_ to allow users to manipulate and pivot data as it varies server to server here:
@@ -63,8 +63,8 @@ In order to be able to do this shuffle, you must do the following:
 ## Tips and Tricks
 When doing this farms, be aware of:
 
+* No Cooldown #Enjoy
 * Be a [Transmute Master](https://www.wowhead.com/quest=29482/transmutation-master). This will allow you to proc extra Primal Mights
-* No Cooldown, which was removed in WOTLK #SpamIt!
 * If you are an alt o holic with the Transmute: Primal Air, Fire, etc recipes then you may self xmute the low cost Primals for the expensive Primal Water, Fire etc.
 
 ## Reference Links

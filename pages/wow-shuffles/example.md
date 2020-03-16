@@ -1,7 +1,7 @@
 ---
 title: Expansion - Name of Shuffle
-keywords: documentation theme, jekyll, technical writers, help authoring tools, hat replacements
-last_updated: October 21, 2019
+keywords:
+last_updated: March 21, 2020
 tags: [example]
 summary: "This WOW shuffle is to explain how to get... from doing the ... shuffle"
 sidebar: mydoc_sidebar
@@ -57,7 +57,11 @@ In order to be able to do this shuffle, you must do the following:
 ```
 
 ## Tips and Tricks
-When doing this farms, be aware of
+When doing this farms, be aware of the following:
+
+* 1
+* 2
+* 3
 
 ## Reference Links
 
