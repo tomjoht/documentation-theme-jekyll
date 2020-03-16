@@ -88,8 +88,8 @@ entries:
     output: web, pdf
     folderitems:
 
-      - title: SOON! Truegold shuffle
-        url:
+      - title: Truegold shuffle
+        url: /truegold-shuffle.html
         output: web, pdf
 
       - title: SOON! Vial of the Sands shuffle
