@@ -1,6 +1,6 @@
 ---
 title: BC - Primal Might Shuffle
-keywords: documentation theme, jekyll, technical writers, help authoring tools, hat replacements
+keywords:
 last_updated: Feb 23, 2020
 tags: [burning crusade, outland, alchemy, transmute]
 summary: "This WOW shuffle is to explain the cost break down for creating Primal Might for raw mats to sell or create expensive craftable XMOG for profit"
@@ -72,4 +72,11 @@ When doing this farms, be aware of:
 
 [Recipe: Transmute Primal Might](https://www.wowhead.com/item=23574/recipe-transmute-primal-might)
 
+[Canadia_TV's Twitch](http://twitch.tv/canadia_tv)
+
+[Canadia_TV's Twitter](https://twitter.com/canadia_tv)
+
+[Canadia_TV's Pastebin for Alchemy Group](https://pastebin.com/ypPV7XuH)
+
+[Canadia_TV's Video walk-through](https://www.youtube.com/watch?v=bahNtN-Z0yY&feature=youtu.be)
 

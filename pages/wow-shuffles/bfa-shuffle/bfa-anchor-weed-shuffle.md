@@ -1,6 +1,6 @@
 ---
 title: BFA Anchor Weed Shuffle
-keywords: documentation theme, jekyll, technical writers, help authoring tools, hat replacements
+keywords:
 last_updated: October 21, 2019
 tags: [example]
 summary: "This WOW shuffle is to explain how to maximize profits with Anchor Weed into BFA Alchy trinkets & Flasks."

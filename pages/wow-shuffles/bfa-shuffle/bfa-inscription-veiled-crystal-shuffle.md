@@ -1,6 +1,6 @@
 ---
 title: BFA Inscription Shuffle for Veiled Crystals
-keywords: documentation theme, jekyll, technical writers, help authoring tools, hat replacements
+keywords:
 last_updated: Dec 1, 2019
 tags: [shuffles, bfa]
 summary: "This WOW shuffle is to explain how to get Veiled Crystals from doing this Inscription shuffle from Tr4xGaming"

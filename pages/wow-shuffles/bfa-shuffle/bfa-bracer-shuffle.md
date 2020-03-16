@@ -1,6 +1,6 @@
 ---
 title: SamadanPlaysWOW's Bracer Super Shuffle
-keywords: documentation theme, jekyll, technical writers, help authoring tools, hat replacements
+keywords:
 last_updated: October 24, 2019
 tags: [shuffles, bfa]
 summary: "This WOW shuffle by SamadanPlaysWOW is to explain how to get Expulsom, Umbra Shard & Veiled Crystal from doing the tailoring bracer shuffle"
