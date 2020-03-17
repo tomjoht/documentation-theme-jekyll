@@ -13,7 +13,7 @@ folder: wow-shuffles
 {% include tip.html content="This shuffle leverages Inscription mats to earn Enchanting mats. You can earn a reliable source of veiled crystals for enchanting through Tr4xgaming's shuffle. The profits vary server to server so feel free to use the spreadsheet to get an understanding of what you can do on your server!"%}
 
 ## Google Sheets calculator
-I am sharing Tr4xgaming's [Google Sheets](https://docs.google.com/spreadsheets/d/1WCk3Yw5MGbkQ_XyRVRYSt594nnFrKJxFPSqM2Mw0h4A/edit#gid=172477708) to allow users to manipulate and pivot AH cost data data as it varies server to server here.
+I am sharing Tr4xgaming's [Google Sheets](https://docs.google.com/spreadsheets/d/1WCk3Yw5MGbkQ_XyRVRYSt594nnFrKJxFPSqM2Mw0h4A/edit#gid=172477708) to allow users to manipulate and pivot AH cost data data as it varies server to server.
 
 ## What can you earn
 
@@ -41,8 +41,8 @@ Here is a list of the item's needed in the shuffle:
 ## Prerequisites for the Shuffle
 In order to do this shuffle you must:
 
-* Get BFA Inscription
-* Get BFA Enchanting in order to disenchant
+* Get **BFA Inscription** in order to craft the items.
+* Get **BFA Enchanting** in order to disenchant the Inscription items crafted.
 * Complete Enchanting Tools of the Trade's to possess [Iwen's Enchanting Rod](https://www.wowhead.com/spell=287494/iwens-enchanting-rod)
 
 ## Step by Steps explanation
@@ -53,10 +53,10 @@ In order to be able to do this shuffle, you must do the following:
 ## Tips and Tricks
 When doing this farms, be aware of:
 
-* Be sensitive to prices of Herbs on your server. Cheaper you can get, the more profit you can earn. Scan AH frequently.
-* You can sell the mats raw in neat stacks (5,10s,25s etc) or craft with enchanting if more profit.
-* Ensure to possess Rank 3 Inscription Offhands to save on mats cost to craft.
-* Ensure to possess the [Iwen's Enchanting Rod](https://www.wowhead.com/spell=287494/iwens-enchanting-rod) from Tools of the Trade Enchanting for disenchanting.
+* Be sensitive to prices of **Herbs** on your server. Cheaper you can get, the more profit you can earn. **Scan AH frequently.**
+* You can sell the **mats raw** in **neat stacks** (5,10s,25s etc) or craft with enchanting if more profit.
+* Ensure to possess **Rank 3 Inscription Offhands** to save on mats cost to craft.
+* Ensure to possess the [Iwen's Enchanting Rod](https://www.wowhead.com/spell=287494/iwens-enchanting-rod) from **Tools of the Trade Enchanting** for disenchanting.
 
 ## Reference Links
 [Tr4xgaming's YouTube Video walk-through](https://youtu.be/ftGsUBHkZ70)

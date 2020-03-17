@@ -38,9 +38,9 @@ Here is a list of the item's needed in the shuffle:
 ## Prerequisites for the Shuffle
 In order to do this shuffle you must:
 
-* Possess Vanilla Alchemy - Skill 275
+* Possess **Vanilla Alchemy** and get your skill to **275**.
 * Possess & learn [Recipe: Transmute Arcanite](https://www.wowhead.com/item=12958/recipe-transmute-arcanite#sold-by)
-* Find an Auction House for your Faction!
+* Find an **Auction House** for your Faction!
 
 ## Step by Steps explanation
 In order to be able to do this shuffle, you must do the following:
@@ -52,7 +52,7 @@ In order to be able to do this shuffle, you must do the following:
 ```
 
 ## Tips and Tricks
-The more alts you stack, the more daily CDs you have. There is a snow ball effect component that allows you to separate yourself from the competition.
+The more alts you stack, the more **Daily CDs** you have. There is a snow ball effect component that allows you to separate yourself from the competition.
 
 ## Reference Links
 [Arcanite shuffle Spreadsheet by Mozzletoff](https://docs.google.com/spreadsheets/d/1EX9yDrzNjS3ifxrR7VoW6P9kgmO_b62hBN5aroInymI/edit?usp=sharing)

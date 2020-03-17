@@ -46,9 +46,9 @@ In order to be able to do this shuffle, you must do the following:
 ## Tips and Tricks
 When doing this farms, be aware of the following:
 
-* free skill-up from 205-245 while making gold doing this shuffle.
-* craft what you want, walk away to come back to bag full of vendoring items
-* ensure to stay within profit ranges for Thick Leather is under 7s 24c.
+* Free skill-up from **205-245** while making gold doing this shuffle.
+* Craft what you want, walk away to come back to bag full of **vendoring items**.
+* Ensure to stay within profit ranges for Thick Leather is under 7s 24c.
 
 ## Reference Links
 [Reddit write up for Thick Vendor Shuffle](https://www.reddit.com/r/woweconomy/comments/d357i2/classic_thick_leather_vendor_shuffle/)

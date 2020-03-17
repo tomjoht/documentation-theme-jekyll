@@ -57,8 +57,8 @@ In order to be able to do this shuffle, you must do the following:
 When doing this farms, be aware of the following:
 
 * No cooldown #Enjoy!
-* Be a [Transmute Master](https://www.wowhead.com/quest=29482/transmutation-master). This will allow you to proc extra Primal Mights
-* If you can Farm up the mats via [Potion of Treasure Finding](https://www.wowhead.com/item=58488/potion-of-treasure-finding) will provide the mats for this farm to shuffle easy.
+* Be a [Transmute Master](https://www.wowhead.com/quest=29482/transmutation-master). This will allow you to proc extra **Primal Mights**.
+* If you can farm up the mats via [Potion of Treasure Finding](https://www.wowhead.com/item=58488/potion-of-treasure-finding) will provide the mats for this farm to shuffle easy.
 
 ## Reference Links
 [Canadia_TV's Google Sheets Calculator](https://docs.google.com/spreadsheets/d/1o9O1t3oiAVF_MxJvWQfQa2yLoidoUISJJtKcZeOEHbQ/edit#gid=1573153485)

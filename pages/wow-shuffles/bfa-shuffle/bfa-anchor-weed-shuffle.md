@@ -25,9 +25,9 @@ I am sharing my **Google Sheets** _(Excel.xls)_ to allow users to manipulate Anc
 
 Here is a list of the item's that you can earn at a fraction of the cost with:
 
-1. Alt Alchemy Army
+1. Alt Alchemy Army, the more you have the better! It snowballs up and hard for Blizzard to "nerf" this type of gold farm.
 
-2. Possess Sila' Tools of the Trade
+2. Possess **Sila' Tools of the Trade**
 
 |Item|URL|
 |-------|--------|
@@ -59,11 +59,11 @@ Here is a list of the item's needed for the shuffle:
 ## Prerequisites for the Shuffle
 In order to do this shuffle you must:
 
-* complete and possess the Silas' Sphere of Transmutation [quest line here](https://www.wowhead.com/news=290390/silas-sphere-of-transmutation-and-alchemy-profession-questline-for-tools-of-the-)
-* Be an alt-o-holic, BFA Alchy. The more alchemists you have, the more Anchor Weed you'll possess at a fraction of the cost
-* Profession of BFA Alchemy at 50 points for your alts, max BFA on your Silas' Flask maker
-* Daily check the Auction House for cheap BFA herbs to do the daily anchor weed cool down
-* Ensure Rank 3 for your Alchemy Proffession cooldowns to save up on mats to increase profits. Each rank matters!
+* complete and possess the **Silas' Sphere of Transmutation** [quest line here](https://www.wowhead.com/news=290390/silas-sphere-of-transmutation-and-alchemy-profession-questline-for-tools-of-the-)
+* Be an **alt-o-holic**, **BFA Alchy**. The more alchemists you have, the more **Anchor Weed** you'll possess at a fraction of the cost.
+* Profession of **BFA Alchemy** at **50** points for your main and various alts.
+* Daily check the **Auction House** for cheap BFA herbs to do the daily anchor weed cool down.
+* Ensure **Rank 3** for your Alchemy Profession cooldowns to save up on mats to increase profits. Each rank matters!
 
 ## Step by Steps explanation
 In order to be able to do this shuffle, you must do the following:
@@ -91,13 +91,13 @@ In order to be able to do this shuffle, you must do the following:
 
 
 ## Tips and Tricks
-When doing this farms, be aware the more alts you have, the more this gold farm method ramps up in gold earning potential. You can still absolutely earn gold with this not being an alt army, it just won't be as much but profits still exist.
+When doing this farms, be aware the more **alts** you have, the more this gold farm method ramps up in gold earning potential. You can still absolutely earn gold with this not being an alt army, it just won't be as much but profits still exist.
 
-For alt armies, I noticed I am making so much stacks of flasks that I begun selling Anchor Weed stacks. Can do that or just save them for later if you'd like.
+For **alt armies**, I noticed I am making so much stacks of flasks that I begun selling **Anchor Weed** stacks. Can do that or just save them for later if you'd like.
 
 Periodically throughout the day scan the action house for the BFA Herbs cheap as those mats are required for the Daily Anchor Weed CD.
 
-Ensure you possess and leverage Sila's Potion of Prosperity with Rank 3 Flask cooldowns
+Ensure you possess and leverage **Sila's Potion of Prosperity** with **Rank 3** Flask cooldowns
 {% include image.html file="bfa-silas-potion-of-prosperity.png" caption="Use Silas' Sphere of Transmutation until this item procs, then begin crafting" %}
 
 ## Reference Links
