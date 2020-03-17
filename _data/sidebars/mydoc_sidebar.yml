@@ -134,7 +134,7 @@ entries:
       output: web, pdf
 
     - title: Ghost Iron (Gems) shuffle
-      url: //mop-ghost-iron-gems-shuffle.html
+      url: /mop-ghost-iron-gems-shuffle.html
       output: web, pdf
 
     - title: SOON! Trillium Bar shuffle
