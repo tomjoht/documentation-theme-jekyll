@@ -53,11 +53,6 @@ entries:
       output: web, pdf
       type:
 
-    - title: SOON! Classic - Engineer vendor shuffle
-      url:
-      output: web, pdf
-      type:
-
       subfolders:
         - title: Popular Classic Shuffles
           output: web
@@ -138,8 +133,8 @@ entries:
       url:
       output: web, pdf
 
-    - title: SOON! MOP Gems shuffle
-      url:
+    - title: Ghost Iron (Gems) shuffle
+      url: /mop-ghost-iron-gems-shuffle.html
       output: web, pdf
 
     - title: SOON! Trillium Bar shuffle
