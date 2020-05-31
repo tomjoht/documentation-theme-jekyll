@@ -38,8 +38,7 @@ To list available commands, either run docker with no parameters or execute dock
             # […]    
 
 
-1.docker images 
-  
+1.docker images   
     描述: 查看本地镜像 
     语法: 
         docker images [OPTIONS] [REPOSITORY[:TAG]] 
@@ -52,8 +51,7 @@ To list available commands, either run docker with no parameters or execute dock
                 --no-trunc :显示完整的镜像信息；
                 -q :只显示镜像ID。        
 
-2.docker rmi
-      
+2.docker rmi       
     描述: 删除本地镜像
     语法: 
         docker rmi [OPTIONS] IMAGE [IMAGE...]
@@ -61,3 +59,36 @@ To list available commands, either run docker with no parameters or execute dock
                 -f :强制删除；
                 --no-prune :不移除该镜像的过程镜像，默认移除；
 
+3.docker tag       
+    描述: 标记本地镜像，将其归入某一仓库
+    语法: 
+        docker tag [OPTIONS] IMAGE[:TAG] [REGISTRYHOST/][USERNAME/]NAME[:TAG]
+        
+4.docker build       
+    描述: 标记本地镜像，将其归入某一仓库
+    语法: 
+        docker build [OPTIONS] PATH | URL | -        
+
+    OPTIONS说明:
+
+        --build-arg=[] :设置镜像创建时的变量；
+        --cpu-shares :设置 cpu 使用权重；
+        --cpu-period :限制 CPU CFS周期；
+        --cpu-quota :限制 CPU CFS配额；
+        --cpuset-cpus :指定使用的CPU id；
+        --cpuset-mems :指定使用的内存 id；
+        --disable-content-trust :忽略校验，默认开启；
+        -f :指定要使用的Dockerfile路径；
+        --force-rm :设置镜像过程中删除中间容器；
+        --isolation :使用容器隔离技术；
+        --label=[] :设置镜像使用的元数据；
+        -m :设置内存最大值；
+        --memory-swap :设置Swap的最大值为内存+swap，"-1"表示不限swap；
+        --no-cache :创建镜像的过程不使用缓存；
+        --pull :尝试去更新镜像的新版本；
+        --quiet, -q :安静模式，成功后只输出镜像 ID；
+        --rm :设置镜像成功后删除中间容器；
+        --shm-size :设置/dev/shm的大小，默认值是64M；
+        --ulimit :Ulimit配置。
+        --tag, -t: 镜像的名字及标签，通常 name:tag 或者 name 格式；可以在一次构建中为一个镜像设置多个标签。
+        --network: 默认 default。在构建期间设置RUN指令的网络模式
