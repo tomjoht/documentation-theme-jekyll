@@ -3,7 +3,7 @@ title: Go 接口
 keywords: documentation theme, jekyll, technical writers, help authoring tools, hat replacements
 last_updated: July 3, 2016
 tags: [getting_started]
-summary: "I have used this theme for projects that I've worked on as a professional technical writer."
+summary: ""
 sidebar: mydoc_sidebar
 permalink: go_interface.html
 folder: /go
@@ -64,8 +64,3 @@ folder: /go
             OpAppliances(p)
             OpAppliances(c)
         }
-
-    
-
-
-

@@ -3,7 +3,7 @@ title: Go条件语句
 keywords: documentation theme, jekyll, technical writers, help authoring tools, hat replacements
 last_updated: July 3, 2016
 tags: [getting_started]
-summary: "I have used this theme for projects that I've worked on as a professional technical writer."
+summary: ""
 sidebar: mydoc_sidebar
 permalink: go_conditional_statement.html
 folder: /go
@@ -66,13 +66,9 @@ folder: /go
 
     注意事项：
         1. 变量 var1 可以是任何类型，而 val1 和 val2 则可以是同类型的任意值。类型不被局限于常量或整数，但必须是相同的类型；或者最终结果为相同类型的表达式。
-
-        2. 可以同时测试多个可能符合条件的值，使用逗号分割它们，例如：case val1, val2, val3
-   
+        2. 可以同时测试多个可能符合条件的值，使用逗号分割它们，例如：case val1, val2, val3   
         3. 使用 fallthrough 会强制执行后面的 case 语句，fallthrough 不会判断下一条 case 的表达式结果是否为 true。
-
         ４. 不同的 case 之间不使用 break 分隔，默认只会执行一个 case。
-
 
 3.　select语言
 
@@ -107,10 +103,11 @@ folder: /go
         }
         输出: no communication
 
-    注意事项：
-        + 每个 case 都必须是一个通信
-        + 所有 channel 表达式都会被求值
-        + 所有被发送的表达式都会被求值
-        + 如果任意某个通信可以进行，它就执行，其他被忽略。
-        + 如果有多个 case 都可以运行，Select 会随机公平地选出一个执行。其他不会执行。
-          否则： 如果有 default 子句，则执行该语句。如果没有 default 子句，select 将阻塞，直到某个通信可以运行；Go 不会重新对 channel 或值进行求值。  
+注意事项：
+
++ 每个 case 都必须是一个通信
++ 所有 channel 表达式都会被求值
++ 所有被发送的表达式都会被求值
++ 如果任意某个通信可以进行，它就执行，其他被忽略。
++ 如果有多个 case 都可以运行，Select 会随机公平地选出一个执行。其他不会执行。
+否则： 如果有 default 子句，则执行该语句。如果没有 default 子句，select 将阻塞，直到某个通信可以运行；Go 不会重新对 channel 或值进行求值
