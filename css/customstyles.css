@@ -375,6 +375,7 @@ a.accordion-collapsed {
     /* padding: 4px;*/
     padding: 0px;
     margin: 0px;
+    background-color: #27343B;
 }
 
 .nav>li {
@@ -386,14 +387,10 @@ a.accordion-collapsed {
 }
 
 .nav a {
-    color: #333;
     display: block;
     outline: none;
-    /*-webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    border-radius: 4px;*/
     text-decoration: none;
-    color: #9CD7F7;
+    color: #c7c9ca;
 }
 
 .nav li>a>span {
@@ -412,19 +409,19 @@ a.accordion-collapsed {
 
 .nav a:hover,
 .nav li.active>a {
-    background-color: #8D8D8D;
-    color: #f5f5f5;
+    background-color: transparent;
+    color: #ffffff;
 }
 
 .nav>li.active>a {
-    background-color: #347DBE;
+    background-color: transparent;
 }
 
 .nav li a {
     font-size: 12px;
     line-height: 18px;
     padding: 2px 10px;
-    background-color: #f1f1f1;
+    background-color: transparent;
 }
 
 .nav>li>a {
