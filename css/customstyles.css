@@ -439,14 +439,14 @@ ul#mysidebar {
 }
 
 .nav li.thirdlevel>a {
-    color: #248EC2;
+    color: transparent;
     font-weight: bold;
     padding-left: 20px;
     background-color: whitesmoke !important;
 }
 
 .nav ul li a {
-    background-color: #FAFAFA;
+    background-color: transparent;
 }
 
 .nav li a {
@@ -454,7 +454,7 @@ ul#mysidebar {
 }
 
 .nav li a:hover {
-    background-color: #8D8D8D;
+    background-color: transparent;
 }
 
 .nav ul li a {
