@@ -458,8 +458,11 @@ ul#mysidebar {
 }
 
 .nav ul li a {
-    border-top: 1px solid whitesmoke;
+    border-top: none;
     padding-left: 10px;
+    border-left: 1px solid #077CBC;
+    font-size: 12px;
+    margin-left: 15px;
 }
 
 
