@@ -50,8 +50,8 @@ a[data-toggle="tooltip"] {
 }
 
 .navbar-inverse {
-    background-color: #347DBE;
-    border-color: #015CAE;
+    background-color: #27343B;
+    border-color: #27343B;
 }
 
 .navbar-inverse .navbar-nav>li>a,
@@ -83,8 +83,7 @@ a.navbar-brand:hover {
 
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
-    border-color: #101c29 !important;
-    background-color: #101c29;
+    background-color: #27343B;
 }
 
 .btn-primary {
