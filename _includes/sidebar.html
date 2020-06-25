@@ -28,7 +28,7 @@
                   {% for subfolderitem in subfolders.subfolderitems %}
                   {% if subfolderitem.output contains "web" %}
                   {% if subfolderitem.external_url %}
-                  <li><a title="{{subfolderitem.title}}" href="{{subfolderitem.external_url} style="background-color: transparent;"}" target="_blank" rel="noopener">{{subfolderitem.title}}</a></li>
+                  <li><a title="{{subfolderitem.title}}" style="background-color: transparent;" href="{{subfolderitem.external_url}}" target="_blank" rel="noopener">{{subfolderitem.title}}</a></li>
                   {% elsif page.url == subfolderitem.url %}
                   <li class="active"><a title="{{subfolderitem.title}}" href="{{subfolderitem.url | remove: "/"}}">{{subfolderitem.title}}</a></li>
                   {% else %}
