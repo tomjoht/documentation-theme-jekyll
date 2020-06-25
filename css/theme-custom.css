@@ -84,6 +84,7 @@ a.navbar-brand:hover {
 .navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
     border-color: #101c29 !important;
+    background-color: #101c29;
 }
 
 .btn-primary {
