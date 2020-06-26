@@ -372,10 +372,9 @@ a.accordion-collapsed {
 }
 
 .nav {
-    /* padding: 4px;*/
     padding: 0px;
     margin: 0px;
-    background-color: #27343B;
+    background-color: transparent;
 }
 
 .nav>li {
@@ -390,7 +389,6 @@ a.accordion-collapsed {
     display: block;
     outline: none;
     text-decoration: none;
-    color: #c7c9ca;
 }
 
 .nav li>a>span {
