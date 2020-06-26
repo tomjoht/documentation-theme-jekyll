@@ -10,6 +10,7 @@
     background-size: auto;
     background-origin: padding-box;
     background-clip: border-box;
+    border: none;
 }
 
 .highlight .c {
