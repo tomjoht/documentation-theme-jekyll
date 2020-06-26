@@ -623,7 +623,7 @@ hr.shaded {
     height: 12px;
     border: 0;
     margin-top: 70px;
-    background: white;
+    background: transparent;
     width: 100%;
     margin-bottom: 10px;
 }
@@ -1090,6 +1090,8 @@ a.no_icon:after {
 
 .btn-default {
     margin-bottom: 10px;
+    background-color: transparent;
+    color: white;
 }
 
 
