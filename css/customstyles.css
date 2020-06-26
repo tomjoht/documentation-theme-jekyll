@@ -455,6 +455,18 @@ ul#mysidebar {
     background-color: transparent;
 }
 
+.nav li a:focus {
+    background-color: rgb(10, 21, 26);
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-image: none;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+}
+
 .nav ul li a {
     border-top: none;
     padding-left: 10px;
