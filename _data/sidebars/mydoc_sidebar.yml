@@ -344,6 +344,10 @@ entries:
       url: /gcc.html
       output: web 
 
+    - title: GDB
+      url: /gdb.html
+      output: web 
+
   - title: Tag archive
     output: web
     folderitems:
