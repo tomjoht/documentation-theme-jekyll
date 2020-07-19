@@ -15,6 +15,11 @@ entries:
       output: web, pdf
       type: homepage
 
+    - title: 字节序
+      url: /byte_order.html
+      output: web, pdf
+      type: homepage
+
     - title: 冯诺伊曼结构
       url: /index.html
       output: web, pdf
