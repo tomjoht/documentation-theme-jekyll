@@ -21,6 +21,6 @@ Esto es un link a sub seccion [checklist](#cheklist)
 
 Esto va a ser una imagen:
 
-![collage firmware](https://raw.githubusercontent.com/kike-canaries/canairio_firmware/master/images/collage.jpg)\
+![collage firmware](https://raw.githubusercontent.com/kike-canaries/canairio_firmware/master/images/collage.jpg)
 
 ![](https://codimd.s3.shivering-isles.com/demo/uploads/upload_b2410dd2b66903c669ac92c13bbaf51b.jpg)
