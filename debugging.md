@@ -5,7 +5,7 @@
 ### (subtitulo del subtitulo)
 
 Este es el paragrafo inicial de cualquier cosas, quiero unas **negrillas** y este un [esto es un link](https://canair.io)  
-Esto es un link a sub seccion [checklist](###cheklist)
+Esto es un link a sub seccion [checklist](#cheklist)
 
 - Esto es un bulltet
 - otro bullet
