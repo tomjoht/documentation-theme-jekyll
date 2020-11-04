@@ -23,4 +23,4 @@ Esto va a ser una imagen:
 
 ![collage firmware](https://raw.githubusercontent.com/kike-canaries/canairio_firmware/master/images/collage.jpg)
 
-![imagen canairio](https://codimd.s3.shivering-isles.com/demo/uploads/upload_b2410dd2b66903c669ac92c13bbaf51b.jpg)
+![imagen canairio](https://raw.githubusercontent.com/kike-canaries/canairio_docs/main/images/screenshot20201104_135112.jpg)
