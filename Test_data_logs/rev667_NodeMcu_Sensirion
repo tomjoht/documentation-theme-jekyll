@@ -1,0 +1,171 @@
+-->[CONFIG] request: {
+  "act": "rbt",
+  "cmd": "25772",
+  "aenb": false,
+  "ienb": false,
+  "wenb": false,
+  "wmac": 0,
+  "wsta": false
+}
+-->[CONFIG] reboot..
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0018,len:4
+load:0x3fff001c,len:1044
+load:0x40078000,len:8896
+load:0x40080400,len:5828
+entry 0x400806ac
+
+== CanAirIO Setup ==
+
+-->[OLED] display config ready.
+-->[CONFIG] debug is enable.
+[E][Preferences.cpp:457] getBytesLength(): nvs_get_blob len fail: lat NOT_FOUND
+[E][Preferences.cpp:457] getBytesLength(): nvs_get_blob len fail: lon NOT_FOUND
+[E][Preferences.cpp:457] getBytesLength(): nvs_get_blob len fail: alt NOT_FOUND
+[E][Preferences.cpp:457] getBytesLength(): nvs_get_blob len fail: spd NOT_FOUND
+-->[INFO] ESP32MAC: FC:F5:C4:2A:AC:66
+-->[INFO] Firmware r667
+-->[INFO] Detecting sensors..
+-->[INFO] PM sensor configured: 0
+-->[SENSORS] debug is enable.
+-->[SENSORS] sample time set to:  30
+-->[PMSENSOR] detecting Generic PM sensor.. 
+-->[E][PMSENSOR] sensor read fail! 
+-->[E][PMSENSOR] sensor read fail! 
+-->[E][PMSENSOR] invalid Panasonic sensor header! 
+-->[E][PMSENSOR] sensor read fail! 
+-->[E][PMSENSOR] sensor read fail! 
+-->[E][PMSENSOR] invalid Panasonic sensor header! 
+-->[E][PMSENSOR] sensor read fail! 
+-->[E][PMSENSOR] sensor read fail! 
+-->[E][PMSENSOR] invalid Panasonic sensor header! 
+-->[E][PMSENSOR] detection failed! 
+-->[E][PMSENSOR] init failed! 
+-->[AM2320] starting AM2320 sensor.. 
+-->[INFO] Detection sensors FAIL!
+-->[CONFIG] response: {
+  "dname": "Pradera_NodeMcu_Sensirion",
+  "stime": 30,
+  "stype": 0,
+  "wenb": true,
+  "ssid": "GARDENIA",
+  "ienb": true,
+  "ifxdb": "canairio",
+  "ifxip": "influxdb.canair.io",
+  "ifxpt": 8086,
+  "aenb": false,
+  "apiusr": "danielbernalb",
+  "apisrv": "api.canair.io",
+  "apiuri": "points/save/",
+  "apiprt": 80,
+  "lskey": "",
+  "wmac": 25772,
+  "wsta": false
+}
+[I][BLEDevice.cpp:554] getAdvertising(): create advertising
+-->[BLE] GATT server ready. (Waiting for client)
+-->[BLE] device client is connected.
+-->[WIFI] connecting to GARDENIA...........done.
+-->[WIFI] connected!
+-->[WIFI] 192.168.0.9
+-->[WIFI] publish interval: 60 sec.
+[I][ArduinoOTA.cpp:130] begin(): OTA server at: CanAirIO.local:3232
+-->[INFO] ready for OTA update.
+-->[INFO] InfluxDb API:	1
+-->[INFO] CanAirIO API:	0
+-->[INFLUXDB] using HTTPS: 0
+-->[INFLUXDB] connected.
+-->[WATCHDOG] config to check each 30 seconds.
+-->[SENSORS] PM1:000 PM25:000 PM10:000 H:00% T:00°C
+-->[BLE] device client is disconnected.
+-->[BLE] start advertising..
+-->[BLE] device client is connected.
+-->[SENSORS] PM1:000 PM25:000 PM10:000 H:00% T:00°C
+-->[CONFIG] request: {
+  "act": "rbt",
+  "cmd": "25772",
+  "aenb": false,
+  "ienb": false,
+  "wenb": false,
+  "wmac": 0,
+  "wsta": false
+}
+-->[CONFIG] reboot..
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0018,len:4
+load:0x3fff001c,len:1044
+load:0x40078000,len:8896
+load:0x40080400,len:5828
+entry 0x400806ac
+
+== CanAirIO Setup ==
+
+-->[OLED] display config ready.
+-->[CONFIG] debug is enable.
+[E][Preferences.cpp:457] getBytesLength(): nvs_get_blob len fail: lat NOT_FOUND
+[E][Preferences.cpp:457] getBytesLength(): nvs_get_blob len fail: lon NOT_FOUND
+[E][Preferences.cpp:457] getBytesLength(): nvs_get_blob len fail: alt NOT_FOUND
+[E][Preferences.cpp:457] getBytesLength(): nvs_get_blob len fail: spd NOT_FOUND
+-->[INFO] ESP32MAC: FC:F5:C4:2A:AC:66
+-->[INFO] Firmware r667
+-->[INFO] Detecting sensors..
+-->[INFO] PM sensor configured: 0
+-->[SENSORS] debug is enable.
+-->[SENSORS] sample time set to:  30
+-->[PMSENSOR] detecting Generic PM sensor.. 
+-->[E][PMSENSOR] sensor read fail! 
+-->[E][PMSENSOR] sensor read fail! 
+-->[E][PMSENSOR] invalid Panasonic sensor header! 
+-->[E][PMSENSOR] sensor read fail! 
+-->[E][PMSENSOR] sensor read fail! 
+-->[E][PMSENSOR] invalid Panasonic sensor header! 
+-->[E][PMSENSOR] sensor read fail! 
+-->[E][PMSENSOR] sensor read fail! 
+-->[E][PMSENSOR] invalid Panasonic sensor header! 
+-->[E][PMSENSOR] detection failed! 
+-->[E][PMSENSOR] init failed! 
+-->[AM2320] starting AM2320 sensor.. 
+-->[INFO] Detection sensors FAIL!
+-->[CONFIG] response: {
+  "dname": "Pradera_NodeMcu_Sensirion",
+  "stime": 30,
+  "stype": 0,
+  "wenb": true,
+  "ssid": "GARDENIA",
+  "ienb": true,
+  "ifxdb": "canairio",
+  "ifxip": "influxdb.canair.io",
+  "ifxpt": 8086,
+  "aenb": false,
+  "apiusr": "danielbernalb",
+  "apisrv": "api.canair.io",
+  "apiuri": "points/save/",
+  "apiprt": 80,
+  "lskey": "",
+  "wmac": 25772,
+  "wsta": false
+}
+[I][BLEDevice.cpp:554] getAdvertising(): create advertising
+-->[BLE] GATT server ready. (Waiting for client)
+-->[BLE] device client is connected.
+-->[WIFI] connecting to GARDENIA...........done.
+-->[WIFI] connected!
+-->[WIFI] 192.168.0.9
+-->[WIFI] publish interval: 60 sec.
+[I][ArduinoOTA.cpp:130] begin(): OTA server at: CanAirIO.local:3232
+-->[INFO] ready for OTA update.
+-->[INFO] InfluxDb API:	1
+-->[INFO] CanAirIO API:	0
+-->[INFLUXDB] using HTTPS: 0
+-->[INFLUXDB] connected.
+-->[WATCHDOG] config to check each 30 seconds.
