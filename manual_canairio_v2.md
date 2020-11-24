@@ -174,9 +174,6 @@ Si en nuestro CanAir.IO tenemos un sensor Sensirion (SP30) las posiciones correc
 ### Plantower
 
 
-
-< Aqui foto posiciones correctas de operacion >
-
 # Redes Sociales y Recursos 
 
 1.Landin Page https://canair.io/es
