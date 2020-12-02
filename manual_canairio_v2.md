@@ -97,6 +97,8 @@ Aparecen tres opciones; *Unpair* (desemparejar), *Sensor DIY* Guide que llama en
 
 Para detener la grabación del recorrido de da click en el icono negro de detener la grabación.
 
+En el siguiente link encontrarás un video en donde se explica el proceso de grabación de un recorrido : [Como grabar recorrido](https://www.youtube.com/watch?v=_8zmKYiIqHo)
+
 -------------
 
 ## Configurar Estacion Fija
@@ -104,6 +106,8 @@ Para detener la grabación del recorrido de da click en el icono negro de detene
 Para configurar una estación fija lo primero que debemos asegurarnos es tener una conexión de WiFi disponible y con clave de acceso. Es importante que si estamos configurando el sensor en una red interna el sysadmin debe abrir el puerto 8086.
 
 El primer paso es grabar en el dispositivo en nombre de la WiFi y el Password,luego movemos el flag a la posición ON Enable WiFi Connection (el flag se pone verde) si la conexión es estable y se ha logeado bien se debe encender el indicador de WiFi OK en el LCD.
+
+En el siguiente video podrás ver el proceso para conectarse a una red wifi : [Conectarse a una red WiFi](https://youtu.be/qP-70XzjtNQ)
 
 ![Panel Estacion Fija](https://raw.githubusercontent.com/kike-canaries/canairio_docs/main/images/panel_estacion_movil.jpg)
 
