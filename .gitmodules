@@ -1,3 +1,3 @@
-[submodule "dist"]
-	path = dist
+[submodule "docs"]
+	path = docs
 	url = https://github.com/tomjoht/documentation-theme-jekyll.git
