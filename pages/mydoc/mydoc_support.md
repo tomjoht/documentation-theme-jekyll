@@ -10,3 +10,4 @@ folder: mydoc
 topnav: topnav
 ---
 
+Click **Feedback** on the top navbar to send me an email or open an issue on [GitHub](https://github.com/tomjoht/documentation-theme-jekyll/issues).
