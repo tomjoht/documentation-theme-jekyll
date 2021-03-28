@@ -336,7 +336,6 @@ a.accordion-toggle, a.accordion-collapsed {
 .nav a {
     color: #333;
     display: block;
-    outline: none;
     /*-webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;*/
@@ -536,6 +535,10 @@ button.cursorNorm {
 
 a.dropdown-toggle, .navbar-inverse .navbar-nav > li > a  {
     margin-left: 10px;
+}
+
+.navbar a:focus {
+    outline: 1px solid #fff;
 }
 
 hr.faded {
