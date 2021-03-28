@@ -11,13 +11,26 @@ folder: mydoc
 ---
 
 ## Add a tag to a page
+
 You can add tags to pages by adding `tags` in the frontmatter with values inside brackets, like this:
 
-```
+```yaml
 ---
 title: 5.0 Release Notes
 permalink: release_notes_5_0.html
 tags: [formatting, single_sourcing]
+---
+```
+
+or inside an unordered list, like this:
+
+```yaml
+---
+title: 5.0 Release Notes
+permalink: release_notes_5_0.html
+tags: 
+  - formatting
+  - single_sourcing
 ---
 ```
 
