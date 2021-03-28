@@ -99,7 +99,7 @@ Additionally, consider adding the product name in parentheses after the title, s
 
 ## Kramdown Markdown
 
-Kramdown is the Markdown flavor used in the theme. This mostly aligns with Github-flavored Markdown, but with some differences in the indentation allowed within lists. Basically, Kramdown requires you to line up the indent between list items with the first starting character after the space in your list item numbering. See this [blog post on Kramdown and Rouge](http://idratherbewriting.com/2016/02/21/bug-with-kramdown-and-rouge-with-github-pages/) for more details.
+Kramdown is the Markdown flavor used in the theme but you are free to move to [CommonMark](https://jekyllrb.com/docs/configuration/markdown/#commonmark) or [Redcarpet](https://jekyllrb.com/docs/configuration/markdown/#redcarpet). This mostly aligns with Github-flavored Markdown, but with some differences in the indentation allowed within lists. Basically, Kramdown requires you to line up the indent between list items with the first starting character after the space in your list item numbering. See this [blog post on Kramdown and Rouge](http://idratherbewriting.com/2016/02/21/bug-with-kramdown-and-rouge-with-github-pages/) for more details.
 
 You can use standard Multimarkdown syntax for tables. You can also use fenced code blocks with lexers specifying the type of code. The configuration file shows the Markdown processor and extension:
 
