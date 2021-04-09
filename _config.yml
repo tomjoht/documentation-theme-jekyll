@@ -101,9 +101,8 @@ defaults:
 
 sidebars:
 - home_sidebar
-- mydoc_sidebar
-- product1_sidebar
-- product2_sidebar
+- spanish_sidebar
+- english_sidebar
 - other
 
 description: "CanAirIO, citizen network for monitoring air quality. CanAirIO is a citizen science project using mobile and static sensors to measure air quality with cell phones and low-cost technology. This site is the current documentation for all about of CanAirIO project."

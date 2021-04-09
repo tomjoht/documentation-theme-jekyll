@@ -2,7 +2,7 @@
 title: "Getting started with CanAirIO"
 keywords: homepage
 tags: [getting_started]
-sidebar: mydoc_sidebar
+sidebar: english_sidebar
 permalink: index.html
 summary: These brief instructions will help you get started quickly with CanAirIO. 
 ---
