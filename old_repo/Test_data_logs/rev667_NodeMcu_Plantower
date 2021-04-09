@@ -1,0 +1,90 @@
+-->[CONFIG] request: {
+  "act": "rbt",
+  "cmd": "24820",
+  "aenb": false,
+  "ienb": false,
+  "wenb": false,
+  "wmac": 0,
+  "wsta": false
+}
+-->[CONFIG] reboot..
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0018,len:4
+load:0x3fff001c,len:1044
+load:0x40078000,len:8896
+load:0x40080400,len:5828
+entry 0x400806ac
+
+== CanAirIO Setup ==
+
+-->[OLED] display config ready.
+-->[CONFIG] debug is enable.
+-->[INFO] ESP32MAC: FC:F5:C4:27:F4:62
+-->[INFO] Firmware r667
+-->[INFO] Detecting sensors..
+-->[INFO] PM sensor configured: 0
+-->[SENSORS] debug is enable.
+-->[SENSORS] sample time set to:  60
+-->[PMSENSOR] detecting Generic PM sensor.. 
+-->[HPMA] read > done! 
+-->[PMSENSOR] detected:  GENERIC
+-->[AM2320] starting AM2320 sensor.. 
+-->[INFO] PM sensor detected: GENERIC
+-->[CONFIG] response: {
+  "dname": "Plantower_NodeMcu_Arttesano",
+  "stime": 60,
+  "stype": 0,
+  "wenb": true,
+  "ssid": "GARDENIA",
+  "ienb": true,
+  "ifxdb": "canairio",
+  "ifxip": "influxdb.canair.io",
+  "ifxpt": 8086,
+  "aenb": false,
+  "apiusr": "danielbernalb",
+  "apisrv": "api.canair.io",
+  "apiuri": "points/save/",
+  "apiprt": 80,
+  "lskey": "",
+  "wmac": 24820,
+  "wsta": false
+}
+[I][BLEDevice.cpp:554] getAdvertising(): create advertising
+-->[BLE] GATT server ready. (Waiting for client)
+-->[WIFI] connecting to GARDENIA...........done.
+-->[WIFI] connected!
+-->[WIFI] 192.168.0.5
+-->[WIFI] publish interval: 120 sec.
+[I][ArduinoOTA.cpp:130] begin(): OTA server at: CanAirIO.local:3232
+-->[INFO] ready for OTA update.
+-->[INFO] InfluxDb API:	1
+-->[INFO] CanAirIO API:	0
+-->[BLE] device client is connected.
+-->[INFLUXDB] using HTTPS: 0
+-->[INFLUXDB] connected.
+-->[WATCHDOG] config to check each 30 seconds.
+-->[HPMA] read > done! 
+-->[SENSORS] PM1:000 PM25:018 PM10:020 H:00% T:00°C
+[I][bluetooth.cpp:107] bleLoop(): [BLE] sending notification..
+[I][bluetooth.cpp:107] bleLoop(): [BLE] sending notification..
+[I][bluetooth.cpp:107] bleLoop(): [BLE] sending notification..
+[I][bluetooth.cpp:107] bleLoop(): [BLE] sending notification..
+[I][bluetooth.cpp:107] bleLoop(): [BLE] sending notification..
+[I][bluetooth.cpp:107] bleLoop(): [BLE] sending notification..
+[I][bluetooth.cpp:107] bleLoop(): [BLE] sending notification..
+[I][bluetooth.cpp:107] bleLoop(): [BLE] sending notification..
+[I][bluetooth.cpp:107] bleLoop(): [BLE] sending notification..
+[I][bluetooth.cpp:107] bleLoop(): [BLE] sending notification..
+[I][bluetooth.cpp:107] bleLoop(): [BLE] sending notification..
+[I][bluetooth.cpp:107] bleLoop(): [BLE] sending notification..
+[I][wifi.cpp:75] influxDbLoop(): [INFLUXDB][ Plantower_NodeMcu_Arttesano ]
+[I][wifi.cpp:76] influxDbLoop(): [INFLUXDB][ 0000000000 ] writing to influxdb.canair.io
+[I][wifi.cpp:84] influxDbLoop(): [INFLUXDB] write done. Response: 204
+-->[HPMA] read > done! 
+-->[SENSORS] PM1:000 PM25:020 PM10:023 H:00% T:00°C
+[I][bluetooth.cpp:107] bleLoop(): [BLE] sending notification..
