@@ -15,9 +15,9 @@ topnav_dropdowns:
     - title: Languaje
       folderitems:
         - title: Spanish
-          url: /es_landing_page.html
+          url: /index_es.html
         - title: English
-          url: /en_landing_page.html
+          url: /index_en.html
 
     - title: CanAirIO
       folderitems:
