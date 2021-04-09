@@ -1,24 +1,24 @@
-repository: tomjoht/documentation-theme-jekyll
+repository: kike-canaries/docs
 
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: Jekyll Documentation Theme
+topnav_title: CanAirIO Documentation
 # this appears on the top navigation bar next to the home button
 
-site_title: Jekyll theme for documentation
+site_title: CanAirIO documentation portal
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
-company_name: Your company
+company_name: CanAirIO
 # this appears in the footer
 
-github_editme_path: tomjoht/documentation-theme-jekyll/blob/gh-pages/
+github_editme_path: kike-canaries/docs/blob/gh-pages/
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
 # gitlab_editme_path: tomjoht/documentation-theme-jekyll/blob/gh-pages/
 # if you're using GitLab, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
-google_analytics: UA-66296557-1
+google_analytics: 
 # if you have google-analytics ID, put it in. if not, edit this value to blank.
 
 host: 127.0.0.1
@@ -33,9 +33,9 @@ exclude:
   - vendor
 # these are the files and directories that jekyll will exclude from the build
 
-feedback_subject_line: Jekyll documentation theme
+feedback_subject_line: CanAirIO documentation
 
-feedback_email: tomjoht@gmail.com
+feedback_email: info@canair.io
 # used as a contact email for the Feedback link in the top navigation bar
 
 # feedback_disable: true
@@ -106,12 +106,12 @@ sidebars:
 - product2_sidebar
 - other
 
-description: "Intended as a documentation theme based on Jekyll for technical writers documenting software and other technical products, this theme has all the elements you would need to handle multiple products with both multi-level sidebar navigation, tags, and other documentation features."
+description: "CanAirIO, citizen network for monitoring air quality. CanAirIO is a citizen science project using mobile and static sensors to measure air quality with cell phones and low-cost technology. This site is the current documentation for all about of CanAirIO project."
 # the description is used in the feed.xml file
 
 # needed for sitemap.xml file only
 # url: http://idratherbewriting.com
-# baseurl: /documentation-theme-jekyll
+# baseurl: /docs
 
 
 github: [metadata]
