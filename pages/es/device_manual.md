@@ -70,19 +70,19 @@ Para recargar la batería se necesita alimentar el sensor por el puerto de alime
 # Aplicacion Celular
 La App oficial de CanAirIO se puede descargar del [PlayStore](https://play.google.com/store/apps/details?id=hpsaturn.pollutionreporter) la App funciona solo para el sistema operativo Android Versión 4.1 en adelante, versiones anteriores no son compatibles. En el momento no se cuenta con una App para sistema iOS.
 
-![Panel Mapa](https://raw.githubusercontent.com/kike-canaries/canairio_docs/main/images/panel_mapa.jpg)
+![Panel Mapa](/images/panel_mapa.jpg)
 
 Panel Mapa:
 En el panel mapa podemos encontrar los registros de las últimas Mediciones subidas a la base de datos móvil. Para acercar o alejar el zoom se hace con el gesto de los dedos zoom out abrir los dedos, zoom in cerrar los dedos. En ciertos momentos se demora la actulización del mapa debido a que es un servicio externo.
 
 Panel Public
-En el panel public, podemos encontrar las grabaciones de los tracks de los últimos recorridos móviles que se han compartido a la Base de Datos, [Base de datos de Firebase](https://console.firebase.google.com/u/0/project/kcanariesdb/overview?pli=1)
+En el panel public, podemos encontrar las grabaciones de los tracks de los últimos recorridos móviles que se han compartido.
 
 Panel Device
 En el Panel device se listan todos los dispositivos iOT Bluetooth disponibles en el entorno de la App Móvil, una vez determina el CanAirIO que queremos emparejar se hace click en CONNECT y éste empieza a intercambiar informacion entre la app y el sensor y aparece el panel grabar y el icono rojo.
 
 
-![Panel recorridos](https://raw.githubusercontent.com/kike-canaries/canairio_docs/main/images/panel_recorridos.jpg)
+![Panel recorridos](/images/panel_recorridos.jpg)
 
 -----------------
 
@@ -95,7 +95,7 @@ Para compartir un recorrido se necesita dar click sobre el recorrido que se quie
 
 ## Grabar Recorrido Móvil
 
-![Panel Grabar](https://raw.githubusercontent.com/kike-canaries/canairio_docs/main/images/panel_grabacion.jpg)
+![Panel Grabar](/images/panel_grabacion.jpg)
 
 Para grabar un recorrido móvil debemos tener emparejada la App movil y el sensor, para emparejarlos se da click en el icono de los tres puntos en el panel emparejar disposituvo, ésta función solo aparece si la app se encuentra con el icono de grabar en rojo. 
 
@@ -115,7 +115,7 @@ El primer paso es grabar en el dispositivo en nombre de la WiFi y el Password,lu
 
 En el siguiente video podrás ver el proceso para conectarse a una red wifi : [Conectarse a una red WiFi](https://youtu.be/qP-70XzjtNQ)
 
-![Panel Estacion Fija](https://raw.githubusercontent.com/kike-canaries/canairio_docs/main/images/panel_estacion_movil.jpg)
+![Panel Estacion Fija](/images/panel_estacion_movil.jpg)
 
 Intervalo de muestreo
 El sensor, de fábrica puede registrar mediciones de PM2,5 cada segundo pero para el caso de una estación móvil la tasa de muestreo es demasiado alta y consume muchos recursos de almacenamiento en los servidores, la recomendación es que la tasa de muestreo para una estación móvil sea de 60 segundos y para recorridos móviles de 5 segundos.
@@ -172,11 +172,11 @@ Los sensores de material particulado requieren que se dispongan en unas posicion
 
 Si en nuestro CanAir.IO tenemos un sensor Sensirion (SP30) las posiciones correctas para un funcionamiento óptimo son :+1: 
 
-![Sensirion horizontal](https://raw.githubusercontent.com/kike-canaries/canairio_docs/main/images/sensirion_horizontal.png)
+![Sensirion horizontal](/images/sensirion_horizontal.png)
 
-![Sensirion Lateral](https://raw.githubusercontent.com/kike-canaries/canairio_docs/main/images/sensirion_lateral.png)
+![Sensirion Lateral](/images/sensirion_lateral.png)
 
-![Sensirion Vertical](https://raw.githubusercontent.com/kike-canaries/canairio_docs/main/images/sensirion_vertical.png)
+![Sensirion Vertical](/images/sensirion_vertical.png)
 
 ### Panasonic
 
@@ -199,10 +199,4 @@ Si en nuestro CanAir.IO tenemos un sensor Sensirion (SP30) las posiciones correc
 11. CanAirIO Foro https://foro.canair.io/
 12. Wiki un/loquer/CanAirIO http://wiki.unloquer.org/personas/brolin/proyectos/agentes_calidad_aire/cooperaciones/aqa-canairio#inventario_uncanairio
 13. CanAirIO Twitter https://twitter.com/canairq
-
-
-
-
-
-
 
