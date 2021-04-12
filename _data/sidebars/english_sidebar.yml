@@ -63,7 +63,7 @@ entries:
     folderitems:
 
     - title: Mobile station
-      url: /user_manual_es.html
+      url: /mobile_api_en.html
       output: web, pdf
 
     - title: Fixed station
