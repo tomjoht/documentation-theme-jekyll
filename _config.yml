@@ -46,6 +46,7 @@ feedback_email: info@canair.io
 
 # feedback_link: "http://helpy.io/"
 # if you uncomment the previous line, it changes where the feedback link points to
+feedback_link: https://canair.io/#three
 
 highlighter: rouge
 # library used for syntax highlighting

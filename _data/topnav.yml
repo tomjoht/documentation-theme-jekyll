@@ -19,9 +19,9 @@ topnav_dropdowns:
         - title: English
           url: /index.html
 
-    - title: CanAirIO
-      folderitems:
-        - title: CanAirIO Device
-          url: /p1_landing_page.html
-        - title: CanAirIO App
-          url: /p2_landing_page.html
+#   - title: CanAirIO
+#     folderitems:
+#       - title: CanAirIO Device
+#         url: /p1_landing_page.html
+#       - title: CanAirIO App
+#         url: /p2_landing_page.html
