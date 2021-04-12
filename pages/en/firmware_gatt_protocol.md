@@ -14,7 +14,6 @@ permalink: firmware_protocol.html
 folder: en
 ---
 
-
 # Firmware Configuration
 
 ## Via Android App

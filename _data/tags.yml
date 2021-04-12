@@ -3,12 +3,15 @@
 # In other words, the last line must be the last tag in the allowed-tags list.
 allowed-tags:
   - getting_started
-  - content_types
-  - navigation
-  - formatting
-  - publishing
-  - single_sourcing
-  - special_layouts
+  - user_manual
+  - device
+  - firmware
+  - android
+  - devel
+  - debugging
+  - bluetooth
+  - protocol
+  - social
   - collaboration
   - news
   - troubleshooting

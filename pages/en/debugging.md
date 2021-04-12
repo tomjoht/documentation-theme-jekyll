@@ -66,3 +66,7 @@ sample:
     00001101 -> sensor ok, wan ok, ifxdb cloud ok
     01000101 -> sensor ok, wan ok, ifxdb write fail
 ```
+
+
+{% include links.html %}
+
