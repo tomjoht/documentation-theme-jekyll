@@ -12,7 +12,14 @@ CanAirIO is a citizen science project using mobile and fixed air quality station
 
 ## Building a device
 
-We have some DIY device alternatives with some guides
+We have some device version alternatives with some guides:
+
+| Device version    | Difficulty | Links   |
+| :------------- |:--------:| :-----------: | 
+|  CanAirIO without soldering   | Easy | [Complete guide and video][1] |
+
+[1]: https://www.hackster.io/canairio/build-low-cost-air-quality-sensor-canairio-without-soldering-d87494
+
 
 ## Firmware upload
 
@@ -31,7 +38,11 @@ CanAirIO device supports ESP32 boards with Bluetooth and Wifi features, all boar
 [3]: /firmware_upload_binaries_alternative.html
 [4]: https://github.com/kike-canaries/canairio_firmware#compiling
 
+---
+
 ## Publish data
+
+
 
 ## Community
 

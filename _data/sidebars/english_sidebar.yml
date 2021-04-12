@@ -23,38 +23,32 @@ entries:
   - title: Getting Started
     output: web, pdf
     folderitems:
-    - title: Firmware upload
-      url: /index.html#firmware-upload
-      output: web
 
     - title: Building a device
       url: /index.html#building-a-device
       output: web, pdf
 
-    - title: Sample 2
-      url: /p1_sample2.html
-      output: web, pdf
+    - title: Firmware upload
+      url: /index.html#firmware-upload
+      output: web
 
-    - title: Sample 3
-      url: /p1_sample3.html
-      output: web, pdf
-
-  - title: Another heading
+  - title: User guide
     output: web, pdf
 
     folderitems:
-    - title: Sample 4
+    - title: User manual
+      url: /user_manual_es.html
+      output: web, pdf
+    
+  - title: Firmware internals
+    output: web, pdf
+
+    folderitems:
+    - title: Bluetooth GATT protocol
       url: /p1_sample4.html
       output: web, pdf
-
-    - title: Sample 5
-      url: /p1_sample5.html
-      output: web, pdf
-
-    - title: Sample 6
-      url: /p1_sample6.html
-      output: web, pdf
-
-    - title: Sample 7
-      url: /p1_sample7.html
+    
+    folderitems:
+    - title: Bluetooth GATT protocol
+      url: /p1_sample4.html
       output: web, pdf

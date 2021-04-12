@@ -1,3 +1,14 @@
+---
+title: Manual de usuariom CanAirIO
+tags: [user manual]
+keywords: user, user manual, guide, technical manual, manual
+last_updated: March 12, 2021
+summary: "Manual de usuario de CanAirIO, a nivel de dispositivo y aplicación"
+sidebar: english_sidebar
+permalink: user_manual_es.html
+folder: es
+---
+
 # Manual de usuario CanAirIO
 
 CanAirIO en un sensor que mide concentraciones de Material particulado PM2.5, con la opción de Humedad y Temperatura si se le instala el sensor [AM2320](https://www.adafruit.com/product/3721).
@@ -6,28 +17,23 @@ La guia completa de como adquirir las partes y la secuencia de armado paso a pas
 
 Todo el desarrollo del Software y las actualizaciones de Firmware son Open Source y lo pueden auditar y descargar del [repositorio en GitHub](https://github.com/kike-canaries)
 
-> Tanto los diseños de hardware, el código del software de la app celular y del firmware del aparato son compartidos bajo la filosofa del Open Source y los Datos Abiertos. Los Datos generados por la Red de Monitoreo de la Calidad del Aire CanAir.IO están disponibles en el siguiente mapa : [http//daquina/canairio](http://daquina.io/canairio/) aporte de la comunidad [Un/loquer](https://unloquer.org/) y los datos pueden ser visualizados en http://influxdb.canair.io:8000/
+Tanto los diseños de hardware, el código del software de la app celular y del firmware del aparato son compartidos bajo la filosofa del Open Source y los Datos Abiertos. Los Datos generados por la Red de Monitoreo de la Calidad del Aire CanAir.IO están disponibles en el siguiente mapa : [http//daquina/canairio](http://daquina.io/canairio/) aporte de la comunidad [Un/loquer](https://unloquer.org/) y los datos pueden ser visualizados en http://influxdb.canair.io:8000/
 
 
-![Imagen de portada](https://raw.githubusercontent.com/kike-canaries/canairio_docs/main/images/canairio_portada.jpg)
+![Imagen de portada](/images/canairio_portada.jpg)
 
 ## Encendido
 
 Para encender el sensor, mover a la posición ON el switch (hacia la derecha) si el sensor tiene bateria, si no cuenta con bateria (estación fija) solo basta con conectar el adaptador de 5V al puerto USB.
 
-![Imagen puerto USB](https://raw.githubusercontent.com/kike-canaries/canairio_docs/main/images/canairio_usb.jpg)
-
-
-
-
+![Imagen puerto USB](/images/canairio_usb.jpg)
 
 ## Indicadores en Pantalla
 
 Indicadores para un sensor con LCD Display
 
 
-![Imagen LCD](https://raw.githubusercontent.com/kike-canaries/canairio_docs/main/images/lcd_ESPA%C3%91OL.jpg)
-
+![Imagen LCD](/images/canairio_lcd_es.jpg)
 
 
 PM2.5.EMOTICON 
