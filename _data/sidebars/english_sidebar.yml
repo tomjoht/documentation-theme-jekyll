@@ -67,7 +67,7 @@ entries:
       output: web, pdf
 
     - title: Fixed station
-      url: /user_manual_es.html
+      url: /fixed_stations_api_en.html
       output: web, pdf
 
   - title: Firmware

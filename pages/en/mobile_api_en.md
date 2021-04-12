@@ -2,7 +2,6 @@
 title: Mobile API
 tags:
   - api
-  - api
 keywords: api, data, mobile, tracks
 last_updated: "March 12, 2021"
 summary: "CanAirIO mobile API for recorded user tracks"
@@ -22,7 +21,6 @@ The current mobile tracks recorded for the Android app in mobile station mode, a
 For now, the shared tracks could be listed in the Android app in the section `public`. The app will showing the last 100 tracks: 
 
 ![Mobile track visualization](/docs/images/mobile_track_public.jpg)
-
 
 ## Mobile track endpoint
 
