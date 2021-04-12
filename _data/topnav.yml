@@ -17,7 +17,7 @@ topnav_dropdowns:
         - title: Spanish
           url: /index_es.html
         - title: English
-          url: /index_en.html
+          url: /index.html
 
     - title: CanAirIO
       folderitems:
