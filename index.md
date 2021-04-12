@@ -16,9 +16,18 @@ We have some device version alternatives with some guides:
 
 | Device version    | Difficulty | Links   |
 | :------------- |:--------:| :-----------: | 
-|  CanAirIO without soldering   | Easy | [Complete guide and video][1] |
+|  CanAirIO without soldering (EN)  | Easy | [Complete guide and video][10] |
+|  CanAirIO without soldering (ES)  | Easy | [Complete guide and video][11] |
+|  CanAirIO device v2.1 (EN)  | Medium | [Complete guide and video][12] |
+|  CanAirIO device v2.1 (ES)  | Medium | [Complete guide and video][13] |
+|  CanAirIO TTGO-TDisplay 3DPrint Box   | Advanced | [Complete guide][14] |
 
-[1]: https://www.hackster.io/canairio/build-low-cost-air-quality-sensor-canairio-without-soldering-d87494
+
+[10]: https://www.hackster.io/canairio/build-low-cost-air-quality-sensor-canairio-without-soldering-d87494
+[11]: https://www.hackster.io/canairio/construye-un-sensor-calidad-del-aire-canairio-sin-soldaduras-8a3c6d
+[12]: https://www.hackster.io/canairio-guide-team/canairio-citizen-network-for-air-quality-monitoring-bbf647
+[13]: https://www.hackster.io/114723/canairio-red-ciudadana-para-monitoreo-de-calidad-del-aire-96f79a
+[14]: https://github.com/hpsaturn/CanAirIO#readme
 
 
 ## Firmware upload
@@ -27,24 +36,16 @@ CanAirIO device supports ESP32 boards with Bluetooth and Wifi features, all boar
 
 | Alternative    | Software | Requeriments  | Links   |
 | :------------- |:--------:| :-----------: | :-----: |
-| Uploader sketch (easy)    | Arduino Droid App | NO drivers only a OTG cable | [Complete guide and video][1] |
-| Uploader sketch (basic)    | Arduino IDE | USB drivers | [Complete Guide][1] |
-| Installer (basic)       | Python | NO drivers on Linux and Mac | [CanAirIO release][2] |
-| Binaries (basic)      | Espressif software | USB drivers - Windows only | [Complete guide][3] |
-| Build and install (advanced) | PlatformIO | No drivers on Linux | [Complete guide][4] |
+| Uploader sketch (easy)    | Arduino Droid App | NO drivers only a OTG cable | [Complete guide and video][20] |
+| Uploader sketch (basic)    | Arduino IDE | USB drivers | [Complete Guide][20] |
+| Installer (basic)       | Python | NO drivers on Linux and Mac | [CanAirIO release][21] |
+| Binaries (basic)      | Espressif software | USB drivers - Windows only | [Complete guide][22] |
+| Build and install (advanced) | PlatformIO | No drivers on Linux | [Complete guide][23] |
 
-[1]: https://github.com/hpsaturn/esp32-canairio-loader#readme
-[2]: https://github.com/kike-canaries/canairio_firmware/releases
-[3]: /firmware_upload_binaries_alternative.html
-[4]: https://github.com/kike-canaries/canairio_firmware#compiling
-
----
-
-## Publish data
-
-
-
-## Community
+[20]: https://github.com/hpsaturn/esp32-canairio-loader#readme
+[21]: https://github.com/kike-canaries/canairio_firmware/releases
+[22]: /firmware_upload_binaries_alternative.html
+[23]: https://github.com/kike-canaries/canairio_firmware#compiling
 
 
 {% include links.html %}

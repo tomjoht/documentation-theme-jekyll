@@ -36,19 +36,49 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: User manual
+
+    - title: CanAirIO device
       url: /user_manual_es.html
       output: web, pdf
-    
-  - title: Firmware internals
+
+    - title: Mobile station guide
+      url: /user_manual_es.html
+      output: web, pdf
+
+    - title: Fixed station guide
+      url: /user_manual_es.html
+      output: web, pdf
+
+    - title: Android app guide
+      url: /user_manual_es.html
+      output: web, pdf
+
+    - title: Publication guide
+      url: /user_manual_es.html
+      output: web, pdf
+
+  - title: API
+    output: web, pdf
+
+    folderitems:
+
+    - title: Mobile station guide
+      url: /user_manual_es.html
+      output: web, pdf
+
+    - title: Fixed station guide
+      url: /user_manual_es.html
+      output: web, pdf
+
+  - title: Firmware
     output: web, pdf
 
     folderitems:
     - title: Bluetooth GATT protocol
-      url: /p1_sample4.html
+      url: /firmware_protocol.html
+      output: web, pdf
+
+    - title: Firmware debugging
+      url: /firmware_debugging.html
       output: web, pdf
     
-    folderitems:
-    - title: Bluetooth GATT protocol
-      url: /p1_sample4.html
-      output: web, pdf
