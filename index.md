@@ -8,7 +8,7 @@ summary: These brief instructions will help you get started quickly with CanAirI
 ---
 ## Overview
 
-CanAirIO is a citizen science project using mobile and fixed air quality stations to measure some variables like PM2.5, CO2, AQI and others air indicators with cell phones and low-cost technology. 
+**CanAirIO** is a citizen science project using mobile and fixed air quality stations to measure some variables like PM2.5, CO2, AQI and others air indicators with cell phones and low-cost technology. 
 
 ## Building a device
 
