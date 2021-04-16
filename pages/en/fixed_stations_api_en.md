@@ -50,6 +50,41 @@ curl -G 'http://influxdb.canair.io:8086/query?db=canairio' --data-urlencode 'q=s
 
 But the more important stations of CanAirIO with more stable data is listed [here](https://github.com/daquina-io/VizCalidadAire/blob/canairio/canairio_sensors_mod.csv).
 
+## Python example
+
+In your OS please install before `python3-virtualenv`package, then:
+
+create and activate your virtual env space:
+
+```bash
+virtualenv venv && source venv/bin/activate
+```
+
+install the next package for run the test:
+
+```bash
+pip3 install influxdb ipython
+```
+
+enter to ipython console with the command `ipython` and execute the next lines for import the influxDb client and instance it:
+
+```python
+from influxdb import InfluxDBClient
+client = InfluxDBClient(host='influxdb.canair.io', port=8086, database='canairio')
+```
+
+after that, run a query:
+
+```python
+client.query('select * from "PM2.5_BOG_FON_Hayuelos_E01" WHERE time >= now() - 10m')
+```
+
+you should have an output similar to next:
+
+![python output from fixed station query](/docs/images/api_python_fixed_sample.jpg)
+
+
+
 ## All tracks request
 
 For now we don't have this development, CanAirIO is a opensource initiative and you able to send any pull request for help us in improve our API. For now we have published some backups of last one year, for example:
