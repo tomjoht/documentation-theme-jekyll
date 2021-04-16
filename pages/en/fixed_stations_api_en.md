@@ -16,7 +16,7 @@ folder: en
 
 The current fixed stations are stored in an InfluxDB database service, each station write a data series time in separated tables. We will change it to different schema soon. For now the next endpoints are enabled.
 
-## Data visualization
+### Data visualization
 
 For now, the shared series time of each stations could be listed in our Grafana dashboard here:
 
@@ -24,7 +24,7 @@ For now, the shared series time of each stations could be listed in our Grafana 
 
 [![Mobile track visualization](/docs/images/grafana_sample.jpg)](http://influxdb.canair.io:8000)
 
-## Data endpoint
+### Data endpoint
 
 Each series time could be fetched via the next endpoint:
 
@@ -40,7 +40,7 @@ For example:
 curl -G 'http://influxdb.canair.io:8086/query?db=canairio' --data-urlencode 'q=select * from "PM25_Berlin_CanAirIO_v2" WHERE time >= now() - 12h' > PM25_Berlin_CanAirIO_v2.json
 ```
 
-## Fixed stations names
+### Fixed stations names
 
 For get the complete list of fixed stations names:
 
@@ -52,9 +52,9 @@ But the more important stations of CanAirIO with more stable data is listed [her
 
 ## Python example
 
-In your OS please install before `python3-virtualenv`package, then:
+In your OS please install before the `python3-virtualenv` package, then:
 
-create and activate your virtual env space:
+create and activate your virtual space:
 
 ```bash
 virtualenv venv && source venv/bin/activate
@@ -65,6 +65,8 @@ install the next package for run the test:
 ```bash
 pip3 install influxdb ipython
 ```
+
+### Query
 
 enter to ipython console with the command `ipython` and execute the next lines for import the influxDb client and instance it:
 
@@ -83,7 +85,13 @@ you should have an output similar to next:
 
 ![python output from fixed station query](/docs/images/api_python_fixed_sample.jpg)
 
+### Stations names
 
+for get the all names of fixed stations:
+
+```python
+client.get_list_measurements()
+```
 
 ## All tracks request
 
