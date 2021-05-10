@@ -1,26 +1,13 @@
-<!-- Output copied to clipboard! -->
-
-<!-----
-NEW: Check the "Suppress top comment" option to remove this info from the output.
-
-Conversion time: 1.002 seconds.
-
-
-Using this Markdown file:
-
-1. Paste this output into your source file.
-2. See the notes and action items below regarding this conversion run.
-3. Check the rendered output (headings, lists, code blocks, tables) for proper
-   formatting and use a linkchecker before you publish this page.
-
-Conversion notes:
-
-* Docs to Markdown version 1.0β29
-* Mon May 10 2021 15:47:06 GMT-0700 (PDT)
-* Source doc: Documento sin título
-* Tables are currently converted to HTML tables.
------>
-
+---
+title: Hackaton Respiraton 2021
+tags: [Hackaton]
+keywords: hackaton, Respiraton2021, Comunidad
+last_updated: May 10, 2021
+summary: "Respiraton 2021 - Hackaton"
+sidebar: english_sidebar
+permalink: Respiraton2021.html
+folder: es
+---
 
 
 <table>
