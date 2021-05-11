@@ -9,6 +9,7 @@ permalink: Respiraton2021.html
 folder: es
 ---
 
+![head](https://github.com/kike-canaries/docs/blob/canaircore/pages/images/Respirat%C3%B3n9abril-1.png?raw=true)
 
 
 <table>
@@ -600,5 +601,200 @@ folder: es
    <td>CanAirIO - Juan Carlos Pachón
    </td>
   </tr>
-</table>
-
+  <tr>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>Comunicaciones
+   </td>
+   <td><a href="https://drive.google.com/drive/folders/1jJQIsPJLtd2zhSP2v2qeVKnFd5Hjev8T?usp=sharing">Piezas Graficas</a>
+   </td>
+   <td>Carpeta
+   </td>
+   <td>El Derecho a No Obedecer
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td><a href="https://drive.google.com/drive/folders/1j-0NO2HNszIuifVo-mTnAaM4pI99DyQg?usp=sharing">Logos Organizadores + Patrocinadores</a>
+   </td>
+   <td>Carpeta
+   </td>
+   <td>El Derecho a No Obedecer
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td><a href="https://drive.google.com/drive/folders/1kCKrw0udaIsmGIb5tSD7g5Nijcgu6OTA?usp=sharing">Comunicados de Prensa</a>
+   </td>
+   <td>Carpeta
+   </td>
+   <td>DANO + Arttesano
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td><a href="https://drive.google.com/drive/folders/1kBKSdUDVTjHdS1rfVDxoCoHy8sTc4awy?usp=sharing">Bases de Datos Prensa</a>
+   </td>
+   <td>Carpeta
+   </td>
+   <td>DANO + Arttesano
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>Evaluacion
+   </td>
+   <td><a href="https://docs.google.com/document/d/11BdTrVL95uISzl5EugAUWLp9NvPLE7ZbvkMqlMuUIk0/edit?usp=sharing">Evaluación del Proceso</a>
+   </td>
+   <td>Documento
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>Bases de Datos
+   </td>
+   <td><a href="https://docs.google.com/document/d/11BdTrVL95uISzl5EugAUWLp9NvPLE7ZbvkMqlMuUIk0/edit?usp=sharing">Bases de Datos Calidad del Aire</a>
+   </td>
+   <td>Carpeta
+   </td>
+   <td>Daniel Gil - Daniel Perez - Diana Pinzon
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td><a href="https://drive.google.com/drive/folders/1GJjF_vz8gKUi1_z3EmphifBffp0Ib9r0?usp=sharing">SIATA PM 2.5</a>
+   </td>
+   <td>Carpeta
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td><a href="https://drive.google.com/drive/folders/1cfCTUnzttdkiP_50d406XpqyCq9xghcV?usp=sharing">Marco Geoestadistico_MGN2020</a>
+   </td>
+   <td>Carpeta
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td><a href="https://drive.google.com/drive/folders/180tvBLb-P72IJefxPPqxEbwpSV3y0Mrv?usp=sharing">Encuesta Origen Destino AMVA 2017</a>
+   </td>
+   <td>Carpeta
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td><a href="https://drive.google.com/drive/folders/1V97ZvwmQXT94ic_S4aSxyYlN3zua_CVP?usp=sharing">Encuesta Movilidad Bogotá 2019</a>
+   </td>
+   <td>Carpeta
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td><a href="https://drive.google.com/drive/folders/1eEfVx9Vc2MfLRgMCp9HNl7B-3po-FYw3?usp=sharing">Canso CNPV 2018 Georeferenciado</a>
+   </td>
+   <td>Carpeta
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td><a href="https://drive.google.com/drive/folders/1wVDQCaFrx2HP7PO4MKKPMjE3m9jpkECV?usp=sharing">Censo CNPV2018</a>
+   </td>
+   <td>Carpeta
+   </td>
+   <td>
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>
+   </td>
+   <td><a href="https://drive.google.com/drive/folders/1wVDQCaFrx2HP7PO4MKKPMjE3m9jpkECV?usp=sharing">Enlaces a Bases de Datos Online</a>
+   </td>
+   <td>Carpeta
+   </td>
+   <td>CanAirIO + Daniel Perez
+   </td>
+  </tr>
+  <tr>
+   <td>
+   </td>
+   <td>
+   </td>
