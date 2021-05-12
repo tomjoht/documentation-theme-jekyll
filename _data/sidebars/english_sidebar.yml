@@ -81,4 +81,12 @@ entries:
     - title: Firmware debugging
       url: /firmware_debugging.html
       output: web, pdf
+
+  - title: Community
+    output: web, pdf
     
+    folderitems:
+
+    - title: Respiraton 2021
+      url: /Respiraton2021.html
+      output: web, pdf
