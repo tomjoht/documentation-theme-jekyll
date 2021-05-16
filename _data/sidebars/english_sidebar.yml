@@ -70,6 +70,15 @@ entries:
       url: /fixed_stations_api_en.html
       output: web, pdf
 
+  - title: Hardware
+    output: web, pdf
+
+    folderitems:
+
+    - title: CO2 sensors
+      url: /co2_comparative.html
+      output: web, pdf 
+
   - title: Firmware
     output: web, pdf
 
