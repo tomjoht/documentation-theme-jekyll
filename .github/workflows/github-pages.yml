@@ -1,4 +1,4 @@
-name: Build and deploy Jekyll site to GitHub Pages
+name: Build and deploy CanAirIO docs to GitHub Pages
 
 on:
   push:

@@ -1,4 +1,4 @@
-name: jekyll-cd
+name: canairio-ci
 
 on:
   push:
