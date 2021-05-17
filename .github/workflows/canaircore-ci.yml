@@ -3,7 +3,7 @@ name: jekyll-cd
 on:
   push:
     branches:
-      - main
+      - canaircore
 
 jobs:
   build:
