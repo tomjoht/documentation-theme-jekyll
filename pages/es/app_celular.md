@@ -18,6 +18,12 @@ folder: es
 |![SCAN](https://github.com/kike-canaries/docs/blob/main/images/app_canairio_mydevice_scan.jpg?raw=true)|Escanear dispositivos|si no aparece un CanAirIO disponible se debe hacer click sobre el icono SCAN hay que anotar que para que el icono scan aparezcahay que tener desemparejado el dispositivo|
 |![desemparejar](https://github.com/kike-canaries/docs/blob/main/images/app_canairio_mydevice_unpair.jpg?raw=true)|Desemparejar Dispositivos|Para desemparejar la aplicación con el CanAirIO se debe hacer click en el icono de los tres puntos arriba a mano derecha para que se despliegue la opcion para desemparejar |
 |![variables](https://github.com/kike-canaries/docs/blob/main/images/app_canairio_mydevice_variables.jpg?raw=true)|Filtro de variables |Elegir las variables a monitorear|Una vez emparejado en CanAirIO en el panel settings se puede en Variable Filter seleccionar el tipo de variables que queremos monitorear|
+|![myrecords](https://github.com/kike-canaries/docs/blob/main/images/app_canairio_myrecords.jpg?raw=true)|Listar recorridos en el celular|En el panel my records, se listan los recorridos que se graban en el telefono celular|
+|![myrecordsmap](https://github.com/kike-canaries/docs/blob/main/images/app_canairio_myrecords_map.jpg?raw=true)|Compartir un recorrido|Haciendo click en uno de los recorridos listados, se despliega una visualización que si se quiere compartir solo se debe hacer click en el icono rojo|
+|![settings](https://github.com/kike-canaries/docs/blob/main/images/app_canairio_settings.jpg?raw=true)|settings|Variable Filter<br><br>  Bluetooth Status<br><br> Mobile Station<br><br> Fixed Station<br><br>Device Info<br><br>|
+
+
+
 
 
 
