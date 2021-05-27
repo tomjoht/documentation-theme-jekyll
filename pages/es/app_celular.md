@@ -20,10 +20,14 @@ folder: es
 |![variables](https://github.com/kike-canaries/docs/blob/main/images/app_canairio_mydevice_variables.jpg?raw=true)|Filtro de variables |Elegir las variables a monitorear|Una vez emparejado en CanAirIO en el panel settings se puede en Variable Filter seleccionar el tipo de variables que queremos monitorear|
 |![myrecords](https://github.com/kike-canaries/docs/blob/main/images/app_canairio_myrecords.jpg?raw=true)|Listar recorridos en el celular|En el panel my records, se listan los recorridos que se graban en el telefono celular|
 |![myrecordsmap](https://github.com/kike-canaries/docs/blob/main/images/app_canairio_myrecords_map.jpg?raw=true)|Compartir un recorrido|Haciendo click en uno de los recorridos listados, se despliega una visualización que si se quiere compartir solo se debe hacer click en el icono rojo|
-|![settings](https://github.com/kike-canaries/docs/blob/main/images/app_canairio_settings.jpg?raw=true)|settings|Variable Filter<br><br>  Bluetooth Status<br><br> Mobile Station<br><br> Fixed Station<br><br>Device Info<br><br>|
+|![settings](https://github.com/kike-canaries/docs/blob/main/images/app_canairio_settings.jpg?raw=true)|Panel Settings |Variable Filter<br><br>  Bluetooth Status<br><br> Mobile Station<br><br> Fixed Station<br><br>Device Info<br><br>|
+|![variables](https://github.com/kike-canaries/docs/blob/main/images/app_canairio_mydevice_variables.jpg?raw=true)|Filtro de variables |Elegir las variables a monitorear|Una vez emparejado en CanAirIO en el panel settings se puede en Variable Filter seleccionar el tipo de variables que queremos monitorear|
+|![mobilestat](https://github.com/kike-canaries/docs/blob/main/images/app_canairio_mobile_station.jpg?raw=true)|Configuracion CanAirIO movil|Bluetooth Connecten ON/OFF<br><br><br>Sample Time Interval : en este campo se configura el tiempo en que se muestrea, para recorridos moviles se recomienda poner en 5 segundos y para estacion fija 300 segundos<br><br><br>Sensor Type : aca en esta pcion se despiegan las opciones de sensor conectado. PM o CO2<br><br><br>Reboot Device : Resetea el sensor<br><br><br>Factory Reset : Borra todos los datos grabados en el sensor|
+|![fixedone](https://github.com/kike-canaries/docs/blob/main/images/app_canairio_fixed_station_one.jpg?raw=true)|Configurar CanAirIo como estacion fija|Bluetooth Status : Connected ON/OFF<br><br><br>Station Name : Para nombrar la estacion se sugiere la siguiente forma<br>**PAIS_CIUDAD_LOCALIDAD_NombreSensor** <br><br><br>WiFi Name : escriba el SSID de la WIFi <br>**NOTA** : debe ser exactamente igual, es posible que al final tenga un espacio, solo es posible conectarse a redes de 2.4GHz<br><br><br> Enable WiFi Connection ON/OFF<br><br><br>Enable Publication ON/OFF en la opci{on OFF se activa la funcion Advanced Settings|
+|![fixedone](https://github.com/kike-canaries/docs/blob/main/images/app_canairio_fixed_station_influx.jpg?raw=true)|Configuracion InfluxDB|Database Name : nombre de la Base de Datos<br><br><br>Hostname : direccion URL de la base de datos<br><br><br>Port : Puerto 8086 debe ser ese el puerto|
 
 
 
-
+|![fixedone](http://)|000|000|
 
 
