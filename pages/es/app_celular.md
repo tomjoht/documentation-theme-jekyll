@@ -4,7 +4,7 @@ tags: [device_manual]
 keywords: manual, app , canairio, user, device
 last_updated: May 27, 2021
 summary: "aplicacion celular manual"
-sidebar: english_sidebar
+sidebar: spanish_sidebar
 permalink: 
 folder: es
 ---
