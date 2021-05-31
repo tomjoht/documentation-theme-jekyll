@@ -9,9 +9,9 @@ permalink:
 folder: es
 ---
 
-| IMAGEN           | ACCION PANEL         | DESCRIPCION     |
+| IMAGEN           | MARCA SENSOR     | DESCRIPCION     |
 | ---------------- |:----------------:| -----------|
-| ![report](https://github.com/kike-canaries/docs/blob/main/images/SCD30%20connection.jpg)         | Visualizar reportes compartidos |      En el panel reportes podemos encontrar los registros de las últimas Mediciones subidas a la base de datos móvil. <br><br><br>Para acercar o alejar el zoom se hace con el gesto de los dedos zoom out abrir los dedos, zoom in cerrar los dedos. En ciertos momentos se demora la actulización del mapa debido a que es un servicio externo<br><br><br>Haciendo click sobre un punto se despliega la visualizacion del recorrido |
+| ![report](https://github.com/kike-canaries/docs/blob/main/images/SCD30%20connection.jpg)         | Sensirion SCD30 | Sensirion SCd30 conectado al CanAirIO por medio de los pines VCC: 5V o 3.3V, GND: GND y de comunicación I2C: SDA y SCL      |
 | ![listar](https://github.com/kike-canaries/docs/blob/canaircore/images/app_canairio_public.jpg?raw=true)         | Listar recorridos compartidos      |          En el panel public, podemos encontrar las grabaciones de los tracks de los últimos recorridos móviles que se han compartido.|
 | ![PUBLIC](https://github.com/kike-canaries/docs/blob/main/images/app_canairio_public_map.jpg?raw=true)    | Visualizar un recorrido     | Al hacer click sobre uno de los reportes compartidos podemos ver dos grafica, la primera un plano cartesiano donde se visualizan las concentraciones en función del tiempo y la segunda un mapa del recorrido realizado, se puede ampliar o reducir con gestos de los dedos. Finalmente se puede descargar el archivo JSON si se hace click sobre el ID señalizado en azul  |
 | ![SCAN](https://github.com/kike-canaries/docs/blob/canaircore/images/app_canairio_mydevice_scan.jpg?raw=true)    | Escanear un dispositivo     |  En el Panel my device se listan todos los dispositivos iOT Bluetooth disponibles en el entorno de la App Móvil, una vez determina el CanAirIO que queremos emparejar se hace click en CONNECT y éste empieza a intercambiar informacion entre la app y el sensor y aparece el panel grabar y el icono rojo.         |
