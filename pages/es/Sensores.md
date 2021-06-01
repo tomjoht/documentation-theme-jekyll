@@ -12,12 +12,7 @@ folder: es
 | IMAGEN           | MARCA SENSOR     | DESCRIPCION     |
 | ---------------- |:----------------:| -----------|
 |**Material Particulado PM2.5:**|
-|![Sensirion SPS30 sensor](https://github.com/kike-canaries/docs/blob/main/images/Sensirion%20connection%20SPS30_1.jpg)|Sensirion SPS30|1) VDD ---> Salida de 5V del elevador
-2) SDA ---> Pin 21 ESP32
-3) SCL ---> Pin 22 ESP32
-4) SEL ---> GND
-5) GND ---> GND del elevador
-|
+|![Sensirion SPS30 sensor](https://github.com/kike-canaries/docs/blob/main/images/Sensirion%20connection%20SPS30_1.jpg)|Sensirion SPS30|1) VDD ---> Salida de 5V del elevador<br>2) SDA ---> Pin 21 ESP32<br>3) SCL ---> Pin 22 ESP32<br>4) SEL ---> GND<br>5) GND ---> GND del elevador|
 |![Panasonic sensor](https://github.com/kike-canaries/docs/blob/main/images/Panasonic%20connection1.jpg)|Panasonic|Falta|
 |![Plantower sensor](https://github.com/kike-canaries/docs/blob/main/images/Plantower%20connection.jpg)|Plantower|Falta|
 |![Honeywell sensor](https://github.com/kike-canaries/docs/blob/main/images/Honeywell%20sensor1.jpg)|Honeywell|ELIMINADO DE LA GUIÁS Y NO RECOMENDADO POR MAL 
