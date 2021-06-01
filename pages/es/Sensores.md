@@ -27,9 +27,9 @@ folder: es
 ||
 |**Humedad y Temperatura:**|
 | ![SHT31 sensor](https://github.com/kike-canaries/docs/blob/main/images/SHT31.jpg)|Sensirion SHT31|VIN ---> Pin de 3.3V del ESP32 o Salida de 5V del elevador<br>GND ---> GND<br>SCL ---> Pin 22 ESP32<br>SDA ---> Pin 21 ESP32|
-| ![AM2320 sensor](https://github.com/kike-canaries/docs/blob/main/images/AM2320.jpg)|AsAir AM2320|VDD ---> Pin de 3.3V del ESP32 o Salida de 5V del elevador<br>SDA ---> Pin 21 ESP32<br>GND ---> GND<br>SCL ---> Pin 22 ESP32|
+| ![AM2320 sensor](https://github.com/kike-canaries/docs/blob/main/images/AM2320.jpg)|Asair AM2320|VDD ---> Pin de 3.3V del ESP32 o Salida de 5V del elevador<br>SDA ---> Pin 21 ESP32<br>GND ---> GND<br>SCL ---> Pin 22 ESP32|
 | ![BME280 sensor](https://github.com/kike-canaries/docs/blob/main/images/BME280.jpg)|Bosch BME280|VIN ---> Pin de 3.3V del ESP32 o Salida de 5V del elevador<br>GND ---> GND<br>SCL ---> Pin 22 ESP32<br>SDA ---> Pin 21 ESP32|
 | ![BME680 sensor](https://github.com/kike-canaries/docs/blob/main/images/BME680.jpg)|Bosch BME680|VCC ---> Pin de 3.3V del ESP32 o Salida de 5V del elevador<br>GND ---> GND<br>SCL ---> Pin 22 ESP32<br>SDA ---> Pin 21 ESP32<br>SDO ---> X<br>CS ---> X|
-| ![AHT10 sensor](https://github.com/kike-canaries/docs/blob/main/images/AHT10.jpg)|AsAir AHT10|VIN ---> Pin de 3.3V del ESP32 o Salida de 5V del elevador<br>GND ---> GND<br>SCL ---> Pin 22 ESP32<br>SDA ---> Pin 21 ESP32|
-| ![DHT22 sensor](https://github.com/kike-canaries/docs/blob/main/images/DHT-22-Sensor.jpg)|DHT22|VCC ---> Pin de 3.3V del ESP32 o Salida de 5V del elevador<br>DATA ---> Pin 23 ESP32<br>NC ---> X<br>GND---> GND|
-| ![DHT11 sensor](https://github.com/kike-canaries/docs/blob/main/images/DHT11.jpg)|DHT11|VCC ---> Pin de 3.3V del ESP32 o Salida de 5V del elevador<br>DATA ---> Pin 23 ESP32<br>NC ---> X<br>GND---> GND|
+| ![AHT10 sensor](https://github.com/kike-canaries/docs/blob/main/images/AHT10.jpg)|Asair AHT10|VIN ---> Pin de 3.3V del ESP32 o Salida de 5V del elevador<br>GND ---> GND<br>SCL ---> Pin 22 ESP32<br>SDA ---> Pin 21 ESP32|
+| ![DHT22 sensor](https://github.com/kike-canaries/docs/blob/main/images/DHT-22-Sensor.jpg)|Asair DHT22|VCC ---> Pin de 3.3V del ESP32 o Salida de 5V del elevador<br>DATA ---> Pin 23 ESP32<br>NC ---> X<br>GND---> GND|
+| ![DHT11 sensor](https://github.com/kike-canaries/docs/blob/main/images/DHT11.jpg)|Asair DHT11|VCC ---> Pin de 3.3V del ESP32 o Salida de 5V del elevador<br>DATA ---> Pin 23 ESP32<br>NC ---> X<br>GND---> GND|
