@@ -9,7 +9,7 @@ permalink: Respiraton2021.html
 folder: es
 ---
 
-![head](https://github.com/kike-canaries/docs/blob/canaircore/pages/images/Respirat%C3%B3n9abril-1.png?raw=true)
+![head](https://github.com/kike-canaries/docs/blob/main/pages/images/respiraton20210401.jpg?raw=true)
 
 
 <table>

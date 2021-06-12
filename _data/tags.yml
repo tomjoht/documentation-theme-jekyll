@@ -11,6 +11,7 @@ allowed-tags:
   - debugging
   - bluetooth
   - protocol
+  - sensors
   - api
   - social
   - collaboration
