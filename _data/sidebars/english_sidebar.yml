@@ -29,7 +29,7 @@ entries:
       output: web, pdf
 
     - title: Firmware upload
-      url: /index.html#firmware-upload
+      url: /firmware_upload.html#overview
       output: web
   
   - title: API
@@ -50,7 +50,23 @@ entries:
 
     folderitems:
 
-    - title: CO2 sensors
+    - title: CanAirIO Bike
+      url: /canairio_bike.html
+      output: web, pdf 
+
+    - title: CanAirIO CO2
+      url: /canairio_bike.html
+      output: web, pdf
+
+    - title: CanAirIO Sensorslib
+      url: /canairio_sensorslib.html
+      output: web, pdf
+
+    - title: Sensors supported
+      url: /sensors.html
+      output: web, pdf
+
+    - title: CO2 sensors comparative
       url: /co2_comparative.html
       output: web, pdf 
 
