@@ -75,11 +75,27 @@ These devices able to work in standalone mode without clouds, apps, Bluetooth, W
 
 [![Youtube Making Of CanAirIO Bike ](http://img.youtube.com/vi/V2eO1UN5u7Y/0.jpg)](https://youtu.be/V2eO1UN5u7Y "Youtube CanAirIO basic loader guide")
 
+## Components
+
+Main parts that you need are the next, but maybe you could have this components in different shops.
+
+| Part Ref   | Quantaty | Shop |
+|:-------- |:-------------:|:---------------:| 
+| TTGO T-Display | 1 | [Aliexpress](https://www.aliexpress.com/item/33048962331.html), [Amazon](https://www.amazon.de/gp/product/B07WTNCWLW/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1) |
+| Sensirion SPS30 | 1 | [Aliexpress](https://www.aliexpress.com/item/1005002017660217.html), [Mouser](https://www.mouser.de/ProductDetail/403-SPS30) * |
+|AM2320| 1 | [Mouser](https://www.mouser.de/ProductDetail/485-3721) |
+| M2 screws box ** | 1 | [Amazon](https://www.amazon.de/gp/product/B07SGP8TWS/ref=ppx_yo_dt_b_asin_title_o07_s01?ie=UTF8&psc=1) |
+| Battery 650-800 mAh 3.7v *** | 1 | [Aliexpress](https://www.aliexpress.com/item/4001065181282.html) |
+| Magnets box (optional) | 1 | [Amazon](https://www.amazon.de/gp/product/B00TACFTAA/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1) |
+| Heat shrink box (optional) | 1 | [Aliexpress](https://www.aliexpress.com/item/32843983164.html) |
+
+*The SPS30 in Mouser, needs buy the cable independent [1](https://www.mouser.de/ProductDetail/538-87439-0501),[2](https://www.mouser.de/ProductDetail/538-79758-0016).  
+**Screws M2x4(4), M2x5(8), M2x6(2), M2x7(2).  
+*** Similar battery, same voltage, similar capacity but with dimensions max: 48x30x6 mm.  
+
 ## Schematics
 
 ![CanAirIO Bike Schematics](images/canairio_bike_schematics_grid.jpg)
-
-
 
 
 
