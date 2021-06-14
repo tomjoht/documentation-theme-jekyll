@@ -106,6 +106,9 @@ Main parts that you need are the next, but maybe you could have this components 
 
 ![CanAirIO Bike Schematics](images/canairio_bike_schematics_grid.jpg)
 
+## Firmware Upload
+
+We have some alternatives for upload the last firmware for this version, please review the alternatives [here](https://canair.io/docs/firmware_upload.html#overview)
 
 
 {% include links.html %}

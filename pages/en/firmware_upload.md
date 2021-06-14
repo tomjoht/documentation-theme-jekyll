@@ -30,6 +30,8 @@ CanAirIO device supports ESP32 boards with Bluetooth and Wifi features, all boar
 [22]: #canairio-installer
 [23]: https://github.com/kike-canaries/canairio_firmware#compiling
 
+The current supported boards with these methods are [here](https://github.com/kike-canaries/canairio_firmware#boards-supported)
+
 ## CanAirIO Loader
 
 With this method you will able to upload the latest version of [CanAir.IO firmware](https://github.com/kike-canaries/canairio_firmware#canairio-firmware)
