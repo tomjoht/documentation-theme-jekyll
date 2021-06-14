@@ -4,7 +4,8 @@ keywords: homepage
 tags: [getting_started]
 sidebar: english_sidebar
 permalink: index.html
-summary: These brief instructions will help you get started quickly with CanAirIO. 
+summary: These brief instructions will help you get started quickly with CanAirIO.
+
 ---
 ## Overview
 
@@ -14,13 +15,14 @@ CanAirIO is a citizen science project using mobile and fixed air quality station
 
 We have some device version alternatives with some guides:
 
-| Device version    | Difficulty | Links   |
-| :------------- |:--------:| :-----------: | 
-|  CanAirIO without soldering (EN)  | Easy | [Complete guide and video][10] |
-|  CanAirIO without soldering (ES)  | Easy | [Complete guide and video][11] |
-|  CanAirIO device v2.1 (EN)  | Medium | [Complete guide and video][12] |
-|  CanAirIO device v2.1 (ES)  | Medium | [Complete guide and video][13] |
-|  CanAirIO TTGO-TDisplay 3DPrint Box   | Advanced | [Complete guide][14] |
+| Device version    | Difficulty |  Status | Links  |
+| :------------- |:--------:| :-----------: | :-----------: |
+|  CanAirIO without soldering (EN)  | Easy | Updated |  [Complete guide and video][10] |
+|  CanAirIO without soldering (ES)  | Easy | Updated | [Complete guide and video][11] |
+|  CanAirIO device v2.1 (EN)  | Medium | Outdated | [Complete guide and video][12] |
+|  CanAirIO device v2.1 (ES)  | Medium | Outdated | [Complete guide and video][13] |
+|  CanAirIO TTGO-TDisplay   | Advanced | Deprecated | [Complete guide][14] |
+|  CanAirIO Bike   | Advanced | New | [Complete guide][15] |
 
 
 [10]: https://www.hackster.io/canairio/build-low-cost-air-quality-sensor-canairio-without-soldering-d87494
@@ -28,6 +30,7 @@ We have some device version alternatives with some guides:
 [12]: https://www.hackster.io/canairio-guide-team/canairio-citizen-network-for-air-quality-monitoring-bbf647
 [13]: https://www.hackster.io/114723/canairio-red-ciudadana-para-monitoreo-de-calidad-del-aire-96f79a
 [14]: https://github.com/hpsaturn/CanAirIO#readme
+[15]: https://canair.io/docs/canairio_bike.html
 
 
 ## Firmware upload
