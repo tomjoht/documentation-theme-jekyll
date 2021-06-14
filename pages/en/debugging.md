@@ -13,6 +13,7 @@ permalink: firmware_debugging.html
 folder: en
 ---
 
+**WARNNING**: The current guide is deprecated!
 
 ## Starting console log
 
@@ -25,8 +26,6 @@ folder: en
 -->[API] writing to canairio.herokuapp.com..done. [201]
 -->[STATUS] 10001101
 ```
-
-<a href="https://github.com/kike-canaries/esp32-hpma115s0/blob/master/images/rev212.jpg" target="_blank"><img src="https://raw.githubusercontent.com/kike-canaries/esp32-hpma115s0/master/images/rev212.jpg" align="right" width="280" ></a>
 
 
 ## Device status vector

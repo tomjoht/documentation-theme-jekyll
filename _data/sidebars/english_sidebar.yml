@@ -58,17 +58,35 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: Firmware Upload
-      url: /firmware_upload.html
+    - title: Overview
+      url: /firmware_upload.html#overview
+      output: web, pdf
+
+    - title: Upload via CanAirIO Loader
+      url: /firmware_upload.html#canairio-loader
+      output: web, pdf
+
+    - title: Upload via Espressif Uploader
+      url: /firmware_upload.html#espressif-uploader
+      output: web, pdf
+
+    - title: Upload via CanAirIO Installer
+      url: /firmware_upload.html#canairio-installer
+      output: web, pdf
+
+    - title: Upload from Source Code
+      url: /firmware_upload.html#via-source-code
+      output: web, pdf
+
+    - title: Firmware debugging
+      url: /firmware_debugging.html
       output: web, pdf
 
     - title: Bluetooth GATT protocol
       url: /firmware_protocol.html
       output: web, pdf
 
-    - title: Firmware debugging
-      url: /firmware_debugging.html
-      output: web, pdf
+
 
   - title: Community
     output: web, pdf

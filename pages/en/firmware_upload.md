@@ -15,12 +15,20 @@ folder: en
 
 ## Overview
 
-We have different methods for upload the CanAirIO firmware. In order to complexity, these are:
+CanAirIO device supports ESP32 boards with Bluetooth and Wifi features, all boards with it should be able to receive the current firmware. We have five alternatives for uploading it:
 
-- Via CanAirIO Loader (Linux, Windows, MacOSX and Android)
-- Via Espressif Uploader (Only works on Windows)
-- Via CanAirIO Installer (Linux and MacOSX)
-- Via Source Code - Compiling with PlatformIO (Linux, Windows and MacOSX)
+| Alternative    | Difficulty | Software | Requeriments |
+| :-------------------- |:--------:| :-----------: | :-----: |
+| [CanAirIO Loader][20] | Easy | Arduino Droid App | Android and OTG cable | 
+| [CanAirIO Loader][20] | Basic | Arduino IDE | USB drivers on Windows and MacOSX | 
+| [Espressif Uploader][21] | Basic | Espressif tool | Only works on Windows |
+| [CanAirIO Installer][22] | Basic | Python3 | USB drivers on Windows and MacOSX | 
+| [Source code][23] | Advanced | PlatformIO | No needs drivers on Linux |
+
+[20]: #canairio-loader
+[21]: #espressif-uploader
+[22]: #canairio-installer
+[23]: https://github.com/kike-canaries/canairio_firmware#compiling
 
 ## CanAirIO Loader
 
@@ -78,7 +86,7 @@ maybe you have two or more files open in the IDE, please review the opened tabs:
 
 ## Espressif Uploader
 
-This option not need compiling the binaries, you can download the pre-built binaries from our Github in the section releases, and please follow the next steps:
+This option you don't need compiling the binaries, you can download the pre-built binaries and follow the next steps:
 
 ### Steps
 
@@ -130,6 +138,8 @@ This option not need compiling the binaries, you can download the pre-built bina
 14. Reboot your device and CanAirIO home screen will be showed.
 
 ## CanAirIO Installer
+
+This option you don't need compiling the binaries, you can download the pre-built binaries and follow the next steps:
 
 ### Prerequisites
 

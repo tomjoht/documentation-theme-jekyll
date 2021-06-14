@@ -33,23 +33,5 @@ We have some device version alternatives with some guides:
 [15]: https://canair.io/docs/canairio_bike.html
 
 
-## Firmware upload
-
-CanAirIO device supports ESP32 boards with Bluetooth and Wifi features, all boards with it should be able to receive the current firmware. We have three alternatives for uploading it:
-
-| Alternative    | Software | Requeriments  | Links   |
-| :------------- |:--------:| :-----------: | :-----: |
-| Uploader sketch (easy)    | Arduino Droid App | NO drivers only a OTG cable | [Complete guide and video][20] |
-| Uploader sketch (basic)    | Arduino IDE | USB drivers | [Complete Guide][20] |
-| Installer (basic)       | Python | NO drivers on Linux and Mac | [CanAirIO release][21] |
-| Binaries (basic)      | Espressif software | USB drivers - Windows only | [Complete guide][22] |
-| Build and install (advanced) | PlatformIO | No drivers on Linux | [Complete guide][23] |
-
-[20]: https://github.com/hpsaturn/esp32-canairio-loader#readme
-[21]: https://github.com/kike-canaries/canairio_firmware/releases
-[22]: /firmware_upload_binaries_alternative.html
-[23]: https://github.com/kike-canaries/canairio_firmware#compiling
-
-
 {% include links.html %}
 
