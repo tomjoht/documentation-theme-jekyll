@@ -25,10 +25,17 @@ These devices able to work in standalone mode without clouds, apps, Bluetooth, W
 
 - Citizen Science community
 - CanAirIO is Open-Source / Open-Design / Open-Access
+- Two modes: mobile (Bluetooth) or fixed station (WiFi)
+- AQI graph with colors for PM and CO2 values
+- Standard Bluetooth low energy device (GATT)
+- Automatic remote firmware updates
+- Two action buttons with some shortcuts
+- Good quiescent current ~173uA
+- USB Type C interface (support charging on power off)
 
 ### Mobile station features
 
-- Two modes: mobile (Bluetooth) or fixed station (WiFi)
+- GPS data tagging via CanAirIO app using Bluetooth Low Energy
 - Two device faces: Air quality or Bike mode screens for now.
 - Some built-in functions: Brightness, AQI graph, sample time, Wifi On/Off, calibration, etc.
 
@@ -89,9 +96,11 @@ Main parts that you need are the next, but maybe you could have this components 
 | Magnets box (optional) | 1 | [Amazon](https://www.amazon.de/gp/product/B00TACFTAA/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1) |
 | Heat shrink box (optional) | 1 | [Aliexpress](https://www.aliexpress.com/item/32843983164.html) |
 
-*The SPS30 in Mouser, needs buy the cable independent [1](https://www.mouser.de/ProductDetail/538-87439-0501),[2](https://www.mouser.de/ProductDetail/538-79758-0016).  
-**Screws M2x4(4), M2x5(8), M2x6(2), M2x7(2).  
-*** Similar battery, same voltage, similar capacity but with dimensions max: 48x30x6 mm.  
+**Notes**:
+
+- The SPS30 in Mouser, needs buy the cable independent [1](https://www.mouser.de/ProductDetail/538-87439-0501),[2](https://www.mouser.de/ProductDetail/538-79758-0016).  
+- Screws M2x4(4), M2x5(8), M2x6(2), M2x7(2).  
+- Similar battery, same voltage, similar capacity but with dimensions max: 48x30x6 mm.  
 
 ## Schematics
 

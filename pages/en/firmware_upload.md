@@ -33,7 +33,7 @@ CanAirIO device supports ESP32 boards with Bluetooth and Wifi features, all boar
 ## CanAirIO Loader
 
 With this method you will able to upload the latest version of [CanAir.IO firmware](https://github.com/kike-canaries/canairio_firmware#canairio-firmware)
-automatically via a simple [Arduino sketch](https://raw.githubusercontent.com/hpsaturn/esp32-canairio-loader/master/canairio_loader/canairio_loader.ino).
+automatically via a simple [Arduino sketch](https://raw.githubusercontent.com/hpsaturn/esp32-canairio-loader/master/canairio_loader/canairio_loader.ino)  
 
 You can run it from your **Arduino IDE** or from your **Android** phone
 using [ArduinoDroid](https://play.google.com/store/apps/details?id=name.antonsmirnov.android.arduinodroid2&hl=en&gl=US)
