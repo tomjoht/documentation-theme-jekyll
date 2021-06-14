@@ -31,32 +31,7 @@ entries:
     - title: Firmware upload
       url: /index.html#firmware-upload
       output: web
-
-  - title: User guide
-    output: web, pdf
-
-    folderitems:
-
-    - title: CanAirIO device
-      url: /user_manual_es.html
-      output: web, pdf
-
-    - title: Mobile station mode
-      url: /user_manual_es.html
-      output: web, pdf
-
-    - title: Fixed station mode
-      url: /user_manual_es.html
-      output: web, pdf
-
-    - title: Android app guide
-      url: /user_manual_es.html
-      output: web, pdf
-
-    - title: Publication
-      url: /user_manual_es.html
-      output: web, pdf
-
+  
   - title: API
     output: web, pdf
 
