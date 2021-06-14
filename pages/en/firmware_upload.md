@@ -33,7 +33,7 @@ CanAirIO device supports ESP32 boards with Bluetooth and Wifi features, all boar
 ## CanAirIO Loader
 
 With this method you will able to upload the latest version of [CanAir.IO firmware](https://github.com/kike-canaries/canairio_firmware#canairio-firmware)
-automatically via a simple Arduino sketch.
+automatically via a simple [Arduino sketch](https://raw.githubusercontent.com/hpsaturn/esp32-canairio-loader/master/canairio_loader/canairio_loader.ino).
 
 You can run it from your **Arduino IDE** or from your **Android** phone
 using [ArduinoDroid](https://play.google.com/store/apps/details?id=name.antonsmirnov.android.arduinodroid2&hl=en&gl=US)
@@ -45,7 +45,7 @@ app (**recommended**) with a simple **OTG** cable connected to your board. (see 
 2. Install the Arduino Json Library v6.x from ther Library Manager
 3. Configure your board: ESP32 Dev Module or similar board
 4. Select partion schema to **minimal** ([OTA with 1.9Mb to app 190kbs to SPIFFS](https://codeblog.dotsandbrackets.com/arduino-cli-partition-scheme/))
-5. Configure your WiFi credentials in the sketch
+5. Configure your WiFi credentials in the downloaded sketch
 6. Build and upload, wait for, the last version of CanAirIO will be installed
 7. (optional) see the progress on Serial console or monitor.
 8. Android app guide for using the device like a [mobile or fixed air quality station](https://github.com/kike-canaries/canairio_firmware/blob/master/README.md#android-canairio-app)
