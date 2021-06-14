@@ -61,7 +61,6 @@ These devices able to work in standalone mode without clouds, apps, Bluetooth, W
 | Recommended on     | Outdoor**/ Indoor | Indoor |
 | Dimmensions        | 57x24x101 (mm) | 57x20x87 (mm) |
 | Weight             | 95g | 52g |
-| | |
 | CPU | ESP32 Espressif | ESP32 Espressif |
 |     | 240MHz Xtensa® Dual core |  240MHz Xtensa® Dual core |
 | Flash              | 16Mb            | 16Mb           |
@@ -70,7 +69,6 @@ These devices able to work in standalone mode without clouds, apps, Bluetooth, W
 | Bluetooth          | Yes | Yes |
 |                    | v4.2 BLE standard | v4.2 BLE standard |
 | Battery            | 650mAh ~ >=4h     | 650mAh >= 10h |
-| | |
 
 [1]:https://www.aliexpress.com/item/33048962331.html
 [2]:https://www.sensirion.com/en/environmental-sensors/particulate-matter-sensors-pm25/
@@ -106,9 +104,14 @@ Main parts that you need are the next, but maybe you could have this components 
 
 ![CanAirIO Bike Schematics](images/canairio_bike_schematics_grid.jpg)
 
+## 3D Printer box
+
+Please enter [here](https://www.thingiverse.com/thing:4886061) for details.
+
 ## Firmware Upload
 
 We have some alternatives for upload the last firmware for this version, please review the alternatives [here](https://canair.io/docs/firmware_upload.html#overview)
+
 
 
 {% include links.html %}
