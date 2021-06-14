@@ -1,5 +1,5 @@
 ---
-title: Firmware uploada via binaries
+title: Firmware Debugging
 tags:
   - firmware
   - device

@@ -58,6 +58,10 @@ entries:
     output: web, pdf
 
     folderitems:
+    - title: Firmware Upload
+      url: /firmware_upload.html
+      output: web, pdf
+
     - title: Bluetooth GATT protocol
       url: /firmware_protocol.html
       output: web, pdf

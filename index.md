@@ -17,8 +17,8 @@ We have some device version alternatives with some guides:
 
 | Device version    | Difficulty |  Status | Links  |
 | :------------- |:--------:| :-----------: | :-----------: |
-|  CanAirIO without soldering (EN)  | Easy | Updated |  [Complete guide and video][10] |
-|  CanAirIO without soldering (ES)  | Easy | Updated | [Complete guide and video][11] |
+|  CanAirIO without soldering (EN)  | Easy | Outdated |  [Complete guide and video][10] |
+|  CanAirIO without soldering (ES)  | Easy | Outdated | [Complete guide and video][11] |
 |  CanAirIO device v2.1 (EN)  | Medium | Outdated | [Complete guide and video][12] |
 |  CanAirIO device v2.1 (ES)  | Medium | Outdated | [Complete guide and video][13] |
 |  CanAirIO TTGO-TDisplay   | Advanced | Deprecated | [Complete guide][14] |
