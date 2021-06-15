@@ -90,6 +90,7 @@ Main parts that you need are the next, but maybe you could have this components 
 | Sensirion SPS30 | 1 | [Aliexpress](https://www.aliexpress.com/item/1005002017660217.html), [Mouser](https://www.mouser.de/ProductDetail/403-SPS30) * |
 |AM2320| 1 | [Mouser](https://www.mouser.de/ProductDetail/485-3721) |
 | M2 screws box ** | 1 | [Amazon](https://www.amazon.de/gp/product/B07SGP8TWS/ref=ppx_yo_dt_b_asin_title_o07_s01?ie=UTF8&psc=1) |
+| Step Up DC-DC to 5v | 1 | [Aliexpress](https://www.aliexpress.com/item/32963598972.html) |
 | Battery 650-800 mAh 3.7v *** | 1 | [Aliexpress](https://www.aliexpress.com/item/4001065181282.html) |
 | Magnets box (optional) | 1 | [Amazon](https://www.amazon.de/gp/product/B00TACFTAA/ref=ppx_yo_dt_b_asin_title_o04_s00?ie=UTF8&psc=1) |
 | Heat shrink box (optional) | 1 | [Aliexpress](https://www.aliexpress.com/item/32843983164.html) |
