@@ -101,13 +101,21 @@ Main parts that you need are the next, but maybe you could have this components 
 - Screws M2x4(4), M2x5(8), M2x6(2), M2x7(2).  
 - Similar battery, same voltage, similar capacity but with dimensions max: 48x30x6 mm.  
 
+## 3D Printer box
+
+Please enter [here](https://www.thingiverse.com/thing:4886061) for details and download these files.
+
+
+## Instructions
+
+[![CanAirIO Instructions](images/canairio_bike_instructions_display.jpg)](https://hackaday.io/project/179753/instructions)
+
+Complete list of steps and instructions [here](https://hackaday.io/project/179753/instructions).
+
+
 ## Schematics
 
 ![CanAirIO Bike Schematics](images/canairio_bike_schematics_grid.jpg)
-
-## 3D Printer box
-
-Please enter [here](https://www.thingiverse.com/thing:4886061) for details.
 
 ## Firmware Upload
 
