@@ -78,7 +78,7 @@ These devices able to work in standalone mode without clouds, apps, Bluetooth, W
 
 ## Building Guide
 
-[![Youtube Making Of CanAirIO Bike ](http://img.youtube.com/vi/V2eO1UN5u7Y/0.jpg)](https://youtu.be/V2eO1UN5u7Y "Youtube CanAirIO basic loader guide")
+[![Youtube Making Of CanAirIO Bike ](images/canairio_bike_make_of_youtube.jpg)](https://youtu.be/V2eO1UN5u7Y "Youtube CanAirIO basic loader guide")
 
 ## Components
 
@@ -104,6 +104,8 @@ Main parts that you need are the next, but maybe you could have this components 
 ## 3D Printer box
 
 Please enter [here](https://www.thingiverse.com/thing:4886061) for details and download these files.
+
+![CanAirIO Bike 3D printer files](images/canairio_bike_3dprint_models.jpg)
 
 
 ## Instructions
