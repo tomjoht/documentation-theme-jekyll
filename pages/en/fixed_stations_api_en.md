@@ -40,6 +40,21 @@ For example:
 curl -G 'http://influxdb.canair.io:8086/query?db=canairio' --data-urlencode 'q=select * from "PM25_Berlin_CanAirIO_v2" WHERE time >= now() - 12h' > PM25_Berlin_CanAirIO_v2.json
 ```
 
+If you want to get the data with a specific time resolution, you need a **agregation function** in the select section of the query and group the results by the resolution time, in the next example we use the **agregation function** mean() for all the variables, you can use the same or one of median(), count(), min(), max(), sum(), first(), last(), spread() or stddev().
+
+Note the last part of the query, we add the sql clause **GROUP BY time(resolution_time)**
+
+```bash
+curl -G 'http://influxdb.canair.io:8086/query?db=canairio' --data-urlencode 'q=select mean(*) from "PM25_Berlin_CanAirIO_v2" WHERE time >= now() - 12h GROUP BY time(1m)' > PM25_Berlin_CanAirIO_v2.json
+```
+
+The last couple of examples return the data in json format, if you want to get the data in **CSV format** you need to add the header "Accept: application/csv" to the curl request using the parameter -H like show the next example:
+
+```bash
+curl -H 'Accept:application/csv' -G 'http://influxdb.canair.io:8086/query?db=canairio' --data-urlencode 'q=select mean(*) from "PM25_Berlin_CanAirIO_v2" WHERE time >= now() - 12h GROUP BY time(1m) FILL(none)' > PM25_Berlin_CanAirIO_v2.csv
+```
+
+
 ### Fixed stations names
 
 For get the complete list of fixed stations names:

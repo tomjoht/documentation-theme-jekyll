@@ -70,6 +70,15 @@ entries:
       url: /fixed_stations_api_en.html
       output: web, pdf
 
+  - title: Hardware
+    output: web, pdf
+
+    folderitems:
+
+    - title: CO2 sensors
+      url: /co2_comparative.html
+      output: web, pdf 
+
   - title: Firmware
     output: web, pdf
 
@@ -81,4 +90,13 @@ entries:
     - title: Firmware debugging
       url: /firmware_debugging.html
       output: web, pdf
-    
+
+  - title: Community
+    output: web, pdf
+
+    folderitems:
+
+    - title: Respiraton 2021
+      url: /Respiraton2021.html
+      output: web, pdf
+
