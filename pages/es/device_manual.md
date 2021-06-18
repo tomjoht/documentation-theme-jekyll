@@ -117,7 +117,10 @@ El primer paso es grabar en el dispositivo en nombre de la WiFi y el Password,lu
 
 En el siguiente video podrás ver el proceso para conectarse a una red wifi : [Conectarse a una red WiFi](https://youtu.be/qP-70XzjtNQ)
 
-![Panel Estacion Fija](/docs/images/panel_estacion_movil.jpg)
+|imagen 1|imagen 2| imagen3 |
+|--------|--------|---------|  
+
+---
 
 Intervalo de muestreo
 El sensor, de fábrica puede registrar mediciones de PM2,5 cada segundo pero para el caso de una estación móvil la tasa de muestreo es demasiado alta y consume muchos recursos de almacenamiento en los servidores, la recomendación es que la tasa de muestreo para una estación móvil sea de 60 segundos y para recorridos móviles de 5 segundos.
@@ -174,11 +177,11 @@ Los sensores de material particulado requieren que se dispongan en unas posicion
 
 Si en nuestro CanAir.IO tenemos un sensor Sensirion (SP30) las posiciones correctas para un funcionamiento óptimo son :+1: 
 
-![Sensirion horizontal](/docs/images/sensirion_horizontal.png)
+![Sensirion horizontal](https://raw.githubusercontent.com/kike-canaries/docs/30d876165dc77e6fca17cc1de4e27bb66b92d4f1/images/sensirion_horizontal.png))
 
-![Sensirion Lateral](/docs/images/sensirion_lateral.png)
+![Sensirion Lateral](https://raw.githubusercontent.com/kike-canaries/docs/30d876165dc77e6fca17cc1de4e27bb66b92d4f1/images/sensirion_lateral.png)
 
-![Sensirion Vertical](/docs/images/sensirion_vertical.png)
+![Sensirion Vertical](https://raw.githubusercontent.com/kike-canaries/docs/30d876165dc77e6fca17cc1de4e27bb66b92d4f1/images/sensirion_vertical.png)
 
 ### Panasonic
 
@@ -188,17 +191,17 @@ Si en nuestro CanAir.IO tenemos un sensor Sensirion (SP30) las posiciones correc
 
 # Redes Sociales y Recursos 
 
-1.Landin Page https://canair.io/es
-2. Canal de Soporte https://t.me/airqco
-3. App Movil AppStore Android https://play.google.com/store/apps/details?id=hpsaturn.pollutionreporter&hl=en
-4. CanAirIO Instagram https://www.instagram.com/canairq/
-5. CanAirIO Facebook https://www.facebook.com/canairq/
-6. Repositorio en GitHub https://github.com/kike-canaries
-7. CanAirIO YouTube https://www.youtube.com/channel/UCwxcQKEEe4Iv35zXE0H6jtQ
-8. Grafana Estaciones Fijas http://influxdb.canair.io:8000/d/xRQpZACWk/fixed-stations?orgId=1&refresh=5s
-9. Cos4Cloud CanAirIO site https://cos4cloud-eosc.eu/citizen-science-innovation/cos4cloud-citizen-observatories/canairio/
-10. Album de Fotos https://photos.google.com/u/1/share/AF1QipOwv1e3dW9-I4cOYjKqUle2D4L3Spj6AkoJBYwWzwVUlleWiqyte8p6UAyiQG8e1A?key=Q24zSVdCMzlmYXFkVGNhQ29nWmZGcTJpMlRDbmp3
-11. CanAirIO Foro https://foro.canair.io/
-12. Wiki un/loquer/CanAirIO http://wiki.unloquer.org/personas/brolin/proyectos/agentes_calidad_aire/cooperaciones/aqa-canairio#inventario_uncanairio
+1.Landin Page https://canair.io/es  
+2. Canal de Soporte https://t.me/airqco  
+3. App Movil AppStore Android https://play.google.com/store/apps/details?id=hpsaturn.pollutionreporter&hl=en  
+4. CanAirIO Instagram https://www.instagram.com/canairq/  
+5. CanAirIO Facebook https://www.facebook.com/canairq/  
+6. Repositorio en GitHub https://github.com/kike-canaries  
+7. CanAirIO YouTube https://www.youtube.com/channel/  UCwxcQKEEe4Iv35zXE0H6jtQ
+8. Grafana Estaciones Fijas http://influxdb.canair.io:8000/d/xRQpZACWk/fixed-stations?orgId=1&refresh=5s  
+9. Cos4Cloud CanAirIO site https://cos4cloud-eosc.eu/citizen-science-innovation/cos4cloud-citizen-observatories/canairio/  
+10. Album de Fotos https://photos.google.com/u/1/share/AF1QipOwv1e3dW9-I4cOYjKqUle2D4L3Spj6AkoJBYwWzwVUlleWiqyte8p6UAyiQG8e1A?key=Q24zSVdCMzlmYXFkVGNhQ29nWmZGcTJpMlRDbmp311.     
+11.CanAirIO Foro https://foro.canair.io/  
+12. Wiki un/loquer/CanAirIO http://wiki.unloquer.org/personas/brolin/proyectos/agentes_calidad_aire/cooperaciones/aqa-canairio#inventario_uncanairio  
 13. CanAirIO Twitter https://twitter.com/canairq
 
