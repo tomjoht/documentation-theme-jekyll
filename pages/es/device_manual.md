@@ -63,7 +63,7 @@ Si quiere aprender sobre el Index Color la EPA la Agencia ambiental de los Estad
 
 Para recargar la batería se necesita alimentar el sensor por el puerto de alimentación USB y tener el switch en posición ON ésta aacción enciende un led de color azul que indica el estado de carga de la batería. Se debe usar un adaptador de 5V preferiblemente a 1A o más, se puede usar el cargador de un telefono celular. Es recomendable se use un cargador de buena calidad.
 
-![Imagen LCD](https://raw.githubusercontent.com/kike-canaries/docs/main/images/canairio_lcd_es.jpg)
+![puerto usb](https://raw.githubusercontent.com/kike-canaries/docs/main/images/canairio_usb.jpg)
 
 
 ---
