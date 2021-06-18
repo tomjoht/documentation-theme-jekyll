@@ -35,7 +35,7 @@ Para encender el sensor, mover a la posición ON el switch (hacia la derecha) si
 Indicadores para un sensor con LCD Display
 
 
-![Imagen LCD](https://raw.githubusercontent.com/kike-canaries/docs/main/images/canairio_lcd_es.jpg)
+![Imagen LCD](https://raw.githubusercontent.com/kike-canaries/docs/b10fad42b359c8a4baa3bd994cb033d55a666080/images/canairio_lcd_en.jpg)
 
 
 PM2.5.EMOTICON 
