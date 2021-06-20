@@ -15,7 +15,7 @@ folder: en
 
 ## Overview
 
-CanAirIO device supports ESP32 boards with Bluetooth and Wifi features, all boards with it should be able to receive the current firmware. We have five alternatives for uploading it:
+CanAirIO device supports [ESP32 boards](boards_supported) with Bluetooth and Wifi features, all boards with it should be able to receive the current firmware. We have five alternatives for uploading it:
 
 | Alternative    | Difficulty | Software | Requeriments |
 | :-------------------- |:--------:| :-----------: | :-----: |
@@ -31,6 +31,23 @@ CanAirIO device supports ESP32 boards with Bluetooth and Wifi features, all boar
 [23]: https://github.com/kike-canaries/canairio_firmware#compiling
 
 The current supported boards with these methods are [here](https://github.com/kike-canaries/canairio_firmware#boards-supported)
+
+## Boards supported
+
+The [last release](https://github.com/kike-canaries/canairio_firmware/releases) of CanAirIO Device supports the next boards:
+
+| Firmware Name | Boards supported |   Display  |  Guide and schematics  |
+| ------------- |:-------------:| :-------------:| :----------------------:|
+| **TTGO_TDISPLAY**     | TTGO T-Display | eTFT | [CanAirIO Bike](https://canair.io/docs/canairio_bike.html) |
+| **TTGO_T7**     | TTGO T7, D1Mini, ** | OLED 64x48 | [CanAirIO v2.1](https://www.hackster.io/canairio/build-a-low-cost-air-quality-sensor-with-canairio-bbf647) |
+| **ESP32DevKit** | ESP32DevKit, NodeMCU V3, ** | OLED 128x64 | [HacksterIO](https://www.hackster.io/canairio/build-low-cost-air-quality-sensor-canairio-without-soldering-d87494) |
+| **TTGO_TQ** | TTGO TQ | Builtin OLED  | [TTGO_TQ board](https://de.aliexpress.com/item/10000291636371.html) |
+| **WEMOSOLED** | WemosOLED and similar boards | OLED 128x64 | [ESP32 OLED board](https://de.aliexpress.com/item/33047481007.html) |
+| **HELTEC** |  ESP32 Heltec board |  OLED 128x64 | | 
+
+
+** is possible that the **current firmware supports more boards** and sensors. Also you can choose the sensor brand or type on the CanAirIO Android app.
+
 
 ## CanAirIO Loader
 
