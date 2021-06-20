@@ -15,7 +15,7 @@ folder: en
 
 ## Overview
 
-CanAirIO device supports [ESP32 boards](boards_supported) with Bluetooth and Wifi features, all boards with it should be able to receive the current firmware. We have five alternatives for uploading it:
+CanAirIO device supports [ESP32 boards](#boards-supported) with Bluetooth and Wifi features, all boards with it should be able to receive the current firmware. We have five alternatives for uploading it:
 
 | Alternative    | Difficulty | Software | Requeriments |
 | :-------------------- |:--------:| :-----------: | :-----: |
