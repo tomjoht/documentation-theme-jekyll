@@ -3,7 +3,7 @@ title: Sensors
 tags: [device_manual]
 keywords: manual, sensors , canairio, user, PM2.5, CO2
 last_updated: May 31, 2021
-summary: "options of sensors used in CanAirIO "
+summary: "Sensors used in CanAirIO "
 sidebar: english_sidebar
 permalink: 
 folder: en
@@ -15,8 +15,8 @@ folder: en
 | ![Sensirion SPS30 sensor](https://github.com/kike-canaries/docs/blob/main/images/Sensirion%20connection%20SPS30_1.jpg)|Sensirion SPS30|1) VDD ---> 5V elevator out<br>2) SDA ---> Pin 21 ESP32<br>3) SCL ---> Pin 22 ESP32<br>4) SEL ---> GND<br>5) GND ---> GND elevator|
 |![Panasonic sensor](https://github.com/kike-canaries/docs/blob/main/images/Panasonic%20connection1.jpg)|Panasonic SN-GCJA5|1) TX ---> Pin 17 ESP32<br>2) SDA ---> X<br>3) SCL ---> X<br>4) GND ---> GND elevator<br>5) VDD ---> 5V elevator out|
 |![Plantower sensor](https://github.com/kike-canaries/docs/blob/main/images/Plantower%20connection.jpg)|Plantower PMS7003 - PMSA003|1) VCC ---> 5V elevator out<br>3) GND ---> GND elevator<br>9) TX ---> Pin 7 ESP32|
-|![Honeywell sensor](https://github.com/kike-canaries/docs/blob/main/images/Honeywell%20sensor1.jpg)|Honeywell HPMA115S0|Erased of the guides and not recommended becuse malfunction|
-|![SDS011 sensor](https://github.com/kike-canaries/docs/blob/main/images/SDS011%20connection.jpg)|Nova SDS011|3) VCC ---> 5V elevator outr<br>5) GND ---> GND elevator<br>7) TX ---> Pin 7 ESP32|
+|![Honeywell sensor](https://github.com/kike-canaries/docs/blob/main/images/Honeywell%20sensor1.jpg)|Honeywell HPMA115S0|Erased of the guides and not recommended because malfunction|
+|![SDS011 sensor](https://github.com/kike-canaries/docs/blob/main/images/SDS011%20connection.jpg)|Nova SDS011|3) VCC ---> 5V elevator out<br>5) GND ---> GND elevator<br>7) TX ---> Pin 7 ESP32|
 ||
 |**Gas carbónico:**|
 | ![SCD30 sensor](https://github.com/kike-canaries/docs/blob/main/images/SCD30%20connection.jpg)|Sensirion SCD30|5V - 3.3V ---> 5V elevator out<br>GND ---> GND<br>SCL ---> Pin 22 ESP32<br>SDA ---> Pin 21 ESP32<br>|
