@@ -113,15 +113,12 @@ En el siguiente link encontrarás un video en donde se explica el proceso de gra
 
 Para configurar una estación fija lo primero que debemos asegurarnos es tener una conexión de WiFi disponible y con clave de acceso. Es importante que si estamos configurando el sensor en una red interna el sysadmin debe abrir el puerto 8086.
 
-El primer paso es grabar en el dispositivo en nombre de la WiFi y el Password,luego movemos el flag a la posición ON Enable WiFi Connection (el flag se pone verde) si la conexión es estable y se ha logeado bien se debe encender el indicador de WiFi OK en el LCD.
+El primer paso es grabar en el dispositivo en nombre de la WiFi y el password, luego movemos el flag a la posición ON Enable WiFi Connection (el flag se pone verde) si la conexión es estable y se ha logeado bien se debe encender el indicador de WiFi OK en el LCD.
 
 En el siguiente video podrás ver el proceso para conectarse a una red wifi : [Conectarse a una red WiFi](https://youtu.be/qP-70XzjtNQ)
 
-|imagen 1|imagen 2| imagen3 |
-|--------|--------|---------|  
-
----
-
+|<img src="https://raw.githubusercontent.com/kike-canaries/docs/0c29439e1306c36ce4dc2f24b7b2da0c8709758e/images/app_canairio_fixed_station_one.jpg" alt="drawing" width="150"/> 
+  |<img src="https://raw.githubusercontent.com/kike-canaries/docs/0c29439e1306c36ce4dc2f24b7b2da0c8709758e/images/app_canairio_mobile_station.jpg" alt="drawing" width="150"/>  |<img src="https://raw.githubusercontent.com/kike-canaries/docs/0c29439e1306c36ce4dc2f24b7b2da0c8709758e/images/app_canairio_fixed_station_influx.jpg" alt="drawing" width="150"/>
 Intervalo de muestreo
 El sensor, de fábrica puede registrar mediciones de PM2,5 cada segundo pero para el caso de una estación móvil la tasa de muestreo es demasiado alta y consume muchos recursos de almacenamiento en los servidores, la recomendación es que la tasa de muestreo para una estación móvil sea de 60 segundos y para recorridos móviles de 5 segundos.
 
