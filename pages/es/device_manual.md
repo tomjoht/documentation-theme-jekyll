@@ -2,7 +2,7 @@
 title: CanAirIO user manual
 tags: [user manual]
 keywords: user, user manual, guide, technical manual, manual
-last_updated: June 18, 2021
+last_updated: June 21, 2021
 summary: "User Manual"
 sidebar: english_sidebar
 permalink: user_manual_en.html
