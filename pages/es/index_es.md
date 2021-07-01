@@ -2,7 +2,7 @@
 title: "CanAirIO guia rapida"
 keywords: quickstart
 tags: [getting_started]
-sidebar: english_sidebar
+sidebar: spanish_sidebar
 permalink: index_es.html
 summary: These brief instructions will help you get started quickly with CanAirIO. 
 ---
