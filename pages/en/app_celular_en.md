@@ -2,7 +2,7 @@
 title: APP CELULAR EN
 tags: [device_manual]
 keywords: manual, app , canairio, user, device
-last_updated: June 12, 2021
+last_updated: June 18, 2021
 summary: "aplicacion celular manual"
 sidebar: english_sidebar
 permalink: appmobile.html
