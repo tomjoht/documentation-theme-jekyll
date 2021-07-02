@@ -9,7 +9,7 @@ topnav_title: Jekyll Documentation Theme
 site_title: Jekyll theme for documentation
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
-company_name: Your company
+company_name: Copyright 2021 Google LLC 
 # this appears in the footer
 
 github_editme_path: tomjoht/documentation-theme-jekyll/blob/gh-pages/
