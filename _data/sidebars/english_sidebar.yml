@@ -29,9 +29,9 @@ entries:
       output: web, pdf
 
     - title: Firmware upload
-      url: /index.html#firmware-upload
+      url: /firmware_upload.html#overview
       output: web
-
+      
   - title: API
     output: web, pdf
 
@@ -50,7 +50,23 @@ entries:
 
     folderitems:
 
-    - title: CO2 sensors
+    - title: CanAirIO Bike
+      url: /canairio_bike.html
+      output: web, pdf 
+
+    # - title: CanAirIO CO2
+    #   url: /canairio_bike.html
+    #   output: web, pdf
+
+    # - title: CanAirIO Sensorslib
+    #   url: /canairio_sensorslib.html
+    #   output: web, pdf
+
+    # - title: Sensors supported
+    #   url: /sensors.html
+    #   output: web, pdf
+
+    - title: CO2 sensors comparative
       url: /co2_comparative.html
       output: web, pdf 
 
@@ -58,13 +74,35 @@ entries:
     output: web, pdf
 
     folderitems:
-    - title: Bluetooth GATT protocol
-      url: /firmware_protocol.html
+    - title: Overview
+      url: /firmware_upload.html#overview
+      output: web, pdf
+
+    - title: Upload via CanAirIO Loader
+      url: /firmware_upload.html#canairio-loader
+      output: web, pdf
+
+    - title: Upload via Espressif Uploader
+      url: /firmware_upload.html#espressif-uploader
+      output: web, pdf
+
+    - title: Upload via CanAirIO Installer
+      url: /firmware_upload.html#canairio-installer
+      output: web, pdf
+
+    - title: Upload from Source Code
+      url: /firmware_upload.html#via-source-code
       output: web, pdf
 
     - title: Firmware debugging
       url: /firmware_debugging.html
       output: web, pdf
+
+    - title: Bluetooth GATT protocol
+      url: /firmware_protocol.html
+      output: web, pdf
+
+
 
   - title: Community
     output: web, pdf
