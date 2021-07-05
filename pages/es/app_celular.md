@@ -5,7 +5,7 @@ keywords: manual, app , canairio, user, device
 last_updated: Jun 18, 2021
 summary: "aplicacion celular manual"
 sidebar: spanish_sidebar
-permalink: 
+permalink: appmobile_es.html 
 folder: es
 ---
 
