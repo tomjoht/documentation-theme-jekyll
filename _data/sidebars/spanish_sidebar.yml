@@ -24,11 +24,11 @@ entries:
     folderitems:
 
     - title: Construyendo un dispositivo
-      url: /index.html#building-a-device
+      url: /index_es.html#building-a-device
       output: web, pdf
 
     - title: Cargando el Firmware
-      url: /index.html#firmware-upload
+      url: /index_es.html#firmware-upload
       output: web
 
   - title: Guia de usuario
