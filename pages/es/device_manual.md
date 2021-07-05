@@ -1,39 +1,44 @@
 ---
-title: Manual de usuariom CanAirIO
+title: CanAirIO user manual
 tags: [user manual]
 keywords: user, user manual, guide, technical manual, manual
-last_updated: March 12, 2021
-summary: "Manual de usuario de CanAirIO, a nivel de dispositivo y aplicación"
-sidebar: english_sidebar
+last_updated: Jule 2, 2021
+summary: "User Manual"
+sidebar: spanish_sidebar
 permalink: user_manual_es.html
 folder: es
 ---
 
-# Manual de usuario CanAirIO
+# CanAirIO - Manual de Usuario
 
-CanAirIO en un sensor que mide concentraciones de Material particulado PM2.5, con la opción de Humedad y Temperatura si se le instala el sensor [AM2320](https://www.adafruit.com/product/3721).
-
-La guia completa de como adquirir las partes y la secuencia de armado paso a paso lo encuentran en la [guia de armado de Hacksterio](https://www.hackster.io/canairio/construye-un-sensor-de-calidad-del-aire-bajo-costo-canairio-96f79a)
-
-Todo el desarrollo del Software y las actualizaciones de Firmware son Open Source y lo pueden auditar y descargar del [repositorio en GitHub](https://github.com/kike-canaries)
-
-Tanto los diseños de hardware, el código del software de la app celular y del firmware del aparato son compartidos bajo la filosofa del Open Source y los Datos Abiertos. Los Datos generados por la Red de Monitoreo de la Calidad del Aire CanAir.IO están disponibles en el siguiente mapa : [http//daquina/canairio](http://daquina.io/canairio/) aporte de la comunidad [Un/loquer](https://unloquer.org/) y los datos pueden ser visualizados en http://influxdb.canair.io:8000/
+CanAirIO es un monitor que mide concentraciones de material particulado, con opciones de conexió de otros sensores como Humedad, Temperatura y CO2 si ese tipo de sensores han sido conectados
+[AM2320](https://www.adafruit.com/product/3721).  
 
 
-![Imagen de portada](/docs/images/canairio_portada.jpg)
+La guia completa para el armado del monitor y donde adquirir las partes y la secuencia paso a paso para su armado se encuentra en  [CanAirIO Documentation](https://canair.io/docs/)
+
+Tanto el desarrollo del Software de la aplicación movil y el firmware de control del monitor están licenciados como Software Libre y puede ser auditado y reusado en [CanAirIO GitHub](https://github.com/kike-canaries)
+
+Los datos generados por los Monitores CanAirIO se pueden consultar en el mapa
+ : [http//daquina/canairio](http://daquina.io/canairio/) aporte de la comunidad  [Un/loquer](https://unloquer.org/) y las lineas de tiempo de los datos se visualizan en  http://influxdb.canair.io:8000/
+<br>
+<br>
+
+
+![Imagen de portada](https://raw.githubusercontent.com/kike-canaries/docs/main/images/canairio_portada.jpg)
 
 ## Encendido
 
 Para encender el sensor, mover a la posición ON el switch (hacia la derecha) si el sensor tiene bateria, si no cuenta con bateria (estación fija) solo basta con conectar el adaptador de 5V al puerto USB.
 
-![Imagen puerto USB](/docs/images/canairio_usb.jpg)
+![puerto usb](https://raw.githubusercontent.com/kike-canaries/docs/main/images/canairio_usb.jpg)
 
 ## Indicadores en Pantalla
 
 Indicadores para un sensor con LCD Display
 
 
-![Imagen LCD](/docs/images/canairio_lcd_es.jpg)
+![Imagen LCD](https://raw.githubusercontent.com/kike-canaries/docs/b10fad42b359c8a4baa3bd994cb033d55a666080/images/canairio_lcd_en.jpg)
 
 
 PM2.5.EMOTICON 
@@ -61,7 +66,7 @@ Si quiere aprender sobre el Index Color la EPA la Agencia ambiental de los Estad
 
 Para recargar la batería se necesita alimentar el sensor por el puerto de alimentación USB y tener el switch en posición ON ésta aacción enciende un led de color azul que indica el estado de carga de la batería. Se debe usar un adaptador de 5V preferiblemente a 1A o más, se puede usar el cargador de un telefono celular. Es recomendable se use un cargador de buena calidad.
 
-![Imagen puerto USB](/docs/images/canairio_usb.jpg)
+![puerto usb](https://raw.githubusercontent.com/kike-canaries/docs/main/images/canairio_usb.jpg)
 
 
 ---
@@ -70,7 +75,7 @@ Para recargar la batería se necesita alimentar el sensor por el puerto de alime
 # Aplicacion Celular
 La App oficial de CanAirIO se puede descargar del [PlayStore](https://play.google.com/store/apps/details?id=hpsaturn.pollutionreporter) la App funciona solo para el sistema operativo Android Versión 4.1 en adelante, versiones anteriores no son compatibles. En el momento no se cuenta con una App para sistema iOS.
 
-![Panel Mapa](/docs/images/panel_mapa.jpg)
+![Panel Mapa](https://raw.githubusercontent.com/kike-canaries/docs/main/images/panel_mapa.jpg)
 
 Panel Mapa:
 En el panel mapa podemos encontrar los registros de las últimas Mediciones subidas a la base de datos móvil. Para acercar o alejar el zoom se hace con el gesto de los dedos zoom out abrir los dedos, zoom in cerrar los dedos. En ciertos momentos se demora la actulización del mapa debido a que es un servicio externo.
@@ -82,7 +87,7 @@ Panel Device
 En el Panel device se listan todos los dispositivos iOT Bluetooth disponibles en el entorno de la App Móvil, una vez determina el CanAirIO que queremos emparejar se hace click en CONNECT y éste empieza a intercambiar informacion entre la app y el sensor y aparece el panel grabar y el icono rojo.
 
 
-![Panel recorridos](/docs/images/panel_recorridos.jpg)
+![Panel recorridos](https://raw.githubusercontent.com/kike-canaries/docs/main/images/panel_recorridos.jpg)
 
 -----------------
 
@@ -95,7 +100,7 @@ Para compartir un recorrido se necesita dar click sobre el recorrido que se quie
 
 ## Grabar Recorrido Móvil
 
-![Panel Grabar](/docs/images/panel_grabacion.jpg)
+![Panel Grabar](https://raw.githubusercontent.com/kike-canaries/docs/main/images/panel_grabacion.jpg)
 
 Para grabar un recorrido móvil debemos tener emparejada la App movil y el sensor, para emparejarlos se da click en el icono de los tres puntos en el panel emparejar disposituvo, ésta función solo aparece si la app se encuentra con el icono de grabar en rojo. 
 
@@ -111,12 +116,12 @@ En el siguiente link encontrarás un video en donde se explica el proceso de gra
 
 Para configurar una estación fija lo primero que debemos asegurarnos es tener una conexión de WiFi disponible y con clave de acceso. Es importante que si estamos configurando el sensor en una red interna el sysadmin debe abrir el puerto 8086.
 
-El primer paso es grabar en el dispositivo en nombre de la WiFi y el Password,luego movemos el flag a la posición ON Enable WiFi Connection (el flag se pone verde) si la conexión es estable y se ha logeado bien se debe encender el indicador de WiFi OK en el LCD.
+El primer paso es grabar en el dispositivo en nombre de la WiFi y el password, luego movemos el flag a la posición ON Enable WiFi Connection (el flag se pone verde) si la conexión es estable y se ha logeado bien se debe encender el indicador de WiFi OK en el LCD.
 
 En el siguiente video podrás ver el proceso para conectarse a una red wifi : [Conectarse a una red WiFi](https://youtu.be/qP-70XzjtNQ)
 
-![Panel Estacion Fija](/docs/images/panel_estacion_movil.jpg)
-
+|<img src="https://raw.githubusercontent.com/kike-canaries/docs/0c29439e1306c36ce4dc2f24b7b2da0c8709758e/images/app_canairio_fixed_station_one.jpg" alt="drawing" width="150"/> 
+  |<img src="https://raw.githubusercontent.com/kike-canaries/docs/0c29439e1306c36ce4dc2f24b7b2da0c8709758e/images/app_canairio_mobile_station.jpg" alt="drawing" width="150"/>  |<img src="https://raw.githubusercontent.com/kike-canaries/docs/0c29439e1306c36ce4dc2f24b7b2da0c8709758e/images/app_canairio_fixed_station_influx.jpg" alt="drawing" width="150"/>
 Intervalo de muestreo
 El sensor, de fábrica puede registrar mediciones de PM2,5 cada segundo pero para el caso de una estación móvil la tasa de muestreo es demasiado alta y consume muchos recursos de almacenamiento en los servidores, la recomendación es que la tasa de muestreo para una estación móvil sea de 60 segundos y para recorridos móviles de 5 segundos.
 
@@ -129,10 +134,10 @@ Se sugiere que el nombre del sensor tenga la siguiente semántica:
 *CO_CO-DC_Ciudad_Localidad_ZipCode_MacAdress*
 
 
-CO - Pais Colombia
-CO-DC - Departamento
-Ciudad - Ciudad
-ZipCode - Codigo postal
+CO -      Pais Colombia  
+CO-DC -   Departamento  
+Ciudad -  Ciudad  
+ZipCode -  Codigo postal  
 MacAdres - Los cuatro últimos digitos del registro que aparece en el panel Device cuando se llama al sensor
 
 **ATENCIÖN** - En caso de tener que resetear por alguna razón el sensor, el nombre de la estación debe ser exactamente igual al grabado en primera instancia, de lo contrario cualquier error en la sintaxis crearia un nuevo registro en la Base de Datos InfluxDB*.
@@ -162,8 +167,8 @@ La Red Ciudadana de Monitoreo de calidad del Aire CanAirIO pone a disposición d
 
 Creative Commons
 V. 01 03/11/2020
-
-
+<br>
+<br>
 # Posiciones correctas de operacion**
 
 Los sensores de material particulado requieren que se dispongan en unas posiciones determinadas para hacer una buena lectura del registro, cada fabricante tiene diferentes posiciones, a continuación se indicarán las posiciones correctas para los sensores SP30 Sensirión, SNGCJA5 Panasonic y PMS7003 PlanTower.
@@ -172,31 +177,31 @@ Los sensores de material particulado requieren que se dispongan en unas posicion
 
 Si en nuestro CanAir.IO tenemos un sensor Sensirion (SP30) las posiciones correctas para un funcionamiento óptimo son :+1: 
 
-![Sensirion horizontal](/docs/images/sensirion_horizontal.png)
+![Sensirion horizontal](https://raw.githubusercontent.com/kike-canaries/docs/30d876165dc77e6fca17cc1de4e27bb66b92d4f1/images/sensirion_horizontal.png))
 
-![Sensirion Lateral](/docs/images/sensirion_lateral.png)
+![Sensirion Lateral](https://raw.githubusercontent.com/kike-canaries/docs/30d876165dc77e6fca17cc1de4e27bb66b92d4f1/images/sensirion_lateral.png)
 
-![Sensirion Vertical](/docs/images/sensirion_vertical.png)
+![Sensirion Vertical](https://raw.githubusercontent.com/kike-canaries/docs/30d876165dc77e6fca17cc1de4e27bb66b92d4f1/images/sensirion_vertical.png)
 
 ### Panasonic
-
-
+<br>
+<br>
 ### Plantower
-
-
+<br>
+<br>
 # Redes Sociales y Recursos 
 
-1.Landin Page https://canair.io/es
-2. Canal de Soporte https://t.me/airqco
-3. App Movil AppStore Android https://play.google.com/store/apps/details?id=hpsaturn.pollutionreporter&hl=en
-4. CanAirIO Instagram https://www.instagram.com/canairq/
-5. CanAirIO Facebook https://www.facebook.com/canairq/
-6. Repositorio en GitHub https://github.com/kike-canaries
-7. CanAirIO YouTube https://www.youtube.com/channel/UCwxcQKEEe4Iv35zXE0H6jtQ
-8. Grafana Estaciones Fijas http://influxdb.canair.io:8000/d/xRQpZACWk/fixed-stations?orgId=1&refresh=5s
-9. Cos4Cloud CanAirIO site https://cos4cloud-eosc.eu/citizen-science-innovation/cos4cloud-citizen-observatories/canairio/
-10. Album de Fotos https://photos.google.com/u/1/share/AF1QipOwv1e3dW9-I4cOYjKqUle2D4L3Spj6AkoJBYwWzwVUlleWiqyte8p6UAyiQG8e1A?key=Q24zSVdCMzlmYXFkVGNhQ29nWmZGcTJpMlRDbmp3
-11. CanAirIO Foro https://foro.canair.io/
-12. Wiki un/loquer/CanAirIO http://wiki.unloquer.org/personas/brolin/proyectos/agentes_calidad_aire/cooperaciones/aqa-canairio#inventario_uncanairio
+1.Landin Page https://canair.io/es  
+2. Canal de Soporte https://t.me/airqco  
+3. App Movil AppStore Android https://play.google.com/store/apps/details?id=hpsaturn.pollutionreporter&hl=en  
+4. CanAirIO Instagram https://www.instagram.com/canairq/  
+5. CanAirIO Facebook https://www.facebook.com/canairq/  
+6. Repositorio en GitHub https://github.com/kike-canaries  
+7. CanAirIO YouTube https://www.youtube.com/channel/  UCwxcQKEEe4Iv35zXE0H6jtQ
+8. Grafana Estaciones Fijas http://influxdb.canair.io:8000/d/xRQpZACWk/fixed-stations?orgId=1&refresh=5s  
+9. Cos4Cloud CanAirIO site https://cos4cloud-eosc.eu/citizen-science-innovation/cos4cloud-citizen-observatories/canairio/  
+10. Album de Fotos https://photos.google.com/u/1/share/AF1QipOwv1e3dW9-I4cOYjKqUle2D4L3Spj6AkoJBYwWzwVUlleWiqyte8p6UAyiQG8e1A?key=Q24zSVdCMzlmYXFkVGNhQ29nWmZGcTJpMlRDbmp311.     
+11.CanAirIO Foro https://foro.canair.io/  
+12. Wiki un/loquer/CanAirIO http://wiki.unloquer.org/personas/brolin/proyectos/agentes_calidad_aire/cooperaciones/aqa-canairio#inventario_uncanairio  
 13. CanAirIO Twitter https://twitter.com/canairq
 

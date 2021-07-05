@@ -3,7 +3,7 @@ title: Sensores
 tags: [device_manual]
 keywords: manual, sensores , canairio, user, PM2.5, CO2
 last_updated: May 31, 2021
-summary: "opciones de sensor en CanAirIO "
+summary: "Sensores usados en CanAirIO "
 sidebar: spanish_sidebar
 permalink: sensors_es.html 
 folder: es

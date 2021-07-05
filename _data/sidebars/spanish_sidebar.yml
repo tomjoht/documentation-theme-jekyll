@@ -23,36 +23,36 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Building a device
-      url: /index.html#building-a-device
+    - title: Construyendo un dispositivo
+      url: /index_es.html#building-a-device
       output: web, pdf
 
-    - title: Firmware upload
-      url: /index.html#firmware-upload
+    - title: Cargando el Firmware
+      url: /index_es.html#firmware-upload
       output: web
 
-  - title: User guide
+  - title: Guia de usuario
     output: web, pdf
 
     folderitems:
 
-    - title: CanAirIO device
+    - title: Dispositivo CanAirIO
       url: /user_manual_es.html
       output: web, pdf
 
-    - title: Mobile station mode
+    - title: Modo estación móvil 
       url: /user_manual_es.html
       output: web, pdf
 
-    - title: Fixed station mode
+    - title: Modo estación fija
       url: /user_manual_es.html
       output: web, pdf
 
-    - title: Android app guide
+    - title: Android app
       url: /user_manual_es.html
       output: web, pdf
 
-    - title: Publication
+    - title: Compartiendo datos
       url: /user_manual_es.html
       output: web, pdf
 
