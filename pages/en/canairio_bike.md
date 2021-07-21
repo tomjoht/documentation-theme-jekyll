@@ -140,6 +140,10 @@ We have some alternatives for upload the last firmware for this version, please 
 
 You should be choose the firmware with the name: TTGO_TDISPLAY for CanAirIO Bike.
 
+## Disclaimer
+
+For review our disclaimer, policy privacy and warranty of CanAirIO Bike device. please enter [here](https://canair.io/docs/disclaimer.html)
+
 
 {% include links.html %}
 
