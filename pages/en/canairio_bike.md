@@ -138,6 +138,7 @@ Please note that it is a general diagram, for details of pin connections please 
 
 We have some alternatives for upload the last firmware for this version, please review the alternatives [here](https://canair.io/docs/firmware_upload.html#overview)
 
+You should be choose the firmware with the name: TTGO_TDISPLAY for CanAirIO Bike.
 
 
 {% include links.html %}
