@@ -41,7 +41,7 @@ Location-based interactions:
 - Non-continuous geolocation Personal Data: geographic position
 - Continuous geolocation (only by user action) Personal Data: geographic position
 
-Full Privacy Policy: https://canair.io/privacy.html
+Full Privacy Policy: [canair.io/privacy.html](https://canair.io/privacy.html)  
 CanAirIO owner contact email: info@canair.io
 
 ## Warranty, conditions and destination of use
