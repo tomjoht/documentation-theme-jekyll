@@ -46,6 +46,10 @@ These devices able to work in standalone mode without clouds, apps, Bluetooth, W
 - MQTT clouds (coming soon)
 - Sensor Community and other open clouds (coming soon)
 
+## Quick start guide
+
+![CanAirIO Bike Quick Start](images/canairio_bike_quick_start.jpg)
+
 ## Specifications
 
 | Specs    | CanAirIO Bike | CanAirIO CO2 |
