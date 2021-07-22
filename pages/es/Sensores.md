@@ -12,7 +12,7 @@ folder: es
 | IMAGEN           | MARCA SENSOR     | DESCRIPCION     |
 | ---------------- |:----------------:| -----------|
 |**Material Particulado PM2.5:**|
-| ![Sensirion SPS30 sensor](https://github.com/kike-canaries/docs/blob/main/images/sensors_sensirion_sps30.jpg)|Sensirion SPS30|1) VDD ---> Salida de 5V del elevador<br>2) SDA ---> Pin 21 ESP32<br>3) SCL ---> Pin 22 ESP32<br>4) SEL ---> GND<br>5) GND ---> GND del elevador|
+| ![Sensirion SPS30 sensor](https://github.com/kike-canaries/docs/blob/main/images/sensors_sps30.jpg)|Sensirion SPS30|1) VDD ---> Salida de 5V del elevador<br>2) SDA ---> Pin 21 ESP32<br>3) SCL ---> Pin 22 ESP32<br>4) SEL ---> GND<br>5) GND ---> GND del elevador|
 |![Panasonic sensor](https://github.com/kike-canaries/docs/blob/main/images/sensors_panasonic.jpg)|Panasonic SN-GCJA5|1) TX ---> Pin 17 ESP32<br>2) SDA ---> X<br>3) SCL ---> X<br>4) GND ---> GND del elevador<br>5) VDD ---> Salida de 5V del elevador|
 |![Plantower sensor](https://github.com/kike-canaries/docs/blob/main/images/sensors_plantower.jpg)|Plantower PMS7003 - PMSA003|1) VCC ---> Salida de 5V del elevador<br>3) GND ---> GND del elevador<br>9) TX ---> Pin 7 ESP32|
 |![Honeywell sensor](https://github.com/kike-canaries/docs/blob/main/images/sensors_honeywell.jpg)|Honeywell HPMA115S0|Eliminado de las guías y uso no recomendado por mal funcionamiento|
