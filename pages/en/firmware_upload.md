@@ -75,32 +75,7 @@ app (**recommended**) with a simple **OTG** cable connected to your board. (see 
 
 ### Troubleshooting
 
-#### Not happen anything after upload
-
-Please view the output messages in the serial monitor, maybe you have internet connection issues, for that:
-
-- Wait for complete upload firmware (i.e 100%)
-- Enter to serial monitor (button on top right)
-- Press and hold the reset button 
-- The serial output in Arduino Droid app for example is similar like this:
-
-![serial monitor output example](images/troubleshooting00.jpg)
-
-- The output in Arduino IDE monitor is the same.
-
-#### When I try to compile have errors
-
-For example if you have the next error:
-
-![serial monitor output example](images/troubleshooting01.jpg)
-
-```cpp
-loader (1).ino:53:5: error: redefinition of 'int_payloadVersion'
-```
-
-maybe you have two or more files open in the IDE, please review the opened tabs:
-
-![serial monitor output example](images/troubleshooting02.jpg)
+Please check the complete troubleshooting section of CanAirIO loadar [here](https://github.com/hpsaturn/esp32-canairio-loader#troubleshooting)
 
 
 ## Espressif Uploader
@@ -205,6 +180,11 @@ Also you can specify the IP address:
 ## Via Source Code
 
 The last steps for build and upload a version of CanAirIO firmware are [here](https://github.com/kike-canaries/canairio_firmware#via-platformio-compiling-on-linux-mac-or-windows)
+
+
+---
+
+If you have any problem uploading the firmware, we have a [Telegram group](https://t.me/canairio) for support, maybe the community can help you. (Spanish/English)
 
 
 {% include links.html %}
