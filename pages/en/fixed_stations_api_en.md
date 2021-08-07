@@ -36,8 +36,13 @@ the full documentation of InfluxDB query syntax could be consulted [here](https:
 
 For example:
 
+Linux
 ```bash
 curl -G 'http://influxdb.canair.io:8086/query?db=canairio' --data-urlencode 'q=select * from "PM25_Berlin_CanAirIO_v2" WHERE time >= now() - 12h' > PM25_Berlin_CanAirIO_v2.json
+```
+Windows
+```bash
+curl -Headers @{"accept"="application/json"}  'http://influxdb.canair.io:8086/query?db=canairio' -Body @{"q" = 'select * from "PM2.5_BOG_TUN_EstacionTunal" WHERE time >= now() - 12h'}  -OutFile PM2.5_BOG_TUN_EstacionTunal.json
 ```
 
 If you want to get the data with a specific time resolution, you need a **agregation function** in the select section of the query and group the results by the resolution time, in the next example we use the **agregation function** mean() for all the variables, you can use the same or one of median(), count(), min(), max(), sum(), first(), last(), spread() or stddev().
