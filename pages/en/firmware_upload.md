@@ -75,7 +75,7 @@ app (**recommended**) with a simple **OTG** cable connected to your board. (see 
 
 ### Troubleshooting
 
-Please check the complete troubleshooting section of CanAirIO loadar [here](https://github.com/hpsaturn/esp32-canairio-loader#troubleshooting)
+Please check the complete troubleshooting section of CanAirIO loader [here](https://github.com/hpsaturn/esp32-canairio-loader#troubleshooting)
 
 
 ## Espressif Uploader
