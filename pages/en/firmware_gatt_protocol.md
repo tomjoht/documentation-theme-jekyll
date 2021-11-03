@@ -100,7 +100,7 @@ the fields mean:
 - **ifxip**: InflusDb hostname or ip
 - **ifxpt**: InfluxDb port number
 
-#### Example:
+Example:
 
 ```json
 {"ifxdb":"canairio","ifxip":"influxdb.canair.io","ifxpt":8086}

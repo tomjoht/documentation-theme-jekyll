@@ -13,3 +13,6 @@ callout_warning: '<div class="bs-callout bs-callout-warning">'
 
 hr_faded: '<hr class="faded"/>'
 hr_shaded: '<hr class="shaded"/>'
+
+
+# Copyright 2021 Google LLC
