@@ -40,6 +40,10 @@ Linux
 ```bash
 curl -G 'http://influxdb.canair.io:8086/query?db=canairio' --data-urlencode 'q=select * from "PM25_Berlin_CanAirIO_v2" WHERE time >= now() - 12h' > PM25_Berlin_CanAirIO_v2.json
 ```
+Linux - New Data Model
+```bash
+curl -G 'http://influxdb.canair.io:8086/query?db=canairio' --data-urlencode "q=select \"name\", \"mac\", \"geo3\", \"pm25\" from fixed_stations_01 WHERE \"name\"='6MCESP32DE8CBC2' and time >= now() - 1m" > data_specific_station_last_minute.json
+```
 Windows
 ```bash
 curl -Headers @{"accept"="application/json"}  'http://influxdb.canair.io:8086/query?db=canairio' -Body @{"q" = 'select * from "PM2.5_BOG_TUN_EstacionTunal" WHERE time >= now() - 12h'}  -OutFile PM2.5_BOG_TUN_EstacionTunal.json
