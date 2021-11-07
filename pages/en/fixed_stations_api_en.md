@@ -44,6 +44,19 @@ Linux - New Data Model
 ```bash
 curl -G 'http://influxdb.canair.io:8086/query?db=canairio' --data-urlencode "q=select \"name\", \"mac\", \"geo3\", \"pm25\" from fixed_stations_01 WHERE \"name\"='6MCESP32DE8CBC2' and time >= now() - 1m" > data_specific_station_last_minute.json
 ```
+Python - New Data Model
+```bash
+#!/usr/bin/python3
+
+import requests
+
+endpoint='http://influxdb.canair.io:8086/query'
+database='canairio'
+parameters = {'q': "select \"name\", \"mac\", \"geo3\", \"pm25\" from fixed_stations_01 WHERE \"name\"='6MCESP32DE8CBC2' and time >= now() - 1m", 'db':database}
+response = requests.get(endpoint, params=parameters)
+print(response.json())
+```
+
 Windows
 ```bash
 curl -Headers @{"accept"="application/json"}  'http://influxdb.canair.io:8086/query?db=canairio' -Body @{"q" = 'select * from "PM2.5_BOG_TUN_EstacionTunal" WHERE time >= now() - 12h'}  -OutFile PM2.5_BOG_TUN_EstacionTunal.json
