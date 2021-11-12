@@ -78,6 +78,10 @@ entries:
       url: /firmware_upload.html#overview
       output: web, pdf
 
+    - title: Upload via CanAirIO Web Installer
+      url: /firmware_upload.html#canairio-web-installer
+      output: web, pdf
+
     - title: Upload via CanAirIO Loader
       url: /firmware_upload.html#canairio-loader
       output: web, pdf

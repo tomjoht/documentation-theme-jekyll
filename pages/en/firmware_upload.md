@@ -15,7 +15,7 @@ folder: en
 
 ## Overview
 
-CanAirIO device supports [ESP32 boards](#boards-supported) with Bluetooth and Wifi features, all boards with it should be able to receive the current firmware. We have five alternatives for uploading it:
+CanAirIO device supports [ESP32 boards](#boards-supported) with Bluetooth and Wifi features, all boards with it should be able to receive the current firmware. We have six alternatives for uploading it:
 
 | Alternative    | Difficulty | Software | Requeriments |
 | :-------------------- |:--------:| :-----------: | :-----: |
@@ -54,8 +54,6 @@ The [last release](https://github.com/kike-canaries/canairio_firmware/releases) 
 
 Super [easy tool](https://canair.io/installer.html) to load the last firmware version via Chrome or Edge. You only need a USB cable.
 
-### Video demo
-
 [![Youtube: CanAirIO Web Installer](http://img.youtube.com/vi/n3A6sJj_-Gc/0.jpg)](https://www.youtube.com/watch?v=n3A6sJj_-Gc "Youtube: CanAirIO Web Installer")
 
 ## CanAirIO Loader
@@ -67,8 +65,6 @@ You can run it from your **Arduino IDE** or from your **Android** phone
 using [ArduinoDroid](https://play.google.com/store/apps/details?id=name.antonsmirnov.android.arduinodroid2&hl=en&gl=US)
 app (**recommended**) with a simple **OTG** cable connected to your board. (see the video below)
 
-### Video demo
-
 [![Youtube CanAirIO basic loader guide](http://img.youtube.com/vi/FjfGdnTk-rc/0.jpg)](http://www.youtube.com/watch?v=FjfGdnTk-rc "Youtube CanAirIO basic loader guide")
 
 ### Troubleshooting
@@ -79,8 +75,6 @@ Please check the complete troubleshooting section of CanAirIO loader [here](http
 ## Espressif Uploader
 
 This option you don't need compiling the binaries, you can download the pre-built binaries and follow the next steps:
-
-### Steps
 
 1. [Download](https://github.com/kike-canaries/canairio_firmware/releases) the zip file from assets section with the name `canairio_revxxx_20xxXXXX.zip` and uncompress it
 
@@ -131,49 +125,7 @@ This option you don't need compiling the binaries, you can download the pre-buil
 
 ## CanAirIO Installer
 
-This option you don't need compiling the binaries, you can download the pre-built binaries and follow the next steps:
-
-### Prerequisites
-
-Please before install Python3 and `esptool` package. More information [here](https://github.com/espressif/esptool)
-
-### Steps
-
-1. Connect your CanAirIO device to your USB 
-2. Download the last firmware [release](https://github.com/kike-canaries/canairio_firmware/releases)
-3. Unzip and execute the next command for your model board*, like this:
-
-``` bash
-unzip canairio_rev414_20190829.zip
-cd canairio_installer
-./install.sh canairio_TTGO_T7_rev605_20200925.bin
-```
-
-### Advanced options
-
-For more options run `./canairio_installer help`.  
-
-#### USB parameters
-
-For example you can increment the upload speed:
-
-``` bash
-./install.sh usb canairio_TTGO_T7_rev792.bin /dev/ttyUSB0 1500000
-```
-
-#### OTA parameters
-
-Send OTA updates to any board supported in your local network, like this:
-
-``` bash
-./install.sh ota canairio_d1mini_rev414_20190829.bin
-```
-
-Also you can specify the IP address:
-
-```bash
-./install.sh ota canairio_xxx.bin 192.168.1.10
-```
+With [this alternative](https://github.com/kike-canaries/canairio_firmware#via-binaries) you can download the pre-built binaries of install it with a simple CLI tool, please follow the steps [here](https://github.com/kike-canaries/canairio_firmware#via-binaries)
 
 ## Via Source Code
 
