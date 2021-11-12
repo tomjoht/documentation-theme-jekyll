@@ -19,12 +19,14 @@ CanAirIO device supports [ESP32 boards](#boards-supported) with Bluetooth and Wi
 
 | Alternative    | Difficulty | Software | Requeriments |
 | :-------------------- |:--------:| :-----------: | :-----: |
+| [CanAirIO Web Installer][10] | Super Easy | PC | Browser with Chrome or Edge | 
 | [CanAirIO Loader][20] | Easy | Arduino Droid App | Android and OTG cable | 
 | [CanAirIO Loader][20] | Basic | Arduino IDE | USB drivers on Windows and MacOSX | 
 | [Espressif Uploader][21] | Basic | Espressif tool | Only works on Windows |
 | [CanAirIO Installer][22] | Basic | Python3 | USB drivers on Windows and MacOSX | 
 | [Source code][23] | Advanced | PlatformIO | No needs drivers on Linux |
 
+[10]: #canairio-web-installer
 [20]: #canairio-loader
 [21]: #espressif-uploader
 [22]: #canairio-installer
@@ -48,26 +50,22 @@ The [last release](https://github.com/kike-canaries/canairio_firmware/releases) 
 
 ** is possible that the **current firmware supports more boards** and sensors. Also you can choose the sensor brand or type on the CanAirIO Android app.
 
+## CanAirIO Web Installer
+
+Super [easy tool](https://canair.io/installer.html) to load the last firmware version via Chrome or Edge. You only need a USB cable.
+
+### Video demo
+
+[![Youtube: CanAirIO Web Installer](http://img.youtube.com/vi/n3A6sJj_-Gc/0.jpg)](https://www.youtube.com/watch?v=n3A6sJj_-Gc "Youtube: CanAirIO Web Installer")
 
 ## CanAirIO Loader
 
-With this method you will able to upload the latest version of [CanAir.IO firmware](https://github.com/kike-canaries/canairio_firmware#canairio-firmware)
+With [this method](https://github.com/hpsaturn/esp32-canairio-loader#readme) you will able to upload the latest version of [CanAir.IO firmware](https://github.com/kike-canaries/canairio_firmware#canairio-firmware)
 automatically via a simple [Arduino sketch](https://raw.githubusercontent.com/hpsaturn/esp32-canairio-loader/master/canairio_loader/canairio_loader.ino)  
 
 You can run it from your **Arduino IDE** or from your **Android** phone
 using [ArduinoDroid](https://play.google.com/store/apps/details?id=name.antonsmirnov.android.arduinodroid2&hl=en&gl=US)
 app (**recommended**) with a simple **OTG** cable connected to your board. (see the video below)
-
-### Steps
-
-1. [Install Arduino IDE](https://www.youtube.com/watch?v=wNtGHCrO7E4) or [Arduino Droid app](https://play.google.com/store/apps/details?id=name.antonsmirnov.android.arduinodroid2&hl=en&gl=US)
-2. Install the Arduino Json Library v6.x from ther Library Manager
-3. Configure your board: ESP32 Dev Module or similar board
-4. Select partion schema to **minimal** ([OTA with 1.9Mb to app 190kbs to SPIFFS](https://codeblog.dotsandbrackets.com/arduino-cli-partition-scheme/))
-5. Configure your WiFi credentials in the downloaded sketch
-6. Build and upload, wait for, the last version of CanAirIO will be installed
-7. (optional) see the progress on Serial console or monitor.
-8. Android app guide for using the device like a [mobile or fixed air quality station](https://github.com/kike-canaries/canairio_firmware/blob/master/README.md#android-canairio-app)
 
 ### Video demo
 
