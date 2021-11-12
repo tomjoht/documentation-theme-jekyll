@@ -17,7 +17,7 @@ folder: en
 
 ## Overview
 
-CanAirIO Bike try to motivate collaboration from cyclists or people that use it to have mobile tracks of air quality. We have two new device versions, CanAirIO bike with PM2.5 sensors (Sensirion SPS30) and CanAirIO CO2 (Sensirion SCD30), the latter for sensing the right ventilation in indoors to reduce COVID-19 risk.
+CanAirIO Bike try to motivate collaboration from cyclists or people that use it to have mobile tracks of air quality. We have two new device versions, CanAirIO bike with PM2.5 sensors (Sensirion SPS30) and CanAirIO CO2 (Sensirion SCD30), the latter for sensing the right ventilation in indoors to reduce COVID-19 risk. Also CanAirIO firmware supports [more sensors](https://github.com/kike-canaries/canairio_sensorlib#readme) if you want make a different variant.
 
 ## Features
 
@@ -36,6 +36,7 @@ These devices able to work in standalone mode without clouds, apps, Bluetooth, W
 ### Mobile station features
 
 - GPS data tagging via CanAirIO app using Bluetooth Low Energy
+- PAX Counter capability (it counts the persons around you)
 - Two device faces: Air quality or Bike mode screens for now.
 - Some built-in functions: Brightness, AQI graph, sample time, Wifi On/Off, calibration, etc.
 
@@ -46,43 +47,14 @@ These devices able to work in standalone mode without clouds, apps, Bluetooth, W
 - MQTT clouds (coming soon)
 - Sensor Community and other open clouds (coming soon)
 
-## Quick start guide
-
-![CanAirIO Bike Quick Start](images/canairio_bike_quick_start.jpg)
-
-## Specifications
-
-| Specs    | CanAirIO Bike | CanAirIO CO2 |
-|:-------- |:-------------:|:---------------:| 
-| Main board | [TTGO T-Display][1]     | [TTGO T-Display][1] |
-| Air quality sensor | [Sensirion SPS30 (PM)][2] | [Sensirion SCD30 (CO2)][3] |
-| Environment sensor | [AM2320 T&H][4] | [SCD30 T&H][3] |
-| Auto calibration   | Factory | Manual |
-| Sensors Units      | PM (1.0,2.5,10 mg/u³),°C,%RH | CO2 (PPM),°C, %RH |
-| Track Units        | Kms, HH:MM:SS | Kms, HH:MM:SS |
-| Firmware updates   | OTA / remote  | OTA / remote |
-| CanAirIO Cloud     | Included      | Included     |
-| Recommended on     | Outdoor**/ Indoor | Indoor |
-| Dimmensions        | 57x24x101 (mm) | 57x20x87 (mm) |
-| Weight             | 95g | 52g |
-| CPU | ESP32 Espressif | ESP32 Espressif |
-|     | 240MHz Xtensa® Dual core |  240MHz Xtensa® Dual core |
-| Flash              | 16Mb            | 16Mb           |
-| WiFi               | Yes  | Yes |
-|                    | 802.11 b/g/n | 802.11 b/g/n |
-| Bluetooth          | Yes | Yes |
-|                    | v4.2 BLE standard | v4.2 BLE standard |
-| Battery            | 650mAh ~ >=4h     | 650mAh >= 10h |
-
-[1]:https://www.aliexpress.com/item/33048962331.html
-[2]:https://www.sensirion.com/en/environmental-sensors/particulate-matter-sensors-pm25/
-[3]:https://www.sensirion.com/en/environmental-sensors/carbon-dioxide-sensors/carbon-dioxide-sensors-scd30/
-[4]:https://www.mouser.de/datasheet/2/737/AM2320-1313931.pdf
-
 
 ## Building Guide
 
-[![Youtube Making Of CanAirIO Bike ](images/canairio_bike_make_of_youtube.jpg)](https://youtu.be/V2eO1UN5u7Y "Youtube CanAirIO basic loader guide")
+<a href="https://youtu.be/V2eO1UN5u7Y" target="_blank" style="padding-left: 20px" ><img src="images/canairio_bike_make_of_youtube.jpg" width="480" ></a>
+
+## Soldering Guide (some improvements)
+
+<a href="https://youtu.be/Oarq0K0Sz3c" target="_blank" style="padding-left: 20px" ><img src="images/canairio_bike_soldering_on_youtube.jpg" width="480" ></a>
 
 ## Components
 
@@ -139,6 +111,41 @@ Please note that it is a general diagram, for details of pin connections please 
 We have some alternatives for upload the last firmware for this version, please review the alternatives [here](https://canair.io/docs/firmware_upload.html#overview)
 
 You should be choose the firmware with the name: TTGO_TDISPLAY for CanAirIO Bike.
+
+## Quick start guide
+
+![CanAirIO Bike Quick Start](images/canairio_bike_quick_start.jpg)
+
+## Specifications
+
+| Specs    | CanAirIO Bike | CanAirIO CO2 |
+|:-------- |:-------------:|:---------------:| 
+| Main board | [TTGO T-Display][1]     | [TTGO T-Display][1] |
+| Air quality sensor | [Sensirion SPS30 (PM)][2] | [Sensirion SCD30 (CO2)][3] |
+| Environment sensor | [AM2320 T&H][4] | [SCD30 T&H][3] |
+| Auto calibration   | Factory | Manual |
+| Sensors Units      | PM (1.0,2.5,10 mg/u³),°C,%RH | CO2 (PPM),°C, %RH |
+| Track Units        | Kms, HH:MM:SS | Kms, HH:MM:SS |
+| Firmware updates   | OTA / remote  | OTA / remote |
+| CanAirIO Cloud     | Included      | Included     |
+| Recommended on     | Outdoor**/ Indoor | Indoor |
+| Dimmensions        | 57x24x101 (mm) | 57x20x87 (mm) |
+| Weight             | 95g | 52g |
+| CPU | ESP32 Espressif | ESP32 Espressif |
+|     | 240MHz Xtensa® Dual core |  240MHz Xtensa® Dual core |
+| Flash              | 16Mb            | 16Mb           |
+| WiFi               | Yes  | Yes |
+|                    | 802.11 b/g/n | 802.11 b/g/n |
+| Bluetooth          | Yes | Yes |
+|                    | v4.2 BLE standard | v4.2 BLE standard |
+| Battery            | 650mAh ~ >=4h     | 650mAh >= 10h |
+
+[1]:https://www.aliexpress.com/item/33048962331.html
+[2]:https://www.sensirion.com/en/environmental-sensors/particulate-matter-sensors-pm25/
+[3]:https://www.sensirion.com/en/environmental-sensors/carbon-dioxide-sensors/carbon-dioxide-sensors-scd30/
+[4]:https://www.mouser.de/datasheet/2/737/AM2320-1313931.pdf
+
+
 
 ## Disclaimer
 
