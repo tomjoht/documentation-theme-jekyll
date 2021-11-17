@@ -32,6 +32,10 @@ entries:
       url: /firmware_upload.html#overview
       output: web
 
+    - title: App Usage
+      url: /app_usage.html#overview
+      output: web
+
   - title: API
     output: web, pdf
 

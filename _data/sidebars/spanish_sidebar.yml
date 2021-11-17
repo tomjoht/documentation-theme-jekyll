@@ -31,6 +31,10 @@ entries:
       url: /index_es.html#firmware-upload
       output: web
 
+    - title: App Usage
+      url: /app_usage.html#overview
+      output: web
+
   - title: Guia de usuario
     output: web, pdf
 
