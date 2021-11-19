@@ -79,7 +79,14 @@ Main parts that you need are the next, but maybe you could have this components 
 
 ## 3D Printer box
 
-Please enter [here](https://www.thingiverse.com/thing:4886061) for details and download these files.
+Please enter [here](https://www.thingiverse.com/thing:4886061) for details and follow some instructions, but:
+
+** ***************** **
+** W A R N N I N G **
+
+The full updated and last versions for all box versions, are in the [official repository](https://github.com/kike-canaries/canairio_firmware/tree/master/box) because it is more easy for handling the versions than Thingiverse. This page it is only a guide.
+
+** ***************** **
 
 ![CanAirIO Bike 3D printer files](images/canairio_bike_3dprint_models.jpg)
 
