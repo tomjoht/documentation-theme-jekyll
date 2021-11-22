@@ -23,6 +23,10 @@ folder: en
 
 For now you need any Android device with Bluetooth 4 or above. You can download the CanAirIO app from [GooglePlay](https://play.google.com/store/apps/details?id=hpsaturn.pollutionreporter), keep in mind that it is in continuos development then please any feedback, report errors, or any thing please let us knowed it via our [contact form](http://canair.io/#three) or on our [Telegram chat](https://t.me/canairio)
 
+## Quick start guide
+
+![CanAirIO Bike Quick Start](https://canair.io/docs/images/canairio_bike_quick_start.jpg)
+
 ## Mobile Station Mode
 
 For record tracks on your device (Sdcard) or publish it to the cloud (share), please follow the next steps:
@@ -69,5 +73,10 @@ After WiFi is ready, please follow the next steps for publish your fixed station
   - save Geohash location (turn on the switch for save, it will go to off after some seconds)
   - enable the publication switch
   - wait for some minutes, the device should be show data icon some times
-  - your station should be in our [Global Map](canair.io/stations) with the special ID showed in the last item of settings  
+  - your station should be in our [Global Map](canair.io/stations) with the special ID showed in the last item of settings 
+
+## CanAirIO fixed station (fast setup guide)
+
+[![CanAirIO CO2 easy Setup](https://github.com/kike-canaries/canairio_android/raw/master/images/anaire_youtube_preview.jpg)](https://youtu.be/29wfMPZXvps) 
+ 
  
