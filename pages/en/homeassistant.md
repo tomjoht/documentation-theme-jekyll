@@ -55,7 +55,7 @@ Home Assistant works with many integrations. For understand the MQTT messages fr
 
 ## CanAirIO Configuration
 
-In the app, please put the **credentials** and the **IP** of the machine that has the MQTT Broker instance (in this case, the Home Assistant IP address) in **Settings->Fixed station->Advanced Settings->Home Assistant Discovery** settings, like this:
+In the [CanAirIO app](https://play.google.com/store/apps/details?id=hpsaturn.pollutionreporter&hl=en), please put the **credentials** and the **IP** of the machine that has the MQTT Broker instance (in this case, the Home Assistant IP address) in **Settings->Fixed station->Advanced Settings->Home Assistant Discovery** settings, like this:
 
 ![MQTT Broker Integration](/docs/images/hass_config_07.jpg)
 
