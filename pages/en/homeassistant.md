@@ -15,6 +15,7 @@ permalink: home_assistant.html
 folder: en
 ---
 
+
 ## Overview
 
 [![Home Assistant site](/docs/images/hass_media00.jpg)](https://www.home-assistant.io/)
@@ -78,7 +79,7 @@ Home Assistant it's very easy and flexible. In the last step for example, you on
 
 ![hass01](https://user-images.githubusercontent.com/423856/144431251-e81f4656-bc19-4598-980b-be57bf088ca8.gif)
 
-Using our [canair.io/installer](canair.io/installer) you can use it to have log output of your device and follow the possible issues. For that you only need:
+Using our [canair.io/installer](https://canair.io/installer) you can use it to have log output of your device and follow the possible issues. For that you only need:
 
 - connect your device
 - launch the CanAirIO Web Installer
