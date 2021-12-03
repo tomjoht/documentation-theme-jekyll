@@ -13,6 +13,15 @@ summary: These brief instructions will help you get started quickly with CanAirI
 
 CanAirIO is a citizen science project using mobile and fixed air quality stations to measure some variables like PM2.5, CO2, AQI and others air indicators with cell phones and low-cost technology. 
 
+## CanAirIO Web Installer
+
+Good news! we already have a super easy way for **install CanAirIO** on any compatible **Arduino ESP32 board**, with a few clicks in secondos without any sensor, for example you able to have our **CanAirIO PAX Counter** device:
+
+![video_2021-11-13_23-36-10](https://user-images.githubusercontent.com/423856/141661066-0fafcaa9-98b4-419b-b1e7-4371f3cb99b8.gif)  
+
+More info in [canair.io/installer](https://canair.io/installer.html)
+
+
 ## Building a device
 
 We have some device version alternatives with some guides:
@@ -33,8 +42,6 @@ We have some device version alternatives with some guides:
 [13]: https://www.hackster.io/114723/canairio-red-ciudadana-para-monitoreo-de-calidad-del-aire-96f79a
 [14]: https://github.com/hpsaturn/CanAirIO#readme
 [15]: https://canair.io/docs/canairio_bike.html
-
-
 
 {% include links.html %}
 

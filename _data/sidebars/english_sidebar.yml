@@ -35,21 +35,8 @@ entries:
     - title: App Usage
       url: /app_usage.html#overview
       output: web
-
-  - title: API
-    output: web, pdf
-
-    folderitems:
-
-    - title: Mobile station
-      url: /mobile_api_en.html
-      output: web, pdf
-
-    - title: Fixed station
-      url: /fixed_stations_api_en.html
-      output: web, pdf
-
-  - title: Hardware
+ 
+  - title: Device
     output: web, pdf
 
     folderitems:
@@ -57,6 +44,11 @@ entries:
     - title: CanAirIO Bike
       url: /canairio_bike.html
       output: web, pdf 
+
+  - title: Sensors
+    output: web, pdf
+
+    folderitems:
 
     # - title: CanAirIO CO2
     #   url: /canairio_bike.html
@@ -72,7 +64,7 @@ entries:
 
     - title: CO2 sensors comparative
       url: /co2_comparative.html
-      output: web, pdf 
+      output: web, pdf
 
   - title: Firmware
     output: web, pdf
@@ -106,10 +98,43 @@ entries:
       url: /firmware_debugging.html
       output: web, pdf
 
+  - title: Integrations
+    output: web, pdf
+
+    folderitems:
+
+    - title: Home Assistant
+      url: /home_assistant.html
+      output: web, pdf
+
+    - title: CanAirIO Mobile Map
+      url: /mobile_map.html
+      output: web, pdf
+
+    - title: CanAirIO World map
+      url: /world_map.html
+      output: web, pdf
+
+    - title: Anaire Cloud
+      url: /cloud_anaire.html
+      output: web, pdf
+  
+  - title: API
+    output: web, pdf
+
+    folderitems:
+
+    - title: Mobile station
+      url: /mobile_api_en.html
+      output: web, pdf
+
+    - title: Fixed station
+      url: /fixed_stations_api_en.html
+      output: web, pdf
+
     - title: Bluetooth GATT protocol
       url: /firmware_protocol.html
       output: web, pdf
-
 
 
   - title: Community
