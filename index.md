@@ -28,12 +28,12 @@ We have some device version alternatives with some guides:
 
 | Device version    | Difficulty |  Status | Links  |
 | :------------- |:--------:| :-----------: | :-----------: |
+|  CanAirIO Bike   | Medium | New | [Complete guide][15] |
+|  CanAirIO CO2   | Medium | New | [Complete guide][16] |
 |  CanAirIO without soldering (EN)  | Easy | Outdated |  [Complete guide and video][10] |
 |  CanAirIO without soldering (ES)  | Easy | Outdated | [Complete guide and video][11] |
 |  CanAirIO device v2.1 (EN)  | Medium | Outdated | [Complete guide and video][12] |
 |  CanAirIO device v2.1 (ES)  | Medium | Outdated | [Complete guide and video][13] |
-|  CanAirIO TTGO-TDisplay   | Advanced | Deprecated | [Complete guide][14] |
-|  CanAirIO Bike   | Advanced | New | [Complete guide][15] |
 
 
 [10]: https://www.hackster.io/canairio/build-low-cost-air-quality-sensor-canairio-without-soldering-d87494
@@ -42,6 +42,7 @@ We have some device version alternatives with some guides:
 [13]: https://www.hackster.io/114723/canairio-red-ciudadana-para-monitoreo-de-calidad-del-aire-96f79a
 [14]: https://github.com/hpsaturn/CanAirIO#readme
 [15]: https://canair.io/docs/canairio_bike.html
+[16]: https://canair.io/docs/canairio_co2.html
 
 {% include links.html %}
 
