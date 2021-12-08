@@ -15,7 +15,7 @@ CanAirIO is a citizen science project using mobile and fixed air quality station
 
 ## CanAirIO Web Installer
 
-Good news! we already have a super easy way for **install CanAirIO** on any compatible **Arduino ESP32 board**, with a few clicks in secondos without any sensor, for example you able to have our **CanAirIO PAX Counter** device:
+Good news! we already have a super easy way for **install CanAirIO** on any compatible **Arduino ESP32 board**, with a few clicks in seconds without any sensor, for example you able to have our **CanAirIO PAX Counter** device:
 
 ![video_2021-11-13_23-36-10](https://user-images.githubusercontent.com/423856/141661066-0fafcaa9-98b4-419b-b1e7-4371f3cb99b8.gif)  
 
