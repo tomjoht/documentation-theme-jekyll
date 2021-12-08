@@ -45,6 +45,10 @@ entries:
       url: /canairio_bike.html
       output: web, pdf 
 
+    - title: CanAirIO CO2
+      url: /canairio_co2.html
+      output: web, pdf 
+
   - title: Sensors
     output: web, pdf
 
