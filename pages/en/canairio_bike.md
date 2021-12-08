@@ -115,9 +115,13 @@ Please note that it is a general diagram, for details of pin connections please 
 
 ## Firmware Upload
 
-We have some alternatives for upload the last firmware for this version, please review the alternatives [here](https://canair.io/docs/firmware_upload.html#overview)
+We already have a super easy way for **install CanAirIO** firmware on any compatible **Arduino ESP32 board** like a TTGO T-Display board, (CO2 and bike versions), in a few seconds:
 
-You should be choose the firmware with the name: TTGO_TDISPLAY for CanAirIO Bike.
+![video_2021-11-13_23-36-10](https://user-images.githubusercontent.com/423856/141661066-0fafcaa9-98b4-419b-b1e7-4371f3cb99b8.gif)  
+
+More info in [canair.io/installer](https://canair.io/installer.html)
+
+Other alternatives for upload the CanAirIO firmware, [here](https://canair.io/docs/firmware_upload.html).
 
 ## Quick start guide
 

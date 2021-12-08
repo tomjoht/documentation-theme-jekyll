@@ -38,6 +38,17 @@ Also CanAirIO supports other CO2 sensors, like SenseAir S8, Mhz19, CM1106, SCD41
 
 [Official datasheet ](https://www.sensirion.com/fileadmin/user_upload/customers/sensirion/Dokumente/9.5_CO2/Sensirion_CO2_Sensors_SCD30_Datasheet.pdf)
 
+## Firmware upload
+
+We already have a super easy way for **install CanAirIO** firmware on any compatible **Arduino ESP32 board** like a TTGO T-Display board, (CO2 and bike versions), in a few seconds:
+
+![video_2021-11-13_23-36-10](https://user-images.githubusercontent.com/423856/141661066-0fafcaa9-98b4-419b-b1e7-4371f3cb99b8.gif)  
+
+More info in [canair.io/installer](https://canair.io/installer.html)
+
+Other alternatives for upload the CanAirIO firmware, [here](https://canair.io/docs/firmware_upload.html).
+
+
 ## Cloud configuration
 
 [![CanAirIO CO2 in Anaire ](/docs/images/canairio_co2_cloud_anaire.jpg)](https://youtu.be/29wfMPZXvps) 
