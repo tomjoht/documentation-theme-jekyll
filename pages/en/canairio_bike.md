@@ -17,7 +17,9 @@ folder: en
 
 ## Overview
 
-CanAirIO Bike try to motivate collaboration from cyclists or people that use it to have mobile tracks of air quality. We have two new device versions, CanAirIO bike with PM2.5 sensors (Sensirion SPS30) and CanAirIO CO2 (Sensirion SCD30), the latter for sensing the right ventilation in indoors to reduce COVID-19 risk. Also CanAirIO firmware supports [more sensors](https://github.com/kike-canaries/canairio_sensorlib#readme) if you want make a different variant.
+CanAirIO Bike try to motivate collaboration from cyclists or people that use it to have mobile tracks of air quality. We have two new device versions, CanAirIO bike with PM2.5 sensors (Sensirion SPS30) and [CanAirIO CO2](https://canair.io/docs/canairio_co2.html) (Sensirion SCD30), the latter for sensing the right ventilation in indoors or into the public transportation to reduce COVID-19 risk.  
+
+Also CanAirIO firmware supports [more sensors](https://github.com/kike-canaries/canairio_sensorlib#readme) if you want make a different variant.
 
 ## Features
 
@@ -52,7 +54,7 @@ These devices able to work in standalone mode without clouds, apps, Bluetooth, W
 
 <a href="https://youtu.be/V2eO1UN5u7Y" target="_blank" style="padding-left: 20px" ><img src="images/canairio_bike_make_of_youtube.jpg" width="480" ></a>
 
-## Soldering Guide (some improvements)
+## Soldering improvements
 
 <a href="https://youtu.be/Oarq0K0Sz3c" target="_blank" style="padding-left: 20px" ><img src="images/canairio_bike_soldering_on_youtube.jpg" width="480" ></a>
 
@@ -155,7 +157,6 @@ Other alternatives for upload the CanAirIO firmware, [here](https://canair.io/do
 [2]:https://www.sensirion.com/en/environmental-sensors/particulate-matter-sensors-pm25/
 [3]:https://www.sensirion.com/en/environmental-sensors/carbon-dioxide-sensors/carbon-dioxide-sensors-scd30/
 [4]:https://www.mouser.de/datasheet/2/737/AM2320-1313931.pdf
-
 
 
 ## Disclaimer
