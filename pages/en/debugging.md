@@ -13,58 +13,58 @@ permalink: firmware_debugging.html
 folder: en
 ---
 
-**WARNNING**: The current guide is deprecated!
 
-## Starting console log
+## Overview
 
-`picocom -b 115200 /dev/ttyUSB0`
+For see the logs from the device, CanAirIO have logs output via USB serial connection. For connected to it, please follow the next steps:
 
-```bash
--->[HPMA] read > done! PM10:010 E08 [S13235] PM2.5:P009
--->[HPMA] read > done! PM10:009 E08 [S13236] PM2.5:P008
--->[AM2320] Humidity: 0.00 % Temp: 0.00 °C
--->[API] writing to canairio.herokuapp.com..done. [201]
--->[STATUS] 10001101
+## Frow CanAirIO Web installer
+
+[CanAirIO Web installer](https://canair.io/installer) has this functionality, you only should choose your board (install button), select your USB, and press the button **LOGS** like this:
+
+![Web installer logs](/docs/images/web_installer_logs.gif)
+
+## From any Linux shell
+
+Run `picocom -b 115200 /dev/ttyUSB0` and then press the reset button of your ESP32 board, you should have something like this:
+
+```cpp
+19:05:08.081 > == CanAirIO Setup ==
+19:05:08.083 > 
+19:05:08.541 > -->[OGUI] display config ready.
+19:05:08.836 > -->[INFO] ESP32MAC:	24:0A:C4:06:F5:C6
+19:05:08.841 > -->[INFO] Hostname:	CanAirIO5C6
+19:05:08.843 > -->[INFO] Revision:	r877
+19:05:08.846 > -->[INFO] Firmware:	0.5.0
+19:05:08.848 > -->[INFO] Flavor  :	WEMOSOLED
+19:05:08.851 > -->[INFO] Target  :	prod
+19:05:08.853 > -->[INFO] Detecting sensors:
+19:05:08.856 > -->[INFO] Sensorslib version	: 0.4.2
+19:05:08.859 > -->[INFO] enable sensor GPIO	: 27
+19:05:08.862 > -->[INFO] config UART sensor	: 0
+19:05:09.101 > -->[SLIB] new sample time	: 1
+19:05:09.104 > -->[SLIB] temperature offset	: 0.00
+19:05:09.107 > -->[SLIB] altitude offset   	: 0.00
+19:05:09.110 > -->[SLIB] only i2c sensors  	: 1
+19:05:09.650 > -->[INFO] Detection sensors FAIL!
+19:05:09.898 > -->[WDOG] watchdog config to check each 120 seconds.
+19:05:09.903 > -->[INFO] InfluxDb	: disabled
+19:05:09.906 > -->[INFO] WiFi    	: disabled
+19:05:11.128 > -->[BTLE] GATT server ready. (Waiting for client)
+19:05:16.214 > -->[SLIB] new sample time	: 5
+19:05:16.255 > -->[WIFI] started PAX counter sniffer ;)
 ```
 
+For example in this output you don't have any sensor connected but the **PAX Counter** was enable
 
-## Device status vector
+## Increased verbose output
 
-The current flags status is represented on one byte and it is returned on config:
+For try to have more logs and more information of your CanAirIO device, please enable the **debug mode** in your CanAirIO App, in `->settings->mobile station->enable debug mode switch`.
 
-``` java
-bit_sensor  = 0;    // sensor fail/ok
-bit_paired  = 1;    // bluetooth paired
-bit_wan     = 2;    // internet access
-bit_cloud   = 3;    // publish cloud
-bit_code0   = 4;    // code bit 0
-bit_code1   = 5;    // code bit 1
-bit_code2   = 6;    // code bit 2
-bit_code3   = 7;    // code bit 3
+## Advanced debug level
 
-```
+For increase more the verbose output and have the output from the internals of the ESP32 core, you need rebuild the firmware with the `CORE_DEBUG_LEVEL` in 4 for example. You can change it in the `platformio.ini` file in the [source code](https://github.com/kike-canaries/canairio_firmware/blob/master/platformio.ini#L25).
 
-The error codes are represented on up four bits. Error code table:
-
-``` java
-ecode_sensor_ok          =   0;
-ecode_sensor_read_fail   =   1;
-ecode_sensor_timeout     =   2;
-ecode_wifi_fail          =   3;
-ecode_ifdb_write_fail    =   4;
-ecode_ifdb_dns_fail      =   5;
-ecode_json_parser_error  =   6;
-ecode_invalid_config     =   7;
-ecode_api_write_fail     =   8;
-```
-
-sample:
-
-``` java
-    00000011 -> sensor ok, device paired
-    00001101 -> sensor ok, wan ok, ifxdb cloud ok
-    01000101 -> sensor ok, wan ok, ifxdb write fail
-```
 
 
 {% include links.html %}
