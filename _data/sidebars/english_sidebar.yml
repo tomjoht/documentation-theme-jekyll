@@ -116,7 +116,7 @@ entries:
       output: web, pdf
 
     - title: CanAirIO World map
-      url: /world_map.html
+      url: /cloud_worldmap.html
       output: web, pdf
 
     - title: Anaire Cloud
