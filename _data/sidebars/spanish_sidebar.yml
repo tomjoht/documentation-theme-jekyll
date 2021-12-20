@@ -78,6 +78,10 @@ entries:
 
     folderitems:
 
+    - title: Sensors wiring
+      url: /sensors_es.html
+      output: web, pdf
+
     - title: CO2 sensors
       url: /co2_comparative.html
       output: web, pdf 
