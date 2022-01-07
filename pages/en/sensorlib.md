@@ -19,7 +19,7 @@ folder: en
 
 Generic sensor manager, abstractions and bindings of multiple sensors libraries: Honeywell, Plantower, Panasonic, Sensirion, etc. and CO2 sensors. Also it's handling others environment sensors. This library is for general purpose, but also is the sensors library base of [CanAirIO project](https://canair.io/docs).
 
-# Supported sensors
+## Supported sensors
 
 ### PM sensors
 
@@ -58,7 +58,7 @@ NOTE: Panasonic via UART in ESP8266 maybe needs select in detection
 
 NOTE: DHT22 is supported but is not recommended
 
-# Features
+## Features
 
 - Unified variables for all sensors 
 - Auto UART port selection (Hw, Sw, UART1, UART2, etc)
@@ -79,14 +79,14 @@ NOTE: DHT22 is supported but is not recommended
 Full list of all sub libraries supported [here](https://github.com/kike-canaries/canairio_sensorlib/blob/master/library.json#L72-L89)
 
 
-# Quick implementation
+## Quick implementation
 
 ```Java
 sensors.setOnDataCallBack(&onSensorDataOk);   // all data read callback
 sensors.init();                               // start all sensors and
 ```
 
-# Full implementation
+## Full implementation
 
 You can review a full implementation on [CanAirIO project firmware](https://github.com/kike-canaries/canairio_firmware/blob/master/src/main.cpp), but a little brief is the next:
 
@@ -147,8 +147,6 @@ void loop() {
 }
 ```
 
-## Output
-
 On your serial monitor you should have something like that:
 
 ```bash
@@ -159,13 +157,13 @@ On your serial monitor you should have something like that:
 -->[MAIN] PM1.0: 002 PM2.5: 002 PM10: 002
 ```
 
-# Multivariable demo
+## Multivariable demo
 
 In this demo with two devices and multiple sensors, you can choose the possible sub sensors units:
 
 [![CanAirIO multivariable demo](https://img.youtube.com/vi/-5Va47Bap48/0.jpg)](https://www.youtube.com/watch?v=-5Va47Bap48)
 
-# Multivariable implementation
+## Multivariable implementation
 
 The last version added new getters to have the current status of each unit of each sensor connected to the device in real time.  
 
@@ -225,20 +223,18 @@ void onSensorDataOk() {
 ``` 
 
 
-# UART detection demo 
+## UART detection demo 
 
 [![CanAirIO auto configuration demo](https://img.youtube.com/vi/hmukAmG5Eec/0.jpg)](https://www.youtube.com/watch?v=hmukAmG5Eec)
 
 CanAirIO sensorlib auto configuration demo on [Youtube](https://www.youtube.com/watch?v=hmukAmG5Eec)
 
 
-# Wiring
+### Wiring
 
 The current version of library supports 3 kinds of wiring connection, UART, i2c and TwoWire, in the main boards the library using the defaults pins of each board, but in some special cases the pins are:
 
-## UART
-
-### Predefined UART
+### UART
 
 The library has [pre-defined some UART pin configs](https://github.com/kike-canaries/canairio_sensorlib/blob/master/src/Sensors.hpp#L19-L52), these are selected on compiling time. Maybe you don't need change anything with your board, and maybe the nexts alternatives works for you:
 
@@ -272,7 +268,7 @@ We are using the default pins for each board, some times it's pins are 21,22, pl
 For now we are using it only for DHT sensors in PIN 23. For more info please review the next lines [here](https://github.com/kike-canaries/canairio_sensorlib/blob/master/src/Sensors.hpp#L19-L52).
 
 
-# Examples
+## Examples
 
 ### PlatformIO (recommended)
 
@@ -322,7 +318,7 @@ arduino-cli upload --fqbn esp32:esp32:lolin32:UploadSpeed=115200 -p /dev/ttyUSB0
 
 where `basic` is the basic example on examples directory.
 
-# Supporting the project
+## Supporting the project
 
 If you want to contribute to the code or documentation, consider posting a bug report, feature request or a pull request.
 
@@ -343,36 +339,14 @@ Also you can make a donation, be a patreon or buy a device:
 - **Buy a device**: [CanAirIO Bike in Tindie](https://www.tindie.com/products/hpsaturn/canairio-bike/)
 - [Inviting us **a coffee**](https://www.buymeacoffee.com/hpsaturn) 
 
-
-# TODO
-
-- [x] Auto detection for UART sensors (Honeywell, Panasonic and Plantower)
-- [x] Added SPS30 library with auto UART detection
-- [x] Disable/enable logs (debug mode flag)
-- [x] Added bme280, bmp280, aht10, sht31, am2320 i2c sensors
-- [x] Exposed public sub-libraries objects, sps30, aht10, etc.
-- [x] Added old DHT sensors 
-- [x] Added CO2 sensors: MHZ19, SCD30, CM1106 via UART
-- [x] Added SDS011 particle metter
-- [x] BME680 support
-- [x] Added Sensirion SPS30 and Panasonic SN-GCJA5 via i2c
-- [x] Enable/Disable UART detection for force only i2c
-- [x] Temperature and Altitude compensation
-- [x] SenseAir S8 via UART support
-- [x] Multivariable selection (getNextUnit(),getUnitName(),etc)
-- [ ] Improve to sensor dynamic registry 
-- [ ] IAQ indicator from BME680 Bosch library
-
-# Projects using this Library
+## Projects using this Library
 
 - [CanAirIO Device](https://github.com/kike-canaries/canairio_firmware): ESP32 Air quality device for mobile and fixed stations. (PM2.5 and CO2)
 - [Medidor de CO2](https://emariete.com/medidor-co2-display-tft-color-ttgo-t-display-sensirion-scd30): Un medidor de CO2 de alta calidad con pantalla en color. (CO2)    
 
-# Credits
+## Credits
 
 Thanks to all collaborators and [CanAirIO](https://canair.io) community for testing and reports.
-
-
 
 ---
 
