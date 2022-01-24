@@ -93,15 +93,17 @@ You can review a full implementation on [CanAirIO project firmware](https://gith
 ```Java
 /// sensors data callback
 void onSensorDataOk() {
-    Serial.print  (" PM1.0: " + sensors.getStringPM1());  // some fields sample
-    Serial.print  (" PM2.5: " + sensors.getStringPM25());
-    Serial.println(" PM10: "  + sensors.getStringPM10());
-    Serial.println(" CO2:  "  + sensors.getStringCO2());
+    Serial.print("PM2.5: " + String(sensors.getPM25()));
+    Serial.print(" CO2: "  + String(sensors.getCO2()));
+    Serial.print(" CO2H: " + String(sensors.getCO2humi()));
+    Serial.print(" CO2T: " + String(sensors.getCO2temp()));
+    Serial.print(" H: "    + String(sensors.getHumidity()));
+    Serial.println(" T: "  + String(sensors.getTemperature()));
 }
 
 /// sensors error callback
 void onSensorDataError(const char * msg){
-    Serial.println(msg);
+    Serial.println("Sensor read error: "+String(msg));
 }
 
 void setup() {
@@ -111,7 +113,7 @@ void setup() {
     sensors.setSampleTime(15);                      // [optional] sensors sample time (default 5s)
     sensors.setTempOffset(cfg.toffset);             // [optional] temperature compensation
     sensors.setCO2AltitudeOffset(cfg.altoffset);    // [optional] CO2 altitude compensation
-    sensors.setDebugMode(false);                    // [optional] debug mode enable/disable
+    sensors.setDebugMode(false);                    // [optional] debug mode to get detailed msgs
     sensors.detectI2COnly(true);                    // [optional] force to only i2c sensors
     sensors.init();                                 // Auto detection to UART and i2c sensors
 
@@ -137,8 +139,6 @@ void setup() {
     // sensors.s8.set_ABC_period(period)
     // ...
 
-    Serial.println("-->[SETUP] Sensor configured: " + sensors.getMainDeviceSelected());
-
     delay(500);
 }
 
@@ -146,6 +146,8 @@ void loop() {
     sensors.loop();  // read sensor data and showed it
 }
 ```
+
+## Output
 
 On your serial monitor you should have something like that:
 
@@ -157,71 +159,75 @@ On your serial monitor you should have something like that:
 -->[MAIN] PM1.0: 002 PM2.5: 002 PM10: 002
 ```
 
+
 ## Multivariable demo
 
 In this demo with two devices and multiple sensors, you can choose the possible sub sensors units:
 
 [![CanAirIO multivariable demo](https://img.youtube.com/vi/-5Va47Bap48/0.jpg)](https://www.youtube.com/watch?v=-5Va47Bap48)
 
-## Multivariable implementation
 
-The last version added new getters to have the current status of each unit of each sensor connected to the device in real time.  
+### Multivariable alternative implementation
+
+The last version added new getters to have the current status of each unit of each sensor connected to the device in real time. Also you can retrieve the list of device names and other stuff:  
 
 For example:
 
 ```cpp
-/**
- * Example or alternative of the selection of the main sensor unit
- */
+#include <Arduino.h>
+#include <Sensors.hpp>
 
-void getMainValue() {
-    // If the main sensor (CO2 or PM2.5) was not detected but the temperature is registered
-    if (sensors.getMainDeviceSelected().isEmpty() && sensors.isUnitRegistered(UNIT::TEMP)) {  
-        mainValue = (uint32_t) sensors.getTemperature();
-        uName = sensors.getUnitName(UNIT::TEMP);
-        uSymbol = sensors.getUnitSymbol(UNIT::TEMP);
-    // The main sensor is a particle meter device
-    } else if (sensors.getMainSensorTypeSelected() == Sensors::SENSOR_PM) {
-        mainValue = sensors.getPM25();
-        uName = sensors.getUnitName(UNIT::PM25);
-        uSymbol = sensors.getUnitSymbol(UNIT::PM25);
-    // The main sensor is a CO2 device
-    } else if (sensors.getMainSensorTypeSelected() == Sensors::SENSOR_CO2) {
-        mainValue = sensors.getCO2();
-        uName = sensors.getUnitName(UNIT::CO2);
-        uSymbol = sensors.getUnitSymbol(UNIT::CO2);
+void printSensorsDetected() {
+    uint16_t sensors_count =  sensors.getSensorsRegisteredCount();
+    uint16_t units_count   =  sensors.getUnitsRegisteredCount();
+    Serial.println("-->[MAIN] Sensors detected count\t: " + String(sensors_count));
+    Serial.println("-->[MAIN] Sensors units count  \t: "  + String(units_count));
+    Serial.print(  "-->[MAIN] Sensors devices names\t: ");
+    int i = 0;
+    while (sensors.getSensorsRegistered()[i++] != 0) {
+        Serial.print(sensors.getSensorName((SENSORS)sensors.getSensorsRegistered()[i - 1]));
+        Serial.print(",");
+    }
+    Serial.println();
+}
+
+void printSensorsValues() {
+    Serial.println("\n-->[MAIN] Preview sensor values:");
+    UNIT unit = sensors.getNextUnit();
+    while(unit != UNIT::NUNIT) {
+        String uName = sensors.getUnitName(unit);
+        float uValue = sensors.getUnitValue(unit);
+        String uSymb = sensors.getUnitSymbol(unit);
+        Serial.print("-->[MAIN] " + uName + ": " + String(uValue) + " " + uSymb);
+        unit = sensors.getNextUnit();
     }
 }
 
-/**
- * Example or alternative of the selection of the minor sensor unit
- */
-
-void getMinorValue(UNIT mainUnit) {
-    minorValue = (uint32_t)sensors.getUnitValue(mainUnit);
-    uName = sensors.getUnitName(mainUnit);
-    uSymbol = sensors.getUnitSymbol(mainUnit);
+void onSensorDataOk() {
+    Serial.println("======= E X A M P L E   T E S T =========");
+    printSensorsDetected();
+    printSensorsValues(); 
+    Serial.println("=========================================");
 }
 
+/******************************************************************************
+*  M A I N
+******************************************************************************/
 
-void onSensorDataOk() {
-    
-    Serial.println("");
+void setup() {
+    Serial.begin(115200);
+    delay(100);
+    sensors.setSampleTime(5);                       // config sensors sample time interval
+    sensors.setOnDataCallBack(&onSensorDataOk);     // all data read callback
+    sensors.setDebugMode(true);                     // [optional] debug mode
+    sensors.detectI2COnly(false);                   // disable force to only i2c sensors
+    sensors.init();                                 // Auto detection to UART and i2c sensors
+}
 
-    getMainValue(); // choose the main sensor possible
-    Serial.println ("-->[MAIN] Main sensor unit     \t: "+uName+": "+String(mainValue)+" "+uSymbol);
-
-    getMinorValue(nextUnit); // Load values ot the minor sensor. (see the loop)
-    Serial.println ("-->[MAIN] Secondary sensor unit\t: "+uName+": "+String(minorValue)+" "+uSymbol);
-
-    Serial.println("");
-
-    // example for choose and change the next unit able: 
-    nextUnit = (UNIT)sensors.getNextUnit(); // Change the minor sensor
-
+void loop() {
+    sensors.loop();  // read sensor data and showed it
 }
 ``` 
-
 
 ## UART detection demo 
 
