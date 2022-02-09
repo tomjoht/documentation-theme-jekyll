@@ -16,7 +16,7 @@ folder: en
 
 The current fixed stations are stored in an InfluxDB database service, each station write a data series time in separated tables. We will change it to different schema soon. For now the next endpoints are enabled.
 
-### Data visualization
+## Data visualization
 
 For now, the shared series time of each stations could be listed in our Grafana dashboard here:
 
@@ -24,7 +24,7 @@ For now, the shared series time of each stations could be listed in our Grafana 
 
 [![Mobile track visualization](/docs/images/grafana_sample.jpg)](http://influxdb.canair.io:8000)
 
-### Data endpoint
+## Data endpoint
 
 Each series time could be fetched via the next endpoint:
 
@@ -36,8 +36,10 @@ the full documentation of InfluxDB query syntax could be consulted [here](https:
 
 For example:
 
-## Linux
 
+## New schema
+
+We have a new schema, for now the automatic stations are in the main table `fixed_stations_01` and these stations have tags for `mac`, `name` and `geo3`, where `name` is automatic ID.
 
 **Select stations IDs:**
 ```bash
@@ -54,12 +56,8 @@ Also maybe works too:
 curl -G 'http://influxdb.canair.io:8086/query?db=canairio' --data-urlencode "q=select \"name\", \"mac\", \"geo3\", \"pm25\" from fixed_stations_01 WHERE \"name\"='6MCESP32DE8CBC2' and time >= now() - 1m" > data_specific_station_last_minute.json
 ```
 
-**Deprecated stations**
-```bash
-curl -G 'http://influxdb.canair.io:8086/query?db=canairio' --data-urlencode 'q=select * from "PM25_Berlin_CanAirIO_v2" WHERE time >= now() - 12h' > PM25_Berlin_CanAirIO_v2.json
-```
+**From Python**
 
-## Python
 ```bash
 #!/usr/bin/python3
 
@@ -72,9 +70,25 @@ response = requests.get(endpoint, params=parameters)
 print(response.json())
 ```
 
-## Windows
+## Deprecated stations
 
-Deprecated stations:
+**Retrieve fixed stations names:**
+
+For get the complete list of fixed stations names:
+
+```bash
+curl -G 'http://influxdb.canair.io:8086/query?db=canairio' --data-urlencode 'q=show measurements'
+```
+
+But the more important stations of CanAirIO with more stable data is listed [here](https://github.com/daquina-io/VizCalidadAire/blob/canairio/canairio_sensors_mod.csv).
+
+**Retrive data:**
+```bash
+curl -G 'http://influxdb.canair.io:8086/query?db=canairio' --data-urlencode 'q=select * from "PM25_Berlin_CanAirIO_v2" WHERE time >= now() - 12h' > PM25_Berlin_CanAirIO_v2.json
+```
+
+**Windows**
+
 ```bash
 curl -Headers @{"accept"="application/json"}  'http://influxdb.canair.io:8086/query?db=canairio' -Body @{"q" = 'select * from "PM2.5_BOG_TUN_EstacionTunal" WHERE time >= now() - 12h'}  -OutFile PM2.5_BOG_TUN_EstacionTunal.json
 ```
@@ -93,18 +107,7 @@ The last couple of examples return the data in json format, if you want to get t
 curl -H 'Accept:application/csv' -G 'http://influxdb.canair.io:8086/query?db=canairio' --data-urlencode 'q=select mean(*) from "PM25_Berlin_CanAirIO_v2" WHERE time >= now() - 12h GROUP BY time(1m) FILL(none)' > PM25_Berlin_CanAirIO_v2.csv
 ```
 
-
-### Fixed stations names
-
-For get the complete list of fixed stations names:
-
-```bash
-curl -G 'http://influxdb.canair.io:8086/query?db=canairio' --data-urlencode 'q=show measurements'
-```
-
-But the more important stations of CanAirIO with more stable data is listed [here](https://github.com/daquina-io/VizCalidadAire/blob/canairio/canairio_sensors_mod.csv).
-
-## Python example
+**Python example**
 
 In your OS please install before the `python3-virtualenv` package, then:
 
@@ -120,7 +123,7 @@ install the next package for run the test:
 pip3 install influxdb ipython
 ```
 
-### Query
+**Query**
 
 enter to ipython console with the command `ipython` and execute the next lines for import the influxDb client and instance it:
 
@@ -139,7 +142,7 @@ you should have an output similar to next:
 
 ![python output from fixed station query](/docs/images/api_python_fixed_sample.jpg)
 
-### Stations names
+**Stations names**
 
 for get the all names of fixed stations:
 
