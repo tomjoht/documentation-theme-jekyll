@@ -150,14 +150,5 @@ for get the all names of fixed stations:
 client.get_list_measurements()
 ```
 
-## All tracks request
-
-For now we don't have this development, CanAirIO is a opensource initiative and you able to send any pull request for help us in improve our API. For now we have published some backups of last one year, for example:
-
-[CanAirIO full snap - fixed stations](http://influxdb.canair.io:8080/data/)
-
-Please read the `README` file in the link for details.
-
-
 {% include links.html %}
 
