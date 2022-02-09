@@ -36,15 +36,30 @@ the full documentation of InfluxDB query syntax could be consulted [here](https:
 
 For example:
 
-Linux
+## Linux
+
+
+**Select stations IDs:**
 ```bash
-curl -G 'http://influxdb.canair.io:8086/query?db=canairio' --data-urlencode 'q=select * from "PM25_Berlin_CanAirIO_v2" WHERE time >= now() - 12h' > PM25_Berlin_CanAirIO_v2.json
+curl -G 'http://influxdb.canair.io:8086/query?db=canairio' --data-urlencode 'q=select distinct("name") from "fixed_stations_01" limit 100'  > names.json
 ```
-Linux - New Data Model
+
+**Select fields from one station ID:**
+```bash
+curl -G 'http://influxdb.canair.io:8086/query?db=canairio' --data-urlencode 'q=select "pm25"::field,"U33TTGOTDA585E"::tag from "fixed_stations_01" limit 30'  > U33TTGOTDA585E.json
+```
+
+Also maybe works too:
 ```bash
 curl -G 'http://influxdb.canair.io:8086/query?db=canairio' --data-urlencode "q=select \"name\", \"mac\", \"geo3\", \"pm25\" from fixed_stations_01 WHERE \"name\"='6MCESP32DE8CBC2' and time >= now() - 1m" > data_specific_station_last_minute.json
 ```
-Python - New Data Model
+
+**Deprecated stations**
+```bash
+curl -G 'http://influxdb.canair.io:8086/query?db=canairio' --data-urlencode 'q=select * from "PM25_Berlin_CanAirIO_v2" WHERE time >= now() - 12h' > PM25_Berlin_CanAirIO_v2.json
+```
+
+## Python
 ```bash
 #!/usr/bin/python3
 
@@ -57,7 +72,9 @@ response = requests.get(endpoint, params=parameters)
 print(response.json())
 ```
 
-Windows
+## Windows
+
+Deprecated stations:
 ```bash
 curl -Headers @{"accept"="application/json"}  'http://influxdb.canair.io:8086/query?db=canairio' -Body @{"q" = 'select * from "PM2.5_BOG_TUN_EstacionTunal" WHERE time >= now() - 12h'}  -OutFile PM2.5_BOG_TUN_EstacionTunal.json
 ```
