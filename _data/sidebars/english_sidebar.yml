@@ -49,6 +49,10 @@ entries:
       url: /canairio_co2.html
       output: web, pdf 
 
+    - title: CanAirIO M5Stack
+      url: /canairio_m5stack.html
+      output: web, pdf 
+
   - title: Sensors
     output: web, pdf
 
