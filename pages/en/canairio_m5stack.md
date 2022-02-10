@@ -39,9 +39,24 @@ Plus the current features of CanAirIO firmware, the M5StickC Plus has the next e
 We already have a super easy way for **install CanAirIO** firmware on any compatible ESP32 board like a **M5Stack** boards in a few seconds. A little video demostration: 
 
 [![canairio_m5stickcplus](https://user-images.githubusercontent.com/423856/152767232-81c11957-26f0-4a83-bf63-6a4bee41a168.gif)](https://youtu.be/TdX1AZ4PzBA)  
-[full video](https://youtu.be/TdX1AZ4PzBA)  
 
 More info in [canair.io/installer](https://canair.io/installer.html).  Other alternatives for upload the CanAirIO firmware, [here](https://canair.io/docs/firmware_upload.html).
+
+## CanAirIO Sensors Lib only
+
+The next some another M5Stack devices that only have the integration with our sensors library.
+
+### M5CoreInk
+
+[![M5CoreInk Basic Air Quality station](/docs/images/m5_coreink_youtube.jpg)](https://www.youtube.com/watch?v=i15iEF47CbY)  
+
+This a basic air quality station with the possibility to have many sensors. The full source code and documentation [here](https://github.com/hpsaturn/co2_m5coreink)
+
+### M5Atom Lite
+
+In the CanAirIO Sensors lib also is supported this core. Please see the example of the library [here](https://github.com/kike-canaries/canairio_sensorlib/tree/master/examples/m5atom). We are close to have a complete CanAirIO firmware release for this core.
+
+---
 
 
 {% include links.html %}
