@@ -21,8 +21,6 @@ folder: en
 
 CanAirIO M5Stack contains special support for these kind of boards and devices. We this development we are trying to improve an easy way on the building of mobile and fixed stations for CanAirIO Air Quality network.  
 
-## Basic connection
-
 ## Advantages
 
 ![CanAirIO M5Stack devices](/docs/images/m5_devices_collage.jpg)
