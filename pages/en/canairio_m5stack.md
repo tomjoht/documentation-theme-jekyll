@@ -40,6 +40,13 @@ We already have a super easy way for **install CanAirIO** firmware on any compat
 
 More info in [canair.io/installer](https://canair.io/installer.html).  Other alternatives for upload the CanAirIO firmware, [here](https://canair.io/docs/firmware_upload.html).
 
+## Hardware accesories recommended
+
+- [Grove Hub](https://shop.m5stack.com/products/mini-hub-module): for support multiple I2C sensors
+- [Grove wires](https://shop.m5stack.com/products/4pin-buckled-grove-cable): wires for build your sensors
+- [M5CoreInk Proto](https://shop.m5stack.com/products/coreink-proto-base): possibility for put your sensors without wires
+- [M5 Grove port](https://shop.m5stack.com/products/connector-grove-to-grove-pin-servo): for put in other main boards for example ESP32 dev boards.
+
 ## CanAirIO Sensors Lib only
 
 The next some another M5Stack devices that only have the integration with our sensors library.
