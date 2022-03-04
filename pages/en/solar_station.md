@@ -16,7 +16,7 @@ folder: en
 
 ## Overview
 
-CanAirIO now have power saving settings thanks to the collaboration and feedback from the community. With these modes and the addition of minimal hardware we could have a solar station.
+CanAirIO now have power saving settings thanks to the collaboration and feedback from the community. With these modes and the addition of minimal hardware we could have a solar station. Please note that the current status of this solution is **testing** but we have two stations working well.
 
 ## Power saving settings
 
@@ -37,6 +37,24 @@ If you want reconnected to the device, maybe the more easy way is: `unpair -> sc
 <a href="https://canair.io/docs/pdf/schematic_canairio_solar_station.pdf" target="_blank"><img src="images/solar_station_schematics.jpg" width="480" ></a>
 
 Design and image credits by [@Roberbike](https://github.com/roberbike)
+
+## Components
+
+Main parts that you need are the next, but maybe you could have this components in different shops.
+
+| Part Ref   | Quantaty | Shop |
+|:-------- |:-------------:|:---------------:| 
+| Solar panel 5W or 10W or similar * | 1 | [Amazon](https://amzn.to/3HHtbRl) |
+| Solar controller | 1 | [Aliexpress](https://www.aliexpress.com/item/32779467674.html) |
+| Sensirion SPS30 or GCJA-5 I2C sensor **| 1 | [Aliexpress](https://www.aliexpress.com/item/1005002017660217.html), [Mouser](https://www.mouser.de/ProductDetail/403-SPS30) |
+|AM2320 or similar I2C sensor| 1 | [Mouser](https://www.mouser.de/ProductDetail/485-3721) |
+| Step Up DC-DC to 5v with **enable** | 1 | [Aliexpress](https://www.aliexpress.com/item/32963598972.html) |
+| Battery 650-800 mAh 3.7v or bigger *** | 1 | [Aliexpress](https://www.aliexpress.com/item/4001065181282.html) |
+
+\* Maybe for some zones on the earth with 5W it is enough but maybe 10W will be works fine on all places  
+** is possible a different sensors via UART for example Plantower sensors  
+*** With more capacity maybe it works fine on weeks without any sun radiation
+
 
 ## Tested boards
 
