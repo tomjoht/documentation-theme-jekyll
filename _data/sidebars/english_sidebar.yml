@@ -53,6 +53,10 @@ entries:
       url: /canairio_m5stack.html
       output: web, pdf 
 
+    - title: Solar Station
+      url: /solar_station.html
+      output: web, pdf 
+
   - title: Sensors
     output: web, pdf
 
