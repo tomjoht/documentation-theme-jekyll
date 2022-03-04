@@ -28,9 +28,10 @@ We have some device version alternatives with some guides:
 
 | Device version    | Difficulty |  Status | Links  |
 | :------------- |:--------:| :-----------: | :-----------: |
-|  CanAirIO Bike   | Medium | New | [Complete guide][15] |
-|  CanAirIO CO2   | Medium | New | [Complete guide][16] |
-|  CanAirIO M5Stack   | Easy | New | [Complete guide][17] |
+|  CanAirIO Bike   | Medium | New | [Complete guide and video][15] |
+|  CanAirIO CO2   | Medium | New | [Complete guide and video][16] |
+|  CanAirIO M5Stack   | Easy | New | [Basic guide][17] |
+|  CanAirIO Solar Station | Medium | New | [Basic guide][18] |
 |  CanAirIO without soldering (EN)  | Easy | Outdated |  [Complete guide and video][10] |
 |  CanAirIO without soldering (ES)  | Easy | Outdated | [Complete guide and video][11] |
 |  CanAirIO device v2.1 (EN)  | Medium | Outdated | [Complete guide and video][12] |
@@ -45,6 +46,7 @@ We have some device version alternatives with some guides:
 [15]: https://canair.io/docs/canairio_bike.html
 [16]: https://canair.io/docs/canairio_co2.html
 [17]: https://canair.io/docs/canairio_m5stack.html
+[18]: https://canair.io/docs/solar_station.html
 
 {% include links.html %}
 
