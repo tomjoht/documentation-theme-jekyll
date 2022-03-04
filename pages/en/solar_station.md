@@ -38,6 +38,23 @@ If you want reconnected to the device, maybe the more easy way is: `unpair -> sc
 
 Design and image credits by [@Roberbike](https://github.com/roberbike)
 
+## Tested boards
+
+We are testing some comercial and cheapers boards, for example the TTGO T7 v1.5 its a good board because you only need remove the power LED to have a good performance.
+
+| Board  	| Firmware rev  	| A (Deep sleep)  	| A (Execution)  	| A (pico)
+|---	|---	|:---:	|:---:|:---:	|
+| TTGO TDisplay  	    | rev940 (Solar) | 179uA   	| ~160mA  	| 280mA |
+| TTGO TDisplay  	    | rev877 (Prod)  | 180uA  	| ~240mA  	| 300mA |
+| TTGO TDisplay  	    | rev882 (Dev)   | 183uA  	| ~240mA   	| 340mA |
+| ESP32 WROOM-32  	    | rev940 (Solar) | 56uA   	| ~70mA   	| 110mA |
+| TTGO T7 v1.3  	    | rev940 (Solar) | 5mA  	| ~80mA   	| 110mA |
+| TTGO T7 v1.3 No-LED   | rev940 (Solar) | 4.7mA  	| ~80mA   	| 330mA |
+| TTGO T7 v1.5 No-LED  	| rev906 (dev) | 135uA  	| ~80mA  	| 110mA |
+| TTGO T-OI PLUS No-LED | rev906 (dev) | 22uA |   ~80mA | 110maA |
+| ESP32F                | rev906 (dev)	|11uA	|50-60 mA|180 mA	|
+| M5STACK STAMP PICO  | rev906 (dev)	|474uA	|60-80 mA|140 mA	|
+
 ## 3DPrint models
 
 [GCJA5 air input box](https://github.com/kike-canaries/canairio_firmware/blob/master/box/solar_station_GCJA5/GCJA5_outdoor_input_case.stl)
