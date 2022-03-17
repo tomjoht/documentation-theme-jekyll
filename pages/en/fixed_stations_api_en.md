@@ -369,7 +369,7 @@ The next sections are deprecated. Only use that like a old reference.
 
 The current fixed stations are stored in an InfluxDB database service, each station write a data series time in separated tables. We will change it to different schema soon. For now the next endpoints are enabled.
 
-## Data visualization
+### Data visualization
 
 For now, the shared series time of each stations could be listed in our Grafana dashboard here:
 
@@ -377,7 +377,7 @@ For now, the shared series time of each stations could be listed in our Grafana 
 
 [![Mobile track visualization](/docs/images/grafana_sample.jpg)](http://influxdb.canair.io:8000)
 
-## Data endpoint
+### Data endpoint
 
 Each series time could be fetched via the next endpoint:
 
@@ -390,7 +390,7 @@ the full documentation of InfluxDB query syntax could be consulted [here](https:
 For example:
 
 
-## New schema
+### New schema
 
 We have a new schema, for now the automatic stations are in the main table `fixed_stations_01` and these stations have tags for `mac`, `name` and `geo3`, where `name` is automatic ID.
 
