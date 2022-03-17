@@ -18,40 +18,39 @@ The current mobile tracks recorded for the Android app in mobile station mode, a
 
 ## Data visualization
 
-For now, the shared tracks could be listed in the Android app in the section `public`. The app will showing the last 100 tracks: 
+For now, the shared tracks could be listed in the Android app in the section `reports`. The app will showing the last 100 tracks: 
 
 ![Mobile track visualization](/docs/images/mobile_track_public.jpg)
 
-## Mobile track endpoint
+## Mobile tracks endpoint
 
 Each track could be fetched via the next endpoint:
 
 ```html
-http://canairio.herokuapp.com/tracks/get/ID?output=csv
+api.canair.io:8080/tracks/
 ```
 
-where `ID` is the track name in the app, for example for the first track in the screenshot image abovie, for fetch it in `CSV` format, the track ID is `20210408074648` and the get is:
+where this `ID` parameter is the track name in the app, for example for the first track in the screenshot image above, for fetch it in `JSON` format, the track ID is `20220315134235` and for get it will be:
 
 ```
-http://canairio.herokuapp.com/tracks/get/20210408074648?output=csv
-```
-
-Also you can fetch it in JSON format:
-
-```
-http://canairio.herokuapp.com/tracks/get/20210408074648?output=json
+api.canair.io:8080/tracks/20220315134235
 ```
 
 example output in browser:
 
 ![Mobile track visualization](/docs/images/api_mobile_track_sample.jpg)
 
-## All tracks request
+in the **data** field are the complete track points of this air quality route.
 
-For now we don't have this development, CanAirIO is a opensource initiative and you able to send any pull request for help us in improve our API. For now we have published some backups of last one year, for example:
+## List all tracks
 
-[mobile-tracks-export-20210410.zip](http://influxdb.canair.io:8080/data/mobile-tracks-export-20210410.zip)
+For fetch all possible tracks IDs, you can get it with:
 
+```html
+api.canair.io:8080/tracks/
+```
+
+This endpoint only list all tracks with the basic info but without data, and each ID could used with the previous endpoint described.
 
 {% include links.html %}
 
