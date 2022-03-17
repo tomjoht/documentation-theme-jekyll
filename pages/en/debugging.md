@@ -18,7 +18,7 @@ folder: en
 
 For see the logs from the device, CanAirIO have logs output via USB serial connection. For connected to it, please follow the next steps:
 
-## Frow CanAirIO Web installer
+## From CanAirIO Web installer
 
 [CanAirIO Web installer](https://canair.io/installer) has this functionality, you only should choose your board (install button), select your USB, and press the button **LOGS** like this:
 
