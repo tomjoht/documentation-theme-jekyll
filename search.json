@@ -4,9 +4,9 @@ layout: none
 search: exclude
 ---
 
+{% assign pages = site.html_pages | where_exp: "page", "page.search != 'exclude'"  %}
 [
-{% for page in site.html_pages %}
-{% unless page.search == "exclude" %}
+{% for page in pages %}
 {
 "title": "{{ page.title | escape }}",
 "tags": "{{ page.tags }}",
@@ -15,7 +15,6 @@ search: exclude
 "summary": "{{page.summary | strip }}"
 }
 {% unless forloop.last and site.posts.size < 1 %},{% endunless %}
-{% endunless %}
 {% endfor %}
 
 {% for post in site.posts %}
