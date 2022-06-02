@@ -24,7 +24,7 @@ entries:
     folderitems:
 
     - title: About 
-      url: /security_about.html
+      url: security/security_about.html
       output: web, pdf
       type: homepage
 
@@ -33,7 +33,7 @@ entries:
     folderitems:
 
     - title: About 
-      url: /build_about.html
+      url: build/build_about.html
       output: web, pdf
 
 # Copyright 2021 Google LLC
