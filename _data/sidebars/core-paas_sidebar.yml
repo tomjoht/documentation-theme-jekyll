@@ -1,0 +1,57 @@
+entries:
+- title: sidebar
+  product: Jekyll Doc Theme
+  version: 6.0
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage.html
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage.html
+      output: pdf
+      type: frontmatter
+
+  - title: Core-Paas Getting Starting
+    output: web, pdf
+    folderitems:
+
+    - title: Introduction
+      url: /core-paas_introduction.html
+      output: web, pdf
+      type: homepage
+
+    - title: Journey Overview
+      url: /core-paas-journey-overview.html
+      output: web
+      subfolersitems:
+
+  - title: Core-Paas Access
+    output: web, pdf
+    folderitems:
+
+        - title: GitHub
+          url: /core-paas-access-github.html
+          output: web, pdf
+
+        - title: Build Infrastructure
+          url: /core-paas-access-build-infra.html
+          output: web, pdf
+ 
+        - title: Docker
+          url: /core-paas-access-docker-registries.html
+          output: web, pdf
+
+        - title: Cluster
+          url: /core-paas-access-clusters.html
+          output: web, pdf
+        
+        - title: Provisioning
+          url: /core-paas-access-provision.html
+          output: web, pdf
+        

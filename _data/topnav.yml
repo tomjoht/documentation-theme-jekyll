@@ -30,5 +30,7 @@ topnav_dropdowns:
           url: /p1_landing_page.html
         - title: Product 2
           url: /p2_landing_page.html
+        - title: Core Paas
+          url: /core-paas_introduction.html
 
 # Copyright 2021 Google LLC
