@@ -1,7 +1,7 @@
 ---
 title: "Technical Documentation"
 keywords: sample homepage
-sidebar: mydoc_sidebar
+sidebar: 
 permalink: index.html
 summary: this site is under construction 🛠
 ---

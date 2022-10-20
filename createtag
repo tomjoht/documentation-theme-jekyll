@@ -31,7 +31,7 @@ title: "${title}"
 tagName: ${tag}
 search: exclude
 permalink: tag_${tag}.html
-sidebar: mydoc_sidebar
+sidebar: 
 hide_sidebar: true
 folder: tags
 ---

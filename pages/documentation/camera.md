@@ -1,12 +1,12 @@
 ---
-title: Documentation Template
+title: Camera NYE
 tags: [template]
 type: Component or Entity
 summary: "Template for how to document a system"
 keywords: doc
 sidebar: 
-permalink: doctemplate.html
-folder: doctemplate
+permalink: camera.html
+folder: documentation
 ---
 
 ## Page Title
@@ -19,7 +19,7 @@ Add relevent tags to string docs together
 Is this an entity or component?
 
 ## Summary
-Summarize the goal system
+Summarize the system
 
 ## Dependencies
 What is this entity/component dependent on?

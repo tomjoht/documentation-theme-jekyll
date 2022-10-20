@@ -5,19 +5,5 @@ topnav:
   items:
 
 #Topnav dropdowns
-topnav_dropdowns:
-- title: Topnav dropdowns
-  folders:
-    - title: Products
-      folderitems:
-        - title: Jekyll Documentation Theme
-          url: /mydoc_introduction.html
-        - title: Product 1
-          url: /p1_landing_page.html
-        - title: Product 2
-          url: /p2_landing_page.html
-        - title: Angie
-          url: /angie.html
-        - title: Documentation Template
-          url: /doctemplate.html
+
 # Copyright 2021 Google LLC

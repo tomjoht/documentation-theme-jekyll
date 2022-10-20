@@ -13,7 +13,7 @@ defaults:
       type: "pages"
     values:
       layout: "page_print"
-      comments: true
+      comments: false
       search: true
 
 pdf_sidebar: product2_sidebar

@@ -5,20 +5,19 @@ entries:
   levels: one
   folders:
 
-  - title: Products
+  - title: General
     output: web
     folderitems:
-    - title: News
-      url: /news.html
+    - title: Home
+      url: /index.html
       output: web
-    - title: Theme instructions
-      url: /mydoc_introduction.html
+    - title: Documentation Template
+      url: /doctemplate.html
       output: web
-    - title: Product 1
-      url: /p1_landing_page.html
+  - title: Camera, Character, Controls
+    output: web
+    folderitems:
+    - title: Camera
+      url: /camera.html #change later
       output: web
-    - title: Product 2
-      url: /p2_landing_page.html
-      output: web
-
 # Copyright 2021 Google LLC
