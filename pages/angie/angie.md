@@ -2,7 +2,7 @@
 title: it me, angie
 keywords: angie
 summary: "wow!"
-sidebar: mydoc_sidebar.yml
+sidebar: mydoc_sidebar
 permalink: angie.html
 folder: angie
 ---

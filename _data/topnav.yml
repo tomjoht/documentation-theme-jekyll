@@ -18,5 +18,6 @@ topnav_dropdowns:
           url: /p2_landing_page.html
         - title: Angie
           url: /angie.html
-
+        - title: Documentation Template
+          url: /doctemplate.html
 # Copyright 2021 Google LLC
