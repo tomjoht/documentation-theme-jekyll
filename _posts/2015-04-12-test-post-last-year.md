@@ -1,10 +1,10 @@
 ---
-title:  "Test post from last year"
+title:  "테스트"
 categories: jekyll update
 permalink: test-post-from-last-year.html
 tags: [news]
 ---
 
-This is just a test post from the previous year.
+어디에 표시되는지 알.
 
 {% include links.html %}
