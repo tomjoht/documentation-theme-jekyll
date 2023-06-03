@@ -1,7 +1,7 @@
 ---
 title: About the theme's author
 keywords: documentation theme, jekyll, technical writers, help authoring tools, hat replacements
-last_updated: July 3, 2016
+last_updated: June 3, 2023
 tags: [getting_started]
 summary: "I am using this website for Bioinformatics tutorials."
 sidebar: mydoc_sidebar
