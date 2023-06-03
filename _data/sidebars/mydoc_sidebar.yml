@@ -18,8 +18,13 @@ entries:
       url: /tocpage.html
       output: pdf
       type: frontmatter
+      
+  - title: About the theme author
+    url: /mydoc_about.html
+    output: web, pdf
 
-  - title: Overview
+    
+  - title: ATAC Seq
     output: web, pdf
     folderitems:
 
@@ -32,27 +37,23 @@ entries:
       url: /mydoc_introduction.html
       output: web, pdf
 
-    - title: Supported features
+    - title: FastQC
       url: /mydoc_supported_features.html
       output: web, pdf
 
-    - title: About the theme author
-      url: /mydoc_about.html
-      output: web, pdf
-
-    - title: Support
+    - title: Adapter Trimming
       url: /mydoc_support.html
       output: web, pdf
 
-  - title: Release Notes
+  - title: Alignment
     output: web, pdf
     folderitems:
 
-    - title: 6.0 Release notes
+    - title: PostAlignment Processing
       url: /mydoc_release_notes_60.html
       output: web, pdf
 
-    - title: 5.0 Release notes
+    - title: Peak Calling
       url: /mydoc_release_notes_50.html
       output: web, pdf
 
