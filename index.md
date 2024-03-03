@@ -15,6 +15,8 @@ Follow these instructions to build the theme.
 
 ### 1. Download the theme
 
+Sample words added for testing purposes.
+
 First, download or clone the theme from the [Github repo](https://github.com/tomjoht/documentation-theme-jekyll). Most likely you won't be pulling in updates once you start customizing the theme, so downloading the theme (instead of cloning it) probably makes the most sense. In Github, click the **Clone or download** button, and then click **Download ZIP**.
 
 ### 2. Install Jekyll
