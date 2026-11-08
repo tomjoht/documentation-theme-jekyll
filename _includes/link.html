@@ -1,0 +1,7 @@
+{%- comment -%}
+Outputs a link to a site URL from a sidebar, topnav, or other data file.
+Pass the URL as include.url, such as /mydoc_introduction.html or
+/product1/overview.html. Only the leading slash is removed, so URLs in
+subfolders keep their path. Requires {% include root.html %} earlier in the page.
+{%- endcomment -%}
+{{- root -}}{{- include.url | prepend: "/" | replace_first: "//", "/" | remove_first: "/" -}}

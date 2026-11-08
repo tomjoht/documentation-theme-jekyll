@@ -6,3 +6,4 @@ _pdf
 .idea
 vendor/
 .bundle/
+.jekyll-cache/

@@ -1,0 +1,27 @@
+{% comment %}
+Comments use giscus (https://giscus.app), which stores comments in GitHub
+Discussions. They appear only when you fill in the giscus settings in
+_config.yml. To hide comments on a single page, set comments: false in the
+page's front matter.
+{% endcomment %}
+{% if site.giscus.repo and site.giscus.repo_id and site.giscus.category_id %}
+{% unless page.comments == false %}
+<div class="comments">
+<script src="https://giscus.app/client.js"
+        data-repo="{{ site.giscus.repo }}"
+        data-repo-id="{{ site.giscus.repo_id }}"
+        data-category="{{ site.giscus.category | default: "Comments" }}"
+        data-category-id="{{ site.giscus.category_id }}"
+        data-mapping="{{ site.giscus.mapping | default: "pathname" }}"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="{{ site.giscus.theme | default: "light" }}"
+        data-lang="{{ site.lang | default: "en" }}"
+        crossorigin="anonymous"
+        async>
+</script>
+</div>
+{% endunless %}
+{% endif %}

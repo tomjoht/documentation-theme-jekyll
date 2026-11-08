@@ -1,6 +1,7 @@
 ---
 layout: default
 ---
+{% include root.html %}
 <article class="post" itemscope itemtype="https://schema.org/BlogPosting">
 
     <header class="post-header">
@@ -9,7 +10,7 @@ layout: default
             {% assign projectTags = site.data.tags.allowed-tags %}
             {% for tag in page.tags %}
             {% if projectTags contains tag %}
-            <a href="{{ "tag_" | append: tag | append: ".html"}}">{{tag}}</a>{% unless forloop.last %}, {% endunless%}
+            <a href="{{ root }}tag_{{ tag }}.html">{{tag}}</a>{% unless forloop.last %}, {% endunless%}
             {% endif %}
             {% endfor %}
             {% endif %}
@@ -32,7 +33,7 @@ layout: default
 
 </article>
 
-{% include commento.html %}
+{% include comments.html %}
 
 {{site.data.alerts.hr_shaded}}
 

@@ -6,6 +6,8 @@ sidebar: mydoc_sidebar
 folder: mydoc
 ---
 
+{% include note.html content="Some of the version numbers and paths on this page are dated. For current instructions, see <a href='https://jekyllrb.com/docs/installation/windows/'>Jekyll on Windows</a> in the Jekyll documentation. The theme works with Ruby 3.0 and later." %}
+
 {% include tip.html content="For a better terminal emulator on Windows, use [Git Bash](https://git-for-windows.github.io/). Git Bash gives you Linux-like control on Windows." %}
 
 ## Install Ruby and Ruby Development Kit

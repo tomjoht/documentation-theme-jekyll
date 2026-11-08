@@ -8,6 +8,8 @@ permalink: mydoc_install_jekyll_on_mac.html
 folder: mydoc
 ---
 
+{% include note.html content="Some of the version numbers and paths on this page are dated. For current instructions, see <a href='https://jekyllrb.com/docs/installation/macos/'>Jekyll on macOS</a> in the Jekyll documentation. The theme works with Ruby 3.0 and later." %}
+
 ## Ruby and RubyGems
 
 Ruby and [RubyGems](https://rubygems.org/pages/download) are usually installed by default on Macs. Open your Terminal and type `which ruby` and  `which gem` to confirm that you have Ruby and Rubygems. You should get a response indicating the location of Ruby and Rubygems.

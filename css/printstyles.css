@@ -157,3 +157,8 @@ h1 { string-set: doctitle content() }
 pre {
     background-color: #fafafa;
 }
+
+/* Hide PDF download buttons inside the PDF itself */
+.pdf-download {
+    display: none !important;
+}

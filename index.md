@@ -7,7 +7,7 @@ permalink: index.html
 summary: These brief instructions will help you get started quickly with the theme. The other topics in this help provide additional information and detail about working with other aspects of this theme and Jekyll.
 ---
 
-{% include note.html content="If you're cloning this theme, you're probably writing documentation of some kind. I have a blog on technical writing here called <a alt='technical writing blog' href='http://idratherbewriting.com'>I'd Rather Be Writing</a>. If you'd like to stay updated with the latest trends, best practices, and other methods for writing documentation, consider <a href='https://tinyletter.com/tomjoht'>subscribing</a>. I also have a site on <a href='http://idratherbewriting.com/learnapidoc'>writing API documentation</a>." %}
+{% include note.html content="If you're cloning this theme, you're probably writing documentation of some kind. I have a blog on technical writing here called <a alt='technical writing blog' href='http://idratherbewriting.com'>I'd Rather Be Writing</a>. If you'd like to stay updated with the latest trends, best practices, and other methods for writing documentation, consider <a href='https://idratherbewriting.com/newsletter/'>subscribing</a>. I also have a site on <a href='https://idratherbewriting.com/learnapidoc'>writing API documentation</a>." %}
 
 ## Build the Theme
 
@@ -15,73 +15,100 @@ Follow these instructions to build the theme.
 
 ### 1. Download the theme
 
-First, download or clone the theme from the [Github repo](https://github.com/tomjoht/documentation-theme-jekyll). Most likely you won't be pulling in updates once you start customizing the theme, so downloading the theme (instead of cloning it) probably makes the most sense. In Github, click the **Clone or download** button, and then click **Download ZIP**.
+First, get a copy of the theme from the [GitHub repo](https://github.com/tomjoht/documentation-theme-jekyll). You have three options:
 
-### 2. Install Jekyll
+* **Use this template.** On GitHub, click **Use this template** > **Create a new repository**. This gives you your own repository with a copy of the theme files and no shared history.
+* **Download a ZIP.** Click **Code** > **Download ZIP**, and then unzip the file into the folder where you want your project to live.
+* **Clone the repo.** Run `git clone https://github.com/tomjoht/documentation-theme-jekyll.git`.
 
-If you've never installed or run a Jekyll site locally on your computer, follow these instructions to install Jekyll:
+Most likely you won't pull in updates once you start customizing the theme, so a template copy or a ZIP download usually makes more sense than a clone.
+
+The theme is a complete Jekyll project, not a gem-based theme, so the downloaded folder *is* your site. The sample content lives in pages/mydoc, pages/product1, and pages/product2, and the matching sidebars live in \_data/sidebars. When you're ready, replace that sample content with your own. See [Move an existing site into the theme](#migrate) if you already have content in another Jekyll site.
+
+### 2. Install Ruby and Jekyll
+
+If you've never installed or run a Jekyll site locally on your computer, follow these instructions to install Ruby and Jekyll:
 
 * [Install Jekyll on Mac][mydoc_install_jekyll_on_mac]
 * [Install Jekyll on Windows][mydoc_install_jekyll_on_windows]
+* [Install Jekyll on Linux][mydoc_install_jekyll_on_linux]
+
+The theme works with Ruby 3.0 and later. If you'd rather not install Ruby at all, skip ahead to [Running the site in Docker](#docker).
 
 ### 3. Install Bundler
 
-In case you haven't installed Bundler, install it:
+Recent versions of Ruby include [Bundler](https://bundler.io/). If you don't have it, install it:
 
 ```
 gem install bundler
 ```
 
-You'll want [Bundler](http://bundler.io/) to make sure all the Ruby gems needed work well with your project. Bundler sorts out dependencies and installs missing gems or matches up gems with the right versions based on gem dependencies.
+Bundler makes sure all the Ruby gems your project needs are installed at versions that work together. The gems are listed in the project's Gemfile, and the exact versions are recorded in Gemfile.lock.
 
-### 4. Option 1: Build the Theme (*without* the github-pages gem) {#option1}
+### 4. Option 1: Build the Theme with the github-pages gem (default) {#option2}
 
-Use this option if you're not planning to publish your Jekyll site using [Github Pages](https://pages.github.com/).
+The Gemfile in the theme uses the [github-pages gem](https://github.com/github/pages-gem), which installs the same versions of Jekyll and its plugins that [GitHub Pages](https://pages.github.com/) uses. Use this option if you publish on GitHub Pages, or if you aren't sure yet.
 
-Bundler's Gemfile specifies how project dependencies are managed. Although this project includes a Gemfile, this theme doesn't have any dependencies beyond core Jekyll. The Gemfile is used to list gems needed for publishing on Github Pages. **If you're not planning to have Github Pages build your Jekyll project, delete these two files from the theme's root directory:**
-
-* Gemfile
-* Gemfile.lock
-
-If you've never run Jekyll on your computer (you can check with `jekyll --version`), you may need to install the jekyll gem:
+Change directories (`cd`) to where you downloaded the project, and install the gems:
 
 ```
-gem install jekyll
+bundle install
 ```
 
-Now run jekyll serve (first change directories (`cd`) to where you downloaded the project):
-
-```
-jekyll serve
-```
-
-### 4. Option 2: Build the Theme (*with* the github-pages gem) {#option2}
-
-If you *are* in fact publishing on Github Pages, leave the Gemfile and Gemfile.lock files in the theme.The Gemfile tells Jekyll to use the github-pages gem. **However, note that you cannot use the normal `jekyll serve` command with this gem due to dependency conflicts between the latest version of Jekyll and Github Pages** (which are noted [briefly here](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/)).
-
-You need Bundler to resolve these dependency conflicts. Use Bundler to install all the needed Ruby gems:
-
-```
-bundle update
-```
-
-Then *always* use this command to build Jekyll:
+Then build and preview the site:
 
 ```
 bundle exec jekyll serve
 ```
 
-If you want to shorten this long command, you can put this code in a file such as jekyll.sh (on a Mac) and then simply type `. jekyll.sh` to build Jekyll.
+Open [http://127.0.0.1:4000](http://127.0.0.1:4000) in your browser. Jekyll rebuilds the site whenever you save a file.
 
-## Running the site in Docker
+{% include tip.html content="Always put `bundle exec` in front of `jekyll` commands. It makes Jekyll use the gem versions in Gemfile.lock instead of whatever versions happen to be installed on your computer." %}
 
-You can also use Docker to directly build and run the site on your local machine. Just clone the repo and run the following from your working dir:
+### 4. Option 2: Build the Theme with the latest Jekyll {#option1}
+
+If you publish somewhere other than GitHub Pages (such as Netlify, GitLab Pages, or your own server), you can use the latest version of Jekyll instead. Open the Gemfile, comment out the `github-pages` line, and uncomment the `jekyll` line:
+
+```ruby
+# gem "github-pages", group: :jekyll_plugins
+gem "jekyll", "~> 4.3"
 ```
-docker-compose build --no-cache && docker-compose up
-```
-The site should now be running at [http://localhost:4000/](http://localhost:4000/).
 
-This is perhaps the easiest way to see how your site would actually look.
+Then delete Gemfile.lock and run the same commands as before:
+
+```
+bundle install
+bundle exec jekyll serve
+```
+
+## Running the site in Docker {#docker}
+
+You can also use Docker to build and run the site without installing Ruby. Install [Docker Desktop](https://www.docker.com/products/docker-desktop/) (or Docker Engine with the compose plugin), and then run this command from the project folder:
+
+```
+docker compose up
+```
+
+The first run takes a few minutes while Docker builds the image. When it finishes, the site is running at [http://localhost:4000/](http://localhost:4000/), and it rebuilds when you save a file. Press Ctrl+C to stop it.
+
+The build.sh and watch.sh scripts are shortcuts for the same thing. `./build.sh` builds the site into \_site, and `./watch.sh 4001` serves it on a different port.
+
+If you change the Gemfile, rebuild the image with `docker compose build`.
+
+## Move an existing site into the theme {#migrate}
+
+Because the theme is a full Jekyll project rather than a gem-based theme, you move your content into the theme instead of applying the theme to your site. The general steps are as follows:
+
+1.  Download the theme into a new folder, and build it once to make sure it works.
+2.  Copy your Markdown files into a folder inside pages, such as pages/myproduct.
+3.  In each file's front matter, set `sidebar`, `permalink`, and, optionally, `tags` and `summary`. See [Page frontmatter](#page-frontmatter).
+4.  Create a sidebar file for your pages in \_data/sidebars, and add its name to the `sidebars` list in \_config.yml.
+5.  Update \_config.yml with your site title, `topnav_title`, `github_editme_path`, and other settings.
+6.  Delete the sample content you don't need from pages/mydoc, pages/product1, pages/product2, and \_data/sidebars.
+
+Your old theme's layouts and includes won't carry over. If your pages use custom includes, copy them into \_includes and check that they still render as expected.
+
+{% include note.html content="The theme doesn't work as a gem-based theme or with `remote_theme` yet. Jekyll only copies a remote theme's \_layouts, \_includes, \_sass, and assets folders, and this theme keeps its stylesheets and scripts in the css and js folders, so pages would build without any styling." %}
 
 ## Configure the sidebar
 
@@ -105,9 +132,9 @@ permalink: mydoc_alerts
 
 The `sidebar: mydoc_sidebar` refers to the \_data/sidebars/mydoc_sidebar.yml file.
 
-Note that your sidebar can only have 2 levels (expand the **Tag archives** option to see an example of the second level). Given that each product has its own sidebar, this depth should be sufficient (it's really like 3 levels). Deeper nesting goes against usability recommendations.
+The sidebar supports three levels: folders, the items inside folders, and subfolders inside items (expand the **Tag archives** option to see an example of the deepest level). Deeper nesting isn't supported. Given that each product has its own sidebar, this depth should be sufficient, and deeper nesting goes against usability recommendations anyway.
 
-You can optionally turn off the sidebar on any page (e.g. landing pages). To turn off the sidebar for a page, you should set the page frontmatter tag as `hide_sidebar: true`.
+You can optionally turn off the sidebar on any page (e.g. landing pages). To turn off the sidebar for a page, set `hide_sidebar: true` in the page's frontmatter. Setting `sidebar: none` (or any name that doesn't match a file in \_data/sidebars) does the same thing. Either way, the content spans the full width of the page, and the **Nav** toggle disappears from the top navigation.
 
 If you don't declare a sidebar, the `home_sidebar` file gets used as the default because this is the default specified in the config file:
 
@@ -231,9 +258,24 @@ entries:
 
 Each `folder` or `subfolder` must contain a `title` and `output` property. Each `folderitem` or `subfolderitem` must contain a `title`, `url`, and `output` property.
 
+If you want a top-level item that links straight to a page instead of opening a folder, give the folder a `url` and leave out `folderitems`:
+
+```yaml
+  folders:
+  - title: Overview
+    url: /overview.html
+    output: web
+```
+
+URLs must start with a slash. They can point to pages in subfolders, such as `/product1/install/overview.html`.
+
+The `version` value appears next to the product name at the top of the sidebar. If you'd rather keep the version in one place, leave `version` out of the sidebar file and set `project_version` in \_config.yml instead. (Sidebar files are data files, so Liquid such as `{% raw %}{{site.version}}{% endraw %}` inside them isn't processed.)
+
+If you want **Collapse All** and **Expand All** links below the sidebar, set `sidebar_expand_controls: true` in \_config.yml.
+
 The two outputs available are `web` and `pdf`. (Even if you aren't publishing PDF, you still need to specify `output: web`).
 
-The YAML syntax depends on exact spacing, so make sure you follow the pattern shown in the sample sidebars. See my [YAML tutorial](mydoc_yaml_tutorial) for more details about how YAML works.
+The YAML syntax depends on exact spacing, so make sure you follow the pattern shown in the sample sidebars. See my [YAML tutorial][mydoc_yaml_tutorial] for more details about how YAML works.
 
 {% include note.html content="If you have just one character of spacing off, Jekyll won't build due to the YAML syntax error. You'll see an error message in your console that says \"Error ... did not find expected key while parsing a block mapping at line 22 column 5. Error: Run jekyll build --trace for more information.\" If you encounter this, it usually refers to incorrect indentation or spacing in the YAML file. See the example mydoc_sidebar.yml file to see where your formatting went wrong." %}
 
@@ -303,13 +345,22 @@ For more detail on the sidebar, see [Sidebar navigation][mydoc_sidebar_navigatio
 
 ## Comments
 
-The theme integrates [Commento.io](https://commento.io/) for comments below pages and posts. (This commenting service doesn't inject controversial tracking ads like Disqus does.) You will need to Commento.io account + plan ($5/month) to authorize Commento with your domain (no other configuration should be required). If you don't want comments, in the \_config.yml file, change the `comments: true` properties (under `defaults`) to `comments: false` in every instance. Then in the commento.html include file (inside \_includes), the `{% raw %}{% unless page.comments == false %} ... {% endunless %}{% endraw %}` logic will not insert the Commentio form.
+Comments are off by default. The theme previously used Commento.io, but that service has shut down, so the theme now supports [giscus](https://giscus.app) instead. Giscus stores comments in GitHub Discussions, so it's free and doesn't add ads or tracking. To turn it on, follow these steps:
+
+1.  Enable Discussions in your GitHub repository's settings.
+2.  Install the [giscus app](https://github.com/apps/giscus) on the repository.
+3.  Go to [giscus.app](https://giscus.app), enter your repository, and choose a discussion category. The page shows the `data-repo-id` and `data-category-id` values you need.
+4.  Uncomment the `giscus` block in \_config.yml and fill in the values.
+
+To hide comments on a single page, add `comments: false` to the page's frontmatter. The logic is in \_includes/comments.html.
 
 ## Relative links and offline viewing
 
-This theme uses relative links throughout so that you can view the site offline and not worry about which server or directory you're hosting it. It's common with tech docs to push content to an internal server for review prior to pushing the content to an external server for publication. Because of the need for seamless transferrence from one host to another, the site has to use relative links.
+This theme uses relative links throughout so that you can view the site offline and not worry about which server or directory you're hosting it. It's common with tech docs to push content to an internal server for review prior to pushing the content to an external server for publication. Because of the need for seamless transferrence from one host to another, the site has to use relative links. The CSS and JavaScript libraries (Bootstrap, jQuery, Font Awesome, and AnchorJS) are stored in the theme too, so pages don't depend on a CDN.
 
 To view pages locally on your machine (without the Jekyll preview server), they need to have the `.html` extension. The `permalink` property in the page's frontmatter (without surrounding slashes) is what pushes the files into the root directory when the site builds.
+
+Pages can also live in subfolders, such as `permalink: /product1/install/overview.html`. The theme works out how deep each page is and adds the right number of `../` segments in front of its stylesheets, scripts, and navigation links. For details, see [Links from pages in subfolders](mydoc_hyperlinks.html#links-from-pages-in-subfolders).
 
 ## Page frontmatter
 
@@ -337,13 +388,13 @@ Values for `tags` must be defined in your \_data/tags.yml list. You also need a 
 
 If you don't want the mini-TOC to show on a page (such as for the homepage or landing pages), add `toc: false` in the frontmatter.
 
-The `permalink` value should be the same as your filename and include the ".html" file extension.
+The `permalink` value should usually be the same as your filename and include the ".html" file extension. If you want the URL to include a folder, include the folder in the permalink, such as `permalink: /product1/overview.html`.
 
 For more detail, see [Pages][mydoc_pages].
 
 ## Where to store your documentation topics
 
-You can store your files for each product inside subfolders following the pattern shown in the theme. For example, product1, product2, etc, can be stored in their own subfolders inside the \_pages directory. Inside \_pages, you can store your topics inside sub-subfolders or sub-sub-folders to your heart's content. When Jekyll builds your site, it will pull the topics into the root directory and use the permalink for the URL.
+You can store your files for each product inside subfolders following the pattern shown in the theme. For example, product1, product2, etc, can be stored in their own subfolders inside the pages directory. Inside pages, you can store your topics inside sub-subfolders or sub-sub-folders to your heart's content. When Jekyll builds your site, it uses each page's permalink for the URL, so a page with `permalink: mydoc_alerts.html` ends up in the root directory no matter which folder it's stored in.
 
 Note that product1, product2, and mydoc are all just sample content to demonstrate how to add multiple products into the theme. You can freely delete that content.
 
@@ -405,7 +456,7 @@ See the topics under "Formatting" in the sidebar for more information.
 
 ## Automated links
 
-If you want to use an automated system for managing links, see [Automated Links][mydoc_hyperlinks.html#automatedlinks]. This approach automatically creates a list of Markdown references to simplify linking.
+If you want to use an automated system for managing links, see [Automated Links](mydoc_hyperlinks.html#automatedlinks). This approach automatically creates a list of Markdown references to simplify linking.
 
 ## Other instructions
 

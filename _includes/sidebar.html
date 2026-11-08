@@ -1,10 +1,24 @@
+{% include root.html %}
 {% assign sidebar = site.data.sidebars[page.sidebar].entries %}
+{% assign sidebar_version = sidebar[0].version | default: site.project_version %}
 
 <ul id="mysidebar" class="nav">
-  <li class="sidebarTitle">{{sidebar[0].product}} {{sidebar[0].version}}</li>
+  <li class="sidebarTitle">{{sidebar[0].product}} {{sidebar_version}}</li>
   {% for entry in sidebar %}
   {% for folder in entry.folders %}
   {% if folder.output contains "web" %}
+  {% assign folder_is_link = false %}
+  {% if folder.url or folder.external_url %}{% unless folder.folderitems %}{% assign folder_is_link = true %}{% endunless %}{% endif %}
+  {% if folder_is_link %}
+  {% comment %} A top-level item without folderitems links straight to a page. {% endcomment %}
+  {% if folder.external_url %}
+  <li><a title="{{folder.title}}" href="{{folder.external_url}}" target="_blank" rel="noopener">{{folder.title}}</a></li>
+  {% elsif page.url == folder.url %}
+  <li class="active"><a title="{{folder.title}}" href="{% include link.html url=folder.url %}">{{folder.title}}</a></li>
+  {% else %}
+  <li><a title="{{folder.title}}" href="{% include link.html url=folder.url %}">{{folder.title}}</a></li>
+  {% endif %}
+  {% else %}
   <li>
       <a title="{{folder.title}}" href="#">{{folder.title}}</a>
       <ul>
@@ -13,12 +27,9 @@
           {% if folderitem.external_url %}
           <li><a title="{{folderitem.title}}" href="{{folderitem.external_url}}" target="_blank" rel="noopener">{{folderitem.title}}</a></li>
           {% elsif page.url == folderitem.url %}
-          <li class="active"><a title="{{folderitem.title}}" href="{{folderitem.url | remove: "/"}}">{{folderitem.title}}</a></li>
-          {% elsif folderitem.type == "empty" %}
-          <li><a title="{{folderitem.title}}" href="{{folderitem.url | remove: "/"}}">{{folderitem.title}}</a></li>
-
+          <li class="active"><a title="{{folderitem.title}}" href="{% include link.html url=folderitem.url %}">{{folderitem.title}}</a></li>
           {% else %}
-          <li><a title="{{folderitem.title}}" href="{{folderitem.url | remove: "/"}}">{{folderitem.title}}</a></li>
+          <li><a title="{{folderitem.title}}" href="{% include link.html url=folderitem.url %}">{{folderitem.title}}</a></li>
           {% endif %}
           {% for subfolders in folderitem.subfolders %}
           {% if subfolders.output contains "web" %}
@@ -30,9 +41,9 @@
                   {% if subfolderitem.external_url %}
                   <li><a title="{{subfolderitem.title}}" href="{{subfolderitem.external_url}}" target="_blank" rel="noopener">{{subfolderitem.title}}</a></li>
                   {% elsif page.url == subfolderitem.url %}
-                  <li class="active"><a title="{{subfolderitem.title}}" href="{{subfolderitem.url | remove: "/"}}">{{subfolderitem.title}}</a></li>
+                  <li class="active"><a title="{{subfolderitem.title}}" href="{% include link.html url=subfolderitem.url %}">{{subfolderitem.title}}</a></li>
                   {% else %}
-                  <li><a title="{{subfolderitem.title}}" href="{{subfolderitem.url | remove: "/"}}">{{subfolderitem.title}}</a></li>
+                  <li><a title="{{subfolderitem.title}}" href="{% include link.html url=subfolderitem.url %}">{{subfolderitem.title}}</a></li>
                   {% endif %}
                   {% endif %}
                   {% endfor %}
@@ -44,14 +55,13 @@
           {% endfor %}
       </ul>
    </li>
-     {% endif %}
-      {% endfor %}
-      {% endfor %}
-      <!-- if you aren't using the accordion, uncomment this block:
-         <p class="external">
-             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
-         </p>
-         -->
+  {% endif %}
+  {% endif %}
+  {% endfor %}
+  {% endfor %}
+  {% if site.sidebar_expand_controls %}
+  <li class="sidebarControls"><p class="external"><a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a></p></li>
+  {% endif %}
 </ul>
 
 <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->

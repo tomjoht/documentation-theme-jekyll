@@ -1,0 +1,21 @@
+{%- comment -%}
+Sets the `root` variable to the relative path from the current page back to
+the site root, such as "" for /page.html, "../" for /folder/page.html, and
+"../../" for /a/b/page.html. Prefix theme links and assets with {{ root }}
+so that they keep working from pages in subfolders, under any baseurl, and
+when you open the built site from the file system.
+
+The 404 page can be served at any URL, so it uses an absolute path instead.
+{%- endcomment -%}
+{%- assign root = "" -%}
+{%- if page.url == "/404.html" -%}
+  {%- assign root = site.baseurl | append: "/" -%}
+{%- else -%}
+  {%- assign root_parts = page.url | split: "/" -%}
+  {%- assign root_depth = root_parts.size | minus: 2 -%}
+  {%- assign root_last_char = page.url | slice: -1 -%}
+  {%- if root_last_char == "/" -%}{%- assign root_depth = root_depth | plus: 1 -%}{%- endif -%}
+  {%- if root_depth > 0 -%}
+    {%- for i in (1..root_depth) -%}{%- assign root = root | append: "../" -%}{%- endfor -%}
+  {%- endif -%}
+{%- endif -%}

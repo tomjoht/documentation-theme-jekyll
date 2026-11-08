@@ -83,9 +83,9 @@ padding-top: 60px;
 margin-top: -40px
 }
 
+/* No width rule here, so that a width attribute on an image (<img width="200">) is respected. */
 .post-content img {
     margin: 12px 0px 3px 0px;
-    width: auto;
     height: auto;
     max-width: 100%;
     max-height: 100%;
@@ -203,7 +203,8 @@ p.post-meta {font-size: 80%; color: #777;}
     position: absolute;
     top: 40px; /* if you change anything about the nav, you'll prob. need to reset the top and left values here.*/
     left: 20px;
-    z-index: -1;
+    /* A negative z-index put the results behind other layers on mobile browsers, so taps never reached the links. */
+    z-index: 1100;
     width:223px;
     border-left: 1px solid #dedede;
 }
@@ -881,9 +882,9 @@ span.soft {
 }
 
 
+/* No width rule here, so that a width attribute on an image (<img width="200">) is respected. */
 .post-content img {
     margin: 12px 0px 3px 0px;
-    width: auto;
     height: auto;
     max-width: 100%;
     max-height: 100%;
@@ -894,9 +895,9 @@ span.soft {
 }
 
 
+/* No width rule here, so that a width attribute on an image (<img width="200">) is respected. */
 .post-content img {
     margin: 12px 0px 3px 0px;
-    width: auto;
     height: auto;
     max-width: 100%;
     max-height: 100%;
@@ -1199,5 +1200,27 @@ h4.panel-title {
     }
     .collapse.in{
         display:block !important;
+    }
+}
+
+/* Task lists (- [ ] and - [x]) from GitHub-flavored Markdown */
+.post-content ul li.task-list-item {
+    list-style-type: none;
+}
+.post-content ul li.task-list-item input.task-list-item-checkbox {
+    margin: 0 0.4em 0.2em -1.6em;
+    vertical-align: middle;
+}
+
+/* Optional Collapse All | Expand All links in the sidebar (sidebar_expand_controls in _config.yml) */
+#mysidebar li.sidebarControls p {
+    margin: 10px 0 0 15px;
+    font-size: 12px;
+}
+
+/* Hide PDF download buttons when someone prints a page */
+@media print {
+    .pdf-download {
+        display: none !important;
     }
 }

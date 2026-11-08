@@ -2,14 +2,15 @@
     <div class="btn-group">
         <button type="button" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Series Demo <span class="caret"></span></button>
         <ol class="dropdown-menu">
-            {% assign pages = site.pages | sort:"weight"  %}
+            {% include root.html %}
+            {% assign pages = site.pages | where: "series", "ACME series" | sort: "weight" %}
             {% for p in pages %}
             {% if p.series == "ACME series" %}
             {% if p.url == page.url %}
             <li class="active"> → {{p.weight}}. {{p.title}}</li>
             {% else %}
             <li>
-                <a href="{{p.url | remove: "/"}}">{{p.weight}}. {{p.title}}</a>
+                <a href="{% include link.html url=p.url %}">{{p.weight}}. {{p.title}}</a>
             </li>
             {% endif %}
             {% endif %}

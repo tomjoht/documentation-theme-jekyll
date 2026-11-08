@@ -378,12 +378,14 @@ What this does is allow the prince-list.txt and toc.html files to iterate throug
 You can add a download button for your PDF using some Bootstrap button code:
 
 ```html
-<a target="_blank" rel="noopener" class="noCrossRef" href="/pdf/mydoc.pdf"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> PDF Download</button></a>
+<a target="_blank" rel="noopener" class="noCrossRef pdf-download" href="pdf/mydoc.pdf"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> PDF Download</button></a>
 ```
 
 Here's what that looks like:
 
-<a target="\_blank" class="noCrossRef" href={{ "pdf/mydoc.pdf"}}"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> PDF Download</button></a>
+<a target="_blank" rel="noopener" class="noCrossRef pdf-download" href="pdf/mydoc.pdf"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> PDF Download</button></a>
+
+The `pdf-download` class hides the button in the PDF itself and when someone prints the page, since a download button has no use there. The rule is in css/printstyles.css and css/customstyles.css.
 
 ## JavaScript conflicts
 

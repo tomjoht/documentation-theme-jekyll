@@ -1,11 +1,8 @@
-version: '2'
 services:
-  server:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: result/latest
+  jekyll:
+    build: .
     ports:
-      - "4000:4000"
+      - "${PORT:-4000}:4000"
+      - "35729:35729"
     volumes:
-      - ".:/src"
+      - ".:/srv/jekyll"

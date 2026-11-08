@@ -23,14 +23,14 @@ First create an include that contains your series button:
     <div class="btn-group">
         <button type="button" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Series Demo <span class="caret"></span></button>
         <ol class="dropdown-menu">
-            {% assign pages = site.pages | sort:"weight"  %}
+            {% assign pages = site.pages | where: "series", "ACME series" | sort: "weight" %}
             {% for p in pages %}
             {% if p.series == "ACME series" %}
             {% if p.url == page.url %}
             <li class="active"> → {{p.weight}}. {{p.title}}</li>
             {% else %}
             <li>
-                <a href="{{p.url | remove: "/"}}">{{p.weight}}. {{p.title}}</a>
+                <a href="{{p.url | remove_first: "/" }}">{{p.weight}}. {{p.title}}</a>
             </li>
             {% endif %}
             {% endif %}

@@ -64,7 +64,7 @@ search: exclude
 "title": "{{ page.title | escape }}",
 "tags": "{{ page.tags }}",
 "keywords": "{{page.keywords}}",
-"url": "{{ page.url | remove: "/"}}",
+"url": "{{ page.url | remove_first: "/" }}",
 "summary": "{{page.summary | strip }}"
 },
 {% endunless %}

@@ -16,7 +16,7 @@ Use a text editor such as Sublime Text, WebStorm, IntelliJ, Visual Studio Code o
 
 You can store your pages in any folder structures you want, with any level of folder nesting. The site output will pull all of those pages out of their folders and put them into the root directory. Check out the \_site folder, which is where Jekyll is generated, to see the difference between your project's structure and the resulting site output.
 
-The listing of all pages in the root directory (which happens when you add a permalink property to the pages) is what allows the relative linking and offline viewing of the site to work.
+Keeping pages in the root directory is the simplest approach, and it's what the sample content does. However, if you want a page's URL to include a folder, put the folder in the permalink, such as `permalink: /product1/overview.html`. The theme adjusts its relative links for pages at any depth, so relative linking and offline viewing still work. See [Links from pages in subfolders](mydoc_hyperlinks.html#links-from-pages-in-subfolders).
 
 ## Frontmatter
 
@@ -49,7 +49,7 @@ The following table describes each of the frontmatter that you can use with this
 | **last_updated**  | Optional | The date the page was last updated. This information could helpful for readers trying to evaluate how current and authoritative information is. If included, the last_updated date appears in the footer of the page in small font.|
 | **sidebar** | Required | Refers to the sidebar data file for this page. Don't include the ".yml" file extension for the sidebar &mdash; just provide the file name. If no sidebar is specified, this value will inherit the `default` property set in your \_config.yml file for the page's frontmatter. |
 | **summary** | Optional | A 1-2 word sentence summarizing the content on the page. This gets formatted into the summary section in the page layout. Adding summaries is a key way to make your content more scannable by users (check out [Jakob Nielsen's site](http://www.nngroup.com/articles/corporate-blogs-front-page-structure/) for a great example of page summaries.) The only drawback with summaries is that you can't use variables in them. |
-| **permalink**| Required | The permalink *must* match the filename in order for automated links to work. Additionally, you must include the ".html" in the filename. Do not put forward slashes around the permalink (this makes Jekyll put the file inside a folder in the output). When Jekyll builds the site, it will put the page into the root directory rather than leaving it in a subdirectory or putting it inside a folder and naming the file index.html. Having all files flattened in the root directory is essential for relative linking to work and for all paths to JS and CSS files to be valid. |
+| **permalink**| Required | The permalink *must* match the filename in order for automated links to work. Additionally, you must include the ".html" in the filename. Don't put a slash at the end of the permalink, since that makes Jekyll create a folder with an index.html file inside it, and that URL won't open when you view the site offline. When Jekyll builds the site, it puts the page at the path in the permalink, which is the root directory unless the permalink includes a folder (such as `/product1/overview.html`). |
 | **datatable** | Optional | 'true'. If you add `datatable: true` in the frontmatter, scripts for the [jQuery Datatables plugin](https://www.datatables.net/) get included on the page. You can see the scripts that conditionally appear by looking in the \_layouts/default.html page. |
 | **toc** | Optional | If you specify `toc: false` in the frontmatter, the page won't have the table of contents that appears below the title. The toc refers to the list of jump links below the page title, not the sidebar navigation. You probably want to hide the TOC on the homepage and product landing pages.|
 
@@ -178,6 +178,6 @@ You can create other layouts inside the layouts folder. If you create a new layo
 
 ## Comments
 
-Disqus, a commenting system, is integrated into the theme. In the configuration file, specify the Disqus code for the universal code, and Disqus will appear. If you don't add a Disqus value, the Disqus form isn't included.
+The theme supports [giscus](https://giscus.app) comments, which are stored in GitHub Discussions. Comments appear only after you add your giscus settings to \_config.yml. To hide comments on a single page, add `comments: false` to its frontmatter. See [Comments](index.html#comments) for setup steps.
 
 {% include links.html %}

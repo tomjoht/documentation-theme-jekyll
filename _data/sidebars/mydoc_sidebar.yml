@@ -3,7 +3,7 @@
 entries:
 - title: sidebar
   product: Jekyll Doc Theme
-  version: 6.0
+  version: 7.0
   folders:
 
   - title:
@@ -48,6 +48,10 @@ entries:
     output: web, pdf
     folderitems:
 
+    - title: 7.0 Release notes
+      url: /mydoc_release_notes_70.html
+      output: web, pdf
+
     - title: 6.0 Release notes
       url: /mydoc_release_notes_60.html
       output: web, pdf
@@ -70,6 +74,10 @@ entries:
 
     - title: Install Jekyll on Windows
       url: /mydoc_install_jekyll_on_windows.html
+      output: web, pdf
+
+    - title: Install Jekyll on Linux
+      url: /mydoc_install_jekyll_on_linux.html
       output: web, pdf
 
   - title: Authoring

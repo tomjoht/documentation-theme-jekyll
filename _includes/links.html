@@ -1,17 +1,21 @@
+{% include root.html %}
 {% comment %}Get links from each sidebar, as listed in the _config.yml file under sidebars{% endcomment %}
 
 {% for sidebar in site.sidebars %}
 {% for entry in site.data.sidebars[sidebar].entries %}
 {% for folder in entry.folders %}
+{% if folder.url and folder.external_url == null %}
+[{{folder.url | remove: "/"  | remove: ".html"}}]: {% include link.html url=folder.url %}
+{% endif %}
 {% for folderitem in folder.folderitems %}
 {% if folderitem.url contains "html#" %}
-[{{folderitem.url | remove: "/" }}]: {{folderitem.url | remove: "/"}}
+[{{folderitem.url | remove: "/" }}]: {% include link.html url=folderitem.url %}
 {% else %}
-[{{folderitem.url | remove: "/"  | remove: ".html"}}]: {{folderitem.url | remove: "/"}}
+[{{folderitem.url | remove: "/"  | remove: ".html"}}]: {% include link.html url=folderitem.url %}
 {% endif %}
 {% for subfolders in folderitem.subfolders %}
 {% for subfolderitem in subfolders.subfolderitems %}
-[{{subfolderitem.url | remove: "/"  | remove: ".html"}}]: {{subfolderitem.url | remove: "/"}}
+[{{subfolderitem.url | remove: "/"  | remove: ".html"}}]: {% include link.html url=subfolderitem.url %}
 {% endfor %}
 {% endfor %}
 {% endfor %}
@@ -25,7 +29,7 @@
 {% for entry in site.data.topnav.topnav %}
 {% for item in entry.items %}
 {% if item.external_url == null %}
-[{{item.url | remove: "/" | remove: ".html"}}]: {{item.url | remove: "/"}}
+[{{item.url | remove: "/" | remove: ".html"}}]: {% include link.html url=item.url %}
 {% endif %}
 {% endfor %}
 {% endfor %}
@@ -36,7 +40,7 @@
 {% for folder in entry.folders %}
 {% for folderitem in folder.folderitems %}
 {% if folderitem.external_url == null %}
-[{{folderitem.url | remove: "/"  | remove: ".html"}}]: {{folderitem.url | remove: "/"}}
+[{{folderitem.url | remove: "/"  | remove: ".html"}}]: {% include link.html url=folderitem.url %}
 {% endif %}
 {% endfor %}
 {% endfor %}

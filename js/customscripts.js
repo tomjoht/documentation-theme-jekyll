@@ -15,6 +15,12 @@ $( document ).ready(function() {
         placement : 'top'
     });
 
+    // Tooltip links often use href="#" as a placeholder. Without this, tapping one
+    // on a phone follows the link and jumps to the top of the page.
+    $('a[data-toggle="tooltip"][href="#"]').on('click', function(e) {
+        e.preventDefault();
+    });
+
     /**
      * AnchorJS
      */

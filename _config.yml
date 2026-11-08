@@ -18,8 +18,17 @@ github_editme_path: tomjoht/documentation-theme-jekyll/blob/gh-pages/
 # gitlab_editme_path: tomjoht/documentation-theme-jekyll/blob/gh-pages/
 # if you're using GitLab, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
-google_analytics: UA-66296557-1
-# if you have google-analytics ID, put it in. if not, edit this value to blank.
+# google_analytics: G-XXXXXXXXXX
+# if you have a Google Analytics 4 measurement ID (it starts with G-), uncomment the previous line and put it in. Universal Analytics IDs (UA-) no longer collect data.
+
+company_logo: images/company_logo.png
+# the logo in the footer. use a path relative to the site root or a full URL. set to false to hide the logo.
+
+# project_version: 7.0
+# if a sidebar file doesn't set a version, the sidebar shows this value next to the product name instead. this lets you keep the version in one place.
+
+sidebar_expand_controls: false
+# set to true to show Collapse All | Expand All links at the bottom of the sidebar.
 
 host: 127.0.0.1
 # the preview server used. Leave as is.
@@ -30,7 +39,21 @@ port: 4000
 exclude:
   - .idea/
   - .gitignore
+  - .github/
+  - .gitlab-ci.yml
+  - .vscode/
   - vendor
+  - node_modules
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE
+  - LICENSE-BSD-NAVGOCO.txt
+  - Dockerfile
+  - docker-compose.yml
+  - "*.sh"
+  - createtag
+  - var/
 # these are the files and directories that jekyll will exclude from the build
 
 feedback_subject_line: Jekyll documentation theme
@@ -46,6 +69,9 @@ feedback_email: tomjoht@gmail.com
 
 # feedback_link: "http://helpy.io/"
 # if you uncomment the previous line, it changes where the feedback link points to
+
+theme: null
+# GitHub Pages applies its default Primer theme unless you turn it off. This theme doesn't use it, and its assets/css/style.scss file can cause "Invalid US-ASCII character" build errors.
 
 highlighter: rouge
 # library used for syntax highlighting
@@ -72,7 +98,7 @@ defaults:
     values:
       layout: "page"
       comments: true
-      # if you don't want to use Commento.io and just hide comments, change true to false wherever you see the comments property
+      # comments appear only if you configure giscus below. to hide comments on a page, set comments: false in its front matter.
       search: true
       sidebar: home_sidebar
       topnav: topnav
@@ -92,7 +118,6 @@ defaults:
     values:
       layout: "post"
       comments: true
-      # if you don't want to use Commento.io and just hide comments, change true to false wherever you see the comments property
       search: true
       sidebar: home_sidebar
       topnav: topnav
@@ -108,6 +133,13 @@ sidebars:
 
 description: "Intended as a documentation theme based on Jekyll for technical writers documenting software and other technical products, this theme has all the elements you would need to handle multiple products with both multi-level sidebar navigation, tags, and other documentation features."
 # the description is used in the feed.xml file
+
+# giscus:
+#   repo: your-username/your-repo
+#   repo_id: R_xxxxxxxxxx
+#   category: Comments
+#   category_id: DIC_xxxxxxxxxxxxxxx
+# to add comments to pages and posts, enable GitHub Discussions on your repo, get these values from https://giscus.app, and uncomment the giscus block.
 
 # needed for sitemap.xml file only
 # url: http://idratherbewriting.com

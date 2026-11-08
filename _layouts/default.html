@@ -1,7 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ site.lang | default: "en" }}">
 <head>
     {% include head.html %}
+    {% comment %}
+    The sidebar is hidden when the page sets hide_sidebar: true, or when the
+    page's sidebar value doesn't match a sidebar file in _data/sidebars (for
+    example, sidebar: none). When the sidebar is hidden, the content spans the
+    full width and the Nav toggle in the top navigation is hidden.
+    {% endcomment %}
+    {% assign show_sidebar = true %}
+    {% if page.hide_sidebar or site.data.sidebars[page.sidebar] == nil %}
+        {% assign show_sidebar = false %}
+    {% endif %}
     <script>
         $(document).ready(function() {
             // Initialize navgoco with default options
@@ -21,27 +31,26 @@
                 }
             });
 
+            // The accordion option closes the other folders whenever one opens,
+            // so navgoco's own toggle can't expand everything at once. These
+            // handlers open and close the folders directly instead.
             $("#collapseAll").click(function(e) {
                 e.preventDefault();
-                $("#mysidebar").navgoco('toggle', false);
+                $("#mysidebar li:has(ul)").removeClass("active").children("ul").slideUp(200);
             });
 
             $("#expandAll").click(function(e) {
                 e.preventDefault();
-                $("#mysidebar").navgoco('toggle', true);
+                $("#mysidebar li:has(ul)").addClass("active").children("ul").slideDown(200);
             });
 
         });
 
     </script>
     <script>
-        $(function () {
-            $('[data-toggle="tooltip"]').tooltip()
-        })
-    </script>
-    <script>
         $(document).ready(function() {
-            $("#tg-sb-link").click(function() {
+            $("#tg-sb-link").click(function(e) {
+                e.preventDefault();
                 $("#tg-sb-sidebar").toggle();
                 $("#tg-sb-content").toggleClass('col-md-9');
                 $("#tg-sb-content").toggleClass('col-md-12');
@@ -52,8 +61,8 @@
     </script>
     {% if page.datatable == true %}
     <!-- Include the standard DataTables bits -->
-    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
-    <script type="text/javascript" charset="utf8" src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
     <!-- First, this walks through the tables that occur between ...-begin
          and ...-end and add the "datatable" class to them.
          Then it invokes DataTable's standard initializer
@@ -80,13 +89,13 @@
     <!-- Content Row -->
     <div class="row">
         {% assign content_col_size = "col-md-12" %}
-        {% unless page.hide_sidebar %}
+        {% if show_sidebar %}
             <!-- Sidebar Column -->
             <div class="col-md-3" id="tg-sb-sidebar">
                 {% include sidebar.html %}
             </div>
             {% assign content_col_size = "col-md-9" %}
-        {% endunless %}
+        {% endif %}
 
         <!-- Content Column -->
         <div class="{{content_col_size}}" id="tg-sb-content">
@@ -99,10 +108,10 @@
 <!-- /#main -->
     </div>
 
-</body>
 {% if site.google_analytics %}
 {% include google_analytics.html %}
 {% endif %}
+</body>
 </html>
 
 {% comment %} Copyright 2021 Google LLC {% endcomment %}

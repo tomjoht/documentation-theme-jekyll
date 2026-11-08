@@ -14,7 +14,7 @@ If you want to create different outputs for different audiences, you can do all 
 
 But I soon found that having lots of separate outputs for a project was undesirable. If you have 10 different outputs that have different nuances for different audiences, it's hard to manage and maintain. In this latest version of the theme, I consolidated all information into the same output to explicitly do away with the multi-output approach.
 
-As such, the conditional logic won't have as much play as it previously did. Instead of conditions, you'll probably want to incorporate [navtabs](mydoc_navtabs) to split up the information.
+As such, the conditional logic won't have as much play as it previously did. Instead of conditions, you'll probably want to incorporate [navtabs][mydoc_navtabs] to split up the information.
 
 However, you can still of course use conditional logic as needed.
 

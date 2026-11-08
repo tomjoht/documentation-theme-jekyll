@@ -1,10 +1,11 @@
+{% include root.html %}
 <div class="seriesContext">
     <a>
-        {% assign pages = site.pages | sort:"weight"  %}
+        {% assign pages = site.pages | where: "series", "ACME series" | sort: "weight" %}
         {% for pg in pages %}
         {% if pg.series == "ACME series" %}
         {% if pg.weight > page.weight %}
-        <a href="{{pg.url | remove: '/'}}"><button type="button" class="btn btn-primary">Next: {{pg.title}}</button></a>
+        <a href="{% include link.html url=pg.url %}"><button type="button" class="btn btn-primary">Next: {{pg.title}}</button></a>
         {% break %}
         {% endif %}
         {% endif %}
@@ -20,7 +21,7 @@
             <li class="active"> → {{pg.weight}}. {{pg.title}}</li>
             {% else %}
             <li>
-                <a href="{{pg.url | remove: '/'}}">{{pg.title}}</a>
+                <a href="{% include link.html url=pg.url %}">{{pg.title}}</a>
             </li>
             {% endif %}
             {% endif %}
