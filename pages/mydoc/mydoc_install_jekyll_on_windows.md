@@ -1,95 +1,55 @@
 ---
 title: Install Jekyll on Windows
 permalink: mydoc_install_jekyll_on_windows.html
-keywords: jekyll on windows, pc, ruby, ruby dev kit
+keywords: jekyll on windows, pc, ruby, rubyinstaller, devkit
+summary: "On Windows, install Ruby with RubyInstaller (including the DevKit), and then use Bundler to install the gems the theme needs."
 sidebar: mydoc_sidebar
 folder: mydoc
 ---
 
-{% include note.html content="Some of the version numbers and paths on this page are dated. For current instructions, see <a href='https://jekyllrb.com/docs/installation/windows/'>Jekyll on Windows</a> in the Jekyll documentation. The theme works with Ruby 3.0 and later." %}
+## Install Ruby
 
-{% include tip.html content="For a better terminal emulator on Windows, use [Git Bash](https://git-for-windows.github.io/). Git Bash gives you Linux-like control on Windows." %}
+Jekyll is a Ruby program, so you need Ruby first. The theme needs Ruby 3.0 or later.
 
-## Install Ruby and Ruby Development Kit
+1.  Go to the [RubyInstaller downloads page](https://rubyinstaller.org/downloads/).
+2.  Download the recommended installer from the **WITH DEVKIT** list. The DevKit includes the compilers that some gems need when they install.
+3.  Run the installer and accept the defaults. On the last screen, leave the `ridk install` option selected.
+4.  When a command window opens and asks which components to install, press **Enter** to accept the default (MSYS2 and the MINGW development toolchain).
+5.  Open a new command prompt and check the version with `ruby -v`.
 
-First you must install Ruby because Jekyll is a Ruby-based program and needs Ruby to run.
+## Install Bundler and the theme's gems {#bundler}
 
-1. Go to [RubyInstaller for Windows](http://rubyinstaller.org/downloads/).
-2. Under **RubyInstallers**, download and install one of the Ruby installers under the **WITH DEVKIT** list (usually the recommended/highlighted option).
-3. Double-click the downloaded file and proceed through the wizard to install it. Run the `ridk install` step on the last stage of the installation wizard. 
-4. Open a new command prompt window or Git Bash session.
-
-<h2 id="bundler">Install the Jekyll gem</h2>
-
-At this point you should have Ruby and Rubygem on your machine.
-
-Now use `gem` to install Jekyll:
+Recent versions of Ruby include Bundler. If yours doesn't, install it:
 
 ```
-gem install jekyll
+gem install bundler
 ```
 
-You can now use Jekyll to create new Jekyll sites following the quick-start instructions on [Jekyllrb.com](http://jekyllrb.com).
+Then change directories (`cd`) to the theme's folder, install the gems listed in the Gemfile, and start the preview server:
 
-## Installing dependencies through Bundler
+```
+bundle install
+bundle exec jekyll serve
+```
 
-Some Jekyll themes will require certain Ruby gem dependencies. These dependencies are stored in something called a Gemfile, which is packaged with the Jekyll theme. You can install these dependencies through Bundler. (Although you don't need to install Bundler for this Documentation theme, it's a good idea to do so.)
+Open [http://127.0.0.1:4000](http://127.0.0.1:4000) in your browser to see the site.
 
-[Bundler](http://bundler.io/) is a package manager for RubyGems. You can use it to get all the gems (or Ruby plugins) that you need for your Jekyll project.
+The theme's Gemfile already includes the Windows-only gems that Jekyll needs, such as wdm (which watches for file changes) and tzinfo-data (time zone data), so you don't need to edit it.
 
-You install Bundler by using the gem command with RubyGems:
+## Use Git Bash for shell scripts
 
+The theme includes shell scripts such as pdf-mydoc.sh, which don't run in the Windows command prompt. To run them, use [Git Bash](https://gitforwindows.org/), which comes with Git for Windows, or the Windows Subsystem for Linux.
 
-## Install Bundler
+## "No GitHub API authentication" warning {#githuberror}
 
-1. Browse to the directory where you downloaded the Documentation theme for Jekyll.
-2. Delete or rename the existing `Gemfile` and `Gemfile.lock` files.
-3. Install Bundler: `gem install bundler`
-4. Initialize Bundler: `bundle init`
-
-   This will create a new Gemfile.
-
-3. Open the Gemfile in a text editor.
-
-   Typically you can open files from the Command Prompt by just typing the filename, but because Gemfile doesn't have a file extension, no program will automatically open it. You may need to use your File Explorer and browse to the directory, and then open the Gemfile in a text editor such as Notepad.
-
-4. Remove the existing contents. Then paste in the following:
-
-   ```
-   source "https://rubygems.org"
-
-   gem 'wdm'
-   gem 'jekyll'
-   ```
-   The [wdm gem](https://rubygems.org/gems/wdm/versions/0.1.1) allows for the polling of the directory and rebuilding of the Jekyll site when you make changes. This gem is needed for Windows users, not Mac users.
-
-5. Save and close the file.
-6. Type `bundle install`.
-
-   Bundle retrieves all the needed gems and gem dependencies and downloads them to your computer. At this time, Bundle also takes a snapshot of all the gems used in your project and creates a Gemfile.lock file to store this information.
-
-## Git Clients for Windows
-
-Although you can use the default command prompt with Windows, it's recommended that you use [Git Bash](https://git-for-windows.github.io/) instead. The Git Bash client will allow you to run shell scripts and execute other Unix commands. 
-
-## Serve the Jekyll Documentation theme
-
-1. Browse to the directory where you downloaded the Documentation theme for Jekyll.
-2. Type `jekyll serve`
-3. Go to the preview address in the browser. (Make sure you include the `/` at the end.)
-
-   Unfortunately, the Command Prompt doesn't allow you to easily copy and paste the URL, so you'll have to type it manually.
-
-## Resolving Github Metadata errors {#githuberror}
-
-After making an edit, Jekyll auto-rebuilds the site. If you have the Gemfile in the theme with the github-pages gem, you may see the following error:
+When you build the site, you may see this message:
 
 ```
 GitHub Metadata: No GitHub API authentication could be found. Some fields may be missing or have incorrect data.
 ```
 
-If so, you will need to take some additional steps to resolve it. (Note that this error only appears if you have the github-pages gem in your gemfile.) The resolution involves adding a Github token and a cert file.
+The message comes from the jekyll-github-metadata plugin, which the github-pages gem includes. The theme doesn't use any of the data that plugin fetches, so you can ignore the message. If you want to get rid of it, [create a personal access token](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens) on GitHub (it doesn't need any scopes) and set it as a user environment variable named `JEKYLL_GITHUB_TOKEN`.
 
-See this post on [Knight Codes](http://knightcodes.com/miscellaneous/2016/09/13/fix-github-metadata-error.html) for instructions on how to fix the error. You basically generate a personal token on Github and set it as a system variable. You also download a certification file and set it as a system variable. This resolves the issue.
+For more details, see [Jekyll on Windows](https://jekyllrb.com/docs/installation/windows/) in the Jekyll documentation.
 
 {% include links.html %}

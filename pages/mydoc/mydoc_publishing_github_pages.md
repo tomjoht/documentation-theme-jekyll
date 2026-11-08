@@ -1,74 +1,57 @@
 ---
-title: Publishing on Github Pages
+title: Publishing on GitHub Pages
+tags: [publishing]
+keywords: github pages, publishing, hosting, deploy
+last_updated: November 8, 2026
 sidebar: mydoc_sidebar
 permalink: mydoc_publishing_github_pages.html
-summary: "You can publish your project on Github Pages, which is a free web hosting service provided by Github. All you need is to put your content into a Github repo branch called gh-pages and make this your default branch in your repo. With a Jekyll site, you just commit your entire project into the gh-pages branch and Github Pages will build the site for you."
+summary: "You can publish your project on GitHub Pages, a free hosting service from GitHub. Put the theme in a GitHub repository, tell GitHub Pages which branch to publish, and GitHub builds the Jekyll site for you each time you push."
 folder: mydoc
 ---
 
-## Set up your Github repo
+## Create your repository
 
-1. Make sure you have Git installed. You can download and install [Git for Windows here](https://git-scm.com/download/win) and [Git for Mac here](https://git-scm.com/download/mac). If you're on a Mac, chances are you might already have git installed. You can check by opening up a terminal and typing `which git`.{{end}}
-1. Go to [Github.com](http://github.com) and sign up for an account.
-2. Click the **+** button in the upper-right corner and select **New repository**.
-3. Name the repository something like **mydoctheme**.
-4. Type a description..
-5. Select the **Initialize this repository with a README** check box.
-6. Add a license if desired.
-7. Leave the other options at the defaults and click **Create repository**.
-8. Click the **Settings** button.
-9. Go to your repository's home page, and click the branch drop-down menu.
-10. Create a new branch called **gh-pages**.  
-11. Click **Settings** and change the default branch to **gh-pages**.
-11. Go back to your repository's homepage. With the gh-pages branch selected, copy the **https clone url**:
-12. Open a terminal, browse to a convenient location for your project, and type `git clone https://github.com/tomjoht/myreponame.git`, replacing the `https://github.com/tomjoht/myreponame.git` with your repository's https clone URL that you copied.
-13. Move the jekyll theme files into this new folder that you just created in the previous step.
-14. Open the \_config.yml file and add the following:
+The quickest way to start is to make your own copy of the theme on GitHub:
 
-   ```
-   url: tomjoht.github.io
-   baseurl: /myreponame
-   ```
+1.  Sign in to [GitHub](https://github.com).
+2.  Go to the [theme's repository](https://github.com/tomjoht/documentation-theme-jekyll) and click **Use this template** > **Create a new repository**.
+3.  Choose an owner and a repository name, such as **mydocs**, and click **Create repository**.
+4.  Clone your new repository to your computer so you can edit it locally:
 
-   Change the url to your github account name, and the baseurl to your repo name.
+    ```
+    git clone https://github.com/your-username/mydocs.git
+    ```
 
-## Install Bundler
+If you already have the theme files on your computer, you can instead create an empty repository on GitHub and push the files to it.
 
-Bundler is a package manager for Ruby that will install all dependencies you might need to build your site locally. I recommend installing Bundler through homebrew. (Sorry, these instructions apply to Mac only.)
+## Turn on GitHub Pages
 
-1. Install [homebrew](http://brew.sh/):
+1.  In your repository on GitHub, click **Settings** > **Pages**.
+2.  Under **Build and deployment**, set **Source** to **Deploy from a branch**.
+3.  Under **Branch**, select the branch that contains the theme (for example, **main** or **gh-pages**) and the **/ (root)** folder, and then click **Save**.
 
-   ```
-   /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-   ```
-2. Install Bundler:
+GitHub builds the site with the same github-pages gem that the theme's Gemfile uses. After a minute or two, the site appears at `https://your-username.github.io/mydocs/`. You can watch the build's progress on the repository's **Actions** tab.
 
-   ```
-   gem install bundler
-   ```
+You don't need to set `url` or `baseurl` in \_config.yml. The theme uses relative links, so it works at any address, and GitHub Pages sets `baseurl` for you, which the 404 page uses.
 
+## Publish changes
 
-## Add the github pages gem
+Each time you push a commit to the branch you selected, GitHub rebuilds and republishes the site:
 
-1. In terminal, browse to your Jekyll project directory.
-2. Type `bundle init`. This creates a Gemfile and Gemfile.lock in your project.
-3. Type `open gemfile`. This opens the gemfile in your default text editor.
-4. Add the following in the gemfile (replacing the existing contents):
+```
+git add --all
+git commit -m "Update docs"
+git push
+```
 
-   ```
-   source 'https://rubygems.org'
-   gem 'github-pages'
-   ```
+Before you push, it's a good idea to build the site locally with `bundle exec jekyll serve` to check for errors. The theme also includes a GitHub Actions workflow (.github/workflows/build.yml) that builds the site for every pull request, so you can catch errors before you merge.
 
-5. Run `bundle install`.
-14. Add the new jekyll files to git: `git add --all`.
-15. Commit the files: `git commit -m "committing my jekyll theme"`.
-16. Push the files up to your github repo: `git push`.
+## Use a custom domain
 
-Github Pages will now automatically build your site. Wait a minute or two, and then visit tomjoht.github.io/yourreponame, replacing this path with your github account and branch.
+To publish the site at your own domain, such as docs.example.com, go to **Settings** > **Pages**, enter the domain under **Custom domain**, and then add a DNS record with your domain provider. For details, see [Managing a custom domain for your GitHub Pages site](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 
-## Customize your URL
+## Use the latest Jekyll or other plugins
 
-You can also customize your Github URL. More instructions on this later....
+The branch-based build only supports the Jekyll version and plugins on the [GitHub Pages dependency list](https://pages.github.com/versions/). If you need Jekyll 4 or other plugins, set **Source** to **GitHub Actions** instead and use a workflow that builds the site and deploys it. GitHub suggests a Jekyll workflow when you choose that option. See [Using custom workflows with GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
 {% include links.html %}

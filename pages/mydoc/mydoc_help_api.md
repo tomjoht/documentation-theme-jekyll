@@ -85,7 +85,7 @@ The product attribute is required in the frontmatter to distinguish the tooltips
 
 Now it's time to create a JSON file with Liquid code that iterates through our tooltip collection and grabs the information from each tooltip file.
 
-Inside your project's pages directory (e.g., mydoc), add a file called "tooltips.json." (You can use whatever name you want.) Add the following to your JSON file:
+In your project's root directory, add a file called "tooltips.json." (You can use whatever name you want.) Add the following to your JSON file:
 
 {% raw %}
 ```liquid
@@ -138,7 +138,7 @@ You can also view the same JSON file here: <a target="_blank" rel="noopener" hre
 
 You can add different fields depending on how you want the JSON to be structured. Here we just have to fields: `doc_id` and `body`. And the JSON is looking just in the tooltips collection that we created.
 
-{% include tip.html content="Check out [Google's style guide](https://google.github.io/styleguide/jsoncstyleguide.xml) for JSON. These best practices can help you keep your JSON file valid." %}
+{% include tip.html content="Use a JSON validator such as [JSONLint](https://jsonlint.com/) to check that the generated file is valid." %}
 
 Note that you can create different JSON files that specialize in different content. For example, suppose you have some getting started information. You could put that into a different JSON file. Using the same structure, you might add an `if` tag that checks whether the page has frontmatter that says `type: getting_started` or something. Or you could put the content into separate collection entirely (different from tooltips).
 
@@ -164,14 +164,12 @@ If your server setup allows htaccess files to override general server permission
 Header set Access-Control-Allow-Origin "*"
 ```
 
-Store this in the same directory as your project. This is what I've done in a directory on my web host (bluehost.com). Inside http://idratherassets.com/wp-content/apidemos/, I uploaded a file called ".htaccess" with the preceding code.
-
-After I uploaded it, I renamed it to .htaccess, right-clicked the file and set the permissions to 774.
+Store this file in the same directory as your tooltips.json file on the web server.
 
 To test whether your server permissions are set correctly, open a terminal and run the following curl command pointing to your tooltips.json file:
 
 ```
-curl -I http://idratherassets.com/wp-content/apidemos/tooltips.json
+curl -I https://example.com/docs/tooltips.json
 ```
 
 The `-I` command tells cURL to return the request header only.
@@ -242,7 +240,7 @@ The `url` in the demo is relative, but you could equally point it to an absolute
 
 The `each` method looks through all the JSON content to find the item whose `page.id` is equal to `basketball`. It then looks for an element on the page named `#basketball` and adds a `data-content` attribute to that element.
 
-{% include warning.html content="Make sure your JSON file is valid. Otherwise, this method won't work. I use the [JSON Formatter extension for Chrome](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en). When I go to the tooltips.json page in my browser, the JSON content &mdash; if valid &mdash; is nicely formatted (and includes some color coding). If the file isn't valid, it's not formatted and there isn't any color. You can also check the JSON formatting using [JSON Formatter and Validator](http://jsonformatter.curiousconcept.com/). If your JSON file isn't valid, identify the problem area using the validator and troubleshoot the file causing issues. It's usually due to some code that isn't escaping correctly." %}
+{% include warning.html content="Make sure your JSON file is valid. Otherwise, this method won't work. I use the [JSON Formatter extension for Chrome](https://chromewebstore.google.com/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa). When I go to the tooltips.json page in my browser, the JSON content &mdash; if valid &mdash; is nicely formatted (and includes some color coding). If the file isn't valid, it's not formatted and there isn't any color. You can also check the JSON formatting using [JSON Formatter and Validator](http://jsonformatter.curiousconcept.com/). If your JSON file isn't valid, identify the problem area using the validator and troubleshoot the file causing issues. It's usually due to some code that isn't escaping correctly." %}
 
 Why `data-content`? Well, in this case, I'm using [Bootstrap popovers](http://getbootstrap.com/javascript/#popovers) to display the tooltip content. The `data-content` attribute is how Bootstrap injects popovers.
 

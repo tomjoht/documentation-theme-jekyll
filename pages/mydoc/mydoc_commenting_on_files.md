@@ -16,29 +16,21 @@ If you're using the doc as code approach, you might also consider using the same
 
 There's an Edit me button on each page on this theme. This button allows collaborators to edit the content on Github.
 
-Here's the code for that button on the page.html layout for GitHub:
-
+Here's the code for that button in the \_layouts/page.html file:
 
 ```
 {% raw %}{% if site.github_editme_path %}
 
-<a target="_blank" rel="noopener" href="https://github.com/{{site.github_editme_path}}/{{page.folder}}{{page.url | append: ".md"}}{% endif %}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+<a target="_blank" rel="noopener" href="https://github.com/{{site.github_editme_path}}{{page.path}}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
 
 {% endif %}{% endraw %}
 ```
 
-and here for GitLab:
+The `page.path` value is the path to the page's source file, such as pages/mydoc/mydoc_alerts.md.
 
+In your configuration file, set `github_editme_path` to your account, repository, and branch, followed by `/blob/` or `/edit/` and a trailing slash. For example, you might create a branch called "reviews" on your GitHub repo. Then you would add something like this in your configuration file: `github_editme_path: tomjoht/documentation-theme-jekyll/edit/reviews/`. Here "tomjoht" is my GitHub account name, the repo name is "documentation-theme-jekyll", and "reviews" is the branch. Using `/edit/` opens the file in GitHub's editor, while `/blob/` (which the theme uses by default) shows the file first.
 
-```
-{% raw %}{% if site.gitlab_editme_path %}
-
-<a target="_blank" rel="noopener" href="https://github.com/{{site.gitlab_editme_path}}/{{page.folder}}{{page.url | append: ".md"}}{% endif %}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-gitlab fa-lg"></i> Edit me</a>
-
-{% endif %}{% endraw %}
-```
-
-In your configuration file, edit the value for `github_editme_path` (or for Gitlab: `gitlab_editme_path`). For example, you might create a branch called "reviews" on your Github repo. Then you would add something like this in your configuration file for the 'github_editme_path': tomjoht/documentation-theme-jekyll/edit/reviews. Here "tomjoht" is my github account name. The repo name is "documentation-theme-jekyll". The "reviews" name is the branch.
+If your project is on GitLab.com, comment out `github_editme_path` and set `gitlab_editme_path` instead, such as `your-group/your-project/-/blob/main/`. The button then links to gitlab.com with a GitLab icon.
 
 To suppress this button, comment out the `github_editme_path` in the \_config.yml file.
 
@@ -63,6 +55,6 @@ Note that if you're making updates online, those updates will be out of sync wit
 
 ## Prose.io
 
- Prose.io is an overlay on Github that would allow people to make comments in an easier interface. If you simply go to [prose.io](http://prose.io), it asks to authorize your Github account, and so it will read files directly from Github but in the Prose.io interface.
+[Prose.io](https://prose.io) is an editor that works on top of GitHub. When you go to prose.io, it asks you to authorize your GitHub account, and then it reads and edits files directly from your GitHub repo in a simpler interface.
 
  {% include links.html %}

@@ -203,7 +203,7 @@ The sidebar data file uses a specific YAML syntax that you must follow. Follow t
 entries:
 - title: sidebar
   product: Jekyll Doc Theme
-  version: 6.0
+  version: 7.0
   folders:
   - title: Overview
     output: web, pdf
@@ -285,7 +285,7 @@ Each level must have at least one topic before the next level starts. You can't 
 entries:
 - title: sidebar
   product: Jekyll Doc Theme
-  version: 6.0
+  version: 7.0
   folders:
   - title: Overview
     output: web, pdf
@@ -412,7 +412,7 @@ Note that the topnav has two sections: `topnav` and `topnav_dropdowns`. The topn
 
 If you want to generate PDF, you'll need a license for [Prince XML](http://www.princexml.com/). You will also need to [install Prince](http://www.princexml.com/doc/installing/).  You can generate PDFs by product (but not for every product on the site combined together into one massive PDF). Prince will work even without a license, but it will imprint a small Prince image on the first page, and you're supposed to buy the license to use it.
 
-If you're on Windows, install [Git Bash client](https://git-for-windows.github.io/) rather than using the default Windows command prompt.
+If you're on Windows, install [Git Bash client](https://gitforwindows.org/) rather than using the default Windows command prompt.
 
 Open up the css/printstyles.css file and customize the email address (`youremail@domain.com`) that is listed there. This email address appears in the bottom left footer of the PDF output. You'll also need to create a PDF configuration file following the examples shown in the pdfconfigs folder, and also customize some build scripts following the same pattern shown in the root: pdf-product1.sh
 
@@ -422,7 +422,7 @@ See the section on [Generating PDFs][mydoc_generating_pdfs] for more details abo
 
 For blog posts, create your markdown files in the \_posts folder following the sample formats. Post file names always begin with the date (YYYY-MM-DD-title).
 
-The news/news.html file displays the posts, and the news_archive.html file shows a yearly history of posts. In documentation, you might use the news to highlight product features outside of your documentation, or to provide release notes and other updates.
+The pages/news/news.html file displays the posts, and the pages/news/news_archive.html file shows a yearly history of posts. In documentation, you might use the news to highlight product features outside of your documentation, or to provide release notes and other updates.
 
 See [Posts][mydoc_posts] for more information.
 

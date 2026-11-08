@@ -18,7 +18,7 @@ As such, the conditional logic won't have as much play as it previously did. Ins
 
 However, you can still of course use conditional logic as needed.
 
-{% include tip.html content="Definitely check out [Liquid's documentation](http://docs.shopify.com/themes/liquid-documentation/basics) for more details about how to use operators and other liquid markup. The notes here are a small, somewhat superficial sample from the site." %}
+{% include tip.html content="Definitely check out [Liquid's documentation](https://shopify.github.io/liquid/) for more details about how to use operators and other liquid markup. The notes here are a small, somewhat superficial sample from the site." %}
 
 ## Where to store filtering values
 
@@ -66,7 +66,7 @@ You don't need the `elsif` or `else`. You could just use an `if` (but be sure to
 
 ## Or operator
 
-You can use more advanced Liquid markup for conditional logic, such as an `or` command. See [Shopify's Liquid documentation](http://docs.shopify.com/themes/liquid-documentation/basics/operators) for more details.
+You can use more advanced Liquid markup for conditional logic, such as an `or` command. See [Shopify's Liquid documentation](https://shopify.github.io/liquid/basics/operators/) for more details.
 
 For example, here's an example using `or`:
 
@@ -122,26 +122,26 @@ this shows if neither of the above two if conditions are met.
 ```
 {% endraw %}
 
-To use this, I would need to have a \_data folder called options where the `output` property is stored.
+To use this, I would need a data file called options.yml in the \_data folder, with an `output` property in it.
 
 ## Specifying the location for \_data
 
-You can also specify a `data_source` for your data location in your configuration file. Then you aren't limited to simply using `_data` to store your data files.
+You can also specify a `data_dir` for your data location in your configuration file. (Older versions of Jekyll called this setting `data_source`.) Then you aren't limited to simply using `_data` to store your data files.
 
-For example, suppose you have 2 projects: alpha and beta. You might store all the data files for alpha inside data_alpha, and all the data files for beta inside data_beta.
+For example, suppose you have 2 projects: alpha and beta. You might store all the data files for alpha inside \_data_alpha, and all the data files for beta inside \_data_beta.
 
-In your alpha configuration file, specify the data source like this:
+In your alpha configuration file, specify the data directory like this:
 
 ```
-data_source: data_alpha
+data_dir: _data_alpha
 ```
 
 Then create a folder called \_data_alpha.
 
-For your beta configuration file, specify the data source like this:
+For your beta configuration file, specify the data directory like this:
 
 ```
-data_source: data_beta
+data_dir: _data_beta
 ```
 
 Then create a folder called \_data_beta.

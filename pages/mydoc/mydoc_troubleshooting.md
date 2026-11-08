@@ -13,7 +13,7 @@ folder: mydoc
 
 ### Address already in use
 
-When you try to build the site, you get this error in iTerm:
+When you try to build the site, you get this error:
 
 ```
 jekyll 2.5.3 | Error:  Address already in use - bind(2)
@@ -34,17 +34,29 @@ Alternatively, type the following to stop all Jekyll servers:
 kill -9 $(ps aux | grep '[j]ekyll' | awk '{print $2}')
 ```
 
+### cannot load such file -- webrick
+
+If you see `cannot load such file -- webrick (LoadError)` when you run `jekyll serve`, you're using Ruby 3.0 or later with a Gemfile that doesn't include the webrick gem. The theme's Gemfile includes it. If you replaced the Gemfile, add `gem "webrick"` to it and run `bundle install`. Also make sure you run Jekyll with `bundle exec jekyll serve`.
+
+### Invalid US-ASCII character
+
+If the build fails with `Invalid US-ASCII character`, Ruby isn't reading files as UTF-8. This usually happens in Docker containers or CI systems where no locale is set. Set the `LANG` and `LC_ALL` environment variables to `C.UTF-8` (the theme's Dockerfile does this). If the file in the error is assets/css/style.scss, make sure \_config.yml includes `theme: null`, which stops GitHub Pages from adding its default theme's stylesheet.
+
+### GitHub Metadata warning
+
+The message `GitHub Metadata: No GitHub API authentication could be found` is a warning, not an error. The theme doesn't use GitHub metadata, so you can ignore it. To get rid of it, see [Install Jekyll on Mac](mydoc_install_jekyll_on_mac.html#githuberror).
+
 ### shell file not executable
 
-If you run into permissions errors trying to run a shell script file (such as mydoc_multibuild_web.sh), you may need to change the file permissions to make the sh file executable. Browse to the directory containing the shell script and run the following:
+If you run into permissions errors trying to run a shell script file (such as pdf-mydoc.sh), you may need to change the file permissions to make the sh file executable. Browse to the directory containing the shell script and run the following:
 
 ```
-chmod +x build_writer.sh
+chmod +x pdf-mydoc.sh
 ```
 
-## shell file not runnable
+### shell file not runnable
 
-If you're using a PC, rename your shell files with a .bat extension.
+The Windows command prompt can't run .sh files. Run them in [Git Bash](https://gitforwindows.org/) or the Windows Subsystem for Linux instead.
 
 ### "page 0" cross references in the PDF
 
@@ -54,7 +66,7 @@ If it's not a page but rather a file, you need to add a `noCrossRef` class to th
 
 ### The PDF is blank
 
-Check the prince-list.txt file in the output to see if it contains links. If not, you have something wrong with the logic in the prince-list.txt file. Check the conditions.html file in your \_includes to see if the audience specified in your configuration file aligns with the buildAudience in the conditions.html file
+Check the \_site/pdfconfigs/prince-list.txt file in the output to see if it contains links. If not, check that the `pdf_sidebar` value in your PDF configuration file names the right sidebar, and that the items in that sidebar include `pdf` in their `output` property.
 
 ### Sidebar not appearing
 
@@ -68,7 +80,9 @@ pdf_sidebar: product2_sidebar
 
 Make sure each TOC item has an output property that specifies web or pdf.
 
-Understanding how the theme works can be helpful in troubleshooting. The \_includes/sidebar.html file loops through the values in the \_data/sidebar.yml file. There are `if` statements that check whether the conditions (as specified in the conditions.html file) are met. If the sidebar.yml item doesn't have the right output, then it won't get displayed in the sidebar. It would instead get skipped.
+Make sure the page's `sidebar` value matches the name of a file in \_data/sidebars (without the .yml extension). If the value doesn't match any file, or if the page sets `hide_sidebar: true`, the theme hides the sidebar on purpose.
+
+Understanding how the theme works can be helpful in troubleshooting. The \_includes/sidebar.html file loops through the items in the page's sidebar file in \_data/sidebars. Each item's `output` property must include `web` for the item to appear in the web sidebar (or `pdf` for it to appear in the PDF). Items without the right output get skipped.
 
 ### Sidebar isn't collapsed
 

@@ -22,11 +22,11 @@ If you want to exclude a page from search add `search: exclude` in the page's fr
 
 ## Troubleshooting search
 
-You should exclude any files from search that you don't want appearing in the search results. For example, if you have a tooltips.json file or prince-list.txt, don't include it, as the formatting will break the JSON format.
+You should exclude any files from search that you don't want appearing in the search results. For example, files such as tooltips.json and prince-list.txt already have `search: exclude` in their frontmatter, because their contents would break the JSON format.
 
 If any formatting in the search.json file is invalid (in the build), search won't work. You'll know that search isn't working if no results appear when you start typing in the search box.
 
-If this happens, point your browser to your build's search.json file at http://localhost:4000/search.json (or your public github pages site), copy the entire search.json page as it's output on the browser, and then use a [JSON validator](http://jsonlint.com/) to validate the output by pasting what you copied into the validator. Look for the line causing trouble.  It will be highlighted. Edit the file that's causing the problem to either exclude it from the search or fix the syntax so that it doesn't invalidate the JSON. (Note that tabs in the body will invalidate JSON, as will certain characters in the file's front matter.  For example, the summary: cannot have " quotes in it.
+If this happens, point your browser to your build's search.json file at http://localhost:4000/search.json (or your public github pages site), copy the entire search.json page as it's output on the browser, and then use a [JSON validator](https://jsonlint.com/) to validate the output by pasting what you copied into the validator. Look for the line causing trouble.  It will be highlighted. Edit the file that's causing the problem to either exclude it from the search or fix the syntax so that it doesn't invalidate the JSON. (Note that tabs in the body will invalidate JSON, as will certain characters in the file's front matter.  For example, the summary: cannot have " quotes in it.
 
 The search.json file already tries to strip out content that would otherwise make the JSON invalid.
 
@@ -57,17 +57,17 @@ layout: none
 search: exclude
 ---
 
+{% assign pages = site.html_pages | where_exp: "page", "page.search != 'exclude'"  %}
 [
-{% for page in site.pages %}
-{% unless page.search == "exclude" %}
+{% for page in pages %}
 {
 "title": "{{ page.title | escape }}",
 "tags": "{{ page.tags }}",
 "keywords": "{{page.keywords}}",
 "url": "{{ page.url | remove_first: "/" }}",
 "summary": "{{page.summary | strip }}"
-},
-{% endunless %}
+}
+{% unless forloop.last and site.posts.size < 1 %},{% endunless %}
 {% endfor %}
 
 {% for post in site.posts %}
@@ -76,7 +76,7 @@ search: exclude
 "title": "{{ post.title | escape }}",
 "tags": "{{ post.tags }}",
 "keywords": "{{post.keywords}}",
-"url": "{{ post.url }}",
+"url": "{{ post.url | remove_first: "/" }}",
 "summary": "{{post.summary | strip }}"
 }
 {% unless forloop.last %},{% endunless %}
@@ -89,32 +89,32 @@ search: exclude
 The \_includes/topnav.html file then makes use of these values:
 
 ```html
-<li>
+{% raw %}<li>
     <!--start search-->
     <div id="search-demo-container">
         <input type="text" id="search-input" placeholder="{{site.data.strings.search_placeholder_text}}">
         <ul id="results-container"></ul>
     </div>
-    <script src="{{ "js/jekyll-search.js" }}" type="text/javascript"></script>
+    <script src="{{ root }}js/jekyll-search.js" type="text/javascript"></script>
     <script type="text/javascript">
             SimpleJekyllSearch.init({
                 searchInput: document.getElementById('search-input'),
                 resultsContainer: document.getElementById('results-container'),
-                dataSource: '{{ "search.json" }}',
-                searchResultTemplate: '<li><a href="{url}" title="{{page.title | replace: "'", "\"}}">{title}</a></li>',
+                dataSource: '{{ root }}search.json',
+                searchResultTemplate: '<li><a href="{{ root }}{url}" title="{title}">{title}</a></li>',
     noResultsText: '{{site.data.strings.search_no_results_text}}',
             limit: 10,
             fuzzy: true,
     })
     </script>
     <!--end search-->
-</li>
+</li>{% endraw %}
 ```
 
-Where you see `{url}` and `{title}`, the search is retrieving the values for these as specified in the search.json file.
+Where you see `{url}` and `{title}`, the search is retrieving the values for these as specified in the search.json file. The `{% raw %}{{ root }}{% endraw %}` prefix makes the result links work from pages in subfolders.
 
 ## More robust search
 
-Overall, the built-in search only works for small documentation projects. If you have more robust search needs, consider integrating [Google Custom Search](https://cse.google.com/cse/), [Algolia](http://algolia.com), or [Swifttype](http://swiftype.com).
+Overall, the built-in search only works for small documentation projects. If you have more robust search needs, consider integrating [Google Programmable Search](https://programmablesearchengine.google.com/about/), [Algolia DocSearch](https://docsearch.algolia.com/), or a static search library such as [Pagefind](https://pagefind.app/).
 
 {% include links.html %}

@@ -31,7 +31,7 @@ a[href^="http://"]:after, a[href^="https://"]:after {
 
 ## See Font Awesome icons available
 
-Go to the [Font Awesome library](http://fortawesome.github.io/Font-Awesome/icons/) to see the available icons.
+Go to the [Font Awesome library](https://fontawesome.com/v4/icons/) to see the available icons.
 
 The Font Awesome icons allow you to adjust their size by simply adding `fa-2x`, `fa-3x` and so forth as a class to the icon to adjust their size to two times or three times the original size. As vector icons, they scale crisply at any size.
 
@@ -136,7 +136,7 @@ And the result:
 <div class="alert alert-success" role="alert"><i class="fa fa-download fa-lg"></i> This is a special tip about some file to download....</div>
 
 
-Grab the right class name from the [Font Awesome library](http://fortawesome.github.io/Font-Awesome/icons/) and then implement it by following the pattern shown previously.
+Grab the right class name from the [Font Awesome library](https://fontawesome.com/v4/icons/) and then implement it by following the pattern shown previously.
 
 If you want to make your fonts even larger than the 5x style, add a custom style to your stylesheet like this:
 

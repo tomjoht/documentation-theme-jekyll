@@ -13,11 +13,11 @@ folder: mydoc
 
 Posts are typically used for blogs or other news information because they contain a date and are sorted in reverse chronological order.
 
-You create a post by adding a file in the \_posts folder that is named yyyy-mm-dddd-permalink.md, which might be 2016-02-25-my-latest-updates.md. You can use any number of subfolders here that you want.
+You create a post by adding a file in the \_posts folder that is named yyyy-mm-dd-title.md, such as 2016-02-25-my-latest-updates.md. You can use any number of subfolders here that you want.
 
 Posts use the post.html layout in the \_layouts folder when you are viewing the post.
 
-The news.html file in the root directory shows a reverse chronological listing of the 10 latest posts
+The pages/news/news.html file shows a reverse chronological listing of the 10 latest posts, and pages/news/news_archive.html lists all posts by year.
 
 ## Allowed frontmatter
 
@@ -26,10 +26,10 @@ The frontmatter you can use with posts is as follows:
 ```yaml
 ---
 title: My sample post
-tags: content_types
+tags: [content_types]
 keywords: pages, authoring, exclusion, frontmatter
 sidebar: mydoc_sidebar
-permalink: mydoc_pages.html
+permalink: my-sample-post.html
 summary: "This is some summary frontmatter for my sample post."
 ---
 ```
@@ -37,11 +37,11 @@ summary: "This is some summary frontmatter for my sample post."
 | Frontmatter | Required? | Description |
 |-------------|-------------|-------------|
 | **title** | Required | The title for the page |
-| **tags** | Optional | Tags for the page. Make all tags single words, with underscores if needed. Separate them with commas. Enclose the whole list within brackets. Also, note that tags must be added to \_data/tags_doc.yml to be allowed entrance into the page. This prevents tags from becoming somewhat random and unstructured. You must create a tag page for each one of your tags following the sample pattern in the tabs folder. (Tag pages aren't automatically created.)  |
+| **tags** | Optional | Tags for the page. Make all tags single words, with underscores if needed. Separate them with commas. Enclose the whole list within brackets. Also, note that tags must be added to \_data/tags.yml to be allowed entrance into the page. This prevents tags from becoming somewhat random and unstructured. You must create a tag page for each one of your tags following the sample pattern in the pages/tags folder. (Tag pages aren't automatically created.)  |
 | **keywords** | Optional | Synonyms and other keywords for the page. This information gets stuffed into the page's metadata to increase SEO. The user won't see the keywords, but if you search for one of the keywords, it will be picked up by the search engine.  |
 | **sidebar** | Required | Refers to the sidebar data file for this page. Don't include the ".yml" file extension for the sidebar &mdash; just provide the file name. If no sidebar is specified, this value will inherit the `default` property set in your \_config.yml file for the page's frontmatter. |
 | **permalink**| Required | This theme uses permalinks to facilitate the linking. You specify the permalink want for the page, and the \_site output will put the page into the root directory when you publish. Follow the same convention here as you do with page permalinks -- list the file name followed by the .html extension. |
-| **summary** | Optional | A 1-2 word sentence summarizing the content on the page. This gets formatted into the summary section in the page layout. Adding summaries is a key way to make your content more scannable by users (check out [Jakob Nielsen's site](http://www.nngroup.com/articles/corporate-blogs-front-page-structure/) for a great example of page summaries.) The only drawback with summaries is that you can't use variables in them. |
+| **summary** | Optional | A 1-2 sentence summary of the content on the page. This gets formatted into the summary section in the page layout. Adding summaries is a key way to make your content more scannable by users (check out [Jakob Nielsen's site](http://www.nngroup.com/articles/corporate-blogs-front-page-structure/) for a great example of page summaries.) The only drawback with summaries is that you can't use variables in them. |
 
 
 {% include links.html %}

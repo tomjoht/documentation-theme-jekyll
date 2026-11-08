@@ -1,4 +1,5 @@
 ---
+published: false
 title: 10. Configure the build scripts
 tags:
   - publishing

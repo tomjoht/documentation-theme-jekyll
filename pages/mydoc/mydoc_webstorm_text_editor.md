@@ -8,6 +8,8 @@ permalink: mydoc_webstorm_text_editor.html
 folder: mydoc
 ---
 
+{% include note.html content="These tips were written for an older version of WebStorm. In current versions, the <b>Preferences</b> menu is called <b>Settings</b>, Markdown support is built in, and the default macOS keymap has a different name. The settings themselves still exist." %}
+
 ## About text editors and WebStorm
 There are a variety of text editors available, but I like WebStorm the best because it groups files into projects, which makes it easy to find all instances of a text string, to do find and replace operations across the project, and more.
 
@@ -17,7 +19,7 @@ If you decide to use WebStorm, here are a few tips on configuring the editor.
 
 By default, WebStorm comes packaged with a lot more functionality than you probably need. You can lighten the editor by removing some of the plugins. Go to **WebStorm > Preferences > Plugins** and clear the check boxes of plugins you don't need.
 
-## Set default tab indent to 3 spaces instead of 4
+## Set the default tab indent for other file types
 
 You can set the way the tab works, and whether it uses spaces or a tab character. For details, see [Code Style. JavaScript](https://www.jetbrains.com/help/webstorm/2016.1/code-style-javascript.html?origin=old_help#d658997e132) in WebStorm's help.
 

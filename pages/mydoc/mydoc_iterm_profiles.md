@@ -22,7 +22,7 @@ When you're working with tech docs, a lot of times you have builds that push fil
 5. In the **Send text at start** field, type the command for the build script, such as this:
 
    ```
-   JEKYLL_ENV=production jekyll serve
+   JEKYLL_ENV=production bundle exec jekyll serve
    ```
     Leave the Login shell option selected.
 

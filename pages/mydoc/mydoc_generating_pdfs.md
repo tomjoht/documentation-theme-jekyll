@@ -44,7 +44,7 @@ or
 You can see the details of the script in these files in the theme's root directory. For example, open pdf-mydoc.sh. It contains the following:
 
 ```bash
-# Note that .sh scripts work only on Mac. If you're on Windows, install Git Bash and use that as your client.
+# Note that .sh scripts work only on Mac and Linux. If you're on Windows, install Git Bash and use that as your client.
 
 echo 'Kill all Jekyll instances'
 kill -9 $(ps aux | grep '[j]ekyll' | awk '{print $2}')
@@ -79,10 +79,9 @@ destination: _site/
 url: "http://127.0.0.1:4010"
 baseurl: "/mydoc-pdf"
 port: 4010
-output: pdf
 product: mydoc
 print_title: Jekyll theme for documentation — mydoc product
-print_subtitle: version 5.0
+print_subtitle: version 7.0
 output: pdf
 defaults:
   -
@@ -135,7 +134,7 @@ Leave these pages here in your sidebar. (The `output: pdf` property means they w
 
 The code in the tocpage.html is mostly identical to that of the sidebar.html page. This is essential for Prince to create the page numbers correctly with cross references.
 
-There's another file (in the root directory of the theme) that is critical to the PDF generation process: prince-list.txt. This file simply iterates through the items in your sidebar and creates a list of links. Prince will consume the list of links from prince-list.txt and create a running PDF that contains all of the pages listed, with appropriate cross references and styling for them all.
+There's another file (in the pdfconfigs folder) that is critical to the PDF generation process: prince-list.txt. This file simply iterates through the items in your sidebar and creates a list of links. Prince will consume the list of links from prince-list.txt and create a running PDF that contains all of the pages listed, with appropriate cross references and styling for them all.
 
 {% include note.html content="If you have any files that you do not want to appear in the PDF, add <code>output: web</code> (rather than <code>output: pdf</code>) in the list of attributes in your sidebar. The prince-list.txt file that loops through the mydoc_sidebar.yml file to grab the URLs of each page that should appear in the PDF will skip over any items that do not list <code>output: pdf</code> in the item attributes. For example, you might not want your tag archives to appear in the PDF, but you probably will want to list them in the online help navigation." %}
 
@@ -341,7 +340,7 @@ kill -9 $(ps aux | grep '[j]ekyll' | awk '{print $2}')
 clear
 
 echo "Building PDF-friendly HTML site for Mydoc ...";
-jekyll serve --detach --config _config.yml,pdfconfigs/config_mydoc_pdf.yml;
+bundle exec jekyll serve --detach --config _config.yml,pdfconfigs/config_mydoc_pdf.yml;
 echo "done";
 
 echo "Building the PDF ...";
@@ -351,7 +350,7 @@ echo "done";
 
 Note that the first part kills all Jekyll instances. This way you won't try to serve Jekyll at a port that is already occupied.
 
-The `jekyll serve` command serves up the HTML-friendly PDF configurations for our two projects. This web version is where Prince will go to get its content.
+The `bundle exec jekyll serve` command serves up the HTML-friendly PDF configuration for the project. This web version is where Prince will go to get its content.
 
 The prince script issues a command to the Prince utility. JavaScript is enabled (`--javascript`), and we tell it exactly where to find the list of files (`--input-list`) &mdash; just point to the prince-list.txt file. Then we tell it where and what to output (`-o`).
 
@@ -359,19 +358,17 @@ Make sure that the path to the prince-list.txt is correct. For the output direct
 
 {% include note.html content="You might not want to include the PDF in your project files, since you're likely committing the PDF to Github and as a result saving the changes from one PDF version to another with each save." %}
 
-## 6. Add conditions for your new builds in the PDF config file
+## 6. Point the PDF configuration file to the right sidebar
 
-In the PDF configuration file, there's a section that looks like this:
+In the PDF configuration file, the `pdf_sidebar` property names the sidebar that the PDF follows:
 
-```
-{% raw %}{% if site.product == "mydoc" %}
-pdf_sidebar: product2_sidebar
-{% endif %}
+```yaml
+pdf_sidebar: mydoc_sidebar
 ```
 
-Point to the sidebar you want here.
+Change this value to the sidebar for your product.
 
-What this does is allow the prince-list.txt and toc.html files to iterate through the right sidebar.  Otherwise, you would need to create a unique prince-list.txt and toc.html file for each separate PDF output you have.
+This lets the prince-list.txt and tocpage.html files iterate through the right sidebar. Otherwise, you would need to create a unique prince-list.txt and tocpage.html file for each separate PDF output you have.
 
 ## 7. Add a download button for the PDF
 

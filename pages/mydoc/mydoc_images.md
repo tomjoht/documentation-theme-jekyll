@@ -61,13 +61,13 @@ The inline_image.html include properties are as follows:
 You can also embed SVG graphics. If you use SVG, you need to use the HTML syntax so that you can define a width/container for the graphic. Here's a sample embed:
 
 ```liquid
-{% raw %}{% include image.html file="helpapi.svg" url="http://idratherbewriting.com/documentation-theme-jekyll/mydoc_help_api/" alt="Building a Help API" caption="A help API provides a JSON file at a web URL with content that can be pulled into different targets" max-width="600" %}{% endraw %}
+{% raw %}{% include image.html file="helpapi.svg" url="https://idratherbewriting.com/documentation-theme-jekyll/mydoc_help_api.html" alt="Building a Help API" caption="A help API provides a JSON file at a web URL with content that can be pulled into different targets" max-width="600" %}{% endraw %}
 ```
 
 Here's the result:
 
 
-{% include image.html file="helpapi.svg" url="http://idratherbewriting.com/documentation-theme-jekyll/mydoc_help_api/" alt="Building a Help API" caption="A help API provides a JSON file at a web URL with content that can be pulled into different targets" max-width="600" %}
+{% include image.html file="helpapi.svg" url="https://idratherbewriting.com/documentation-theme-jekyll/mydoc_help_api.html" alt="Building a Help API" caption="A help API provides a JSON file at a web URL with content that can be pulled into different targets" max-width="600" %}
 
 The stylesheet even handles SVG display in IE 9 and earlier through the following style (based on this [gist](https://gist.github.com/larrybotha/7881691)):
 

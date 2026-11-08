@@ -11,7 +11,7 @@ folder: mydoc
 
 
 ## About exclusion
-By default, all files in your project are included in your output (regardless of whether they're listed in the sidebar_doc.yml file or not). To exclude files, note them in the `exclude` section in the configuration file. Here's a sample:
+By default, all files in your project are included in your output (regardless of whether they're listed in a sidebar file or not). To exclude files, note them in the `exclude` section in the configuration file. Here's a sample:
 
 ```
 
@@ -22,6 +22,8 @@ exclude:
 ```
 
 If you have different outputs for your site, you'll want to customize the exclude sections in your various configuration files.
+
+Note that in Jekyll 3, which the github-pages gem uses, an `exclude` list in \_config.yml replaces Jekyll's default list rather than adding to it. That's why the theme's \_config.yml also lists files such as Gemfile, Gemfile.lock, and vendor. Keep those entries when you add your own.
 
 ## Exclude strategies
 Here's the process I recommend. Put all files in the root directory of your project. Suppose one project's name is alpha and the other is beta. Then name each file as follows:
@@ -63,7 +65,7 @@ And you exclude files for your Alpha Java project as follows:
 exclude:
 
 - alpha_cpp_*
-- alpha_beta_*
+- beta_*
 ```
 
 When you exclude folders, include the trailing slash at the end of the folder name:
@@ -77,7 +79,7 @@ There isn't a way to automatically exclude anything. By default, everything is i
 
 ## Excluding draft content
 
-If you're working on a draft, put it inside the \_drafts folder or add `published: false` in the frontmatter. The \_drafts folder is excluded by default, so you don't have to specify it in your exclude list.
+If you're working on a draft page, add `published: false` in the frontmatter. For posts, you can also put drafts inside the \_drafts folder, which Jekyll leaves out by default, so you don't have to specify it in your exclude list.
 
 ## Limitations
 

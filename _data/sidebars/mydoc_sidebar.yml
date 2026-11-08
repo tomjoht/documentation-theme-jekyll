@@ -112,9 +112,6 @@ entries:
       url: /mydoc_webstorm_text_editor.html
       output: web, pdf
 
-    - title: Atom editor tips
-      url: /mydoc_atom_text_editor.html
-      output: web, pdf
 
   - title: Navigation
     output: web, pdf

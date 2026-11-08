@@ -10,7 +10,7 @@ folder: mydoc
 
 ## About Ruby
 
-Jekyll runs on Ruby, a programming language. You have to have Ruby on your computer in order to run Ruby-based programs like Jekyll. Ruby is installed on the Mac by default, but you must add it to Windows.
+Jekyll runs on Ruby, a programming language. You have to have Ruby on your computer in order to run Ruby-based programs like Jekyll. Macs include an old system version of Ruby that's too old for current gems, so on every platform you'll want to install a recent Ruby (3.0 or later). See the installation pages for [Mac][mydoc_install_jekyll_on_mac], [Windows][mydoc_install_jekyll_on_windows], and [Linux][mydoc_install_jekyll_on_linux].
 
 ## About Ruby Gems
 
@@ -22,9 +22,9 @@ Each gem has a version associated with it, and not all gem versions are compatib
 
 ## Rubygem package managers
 
-[Bundler](http://bundler.io/) is a gem package manager for Ruby, which means it goes out and gets all the gems you need for your Ruby programs. If you tell Bundler you need the [jekyll gem](https://rubygems.org/gems/jekyll), it will retrieve all the dependencies on the jekyll gem as well -- automatically.
+[Bundler](https://bundler.io/) is a gem package manager for Ruby, which means it goes out and gets all the gems you need for your Ruby programs. If you tell Bundler you need the [jekyll gem](https://rubygems.org/gems/jekyll), it will retrieve all the dependencies on the jekyll gem as well -- automatically.
 
-Not only does Bundler retrieve the right gem dependencies, but it's smart enough to retrieve the right versions of each gem. For example, if you get the [github-pages](https://rubygems.org/gems/github-pages) gem, it will retrieve all of these other gems:
+Not only does Bundler retrieve the right gem dependencies, but it's smart enough to retrieve the right versions of each gem. For example, if you get the [github-pages](https://rubygems.org/gems/github-pages) gem, it will retrieve all of these other gems. (This list is from the github-pages gem in 2016. Current versions list different gems and versions, but the idea is the same.)
 
 ```
 github-pages-health-check = 1.1.0
@@ -51,9 +51,9 @@ rouge = 1.10.1
 terminal-table ~> 1.
 ```
 
-See how Bundler retrieved version 3.0.3 of the jekyll gem, even though (as of this writing) the latest version of the jekyll gem is 3.1.2? That's because github-pages is only compatible up to jekyll 3.0.3. Bundler handles all of this dependency and version compatibility for you.
+See how Bundler retrieved version 3.0.3 of the jekyll gem, even though the latest version of the jekyll gem at the time was 3.1.2? That's because github-pages pinned Jekyll to 3.0.3. The same thing happens today. The github-pages gem pins Jekyll to a 3.x version, even though Jekyll 4 is available. Bundler handles all of this dependency and version compatibility for you.
 
- Trying to keep track of which gems and versions are appropriate for your project can be a nightmare. This is the problem Bundler solves. As explained on [Bundler.io](http://bundler.io/):
+ Trying to keep track of which gems and versions are appropriate for your project can be a nightmare. This is the problem Bundler solves. As explained on [Bundler.io](https://bundler.io/):
 
 > Bundler provides a consistent environment for Ruby projects by tracking and installing the exact gems and versions that are needed.
 >
@@ -94,7 +94,7 @@ Here it will get any gem equal to 2.3 but less than 3.0.
 If it adds another digit, the scope is affected:
 
 ```
-gem `jekyll`, `~>2.3.1'
+gem 'jekyll', '~> 2.3.1'
 ```
 
 This means to get any gem equal to 2.3.1 but less than 2.4.
@@ -105,13 +105,13 @@ If it looks like this:
 gem 'jekyll', '~> 3.0', '>= 3.0.3'
 ```
 
-This will get any Jekyll gem between versions 3.0 and up to 3.0.3.
+This will get any Jekyll gem that is at least 3.0.3 but less than 4.0.
 
 See this [Stack Overflow post](http://stackoverflow.com/questions/5170547/what-does-tilde-greater-than-mean-in-ruby-gem-dependencies) for more details.
 
 ## Gemfile.lock
 
-After Bundler retrieves and installs the gems, it makes a detailed list of all the gems and versions it has installed for your project. The snapshot of all gems + versions installed is stored in your Gemfile.lock file, which might look like this:
+After Bundler retrieves and installs the gems, it makes a detailed list of all the gems and versions it has installed for your project. The snapshot of all gems + versions installed is stored in your Gemfile.lock file, which might look like this (again, an example from 2016):
 
 ```
 GEM
@@ -247,8 +247,10 @@ BUNDLED WITH
    1.11.2
 ```
 
-You can always delete the Gemlock file and run Bundle install again to get the latest versions. You can also run `bundle update`, which will ignore the Gemlock file to get the latest versions of each gem.
+Commit Gemfile.lock along with your project so that everyone who builds the site, including your CI system, uses the same gem versions. To move to the latest versions that your Gemfile allows, run `bundle update`, which ignores the versions in Gemfile.lock and writes a new one.
 
-To learn more about Bundler, see [Bundler's Purpose and Rationale](http://bundler.io/rationale.html).
+Whenever you run Jekyll, put `bundle exec` in front of the command (for example, `bundle exec jekyll serve`). That way Jekyll runs with the gem versions in Gemfile.lock instead of whatever versions happen to be installed on your computer.
+
+To learn more about Bundler, see the [Bundler documentation](https://bundler.io/guides/getting_started.html).
 
 {% include links.html %}

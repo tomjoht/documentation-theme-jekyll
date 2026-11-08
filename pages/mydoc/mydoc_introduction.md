@@ -15,8 +15,8 @@ The instructions here are geared towards technical writers working on documentat
 
 Some of the more prominent features of this theme include the following:
 
-* Bootstrap framework
-* [Navgoco multi-level sidebar](http://www.komposta.net/article/navgoco) for table of contents
+* Bootstrap 3 framework
+* [Navgoco multi-level sidebar](https://github.com/tefra/navgoco) for table of contents
 * Ability to specify different sidebars for different products
 * Top navigation bar with drop-down menus
 * Notes, tips, and warning information notes

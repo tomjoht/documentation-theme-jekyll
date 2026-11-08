@@ -10,11 +10,11 @@ folder: mydoc
 ---
 
 ## Where to author content
-Use a text editor such as Sublime Text, WebStorm, IntelliJ, Visual Studio Code or Atom to create pages. Atom is recommended because it's created by Github, which is driving some of the Jekyll development through Github Pages.
+Use a text editor such as Visual Studio Code, Sublime Text, WebStorm, or IntelliJ to create pages.
 
 ## Where to save pages
 
-You can store your pages in any folder structures you want, with any level of folder nesting. The site output will pull all of those pages out of their folders and put them into the root directory. Check out the \_site folder, which is where Jekyll is generated, to see the difference between your project's structure and the resulting site output.
+You can store your pages in any folder structures you want, with any level of folder nesting. Because each page sets its own `permalink`, the folder where you store a page doesn't affect its URL. The sample pages are stored in subfolders of the pages folder, but their permalinks put them in the root directory of the output. Check out the \_site folder, which is where Jekyll is generated, to see the difference between your project's structure and the resulting site output.
 
 Keeping pages in the root directory is the simplest approach, and it's what the sample content does. However, if you want a page's URL to include a folder, put the folder in the permalink, such as `permalink: /product1/overview.html`. The theme adjusts its relative links for pages at any depth, so relative linking and offline viewing still work. See [Links from pages in subfolders](mydoc_hyperlinks.html#links-from-pages-in-subfolders).
 
@@ -44,11 +44,11 @@ The following table describes each of the frontmatter that you can use with this
 | Frontmatter | Required? | Description |
 |-------------|-------------|-------------|
 | **title** | Required | The title for the page |
-| **tags** | Optional | Tags for the page. Make all tags single words, with underscores if needed (rather than spaces). Separate them with commas. Enclose the whole list within brackets. Also, note that tags must be added to \_data/tags_doc.yml to be allowed entrance into the page. This prevents tags from becoming somewhat random and unstructured. You must create a tag page for each one of your tags following the pattern shown in the tags folder. (Tag pages aren't automatically created.)  |
+| **tags** | Optional | Tags for the page. Make all tags single words, with underscores if needed (rather than spaces). Separate them with commas. Enclose the whole list within brackets. Also, note that tags must be added to \_data/tags.yml to be allowed entrance into the page. This prevents tags from becoming somewhat random and unstructured. You must create a tag page for each one of your tags following the pattern shown in the tags folder. (Tag pages aren't automatically created.)  |
 | **keywords** | Optional | Synonyms and other keywords for the page. This information gets stuffed into the page's metadata to increase SEO. The user won't see the keywords, but if you search for one of the keywords, it will be picked up by the search engine.  |
 | **last_updated**  | Optional | The date the page was last updated. This information could helpful for readers trying to evaluate how current and authoritative information is. If included, the last_updated date appears in the footer of the page in small font.|
 | **sidebar** | Required | Refers to the sidebar data file for this page. Don't include the ".yml" file extension for the sidebar &mdash; just provide the file name. If no sidebar is specified, this value will inherit the `default` property set in your \_config.yml file for the page's frontmatter. |
-| **summary** | Optional | A 1-2 word sentence summarizing the content on the page. This gets formatted into the summary section in the page layout. Adding summaries is a key way to make your content more scannable by users (check out [Jakob Nielsen's site](http://www.nngroup.com/articles/corporate-blogs-front-page-structure/) for a great example of page summaries.) The only drawback with summaries is that you can't use variables in them. |
+| **summary** | Optional | A 1-2 sentence summary of the content on the page. This gets formatted into the summary section in the page layout. Adding summaries is a key way to make your content more scannable by users (check out [Jakob Nielsen's site](http://www.nngroup.com/articles/corporate-blogs-front-page-structure/) for a great example of page summaries.) The only drawback with summaries is that you can't use variables in them. |
 | **permalink**| Required | The permalink *must* match the filename in order for automated links to work. Additionally, you must include the ".html" in the filename. Don't put a slash at the end of the permalink, since that makes Jekyll create a folder with an index.html file inside it, and that URL won't open when you view the site offline. When Jekyll builds the site, it puts the page at the path in the permalink, which is the root directory unless the permalink includes a folder (such as `/product1/overview.html`). |
 | **datatable** | Optional | 'true'. If you add `datatable: true` in the frontmatter, scripts for the [jQuery Datatables plugin](https://www.datatables.net/) get included on the page. You can see the scripts that conditionally appear by looking in the \_layouts/default.html page. |
 | **toc** | Optional | If you specify `toc: false` in the frontmatter, the page won't have the table of contents that appears below the title. The toc refers to the list of jump links below the page title, not the sidebar navigation. You probably want to hide the TOC on the homepage and product landing pages.|
@@ -74,7 +74,7 @@ Wildcards will exclude every match after the `*`.
 
 ## Saving pages as drafts
 
-If you add `published: false` in the frontmatter, your page won't be published. You can also move draft pages into the \_drafts folder to exclude them from the build. With posts, you can also keep them as drafts by omitting the date in the title.
+If you add `published: false` in the frontmatter, your page won't be published. For posts, you can also store drafts in a \_drafts folder, which Jekyll leaves out of the build unless you run it with the `--drafts` option. (The \_drafts folder only works for posts, not pages.)
 
 ## Markdown or HTML format
 
@@ -99,7 +99,7 @@ Additionally, consider adding the product name in parentheses after the title, s
 
 ## Kramdown Markdown
 
-Kramdown is the Markdown flavor used in the theme but you are free to move to [CommonMark](https://jekyllrb.com/docs/configuration/markdown/#commonmark) or [Redcarpet](https://jekyllrb.com/docs/configuration/markdown/#redcarpet). This mostly aligns with Github-flavored Markdown, but with some differences in the indentation allowed within lists. Basically, Kramdown requires you to line up the indent between list items with the first starting character after the space in your list item numbering. See this [blog post on Kramdown and Rouge](http://idratherbewriting.com/2016/02/21/bug-with-kramdown-and-rouge-with-github-pages/) for more details.
+Kramdown is the Markdown flavor used in the theme. Other processors such as [CommonMark](https://jekyllrb.com/docs/configuration/markdown/#commonmark) are available, but the theme is only tested with kramdown, and some parts of it (such as the tag archive pages) don't render correctly with CommonMark. Kramdown mostly aligns with Github-flavored Markdown, but with some differences in the indentation allowed within lists. Basically, Kramdown requires you to line up the indent between list items with the first starting character after the space in your list item numbering. See this [blog post on Kramdown and Rouge](http://idratherbewriting.com/2016/02/21/bug-with-kramdown-and-rouge-with-github-pages/) for more details.
 
 You can use standard Multimarkdown syntax for tables. You can also use fenced code blocks with lexers specifying the type of code. The configuration file shows the Markdown processor and extension:
 
@@ -168,13 +168,13 @@ Then you can reference it with a link like this on the same page:
 
 [Some link](#someIdTag)
 
-For details about linking to headings on different pages, see [Automated links to headings on pages][mydoc_hyperlinks.html#bookmarklinks].
+For details about linking to pages and headings automatically, see [Automated links](mydoc_hyperlinks.html#automatedlinks).
 
 ## Specify a particular page layout
 
 The configuration file sets the default layout for pages as the "page" layout.
 
-You can create other layouts inside the layouts folder. If you create a new layout, you can specify that your page use your new layout by adding `layout: mylayout.html` in the page's frontmatter. Whatever layout you specify in the frontmatter of a page will override the layout default set in the configuration file.
+You can create other layouts inside the layouts folder. If you create a new layout, you can specify that your page use your new layout by adding `layout: mylayout` (without the .html extension) in the page's frontmatter. Whatever layout you specify in the frontmatter of a page will override the layout default set in the configuration file.
 
 ## Comments
 

@@ -11,7 +11,7 @@ folder: mydoc
 
 ## Using series for pages
 
-You create a series by looking for all pages within a tag namespace that contain certain frontmatter. Here's a <a href="mydoc_seriesdemo1.html">demo</a>.
+You create a series by adding the same `series` value to the frontmatter of each page in the series, and then looping through the pages that have that value. Here's a <a href="mydoc_seriesdemo1.html">demo</a>.
 
 ## 1. Create the series button
 
@@ -45,7 +45,7 @@ Change "ACME series" to the name of your series.
 
 Save this in your \_includes/custom folder as something like series\_acme.html.
 
-{% include warning.html content="With pages, there isn't a universal namespace created from tags or categories like there is with Jekyll posts. As a result, you have to loop through all pages. If you have a lot of pages in your site (e.g., 1,000+), then this looping will create a slow build time. If this is the case, you will need to rethink the approach to looping here." %}
+{% include warning.html content="With pages, there isn't a universal namespace created from tags or categories like there is with Jekyll posts. As a result, the `where` filter has to check every page. If you have a lot of pages in your site (e.g., 1,000+), then this looping will create a slow build time. If this is the case, you will need to rethink the approach to looping here." %}
 
 ## 2. Create the "next" include
 
@@ -53,13 +53,11 @@ Now create another include for the Next button at the bottom of the page. Copy t
 
 {% raw %}
 ```html
-<p>{% assign series_pages = site.tags.series_acme %}
+<p>{% assign pages = site.pages | where: "series", "ACME series" | sort: "weight" %}
     {% for p in pages %}
-    {% if p.series == "ACME series" %}
-    {% assign nextTopic = page.weight | plus: "1"  %}
-    {% if p.weight == nextTopic  %}
-    <a href="{{p.url}}"><button type="button" class="btn btn-primary">Next: {{p.weight}}  {{p.title}}</button></a>
-    {% endif %}
+    {% if p.weight > page.weight %}
+    <a href="{{p.url | remove_first: "/" }}"><button type="button" class="btn btn-primary">Next: {{p.weight}}. {{p.title}}</button></a>
+    {% break %}
     {% endif %}
     {% endfor %}
 </p>
@@ -68,7 +66,7 @@ Now create another include for the Next button at the bottom of the page. Copy t
 
 Change "acme" to the name of your series.
 
-Save this in your \_includes/custom/mydoc folder as series\_acme\_next.html.
+Save this in your \_includes/custom folder as series\_acme\_next.html. (The theme's own series\_acme\_next.html also includes a Jump to menu.)
 
 ## 3. Add the correct frontmatter to each of your series pages
 
@@ -79,7 +77,7 @@ series: "ACME series"
 weight: 1.0
 ```
 
-With weights, Jekyll will treat 10 as coming after 1. If you have more than 10 items, consider changing `plus: "1.0"` to `plus: "0.1"`.
+The pages are sorted by `weight`, and the Next button links to the first page with a higher weight than the current page, so the weights don't need to be consecutive. Use numbers (without quotation marks) for every weight in the series, so that they sort correctly.
 
 Additionally, if your page names are prefaced with numbers, such as "1. Download the code," then the {% raw %}`{{p.weight}}`{% endraw %} will create a duplicate number. In that case, just remove the {% raw %}`{{p.weight}}`{% endraw %} from both code samples here.
 

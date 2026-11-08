@@ -14,26 +14,28 @@ folder: mydoc
 The normal way to build the Jekyll site is through the build command:
 
 ```
-jekyll build
+bundle exec jekyll build
 ```
+
+The `bundle exec` part makes Jekyll use the gem versions listed in Gemfile.lock. The examples on this page all include it.
 
 To build the site and view it in a live server so that Jekyll rebuilds that site each time you make a change, use the `serve` command:
 
 ```
-jekyll serve
+bundle exec jekyll serve
 ```
 
 By default, the \_config.yml in the root directory will be used, Jekyll will scan the current directory for files, and the folder `_site` will be used as the output. You can customize these build commands like this:
 
 ```
-jekyll serve --config configs/myspecialconfig.yml --destination ../doc_outputs
+bundle exec jekyll serve --config configs/myspecialconfig.yml --destination ../doc_outputs
 ```
 
 Here the `configs/myspecialconfig.yml` file is used instead of `_config.yml`. The destination directory is `../doc_outputs`, which would be one level up from your current directory.
 
 ## Shortcuts for the build arguments
 
-If you have a long build argument and don't want to enter it every time in Jekyll, noting all your configuration details, you can create a shell script and then just run the script. Simply put the build argument into a text file and save it with the .sh extension (for Mac) or .bat extension (for Windows). Then run it like this:
+If you have a long build argument and don't want to enter it every time in Jekyll, noting all your configuration details, you can create a shell script and then just run the script. Simply put the build argument into a text file and save it with the .sh extension. (On Windows, run .sh files in Git Bash, or save the command in a .bat file instead.) Then run it like this:
 
 ```
 . myscript.sh

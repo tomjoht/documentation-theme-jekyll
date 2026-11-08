@@ -36,7 +36,7 @@ tags:
 
 ## Tags overview
 
-{% include note.html content=" With posts, tags have a namespace that you can access with <code>posts.tags.tagname</code>, where <code>tagname</code> is the name of the tag. You can then list all posts in that tag namespace. But pages don't off this same tag namespace, so you could actually use another key instead of <code>tags</code>. Nevertheless, I'm using the same <code>tags</code> approach for posts as with pages." %}
+{% include note.html content=" With posts, tags have a namespace that you can access with <code>site.tags.tagname</code>, where <code>tagname</code> is the name of the tag. You can then list all posts in that tag namespace. But pages don't offer this same tag namespace, so you could actually use another key instead of <code>tags</code>. Nevertheless, I'm using the same <code>tags</code> approach for posts as with pages." %}
 
 
 To prevent tags from getting out of control and inconsistent, first make sure the tag appears in the \_data/tags.yml file. If it's not there, the tag you add to a page won't be read. I added this check just to make sure I'm using the same tags consistently and not adding new tags that don't have tag archive pages.
@@ -44,9 +44,9 @@ To prevent tags from getting out of control and inconsistent, first make sure th
 
 {% include note.html content="In contrast to WordPress, with Jekyll to get tags on pages you have to build out the functionality for tags so that clicking a tag name shows you all pages with that tag. Tags in Jekyll are much more manual." %}
 
-Additionally, you must create a tag archive page similar to the other pages named tag_{tagname}.html folder. This theme doesn't auto-create tag archive pages.
+Additionally, you must create a tag archive page named tag_{tagname}.html, similar to the other tag archive pages in the pages/tags folder. This theme doesn't auto-create tag archive pages.
 
-For simplicity, make all your tags single words (connect them with hyphens if necessary).
+For simplicity, make all your tags single words (connect them with underscores if necessary).
 
 ## Setting up tags
 
@@ -54,7 +54,7 @@ Tags have a few components.
 
 1. In the \_data/tags.yml file, add the tag names you want to allow. For example:
 
-   ```json
+   ```yaml
    allowed-tags:
      - getting_started
      - overview
@@ -62,10 +62,10 @@ Tags have a few components.
      - publishing
      - single_sourcing
      - special_layouts
-     - content types
+     - content_types
    ```
 
-3. Create a tag archive file for each tag in your tags_doc.yml list. Name the file following the same pattern in the tags folder, like this: tag_collaboration.html.
+2. Create a tag archive file for each tag in your tags.yml list. Name the file following the same pattern in the tags folder, like this: tag_collaboration.html.
 
    Each tag archive file needs only this:
 
@@ -82,9 +82,9 @@ sidebar: mydoc_sidebar
    ```
     {% endraw %}
 
-   {% include note.html content="In the \_includes/mydoc folder, there's a taglogic.html file. This file (included in each tag archive file) has common logic for getting the tags and listing out the pages containing the tag in a table with summaries or truncated excerpts. You don't have to do anything with the file &mdash; just leave it there because the tag archive pages reference it." %}
+   {% include note.html content="In the \_includes folder, there's a taglogic.html file. This file (included in each tag archive file) has common logic for getting the tags and listing out the pages containing the tag in a table with summaries or truncated excerpts. You don't have to do anything with the file &mdash; just leave it there because the tag archive pages reference it." %}
 
-4. Change the title, tagName, and permalink values to be specific to the tag name you just created.
+3. Change the title, tagName, and permalink values to be specific to the tag name you just created.
 
    By default, the \_layouts/page.html file will look for any tags on a page and insert them at the bottom of the page using this code:
 
@@ -96,7 +96,7 @@ sidebar: mydoc_sidebar
 {% assign projectTags = site.data.tags.allowed-tags %}
 {% for tag in page.tags %}
 {% if projectTags contains tag %}
-<a href="{{ "tag_" | append: tag | append: ".html" }}" class="btn btn-default navbar-btn cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
+<a href="{{ root }}tag_{{ tag }}.html" class="btn btn-default navbar-btn cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
 {% endif %}
 {% endfor %}
 {% endif %}
@@ -104,9 +104,9 @@ sidebar: mydoc_sidebar
 ```
 
 
-Because this code appears on the \_layouts/page.html file by default, you don't need to do anything in your page to get the tags to appear. However, if you want to alter the placement or change the button color, you can do so within the \_includes/taglogic.html file.
+Because this code appears on the \_layouts/page.html file by default, you don't need to do anything in your page to get the tags to appear. However, if you want to alter the placement or change the button color, you can do so within the \_layouts/page.html file.
 
-You can change the button color by changing the class on the button from `btn-info` to one of the other button classes bootstrap provides. See [Labels][mydoc_labels] for more options on button class names.
+You can change the button color by changing the class on the button from `btn-default` to one of the other button classes Bootstrap provides. See [Labels][mydoc_labels] for more options on button class names.
 
 ## Retrieving pages for a specific tag
 
@@ -177,7 +177,7 @@ Although the tag approach here uses `for` loops, these are somewhat inefficient 
 
 Without the ability to access pages inside a universal namespace with the page type, there aren't many workarounds here for faster looping.
 
-With posts (instead of pages), since you can access just the posts inside `posts.tag.tagname`, you can be a lot more efficient with the looping.
+With posts (instead of pages), since you can access just the posts inside `site.tags.tagname`, you can be a lot more efficient with the looping.
 
 Still, if the build times are getting long (e.g., 1 or 2 minutes per build), look into reducing the number of `for` loops on your site.
 

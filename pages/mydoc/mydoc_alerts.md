@@ -92,7 +92,7 @@ These alerts leverage includes stored in the \_include folder. The `content` opt
 {% raw %}<div markdown="span" class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note:</b> {{include.content}}{% endraw %}</div>
 ```
 
-The content in `content="This is my note."` gets inserted into the `{% raw %}{{include.content}}}{% endraw %}` part of the template. You can follow this same pattern to build additional includes. See this [Jekyll screencast on includes](http://jekyll.tips/jekyll-casts/includes/) or [this screencast](https://www.youtube.com/watch?v=TJcn_PJ2100) for more information.
+The content in `content="This is my note."` gets inserted into the `{% raw %}{{include.content}}{% endraw %}` part of the template. You can follow this same pattern to build additional includes. See [Includes](https://jekyllrb.com/docs/includes/) in the Jekyll documentation for more information.
 
 ## Callouts
 
@@ -159,7 +159,7 @@ Liquid Exception: Invalid syntax for include tag. File contains invalid characte
 
 To use variables in your include parameters, you must use the "variable parameter" approach. First you use a `capture` tag to capture some content. Then you reference this captured tag in your include. Here's an example.
 
-In my site configuration file (\_congfig.yml), I have a property called `company_name`.
+In my site configuration file (\_config.yml), I have a property called `company_name`.
 
 ```yaml
 company_name: Your company
