@@ -2,8 +2,20 @@
 {% assign sidebar = site.data.sidebars[page.sidebar].entries %}
 {% assign sidebar_version = sidebar[0].version | default: site.project_version %}
 
-<ul id="mysidebar" class="nav">
-  <li class="sidebarTitle">{{sidebar[0].product}} {{sidebar_version}}</li>
+<div class="sidebarTitle">{{sidebar[0].product}} {% if sidebar_version %}<span class="sidebarVersion">{{sidebar_version}}</span>{% endif %}</div>
+{% if site.sidebar_expand_controls %}
+<p class="sidebarControls"><a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a></p>
+{% endif %}
+
+{% comment %}
+Class names used for styling:
+  folder     - a top-level folder that opens and closes
+  subfolder  - a folder nested inside a folder item
+  item       - a link to a page
+  current    - the page you're viewing
+navgoco adds the "active" class to folders that are open.
+{% endcomment %}
+<ul id="mysidebar" class="sidebar-nav">
   {% for entry in sidebar %}
   {% for folder in entry.folders %}
   {% if folder.output contains "web" %}
@@ -12,38 +24,38 @@
   {% if folder_is_link %}
   {% comment %} A top-level item without folderitems links straight to a page. {% endcomment %}
   {% if folder.external_url %}
-  <li><a title="{{folder.title}}" href="{{folder.external_url}}" target="_blank" rel="noopener">{{folder.title}}</a></li>
+  <li class="item toplevel"><a title="{{folder.title}}" href="{{folder.external_url}}" target="_blank" rel="noopener">{{folder.title}}</a></li>
   {% elsif page.url == folder.url %}
-  <li class="active"><a title="{{folder.title}}" href="{% include link.html url=folder.url %}">{{folder.title}}</a></li>
+  <li class="item toplevel current"><a title="{{folder.title}}" href="{% include link.html url=folder.url %}" aria-current="page">{{folder.title}}</a></li>
   {% else %}
-  <li><a title="{{folder.title}}" href="{% include link.html url=folder.url %}">{{folder.title}}</a></li>
+  <li class="item toplevel"><a title="{{folder.title}}" href="{% include link.html url=folder.url %}">{{folder.title}}</a></li>
   {% endif %}
   {% else %}
-  <li>
+  <li class="folder">
       <a title="{{folder.title}}" href="#">{{folder.title}}</a>
       <ul>
           {% for folderitem in folder.folderitems %}
           {% if folderitem.output contains "web" %}
           {% if folderitem.external_url %}
-          <li><a title="{{folderitem.title}}" href="{{folderitem.external_url}}" target="_blank" rel="noopener">{{folderitem.title}}</a></li>
+          <li class="item"><a title="{{folderitem.title}}" href="{{folderitem.external_url}}" target="_blank" rel="noopener">{{folderitem.title}}</a></li>
           {% elsif page.url == folderitem.url %}
-          <li class="active"><a title="{{folderitem.title}}" href="{% include link.html url=folderitem.url %}">{{folderitem.title}}</a></li>
+          <li class="item current"><a title="{{folderitem.title}}" href="{% include link.html url=folderitem.url %}" aria-current="page">{{folderitem.title}}</a></li>
           {% else %}
-          <li><a title="{{folderitem.title}}" href="{% include link.html url=folderitem.url %}">{{folderitem.title}}</a></li>
+          <li class="item"><a title="{{folderitem.title}}" href="{% include link.html url=folderitem.url %}">{{folderitem.title}}</a></li>
           {% endif %}
           {% for subfolders in folderitem.subfolders %}
           {% if subfolders.output contains "web" %}
-          <li class="subfolders">
+          <li class="folder subfolder">
               <a title="{{subfolders.title}}" href="#">{{ subfolders.title }}</a>
               <ul>
                   {% for subfolderitem in subfolders.subfolderitems %}
                   {% if subfolderitem.output contains "web" %}
                   {% if subfolderitem.external_url %}
-                  <li><a title="{{subfolderitem.title}}" href="{{subfolderitem.external_url}}" target="_blank" rel="noopener">{{subfolderitem.title}}</a></li>
+                  <li class="item"><a title="{{subfolderitem.title}}" href="{{subfolderitem.external_url}}" target="_blank" rel="noopener">{{subfolderitem.title}}</a></li>
                   {% elsif page.url == subfolderitem.url %}
-                  <li class="active"><a title="{{subfolderitem.title}}" href="{% include link.html url=subfolderitem.url %}">{{subfolderitem.title}}</a></li>
+                  <li class="item current"><a title="{{subfolderitem.title}}" href="{% include link.html url=subfolderitem.url %}" aria-current="page">{{subfolderitem.title}}</a></li>
                   {% else %}
-                  <li><a title="{{subfolderitem.title}}" href="{% include link.html url=subfolderitem.url %}">{{subfolderitem.title}}</a></li>
+                  <li class="item"><a title="{{subfolderitem.title}}" href="{% include link.html url=subfolderitem.url %}">{{subfolderitem.title}}</a></li>
                   {% endif %}
                   {% endif %}
                   {% endfor %}
@@ -59,12 +71,9 @@
   {% endif %}
   {% endfor %}
   {% endfor %}
-  {% if site.sidebar_expand_controls %}
-  <li class="sidebarControls"><p class="external"><a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a></p></li>
-  {% endif %}
 </ul>
 
-<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
-<script>$("li.active").parents('li').toggleClass("active");</script>
+<!-- Open the folders that contain the current page. This must run before navgoco initializes, so it appears right after the sidebar instead of in customscripts.js. -->
+<script>$("#mysidebar li.current").parents("li.folder").addClass("active");</script>
 
 {% comment %} Copyright 2026 Google LLC {% endcomment %}

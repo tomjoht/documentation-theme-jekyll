@@ -1,5 +1,5 @@
 {% include root.html %}
-<p>The following pages and posts are tagged with <button type="button" style="cursor: default" class="btn btn-default navbar-btn">{{page.tagName}}</button></p>
+<p>The following pages and posts are tagged with <span class="tag-link">{{page.tagName}}</span></p>
 <table><thead><tr><th>Title</th><th>Type</th><th>Excerpt</th></tr></thead>
     <tbody>
     {% assign thisTag = page.tagName %}
@@ -8,7 +8,7 @@
         {% if tag == thisTag %}
 
         <tr><td><a href="{% include link.html url=page.url %}">{{page.title}}</a></td>
-            <td><span class="label label-default">Page</span></td>
+            <td><span class="badge text-bg-secondary">Page</span></td>
           <td>{% if page.summary %} {{ page.summary | strip_html | strip_newlines | truncate: 160 }} {% else %} {{ page.content | truncatewords: 50 | strip_html }} {% endif %}</td>
         </tr>
         {% endif %}
@@ -21,7 +21,7 @@
         {% if tag == thisTag %}
 
         <tr><td><a href="{% include link.html url=post.url %}">{{post.title}}</a></td>
-            <td><span class="label label-primary">Post</span></td>
+            <td><span class="badge text-bg-primary">Post</span></td>
             <td>{% if post.summary %} {{ post.summary | strip_html | strip_newlines | truncate: 160 }} {% else %} {{ post.content | truncatewords: 50 | strip_html }} {% endif %}</td>
         </tr>
         {% endif %}

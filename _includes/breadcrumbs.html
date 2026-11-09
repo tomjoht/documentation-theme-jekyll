@@ -1,0 +1,38 @@
+{% comment %}
+Builds a breadcrumb trail (product > folder > subfolder) from the page's
+position in its sidebar, so you don't need to add anything to each page.
+Pages that aren't in their sidebar don't get breadcrumbs. To turn breadcrumbs
+off everywhere, set breadcrumbs: false in _config.yml. To turn them off on
+one page, set breadcrumbs: false in the page's front matter.
+{% endcomment %}
+{% unless site.breadcrumbs == false or page.breadcrumbs == false %}
+{% assign bc_sidebar = site.data.sidebars[page.sidebar].entries %}
+{% assign bc_folder = nil %}
+{% assign bc_subfolder = nil %}
+{% for entry in bc_sidebar %}
+{% for folder in entry.folders %}
+{% if folder.output contains "web" %}
+{% for folderitem in folder.folderitems %}
+{% if folderitem.url == page.url and folderitem.output contains "web" %}{% assign bc_folder = folder.title %}{% endif %}
+{% for subfolders in folderitem.subfolders %}
+{% for subfolderitem in subfolders.subfolderitems %}
+{% if subfolderitem.url == page.url and subfolderitem.output contains "web" %}{% assign bc_folder = folder.title %}{% assign bc_subfolder = subfolders.title %}{% endif %}
+{% endfor %}
+{% endfor %}
+{% endfor %}
+{% endif %}
+{% endfor %}
+{% endfor %}
+{% if bc_folder %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item">{{ bc_sidebar[0].product }}</li>
+    <li class="breadcrumb-item">{{ bc_folder }}</li>
+    {% if bc_subfolder %}<li class="breadcrumb-item">{{ bc_subfolder }}</li>{% endif %}
+    <li class="breadcrumb-item active" aria-current="page">{{ page.title }}</li>
+  </ol>
+</nav>
+{% endif %}
+{% endunless %}
+
+{% comment %} Copyright 2026 Google LLC {% endcomment %}

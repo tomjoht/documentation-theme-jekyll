@@ -6,7 +6,8 @@ A Jekyll theme for technical documentation and help systems. It's designed for t
 
 ## Features
 
-- A separate sidebar for each product, with up to three levels of navigation
+- A separate sidebar for each product, with up to three levels of navigation, that slides out on small screens
+- Breadcrumbs generated from the sidebar
 - Top navigation with dropdown menus for moving between products
 - Relative links throughout, so the site works offline, on any server, and under any `baseurl`
 - Pages can live at the root or in subfolders
@@ -17,7 +18,8 @@ A Jekyll theme for technical documentation and help systems. It's designed for t
 - PDF output with [Prince XML](https://www.princexml.com/)
 - Special layouts for FAQs, knowledge bases, glossaries, and series
 - Optional comments through [giscus](https://giscus.app) (GitHub Discussions)
-- Bootstrap 3 and all other CSS and JavaScript libraries stored locally, with no CDN dependencies
+- Colors and sizes set with CSS variables, so you can restyle the theme in one file
+- Bootstrap 5, Font Awesome 7, and all other CSS and JavaScript libraries stored locally, with no CDN dependencies
 
 ## Quick start
 
@@ -56,7 +58,7 @@ The Gemfile uses the [github-pages gem](https://github.com/github/pages-gem), so
 
 ## What's new
 
-Version 7.0 updates the theme for current Ruby and GitHub Pages, fixes links from pages in subfolders, stores all libraries locally, and replaces the discontinued Commento comments with giscus. See the [7.0 release notes](https://idratherbewriting.com/documentation-theme-jekyll/mydoc_release_notes_70.html).
+Version 8.0 redesigns the theme on Bootstrap 5 and Font Awesome 7, with a layout based on [idratherbewriting.com](https://idratherbewriting.com): a gray sidebar that stays in view and slides out on small screens, breadcrumbs, and colors you can change with CSS variables. See the [8.0 release notes](https://idratherbewriting.com/documentation-theme-jekyll/mydoc_release_notes_80.html), which include steps for upgrading from version 7.
 
 ## Contributing
 
@@ -64,4 +66,6 @@ Bug reports and pull requests are welcome. Please open an [issue](https://github
 
 ## License
 
-Apache License 2.0. See [LICENSE](LICENSE). The navgoco sidebar plugin is licensed separately under the BSD license in [LICENSE-BSD-NAVGOCO.txt](LICENSE-BSD-NAVGOCO.txt).
+Apache License 2.0. See [LICENSE](LICENSE).
+
+The theme includes these third-party libraries, each under its own license: [Bootstrap](https://getbootstrap.com/) (MIT), [jQuery](https://jquery.com/) (MIT), [Font Awesome Free](https://fontawesome.com/license/free) (icons under CC BY 4.0, fonts under SIL OFL 1.1, code under MIT), [AnchorJS](https://www.bryanbraun.com/anchorjs/) (MIT), [Simple-Jekyll-Search](https://github.com/christian-fei/Simple-Jekyll-Search) (MIT), and the navgoco sidebar plugin (BSD, see [LICENSE-BSD-NAVGOCO.txt](LICENSE-BSD-NAVGOCO.txt)).

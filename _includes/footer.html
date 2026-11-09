@@ -1,13 +1,13 @@
 {% include root.html %}
-<footer>
-            <div class="row">
-                <div class="col-lg-12 footer">
-               &copy;{{ site.time | date: "%Y"  }} {{site.company_name}}. All rights reserved. <br />
-{% if page.last_updated %}<span>Page last updated:</span> {{page.last_updated}}<br/>{% endif %} Site last generated: {{ site.time | date: "%b %-d, %Y"  }} <br />
-{% assign footer_logo = site.company_logo | default: "images/company_logo.png" %}{% if site.company_logo != false %}
-<p><img src="{% unless footer_logo contains "://" %}{{ root }}{% endunless %}{{ footer_logo }}" alt="{{ site.company_logo_alt | default: "Company logo" }}"/></p>{% endif %}
-                </div>
-            </div>
+<footer class="site-footer">
+    <div class="footer-text">
+        &copy;{{ site.time | date: "%Y" }} {{site.company_name}}. All rights reserved.<br>
+        Site last generated: {{ site.time | date: "%b %-d, %Y" }}
+    </div>
+    {% assign footer_logo = site.company_logo | default: "images/company_logo.png" %}
+    {% if site.company_logo != false %}
+    <div class="footer-logo"><img src="{% unless footer_logo contains "://" %}{{ root }}{% endunless %}{{ footer_logo }}" alt="{{ site.company_logo_alt | default: "Company logo" }}"></div>
+    {% endif %}
 </footer>
 
 {% comment %} Copyright 2026 Google LLC {% endcomment %}

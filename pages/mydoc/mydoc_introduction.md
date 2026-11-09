@@ -15,13 +15,15 @@ The instructions here are geared towards technical writers working on documentat
 
 Some of the more prominent features of this theme include the following:
 
-* Bootstrap 3 framework
+* Bootstrap 5 framework, with a sidebar that slides out on small screens
 * [Navgoco multi-level sidebar](https://github.com/tefra/navgoco) for table of contents
 * Ability to specify different sidebars for different products
 * Top navigation bar with drop-down menus
 * Notes, tips, and warning information notes
 * Tags for alternative navigation
-* Advanced landing page layouts from the [Modern Business theme](http://startbootstrap.com/template-overviews/modern-business/).
+* Landing page layouts built with Bootstrap cards and tabs (see the Products menu)
+* Breadcrumbs generated from the sidebar
+* Search, tags, PDF output, and other documentation features
 
 ## Getting started
 

@@ -24,7 +24,7 @@ a[href^="http:"]::after, a[href^="https:"]::after {
 a[href] {
     color: blue !important;
 }
-a[href*="mailto"]::after, a[data-toggle="tooltip"]::after, a[href].noCrossRef::after {
+a[href*="mailto"]::after, a[data-toggle="tooltip"]::after, a[data-bs-toggle="tooltip"]::after, a[href].noCrossRef::after {
     content: "";
 }
 

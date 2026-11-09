@@ -203,7 +203,7 @@ The sidebar data file uses a specific YAML syntax that you must follow. Follow t
 entries:
 - title: sidebar
   product: Jekyll Doc Theme
-  version: 7.0
+  version: 8.0
   folders:
   - title: Overview
     output: web, pdf
@@ -285,7 +285,7 @@ Each level must have at least one topic before the next level starts. You can't 
 entries:
 - title: sidebar
   product: Jekyll Doc Theme
-  version: 7.0
+  version: 8.0
   folders:
   - title: Overview
     output: web, pdf

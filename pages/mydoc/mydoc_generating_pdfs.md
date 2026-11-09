@@ -19,7 +19,7 @@ The basic approach is to generate a list of all web pages that need to be added 
 
 You can see an example of the finished product here:
 
-<a target="\_blank" class="noCrossRef" href="{{ "pdf/mydoc.pdf"}}"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> PDF Download</button></a>
+<a target="_blank" rel="noopener" class="noCrossRef pdf-download btn btn-outline-secondary" href="pdf/mydoc.pdf"><i class="fa-solid fa-download" aria-hidden="true"></i> PDF Download</a>
 
 To generate the PDF, browse to the theme's directory in your terminal and run this script:
 
@@ -81,7 +81,7 @@ baseurl: "/mydoc-pdf"
 port: 4010
 product: mydoc
 print_title: Jekyll theme for documentation — mydoc product
-print_subtitle: version 7.0
+print_subtitle: version 8.0
 output: pdf
 defaults:
   -
@@ -372,17 +372,17 @@ This lets the prince-list.txt and tocpage.html files iterate through the right s
 
 ## 7. Add a download button for the PDF
 
-You can add a download button for your PDF using some Bootstrap button code:
+You can add a download button for your PDF using Bootstrap's button classes on a link:
 
 ```html
-<a target="_blank" rel="noopener" class="noCrossRef pdf-download" href="pdf/mydoc.pdf"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> PDF Download</button></a>
+<a target="_blank" rel="noopener" class="noCrossRef pdf-download btn btn-outline-secondary" href="pdf/mydoc.pdf"><i class="fa-solid fa-download" aria-hidden="true"></i> PDF Download</a>
 ```
 
 Here's what that looks like:
 
-<a target="_blank" rel="noopener" class="noCrossRef pdf-download" href="pdf/mydoc.pdf"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> PDF Download</button></a>
+<a target="_blank" rel="noopener" class="noCrossRef pdf-download btn btn-outline-secondary" href="pdf/mydoc.pdf"><i class="fa-solid fa-download" aria-hidden="true"></i> PDF Download</a>
 
-The `pdf-download` class hides the button in the PDF itself and when someone prints the page, since a download button has no use there. The rule is in css/printstyles.css and css/customstyles.css.
+The `pdf-download` class hides the button in the PDF itself and when someone prints the page, since a download button has no use there. The rule is in css/printstyles.css and css/theme.css.
 
 ## JavaScript conflicts
 

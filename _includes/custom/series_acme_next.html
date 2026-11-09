@@ -1,27 +1,27 @@
 {% include root.html %}
 <div class="seriesContext">
-    <a>
+    <span class="seriesNext">
         {% assign pages = site.pages | where: "series", "ACME series" | sort: "weight" %}
         {% for pg in pages %}
         {% if pg.series == "ACME series" %}
         {% if pg.weight > page.weight %}
-        <a href="{% include link.html url=pg.url %}"><button type="button" class="btn btn-primary">Next: {{pg.title}}</button></a>
+        <a class="dropdown-item" href="{% include link.html url=pg.url %}"><button type="button" class="btn btn-primary">Next: {{pg.title}}</button></a>
         {% break %}
         {% endif %}
         {% endif %}
         {% endfor %}
-    </a>
+    </span>
     &nbsp;
     <div class="btn-group">
-        <button type="button" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Jump to: <span class="caret"></span></button>
+        <button type="button" data-bs-toggle="dropdown" aria-expanded="false" class="btn btn-primary dropdown-toggle">Jump to:</button>
         <ol class="dropdown-menu">
             {% for pg in pages %}
             {% if pg.series == "ACME series" %}
             {% if pg.url == page.url %}
-            <li class="active"> → {{pg.weight}}. {{pg.title}}</li>
+            <li class="active" aria-current="page"> → {{pg.weight}}. {{pg.title}}</li>
             {% else %}
             <li>
-                <a href="{% include link.html url=pg.url %}">{{pg.title}}</a>
+                <a class="dropdown-item" href="{% include link.html url=pg.url %}">{{pg.title}}</a>
             </li>
             {% endif %}
             {% endif %}

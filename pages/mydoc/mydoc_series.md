@@ -21,16 +21,16 @@ First create an include that contains your series button:
 ```html
 <div class="seriesContext">
     <div class="btn-group">
-        <button type="button" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Series Demo <span class="caret"></span></button>
+        <button type="button" data-bs-toggle="dropdown" aria-expanded="false" class="btn btn-primary dropdown-toggle">Series Demo</button>
         <ol class="dropdown-menu">
             {% assign pages = site.pages | where: "series", "ACME series" | sort: "weight" %}
             {% for p in pages %}
             {% if p.series == "ACME series" %}
             {% if p.url == page.url %}
-            <li class="active"> → {{p.weight}}. {{p.title}}</li>
+            <li class="active" aria-current="page"> → {{p.weight}}. {{p.title}}</li>
             {% else %}
             <li>
-                <a href="{{p.url | remove_first: "/" }}">{{p.weight}}. {{p.title}}</a>
+                <a class="dropdown-item" href="{{p.url | remove_first: "/" }}">{{p.weight}}. {{p.title}}</a>
             </li>
             {% endif %}
             {% endif %}
@@ -56,7 +56,7 @@ Now create another include for the Next button at the bottom of the page. Copy t
 <p>{% assign pages = site.pages | where: "series", "ACME series" | sort: "weight" %}
     {% for p in pages %}
     {% if p.weight > page.weight %}
-    <a href="{{p.url | remove_first: "/" }}"><button type="button" class="btn btn-primary">Next: {{p.weight}}. {{p.title}}</button></a>
+    <a class="dropdown-item" href="{{p.url | remove_first: "/" }}"><button type="button" class="btn btn-primary">Next: {{p.weight}}. {{p.title}}</button></a>
     {% break %}
     {% endif %}
     {% endfor %}

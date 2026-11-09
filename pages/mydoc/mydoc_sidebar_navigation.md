@@ -3,7 +3,7 @@ title: Sidebar Navigation
 tags: [getting_started]
 last_updated: July 3, 2016
 keywords: sidebar, accordion, yaml, iteration, for loop, navigation, attributes, conditional filtering
-summary: "The sidebar navigation uses a jQuery component called Navgoco. The sidebar is a somewhat complex part of the theme that remembers your current page, highlights the active item, stays in a fixed position on the page, and more. This page explains a bit about how the sidebar was put together."
+summary: "The sidebar navigation uses a jQuery component called Navgoco. The sidebar is a somewhat complex part of the theme that remembers your current page, highlights the active item, stays in view as you scroll, slides out on small screens, and more. This page explains a bit about how the sidebar was put together."
 sidebar: mydoc_sidebar
 permalink: mydoc_sidebar_navigation.html
 folder: mydoc
@@ -21,23 +21,25 @@ In short, the sidebar has some complex logic here. I've integrated Navgoco's fea
 
 ## Accordion sidebar feature
 
-The \_layouts/default.html file calls the `.navgoco` method on the `#mysidebar` element, which the \_includes/sidebar.html file builds.
+The js/customscripts.js file calls the `.navgoco` method on the `#mysidebar` element, which the \_includes/sidebar.html file builds.
 
 There are some options to set within the `.navgoco` method. The only noteworthy option is `accordion`. This option makes it so when you expand a section, the other sections collapse. It's a way of keeping your navigation controls condensed.
 
 The value for `accordion` is a Boolean (`true` or `false`). By default, the `accordion` option is set as `true`. If you don't want the accordion, set it to `false`.
 
-To add **Collapse All** and **Expand All** links at the bottom of the sidebar, set `sidebar_expand_controls: true` in \_config.yml. These links work with or without the accordion.
+To add **Collapse All** and **Expand All** links at the top of the sidebar, set `sidebar_expand_controls: true` in \_config.yml. These links work with or without the accordion.
 
-Be careful with a long sidebar, though. If the sidebar is in a fixed position (see the next section) and someone expands every folder, the bottom of the sidebar can extend past the browser window, where it's hard to reach.
+If someone expands every folder in a long sidebar, the sidebar scrolls on its own, so the bottom stays reachable.
 
 ## Fixed position sidebar
 
-The sidebar has one other feature &mdash; this one from Bootstrap. If the user's viewport is tall enough, the sidebar remains fixed on the page. This allows the user to scroll down the page and still keep the sidebar in view.
+On large screens, the sidebar stays in view as the user scrolls down the page. This uses the CSS `position: sticky` rule in css/theme.css. If the sidebar is taller than the browser window, it scrolls independently of the page, so the bottom of the sidebar is always reachable.
 
-In the customscripts.js file in the js folder, there's a function that adds an `affix` class if the height of the browser window is greater than 800 pixels. If the browser's height is less than 800 pixels, the `nav affix` class does not get inserted. As a result, the sidebar can slide up and down as the user scrolls up and down the page.
+## Sidebar on small screens
 
-Depending on your content, you may need to adjust `800` pixel number. If your sidebar is so long that having it in a fixed position makes it so the bottom of the sidebar gets cut off, increase the `800` pixel number here to a higher number.
+On screens narrower than 992 pixels, the sidebar is hidden, and a sidebar button appears in the top navigation bar. Tapping the button slides the sidebar in from the left as a Bootstrap [offcanvas](https://getbootstrap.com/docs/5.3/components/offcanvas/) panel. The search box moves with it, since it sits at the top of the sidebar.
+
+On large screens, the **Nav** button in the top navigation hides and shows the sidebar, which gives the content the full width of the page.
 
 ## Opening sidebar links into external pages
 
@@ -48,7 +50,7 @@ For example, the sidebar.html file contains the following code:
 {% raw %}
 ```liquid
 {% if folderitem.external_url %}
-    <li><a href="{{folderitem.external_url}}" target="_blank" rel="noopener">{{folderitem.title}}</a></li>
+    <li class="item"><a title="{{folderitem.title}}" href="{{folderitem.external_url}}" target="_blank" rel="noopener">{{folderitem.title}}</a></li>
 ```
 {% endraw %}
 
@@ -56,20 +58,20 @@ You can see that the `external_url` is a condition that applies a different form
 
 ## Sidebar item highlighting
 
-The sidebar.html file inserts an `active` class into the sidebar element when the `url` attribute in the sidebar data file matches the page URL.
+The sidebar.html file inserts a `current` class into the sidebar item when the `url` attribute in the sidebar data file matches the page URL. A short script then adds the `active` class to the folders that contain the current item, which tells navgoco to open them.
 
 For example, the sidebar.html file contains the following code:
 
 {% raw %}
 ```liquid
 {% elsif page.url == folderitem.url %}
-   <li class="active"><a title="{{folderitem.title}}" href="{% include link.html url=folderitem.url %}">{{folderitem.title}}</a></li>
+   <li class="item current"><a title="{{folderitem.title}}" href="{% include link.html url=folderitem.url %}" aria-current="page">{{folderitem.title}}</a></li>
 ```
 {% endraw %}
 
-If the `page.url` matches the `folderitem.url`, then an `active` class gets applied. If not, the `active` class does not get applied.
+If the `page.url` matches the `folderitem.url`, then the `current` class gets applied. If not, the `current` class does not get applied.
 
-The `page.url` in Jekyll is a site-wide variable. If you insert {% raw %}`{{page.url}}`{% endraw %} on a page, it will render as follows: {{page.url}}. The `url` attribute in the sidebar item must match the page URL in order to get the `active` class applied.
+The `page.url` in Jekyll is a site-wide variable. If you insert {% raw %}`{{page.url}}`{% endraw %} on a page, it will render as follows: {{page.url}}. The `url` attribute in the sidebar item must match the page URL in order to get the `current` class applied.
 
 This is why the `url` value in the sidebar data file looks something like this:
 
@@ -81,6 +83,6 @@ This is why the `url` value in the sidebar data file looks something like this:
 
 The `url` value must match the page's permalink, with a slash at the beginning. It doesn't include the folder where you store the source file, because the permalink (not the source folder) determines the page's URL. If a page's permalink includes a folder, such as `/product1/overview.html`, use the same value for `url`. The link.html include then turns the URL into a relative link for the current page.
 
-Now the page.url and the item.url can match and the `active` class can get applied. With the `active` class applied, the sidebar section remains open.
+Now the page.url and the item.url can match and the `current` class can get applied. The folder that contains the current item then opens when the page loads.
 
 {% include links.html %}

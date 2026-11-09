@@ -1,0 +1,885 @@
+/*
+ * Documentation theme for Jekyll, version 8.0
+ *
+ * Layout and component styles on top of Bootstrap 5. Don't edit this file to
+ * customize the theme. Instead, override these variables or rules in
+ * css/customstyles.css, which loads after this file. That way you can update
+ * theme.css later without losing your changes.
+ */
+
+:root {
+    /* Accent color for sidebar icons, hover states, and highlights */
+    --theme-accent: #e47911;
+    --theme-accent-hover: #c8650a;
+    /* Link color */
+    --theme-link: #0066c0;
+    --theme-link-hover: #004b8d;
+    /* Text and headings */
+    --theme-text: #222;
+    --theme-heading: #333;
+    --theme-muted: #6c757d;
+    /* Backgrounds and borders */
+    --theme-navbar-bg: #ffffff;
+    --theme-sidebar-bg: #f7f7f7;
+    --theme-box-bg: #f7f7f7;
+    --theme-border: #dedede;
+    /* Code blocks */
+    --theme-code-bg: #f6f8fa;
+    --theme-inline-code: #c7254e;
+    /* Sizes */
+    --theme-content-font-size: 17px;
+    --theme-content-line-height: 1.6;
+    --theme-sidebar-font-size: 14px;
+    --theme-navbar-height: 72px;
+
+    --bs-link-color: var(--theme-link);
+    --bs-link-hover-color: var(--theme-link-hover);
+    --bs-link-color-rgb: 0, 102, 192;
+    --bs-link-hover-color-rgb: 0, 75, 141;
+}
+
+/* ---------- Base ---------- */
+
+body {
+    color: var(--theme-text);
+}
+
+a {
+    color: var(--theme-link);
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    color: var(--theme-link-hover);
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--theme-heading);
+    font-weight: 500;
+}
+
+.skip-link {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    z-index: 2000;
+    padding: 8px 12px;
+    background: #fff;
+    border: 1px solid var(--theme-border);
+}
+
+/* ---------- Top navigation ---------- */
+
+.site-navbar {
+    background-color: var(--theme-navbar-bg);
+    border-bottom: 1px solid var(--theme-border);
+    min-height: var(--theme-navbar-height);
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.site-navbar .navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 14px;
+    margin-right: 24px;
+    background-color: #eef3fb;
+    border-radius: 6px;
+    color: var(--theme-heading);
+    text-decoration: none;
+    white-space: normal;
+}
+
+.site-navbar .navbar-brand:hover {
+    text-decoration: none;
+    color: var(--theme-heading);
+}
+
+.navbar-brand-icon {
+    color: var(--theme-accent);
+    font-size: 28px;
+}
+
+.navbar-logo {
+    max-height: 40px;
+    width: auto;
+}
+
+.navbar-brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.15;
+}
+
+.projectTitle {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.projectSubtitle {
+    font-size: 12px;
+    color: var(--theme-muted);
+}
+
+.site-navbar .nav-link {
+    color: #111;
+    font-size: 16px;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+}
+
+.site-navbar .nav-link:hover,
+.site-navbar .nav-link:focus,
+.site-navbar .nav-link.active,
+.site-navbar .nav-link.show {
+    color: var(--theme-accent);
+}
+
+.site-navbar .dropdown-item:hover,
+.site-navbar .dropdown-item:focus {
+    color: var(--theme-accent);
+    background-color: transparent;
+    text-decoration: underline;
+}
+
+.site-navbar .dropdown-item.active,
+.site-navbar .dropdown-item:active {
+    color: var(--theme-accent);
+    background-color: transparent;
+    font-weight: 600;
+}
+
+.site-navbar .navbar-toggler {
+    border: 0;
+    font-size: 24px;
+    color: #111;
+    padding: 4px 10px;
+}
+
+.site-navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar-search {
+    margin-left: 16px;
+    min-width: 240px;
+}
+
+@media (max-width: 991.98px) {
+    .navbar-search {
+        margin: 10px 0;
+    }
+}
+
+/* ---------- Page layout ---------- */
+
+.page-container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.content-column {
+    padding: 24px 40px 0 40px;
+    min-width: 0;
+}
+
+@media (max-width: 767.98px) {
+    .content-column {
+        padding: 16px 16px 0 16px;
+    }
+}
+
+/* Nav button in the top navigation hides the sidebar on large screens */
+@media (min-width: 992px) {
+    body.sidebar-hidden .sidebar-column {
+        display: none;
+    }
+
+    body.sidebar-hidden .content-column {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* ---------- Sidebar ---------- */
+
+.sidebar-column {
+    background-color: var(--theme-sidebar-bg);
+}
+
+@media (min-width: 992px) {
+    /* Keep the sidebar in view as the page scrolls */
+    .sidebar-column .offcanvas-lg {
+        position: sticky;
+        top: 0;
+        max-height: 100vh;
+        overflow-y: auto;
+    }
+}
+
+/* Bootstrap's offcanvas-lg turns the body into a flex row on large screens; stack the contents instead */
+.sidebar-column .offcanvas-body.sidebar-inner {
+    display: block !important;
+    padding: 20px 15px 40px 20px !important;
+    overflow-y: auto;
+}
+
+.offcanvas-lg.offcanvas-start {
+    --bs-offcanvas-bg: var(--theme-sidebar-bg);
+}
+
+.offcanvas-title {
+    font-weight: 700;
+}
+
+.sidebarTitle {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--theme-heading);
+    margin: 24px 0 4px 0;
+}
+
+.sidebarVersion {
+    font-weight: 400;
+    color: var(--theme-muted);
+}
+
+.sidebarControls {
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.sidebar-nav,
+.sidebar-nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.sidebar-nav ul {
+    padding-left: 22px;
+}
+
+.sidebar-nav li {
+    font-size: var(--theme-sidebar-font-size);
+    line-height: 1.35;
+    margin: 7px 0;
+}
+
+.sidebar-nav li > a {
+    display: block;
+    position: relative;
+    padding-left: 22px;
+    color: var(--theme-link);
+    text-decoration: none;
+}
+
+.sidebar-nav li > a:hover {
+    color: var(--theme-heading);
+    text-decoration: underline;
+}
+
+/* Icons before each entry: a plus or minus square for folders, an empty square for pages */
+.sidebar-nav li > a::before {
+    position: absolute;
+    left: 0;
+    top: 1px;
+    font-family: "Font Awesome 7 Free";
+    font-weight: 400;
+    color: var(--theme-accent);
+    font-size: 13px;
+    content: "\f0c8"; /* square */
+}
+
+.sidebar-nav li.folder > a::before {
+    font-weight: 900;
+    content: "\f0fe"; /* square-plus */
+}
+
+.sidebar-nav li.folder.active > a::before {
+    content: "\f146"; /* square-minus */
+}
+
+.sidebar-nav li.folder > a {
+    color: var(--theme-heading);
+}
+
+.sidebar-nav li.folder.active > a {
+    font-weight: 600;
+}
+
+/* navgoco adds an empty span to folder links; the icon above replaces it */
+.sidebar-nav li.folder > a > span {
+    display: none;
+}
+
+/* The page you're viewing */
+.sidebar-nav li.current > a {
+    color: #000;
+    font-weight: 700;
+}
+
+.sidebar-nav li.current > a::before {
+    font-weight: 900;
+    color: #000;
+}
+
+.sidebar-nav li.item > a[target="_blank"]::after {
+    font-family: "Font Awesome 7 Free";
+    font-weight: 900;
+    content: "\f35d";
+    font-size: 10px;
+    padding-left: 5px;
+}
+
+/* ---------- Search ---------- */
+
+.search-box {
+    position: relative;
+}
+
+.search-box .search-icon {
+    position: absolute;
+    left: 12px;
+    top: 11px;
+    color: var(--theme-muted);
+    font-size: 14px;
+    pointer-events: none;
+}
+
+.search-box input {
+    padding: 8px 12px 8px 34px;
+    font-size: 15px;
+    border-color: #c8c8c8;
+}
+
+.search-results {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: 1100;
+    list-style: none;
+    margin: 2px 0 0 0;
+    padding: 0;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    font-size: 14px;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+.search-results:empty {
+    display: none;
+}
+
+.search-results li a,
+.search-results li.no-results {
+    display: block;
+    padding: 8px 12px;
+    border-bottom: 1px solid #eee;
+}
+
+.search-results li a:hover,
+.search-results li a:focus {
+    background-color: var(--theme-box-bg);
+    text-decoration: none;
+}
+
+/* ---------- Breadcrumbs and page header ---------- */
+
+.breadcrumb {
+    font-size: 14px;
+    margin-bottom: 12px;
+    --bs-breadcrumb-item-active-color: var(--theme-muted);
+}
+
+.post-title-main {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 12px 0;
+}
+
+.page-meta {
+    font-size: 14px;
+    color: var(--theme-muted);
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.page-meta .githubEditButton {
+    font-style: normal;
+}
+
+.page-meta-updated + .githubEditButton {
+    margin-left: 12px;
+}
+
+.post-meta {
+    font-size: 14px;
+    color: var(--theme-muted);
+}
+
+.summary {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #555;
+    margin: 20px 0 24px 0;
+    padding: 4px 0 4px 16px;
+    border-left: 5px solid var(--theme-accent);
+}
+
+.summary::before {
+    content: "Summary: ";
+    font-weight: 700;
+}
+
+/* ---------- Mini table of contents ---------- */
+
+#toc > ul {
+    border: 1px solid var(--theme-border);
+    background-color: var(--theme-box-bg);
+    border-radius: 6px;
+    max-width: 420px;
+    padding: 14px 18px 12px 34px;
+    margin: 20px 0 30px 0;
+    font-size: 15px;
+}
+
+#toc > ul::before {
+    content: "Contents";
+    display: block;
+    font-size: 18px;
+    color: #555;
+    margin: 0 0 8px -16px;
+}
+
+#toc ul li {
+    margin: 6px 0;
+    list-style: disc;
+}
+
+#toc ul ul {
+    padding-left: 18px;
+}
+
+#toc ul ul li {
+    list-style: circle;
+}
+
+/* ---------- Content ---------- */
+
+.post-content {
+    font-size: var(--theme-content-font-size);
+    line-height: var(--theme-content-line-height);
+}
+
+.post-content h2 {
+    font-size: 26px;
+    margin-top: 40px;
+    margin-bottom: 16px;
+}
+
+.post-content h3 {
+    font-size: 21px;
+    margin-top: 32px;
+    margin-bottom: 12px;
+}
+
+.post-content h4 {
+    font-size: 18px;
+    margin-top: 24px;
+    margin-bottom: 10px;
+}
+
+/* Headings inside Bootstrap components keep the component's own spacing */
+.post-content .accordion-header,
+.post-content .card-title,
+.post-content .modal-title {
+    margin: 0;
+}
+
+.post-content .accordion-header {
+    font-size: inherit;
+}
+
+/* Leave room above headings that are linked from the TOC */
+.post-content h2[id],
+.post-content h3[id],
+.post-content h4[id],
+.post-content h5[id],
+dt[id] {
+    scroll-margin-top: 20px;
+}
+
+.post-content ol li,
+.post-content ul li {
+    margin: 6px 0;
+}
+
+ol li ol li { list-style-type: lower-alpha; }
+ol li ul li { list-style-type: disc; }
+
+/* No width rule here, so that a width attribute on an image (<img width="200">) is respected. */
+.post-content img {
+    margin: 12px 0 3px 0;
+    height: auto;
+    max-width: 100%;
+}
+
+.post-content img.inline {
+    margin: 0 0 6px 0;
+}
+
+img.docimage {
+    max-width: 100%;
+}
+
+figcaption {
+    font-size: 14px;
+    font-style: italic;
+    color: var(--theme-muted);
+    margin: 4px 0 20px 0;
+}
+
+dl dt {
+    font-weight: 600;
+}
+
+dl dd {
+    margin-left: 20px;
+    margin-bottom: 14px;
+}
+
+blockquote {
+    border-left: 4px solid var(--theme-border);
+    padding: 4px 0 4px 16px;
+    color: #555;
+}
+
+hr.faded {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.6), rgba(0,0,0,0));
+}
+
+span.red { color: #c00; }
+span.soft { color: var(--theme-muted); }
+span.muted { color: var(--theme-muted); }
+img.screenshotSmall { max-width: 300px; }
+
+/* Task lists (- [ ] and - [x]) from GitHub-flavored Markdown */
+.post-content ul li.task-list-item {
+    list-style-type: none;
+}
+
+.post-content ul li.task-list-item input.task-list-item-checkbox {
+    margin: 0 0.4em 0.2em -1.4em;
+    vertical-align: middle;
+}
+
+/* External link icon */
+.post-content a[href^="http://"]::after,
+.post-content a[href^="https://"]::after {
+    font-family: "Font Awesome 7 Free";
+    font-weight: 900;
+    content: "\f35d"; /* up-right-from-square */
+    font-size: 0.7em;
+    padding-left: 4px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+/* Add the noCrossRef or no_icon class to a link to leave off the icon */
+.post-content a[href].noCrossRef::after,
+.post-content a.no_icon::after,
+.post-content a.btn::after,
+.post-content pre a::after {
+    content: none;
+}
+
+/* Tooltip and popover links */
+a[data-bs-toggle="tooltip"],
+a[data-toggle="tooltip"],
+a[data-bs-toggle="popover"],
+a[data-toggle="popover"] {
+    color: #2b7a8c;
+    border-bottom: 1px dashed #999;
+    text-decoration: none;
+}
+
+/* ---------- Code ---------- */
+
+code {
+    color: var(--theme-inline-code);
+    font-size: 0.875em;
+}
+
+pre {
+    background-color: var(--theme-code-bg);
+    border: 1px solid #e3e6ea;
+    border-radius: 6px;
+    padding: 14px 16px;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 16px 0 20px 0;
+}
+
+pre code {
+    color: inherit;
+    font-size: inherit;
+}
+
+a code { color: inherit; }
+table code { background-color: transparent; }
+
+/* ---------- Tables ---------- */
+
+.post-content table {
+    width: 100%;
+    margin: 16px 0 24px 0;
+    border-collapse: collapse;
+    font-size: 15px;
+}
+
+.post-content table th,
+.post-content table td {
+    border: 1px solid var(--theme-border);
+    padding: 8px 10px;
+    vertical-align: top;
+}
+
+.post-content table thead th {
+    background-color: #f0f2f4;
+    font-weight: 600;
+}
+
+.post-content table tbody tr:nth-of-type(odd) {
+    background-color: #fafafa;
+}
+
+.post-content table p {
+    margin-bottom: 0;
+}
+
+/* ---------- Alerts and callouts ---------- */
+
+.post-content .alert {
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.alert code {
+    background: transparent;
+}
+
+.alert a {
+    font-weight: 600;
+}
+
+.bs-callout {
+    padding: 16px 20px;
+    margin: 20px 0;
+    border: 1px solid #e5e5e5;
+    border-left-width: 5px;
+    border-radius: 4px;
+}
+
+.bs-callout h4,
+.bs-callout .calloutTitle {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.bs-callout p:last-child {
+    margin-bottom: 0;
+}
+
+.bs-callout + .bs-callout {
+    margin-top: -5px;
+}
+
+.bs-callout-default { border-left-color: #777; }
+.bs-callout-default h4 { color: #777; }
+.bs-callout-primary { border-left-color: #0d6efd; }
+.bs-callout-primary h4 { color: #0d6efd; }
+.bs-callout-success { border-left-color: #198754; }
+.bs-callout-success h4 { color: #198754; }
+.bs-callout-danger { border-left-color: #dc3545; }
+.bs-callout-danger h4 { color: #dc3545; }
+.bs-callout-warning { border-left-color: #f0ad4e; }
+.bs-callout-warning h4 { color: #b8860b; }
+.bs-callout-info { border-left-color: #0dcaf0; }
+.bs-callout-info h4 { color: #0a8fa8; }
+
+/* ---------- Tags ---------- */
+
+.tags {
+    margin: 30px 0 10px 0;
+    font-size: 15px;
+}
+
+.tags-label {
+    font-weight: 600;
+    margin-right: 6px;
+}
+
+.tag-link {
+    display: inline-block;
+    margin: 0 6px 6px 0;
+    padding: 2px 10px;
+    border: 1px solid var(--theme-border);
+    border-radius: 12px;
+    background-color: var(--theme-box-bg);
+    font-size: 14px;
+}
+
+.tag-link:hover {
+    border-color: var(--theme-accent);
+    text-decoration: none;
+}
+
+/* ---------- Series ---------- */
+
+.seriesContext {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.seriesContext .dropdown-menu li.active {
+    font-weight: 700;
+    padding: 4px 16px;
+}
+
+.seriesContext .dropdown-menu li a {
+    display: block;
+    padding: 4px 16px;
+}
+
+/* ---------- Workflow maps ---------- */
+
+#userMap {
+    overflow-x: auto;
+    padding: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 0;
+}
+
+#userMap .content a:hover {
+    text-decoration: none;
+}
+
+#userMap .box {
+    padding: 10px;
+    border: 1px solid #888;
+    border-radius: 3px;
+    width: 110px;
+    height: 90px;
+    background-color: var(--theme-box-bg);
+    color: var(--theme-link);
+    font-size: 13px;
+    line-height: 1.3;
+    hyphens: auto;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+#userMap .box:hover {
+    background-color: #eee;
+}
+
+#userMap .active,
+#userMap .box.active {
+    background-color: #d6f5d6;
+    border: 1px solid #555;
+    color: #000;
+    font-weight: 600;
+}
+
+#userMap .arrow,
+#userMap .complexArrow {
+    font-size: 20px;
+    margin: 0 14px;
+}
+
+#userMap .btn-lg {
+    width: 120px;
+    min-height: 80px;
+    white-space: normal;
+    font-size: 14px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+/* ---------- Footer ---------- */
+
+.site-footer {
+    margin-top: 50px;
+    padding: 24px 0 40px 0;
+    border-top: 1px solid var(--theme-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-size: 13px;
+    color: var(--theme-muted);
+}
+
+.footer-logo img {
+    max-height: 50px;
+    width: auto;
+}
+
+/* ---------- Special layouts ---------- */
+
+.kbCaption {
+    font-size: 14px;
+    color: var(--theme-muted);
+}
+
+.filter-options {
+    margin-bottom: 20px;
+}
+
+.filter-options button {
+    margin: 0 6px 6px 0;
+}
+
+/* Labels used on some sample pages */
+.audienceLabel {
+    margin: 10px;
+    float: right;
+    border: 1px solid #dedede;
+    padding: 7px;
+}
+
+/* ---------- Print ---------- */
+
+@media print {
+    .site-navbar,
+    .sidebar-column,
+    .breadcrumb,
+    .anchorjs-link,
+    .githubEditButton,
+    #toc,
+    .pdf-download {
+        display: none !important;
+    }
+
+    .content-column {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

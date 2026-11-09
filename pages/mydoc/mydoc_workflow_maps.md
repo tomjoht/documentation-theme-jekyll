@@ -97,9 +97,9 @@ The simpler user workflow allows for 5 workflow steps. If you have a more comple
      The existing usermapcomplex.html file just has 3 workflow square modals. If you need more, duplicate the modal code. In the duplicated code, make sure you make the following values in red unique (but the same within the same modal):
      
      <pre>
-     <button type="button" class="btn btn-default btn-lg modalButton3" data-toggle="modal" data-target="<span class="red">#myModal3</span>">Publish your app</button>
-           <!-- Modal -->
-           <div class="modal fade" id="<span class="red">myModal3</span>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+     &lt;button type="button" class="btn btn-light border btn-lg <span class="red">modalButton3</span>" data-bs-toggle="modal" data-bs-target="<span class="red">#myModal3</span>"&gt;Publish your app&lt;/button&gt;
+           &lt;!-- Modal --&gt;
+           &lt;div class="modal fade" id="<span class="red">myModal3</span>" tabindex="-1" aria-labelledby="myModalLabel"&gt;
      </pre>
 
 2.  For each topic where you want the modal to appear, insert the following properties in your frontmatter:
@@ -119,24 +119,22 @@ The simpler user workflow allows for 5 workflow steps. If you have a more comple
     ---
     </pre>
 
-    When your frontmatter contains `complex_map` equal to `true`, the following code gets activated in the page layout.html file:
-    
+    When your frontmatter contains `complex_map` equal to `true`, the following code gets activated in the \_layouts/page.html file:
+
+    ```liquid
+    {% raw %}{% if page.complex_map == true %}
+
+    <script>
+        $(document).ready ( function(){
+            $('.modalButton{{page.box_number}}').addClass('active');
+        });
+    </script>
+
+    {% include custom/{{page.map_name}}.html %}
+
+    {% endif %}{% endraw %}
     ```
-    In the page.html layout, the following code gets activated when `map` equals `true`:
-        
-     ```
-        {% raw %}{% if page.complex_map == true %}
-        
-        <script>
-            $(document).ready ( function(){
-                $('.modalButton{{page.box_number}}').addClass('active');
-            });
-        </script>
-        
-        {% include custom/{{page.map_name}}.html %}
-        
-        {% endif %}{% endraw %}
-        ```
-     ```
-     
+
+    The `box_number` value adds the `active` class to the matching button, which highlights the current step.
+
 {% include links.html %}
