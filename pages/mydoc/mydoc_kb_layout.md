@@ -12,72 +12,64 @@ folder: mydoc
 
 Here's the sample knowledge-base style layout:
 
-<div class="row">
-         <div class="col-lg-12">
-             <h2 class="page-header">Knowledge Base Categories</h2>
-         </div>
-         <div class="col-md-3 col-sm-6">
-             <div class="panel panel-default text-center">
-                 <div class="panel-heading">
-                     <span class="fa-stack fa-5x">
-                           <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                           <i class="fa fa-tree fa-stack-1x fa-inverse"></i>
-                     </span>
-                 </div>
-                 <div class="panel-body">
-                     <h4>Getting started</h4>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                     <a href="tag_getting_started.html" class="btn btn-primary">Learn More</a>
-                 </div>
-             </div>
-         </div>
-         <div class="col-md-3 col-sm-6">
-             <div class="panel panel-default text-center">
-                 <div class="panel-heading">
-                     <span class="fa-stack fa-5x">
-                           <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                           <i class="fa fa-car fa-stack-1x fa-inverse"></i>
-                     </span>
-                 </div>
-                 <div class="panel-body">
-                     <h4>Navigation</h4>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                     <a href="tag_navigation.html" class="btn btn-primary">Learn More</a>
-                 </div>
-             </div>
-         </div>
-         <div class="col-md-3 col-sm-6">
-             <div class="panel panel-default text-center">
-                 <div class="panel-heading">
-                     <span class="fa-stack fa-5x">
-                           <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                           <i class="fa fa-support fa-stack-1x fa-inverse"></i>
-                     </span>
-                 </div>
-                 <div class="panel-body">
-                     <h4>Single sourcing</h4>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                     <a href="tag_single_sourcing.html" class="btn btn-primary">Learn More</a>
-                 </div>
-             </div>
-         </div>
-         <div class="col-md-3 col-sm-6">
-             <div class="panel panel-default text-center">
-                 <div class="panel-heading">
-                     <span class="fa-stack fa-5x">
-                           <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                           <i class="fa fa-database fa-stack-1x fa-inverse"></i>
-                     </span>
-                 </div>
-                 <div class="panel-body">
-                     <h4>Formatting</h4>
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                     <a href="tag_formatting.html" class="btn btn-primary">Learn More</a>
-                 </div>
-             </div>
-         </div>
+<h2>Knowledge Base Categories</h2>
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-xl-4 g-4 mb-4">
+    <div class="col">
+        <div class="card h-100 text-center kb-card">
+            <div class="card-body">
+                <span class="fa-stack fa-3x">
+                    <i class="fa-solid fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa-solid fa-tree fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="card-title mt-3">Getting started</h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <a href="tag_getting_started.html" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 text-center kb-card">
+            <div class="card-body">
+                <span class="fa-stack fa-3x">
+                    <i class="fa-solid fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa-solid fa-car fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="card-title mt-3">Navigation</h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <a href="tag_navigation.html" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 text-center kb-card">
+            <div class="card-body">
+                <span class="fa-stack fa-3x">
+                    <i class="fa-solid fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa-solid fa-life-ring fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="card-title mt-3">Single sourcing</h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <a href="tag_single_sourcing.html" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 text-center kb-card">
+            <div class="card-body">
+                <span class="fa-stack fa-3x">
+                    <i class="fa-solid fa-circle fa-stack-2x text-primary"></i>
+                    <i class="fa-solid fa-database fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="card-title mt-3">Formatting</h4>
+                <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                <a href="tag_formatting.html" class="btn btn-primary">Learn More</a>
+            </div>
+        </div>
+    </div>
 </div>
 
+The layout uses Bootstrap 5 [cards](https://getbootstrap.com/docs/5.3/components/card/) in a responsive grid. The `row-cols-*` classes set how many cards appear in each row at different screen widths, and the icons are stacked [Font Awesome](https://fontawesome.com/icons) icons. View the source of this page (pages/mydoc/mydoc_kb_layout.md) to see the code.
 
 ## Generating a list of all pages with a certain tag
 

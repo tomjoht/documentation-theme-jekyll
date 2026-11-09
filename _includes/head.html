@@ -1,30 +1,28 @@
 {% include root.html %}
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="{% if page.summary %}{{ page.summary | strip_html | strip_newlines | truncate: 160 }}{% endif %}">
 <meta name="keywords" content="{{page.tags}}{% if page.tags %}, {% endif %} {{page.keywords}}">
 <title>{{ page.title }} | {{ site.site_title }}</title>
 
 <!-- All CSS and JavaScript libraries are stored locally so the site works offline. -->
-<link rel="stylesheet" href="{{ root }}css/syntax.css">
-<link rel="stylesheet" href="{{ root }}css/font-awesome.min.css">
-<link rel="stylesheet" href="{{ root }}css/modern-business.css">
 <link rel="stylesheet" href="{{ root }}css/bootstrap.min.css">
+<link rel="stylesheet" href="{{ root }}css/fontawesome-all.min.css">
+<link rel="stylesheet" href="{{ root }}css/fontawesome-v4-shims.min.css">
+<link rel="stylesheet" href="{{ root }}css/fontawesome-v4-font-face.min.css">
+<link rel="stylesheet" href="{{ root }}css/syntax.css">
+<link rel="stylesheet" href="{{ root }}css/theme.css">
+<!-- Put your own styles in customstyles.css. It loads last, so its rules override the theme's. -->
 <link rel="stylesheet" href="{{ root }}css/customstyles.css">
-<link rel="stylesheet" href="{{ root }}css/boxshadowproperties.css">
-<!-- most color styles are extracted out to here -->
-<link rel="stylesheet" href="{{ root }}css/theme-blue.css">
 
 <script src="{{ root }}js/jquery.min.js"></script>
-<script src="{{ root }}js/jquery.cookie.min.js"></script>
 <script src="{{ root }}js/jquery.navgoco.min.js"></script>
-<script src="{{ root }}js/bootstrap.min.js"></script>
+<script src="{{ root }}js/bootstrap.bundle.min.js"></script>
 <script src="{{ root }}js/anchor.min.js"></script>
 <script src="{{ root }}js/toc.js"></script>
 <script src="{{ root }}js/customscripts.js"></script>
 
-<link rel="shortcut icon" href="{{ root }}images/favicon.ico">
+<link rel="icon" href="{{ root }}images/favicon.ico">
 
 <link rel="alternate" type="application/rss+xml" title="{{ site.site_title }}" href="{{ "/feed.xml" | relative_url }}">
 

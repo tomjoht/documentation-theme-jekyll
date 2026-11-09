@@ -16,12 +16,12 @@ If you're using the doc as code approach, you might also consider using the same
 
 There's an Edit me button on each page on this theme. This button allows collaborators to edit the content on Github.
 
-Here's the code for that button in the \_layouts/page.html file:
+Here's the code for that link in the \_layouts/page.html file. It appears next to the page's last-updated date, below the title:
 
 ```
 {% raw %}{% if site.github_editme_path %}
 
-<a target="_blank" rel="noopener" href="https://github.com/{{site.github_editme_path}}{{page.path}}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+<a target="_blank" rel="noopener" href="https://github.com/{{site.github_editme_path}}{{page.path}}" class="githubEditButton noCrossRef"><i class="fa-brands fa-github" aria-hidden="true"></i> Edit me</a>
 
 {% endif %}{% endraw %}
 ```

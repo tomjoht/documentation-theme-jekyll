@@ -3,8 +3,20 @@ layout: default
 ---
 {% include root.html %}
 
+{% include breadcrumbs.html %}
+
 <div class="post-header">
    <h1 class="post-title-main">{{ page.title }}</h1>
+   {% if page.last_updated or site.github_editme_path or site.gitlab_editme_path %}
+   <p class="page-meta">
+       {% if page.last_updated %}<span class="page-meta-updated">Last updated: {{ page.last_updated }}</span>{% endif %}
+       {% if site.github_editme_path %}
+       <a target="_blank" rel="noopener" href="https://github.com/{{site.github_editme_path}}{{page.path}}" class="githubEditButton noCrossRef"><i class="fa-brands fa-github" aria-hidden="true"></i> Edit me</a>
+       {% elsif site.gitlab_editme_path %}
+       <a target="_blank" rel="noopener" href="https://gitlab.com/{{site.gitlab_editme_path}}{{page.path}}" class="githubEditButton noCrossRef"><i class="fa-brands fa-gitlab" aria-hidden="true"></i> Edit me</a>
+       {% endif %}
+   </p>
+   {% endif %}
 </div>
 
 {% if page.simple_map == true %}
@@ -39,36 +51,23 @@ layout: default
     {% include toc.html %}
     {% endunless %}
 
-
-    {% if site.github_editme_path %}
-
-    <a target="_blank" rel="noopener" href="https://github.com/{{site.github_editme_path}}{{page.path}}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
-
-    {% elsif site.gitlab_editme_path %}
-
-    <a target="_blank" rel="noopener" href="https://gitlab.com/{{site.gitlab_editme_path}}{{page.path}}" class="btn btn-default githubEditButton" role="button"><i class="fa fa-gitlab fa-lg"></i> Edit me</a>
-
-    {% endif %}
-
    {{content}}
 
+    {% if page.tags != null %}
+    {% assign projectTags = site.data.tags.allowed-tags %}
     <div class="tags">
-        {% if page.tags != null %}
-        <b>Tags: </b>
-        {% assign projectTags = site.data.tags.allowed-tags %}
+        <span class="tags-label">Tags:</span>
         {% for tag in page.tags %}
         {% if projectTags contains tag %}
-        <a href="{{ root }}tag_{{ tag }}.html" class="btn btn-default navbar-btn cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
+        <a href="{{ root }}tag_{{ tag }}.html" class="tag-link">{{page.tagName}}{{tag}}</a>
         {% endif %}
         {% endfor %}
-        {% endif %}
     </div>
+    {% endif %}
 
 {% include comments.html %}
 
 </div>
-
-{{site.data.alerts.hr_shaded}}
 
 {% include footer.html %}
 

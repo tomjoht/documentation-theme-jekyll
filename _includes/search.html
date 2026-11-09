@@ -1,0 +1,21 @@
+{% include root.html %}
+<!-- Search. The default layout puts this at the top of the sidebar, or in the top navigation when a page has no sidebar. -->
+<div class="search-box" role="search">
+    <i class="fa-solid fa-magnifying-glass search-icon" aria-hidden="true"></i>
+    <input type="search" class="form-control" id="search-input" placeholder="{{site.data.strings.search_placeholder_text}}" aria-label="{{site.data.strings.search_placeholder_text}}" autocomplete="off">
+    <ul id="results-container" class="search-results"></ul>
+</div>
+<script src="{{ root }}js/jekyll-search.js"></script>
+<script>
+    SimpleJekyllSearch.init({
+        searchInput: document.getElementById('search-input'),
+        resultsContainer: document.getElementById('results-container'),
+        dataSource: '{{ root }}search.json',
+        searchResultTemplate: '<li><a href="{{ root }}{url}" title="{title}">{title}</a></li>',
+        noResultsText: '<li class="no-results">{{site.data.strings.search_no_results_text}}</li>',
+        limit: 10,
+        fuzzy: false
+    });
+</script>
+
+{% comment %} Copyright 2026 Google LLC {% endcomment %}

@@ -208,70 +208,48 @@ Developers can access the help using the `.get` method from jQuery, among other 
 ```js
 {% raw %}var url = "tooltips.json";
 
-         $.get( url, function( data ) {
-
-          /* Bootstrap popover text is defined inside a data-content attribute inside an element. That's
-          why I'm using attr here. If you just want to insert content on the page, use append and remove the data-content argument from the parentheses.*/
-
-             $.each(data.entries, function(i, page) {
-                 if (page.doc_id == "basketball") {
-                     $( "#basketball" ).attr( "data-content", page.body );
-                 }
-
-                 if (page.doc_id == "baseball") {
-                     $( "#baseball" ).attr( "data-content", page.body );
-                 }
-                 if (page.doc_id == "football") {
-                     $( "#football" ).attr( "data-content", page.body );
-                 }
-
-                 if (page.doc_id == "soccer") {
-                     $( "#soccer" ).attr( "data-content", page.body );
-                 }
-
-
-                 });
-             });{% endraw %}
+$.get( url, function( data ) {
+    $.each(data.entries, function(i, page) {
+        var el = document.getElementById(page.doc_id);
+        if (el) {
+            new bootstrap.Popover(el, {
+                content: page.body,
+                placement: 'right',
+                trigger: 'hover focus',
+                html: true
+            });
+        }
+    });
+});{% endraw %}
 ```
 
 View the <a target="_blank" rel="noopener" href="tooltips.html" class="noCrossRef">tooltip demo</a> for a demonstration. See the source code for full code details.
 
 The `url` in the demo is relative, but you could equally point it to an absolute path on a remote host assuming CORS is enabled on the host.
 
-The `each` method looks through all the JSON content to find the item whose `page.id` is equal to `basketball`. It then looks for an element on the page named `#basketball` and adds a `data-content` attribute to that element.
+The `each` method loops through all the entries in the JSON file. For each entry, it looks for an element on the page whose ID matches the entry's `doc_id`, such as `#basketball`, and creates a [Bootstrap popover](https://getbootstrap.com/docs/5.3/components/popovers/) on that element with the entry's `body` as the content.
 
-{% include warning.html content="Make sure your JSON file is valid. Otherwise, this method won't work. I use the [JSON Formatter extension for Chrome](https://chromewebstore.google.com/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa). When I go to the tooltips.json page in my browser, the JSON content &mdash; if valid &mdash; is nicely formatted (and includes some color coding). If the file isn't valid, it's not formatted and there isn't any color. You can also check the JSON formatting using [JSON Formatter and Validator](http://jsonformatter.curiousconcept.com/). If your JSON file isn't valid, identify the problem area using the validator and troubleshoot the file causing issues. It's usually due to some code that isn't escaping correctly." %}
-
-Why `data-content`? Well, in this case, I'm using [Bootstrap popovers](http://getbootstrap.com/javascript/#popovers) to display the tooltip content. The `data-content` attribute is how Bootstrap injects popovers.
+{% include warning.html content="Make sure your JSON file is valid. Otherwise, this method won't work. I use the [JSON Formatter extension for Chrome](https://chromewebstore.google.com/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa). When I go to the tooltips.json page in my browser, the JSON content &mdash; if valid &mdash; is nicely formatted (and includes some color coding). If the file isn't valid, it's not formatted and there isn't any color. You can also check the JSON formatting using [JSONLint](https://jsonlint.com/). If your JSON file isn't valid, identify the problem area using the validator and troubleshoot the file causing issues. It's usually due to some code that isn't escaping correctly." %}
 
 Here's the section on the page where the popover is inserted:
 
+```html
+<p>Basketball <i class="fa-solid fa-circle-info help-icon" id="basketball" tabindex="0" aria-label="Basketball help"></i></p>
 ```
-<p>Basketball <span class="glyphicon glyphicon-info-sign" id="basketball" data-toggle="popover"></span></p>
-```
 
-Notice that I just have `id="basketball"` added to this popover element. Developers merely need to add a unique ID to each tooltip they want to pull in the help content. Either you tell developers the unique ID they should add, or ask them what IDs they added (or just tell them to use an ID that matches the field's name).
+Notice that I just have `id="basketball"` added to this element. Developers merely need to add a unique ID to each tooltip they want to pull in the help content. Either you tell developers the unique ID they should add, or ask them what IDs they added (or just tell them to use an ID that matches the field's name). The `tabindex="0"` attribute lets keyboard users focus the icon to show the popover.
 
-In order to use jQuery and Bootstrap, you'll need to add the appropriate references in the head tags of your page:
+In order to use jQuery and Bootstrap, you'll need to add the appropriate references in the head tags of your page. Bootstrap's popovers need the bundle version of its script, which includes the Popper positioning library:
 
-```js
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function(){
-    $('[data-toggle="popover"]').popover({
-        placement : 'right',
-        trigger: 'hover',
-        html: true
-    });
-</script>
+```html
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 ```
 
 Again, see the <a class="noCrossRef" href="tooltips.html">Tooltip Demo</a> for a demo of the full code.
 
-Note that even though you reference a Bootstrap JS script, Bootstrap's popovers require you to initialize them using the above code as well &mdash; they aren't turned on by default.
+Note that even though you reference the Bootstrap script, Bootstrap's popovers aren't turned on by default. You have to create each one with `new bootstrap.Popover()`, as the code above does.
 
 View the source code of the <a target="_blank" rel="noopener" href="tooltips.html" class="noCrossRef">tooltip demo</a> for the full comments.
 

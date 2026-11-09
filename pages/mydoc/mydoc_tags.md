@@ -90,23 +90,23 @@ sidebar: mydoc_sidebar
 
 
 ```liquid
-{% raw %}<div class="tags">
-{% if page.tags != null %}
-<b>Tags: </b>
+{% raw %}{% if page.tags != null %}
 {% assign projectTags = site.data.tags.allowed-tags %}
-{% for tag in page.tags %}
-{% if projectTags contains tag %}
-<a href="{{ root }}tag_{{ tag }}.html" class="btn btn-default navbar-btn cursorNorm" role="button">{{page.tagName}}{{tag}}</a>
-{% endif %}
-{% endfor %}
-{% endif %}
-</div>{% endraw %}
+<div class="tags">
+    <span class="tags-label">Tags:</span>
+    {% for tag in page.tags %}
+    {% if projectTags contains tag %}
+    <a href="{{ root }}tag_{{ tag }}.html" class="tag-link">{{page.tagName}}{{tag}}</a>
+    {% endif %}
+    {% endfor %}
+</div>
+{% endif %}{% endraw %}
 ```
 
 
 Because this code appears on the \_layouts/page.html file by default, you don't need to do anything in your page to get the tags to appear. However, if you want to alter the placement or change the button color, you can do so within the \_layouts/page.html file.
 
-You can change the button color by changing the class on the button from `btn-default` to one of the other button classes Bootstrap provides. See [Labels][mydoc_labels] for more options on button class names.
+The tags appear as rounded links styled by the `.tag-link` rule in css/theme.css. To change their look, override `.tag-link` in css/customstyles.css, or replace the class with one of Bootstrap's badge or button classes. See [Labels][mydoc_labels] for badge class names.
 
 ## Retrieving pages for a specific tag
 

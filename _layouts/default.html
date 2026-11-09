@@ -6,63 +6,18 @@
     The sidebar is hidden when the page sets hide_sidebar: true, or when the
     page's sidebar value doesn't match a sidebar file in _data/sidebars (for
     example, sidebar: none). When the sidebar is hidden, the content spans the
-    full width and the Nav toggle in the top navigation is hidden.
+    full width, the search box moves to the top navigation, and the sidebar
+    toggles are hidden.
     {% endcomment %}
     {% assign show_sidebar = true %}
     {% if page.hide_sidebar or site.data.sidebars[page.sidebar] == nil %}
         {% assign show_sidebar = false %}
     {% endif %}
-    <script>
-        $(document).ready(function() {
-            // Initialize navgoco with default options
-            $("#mysidebar").navgoco({
-                caretHtml: '',
-                accordion: true,
-                openClass: 'active', // open
-                save: false, // leave false or nav highlighting doesn't work right
-                cookie: {
-                    name: 'navgoco',
-                    expires: false,
-                    path: '/'
-                },
-                slide: {
-                    duration: 400,
-                    easing: 'swing'
-                }
-            });
-
-            // The accordion option closes the other folders whenever one opens,
-            // so navgoco's own toggle can't expand everything at once. These
-            // handlers open and close the folders directly instead.
-            $("#collapseAll").click(function(e) {
-                e.preventDefault();
-                $("#mysidebar li:has(ul)").removeClass("active").children("ul").slideUp(200);
-            });
-
-            $("#expandAll").click(function(e) {
-                e.preventDefault();
-                $("#mysidebar li:has(ul)").addClass("active").children("ul").slideDown(200);
-            });
-
-        });
-
-    </script>
-    <script>
-        $(document).ready(function() {
-            $("#tg-sb-link").click(function(e) {
-                e.preventDefault();
-                $("#tg-sb-sidebar").toggle();
-                $("#tg-sb-content").toggleClass('col-md-9');
-                $("#tg-sb-content").toggleClass('col-md-12');
-                $("#tg-sb-icon").toggleClass('fa-toggle-on');
-                $("#tg-sb-icon").toggleClass('fa-toggle-off');
-            });
-        });
-    </script>
     {% if page.datatable == true %}
     <!-- Include the standard DataTables bits -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.css">
-    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.13/js/jquery.dataTables.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.3.2/css/dataTables.bootstrap5.min.css">
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/2.3.2/js/dataTables.bootstrap5.min.js"></script>
     <!-- First, this walks through the tables that occur between ...-begin
          and ...-end and add the "datatable" class to them.
          Then it invokes DataTable's standard initializer
@@ -70,7 +25,7 @@
       -->
     <script>
       $(document).ready(function(){
-          $('div.datatable-begin').nextUntil('div.datatable-end', 'table').addClass('display');
+          $('div.datatable-begin').nextUntil('div.datatable-end', 'table').addClass('display table');
           $('table.display').DataTable( {
               paging: true,
               stateSave: true,
@@ -79,34 +34,37 @@
        });
     </script>
     {% endif %}
-
 </head>
-<body>
+<body class="{% if show_sidebar %}has-sidebar{% else %}no-sidebar{% endif %}">
+<a class="visually-hidden-focusable skip-link" href="#main-content">Skip to main content</a>
 {% include topnav.html %}
-<!-- Page Content -->
-<div class="container">
-  <div id="main">
-    <!-- Content Row -->
-    <div class="row">
-        {% assign content_col_size = "col-md-12" %}
+
+<div class="container-xl page-container">
+    <div class="row g-0">
         {% if show_sidebar %}
-            <!-- Sidebar Column -->
-            <div class="col-md-3" id="tg-sb-sidebar">
-                {% include sidebar.html %}
+        <!-- Sidebar column. On large screens it sits beside the content; on smaller screens it opens as an offcanvas panel. -->
+        <div class="col-lg-3 sidebar-column" id="tg-sb-sidebar">
+            <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="sidebar" aria-labelledby="sidebarLabel">
+                <div class="offcanvas-header d-lg-none">
+                    <span class="offcanvas-title" id="sidebarLabel">{{ site.data.strings.sidebar_panel_title | default: "Navigation" }}</span>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#sidebar" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body sidebar-inner">
+                    {% include search.html %}
+                    {% include sidebar.html %}
+                </div>
             </div>
-            {% assign content_col_size = "col-md-9" %}
+        </div>
         {% endif %}
 
-        <!-- Content Column -->
-        <div class="{{content_col_size}}" id="tg-sb-content">
+        <!-- Content column -->
+        <main class="{% if show_sidebar %}col-lg-9{% else %}col-12{% endif %} content-column" id="tg-sb-content">
+            <div id="main-content">
             {{content}}
-        </div>
-    <!-- /.row -->
-</div>
-<!-- /.container -->
-</div>
-<!-- /#main -->
+            </div>
+        </main>
     </div>
+</div>
 
 {% if site.google_analytics %}
 {% include google_analytics.html %}

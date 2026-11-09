@@ -1,16 +1,16 @@
 <div class="seriesContext">
     <div class="btn-group">
-        <button type="button" data-toggle="dropdown" class="btn btn-primary dropdown-toggle">Getting Started <span class="caret"></span></button>
+        <button type="button" data-bs-toggle="dropdown" aria-expanded="false" class="btn btn-primary dropdown-toggle">Getting Started</button>
         <ol class="dropdown-menu">
             {% include root.html %}
             {% assign pages = site.pages | where: "series", "Getting Started" | sort: "weight" %}
             {% for p in pages %}
             {% if p.series == "Getting Started" %}
             {% if p.url == page.url %}
-            <li class="active"> → {{p.title}}</li>
+            <li class="active" aria-current="page"> → {{p.title}}</li>
             {% else %}
             <li>
-                <a href="{% include link.html url=p.url %}">{{p.title}}</a>
+                <a class="dropdown-item" href="{% include link.html url=p.url %}">{{p.title}}</a>
             </li>
             {% endif %}
             {% endif %}

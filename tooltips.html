@@ -2,59 +2,49 @@
 layout: none
 search: exclude
 ---
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title> Tooltip Demo</title>
+<meta charset="utf-8">
+<title>Tooltip Demo</title>
 <link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/fontawesome-all.min.css">
 <script src="js/jquery.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
 
-<script type="text/javascript">
+<script>
 $(document).ready(function(){
 
-/*Bootstrap popovers are initialized with the following script. In the options, I'm setting the placement to be on the right, the trigger to be hover rather than click, and to allow HTML from the JSON data source. */
-
-    $('[data-toggle="popover"]').popover({
-        placement : 'right',
-        trigger: 'hover',
-        html: true
-    });
-
-/* Set the location where mydoc_tooltips_source.json is. */
+/* Set the location where tooltips.json is. */
 var url = "tooltips.json";
 
 $.get( url, function( data ) {
 
- /* Bootstrap popover text is defined inside a data-content attribute inside an element. That's
- why I'm using attr here. If you just want to insert content on the page, use append and remove the data-content argument from the parentheses.*/
+    /* Bootstrap 5 popovers read their text from the content option (or a
+    data-bs-content attribute). This loop finds the entry for each element's ID
+    in the JSON file and creates a popover with that entry's body. The options
+    set the placement to the right, show the popover on hover or keyboard focus,
+    and allow HTML from the JSON data source. */
 
     $.each(data.entries, function(i, page) {
-        if (page.doc_id == "basketball") {
-            $( "#basketball" ).attr( "data-content", page.body );
+        var el = document.getElementById(page.doc_id);
+        if (el) {
+            new bootstrap.Popover(el, {
+                content: page.body,
+                placement: 'right',
+                trigger: 'hover focus',
+                html: true
+            });
         }
-
-        if (page.doc_id == "baseball") {
-            $( "#baseball" ).attr( "data-content", page.body );
-        }
-        if (page.doc_id == "football") {
-            $( "#football" ).attr( "data-content", page.body );
-        }
-
-        if (page.doc_id == "soccer") {
-            $( "#soccer" ).attr( "data-content", page.body );
-        }
-
-
-        });
     });
-
+});
 
 });
 </script>
 
 <style>
-body {padding-left:50px;}
+body {padding: 20px 50px;}
+.help-icon {color: #0d6efd; cursor: pointer;}
 </style>
 
 </head>
@@ -68,12 +58,15 @@ body {padding-left:50px;}
 
 <div class="alert alert-info" role="alert"><b>Note:</b> Make sure you view the file source so you can read the notes I've added in code comments.</div>
 
-<!-- the glyphicon class provides the info icon.-->
+<!-- The Font Awesome circle-info icon marks each term that has help content. The id must match a doc_id in tooltips.json. tabindex="0" lets keyboard users focus the icon to show the popover. -->
 
-<p>Basketball <span class="glyphicon glyphicon-info-sign" id="basketball" data-toggle="popover"></span></p>
+<p>Basketball <i class="fa-solid fa-circle-info help-icon" id="basketball" tabindex="0" aria-label="Basketball help"></i></p>
 
-<p>Baseball <span class="glyphicon glyphicon-info-sign" id="baseball" data-toggle="popover"></span></p>
+<p>Baseball <i class="fa-solid fa-circle-info help-icon" id="baseball" tabindex="0" aria-label="Baseball help"></i></p>
 
-<p>Football <span class="glyphicon glyphicon-info-sign" id="football" data-toggle="popover"></span></p>
+<p>Football <i class="fa-solid fa-circle-info help-icon" id="football" tabindex="0" aria-label="Football help"></i></p>
 
-<p>Soccer <span class="glyphicon glyphicon-info-sign" id="soccer" data-toggle="popover"></span></p>
+<p>Soccer <i class="fa-solid fa-circle-info help-icon" id="soccer" tabindex="0" aria-label="Soccer help"></i></p>
+
+</body>
+</html>

@@ -4,7 +4,16 @@ output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
 topnav_title: Jekyll Documentation Theme
-# this appears on the top navigation bar next to the home button
+# this appears in the top navigation bar, next to the logo
+
+topnav_subtitle: A theme for technical documentation
+# optional. this appears in smaller text below the title in the top navigation bar. delete it if you don't want a subtitle.
+
+# topnav_logo: images/logo.svg
+# optional. an image to show instead of the book icon in the top navigation bar. use a path relative to the site root or a full URL.
+
+breadcrumbs: true
+# shows a breadcrumb trail (product > folder > page) above each page title, based on where the page appears in its sidebar. set to false to hide breadcrumbs.
 
 site_title: Jekyll theme for documentation
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
@@ -28,7 +37,7 @@ company_logo: images/company_logo.png
 # if a sidebar file doesn't set a version, the sidebar shows this value next to the product name instead. this lets you keep the version in one place.
 
 sidebar_expand_controls: false
-# set to true to show Collapse All | Expand All links at the bottom of the sidebar.
+# set to true to show Collapse All | Expand All links at the top of the sidebar.
 
 host: 127.0.0.1
 # the preview server used. Leave as is.
